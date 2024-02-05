@@ -13,3 +13,5 @@ format:
 ---
 
 {{< include contents/about.qmd >}}
+
+Hello world!
