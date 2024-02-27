@@ -5,6 +5,7 @@ execute:
   echo: true
   error: true
   warning: true
+  output-dir: docs
 embed-resources: true
 format: clean-revealjs
 author:
