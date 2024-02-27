@@ -1,0 +1,69 @@
+---
+title: 'Reproducible Research with <img style="vertical-align:middle; height:35px;" src="assets/images/R_logo.svg"> and <img style="vertical-align:middle; height:35px;" src="assets/images/quarto-logo-trademark.svg">: Workflows for data, projects and publications'
+subtitle: 'Landscape 2024 masterclass'
+execute:
+  echo: true
+  error: true
+  warning: true
+embed-resources: true
+format: clean-revealjs
+author:
+  - name: Ben Black
+    orcid: 0000-0002-8113-2114
+    email: bblack@ethz.ch
+    affiliations: "Planning of Landscape and Urban Systems (PLUS), ETH Zurich"
+  - name: Nivedita Harisena
+    email: nharisena@ethz.ch
+  - name: Maarten Van Strien
+    email: vanstrien@ethz.ch
+date: last-modified
+---
+
+<!-- TO DO: Update timings to actual session times  -->
+## Schedule
+::: {.incremental}
+- Introduction (15 mins)
+- Research projects with R (30 mins)
+- Comfort break (10 mins)
+- 3 workflows for Reproducibility (20 mins)
+- Quarto (20 mins)
+- Comfort break (10 mins)
+- Exercise time (45 mins)
+- Q&A + feedback (30 mins)
+:::
+
+
+# Introduction
+{{< include contents/about.qmd >}}
+
+# Research projects with R
+
+{{< include contents/Rprojects.qmd >}}
+
+# Let's take a 10 minute break!
+
+# 3 workflows for Reproducibility
+
+<!--{{< include contents/Zenodo_workflow.qmd >}}-->
+
+<!--{{< include contents/Docker_workflow.qmd >}}-->
+
+<!--{{< include contents/Git_workflow.qmd >}}-->
+
+# Quarto
+
+<!--{{< include contents/Quarto_intro.qmd >}}-->
+
+# Let's take another 10 minute break!
+
+# Now it's your turn!
+
+<!--{{< include contents/Exercise_intro.qmd >}}-->
+
+# Q&A + feedback 
+
+
+
+
+
+

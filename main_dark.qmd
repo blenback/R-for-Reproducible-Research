@@ -7,9 +7,8 @@ execute:
   error: true
   warning: true
 embed-resources: true
-format:
-  clean-revealjs:
-    self-contained: true
+format: clean-revealjs
 ---
 
 {{< include contents/about.qmd >}}
+
