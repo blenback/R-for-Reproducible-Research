@@ -14,4 +14,5 @@ contributes:
       date-format: long
       cap-location: bottom
       preview-links: true
+      preload-iframes: true
 

@@ -1,14 +1,21 @@
-## About
-
+## About us
 ### Ben Black
 
 ::: {layout="[0.38, -0.02, 0.60]" layout-valign="center"}
 <img src = "https://github.com/blenback.png" class = "picture" />
 
-- [{{< iconify fa6-solid house-chimney-user >}} mickael.canouil.fr](https://mickael.canouil.fr/){style="text-decoration: none;"}
-- [{{< iconify fa6-solid envelope >}} pro@mickael.canouil.dev](mailto:pro@mickael.canouil.dev){style="text-decoration: none;"}
-- [{{< iconify fa6-brands linkedin >}} mickaelcanouil](https://www.linkedin.com/in/mickaelcanouil/){style="text-decoration: none;"}
-- [{{< iconify fa6-brands github >}} \@mcanouil](https://github.com/mcanouil/){style="text-decoration: none;"}
-- [{{< iconify simple-icons x >}} \@MickaelCanouil](https://twitter.com/MickaelCanouil/){style="text-decoration: none;"}
-
+ [{{< iconify fa6-solid house-chimney-user >}} blenback.github.io](https://blenback.github.io/){style="text-decoration: none;"}<br>
+ [{{< iconify fa6-solid envelope >}} bblack@ethz.ch](mailto:bblack@ethz.ch){style="text-decoration: none;"}<br>
+ [{{< iconify fa6-brands linkedin >}} Ben Black](https://www.linkedin.com/in/ben-black-9889a1150/){style="text-decoration: none;"}<br>
+ [{{< iconify fa6-brands github >}} \@blenback](https://github.com/blenback/){style="text-decoration: none;"}<br>
+ [{{< iconify fa6-brands researchgate >}} \Benjamin Black](https://www.researchgate.net/profile/Benjamin-Black-5/){style="text-decoration: none;"}<br>
+ [{{< iconify simple-icons x >}} \@Blen_Back](https://twitter.com/Blen_Back/){style="text-decoration: none;"}<br>
 :::
+
+
+## About us
+### Nivedita Harisena
+
+
+## About us
+## Maarten Van Strien
