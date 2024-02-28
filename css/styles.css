@@ -28,40 +28,12 @@
   width: auto;
 }
 
-
-
-
-
-.quarto-container {
-  margin-top: 100px !important;
-}
-
 .navbar-dark .navbar-brand {
    color: var(--text-colour) !important;
-   height: inherit;
-   line-height: 30px!important !important;
-   padding-top: 7px !important;
-   padding-bottom: 5px !important;
-   margin-left: 50px;
-   font-weight: 500;
-   font-size: 2rem;
 }
 
 .navbar-dark .navbar-nav .nav-link {
   color: var(--text-colour) !important;
-}
-
-/*navbar search button*/
-.navbar #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {
-  display: true;
-  color: var(--accent-colour) !important;
-}
-
-/*navbar background styling*/
-.navbar {
-    background-color: white;
-    box-shadow: 0 0 50px rgba(252, 252, 252, 0.76);
-    min-height: 100px !important;
 }
 
 li.nav-item {

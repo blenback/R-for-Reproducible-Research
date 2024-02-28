@@ -17,6 +17,7 @@ format:
     toc-location: body
     toc-depth: 2
     output-file: index.html
+    page-layout: full
   revealjs:
     theme: [default, clean.scss]
     embed-resources: true
