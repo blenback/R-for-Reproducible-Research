@@ -12,10 +12,12 @@
  [{{< iconify simple-icons x >}} \@Blen_Back](https://twitter.com/Blen_Back/){style="text-decoration: none;"}<br>
 :::
 
-
+::: {.content-visible when-format="revealjs"}
 ## About us
+:::
 ### Nivedita Harisena
 
-
+::: {.content-visible when-format="revealjs"}
 ## About us
-## Maarten Van Strien
+:::
+### Maarten Van Strien
