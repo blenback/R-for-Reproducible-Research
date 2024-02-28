@@ -1,2 +1,46 @@
 project:
+  type: website
   output-dir: docs
+
+website:
+  bread-crumbs: false
+  title: "Reproducible Research with R and Quarto"
+  search: TRUE #add search bar
+  site-url: "https://blenback.github.io/R-for-Reproducible-Research/"
+  description: "Wbsite for workshop in reproducible research with R and Quarto"
+  twitter-card:
+    image: "media/preview.png"
+    card-style: "summary_large_image"
+    creator: "@Blen_Back"
+    site: "@Blen_Back"
+  open-graph: true
+  google-analytics:
+    tracking-id: "G-9CCC34ZV10"
+    anonymize-ip: true
+  page-footer:
+    left: |
+      {{< fa regular copyright >}} Benjamin Black, 2024<br>
+      All content licensed under {{< fa brands creative-commons >}}
+      {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-sa >}} {{< fa brands creative-commons-nc >}} [(CC BY-NC-SA 4.0)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+    right: |
+      Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)<br>
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - text: "Workshop materials"
+        href: presentation.qmd
+      - section: "Exercises"
+        contents:
+          - exercises/exercise_1.qmd
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            url:  https://github.com/blenback/R-for-Reproducible-Research
+          - text: Report a Bug
+            url:  https://github.com/blenback/R-for-Reproducible-Research/issues
+  
+
+
+
