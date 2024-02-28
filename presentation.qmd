@@ -16,6 +16,7 @@ format:
     toc-title: Contents
     toc-location: body
     toc-depth: 2
+    output-file: index.html
   revealjs:
     theme: [default, clean.scss]
     embed-resources: true
@@ -27,7 +28,7 @@ format:
     cap-location: bottom
     preview-links: true
     preload-iframes: true
-    output-file: presentation-revealjs.html
+    output-file: index-revealjs.html
 #format-links: false
 author:
   - name: Ben Black

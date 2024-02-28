@@ -4,7 +4,10 @@
     "href": "index.html",
     "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "",
-    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
+    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
+    "crumbs": [
+      "Workshop materials"
+    ]
   },
   {
     "objectID": "index.html#schedule",
@@ -17,8 +20,11 @@
     "objectID": "index.html#about-us",
     "href": "index.html#about-us",
     "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
+    "section": "",
+    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
+    "crumbs": [
+      "Workshop materials"
+    ]
   },
   {
     "objectID": "index.html#about-us-1",
@@ -81,22 +87,14 @@
     "href": "contents/about.html",
     "title": "Reproducible Research with R and Quarto",
     "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
-    "crumbs": [
-      "Excercises",
-      "About us"
-    ]
+    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
   },
   {
     "objectID": "contents/about.html#about-us",
     "href": "contents/about.html#about-us",
     "title": "Reproducible Research with R and Quarto",
     "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
-    "crumbs": [
-      "Excercises",
-      "About us"
-    ]
+    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
   },
   {
     "objectID": "contents/about.html#about-us-1",
@@ -289,5 +287,26 @@
     "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
     "section": "Maarten Van Strien",
     "text": "Maarten Van Strien"
+  },
+  {
+    "objectID": "index-revealjs.html#about-us",
+    "href": "index-revealjs.html#about-us",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "About us",
+    "text": "About us\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
+  },
+  {
+    "objectID": "index-revealjs.html#about-us-1",
+    "href": "index-revealjs.html#about-us-1",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "About us",
+    "text": "About us\nNivedita Harisena"
+  },
+  {
+    "objectID": "index-revealjs.html#about-us-2",
+    "href": "index-revealjs.html#about-us-2",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "About us",
+    "text": "About us\nMaarten Van Strien"
   }
 ]
