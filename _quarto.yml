@@ -44,7 +44,7 @@ website:
     contents:
       - text: "View in presentation format"
         icon: "bi-file-earmark-easel"
-        href: presentation.qmd
+        href: docs/presentation.html
     collapse-level: 3
   
 format:
