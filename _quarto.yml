@@ -3,12 +3,12 @@ project:
   output-dir: docs
 
 website:
+  back-to-top-navigation: true
   bread-crumbs: false
-  title: 'Reproducible Research with <img style="vertical-align:middle; height:20px; border: none;
-  background: none;" src="assets/images/Rlogo.png"> and <img style="vertical-align:middle; height:20px;" src="assets/images/quarto-logo-trademark.svg"><br><br>'
+  title: 'Reproducible Research with <img style="vertical-align:middle; height:1em; border: none; background: none;" src="assets/images/Rlogo.png"> and <img style="vertical-align:middle; height:1em;" src="assets/images/quarto-logo-trademark.svg">'
   search: TRUE #add search bar
   site-url: "https://blenback.github.io/R-for-Reproducible-Research/"
-  description: "Wbsite for workshop in reproducible research with R and Quarto"
+  description: "Website for workshop in reproducible research with R and Quarto"
   twitter-card:
     image: "media/preview.png"
     card-style: "summary_large_image"
@@ -25,17 +25,10 @@ website:
       {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-sa >}} {{< fa brands creative-commons-nc >}} [(CC BY-NC-SA 4.0)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
     right: |
       Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)<br>
-  sidebar:
-    background: light
+  navbar:
     alignment: "center"
-    style: "docked"
-    search: true
-    contents:
-      - text: "Workshop materials"
-        href: presentation.qmd
-      - section: "Exercises"
-        contents:
-          - exercises/exercise_1.qmd
+    background: secondary
+    foreground: light
     tools:
       - icon: github
         menu:
@@ -43,7 +36,30 @@ website:
             url:  https://github.com/blenback/R-for-Reproducible-Research
           - text: Report a Bug
             url:  https://github.com/blenback/R-for-Reproducible-Research/issues
+  sidebar:
+    alignment: "left"
+    style: "docked"
+    border: false
+    search: true
+    contents:
+      - text: "View in presentation format"
+        icon: "bi-file-earmark-easel"
+        href: presentation.qmd
+    collapse-level: 3
   
+format:
+  html:
+    theme: 
+      light: [cosmo, theme-light.scss]
+      dark: [cosmo, theme-dark.scss]
+    #clean.scss
+    #css: css/styles.css
+    page-layout: article
+    grid:
+      sidebar-width: 500px
+      body-width: 1100px
+      margin-width: 50px
+      gutter-width: 1.5rem
 
 
 

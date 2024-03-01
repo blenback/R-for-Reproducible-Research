@@ -46,6 +46,11 @@ $selection-bg: #26351c !default;
 
 
 /*-- scss:rules --*/
+.h1 {
+  font-weight: lighter;
+  font-size: 1.4em;
+}
+
 
 .h2 {
   // font-weight: 350;
@@ -104,22 +109,6 @@ p > a:hover::before {
   padding-top: 30px;
   padding-left: 7px;
   padding-right: 7px;
-}
-
-
-.img-bio {
-  text-align: center;
-  text-decoration:none;
-}
-
-.img-bio h2 {
-  font-size: 2.3rem !important;
-  text-decoration:none !important;
-  border-bottom: 0px;
-}
-
-.img-bio h3 {
-  font-style: italic;
 }
 
 .picture {

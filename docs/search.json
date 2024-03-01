@@ -2,12 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
+    "title": "Introduction",
     "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
-    "crumbs": [
-      "Workshop materials"
-    ]
+    "text": "{width=80% fig-align:center}"
   },
   {
     "objectID": "index.html#schedule",
@@ -19,12 +16,9 @@
   {
     "objectID": "index.html#about-us",
     "href": "index.html#about-us",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
-    "crumbs": [
-      "Workshop materials"
-    ]
+    "title": "Workflows for data, projects and publications",
+    "section": "About us",
+    "text": "About us\n\nBen Black\n\n\n\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back\n\n\n\n\n\nNivedita Harisena\n\n\nMaarten Van Strien"
   },
   {
     "objectID": "index.html#about-us-1",
@@ -85,14 +79,14 @@
   {
     "objectID": "contents/about.html",
     "href": "contents/about.html",
-    "title": "Reproducible Research with R and Quarto",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:20px; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:20px;\" src=\"assets/images/quarto-logo-trademark.svg\"><br><br> ",
     "section": "",
     "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
   },
   {
     "objectID": "contents/about.html#about-us",
     "href": "contents/about.html#about-us",
-    "title": "Reproducible Research with R and Quarto",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:20px; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:20px;\" src=\"assets/images/quarto-logo-trademark.svg\"><br><br> ",
     "section": "",
     "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
   },
@@ -245,19 +239,16 @@
     "href": "presentation.html",
     "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
-    "crumbs": [
-      "Workshop materials"
-    ]
+    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
   },
   {
     "objectID": "presentation.html#about-us",
     "href": "presentation.html#about-us",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "About us",
+    "text": "About us\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
     "crumbs": [
-      "Workshop materials"
+      "Presentation format"
     ]
   },
   {
@@ -308,5 +299,56 @@
     "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
     "section": "About us",
     "text": "About us\nMaarten Van Strien"
+  },
+  {
+    "objectID": "presentation.html#about-us-1",
+    "href": "presentation.html#about-us-1",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "About us",
+    "text": "About us\nNivedita Harisena",
+    "crumbs": [
+      "Presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#about-us-2",
+    "href": "presentation.html#about-us-2",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "About us",
+    "text": "About us\nMaarten Van Strien",
+    "crumbs": [
+      "Presentation format"
+    ]
+  },
+  {
+    "objectID": "exercises.html",
+    "href": "exercises.html",
+    "title": "Guided excercies",
+    "section": "",
+    "text": "R project to Zenodo workflow\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Guided excercies"
+    ]
+  },
+  {
+    "objectID": "index.html#a-brief-introduction-to-quarto",
+    "href": "index.html#a-brief-introduction-to-quarto",
+    "title": "Workflows for data, projects and publications",
+    "section": "A brief introduction to Quarto",
+    "text": "A brief introduction to Quarto\n\nWhat is Quarto\n\n\n\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
+  },
+  {
+    "objectID": "index.html#r-project-to-zenodo-workflow",
+    "href": "index.html#r-project-to-zenodo-workflow",
+    "title": "Workflows for data, projects and publications",
+    "section": "R project to Zenodo workflow",
+    "text": "R project to Zenodo workflow\n\ntest"
+  },
+  {
+    "objectID": "index.html#write-a-paper-with-quarto",
+    "href": "index.html#write-a-paper-with-quarto",
+    "title": "Workflows for data, projects and publications",
+    "section": "Write a paper with Quarto",
+    "text": "Write a paper with Quarto"
   }
 ]
