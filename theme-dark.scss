@@ -1,0 +1,26 @@
+/*-- scss:defaults --*/
+// Base document colors
+$body-bg: #181818;
+$body-color: white;
+$link-color: #75AADB;
+
+
+// Code blocks
+$code-block-bg-alpha: -.8;
+
+/*-- scss:rules --*/
+
+/*add padding around font awesome icons of class fa-2x as used for my social icons*/
+.iconify-icon {
+  padding-top: 30px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.picture {
+  border-radius: 50%;
+  padding: 5pt;
+  height: 50%;
+  width: auto;
+}
+

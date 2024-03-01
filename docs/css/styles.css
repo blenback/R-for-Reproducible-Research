@@ -24,13 +24,45 @@
 .picture {
   border-radius: 50%;
   padding: 5pt;
-  height: 50%;
+  height: 
+  0%;
   width: auto;
 }
 
-.navbar-dark .navbar-brand {
-   color: var(--text-colour) !important;
+/**** navbar overrides *****/
+
+/*website title*/
+.navbar-title {
+    background-size: 80% 100% !important;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    text-align: center !important;
+    font-size: 2rem !important;
+    font-weight: 500;
+    padding-top: 7px !important;
+    padding-bottom: 5px !important;
 }
+
+.quarto-container {
+  margin-top: 50px !important;
+}
+
+/* Navbar background styling*/
+.navbar {
+    position: fixed;
+    width: 100%;
+}
+
+/* Center the Navbar in the banner*/
+/*.navbar-brand {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+  padding-top: 7px !important;
+  padding-bottom: 5px !important;
+}*/
+
+
 
 .navbar-dark .navbar-nav .nav-link {
   color: var(--text-colour) !important;
@@ -199,9 +231,6 @@ div.embed-container embed {
     display:block;
     text-align: center;
 }
-
-
-
 
 <style>
 .footer {

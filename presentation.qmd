@@ -1,23 +1,20 @@
 ---
 title: 'Reproducible Research with <img style="vertical-align:middle; height:35px; width: 35px; border: none;
   background: none;" src="assets/images/Rlogo.png"> and <img style="vertical-align:middle; height:35px; width: 140px;" src="assets/images/quarto-logo-trademark.svg">: Workflows for data, projects and publications'
-subtitle: 'Landscape 2024 masterclass'
+#subtitle: 'Landscape 2024 masterclass'
 execute:
   echo: false
   error: true
   warning: true
 format:
-  html:
-    theme: clean.scss
-    css: css/styles.css
-    margin-left: 0.5em
-    max-width: 1800px
-    toc: true
-    toc-title: Contents
-    toc-location: body
-    toc-depth: 2
-    output-file: index.html
-    page-layout: full
+  # html:
+  #   margin-left: 0.5em
+  #   max-width: 1800px
+  #   toc: true
+  #   toc-title: Contents
+  #   toc-location: left
+  #   toc-depth: 2
+  #   output-file: index.html
   revealjs:
     theme: [default, clean.scss]
     embed-resources: true
@@ -29,7 +26,7 @@ format:
     cap-location: bottom
     preview-links: true
     preload-iframes: true
-    output-file: index-revealjs.html
+    #output-file: index-revealjs.html
 #format-links: false
 author:
   - name: Ben Black
@@ -71,11 +68,7 @@ date: last-modified
 # Research projects with R
 {{< include contents/Rprojects.qmd >}}
 
-
-::: {.content-visible when-format="revealjs"}
 # Let's take a 10 minute break!
-:::
-
 
 # 3 workflows for Reproducibility
 
@@ -89,7 +82,6 @@ date: last-modified
 
 <!--{{< include contents/Quarto_intro.qmd >}}-->
 
-::: {.content-visible when-format="revealjs"}
 # Let's take another 10 minute break!
 
 # Now it's your turn!
@@ -97,7 +89,7 @@ date: last-modified
 <!--{{< include contents/Exercise_intro.qmd >}}-->
 
 # Q&A + feedback 
-::: 
+
 
 
 

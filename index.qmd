@@ -1,0 +1,42 @@
+---
+title: "Workflows for data, projects and publications"
+subtitle: "A workshop presented at the [Landscape 2024 conference](https://landscape2024.org/frontend/index.php?folder_id=7393&page_id=), Berlin"
+execute:
+  echo: false
+  error: true
+  warning: true
+format:
+  html:
+    margin-left: 0.5em
+    toc: true
+    toc-title: Contents
+    toc-location: left
+    toc-depth: 3
+---
+
+![](assets/images/graphical_abstract_dark_test.png){width=70% }
+
+# Introduction
+{{< include contents/about.qmd >}}
+
+# Research projects with R
+{{< include contents/Rprojects.qmd >}}
+
+# 3 workflows for Reproducibility
+
+<!--{{< include contents/Zenodo_workflow.qmd >}}-->
+
+<!--{{< include contents/Docker_workflow.qmd >}}-->
+
+<!--{{< include contents/Git_workflow.qmd >}}-->
+
+# Quarto
+
+{{< include contents/Quarto_intro.qmd >}}
+
+# Guided excercises
+{{< include exercises/Rproj-Zenodo.qmd >}}
+{{< include exercises/Quarto-manuscript.qmd >}}
+
+# Resources
+
