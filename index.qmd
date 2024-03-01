@@ -12,6 +12,7 @@ format:
     toc-title: Contents
     toc-location: left
     toc-depth: 3
+citation-location: margin
 ---
 
 ![](assets/images/graphical_abstract_dark_test.png){width=70% }

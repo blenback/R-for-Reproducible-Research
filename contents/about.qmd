@@ -1,8 +1,56 @@
 ## About us
+
+
+:::: {.grid style="display: flex; justify-content: center; align-items: center; text-align: center;"}
+::: {.g-col-6}
+![](https://github.com/blenback.png){.picture .lightbox}
+
+### Ben Black
+*Doctoral Researcher*
+
+ [{{< iconify fa6-solid house-chimney-user size=xl >}}](https://blenback.github.io/){.iconify-icon}
+ [{{< iconify fa6-solid envelope size=xl >}}](mailto:bblack@ethz.ch){.iconify-icon}
+ [{{< iconify fa6-brands linkedin size=xl >}}](https://www.linkedin.com/in/ben-black-9889a1150/){.iconify-icon}
+ [{{< iconify fa6-brands github size=xl >}}](https://github.com/blenback/){.iconify-icon}
+ [{{< iconify fa6-brands researchgate size=xl >}}](https://www.researchgate.net/profile/Benjamin-Black-5/){.iconify-icon}
+ [{{< iconify simple-icons x size=xl >}}](https://twitter.com/Blen_Back/){.iconify-icon}
+:::
+  
+::: {.g-col-6}
+### Nivedita Harisena
+*Doctoral Researcher*
+
+ [{{< iconify fa6-solid house-chimney-user size=xl >}}](https://blenback.github.io/){.iconify-icon}
+ [{{< iconify fa6-solid envelope size=xl >}}](mailto:bblack@ethz.ch){.iconify-icon}
+ [{{< iconify fa6-brands linkedin size=xl >}}](https://www.linkedin.com/in/ben-black-9889a1150/){.iconify-icon}
+ [{{< iconify fa6-brands github size=xl >}}](https://github.com/blenback/){.iconify-icon}
+ [{{< iconify fa6-brands researchgate size=xl >}}](https://www.researchgate.net/profile/Benjamin-Black-5/){.iconify-icon}
+ [{{< iconify simple-icons x size=xl >}}](https://twitter.com/Blen_Back/){.iconify-icon}
+
+:::
+
+::: {.g-col-6}
+### Maarten Van Strien
+*Senior scientist*
+
+ [{{< iconify fa6-solid house-chimney-user size=xl >}}](https://blenback.github.io/){.iconify-icon}
+ [{{< iconify fa6-solid envelope size=xl >}}](mailto:bblack@ethz.ch){.iconify-icon}
+ [{{< iconify fa6-brands linkedin size=xl >}}](https://www.linkedin.com/in/ben-black-9889a1150/){.iconify-icon}
+ [{{< iconify fa6-brands github size=xl >}}](https://github.com/blenback/){.iconify-icon}
+ [{{< iconify fa6-brands researchgate size=xl >}}](https://www.researchgate.net/profile/Benjamin-Black-5/){.iconify-icon}
+ [{{< iconify simple-icons x size=xl >}}](https://twitter.com/Blen_Back/){.iconify-icon}
+:::
+  
+::::  
+
+
+::: {.content-visible when-format="revealjs"}
+## About us
+
 ### Ben Black
 
 ::: {layout="[0.38, -0.02, 0.60]" layout-valign="center"}
-<img src = "https://github.com/blenback.png" class = "picture" />
+![](https://github.com/blenback.png){.picture .lightbox}
 
  [{{< iconify fa6-solid house-chimney-user >}} blenback.github.io](https://blenback.github.io/){style="text-decoration: none;"}<br>
  [{{< iconify fa6-solid envelope >}} bblack@ethz.ch](mailto:bblack@ethz.ch){style="text-decoration: none;"}<br>
@@ -12,12 +60,13 @@
  [{{< iconify simple-icons x >}} \@Blen_Back](https://twitter.com/Blen_Back/){style="text-decoration: none;"}<br>
 :::
 
-::: {.content-visible when-format="revealjs"}
+
 ## About us
-:::
+
 ### Nivedita Harisena
 
-::: {.content-visible when-format="revealjs"}
+
 ## About us
-:::
+
 ### Maarten Van Strien
+:::

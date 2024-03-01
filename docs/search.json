@@ -18,7 +18,7 @@
     "href": "index.html#about-us",
     "title": "Workflows for data, projects and publications",
     "section": "About us",
-    "text": "About us\n\nBen Black\n\n\n\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back\n\n\n\n\n\nNivedita Harisena\n\n\nMaarten Van Strien"
+    "text": "About us\n\n\n\n\nBen Black\nDoctoral Researcher\n     \n\n\n\nNivedita Harisena\nDoctoral Researcher\n     \n\n\nMaarten Van Strien\nSenior scientist"
   },
   {
     "objectID": "index.html#about-us-1",
@@ -79,16 +79,16 @@
   {
     "objectID": "contents/about.html",
     "href": "contents/about.html",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:20px; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:20px;\" src=\"assets/images/quarto-logo-trademark.svg\"><br><br> ",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
+    "text": "Doctoral Researcher\n     \n\n\n\n\nDoctoral Researcher\n     \n\n\n\nSenior scientist\n     \n\n\n\n\n\n\n\nDoctoral Researcher\n     \n\n\n\n\nDoctoral Researcher\n     \n\n\n\n\nSenior scientist"
   },
   {
     "objectID": "contents/about.html#about-us",
     "href": "contents/about.html#about-us",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:20px; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:20px;\" src=\"assets/images/quarto-logo-trademark.svg\"><br><br> ",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
+    "text": "Doctoral Researcher\n     \n\n\n\n\nDoctoral Researcher\n     \n\n\n\nSenior scientist\n     \n\n\n\n\n\n\n\nDoctoral Researcher\n     \n\n\n\n\nDoctoral Researcher\n     \n\n\n\n\nSenior scientist"
   },
   {
     "objectID": "contents/about.html#about-us-1",
@@ -353,5 +353,19 @@
     "title": "Workflows for data, projects and publications",
     "section": "Write a paper with Quarto",
     "text": "Write a paper with Quarto"
+  },
+  {
+    "objectID": "contents/about.html#ben-black",
+    "href": "contents/about.html#ben-black",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Ben Black",
+    "text": "Ben Black\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
+  },
+  {
+    "objectID": "contents/about.html#nivedita-harisena",
+    "href": "contents/about.html#nivedita-harisena",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Nivedita Harisena",
+    "text": "Nivedita Harisena\n\n\n\n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
   }
 ]
