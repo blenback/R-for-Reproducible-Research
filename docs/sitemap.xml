@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Quarto_intro.html</loc>
-    <lastmod>2024-02-28T11:42:00.419Z</lastmod>
+    <lastmod>2024-03-01T11:04:30.105Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Zenodo_workflow.html</loc>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/presentation.html</loc>
-    <lastmod>2024-02-29T18:47:37.948Z</lastmod>
+    <lastmod>2024-03-01T10:44:28.968Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/presentation-revealjs.html</loc>
@@ -67,5 +67,13 @@
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises.html</loc>
     <lastmod>2024-03-01T10:38:48.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Quarto-manuscript.html</loc>
+    <lastmod>2024-03-01T10:49:56.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Rproj-Zenodo.html</loc>
+    <lastmod>2024-03-01T11:04:20.289Z</lastmod>
   </url>
 </urlset>

@@ -239,16 +239,19 @@
     "href": "presentation.html",
     "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
+    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
+    "crumbs": [
+      "View in presentation format"
+    ]
   },
   {
     "objectID": "presentation.html#about-us",
     "href": "presentation.html#about-us",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
+    "section": "",
+    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
     "crumbs": [
-      "Presentation format"
+      "View in presentation format"
     ]
   },
   {
@@ -335,14 +338,14 @@
     "href": "index.html#a-brief-introduction-to-quarto",
     "title": "Workflows for data, projects and publications",
     "section": "A brief introduction to Quarto",
-    "text": "A brief introduction to Quarto\n\nWhat is Quarto\n\n\n\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
+    "text": "A brief introduction to Quarto"
   },
   {
     "objectID": "index.html#r-project-to-zenodo-workflow",
     "href": "index.html#r-project-to-zenodo-workflow",
     "title": "Workflows for data, projects and publications",
     "section": "R project to Zenodo workflow",
-    "text": "R project to Zenodo workflow\n\ntest"
+    "text": "R project to Zenodo workflow"
   },
   {
     "objectID": "index.html#write-a-paper-with-quarto",
