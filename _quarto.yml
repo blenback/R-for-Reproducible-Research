@@ -4,7 +4,7 @@ project:
 
 website:
   back-to-top-navigation: true
-  bread-crumbs: false
+  #bread-crumbs: false
   title: 'Reproducible Research with <img style="vertical-align:middle; height:1em; border: none; background: none;" src="assets/images/Rlogo.png"> and <img style="vertical-align:middle; height:1em;" src="assets/images/quarto-logo-trademark.svg">'
   search: TRUE #add search bar
   site-url: "https://blenback.github.io/R-for-Reproducible-Research/"
@@ -61,5 +61,8 @@ format:
       margin-width: 50px
       gutter-width: 1.5rem
 
-
+execute:
+  echo: false
+  error: true
+  warning: false
 

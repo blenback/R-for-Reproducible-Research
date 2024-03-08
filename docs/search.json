@@ -239,20 +239,14 @@
     "href": "presentation.html",
     "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
-    "crumbs": [
-      "View in presentation format"
-    ]
+    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
   },
   {
     "objectID": "presentation.html#about-us",
     "href": "presentation.html#about-us",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "About us",
-    "text": "About us\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back",
-    "crumbs": [
-      "View in presentation format"
-    ]
+    "text": "About us\n\n\n\nBen Black\nDoctoral Researcher\n     \n\n\nNivedita Harisena\nDoctoral Researcher\n     \n\n\nMaarten Van Strien\nSenior scientist"
   },
   {
     "objectID": "presentation-revealjs.html#about-us",
@@ -306,22 +300,16 @@
   {
     "objectID": "presentation.html#about-us-1",
     "href": "presentation.html#about-us-1",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "About us",
-    "text": "About us\nNivedita Harisena",
-    "crumbs": [
-      "View in presentation format"
-    ]
+    "text": "About us\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
   },
   {
     "objectID": "presentation.html#about-us-2",
     "href": "presentation.html#about-us-2",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "About us",
-    "text": "About us\nMaarten Van Strien",
-    "crumbs": [
-      "View in presentation format"
-    ]
+    "text": "About us\nNivedita Harisena"
   },
   {
     "objectID": "exercises.html",
@@ -338,7 +326,7 @@
     "href": "index.html#a-brief-introduction-to-quarto",
     "title": "Workflows for data, projects and publications",
     "section": "A brief introduction to Quarto",
-    "text": "A brief introduction to Quarto"
+    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\nSome of the creative ways in which you can use Quarto is:\n\n1. Visualize and publish interactive plots using html widgets\n\n\n\n\n\n\n\n\n2. Create interactive geo-spatial mapping segments\n\n\n\n\n\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
   },
   {
     "objectID": "index.html#r-project-to-zenodo-workflow",
@@ -367,5 +355,40 @@
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "Nivedita Harisena",
     "text": "Nivedita Harisena\n\n\n\n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
+  },
+  {
+    "objectID": "contents/Quarto_intro.html",
+    "href": "contents/Quarto_intro.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Quatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\n\n\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
+  },
+  {
+    "objectID": "contents/Quarto_intro.html#a-brief-introduction-to-quarto",
+    "href": "contents/Quarto_intro.html#a-brief-introduction-to-quarto",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Quatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\n\n\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
+  },
+  {
+    "objectID": "presentation.html#about-us-3",
+    "href": "presentation.html#about-us-3",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
+    "section": "About us",
+    "text": "About us\nMaarten Van Strien"
+  },
+  {
+    "objectID": "presentation.html#a-brief-introduction-to-quarto",
+    "href": "presentation.html#a-brief-introduction-to-quarto",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
+    "section": "A brief introduction to Quarto",
+    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\nSome of the creative ways in which you can use Quarto is:\n1. Visualize and publish interactive plots using html widgets\n\n\nWarning: package 'plotly' was built under R version 4.3.3\n\n\n\nAttaching package: 'plotly'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\n\n\n\n\n\n2. Create interactive geo-spatial mapping segments\n\n\nWarning: package 'leaflet' was built under R version 4.3.2\n\n\n\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
+  },
+  {
+    "objectID": "presentation.html#test",
+    "href": "presentation.html#test",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
+    "section": "test",
+    "text": "test"
   }
 ]
