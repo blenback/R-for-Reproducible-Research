@@ -1,3 +1,20 @@
 
+## Project set up
+start with a .RProj (for wd etc.)
+Use .Rprofile to open scripts/load environment
+Set up logical directory structure
+Break up your process and use master scripts and source sub-scripts
+
+## Environment management
+What are environments and why are they needed? (version conflicts/ dependencies etc.
+Intro to renv package for environment management. 
+Set up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)
+
+## Writing clean code:
+### Use a consistent header (hint: use code snippet)
+### General good practice: variable names, use functions for repetive tasks
+### code folding
+### Syntax lintr vs. styler package
+ 
 
 

@@ -4,7 +4,7 @@ title: 'Reproducible Research with <img style="vertical-align:middle; height:35p
 subtitle: 'Landscape 2024 masterclass'
 execute:
   echo: false
-  error: true
+  error: false
   warning: true
 format:
   revealjs:
@@ -17,7 +17,6 @@ format:
     date-format: long
     cap-location: bottom
     preview-links: true
-    preload-iframes: true
 author:
   - name: Ben Black
     orcid: 0000-0002-8113-2114
@@ -51,9 +50,11 @@ date: last-modified
 :::
 
 # Introduction
-{{< include contents/about.qmd >}}
+
+{{< include contents/intro.qmd >}}
 
 # Research projects with R
+
 {{< include contents/Rprojects.qmd >}}
 
 # Let's take a 10 minute break!
