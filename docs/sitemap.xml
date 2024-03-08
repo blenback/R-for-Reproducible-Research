@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/index.html</loc>
-    <lastmod>2024-03-01T11:24:23.988Z</lastmod>
+    <lastmod>2024-03-01T14:06:53.423Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/main_dark.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Rprojects.html</loc>
-    <lastmod>2024-02-28T11:42:00.792Z</lastmod>
+    <lastmod>2024-03-01T13:53:19.825Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Git_workflow.html</loc>
@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/about.html</loc>
-    <lastmod>2024-03-01T13:24:52.392Z</lastmod>
+    <lastmod>2024-03-01T14:00:03.662Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Exercise_intro.html</loc>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/presentation.html</loc>
-    <lastmod>2024-03-01T11:16:53.641Z</lastmod>
+    <lastmod>2024-03-01T15:03:20.556Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/presentation-revealjs.html</loc>
@@ -75,5 +75,9 @@
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Rproj-Zenodo.html</loc>
     <lastmod>2024-03-01T11:04:20.289Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/intro.html</loc>
+    <lastmod>2024-03-01T15:17:25.985Z</lastmod>
   </url>
 </urlset>

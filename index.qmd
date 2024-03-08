@@ -15,10 +15,10 @@ format:
 citation-location: margin
 ---
 
-![](assets/images/graphical_abstract_dark_test.png){width=70% }
+![](assets/images/graphical_abstract_dark.png){width=70%}
 
 # Introduction
-{{< include contents/about.qmd >}}
+{{< include contents/intro.qmd >}}
 
 # Research projects with R
 {{< include contents/Rprojects.qmd >}}

@@ -1,7 +1,6 @@
+::: {.content-hidden when-format="revealjs"}
 ## About us
-
-
-:::: {.grid style="display: flex; justify-content: center; align-items: center; text-align: center;"}
+::: {.grid style="display: flex; text-align: center;"}
 ::: {.g-col-6}
 ![](https://github.com/blenback.png){.picture .lightbox}
 
@@ -41,7 +40,9 @@
  [{{< iconify simple-icons x size=xl >}}](https://twitter.com/Blen_Back/){.iconify-icon}
 :::
   
-::::  
+:::
+
+:::
 
 
 ::: {.content-visible when-format="revealjs"}
@@ -69,4 +70,40 @@
 ## About us
 
 ### Maarten Van Strien
+
 :::
+
+::: {.content-visible when-format="revealjs"}
+## What is reproducible research? 
+
+Let's hear your thoughts:
+What does reproducible research mean to you?
+
+::: {.img style="text-align:center;"}
+![](assets\images\what_is_reproducible_qr_code.png){fig-align="center"}
+
+[https://www.menti.com/alsw49tprwu7](https://www.menti.com/alsw49tprwu7)
+:::
+
+
+
+## {background-iframe="https://www.mentimeter.com/app/presentation/alqogxibwu94raf69893wn32c8it8mcy/embed"}
+
+:::
+
+
+## The FAIR standard
+
+## Why strive for reproducible research?
+
+<!-- Use Mentimeter to take suggestions-->
+
+## Why {{< iconify fa-brands r-project >}} for reproducible research?
+
+::: {.content-visible when-format="revealjs"}
+## Workshop concept
+
+![](assets/images/graphical_abstract_dark.png){width=70% }
+:::
+
+
