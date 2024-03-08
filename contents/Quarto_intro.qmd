@@ -1,5 +1,45 @@
+# A brief introduction to Quarto
 
-## A brief introduction to Quarto
+Quatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.
 
+####  Quarto allows you to:
+
+-   Create dynamic content that is updated as your code changes
+
+-   Numerous thematic settings for high quality formatting including 'Pandoc' markdown support for equations and cross-referencing
+
+-   Publish your work as websites or books
+
+-   Edit with any text editor including VS Code, RStudio and more
+
+### Some of the creative ways in which you can use Quarto is:
+
+#### 1. Visualize and publish interactive plots using html widgets
+
+```{r, fig.width=10,fig.height=7}
+library(ggplot2)
+library(plotly)
+p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
+            geom_bar(position = "dodge")
+ggplotly(p)
+```
+
+
+#### 2. Create interactive geo-spatial mapping segments
+
+```{r}
+
+library(leaflet)
+
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng= 8.548, lat=47.376, popup="ETH")
+
+```
+
+#### 3. Create multi-purpose dashboards to demostrate your research output
+
+
+![](https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png){width=60% fig-align="center"}
 
 
