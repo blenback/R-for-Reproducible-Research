@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ## Project set up
 start with a .RProj (for wd etc.)
@@ -16,5 +17,8 @@ Set up a consistent directory structure: Data/, scripts/, results/ tools/ (not e
 ### code folding
 ### Syntax lintr vs. styler package
  
+=======
+## test
+>>>>>>> origin/NV-dev
 
 

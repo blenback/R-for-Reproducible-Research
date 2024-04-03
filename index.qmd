@@ -1,10 +1,6 @@
 ---
 title: "Workflows for data, projects and publications"
 subtitle: "A workshop presented at the [Landscape 2024 conference](https://landscape2024.org/frontend/index.php?folder_id=7393&page_id=), Berlin"
-execute:
-  echo: false
-  error: true
-  warning: true
 format:
   html:
     margin-left: 0.5em

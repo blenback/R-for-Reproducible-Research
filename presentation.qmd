@@ -69,7 +69,7 @@ date: last-modified
 
 # Quarto
 
-<!--{{< include contents/Quarto_intro.qmd >}}-->
+{{< include contents/Quarto_intro.qmd >}}
 
 # Let's take another 10 minute break!
 
