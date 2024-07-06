@@ -29,6 +29,12 @@
 :::
 
 ::: {.g-col-6}
+### Manuel Kurmann
+*Research Assistant*
+
+:::
+
+::: {.g-col-6}
 ### Maarten Van Strien
 *Senior scientist*
 
@@ -66,6 +72,10 @@
 
 ### Nivedita Harisena
 
+## About us
+
+### Manuel Kurmann
+
 
 ## About us
 
@@ -73,6 +83,27 @@
 
 :::
 
+<!-- Web content -->
+::: {.content-visible when-format="html"}
+## What is reproducible research?
+
+## Why strive for reproducible research?
+
+- Some fields have suffered a 'replication crisis': 
+  - In some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science
+<!--Give headline figures -->
+
+## Why {{< iconify fa-brands r-project >}} for reproducible research?
+
+
+
+## Workshop concept
+
+
+:::
+
+
+<!-- Presentation content -->
 ::: {.content-visible when-format="revealjs"}
 ## What is reproducible research? 
 
@@ -85,22 +116,32 @@ What does reproducible research mean to you?
 [https://www.menti.com/alsw49tprwu7](https://www.menti.com/alsw49tprwu7)
 :::
 
-
-
-## {background-iframe="https://www.mentimeter.com/app/presentation/alqogxibwu94raf69893wn32c8it8mcy/embed"}
-
-:::
-
+## {background-iframe="https://www.mentimeter.com/app/presentation/alqogxibw u94raf69893wn32c8it8mcy/embed"}
 
 ## The FAIR standard
+The FAIR standard was developed....
 
 ## Why strive for reproducible research?
 
-<!-- Use Mentimeter to take suggestions-->
+<!-- Use Mentimeter to take audience suggestions-->
+
+## Why strive for reproducible research?
+
+- Replication crisis: Allows our work to be verified more thoroughly
+- Improves science for all: Allows others to more easily build upon our work
+
+Don't just take our word for it, research funders are increasingly focused on reproducible research too: EXAMPLE 
 
 ## Why {{< iconify fa-brands r-project >}} for reproducible research?
 
-::: {.content-visible when-format="revealjs"}
+- Open source 
+- Large active user community for support
+- Packages to suit just about every research need: statistics, modelling, spatial analysis, visualisation (Many packages developed by academics)
+
+BUT just using {{< iconify fa-brands r-project >}} doesn't necessarily make your research reproducible...
+
+We have put together this workshop to share some advice for best practice and tips that we have picked up along the way. 
+
 ## Workshop concept
 
 ![](assets/images/graphical_abstract_dark.png){width=70% }

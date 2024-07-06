@@ -8,12 +8,13 @@ format:
     toc-title: Contents
     toc-location: left
     toc-depth: 3
+    number-sections: true
 citation-location: margin
 ---
 
 ![](assets/images/graphical_abstract_dark.png){width=70%}
 
-# Introduction
+# Introduction{.unnumbered}
 {{< include contents/intro.qmd >}}
 
 # Research projects with R

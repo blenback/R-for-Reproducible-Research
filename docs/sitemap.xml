@@ -1,91 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/index.html</loc>
-<<<<<<< HEAD
-    <lastmod>2024-03-01T14:06:53.423Z</lastmod>
-=======
-    <lastmod>2024-03-08T15:55:30.696Z</lastmod>
->>>>>>> origin/NV-dev
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/main_dark.html</loc>
-    <lastmod>2024-02-28T11:48:18.729Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Rprojects.html</loc>
-    <lastmod>2024-03-01T13:53:19.825Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Git_workflow.html</loc>
-    <lastmod>2024-02-28T11:42:00.064Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Docker_workflow.html</loc>
-    <lastmod>2024-02-28T11:41:59.377Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/about.html</loc>
-    <lastmod>2024-03-01T14:00:03.662Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Exercise_intro.html</loc>
-    <lastmod>2024-02-28T11:41:59.717Z</lastmod>
-  </url>
-  <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Quarto_intro.html</loc>
-    <lastmod>2024-03-08T15:50:17.193Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Zenodo_workflow.html</loc>
-    <lastmod>2024-02-28T11:42:01.141Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/Presentation.html</loc>
-    <lastmod>2024-02-28T15:29:52.954Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/Presentation-web.html</loc>
-    <lastmod>2024-02-28T12:07:58.623Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/Presentation-revealjs.html</loc>
-    <lastmod>2024-02-28T15:29:52.954Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/presentation.html</loc>
-<<<<<<< HEAD
-    <lastmod>2024-03-01T15:03:20.556Z</lastmod>
-=======
-    <lastmod>2024-03-08T16:07:31.736Z</lastmod>
->>>>>>> origin/NV-dev
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/presentation-revealjs.html</loc>
-    <lastmod>2024-02-28T17:10:44.181Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/exercise_1.html</loc>
-    <lastmod>2024-02-28T16:22:22.099Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/index-revealjs.html</loc>
-    <lastmod>2024-02-29T18:22:35.378Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises.html</loc>
-    <lastmod>2024-03-01T10:38:48.581Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Quarto-manuscript.html</loc>
-    <lastmod>2024-03-08T11:20:49.248Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Rproj-Zenodo.html</loc>
-    <lastmod>2024-03-08T11:20:49.543Z</lastmod>
+    <lastmod>2024-05-29T18:48:42.888Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/intro.html</loc>
-    <lastmod>2024-03-01T15:17:25.985Z</lastmod>
+    <lastmod>2024-05-29T19:50:06.529Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blenback.github.io/R-for-Reproducible-Research/presentation.html</loc>
+    <lastmod>2024-04-03T10:45:16.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Rprojects.html</loc>
+    <lastmod>2024-04-03T10:45:15.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blenback.github.io/R-for-Reproducible-Research/index.html</loc>
+    <lastmod>2024-05-29T20:08:04.403Z</lastmod>
   </url>
 </urlset>

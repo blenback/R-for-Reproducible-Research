@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -82,8 +82,10 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 <meta property="og:title" content="Reproducible Research with  and ">
+<meta property="og:description" content="Website for workshop in reproducible research with R and Quarto">
 <meta property="og:site_name" content="Reproducible Research with <img style=&quot;vertical-align:middle; height:1em; border: none; background: none;&quot; src=&quot;assets/images/Rlogo.png&quot;> and <img style=&quot;vertical-align:middle; height:1em;&quot; src=&quot;assets/images/quarto-logo-trademark.svg&quot;>">
 <meta name="twitter:title" content="Reproducible Research with  and ">
+<meta name="twitter:description" content="Website for workshop in reproducible research with R and Quarto">
 <meta name="twitter:image" content="https://blenback.github.io/R-for-Reproducible-Research/contents/media/preview.png">
 <meta name="twitter:creator" content="@Blen_Back">
 <meta name="twitter:site" content="@Blen_Back">
@@ -101,7 +103,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
     <span class="navbar-title">Reproducible Research with <img style="vertical-align:middle; height:1em; border: none; background: none;" src="assets/images/Rlogo.png"> and <img style="vertical-align:middle; height:1em;" src="assets/images/quarto-logo-trademark.svg"></span>
     </a>
   </div>
-        <div class="quarto-navbar-tools">
+        <div class="quarto-navbar-tools tools-end">
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -127,9 +129,9 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <a class="flex-grow-1 no-decor" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"></h1>
-        </a>     
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -166,10 +168,32 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 
-<section id="test" class="level2">
-<h2 class="anchored" data-anchor-id="test">test</h2>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<section id="project-set-up" class="level2">
+<h2 class="anchored" data-anchor-id="project-set-up">Project set up</h2>
+<p>start with a .RProj (for wd etc.) Use .Rprofile to open scripts/load environment Set up logical directory structure Break up your process and use master scripts and source sub-scripts</p>
+</section>
+<section id="environment-management" class="level2">
+<h2 class="anchored" data-anchor-id="environment-management">Environment management</h2>
+<p>What are environments and why are they needed? (version conflicts/ dependencies etc. Intro to renv package for environment management. Set up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)</p>
+</section>
+<section id="writing-clean-code" class="level2">
+<h2 class="anchored" data-anchor-id="writing-clean-code">Writing clean code:</h2>
+<section id="use-a-consistent-header-hint-use-code-snippet" class="level3">
+<h3 class="anchored" data-anchor-id="use-a-consistent-header-hint-use-code-snippet">Use a consistent header (hint: use code snippet)</h3>
+</section>
+<section id="general-good-practice-variable-names-use-functions-for-repetive-tasks" class="level3">
+<h3 class="anchored" data-anchor-id="general-good-practice-variable-names-use-functions-for-repetive-tasks">General good practice: variable names, use functions for repetive tasks</h3>
+</section>
+<section id="code-folding" class="level3">
+<h3 class="anchored" data-anchor-id="code-folding">code folding</h3>
+</section>
+<section id="syntax-lintr-vs.-styler-package" class="level3">
+<h3 class="anchored" data-anchor-id="syntax-lintr-vs.-styler-package">Syntax lintr vs.&nbsp;styler package</h3>
+<p>======= ## test &gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/NV-dev</p>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -396,6 +420,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/blenback\.github\.io\/R-for-Reproducible-Research\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -430,7 +472,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

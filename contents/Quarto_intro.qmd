@@ -1,6 +1,6 @@
 # A brief introduction to Quarto
 
-Quatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.
+Quatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.
 
 ####  Quarto allows you to:
 
