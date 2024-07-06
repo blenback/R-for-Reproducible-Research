@@ -2,10 +2,6 @@
 title: 'Reproducible Research with <img style="vertical-align:middle; height:35px; width: 35px; border: none;
   background: none;" src="assets/images/Rlogo.png"> and <img style="vertical-align:middle; height:35px; width: 140px;" src="assets/images/quarto-logo-trademark.svg">: Workflows for data, projects and publications'
 subtitle: 'Landscape 2024 masterclass'
-execute:
-  echo: false
-  error: false
-  warning: true
 format:
   revealjs:
     theme: [default, clean.scss]
@@ -51,7 +47,7 @@ date: last-modified
 
 # Introduction
 
-{{< include contents/intro.qmd >}}
+<!-- {{< include contents/intro.qmd >}} -->
 
 # Research projects with R
 
@@ -69,7 +65,7 @@ date: last-modified
 
 # Quarto
 
-{{< include contents/Quarto_intro.qmd >}}
+<!-- {{< include contents/Quarto_intro.qmd >}} -->
 
 # Let's take another 10 minute break!
 

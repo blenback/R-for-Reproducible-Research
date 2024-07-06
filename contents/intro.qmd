@@ -1,6 +1,9 @@
-::: {.content-hidden when-format="revealjs"}
+<!-- Web content -->
+:::: {.content-hidden when-format="revealjs"}
+
 ## About us
 ::: {.grid style="display: flex; text-align: center;"}
+
 ::: {.g-col-6}
 ![](https://github.com/blenback.png){.picture .lightbox}
 
@@ -48,10 +51,26 @@
   
 :::
 
-:::
+
+## What is reproducible research?
+
+## Why strive for reproducible research?
+
+- Some fields have suffered a 'replication crisis': 
+  - In some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science
+<!--Give headline figures -->
+
+## Why {{< iconify fa-brands r-project >}} for reproducible research?
 
 
+
+## Workshop concept
+::::
+
+
+<!-- Presentation content -->
 ::: {.content-visible when-format="revealjs"}
+
 ## About us
 
 ### Ben Black
@@ -67,7 +86,6 @@
  [{{< iconify simple-icons x >}} \@Blen_Back](https://twitter.com/Blen_Back/){style="text-decoration: none;"}<br>
 :::
 
-
 ## About us
 
 ### Nivedita Harisena
@@ -76,35 +94,6 @@
 
 ### Manuel Kurmann
 
-
-## About us
-
-### Maarten Van Strien
-
-:::
-
-<!-- Web content -->
-::: {.content-visible when-format="html"}
-## What is reproducible research?
-
-## Why strive for reproducible research?
-
-- Some fields have suffered a 'replication crisis': 
-  - In some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science
-<!--Give headline figures -->
-
-## Why {{< iconify fa-brands r-project >}} for reproducible research?
-
-
-
-## Workshop concept
-
-
-:::
-
-
-<!-- Presentation content -->
-::: {.content-visible when-format="revealjs"}
 ## What is reproducible research? 
 
 Let's hear your thoughts:
@@ -144,7 +133,7 @@ We have put together this workshop to share some advice for best practice and ti
 
 ## Workshop concept
 
-![](assets/images/graphical_abstract_dark.png){width=70% }
+![](assets/images/graphical_abstract_dark.png){width=70%}
 :::
 
 

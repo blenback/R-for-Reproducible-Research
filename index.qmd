@@ -1,5 +1,5 @@
 ---
-title: "Workflows for data, projects and publications"
+title: 'Reproducible Research with <img style="vertical-align:middle; height:1em; border: none; background: none;" src="assets/images/Rlogo.png"> and <img style="vertical-align:middle; height:1em;" src="assets/images/quarto-logo-trademark.svg">:Workflows for projects and publications'
 subtitle: "A workshop presented at the [Landscape 2024 conference](https://landscape2024.org/frontend/index.php?folder_id=7393&page_id=), Berlin"
 format:
   html:
@@ -7,20 +7,34 @@ format:
     toc: true
     toc-title: Contents
     toc-location: left
-    toc-depth: 3
+    toc-depth: 2
     number-sections: true
+    number-depth: 1
 citation-location: margin
 ---
 
-![](assets/images/graphical_abstract_dark.png){width=70%}
+![](assets/images/graphical_abstract_dark.png){width=70% .lightbox fig-align="center"} 
 
-# Introduction{.unnumbered}
+This image highlights some the key concepts we will discuss in the workshop, which have been divided into seperate sections: 
+
+- First we present some [background](@sec-background) on why reproducible and transparent research is important.
+- Then we discuss good practice in performing [research projects with R](@sec-Rprojects), focusing on some features of Rstudio that can help ensure your work is reproducibile from the beginning.
+- Section 3 presents three [workflows for reproducibility](@sec-workflows) of differing levels of complexity and discusses how they can be combined and which might be best given the research needs. 
+- Section 4 presents how the open-source scientific and technical publishing system [Quarto](@sec-Quarto) can be used for numerous academic activities including preparing manuscripts. 
+- In section 5 it's time to get hands-on with some [guided exercises](@sec-exercises) to put into practice some of the concepts we have discussed.
+- Finally we share a collection of [resources](@sec-resources) that we find particularly helpful in our own journey towards reproducible research.
+
+
+
+# Background{#sec-background}
+
 {{< include contents/intro.qmd >}}
 
-# Research projects with R
+# Research projects with R{#sec-Rprojects}
+
 {{< include contents/Rprojects.qmd >}}
 
-# 3 workflows for Reproducibility
+# Workflows for Reproducibility{#sec-workflows}
 
 <!--{{< include contents/Zenodo_workflow.qmd >}}-->
 
@@ -28,13 +42,14 @@ citation-location: margin
 
 <!--{{< include contents/Git_workflow.qmd >}}-->
 
-# Quarto
+# Quarto {#sec-Quarto}
 
 {{< include contents/Quarto_intro.qmd >}}
 
-# Guided excercises
+# Guided excercises{#sec-exercises}
 {{< include exercises/Rproj-Zenodo.qmd >}}
 {{< include exercises/Quarto-manuscript.qmd >}}
 
-# Resources
+# Resources{#sec-resources}
+{{< include contents/resources.qmd >}
 

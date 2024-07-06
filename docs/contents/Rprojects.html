@@ -20,7 +20,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -168,10 +221,33 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<section id="project-set-up" class="level2">
-<h2 class="anchored" data-anchor-id="project-set-up">Project set up</h2>
-<p>start with a .RProj (for wd etc.) Use .Rprofile to open scripts/load environment Set up logical directory structure Break up your process and use master scripts and source sub-scripts</p>
+<!-- Web content -->
+<section id="two-cardinal-sins-of-reproducibilty" class="level2">
+<h2 class="anchored" data-anchor-id="two-cardinal-sins-of-reproducibilty">Two cardinal sins of reproducibilty</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/ben/path/that/only/I/have"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>But what is wrong with these lines?</p>
+</section>
+<section id="two-cardinal-sins-of-reproducibilty-1" class="level2">
+<h2 class="anchored" data-anchor-id="two-cardinal-sins-of-reproducibilty-1">Two cardinal sins of reproducibilty</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/ben/path/that/only/I/have"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A good R project… <em>“creates everything it needs, in its own workspace or folder, and it touches nothing it did not create e.g.&nbsp;it does not install additional packages.”</em> Jenny Bryan<span class="citation" data-cites="bryan2017">[<a href="#ref-bryan2017" role="doc-biblioref">1</a>]</span></p>
+<p>Doing guarantees that the project can be moved around on your computer or onto other computers and will still “just work”.</p>
+</section>
+<section id="developing-project-orientated-habits" class="level2">
+<h2 class="anchored" data-anchor-id="developing-project-orientated-habits">Developing project-orientated habits:</h2>
+<ul>
+<li>Take advantage of IDE features (.Rproj, .Rprofile)</li>
+<li>Environment management</li>
+<li>Implement a logical directory structure</li>
+<li>Break up your process (master script and sub-scripts)</li>
+<li>Write clean code</li>
+</ul>
 </section>
 <section id="environment-management" class="level2">
 <h2 class="anchored" data-anchor-id="environment-management">Environment management</h2>
@@ -189,14 +265,19 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="code-folding">code folding</h3>
 </section>
 <section id="syntax-lintr-vs.-styler-package" class="level3">
-<h3 class="anchored" data-anchor-id="syntax-lintr-vs.-styler-package">Syntax lintr vs.&nbsp;styler package</h3>
-<p>======= ## test &gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/NV-dev</p>
+
+<!-- Presentation content -->
+
 
 
 </section>
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Syntax lintr vs.&nbsp;styler package</h2><div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-bryan2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Bryan J (2017) <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Project-oriented workflow</a></div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
