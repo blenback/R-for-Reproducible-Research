@@ -2,6 +2,9 @@
 :::: {.content-hidden when-format="revealjs"}
 
 ## About us
+
+We are four researchers from the research group [Planning of Landscape and Urban Systems (PLUS)](https://plus.ethz.ch/) at [ETH Zürich](https://ethz.ch/en.html). Click on the social icons below our pictures to find out more about our individual research or get in touch with us. 
+
 ::: {.grid style="display: flex; text-align: center;"}
 
 ::: {.g-col-6}
@@ -62,9 +65,6 @@
 
 ## Why {{< iconify fa-brands r-project >}} for reproducible research?
 
-
-
-## Workshop concept
 ::::
 
 

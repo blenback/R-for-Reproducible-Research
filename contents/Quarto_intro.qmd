@@ -1,4 +1,6 @@
-# A brief introduction to Quarto
+<!-- Web content -->
+:::: {.content-hidden when-format="revealjs"}
+## A brief introduction to Quarto
 
 Quatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.
 
@@ -41,5 +43,12 @@ leaflet() %>%
 
 
 ![](https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png){width=60% fig-align="center"}
+:::
 
+<!-- Presentation content -->
+::: {.content-visible when-format="revealjs"}
+
+
+
+:::
 

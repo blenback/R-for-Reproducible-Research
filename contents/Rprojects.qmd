@@ -1,18 +1,25 @@
+---
+bibliography: references.bib
+---
+
 <!-- Web content -->
+
 ::: {.content-visible when-format="html"}
-## Two cardinal sins of reproducibilty
+**Let's start with a definition of what makes a good R project from Jenny Bryan:**
+
+A good R project... *"creates everything it needs, in its own workspace or folder, and it touches nothing it did not create."* Jenny Bryan[@bryan2017]
+
+**Now take a look at these lines of code, of which you have probably seen something similar at the top of many an R script:**
 
 ```{r}
 #| echo: true
 #| eval: false
 install.packages("ggplot2")
+library(ggplot2)
 setwd("C:/Users/ben/path/that/only/I/have")
 ```
 
-
 But what is wrong with these lines?
-
-## Two cardinal sins of reproducibilty
 
 ```{r}
 #| echo: true
@@ -22,36 +29,66 @@ install.packages("ggplot2")
 setwd("C:/Users/ben/path/that/only/I/have")
 ```
 
-
-A good R project... *"creates everything it needs, in its own workspace or folder, and it touches nothing it did not create e.g. it does not install additional packages."* Jenny Bryan[@bryan2017]
-
 Doing guarantees that the project can be moved around on your computer or onto other computers and will still "just work".
 
-## Developing project-orientated habits:
-
--   Take advantage of IDE features (.Rproj, .Rprofile)
+-   Projects with Rstudio
 -   Environment management
 -   Implement a logical directory structure
 -   Break up your process (master script and sub-scripts)
 -   Write clean code
 
+## Rstudio projects
+
 ## Environment management
 
-What are environments and why are they needed? (version conflicts/ dependencies etc. Intro to renv package for environment management. Set up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)
+-   What are environments and why are they needed? (version conflicts/ dependencies etc.
+-   Intro to renv package for environment management.
+
+## Structuring your project directory
+
+-   Set up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)
 
 ## Writing clean code:
 
-### Use a consistent header (hint: use code snippet)
-
 ### General good practice: variable names, use functions for repetive tasks
 
-### code folding
+### Script headers (hint: use code snippet)
 
-### Syntax lintr vs. styler package
+### Code sections
+
+As you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.
+
+However, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:
+
+![](assets/images/code_section_sequential.png)
+
+Code sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):
+
+```{r}
+#| echo: true
+
+# Section One ---------------------------------
+ 
+# Section Two =================================
+ 
+# Section Three #############################
+```
+
+Alternatively you can use the **Code** -\> **Insert Section** command. To navigate between code sections you can use the <strong>Jump To</strong> menu available at the bottom of the editor[@positsupport2024]:
+
+![](assets/images/code_section_jumpto.png)
+
+Or use the document outline pane in the top right corner of the source pane:
+
+![](assets/images/code_section_documentpane.dark.png)
+
+### Code styling
+
+lintr vs. styler package
 :::
 
-
 <!-- Presentation content -->
+
 ::: {.content-visible when-format="revealjs"}
 ## Two cardinal sins of reproducibilty
 
@@ -74,10 +111,9 @@ install.packages("ggplot2")
 setwd("C:/Users/ben/path/that/only/I/have")
 ```
 
-
 ### What is a good R project?
 
-A good R project... *"creates everything it needs, in its own workspace or folder, and it touches nothing it did not create"* Jenny Bryan[@bryan2017] 
+A good R project... *"creates everything it needs, in its own workspace or folder, and it touches nothing it did not create"* Jenny Bryan[@bryan2017]
 
 Doing guarantees that the project can be moved around on your computer or onto other computers and will still "just work".
 
@@ -90,7 +126,6 @@ Doing guarantees that the project can be moved around on your computer or onto o
 -   Writing clean code
 
 ## Rstudio projects
-
 
 ## Environment management
 

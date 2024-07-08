@@ -65,7 +65,9 @@ crossref:
 bibliography: references.bib
 csl: diabetologia.csl
 execute:
-  echo: false
   error: true
   warning: false
+include-after-body:
+  text: |
+    <script type="application/javascript" src="light-dark.js"></script>
 
