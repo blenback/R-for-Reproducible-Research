@@ -158,6 +158,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 
+<link rel="stylesheet" href="index.css">
 <meta property="og:title" content="Reproducible Research with <img style=&quot;vertical-align:middle; height:1em; border: none; background: none;&quot; src=&quot;assets/images/Rlogo.png&quot;> and <img style=&quot;vertical-align:middle; height:1em;&quot; src=&quot;assets/images/quarto-logo-trademark.svg&quot;> - Reproducible Research with <img style=&quot;vertical-align:middle; height:1em; border: none; background: none;&quot; src=&quot;assets/images/Rlogo.png&quot;> and <img style=&quot;vertical-align:middle; height:1em;&quot; src=&quot;assets/images/quarto-logo-trademark.svg&quot;>: Workflows for projects and publications">
 <meta property="og:description" content="A workshop presented at the [Landscape 2024 conference](https://landscape2024.org/frontend/index.php?folder_id=7393&amp;page_id=), Berlin">
 <meta property="og:image" content="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png">
@@ -170,7 +171,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar docked nav-fixed slimcontent">
+<body class="nav-sidebar floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -219,7 +220,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -479,8 +480,8 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span>  <span class="co"># Add default OpenStreetMap map tiles</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">lng=</span> <span class="fl">8.548</span>, <span class="at">lat=</span><span class="fl">47.376</span>, <span class="at">popup=</span><span class="st">"ETH"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-468e41b6085f4b87d630" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-468e41b6085f4b87d630">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[47.376,8.548,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"ETH",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[47.376,47.376],"lng":[8.548,8.548]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-67fc406d25b6b9fb0f41" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-67fc406d25b6b9fb0f41">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[47.376,8.548,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"ETH",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[47.376,47.376],"lng":[8.548,8.548]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -1083,7 +1084,7 @@ All content licensed under
   </div>
 </footer>
 <script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

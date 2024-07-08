@@ -4,7 +4,6 @@ title: 'Reproducible Research with <img style="vertical-align:middle; height:1em
 subtitle: "A workshop presented at the [Landscape 2024 conference](https://landscape2024.org/frontend/index.php?folder_id=7393&page_id=), Berlin"
 format:
   html:
-    margin-left: 0.5em
     toc: true
     toc-title: Contents
     toc-location: left

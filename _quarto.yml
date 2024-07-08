@@ -25,7 +25,7 @@ website:
     right: |
       Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)<br>
   navbar:
-    alignment: "center"
+    align: "center"
     background: secondary
     foreground: light
     tools:
@@ -36,8 +36,8 @@ website:
           - text: Report a Bug
             url:  https://github.com/blenback/R-for-Reproducible-Research/issues
   sidebar:
-    alignment: "left"
-    style: "docked"
+    align: "left"
+    style: "floating"
     border: false
     search: true
     contents:
@@ -51,14 +51,13 @@ format:
     theme: 
       light: [cosmo, theme-light.scss]
       dark: [cosmo, theme-dark.scss]
-    #clean.scss
-    #css: css/styles.css
-    page-layout: article
+    code-copy: true
+    code-overflow: wrap
+    css: index.css
     grid:
-      sidebar-width: 350px
-      body-width: 1100px
-      margin-width: 50px
-      gutter-width: 1.5rem
+      sidebar-width: 250px
+      body-width: 1300px
+      margin-width: 100px
 crossref:
   fig-title: ''
   fig-labels: none
