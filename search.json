@@ -1,5 +1,194 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "",
+    "text": "This image highlights some the key concepts we will discuss in the workshop, which have been divided into seperate sections:"
+  },
+  {
+    "objectID": "index.html#about-us",
+    "href": "index.html#about-us",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "About us",
+    "text": "About us\nWe are four researchers from the research group Planning of Landscape and Urban Systems (PLUS) at ETH Zürich. Click on the social icons below our pictures to find out more about our individual research or get in touch with us.\n\n\n\n\nBen Black\nDoctoral Researcher\n    \n\n\n\n\n\nNivedita Harisena\nDoctoral Researcher\n   \n\n\n\n\n\nManuel Kurmann\nResearch Assistant\n   \n\n\n\n\n\nMaarten Van Strien\nSenior scientist"
+  },
+  {
+    "objectID": "index.html#what-is-reproducible-research",
+    "href": "index.html#what-is-reproducible-research",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "What is reproducible research?",
+    "text": "What is reproducible research?"
+  },
+  {
+    "objectID": "index.html#why-strive-for-reproducible-research",
+    "href": "index.html#why-strive-for-reproducible-research",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Why strive for reproducible research?",
+    "text": "Why strive for reproducible research?\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science"
+  },
+  {
+    "objectID": "index.html#why-for-reproducible-research",
+    "href": "index.html#why-for-reproducible-research",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Why  for reproducible research?",
+    "text": "Why  for reproducible research?"
+  },
+  {
+    "objectID": "index.html#rstudio-projects",
+    "href": "index.html#rstudio-projects",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Rstudio projects",
+    "text": "Rstudio projects"
+  },
+  {
+    "objectID": "index.html#environment-management",
+    "href": "index.html#environment-management",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Environment management",
+    "text": "Environment management\n\nWhat are environments and why are they needed? (version conflicts/ dependencies etc.\nIntro to renv package for environment management."
+  },
+  {
+    "objectID": "index.html#structuring-your-project-directory",
+    "href": "index.html#structuring-your-project-directory",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Structuring your project directory",
+    "text": "Structuring your project directory\n\nSet up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)"
+  },
+  {
+    "objectID": "index.html#writing-clean-code",
+    "href": "index.html#writing-clean-code",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Writing clean code:",
+    "text": "Writing clean code:\n\nGeneral good practice: variable names, use functions for repetive tasks\n\n\nScript headers (hint: use code snippet)\n\n\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[2]:\n\n2. Posit Support (2024) Code folding and sections in the RStudio IDE\n\nOr use the document outline pane in the top right corner of the source pane:\n\n\n\nCode styling\nlintr vs. styler package"
+  },
+  {
+    "objectID": "index.html#a-brief-introduction-to-quarto",
+    "href": "index.html#a-brief-introduction-to-quarto",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "A brief introduction to Quarto",
+    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\nSome of the creative ways in which you can use Quarto is:\n\n1. Visualize and publish interactive plots using html widgets\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\nError in train(..., self = self): unused argument (list(\"cut\", \"clarity\", \"count\", \"weight\"))\n\n\n\n\n2. Create interactive geo-spatial mapping segments\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")\n\n\n\n\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
+  },
+  {
+    "objectID": "index.html#r-project-to-zenodo-workflow",
+    "href": "index.html#r-project-to-zenodo-workflow",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "R project to Zenodo workflow",
+    "text": "R project to Zenodo workflow"
+  },
+  {
+    "objectID": "contents/intro.html",
+    "href": "contents/intro.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "We are four researchers from the research group Planning of Landscape and Urban Systems (PLUS) at ETH Zürich. Click on the social icons below our pictures to find out more about our individual research or get in touch with us.\n\n\n\n\n\nDoctoral Researcher\n    \n\n\n\n\n\n\nDoctoral Researcher\n   \n\n\n\n\n\n\nResearch Assistant\n   \n\n\n\n\n\n\nSenior scientist"
+  },
+  {
+    "objectID": "contents/intro.html#about-us",
+    "href": "contents/intro.html#about-us",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "We are four researchers from the research group Planning of Landscape and Urban Systems (PLUS) at ETH Zürich. Click on the social icons below our pictures to find out more about our individual research or get in touch with us.\n\n\n\n\n\nDoctoral Researcher\n    \n\n\n\n\n\n\nDoctoral Researcher\n   \n\n\n\n\n\n\nResearch Assistant\n   \n\n\n\n\n\n\nSenior scientist"
+  },
+  {
+    "objectID": "contents/intro.html#what-is-reproducible-research",
+    "href": "contents/intro.html#what-is-reproducible-research",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "What is reproducible research?",
+    "text": "What is reproducible research?"
+  },
+  {
+    "objectID": "contents/intro.html#why-strive-for-reproducible-research",
+    "href": "contents/intro.html#why-strive-for-reproducible-research",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Why strive for reproducible research?",
+    "text": "Why strive for reproducible research?\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science"
+  },
+  {
+    "objectID": "contents/intro.html#why-for-reproducible-research",
+    "href": "contents/intro.html#why-for-reproducible-research",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Why  for reproducible research?",
+    "text": "Why  for reproducible research?"
+  },
+  {
+    "objectID": "contents/Docker_workflow.html",
+    "href": "contents/Docker_workflow.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "contents/Exercise_intro.html",
+    "href": "contents/Exercise_intro.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "contents/Quarto_intro.html",
+    "href": "contents/Quarto_intro.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Quatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\n\nError in library(plotly): there is no package called 'plotly'\n\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\nError in ggplotly(p): could not find function \"ggplotly\"\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
+  },
+  {
+    "objectID": "contents/Quarto_intro.html#a-brief-introduction-to-quarto",
+    "href": "contents/Quarto_intro.html#a-brief-introduction-to-quarto",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Quatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\n\nError in library(plotly): there is no package called 'plotly'\n\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\nError in ggplotly(p): could not find function \"ggplotly\"\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html",
+    "href": "contents/Zenodo_workflow.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "contents/Rprojects.html",
+    "href": "contents/Rprojects.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Let’s start with a definition of what makes a good R project from Jenny Bryan:\nA good R project… “creates everything it needs, in its own workspace or folder, and it touches nothing it did not create.” Jenny Bryan[bryan2017?]\nNow take a look at these lines of code, of which you have probably seen something similar at the top of many an R script:\ninstall.packages(\"ggplot2\")\nlibrary(ggplot2)\nsetwd(\"C:/Users/ben/path/that/only/I/have\")\nBut what is wrong with these lines?\ninstall.packages(\"ggplot2\")\nsetwd(\"C:/Users/ben/path/that/only/I/have\")\nDoing guarantees that the project can be moved around on your computer or onto other computers and will still “just work”."
+  },
+  {
+    "objectID": "contents/Rprojects.html#rstudio-projects",
+    "href": "contents/Rprojects.html#rstudio-projects",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Rstudio projects",
+    "text": "Rstudio projects"
+  },
+  {
+    "objectID": "contents/Rprojects.html#environment-management",
+    "href": "contents/Rprojects.html#environment-management",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Environment management",
+    "text": "Environment management\n\nWhat are environments and why are they needed? (version conflicts/ dependencies etc.\nIntro to renv package for environment management."
+  },
+  {
+    "objectID": "contents/Rprojects.html#structuring-your-project-directory",
+    "href": "contents/Rprojects.html#structuring-your-project-directory",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Structuring your project directory",
+    "text": "Structuring your project directory\n\nSet up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)"
+  },
+  {
+    "objectID": "contents/Rprojects.html#writing-clean-code",
+    "href": "contents/Rprojects.html#writing-clean-code",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Writing clean code:",
+    "text": "Writing clean code:\n\nGeneral good practice: variable names, use functions for repetive tasks\n\n\nScript headers (hint: use code snippet)\n\n\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[1]:\n\nOr use the document outline pane in the top right corner of the source pane:\n\n\n\nCode styling\nlintr vs. styler package"
+  },
+  {
+    "objectID": "contents/Git_workflow.html",
+    "href": "contents/Git_workflow.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
     "objectID": "presentation.html#rstudio-projects",
     "href": "presentation.html#rstudio-projects",
     "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
@@ -98,194 +287,5 @@
     "crumbs": [
       "View in presentation format"
     ]
-  },
-  {
-    "objectID": "contents/Zenodo_workflow.html",
-    "href": "contents/Zenodo_workflow.html",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "contents/Quarto_intro.html",
-    "href": "contents/Quarto_intro.html",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "",
-    "text": "Quatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\nError in train(..., self = self): unused argument (list(\"cut\", \"clarity\", \"count\", \"weight\"))\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
-  },
-  {
-    "objectID": "contents/Quarto_intro.html#a-brief-introduction-to-quarto",
-    "href": "contents/Quarto_intro.html#a-brief-introduction-to-quarto",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "",
-    "text": "Quatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\nError in train(..., self = self): unused argument (list(\"cut\", \"clarity\", \"count\", \"weight\"))\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
-  },
-  {
-    "objectID": "contents/Git_workflow.html",
-    "href": "contents/Git_workflow.html",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "contents/Docker_workflow.html",
-    "href": "contents/Docker_workflow.html",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "contents/Exercise_intro.html",
-    "href": "contents/Exercise_intro.html",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "contents/intro.html",
-    "href": "contents/intro.html",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "",
-    "text": "We are four researchers from the research group Planning of Landscape and Urban Systems (PLUS) at ETH Zürich. Click on the social icons below our pictures to find out more about our individual research or get in touch with us.\n\n\n\n\n\nDoctoral Researcher\n    \n\n\n\n\n\n\nDoctoral Researcher\n   \n\n\n\n\n\n\nResearch Assistant\n   \n\n\n\n\n\n\nSenior scientist"
-  },
-  {
-    "objectID": "contents/intro.html#about-us",
-    "href": "contents/intro.html#about-us",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "",
-    "text": "We are four researchers from the research group Planning of Landscape and Urban Systems (PLUS) at ETH Zürich. Click on the social icons below our pictures to find out more about our individual research or get in touch with us.\n\n\n\n\n\nDoctoral Researcher\n    \n\n\n\n\n\n\nDoctoral Researcher\n   \n\n\n\n\n\n\nResearch Assistant\n   \n\n\n\n\n\n\nSenior scientist"
-  },
-  {
-    "objectID": "contents/intro.html#what-is-reproducible-research",
-    "href": "contents/intro.html#what-is-reproducible-research",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "What is reproducible research?",
-    "text": "What is reproducible research?"
-  },
-  {
-    "objectID": "contents/intro.html#why-strive-for-reproducible-research",
-    "href": "contents/intro.html#why-strive-for-reproducible-research",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Why strive for reproducible research?",
-    "text": "Why strive for reproducible research?\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science"
-  },
-  {
-    "objectID": "contents/intro.html#why-for-reproducible-research",
-    "href": "contents/intro.html#why-for-reproducible-research",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Why  for reproducible research?",
-    "text": "Why  for reproducible research?"
-  },
-  {
-    "objectID": "contents/Rprojects.html",
-    "href": "contents/Rprojects.html",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "",
-    "text": "Let’s start with a definition of what makes a good R project from Jenny Bryan:\nA good R project… “creates everything it needs, in its own workspace or folder, and it touches nothing it did not create.” Jenny Bryan[bryan2017?]\nNow take a look at these lines of code, of which you have probably seen something similar at the top of many an R script:\ninstall.packages(\"ggplot2\")\nlibrary(ggplot2)\nsetwd(\"C:/Users/ben/path/that/only/I/have\")\nBut what is wrong with these lines?\ninstall.packages(\"ggplot2\")\nsetwd(\"C:/Users/ben/path/that/only/I/have\")\nDoing guarantees that the project can be moved around on your computer or onto other computers and will still “just work”."
-  },
-  {
-    "objectID": "contents/Rprojects.html#rstudio-projects",
-    "href": "contents/Rprojects.html#rstudio-projects",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Rstudio projects",
-    "text": "Rstudio projects"
-  },
-  {
-    "objectID": "contents/Rprojects.html#environment-management",
-    "href": "contents/Rprojects.html#environment-management",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Environment management",
-    "text": "Environment management\n\nWhat are environments and why are they needed? (version conflicts/ dependencies etc.\nIntro to renv package for environment management."
-  },
-  {
-    "objectID": "contents/Rprojects.html#structuring-your-project-directory",
-    "href": "contents/Rprojects.html#structuring-your-project-directory",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Structuring your project directory",
-    "text": "Structuring your project directory\n\nSet up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)"
-  },
-  {
-    "objectID": "contents/Rprojects.html#writing-clean-code",
-    "href": "contents/Rprojects.html#writing-clean-code",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Writing clean code:",
-    "text": "Writing clean code:\n\nGeneral good practice: variable names, use functions for repetive tasks\n\n\nScript headers (hint: use code snippet)\n\n\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[1]:\n\nOr use the document outline pane in the top right corner of the source pane:\n\n\n\nCode styling\nlintr vs. styler package"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Reproducible Research with  and : Workflows for projects and publications",
-    "section": "",
-    "text": "This image highlights some the key concepts we will discuss in the workshop, which have been divided into seperate sections:"
-  },
-  {
-    "objectID": "index.html#about-us",
-    "href": "index.html#about-us",
-    "title": "Reproducible Research with  and : Workflows for projects and publications",
-    "section": "About us",
-    "text": "About us\nWe are four researchers from the research group Planning of Landscape and Urban Systems (PLUS) at ETH Zürich. Click on the social icons below our pictures to find out more about our individual research or get in touch with us.\n\n\n\n\nBen Black\nDoctoral Researcher\n    \n\n\n\n\n\nNivedita Harisena\nDoctoral Researcher\n   \n\n\n\n\n\nManuel Kurmann\nResearch Assistant\n   \n\n\n\n\n\nMaarten Van Strien\nSenior scientist"
-  },
-  {
-    "objectID": "index.html#what-is-reproducible-research",
-    "href": "index.html#what-is-reproducible-research",
-    "title": "Reproducible Research with  and : Workflows for projects and publications",
-    "section": "What is reproducible research?",
-    "text": "What is reproducible research?"
-  },
-  {
-    "objectID": "index.html#why-strive-for-reproducible-research",
-    "href": "index.html#why-strive-for-reproducible-research",
-    "title": "Reproducible Research with  and : Workflows for projects and publications",
-    "section": "Why strive for reproducible research?",
-    "text": "Why strive for reproducible research?\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science"
-  },
-  {
-    "objectID": "index.html#why-for-reproducible-research",
-    "href": "index.html#why-for-reproducible-research",
-    "title": "Reproducible Research with  and : Workflows for projects and publications",
-    "section": "Why  for reproducible research?",
-    "text": "Why  for reproducible research?"
-  },
-  {
-    "objectID": "index.html#rstudio-projects",
-    "href": "index.html#rstudio-projects",
-    "title": "Reproducible Research with  and : Workflows for projects and publications",
-    "section": "Rstudio projects",
-    "text": "Rstudio projects"
-  },
-  {
-    "objectID": "index.html#environment-management",
-    "href": "index.html#environment-management",
-    "title": "Reproducible Research with  and : Workflows for projects and publications",
-    "section": "Environment management",
-    "text": "Environment management\n\nWhat are environments and why are they needed? (version conflicts/ dependencies etc.\nIntro to renv package for environment management."
-  },
-  {
-    "objectID": "index.html#structuring-your-project-directory",
-    "href": "index.html#structuring-your-project-directory",
-    "title": "Reproducible Research with  and : Workflows for projects and publications",
-    "section": "Structuring your project directory",
-    "text": "Structuring your project directory\n\nSet up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)"
-  },
-  {
-    "objectID": "index.html#writing-clean-code",
-    "href": "index.html#writing-clean-code",
-    "title": "Reproducible Research with  and : Workflows for projects and publications",
-    "section": "Writing clean code:",
-    "text": "Writing clean code:\n\nGeneral good practice: variable names, use functions for repetive tasks\n\n\nScript headers (hint: use code snippet)\n\n\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[2]:\n\n2. Posit Support (2024) Code folding and sections in the RStudio IDE\n\nOr use the document outline pane in the top right corner of the source pane:\n\n\n\nCode styling\nlintr vs. styler package"
-  },
-  {
-    "objectID": "index.html#a-brief-introduction-to-quarto",
-    "href": "index.html#a-brief-introduction-to-quarto",
-    "title": "Reproducible Research with  and : Workflows for projects and publications",
-    "section": "A brief introduction to Quarto",
-    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\nSome of the creative ways in which you can use Quarto is:\n\n1. Visualize and publish interactive plots using html widgets\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\nError in train(..., self = self): unused argument (list(\"cut\", \"clarity\", \"count\", \"weight\"))\n\n\n\n\n2. Create interactive geo-spatial mapping segments\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")\n\n\n\n\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
-  },
-  {
-    "objectID": "index.html#r-project-to-zenodo-workflow",
-    "href": "index.html#r-project-to-zenodo-workflow",
-    "title": "Reproducible Research with  and : Workflows for projects and publications",
-    "section": "R project to Zenodo workflow",
-    "text": "R project to Zenodo workflow"
   }
 ]
