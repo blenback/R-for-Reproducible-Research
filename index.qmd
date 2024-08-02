@@ -13,28 +13,26 @@ format:
 citation-location: margin
 ---
 
-![](assets/images/graphical_abstract_dark.png){width=70% .lightbox fig-align="center"} 
+![](assets/images/graphical_abstract_dark.png){.lightbox width="70%" fig-align="center"}
 
-This image highlights some the key concepts we will discuss in the workshop, which have been divided into seperate sections: 
+This image highlights some the key concepts we will discuss in the workshop, which have been divided into seperate sections:
 
-- First we present some [background](@sec-background) on why reproducible and transparent research is important.
-- Then we discuss good practice in performing [research projects with R](@sec-Rprojects), focusing on some features of Rstudio that can help ensure your work is reproducibile from the beginning.
-- Section 3 presents three [workflows for reproducibility](@sec-workflows) of differing levels of complexity and discusses how they can be combined and which might be best given the research needs. 
-- Section 4 presents how the open-source scientific and technical publishing system [Quarto](@sec-Quarto) can be used for numerous academic activities including preparing manuscripts. 
-- In section 5 it's time to get hands-on with some [guided exercises](@sec-exercises) to put into practice some of the concepts we have discussed.
-- Finally we share a collection of [resources](@sec-resources) that we find particularly helpful in our own journey towards reproducible research.
+1.    [Background](@sec-background): Some introductory information on why reproducible and transparent research is important.
+2.   [Research projects with R](@sec-Rprojects): Starting from the basics to develop good practice for creating research projects with R, focusing on some features of Rstudio as an Integrated Development Environment that can help ensure your work is reproducible.
+3.   [Workflows for reproducibility](@sec-workflows): Here we present three workflows of differing levels of complexity and discusses how they can be combined and which might be best given the research needs.
+4.   [Quarto](@sec-Quarto): Section 4 presents how the open-source scientific and technical publishing system can be used for numerous academic activities including preparing manuscripts.
+5.   [Guided exercises](@sec-exercises): Now it's time to get hands-on with some guided exercises  to put into practice some of the concepts we have discussed.
+6.   [Resources](@sec-resources): A collection of resources that we find particularly helpful in our own journey towards reproducible research.
 
-
-
-# Background{#sec-background}
+# Background {#sec-background}
 
 {{< include contents/intro.qmd >}}
 
-# Research projects with R{#sec-Rprojects}
+# Research projects with R {#sec-Rprojects}
 
 {{< include contents/Rprojects.qmd >}}
 
-# Workflows for Reproducibility{#sec-workflows}
+# Workflows for Reproducibility {#sec-workflows}
 
 <!--{{< include contents/Zenodo_workflow.qmd >}}-->
 
@@ -46,10 +44,10 @@ This image highlights some the key concepts we will discuss in the workshop, whi
 
 {{< include contents/Quarto_intro.qmd >}}
 
-# Guided excercises{#sec-exercises}
-{{< include exercises/Rproj-Zenodo.qmd >}}
-{{< include exercises/Quarto-manuscript.qmd >}}
+# Guided excercises {#sec-exercises}
 
-# Resources{#sec-resources}
-{{< include contents/resources.qmd >}
+{{< include exercises/Rproj-Zenodo.qmd >}} {{< include exercises/Quarto-manuscript.qmd >}}
 
+# Resources {#sec-resources}
+
+{{\< include contents/resources.qmd \>}

@@ -1,76 +1,90 @@
-<!-- Web content -->
-:::: {.content-hidden when-format="revealjs"}
+---
+editor: 
+  markdown: 
+    wrap: 72
+---
 
+<!-- Web content -->
+
+::: {.content-hidden when-format="revealjs"}
 ## About us
 
-We are four researchers from the research group [Planning of Landscape and Urban Systems (PLUS)](https://plus.ethz.ch/) at [ETH Zürich](https://ethz.ch/en.html). Click on the social icons below our pictures to find out more about our individual research or get in touch with us. 
+We are four researchers from the research group [Planning of Landscape
+and Urban Systems (PLUS)](https://plus.ethz.ch/) at [ETH
+Zürich](https://ethz.ch/en.html). Click on the social icons below our
+pictures to find out more about our individual research or get in touch
+with us.
 
 ::: {.grid style="display: flex; text-align: center;"}
-
-::: {.g-col-6}
-![](https://github.com/blenback.png){.picture .lightbox}
+::: g-col-6
+![](assets/images/Ben.jpg){.picture .lightbox}
 
 ### Ben Black
+
 *Doctoral Researcher*
 
- [{{< iconify fa6-solid house-chimney-user size=xl >}}](https://blenback.github.io/){.iconify-icon}
- [{{< iconify fa6-solid envelope size=xl >}}](mailto:bblack@ethz.ch){.iconify-icon}
- [{{< iconify fa6-brands linkedin size=xl >}}](https://www.linkedin.com/in/ben-black-9889a1150/){.iconify-icon}
- [{{< iconify fa6-brands github size=xl >}}](https://github.com/blenback/){.iconify-icon}
- [{{< iconify fa6-brands researchgate size=xl >}}](https://www.researchgate.net/profile/Benjamin-Black-5/){.iconify-icon}
- [{{< iconify simple-icons x size=xl >}}](https://twitter.com/Blen_Back/){.iconify-icon}
+[{{< iconify fa6-solid house-chimney-user size=xl >}}](https://blenback.github.io/){.iconify-icon}
+[{{< iconify fa6-solid envelope size=xl >}}](mailto:bblack@ethz.ch){.iconify-icon}
+[{{< iconify fa6-brands linkedin size=xl >}}](https://www.linkedin.com/in/ben-black-9889a1150/){.iconify-icon}
+[{{< iconify fa6-brands github size=xl >}}](https://github.com/blenback/){.iconify-icon}
+[{{< iconify fa6-brands researchgate size=xl >}}](https://www.researchgate.net/profile/Benjamin-Black-5/){.iconify-icon}
 :::
-  
-::: {.g-col-6}
+
+::: g-col-6
+![](assets/images/nivedita.jpg){.picture .lightbox}
+
 ### Nivedita Harisena
+
 *Doctoral Researcher*
 
- [{{< iconify fa6-solid house-chimney-user size=xl >}}](https://blenback.github.io/){.iconify-icon}
- [{{< iconify fa6-solid envelope size=xl >}}](mailto:bblack@ethz.ch){.iconify-icon}
- [{{< iconify fa6-brands linkedin size=xl >}}](https://www.linkedin.com/in/ben-black-9889a1150/){.iconify-icon}
- [{{< iconify fa6-brands github size=xl >}}](https://github.com/blenback/){.iconify-icon}
- [{{< iconify fa6-brands researchgate size=xl >}}](https://www.researchgate.net/profile/Benjamin-Black-5/){.iconify-icon}
- [{{< iconify simple-icons x size=xl >}}](https://twitter.com/Blen_Back/){.iconify-icon}
-
+[{{< iconify fa6-solid house-chimney-user size=xl >}}](https://irl.ethz.ch/people/person-detail.Mjg5Mjgx.TGlzdC8zNzc5LC0xMzk1OTgzMDM3.html){.iconify-icon}
+[{{< iconify fa6-solid envelope size=xl >}}](mailto:nharisena@ethz.ch){.iconify-icon}
+[{{< iconify fa6-brands linkedin size=xl >}}](https://www.linkedin.com/in/nivedita-varma-harisena-667298141/){.iconify-icon}
+[{{< iconify fa6-brands github size=xl >}}](https://github.com/NVHarisena1){.iconify-icon}
 :::
 
-::: {.g-col-6}
+::: g-col-6
+![](assets/images/Manuel.jpg){.picture .lightbox}
+
 ### Manuel Kurmann
+
 *Research Assistant*
 
+[{{< iconify fa6-solid house-chimney-user size=xl >}}](https://irl.ethz.ch/people/person-detail.MjM2NjYz.TGlzdC8zNzc5LC0xMzk1OTgzMDM3.html){.iconify-icon}
+[{{< iconify fa6-solid envelope size=xl >}}](mailto:mankurma@student.ethz.ch){.iconify-icon}
+[{{< iconify fa6-brands linkedin size=xl >}}](https://www.linkedin.com/in/manuel-kurmann-696577251/){.iconify-icon}
+[{{< iconify fa6-brands github size=xl >}}](https://github.com/ManuelKurmann){.iconify-icon}
 :::
 
-::: {.g-col-6}
+::: g-col-6
+![](assets/images/Maarten.jpg){.picture .lightbox}
+
 ### Maarten Van Strien
+
 *Senior scientist*
 
- [{{< iconify fa6-solid house-chimney-user size=xl >}}](https://blenback.github.io/){.iconify-icon}
- [{{< iconify fa6-solid envelope size=xl >}}](mailto:bblack@ethz.ch){.iconify-icon}
- [{{< iconify fa6-brands linkedin size=xl >}}](https://www.linkedin.com/in/ben-black-9889a1150/){.iconify-icon}
- [{{< iconify fa6-brands github size=xl >}}](https://github.com/blenback/){.iconify-icon}
- [{{< iconify fa6-brands researchgate size=xl >}}](https://www.researchgate.net/profile/Benjamin-Black-5/){.iconify-icon}
- [{{< iconify simple-icons x size=xl >}}](https://twitter.com/Blen_Back/){.iconify-icon}
+[{{< iconify fa6-solid house-chimney-user size=xl >}}](https://irl.ethz.ch/people/person-detail.MTYzODAz.TGlzdC8xNzM4LC0xMzk1OTgzMDM3.html){.iconify-icon}
+[{{< iconify fa6-solid envelope size=xl >}}](mailto:vanstrien@ethz.ch){.iconify-icon}
+[{{< iconify fa6-brands linkedin size=xl >}}](https://www.linkedin.com/in/maarten-van-strien-347b6747/?originalSubdomain=ch){.iconify-icon}
+[{{< iconify fa6-brands researchgate size=xl >}}](https://www.researchgate.net/profile/Maarten-Van-Strien){.iconify-icon}
 :::
-  
 :::
-
 
 ## What is reproducible research?
 
 ## Why strive for reproducible research?
 
-- Some fields have suffered a 'replication crisis': 
-  - In some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science
-<!--Give headline figures -->
+-   Some fields have suffered a 'replication crisis':
+    -   In some cases headline results unable to be reproduced using
+        reported data and methods: Lowers trust in science
+        <!--Give headline figures -->
 
 ## Why {{< iconify fa-brands r-project >}} for reproducible research?
-
-::::
-
+:::
 
 <!-- Presentation content -->
-::: {.content-visible when-format="revealjs"}
 
+::: {.content-visible when-format="revealjs"}
 ## About us
 
 ### Ben Black
@@ -78,12 +92,18 @@ We are four researchers from the research group [Planning of Landscape and Urban
 ::: {layout="[0.38, -0.02, 0.60]" layout-valign="center"}
 ![](https://github.com/blenback.png){.picture .lightbox}
 
- [{{< iconify fa6-solid house-chimney-user >}} blenback.github.io](https://blenback.github.io/){style="text-decoration: none;"}<br>
- [{{< iconify fa6-solid envelope >}} bblack@ethz.ch](mailto:bblack@ethz.ch){style="text-decoration: none;"}<br>
- [{{< iconify fa6-brands linkedin >}} Ben Black](https://www.linkedin.com/in/ben-black-9889a1150/){style="text-decoration: none;"}<br>
- [{{< iconify fa6-brands github >}} \@blenback](https://github.com/blenback/){style="text-decoration: none;"}<br>
- [{{< iconify fa6-brands researchgate >}} \Benjamin Black](https://www.researchgate.net/profile/Benjamin-Black-5/){style="text-decoration: none;"}<br>
- [{{< iconify simple-icons x >}} \@Blen_Back](https://twitter.com/Blen_Back/){style="text-decoration: none;"}<br>
+[{{< iconify fa6-solid house-chimney-user >}}
+blenback.github.io](https://blenback.github.io/){style="text-decoration: none;"}<br>
+[{{< iconify fa6-solid envelope >}}
+bblack\@ethz.ch](mailto:bblack@ethz.ch){style="text-decoration: none;"}<br>
+[{{< iconify fa6-brands linkedin >}} Ben
+Black](https://www.linkedin.com/in/ben-black-9889a1150/){style="text-decoration: none;"}<br>
+[{{< iconify fa6-brands github >}}
+\@blenback](https://github.com/blenback/){style="text-decoration: none;"}<br>
+[{{< iconify fa6-brands researchgate >}} \Benjamin
+Black](https://www.researchgate.net/profile/Benjamin-Black-5/){style="text-decoration: none;"}<br>
+[{{< iconify simple-icons x >}}
+\@Blen_Back](https://twitter.com/Blen_Back/){style="text-decoration: none;"}<br>
 :::
 
 ## About us
@@ -94,20 +114,20 @@ We are four researchers from the research group [Planning of Landscape and Urban
 
 ### Manuel Kurmann
 
-## What is reproducible research? 
+## What is reproducible research?
 
-Let's hear your thoughts:
-What does reproducible research mean to you?
+Let's hear your thoughts: What does reproducible research mean to you?
 
 ::: {.img style="text-align:center;"}
 ![](assets\images\what_is_reproducible_qr_code.png){fig-align="center"}
 
-[https://www.menti.com/alsw49tprwu7](https://www.menti.com/alsw49tprwu7)
+<https://www.menti.com/alsw49tprwu7>
 :::
 
-## {background-iframe="https://www.mentimeter.com/app/presentation/alqogxibw u94raf69893wn32c8it8mcy/embed"}
+##  {background-iframe="https://www.mentimeter.com/app/presentation/alqogxibw u94raf69893wn32c8it8mcy/embed"}
 
 ## The FAIR standard
+
 The FAIR standard was developed....
 
 ## Why strive for reproducible research?
@@ -116,24 +136,28 @@ The FAIR standard was developed....
 
 ## Why strive for reproducible research?
 
-- Replication crisis: Allows our work to be verified more thoroughly
-- Improves science for all: Allows others to more easily build upon our work
+-   Replication crisis: Allows our work to be verified more thoroughly
+-   Improves science for all: Allows others to more easily build upon
+    our work
 
-Don't just take our word for it, research funders are increasingly focused on reproducible research too: EXAMPLE 
+Don't just take our word for it, research funders are increasingly
+focused on reproducible research too: EXAMPLE
 
 ## Why {{< iconify fa-brands r-project >}} for reproducible research?
 
-- Open source 
-- Large active user community for support
-- Packages to suit just about every research need: statistics, modelling, spatial analysis, visualisation (Many packages developed by academics)
+-   Open source
+-   Large active user community for support
+-   Packages to suit just about every research need: statistics,
+    modelling, spatial analysis, visualisation (Many packages developed
+    by academics)
 
-BUT just using {{< iconify fa-brands r-project >}} doesn't necessarily make your research reproducible...
+BUT just using {{< iconify fa-brands r-project >}} doesn't necessarily
+make your research reproducible...
 
-We have put together this workshop to share some advice for best practice and tips that we have picked up along the way. 
+We have put together this workshop to share some advice for best
+practice and tips that we have picked up along the way.
 
 ## Workshop concept
 
-![](assets/images/graphical_abstract_dark.png){width=70%}
+![](assets/images/graphical_abstract_dark.png){width="70%"}
 :::
-
-
