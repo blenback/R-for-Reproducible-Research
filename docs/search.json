@@ -1,476 +1,173 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "{width=80% fig-align:center}"
-  },
-  {
-    "objectID": "index.html#schedule",
-    "href": "index.html#schedule",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
-  },
-  {
-    "objectID": "index.html#about-us",
-    "href": "index.html#about-us",
-    "title": "Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\n\n\n\nBen Black\nDoctoral Researcher\n     \n\n\n\nNivedita Harisena\nDoctoral Researcher\n     \n\n\nMaarten Van Strien\nSenior scientist"
-  },
-  {
-    "objectID": "index.html#about-us-1",
-    "href": "index.html#about-us-1",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\nNivedita Harisena"
-  },
-  {
-    "objectID": "index.html#about-us-2",
-    "href": "index.html#about-us-2",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us"
-  },
-  {
-    "objectID": "index.html#maarten-van-strien",
-    "href": "index.html#maarten-van-strien",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien"
-  },
-  {
-    "objectID": "main_dark.html",
-    "href": "main_dark.html",
-    "title": "Reproducible Research with R and Quarto: Workflows for data, projects and publications",
-    "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "main_dark.html#about-us",
-    "href": "main_dark.html#about-us",
-    "title": "Reproducible Research with R and Quarto: Workflows for data, projects and publications",
-    "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "main_dark.html#about-us-1",
-    "href": "main_dark.html#about-us-1",
-    "title": "Reproducible Research with R and Quarto: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\nNivedita Harisena"
-  },
-  {
-    "objectID": "main_dark.html#about-us-2",
-    "href": "main_dark.html#about-us-2",
-    "title": "Reproducible Research with R and Quarto: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us"
-  },
-  {
-    "objectID": "main_dark.html#maarten-van-strien",
-    "href": "main_dark.html#maarten-van-strien",
-    "title": "Reproducible Research with R and Quarto: Workflows for data, projects and publications",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien"
-  },
-  {
-    "objectID": "contents/about.html",
-    "href": "contents/about.html",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "",
-    "text": "Doctoral Researcher\n     \n\n\n\n\nDoctoral Researcher\n     \n\n\n\nSenior scientist"
-  },
-  {
-    "objectID": "contents/about.html#about-us",
-    "href": "contents/about.html#about-us",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "",
-    "text": "Doctoral Researcher\n     \n\n\n\n\nDoctoral Researcher\n     \n\n\n\nSenior scientist"
-  },
-  {
-    "objectID": "contents/about.html#about-us-1",
-    "href": "contents/about.html#about-us-1",
-    "title": "Reproducible Research with R and Quarto",
-    "section": "About us",
-    "text": "About us\n\nNivedita Harisena"
-  },
-  {
-    "objectID": "contents/about.html#about-us-2",
-    "href": "contents/about.html#about-us-2",
-    "title": "Reproducible Research with R and Quarto",
-    "section": "About us",
-    "text": "About us"
-  },
-  {
-    "objectID": "contents/about.html#maarten-van-strien",
-    "href": "contents/about.html#maarten-van-strien",
-    "title": "Reproducible Research with R and Quarto",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien",
+    "objectID": "presentation.html#rstudio-projects",
+    "href": "presentation.html#rstudio-projects",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Rstudio projects",
+    "text": "Rstudio projects",
     "crumbs": [
-      "Excercises",
-      "About us"
+      "View in presentation format"
     ]
   },
   {
-    "objectID": "Presentation.html",
-    "href": "Presentation.html",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "Presentation.html#schedule",
-    "href": "Presentation.html#schedule",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
-  },
-  {
-    "objectID": "Presentation.html#about-us",
-    "href": "Presentation.html#about-us",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "Presentation.html#about-us-1",
-    "href": "Presentation.html#about-us-1",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\nNivedita Harisena"
-  },
-  {
-    "objectID": "Presentation.html#about-us-2",
-    "href": "Presentation.html#about-us-2",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us"
-  },
-  {
-    "objectID": "Presentation.html#maarten-van-strien",
-    "href": "Presentation.html#maarten-van-strien",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien"
-  },
-  {
-    "objectID": "Presentation-web.html",
-    "href": "Presentation-web.html",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
-  },
-  {
-    "objectID": "Presentation-web.html#schedule",
-    "href": "Presentation-web.html#schedule",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
-  },
-  {
-    "objectID": "Presentation-web.html#about-us",
-    "href": "Presentation-web.html#about-us",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "Presentation-web.html#about-us-1",
-    "href": "Presentation-web.html#about-us-1",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\nNivedita Harisena"
-  },
-  {
-    "objectID": "Presentation-web.html#about-us-2",
-    "href": "Presentation-web.html#about-us-2",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us"
-  },
-  {
-    "objectID": "Presentation-web.html#maarten-van-strien",
-    "href": "Presentation-web.html#maarten-van-strien",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien"
-  },
-  {
-    "objectID": "Presentation-revealjs.html#schedule",
-    "href": "Presentation-revealjs.html#schedule",
+    "objectID": "presentation.html#environment-management",
+    "href": "presentation.html#environment-management",
     "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "Schedule",
-    "text": "Schedule\n\n\nIntroduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
-  },
-  {
-    "objectID": "Presentation-revealjs.html#about-us",
-    "href": "Presentation-revealjs.html#about-us",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "Presentation-revealjs.html#about-us-1",
-    "href": "Presentation-revealjs.html#about-us-1",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nNivedita Harisena"
-  },
-  {
-    "objectID": "Presentation-revealjs.html#about-us-2",
-    "href": "Presentation-revealjs.html#about-us-2",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us"
-  },
-  {
-    "objectID": "Presentation-revealjs.html#maarten-van-strien",
-    "href": "Presentation-revealjs.html#maarten-van-strien",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien"
-  },
-  {
-    "objectID": "presentation.html",
-    "href": "presentation.html",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
-  },
-  {
-    "objectID": "presentation.html#about-us",
-    "href": "presentation.html#about-us",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-<<<<<<< HEAD
-    "text": "About us\n\n\n\n\nBen Black\nDoctoral Researcher\n     \n\n\n\nNivedita Harisena\nDoctoral Researcher\n     \n\n\nMaarten Van Strien\nSenior scientist"
-=======
-    "text": "About us\n\n\n\nBen Black\nDoctoral Researcher\n     \n\n\nNivedita Harisena\nDoctoral Researcher\n     \n\n\nMaarten Van Strien\nSenior scientist"
->>>>>>> origin/NV-dev
-  },
-  {
-    "objectID": "presentation-revealjs.html#about-us",
-    "href": "presentation-revealjs.html#about-us",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "presentation-revealjs.html#about-us-1",
-    "href": "presentation-revealjs.html#about-us-1",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nNivedita Harisena"
-  },
-  {
-    "objectID": "presentation-revealjs.html#about-us-2",
-    "href": "presentation-revealjs.html#about-us-2",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nMaarten Van Strien"
-  },
-  {
-    "objectID": "presentation-revealjs.html#maarten-van-strien",
-    "href": "presentation-revealjs.html#maarten-van-strien",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien"
-  },
-  {
-    "objectID": "index-revealjs.html#about-us",
-    "href": "index-revealjs.html#about-us",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "index-revealjs.html#about-us-1",
-    "href": "index-revealjs.html#about-us-1",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nNivedita Harisena"
-  },
-  {
-    "objectID": "index-revealjs.html#about-us-2",
-    "href": "index-revealjs.html#about-us-2",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nMaarten Van Strien"
-  },
-  {
-    "objectID": "presentation.html#about-us-1",
-    "href": "presentation.html#about-us-1",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "presentation.html#about-us-2",
-    "href": "presentation.html#about-us-2",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nNivedita Harisena"
-  },
-  {
-    "objectID": "exercises.html",
-    "href": "exercises.html",
-    "title": "Guided excercies",
-    "section": "",
-    "text": "R project to Zenodo workflow\n\n\n\n\n Back to top",
+    "section": "Environment management",
+    "text": "Environment management\n\nWhat are environments and why are they needed? (version conflicts/ dependencies etc.\nIntro to renv package for environment management.",
     "crumbs": [
-      "Guided excercies"
+      "View in presentation format"
     ]
   },
   {
-    "objectID": "index.html#a-brief-introduction-to-quarto",
-    "href": "index.html#a-brief-introduction-to-quarto",
-    "title": "Workflows for data, projects and publications",
-    "section": "A brief introduction to Quarto",
-    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\nSome of the creative ways in which you can use Quarto is:\n\n1. Visualize and publish interactive plots using html widgets\n\n\n\n\n\n\n\n\n2. Create interactive geo-spatial mapping segments\n\n\n\n\n\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
-  },
-  {
-    "objectID": "index.html#r-project-to-zenodo-workflow",
-    "href": "index.html#r-project-to-zenodo-workflow",
-    "title": "Workflows for data, projects and publications",
-    "section": "R project to Zenodo workflow",
-    "text": "R project to Zenodo workflow"
-  },
-  {
-    "objectID": "index.html#write-a-paper-with-quarto",
-    "href": "index.html#write-a-paper-with-quarto",
-    "title": "Workflows for data, projects and publications",
-    "section": "Write a paper with Quarto",
-    "text": "Write a paper with Quarto"
-  },
-  {
-    "objectID": "contents/about.html#ben-black",
-    "href": "contents/about.html#ben-black",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Ben Black",
-    "text": "Ben Black\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "contents/about.html#nivedita-harisena",
-    "href": "contents/about.html#nivedita-harisena",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Nivedita Harisena",
-    "text": "Nivedita Harisena\n\n\n\n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-<<<<<<< HEAD
-    "objectID": "presentation.html#about-us-3",
-    "href": "presentation.html#about-us-3",
+    "objectID": "presentation.html#structuring-your-project-directory",
+    "href": "presentation.html#structuring-your-project-directory",
     "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-=======
+    "section": "Structuring your project directory",
+    "text": "Structuring your project directory\n\nSet up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#writing-clean-code",
+    "href": "presentation.html#writing-clean-code",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Writing clean code:",
+    "text": "Writing clean code:\nGeneral good practice: variable names, use functions for repetive tasks\nScript headers (hint: use code snippet)\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[2]:\n\nOr use the document outline pane in the top right corner of the source pane:\n\nCode styling\nlintr vs. styler package",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#two-cardinal-sins-of-reproducibilty",
+    "href": "presentation.html#two-cardinal-sins-of-reproducibilty",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Two cardinal sins of reproducibilty",
+    "text": "Two cardinal sins of reproducibilty\n\ninstall.packages(\"ggplot2\")\nsetwd(\"C:/Users/ben/path/that/only/I/have\")\n\nYou might have seen such lines commonly used but what is the problem with them?",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#two-cardinal-sins-of-reproducibilty-1",
+    "href": "presentation.html#two-cardinal-sins-of-reproducibilty-1",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Two cardinal sins of reproducibilty",
+    "text": "Two cardinal sins of reproducibilty\n\ninstall.packages(\"ggplot2\")\nsetwd(\"C:/Users/ben/path/that/only/I/have\")\n\nWhat is a good R project?\nA good R project… “creates everything it needs, in its own workspace or folder, and it touches nothing it did not create” Jenny Bryan[1]\nDoing guarantees that the project can be moved around on your computer or onto other computers and will still “just work”.",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#good-project-orientated-habits",
+    "href": "presentation.html#good-project-orientated-habits",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Good project-orientated habits:",
+    "text": "Good project-orientated habits:\n\nTake advantage of IDE features (.Rproj, .Rprofile)\nManage your environment\nUse logical directory structures\nBreak up your process (master script and sub-scripts)\nWriting clean code",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#rstudio-projects-1",
+    "href": "presentation.html#rstudio-projects-1",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Rstudio projects",
+    "text": "Rstudio projects",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#environment-management-1",
+    "href": "presentation.html#environment-management-1",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Environment management",
+    "text": "Environment management\nWhat are environments and why are they needed? (version conflicts/ dependencies etc. Intro to renv package for environment management. Set up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#writing-clean-code-1",
+    "href": "presentation.html#writing-clean-code-1",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Writing clean code:",
+    "text": "Writing clean code:\nUse a consistent header (hint: use code snippet)\nGeneral good practice: variable names, use functions for repetive tasks\ncode folding\nSyntax lintr vs. styler package",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html",
+    "href": "contents/Zenodo_workflow.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
     "objectID": "contents/Quarto_intro.html",
     "href": "contents/Quarto_intro.html",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "",
-    "text": "Quatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\n\n\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
+    "text": "Quatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\nError in train(..., self = self): unused argument (list(\"cut\", \"clarity\", \"count\", \"weight\"))\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
   },
   {
     "objectID": "contents/Quarto_intro.html#a-brief-introduction-to-quarto",
     "href": "contents/Quarto_intro.html#a-brief-introduction-to-quarto",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "",
-    "text": "Quatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\n\n\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
+    "text": "Quatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\nError in train(..., self = self): unused argument (list(\"cut\", \"clarity\", \"count\", \"weight\"))\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
   },
   {
-    "objectID": "presentation.html#about-us-3",
-    "href": "presentation.html#about-us-3",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
->>>>>>> origin/NV-dev
-    "section": "About us",
-    "text": "About us\nMaarten Van Strien"
+    "objectID": "contents/Git_workflow.html",
+    "href": "contents/Git_workflow.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Back to top"
   },
   {
-<<<<<<< HEAD
-    "objectID": "presentation.html#test",
-    "href": "presentation.html#test",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "test",
-    "text": "test"
+    "objectID": "contents/Docker_workflow.html",
+    "href": "contents/Docker_workflow.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Back to top"
   },
   {
-    "objectID": "index.html#test",
-    "href": "index.html#test",
-    "title": "Workflows for data, projects and publications",
-    "section": "test",
-    "text": "test"
-  },
-  {
-    "objectID": "index.html#what-does-reproducible-research-mean-take-suggestions",
-    "href": "index.html#what-does-reproducible-research-mean-take-suggestions",
-    "title": "Workflows for data, projects and publications",
-    "section": "What does reproducible research mean? (take suggestions)",
-    "text": "What does reproducible research mean? (take suggestions)"
-  },
-  {
-    "objectID": "index.html#the-fair-standard",
-    "href": "index.html#the-fair-standard",
-    "title": "Workflows for data, projects and publications",
-    "section": "The FAIR standard",
-    "text": "The FAIR standard"
-  },
-  {
-    "objectID": "index.html#why-strive-for-reproducible-research-take-suggestions",
-    "href": "index.html#why-strive-for-reproducible-research-take-suggestions",
-    "title": "Workflows for data, projects and publications",
-    "section": "Why strive for reproducible research? (take suggestions)",
-    "text": "Why strive for reproducible research? (take suggestions)"
-  },
-  {
-    "objectID": "index.html#why-r-for-reproducible-research",
-    "href": "index.html#why-r-for-reproducible-research",
-    "title": "Workflows for data, projects and publications",
-    "section": "Why R for reproducible research?",
-    "text": "Why R for reproducible research?"
-  },
-  {
-    "objectID": "index.html#workshop-concept",
-    "href": "index.html#workshop-concept",
-    "title": "Workflows for data, projects and publications",
-    "section": "Workshop concept",
-    "text": "Workshop concept"
+    "objectID": "contents/Exercise_intro.html",
+    "href": "contents/Exercise_intro.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Back to top"
   },
   {
     "objectID": "contents/intro.html",
     "href": "contents/intro.html",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "",
-    "text": "Doctoral Researcher\n     \n\n\n\n\nDoctoral Researcher\n     \n\n\n\nSenior scientist"
+    "text": "We are four researchers from the research group Planning of Landscape and Urban Systems (PLUS) at ETH Zürich. Click on the social icons below our pictures to find out more about our individual research or get in touch with us.\n\n\n\n\n\nDoctoral Researcher\n    \n\n\n\n\n\n\nDoctoral Researcher\n   \n\n\n\n\n\n\nResearch Assistant\n   \n\n\n\n\n\n\nSenior scientist"
   },
   {
     "objectID": "contents/intro.html#about-us",
     "href": "contents/intro.html#about-us",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "",
-    "text": "Doctoral Researcher\n     \n\n\n\n\nDoctoral Researcher\n     \n\n\n\nSenior scientist"
+    "text": "We are four researchers from the research group Planning of Landscape and Urban Systems (PLUS) at ETH Zürich. Click on the social icons below our pictures to find out more about our individual research or get in touch with us.\n\n\n\n\n\nDoctoral Researcher\n    \n\n\n\n\n\n\nDoctoral Researcher\n   \n\n\n\n\n\n\nResearch Assistant\n   \n\n\n\n\n\n\nSenior scientist"
   },
   {
-    "objectID": "contents/intro.html#what-does-reproducible-research-mean-take-suggestions",
-    "href": "contents/intro.html#what-does-reproducible-research-mean-take-suggestions",
+    "objectID": "contents/intro.html#what-is-reproducible-research",
+    "href": "contents/intro.html#what-is-reproducible-research",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "What does reproducible research mean? (take suggestions)",
-    "text": "What does reproducible research mean? (take suggestions)"
+    "section": "What is reproducible research?",
+    "text": "What is reproducible research?"
   },
   {
-    "objectID": "contents/intro.html#the-fair-standard",
-    "href": "contents/intro.html#the-fair-standard",
+    "objectID": "contents/intro.html#why-strive-for-reproducible-research",
+    "href": "contents/intro.html#why-strive-for-reproducible-research",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "The FAIR standard",
-    "text": "The FAIR standard"
-  },
-  {
-    "objectID": "contents/intro.html#why-strive-for-reproducible-research-take-suggestions",
-    "href": "contents/intro.html#why-strive-for-reproducible-research-take-suggestions",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Why strive for reproducible research? (take suggestions)",
-    "text": "Why strive for reproducible research? (take suggestions)"
+    "section": "Why strive for reproducible research?",
+    "text": "Why strive for reproducible research?\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science"
   },
   {
     "objectID": "contents/intro.html#why-for-reproducible-research",
@@ -480,143 +177,115 @@
     "text": "Why  for reproducible research?"
   },
   {
-    "objectID": "contents/intro.html#workshop-concept",
-    "href": "contents/intro.html#workshop-concept",
+    "objectID": "contents/Rprojects.html",
+    "href": "contents/Rprojects.html",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Workshop concept",
-    "text": "Workshop concept"
+    "section": "",
+    "text": "Let’s start with a definition of what makes a good R project from Jenny Bryan:\nA good R project… “creates everything it needs, in its own workspace or folder, and it touches nothing it did not create.” Jenny Bryan[bryan2017?]\nNow take a look at these lines of code, of which you have probably seen something similar at the top of many an R script:\ninstall.packages(\"ggplot2\")\nlibrary(ggplot2)\nsetwd(\"C:/Users/ben/path/that/only/I/have\")\nBut what is wrong with these lines?\ninstall.packages(\"ggplot2\")\nsetwd(\"C:/Users/ben/path/that/only/I/have\")\nDoing guarantees that the project can be moved around on your computer or onto other computers and will still “just work”."
   },
   {
-    "objectID": "presentation.html#what-does-reproducible-research-mean-take-suggestions",
-    "href": "presentation.html#what-does-reproducible-research-mean-take-suggestions",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "What does reproducible research mean? (take suggestions)",
-    "text": "What does reproducible research mean? (take suggestions)"
-  },
-  {
-    "objectID": "presentation.html#the-fair-standard",
-    "href": "presentation.html#the-fair-standard",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "The FAIR standard",
-    "text": "The FAIR standard"
-  },
-  {
-    "objectID": "presentation.html#why-strive-for-reproducible-research-take-suggestions",
-    "href": "presentation.html#why-strive-for-reproducible-research-take-suggestions",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "Why strive for reproducible research? (take suggestions)",
-    "text": "Why strive for reproducible research? (take suggestions)"
-  },
-  {
-    "objectID": "presentation.html#why-for-reproducible-research",
-    "href": "presentation.html#why-for-reproducible-research",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "Why  for reproducible research?",
-    "text": "Why  for reproducible research?"
-  },
-  {
-    "objectID": "presentation.html#workshop-concept",
-    "href": "presentation.html#workshop-concept",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "Workshop concept",
-    "text": "Workshop concept"
-  },
-  {
-    "objectID": "index.html#why-for-reproducible-research",
-    "href": "index.html#why-for-reproducible-research",
-    "title": "Workflows for data, projects and publications",
-    "section": "Why  for reproducible research?",
-    "text": "Why  for reproducible research?"
-  },
-  {
-    "objectID": "contents/intro.html#why-markdown.quarto-shortcode__-escaped-data-is-shortcode1-data-value-iconify-fa-r-project-for-reproducible-research",
-    "href": "contents/intro.html#why-markdown.quarto-shortcode__-escaped-data-is-shortcode1-data-value-iconify-fa-r-project-for-reproducible-research",
+    "objectID": "contents/Rprojects.html#rstudio-projects",
+    "href": "contents/Rprojects.html#rstudio-projects",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Why markdown{{< iconify fa-r-project >}} for reproducible research?",
-    "text": "Why markdown{{&lt; iconify fa-r-project &gt;}} for reproducible research?"
+    "section": "Rstudio projects",
+    "text": "Rstudio projects"
   },
   {
-    "objectID": "contents/intro.html#what-does-reproducible-research-mean",
-    "href": "contents/intro.html#what-does-reproducible-research-mean",
+    "objectID": "contents/Rprojects.html#environment-management",
+    "href": "contents/Rprojects.html#environment-management",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "What does reproducible research mean?",
-    "text": "What does reproducible research mean?"
+    "section": "Environment management",
+    "text": "Environment management\n\nWhat are environments and why are they needed? (version conflicts/ dependencies etc.\nIntro to renv package for environment management."
   },
   {
-    "objectID": "contents/intro.html#why-strive-for-reproducible-research",
-    "href": "contents/intro.html#why-strive-for-reproducible-research",
+    "objectID": "contents/Rprojects.html#structuring-your-project-directory",
+    "href": "contents/Rprojects.html#structuring-your-project-directory",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Why strive for reproducible research?",
-    "text": "Why strive for reproducible research?"
+    "section": "Structuring your project directory",
+    "text": "Structuring your project directory\n\nSet up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)"
   },
   {
-    "objectID": "index.html#what-does-reproducible-research-mean",
-    "href": "index.html#what-does-reproducible-research-mean",
-    "title": "Workflows for data, projects and publications",
-    "section": "What does reproducible research mean?",
-    "text": "What does reproducible research mean?"
+    "objectID": "contents/Rprojects.html#writing-clean-code",
+    "href": "contents/Rprojects.html#writing-clean-code",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Writing clean code:",
+    "text": "Writing clean code:\n\nGeneral good practice: variable names, use functions for repetive tasks\n\n\nScript headers (hint: use code snippet)\n\n\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[1]:\n\nOr use the document outline pane in the top right corner of the source pane:\n\n\n\nCode styling\nlintr vs. styler package"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "",
+    "text": "This image highlights some the key concepts we will discuss in the workshop, which have been divided into seperate sections:"
+  },
+  {
+    "objectID": "index.html#about-us",
+    "href": "index.html#about-us",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "About us",
+    "text": "About us\nWe are four researchers from the research group Planning of Landscape and Urban Systems (PLUS) at ETH Zürich. Click on the social icons below our pictures to find out more about our individual research or get in touch with us.\n\n\n\n\nBen Black\nDoctoral Researcher\n    \n\n\n\n\n\nNivedita Harisena\nDoctoral Researcher\n   \n\n\n\n\n\nManuel Kurmann\nResearch Assistant\n   \n\n\n\n\n\nMaarten Van Strien\nSenior scientist"
+  },
+  {
+    "objectID": "index.html#what-is-reproducible-research",
+    "href": "index.html#what-is-reproducible-research",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "What is reproducible research?",
+    "text": "What is reproducible research?"
   },
   {
     "objectID": "index.html#why-strive-for-reproducible-research",
     "href": "index.html#why-strive-for-reproducible-research",
-    "title": "Workflows for data, projects and publications",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "Why strive for reproducible research?",
-    "text": "Why strive for reproducible research?"
+    "text": "Why strive for reproducible research?\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science"
   },
   {
-    "objectID": "presentation.html#what-is-reproducible-research",
-    "href": "presentation.html#what-is-reproducible-research",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "What is reproducible research?",
-    "text": "What is reproducible research?\nLet’s hear your thoughts: What does reproducible research mean to you?\n\n\n\n\n\n\nhttps://www.menti.com/alsw49tprwu7"
+    "objectID": "index.html#why-for-reproducible-research",
+    "href": "index.html#why-for-reproducible-research",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Why  for reproducible research?",
+    "text": "Why  for reproducible research?"
   },
   {
-    "objectID": "presentation.html#what-is-reproducible-research-1",
-    "href": "presentation.html#what-is-reproducible-research-1",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "What is reproducible research?",
-    "text": "What is reproducible research?"
+    "objectID": "index.html#rstudio-projects",
+    "href": "index.html#rstudio-projects",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Rstudio projects",
+    "text": "Rstudio projects"
   },
   {
-    "objectID": "presentation.html#why-strive-for-reproducible-research",
-    "href": "presentation.html#why-strive-for-reproducible-research",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "Why strive for reproducible research?",
-    "text": "Why strive for reproducible research?"
+    "objectID": "index.html#environment-management",
+    "href": "index.html#environment-management",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Environment management",
+    "text": "Environment management\n\nWhat are environments and why are they needed? (version conflicts/ dependencies etc.\nIntro to renv package for environment management."
   },
   {
-    "objectID": "index.html#what-is-reproducible-research-1",
-    "href": "index.html#what-is-reproducible-research-1",
-    "title": "Workflows for data, projects and publications",
-    "section": "What is reproducible research?",
-    "text": "What is reproducible research?"
+    "objectID": "index.html#structuring-your-project-directory",
+    "href": "index.html#structuring-your-project-directory",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Structuring your project directory",
+    "text": "Structuring your project directory\n\nSet up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)"
   },
   {
-    "objectID": "contents/intro.html#what-is-reproducible-research-1",
-    "href": "contents/intro.html#what-is-reproducible-research-1",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "What is reproducible research?",
-    "text": "What is reproducible research?"
+    "objectID": "index.html#writing-clean-code",
+    "href": "index.html#writing-clean-code",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Writing clean code:",
+    "text": "Writing clean code:\n\nGeneral good practice: variable names, use functions for repetive tasks\n\n\nScript headers (hint: use code snippet)\n\n\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[2]:\n\n2. Posit Support (2024) Code folding and sections in the RStudio IDE\n\nOr use the document outline pane in the top right corner of the source pane:\n\n\n\nCode styling\nlintr vs. styler package"
   },
   {
-    "objectID": "presentation.html#what-is-reproducible-research-2",
-    "href": "presentation.html#what-is-reproducible-research-2",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "What is reproducible research?",
-    "text": "What is reproducible research?"
-=======
-    "objectID": "presentation.html#a-brief-introduction-to-quarto",
-    "href": "presentation.html#a-brief-introduction-to-quarto",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
+    "objectID": "index.html#a-brief-introduction-to-quarto",
+    "href": "index.html#a-brief-introduction-to-quarto",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "A brief introduction to Quarto",
-    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\nSome of the creative ways in which you can use Quarto is:\n1. Visualize and publish interactive plots using html widgets\n\n\nWarning: package 'plotly' was built under R version 4.3.3\n\n\n\nAttaching package: 'plotly'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\n\n\n\n\n\n2. Create interactive geo-spatial mapping segments\n\n\nWarning: package 'leaflet' was built under R version 4.3.2\n\n\n\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
+    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\nSome of the creative ways in which you can use Quarto is:\n\n1. Visualize and publish interactive plots using html widgets\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\nError in train(..., self = self): unused argument (list(\"cut\", \"clarity\", \"count\", \"weight\"))\n\n\n\n\n2. Create interactive geo-spatial mapping segments\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")\n\n\n\n\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
   },
   {
-    "objectID": "presentation.html#test",
-    "href": "presentation.html#test",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "test",
-    "text": "test"
->>>>>>> origin/NV-dev
+    "objectID": "index.html#r-project-to-zenodo-workflow",
+    "href": "index.html#r-project-to-zenodo-workflow",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "R project to Zenodo workflow",
+    "text": "R project to Zenodo workflow"
   }
 ]
