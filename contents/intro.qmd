@@ -71,6 +71,16 @@ with us.
 :::
 
 ## What is reproducible research?
+-   Ability to replicate results:
+    -   Ensuring other researchers can independently obtain identical results using the same data, methods and conditions
+-   Open access
+    - Share all relevant data and code
+-   Detailed methodological documentation
+    -   Documenting all steps, from data collection to analysis.
+    -   Providing exact details to avoid ambiguity in procedures.
+-   Version control
+    -   Managing software versions to ensure long-term reproduccibility
+
 
 ## Why strive for reproducible research?
 
@@ -78,10 +88,23 @@ with us.
     -   In some cases headline results unable to be reproduced using
         reported data and methods: Lowers trust in science
         <!--Give headline figures -->
+-   Facilitate collaboration: 
+    -   Encourages sharing and building on each other's work while ensuring proper attribution.
+-   Error mitigation:
+    -   Reduces the likelihood of mistakes by ensuring all steps are well documented and replicable.
+-   Long-term impact: 
+    -   Ensures research remains useful over time, even as technology advances.    
+    
 
 ## Why {{< iconify fa-brands r-project >}} for reproducible research?
 :::
 
+-   Open source: 
+    -   Accessible to all, no cost barriers.
+-   Comprehensive ecosystem: 
+    -   Extensive packages for data analysis, modeling, and visualization.
+- Documentation and Version Control: 
+    -   Supports detailed documentation and integrates with version control tools like Git.    
 <!-- Presentation content -->
 
 ::: {.content-visible when-format="revealjs"}

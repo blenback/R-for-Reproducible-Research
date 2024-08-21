@@ -2,7 +2,7 @@
   {
     "objectID": "presentation.html#rstudio-projects",
     "href": "presentation.html#rstudio-projects",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "Rstudio projects",
     "text": "Rstudio projects",
     "crumbs": [
@@ -12,7 +12,7 @@
   {
     "objectID": "presentation.html#environment-management",
     "href": "presentation.html#environment-management",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "Environment management",
     "text": "Environment management\n\nWhat are environments and why are they needed? (version conflicts/ dependencies etc.\nIntro to renv package for environment management.",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "presentation.html#structuring-your-project-directory",
     "href": "presentation.html#structuring-your-project-directory",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "Structuring your project directory",
     "text": "Structuring your project directory\n\nSet up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)",
     "crumbs": [
@@ -32,9 +32,9 @@
   {
     "objectID": "presentation.html#writing-clean-code",
     "href": "presentation.html#writing-clean-code",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "Writing clean code:",
-    "text": "Writing clean code:\nGeneral good practice: variable names, use functions for repetive tasks\nScript headers (hint: use code snippet)\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[2]:\n\nOr use the document outline pane in the top right corner of the source pane:\n\nCode styling\nlintr vs. styler package",
+    "text": "Writing clean code:\n\nGeneral good practice: variable names, use functions for repetive tasks\n\n\nScript headers (hint: use code snippet)\n\n\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[2]:\n\nOr use the document outline pane in the top right corner of the source pane:\n\n\n\nCode styling\nlintr vs. styler package",
     "crumbs": [
       "View in presentation format"
     ]
@@ -279,7 +279,7 @@
     "href": "index.html#a-brief-introduction-to-quarto",
     "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "A brief introduction to Quarto",
-    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\nSome of the creative ways in which you can use Quarto is:\n\n1. Visualize and publish interactive plots using html widgets\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\nError in train(..., self = self): unused argument (list(\"cut\", \"clarity\", \"count\", \"weight\"))\n\n\n\n\n2. Create interactive geo-spatial mapping segments\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")\n\n\n\n\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
+    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\nSome of the creative ways in which you can use Quarto is:\n\n1. Visualize and publish interactive plots using html widgets\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\n\n\n\n\n\n\n2. Create interactive geo-spatial mapping segments\n\nlibrary(leaflet)\n\nError in library(leaflet): there is no package called 'leaflet'\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")\n\nError in addMarkers(., lng = 8.548, lat = 47.376, popup = \"ETH\"): could not find function \"addMarkers\"\n\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
   },
   {
     "objectID": "index.html#r-project-to-zenodo-workflow",
@@ -287,5 +287,15 @@
     "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "R project to Zenodo workflow",
     "text": "R project to Zenodo workflow"
+  },
+  {
+    "objectID": "presentation.html",
+    "href": "presentation.html",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
+    "section": "",
+    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)",
+    "crumbs": [
+      "View in presentation format"
+    ]
   }
 ]
