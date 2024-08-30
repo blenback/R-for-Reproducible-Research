@@ -160,21 +160,21 @@
     "href": "contents/intro.html#what-is-reproducible-research",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "What is reproducible research?",
-    "text": "What is reproducible research?"
+    "text": "What is reproducible research?\n\nAbility to replicate results:\n\nEnsuring other researchers can independently obtain identical results using the same data, methods and conditions\n\nOpen access\n\nShare all relevant data and code\n\nDetailed methodological documentation\n\nDocumenting all steps, from data collection to analysis.\nProviding exact details to avoid ambiguity in procedures.\n\nVersion control\n\nManaging software versions to ensure long-term reproduccibility"
   },
   {
     "objectID": "contents/intro.html#why-strive-for-reproducible-research",
     "href": "contents/intro.html#why-strive-for-reproducible-research",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "Why strive for reproducible research?",
-    "text": "Why strive for reproducible research?\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science"
+    "text": "Why strive for reproducible research?\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science \n\nFacilitate collaboration:\n\nEncourages sharing and building on each other’s work while ensuring proper attribution.\n\nError mitigation:\n\nReduces the likelihood of mistakes by ensuring all steps are well documented and replicable.\n\nLong-term impact:\n\nEnsures research remains useful over time, even as technology advances."
   },
   {
     "objectID": "contents/intro.html#why-for-reproducible-research",
     "href": "contents/intro.html#why-for-reproducible-research",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "Why  for reproducible research?",
-    "text": "Why  for reproducible research?"
+    "text": "Why  for reproducible research?\n\nOpen source:\n\nAccessible to all, no cost barriers.\n\nComprehensive ecosystem:\n\nExtensive packages for data analysis, modeling, and visualization.\n\nDocumentation and Version Control:\n\nSupports detailed documentation and integrates with version control tools like Git."
   },
   {
     "objectID": "contents/Rprojects.html",
@@ -230,21 +230,21 @@
     "href": "index.html#what-is-reproducible-research",
     "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "What is reproducible research?",
-    "text": "What is reproducible research?"
+    "text": "What is reproducible research?\n\nAbility to replicate results:\n\nEnsuring other researchers can independently obtain identical results using the same data, methods and conditions\n\nOpen access\n\nShare all relevant data and code\n\nDetailed methodological documentation\n\nDocumenting all steps, from data collection to analysis.\nProviding exact details to avoid ambiguity in procedures.\n\nVersion control\n\nManaging software versions to ensure long-term reproduccibility"
   },
   {
     "objectID": "index.html#why-strive-for-reproducible-research",
     "href": "index.html#why-strive-for-reproducible-research",
     "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "Why strive for reproducible research?",
-    "text": "Why strive for reproducible research?\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science"
+    "text": "Why strive for reproducible research?\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science \n\nFacilitate collaboration:\n\nEncourages sharing and building on each other’s work while ensuring proper attribution.\n\nError mitigation:\n\nReduces the likelihood of mistakes by ensuring all steps are well documented and replicable.\n\nLong-term impact:\n\nEnsures research remains useful over time, even as technology advances."
   },
   {
     "objectID": "index.html#why-for-reproducible-research",
     "href": "index.html#why-for-reproducible-research",
     "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "Why  for reproducible research?",
-    "text": "Why  for reproducible research?"
+    "text": "Why  for reproducible research?\n\nOpen source:\n\nAccessible to all, no cost barriers.\n\nComprehensive ecosystem:\n\nExtensive packages for data analysis, modeling, and visualization.\n\nDocumentation and Version Control:\n\nSupports detailed documentation and integrates with version control tools like Git."
   },
   {
     "objectID": "index.html#rstudio-projects",
