@@ -72,39 +72,68 @@ with us.
 
 ## What is reproducible research?
 -   Ability to replicate results:
-    -   Ensuring other researchers can independently obtain identical results using the same data, methods and conditions
--   Open access
-    - Share all relevant data and code
--   Detailed methodological documentation
-    -   Documenting all steps, from data collection to analysis.
-    -   Providing exact details to avoid ambiguity in procedures.
--   Version control
-    -   Managing software versions to ensure long-term reproduccibility
+    -   Others can reproduce the results given only the original data, code, and documentation (Essawy et al. 2020)
+-   Starts with planning:
+    -   Reproducibility begins with organized data management and sound planning before any analysis is         conducted.
+-   Consistent data storage:
+    -   Data should be backed up regularly and stored in multiple locations to prevent loss and ensure         accessibility.
+-   Clear documentation:
+    -   Metadata and well-organized files are essential for interpreting and reproducing research,             ensuring clarity and usability.
+-   Version vontrol:
+    -   Using version control systems helps track changes and maintain a record of the project's               evolution, aiding in reproducibility.
+-   Standardized formats:
+    -   Data should be stored in nonproprietary, portable formats to ensure broad accessibility and            long-term usability.
+-   Open access:
+    -   Data and code should be publicly available in accessible repositories to support transparency          and wider use in the scientific community.
 
 
 ## Why strive for reproducible research?
+Advantages for your research
 
 -   Some fields have suffered a 'replication crisis':
     -   In some cases headline results unable to be reproduced using
         reported data and methods: Lowers trust in science
         <!--Give headline figures -->
--   Facilitate collaboration: 
-    -   Encourages sharing and building on each other's work while ensuring proper attribution.
--   Error mitigation:
-    -   Reduces the likelihood of mistakes by ensuring all steps are well documented and replicable.
--   Long-term impact: 
-    -   Ensures research remains useful over time, even as technology advances.    
+-   Personal reference:
+    -   Simplifies the process of recalling how and why specific analyses were performed, making it            easier to explain your work to collaborators, supervisors, and reviewers.
+-   Efficient modifications:
+    -   Simplifies the process of adjusting analyses and figures, saving time when supervisors,                collaborators, or reviewers request changes.
+-   Streamlined future projects:
+    -   Facilitates the re-use of code and organizational systems for similar tasks in new projects,           making them simpler and faster to execute.
+-   Demonstrates rigor and transparency:
+    -   Enhances trust in your work by allowing others to verify the accuracy of your methods,                 improving peer review and reducing the risk of errors or accusations of misconduct.
+-   Increases impact and citations:
+    -   Boosts citation rates by enabling others to reuse your code and data, allowing your research to         have a greater influence and be cited in a wider range of contexts.
+
+Advantages for other researchers
+
+-   Facilitates learning:
+    -   Provides others with a head start by sharing data and code for easier learning and faster              analysis.
+-   Enables reproducibility:
+    -   Makes it easier for others to reproduce and build upon your work, supporting stronger and more         compatible research.
+-   Error detection:
+    -   Helps others identify and correct mistakes, protecting the scientific community from errors.
     
+Alston, J. M., and J. A. Rick. 2021. A Beginner's Guide to Conducting Reproducible Research. The Bulletin of the Ecological Society of America 102(2). https://doi.org/10.1002/bes2.1801.
 
 ## Why {{< iconify fa-brands r-project >}} for reproducible research?
 :::
 
--   Open source: 
-    -   Accessible to all, no cost barriers.
--   Comprehensive ecosystem: 
-    -   Extensive packages for data analysis, modeling, and visualization.
-- Documentation and Version Control: 
-    -   Supports detailed documentation and integrates with version control tools like Git.    
+
+-   Open source accessibility:
+    -   Freely available to everyone, eliminating cost barriers and promoting inclusive access to              research tools.
+-   Comprehensive documentation:
+    -   Encourages thorough documentation, making it easier to track and replicate analyses across             different projects.
+-   Integrated version control:
+    -   Seamlessly integrates with version control systems, ensuring that changes are tracked and              reproducibility is maintained.
+-   Consistency across platforms:
+    -   Provides a stable environment that works consistently across different operating systems,              enhancing reproducibility.
+-   Broad community support:
+    -   Backed by a large, active community that contributes to continuous improvements, making it a           reliable choice for long-term research projects.
+-   Flexibility and adaptability:
+    -   Offers a wide range of tools and functions that can be adapted to various research needs,              ensuring that diverse research tasks can be handled within a reproducible framework.
+    
+Siraji, M. A., and M. Rahman. 2024. Primer on Reproducible Research in R: Enhancing Transparency and Scientific Rigor. Clocks & Sleep 6(1): 1–10. https://doi.org/10.3390/clockssleep6010001.
 <!-- Presentation content -->
 
 ::: {.content-visible when-format="revealjs"}

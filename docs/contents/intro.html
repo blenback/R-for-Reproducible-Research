@@ -217,61 +217,109 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <ul>
 <li>Ability to replicate results:
 <ul>
-<li>Ensuring other researchers can independently obtain identical results using the same data, methods and conditions</li>
+<li>Others can reproduce the results given only the original data, code, and documentation (Essawy et al.&nbsp;2020)</li>
 </ul></li>
-<li>Open access
+<li>Starts with planning:
 <ul>
-<li>Share all relevant data and code</li>
+<li>Reproducibility begins with organized data management and sound planning before any analysis is conducted.</li>
 </ul></li>
-<li>Detailed methodological documentation
+<li>Consistent data storage:
 <ul>
-<li>Documenting all steps, from data collection to analysis.</li>
-<li>Providing exact details to avoid ambiguity in procedures.</li>
+<li>Data should be backed up regularly and stored in multiple locations to prevent loss and ensure accessibility.</li>
 </ul></li>
-<li>Version control
+<li>Clear documentation:
 <ul>
-<li>Managing software versions to ensure long-term reproduccibility</li>
+<li>Metadata and well-organized files are essential for interpreting and reproducing research, ensuring clarity and usability.</li>
+</ul></li>
+<li>Version vontrol:
+<ul>
+<li>Using version control systems helps track changes and maintain a record of the project’s evolution, aiding in reproducibility.</li>
+</ul></li>
+<li>Standardized formats:
+<ul>
+<li>Data should be stored in nonproprietary, portable formats to ensure broad accessibility and long-term usability.</li>
+</ul></li>
+<li>Open access:
+<ul>
+<li>Data and code should be publicly available in accessible repositories to support transparency and wider use in the scientific community.</li>
 </ul></li>
 </ul>
 </section>
 <section id="why-strive-for-reproducible-research" class="level2">
 <h2 class="anchored" data-anchor-id="why-strive-for-reproducible-research">Why strive for reproducible research?</h2>
+<p>Advantages for your research</p>
 <ul>
 <li>Some fields have suffered a ‘replication crisis’:
 <ul>
 <li>In some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science <!--Give headline figures --></li>
 </ul></li>
-<li>Facilitate collaboration:
+<li>Personal reference:
 <ul>
-<li>Encourages sharing and building on each other’s work while ensuring proper attribution.</li>
+<li>Simplifies the process of recalling how and why specific analyses were performed, making it easier to explain your work to collaborators, supervisors, and reviewers.</li>
 </ul></li>
-<li>Error mitigation:
+<li>Efficient modifications:
 <ul>
-<li>Reduces the likelihood of mistakes by ensuring all steps are well documented and replicable.</li>
+<li>Simplifies the process of adjusting analyses and figures, saving time when supervisors, collaborators, or reviewers request changes.</li>
 </ul></li>
-<li>Long-term impact:
+<li>Streamlined future projects:
 <ul>
-<li>Ensures research remains useful over time, even as technology advances.</li>
+<li>Facilitates the re-use of code and organizational systems for similar tasks in new projects, making them simpler and faster to execute.</li>
+</ul></li>
+<li>Demonstrates rigor and transparency:
+<ul>
+<li>Enhances trust in your work by allowing others to verify the accuracy of your methods, improving peer review and reducing the risk of errors or accusations of misconduct.</li>
+</ul></li>
+<li>Increases impact and citations:
+<ul>
+<li>Boosts citation rates by enabling others to reuse your code and data, allowing your research to have a greater influence and be cited in a wider range of contexts.</li>
 </ul></li>
 </ul>
+<p>Advantages for other researchers</p>
+<ul>
+<li>Facilitates learning:
+<ul>
+<li>Provides others with a head start by sharing data and code for easier learning and faster analysis.</li>
+</ul></li>
+<li>Enables reproducibility:
+<ul>
+<li>Makes it easier for others to reproduce and build upon your work, supporting stronger and more compatible research.</li>
+</ul></li>
+<li>Error detection:
+<ul>
+<li>Helps others identify and correct mistakes, protecting the scientific community from errors.</li>
+</ul></li>
+</ul>
+<p>Alston, J. M., and J. A. Rick. 2021. A Beginner’s Guide to Conducting Reproducible Research. The Bulletin of the Ecological Society of America 102(2). https://doi.org/10.1002/bes2.1801.</p>
 </section>
 <section id="why-for-reproducible-research" class="level2">
 <h2 class="anchored" data-anchor-id="why-for-reproducible-research">Why <iconify-icon inline="" icon="fa-brands:r-project"></iconify-icon> for reproducible research?</h2>
 <ul>
-<li>Open source:
+<li>Open source accessibility:
 <ul>
-<li>Accessible to all, no cost barriers.</li>
+<li>Freely available to everyone, eliminating cost barriers and promoting inclusive access to research tools.</li>
 </ul></li>
-<li>Comprehensive ecosystem:
+<li>Comprehensive documentation:
 <ul>
-<li>Extensive packages for data analysis, modeling, and visualization.</li>
+<li>Encourages thorough documentation, making it easier to track and replicate analyses across different projects.</li>
 </ul></li>
-<li>Documentation and Version Control:
+<li>Integrated version control:
 <ul>
-<li>Supports detailed documentation and integrates with version control tools like Git.<br>
-<!-- Presentation content --></li>
+<li>Seamlessly integrates with version control systems, ensuring that changes are tracked and reproducibility is maintained.</li>
+</ul></li>
+<li>Consistency across platforms:
+<ul>
+<li>Provides a stable environment that works consistently across different operating systems, enhancing reproducibility.</li>
+</ul></li>
+<li>Broad community support:
+<ul>
+<li>Backed by a large, active community that contributes to continuous improvements, making it a reliable choice for long-term research projects.</li>
+</ul></li>
+<li>Flexibility and adaptability:
+<ul>
+<li>Offers a wide range of tools and functions that can be adapted to various research needs, ensuring that diverse research tasks can be handled within a reproducible framework.</li>
 </ul></li>
 </ul>
+<p>Siraji, M. A., and M. Rahman. 2024. Primer on Reproducible Research in R: Enhancing Transparency and Scientific Rigor. Clocks &amp; Sleep 6(1): 1–10. https://doi.org/10.3390/clockssleep6010001. <!-- Presentation content --></p>
 
 
 </section>
@@ -856,7 +904,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
