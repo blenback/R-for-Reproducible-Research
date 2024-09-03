@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/presentation.html</loc>
-    <lastmod>2024-08-02T15:22:15.131Z</lastmod>
+    <lastmod>2024-08-21T11:20:12.338Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Rproj-Zenodo.html</loc>
-    <lastmod>2024-08-02T15:22:15.126Z</lastmod>
+    <lastmod>2024-08-21T11:20:12.338Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Zenodo_workflow.html</loc>
-    <lastmod>2024-08-02T15:22:14.879Z</lastmod>
+    <lastmod>2024-09-03T08:12:03.163Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Quarto_intro.html</loc>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/intro.html</loc>
-    <lastmod>2024-08-02T15:22:14.891Z</lastmod>
+    <lastmod>2024-08-30T08:06:16.986Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Rprojects.html</loc>
@@ -38,10 +38,11 @@
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Quarto-manuscript.html</loc>
-    <lastmod>2024-08-02T15:22:15.124Z</lastmod>
+    <lastmod>2024-08-21T11:20:12.338Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/index.html</loc>
+
     <lastmod>2024-09-02T17:35:52.511Z</lastmod>
   </url>
   <url>
@@ -51,5 +52,6 @@
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/assets/renv_docker.html</loc>
     <lastmod>2024-09-02T09:12:05.532Z</lastmod>
+
   </url>
 </urlset>

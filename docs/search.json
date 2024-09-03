@@ -2,7 +2,7 @@
   {
     "objectID": "presentation.html#rstudio-projects",
     "href": "presentation.html#rstudio-projects",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "Rstudio projects",
     "text": "Rstudio projects",
     "crumbs": [
@@ -12,7 +12,7 @@
   {
     "objectID": "presentation.html#environment-management",
     "href": "presentation.html#environment-management",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "Environment management",
     "text": "Environment management\n\nWhat are environments and why are they needed? (version conflicts/ dependencies etc.\nIntro to renv package for environment management.",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "presentation.html#structuring-your-project-directory",
     "href": "presentation.html#structuring-your-project-directory",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "Structuring your project directory",
     "text": "Structuring your project directory\n\nSet up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)",
     "crumbs": [
@@ -32,9 +32,9 @@
   {
     "objectID": "presentation.html#writing-clean-code",
     "href": "presentation.html#writing-clean-code",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "Writing clean code:",
-    "text": "Writing clean code:\nGeneral good practice: variable names, use functions for repetive tasks\nScript headers (hint: use code snippet)\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[2]:\n\nOr use the document outline pane in the top right corner of the source pane:\n\nCode styling\nlintr vs. styler package",
+    "text": "Writing clean code:\n\nGeneral good practice: variable names, use functions for repetive tasks\n\n\nScript headers (hint: use code snippet)\n\n\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[2]:\n\nOr use the document outline pane in the top right corner of the source pane:\n\n\n\nCode styling\nlintr vs. styler package",
     "crumbs": [
       "View in presentation format"
     ]
@@ -102,9 +102,9 @@
   {
     "objectID": "contents/Zenodo_workflow.html",
     "href": "contents/Zenodo_workflow.html",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "title": "Use renv to create project-specific environments in R",
     "section": "",
-    "text": "Back to top"
+    "text": "Initialize renv in your project:\n\nUse renv::init() to initialize renv in your project directory.\n\n\n# initialize the project environment\nrenv::init()\n\n\nThis command creates an isolated environment for your project, and ensures that all package dependencies are managed within that environment. When you run renv::init(), several important files and directories are created:\n\nrenv.lock, a lock file that records the exact versions of all packages installed and used in your project. This file is crucial for replicating the environment on other machines or by other people.\n.Rprofile, this file is automatically run every time you start R in your project, and renv uses it to configure your R session to use the packages in your project library.\n\nrenv/ directory, a directory that stores the local library of packages specific to your project. It also contains metadata and configuration files that renv uses to manage the environment.\nOther directories and files are also created. To share an R environment, renv.lock, .Rprofile, renv/settings.json and renv/activate.R must be provided.\n\n\n\n\n\n\nInstall packages within renv\n\nInstall packages as usual. Then running renv::snapshot() will include the library in the lock file if it is loaded in a script located within the project folder\n\n\n# Install a library, e.g dplyr\ninstall.packages(\"dplyr\")\n\n# load the package\nlibrary(dplyr)\n\n# create the snapshot\nrenv::snapshot()\n\n\n\n\n\n\nGet all the packages used in the existing environment installed on your computer\n\nCopy the project folder to your machine.\nRun renv::restore() in the root folder of the project where the .lock file is located. This will replicate the environment from an existing lockfile and install all packages with the correct versions.\n\n\n# install packages used in the environment\nrenv::restore()"
   },
   {
     "objectID": "contents/Quarto_intro.html",
@@ -160,21 +160,21 @@
     "href": "contents/intro.html#what-is-reproducible-research",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "What is reproducible research?",
-    "text": "What is reproducible research?"
+    "text": "What is reproducible research?\n\nAbility to replicate results:\n\nOthers can reproduce the results given only the original data, code, and documentation (Essawy et al. 2020)\n\nStarts with planning:\n\nReproducibility begins with organized data management and sound planning before any analysis is conducted.\n\nConsistent data storage:\n\nData should be backed up regularly and stored in multiple locations to prevent loss and ensure accessibility.\n\nClear documentation:\n\nMetadata and well-organized files are essential for interpreting and reproducing research, ensuring clarity and usability.\n\nVersion vontrol:\n\nUsing version control systems helps track changes and maintain a record of the project’s evolution, aiding in reproducibility.\n\nStandardized formats:\n\nData should be stored in nonproprietary, portable formats to ensure broad accessibility and long-term usability.\n\nOpen access:\n\nData and code should be publicly available in accessible repositories to support transparency and wider use in the scientific community."
   },
   {
     "objectID": "contents/intro.html#why-strive-for-reproducible-research",
     "href": "contents/intro.html#why-strive-for-reproducible-research",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "Why strive for reproducible research?",
-    "text": "Why strive for reproducible research?\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science"
+    "text": "Why strive for reproducible research?\nAdvantages for your research\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science \n\nPersonal reference:\n\nSimplifies the process of recalling how and why specific analyses were performed, making it easier to explain your work to collaborators, supervisors, and reviewers.\n\nEfficient modifications:\n\nSimplifies the process of adjusting analyses and figures, saving time when supervisors, collaborators, or reviewers request changes.\n\nStreamlined future projects:\n\nFacilitates the re-use of code and organizational systems for similar tasks in new projects, making them simpler and faster to execute.\n\nDemonstrates rigor and transparency:\n\nEnhances trust in your work by allowing others to verify the accuracy of your methods, improving peer review and reducing the risk of errors or accusations of misconduct.\n\nIncreases impact and citations:\n\nBoosts citation rates by enabling others to reuse your code and data, allowing your research to have a greater influence and be cited in a wider range of contexts.\n\n\nAdvantages for other researchers\n\nFacilitates learning:\n\nProvides others with a head start by sharing data and code for easier learning and faster analysis.\n\nEnables reproducibility:\n\nMakes it easier for others to reproduce and build upon your work, supporting stronger and more compatible research.\n\nError detection:\n\nHelps others identify and correct mistakes, protecting the scientific community from errors.\n\n\nAlston, J. M., and J. A. Rick. 2021. A Beginner’s Guide to Conducting Reproducible Research. The Bulletin of the Ecological Society of America 102(2). https://doi.org/10.1002/bes2.1801."
   },
   {
     "objectID": "contents/intro.html#why-for-reproducible-research",
     "href": "contents/intro.html#why-for-reproducible-research",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "Why  for reproducible research?",
-    "text": "Why  for reproducible research?"
+    "text": "Why  for reproducible research?\n\nOpen source accessibility:\n\nFreely available to everyone, eliminating cost barriers and promoting inclusive access to research tools.\n\nComprehensive documentation:\n\nEncourages thorough documentation, making it easier to track and replicate analyses across different projects.\n\nIntegrated version control:\n\nSeamlessly integrates with version control systems, ensuring that changes are tracked and reproducibility is maintained.\n\nConsistency across platforms:\n\nProvides a stable environment that works consistently across different operating systems, enhancing reproducibility.\n\nBroad community support:\n\nBacked by a large, active community that contributes to continuous improvements, making it a reliable choice for long-term research projects.\n\nFlexibility and adaptability:\n\nOffers a wide range of tools and functions that can be adapted to various research needs, ensuring that diverse research tasks can be handled within a reproducible framework.\n\n\nSiraji, M. A., and M. Rahman. 2024. Primer on Reproducible Research in R: Enhancing Transparency and Scientific Rigor. Clocks & Sleep 6(1): 1–10. https://doi.org/10.3390/clockssleep6010001."
   },
   {
     "objectID": "contents/Rprojects.html",
@@ -230,21 +230,21 @@
     "href": "index.html#what-is-reproducible-research",
     "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "What is reproducible research?",
-    "text": "What is reproducible research?"
+    "text": "What is reproducible research?\n\nAbility to replicate results:\n\nOthers can reproduce the results given only the original data, code, and documentation (Essawy et al. 2020)\n\nStarts with planning:\n\nReproducibility begins with organized data management and sound planning before any analysis is conducted.\n\nConsistent data storage:\n\nData should be backed up regularly and stored in multiple locations to prevent loss and ensure accessibility.\n\nClear documentation:\n\nMetadata and well-organized files are essential for interpreting and reproducing research, ensuring clarity and usability.\n\nVersion vontrol:\n\nUsing version control systems helps track changes and maintain a record of the project’s evolution, aiding in reproducibility.\n\nStandardized formats:\n\nData should be stored in nonproprietary, portable formats to ensure broad accessibility and long-term usability.\n\nOpen access:\n\nData and code should be publicly available in accessible repositories to support transparency and wider use in the scientific community."
   },
   {
     "objectID": "index.html#why-strive-for-reproducible-research",
     "href": "index.html#why-strive-for-reproducible-research",
     "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "Why strive for reproducible research?",
-    "text": "Why strive for reproducible research?\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science"
+    "text": "Why strive for reproducible research?\nAdvantages for your research\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science \n\nPersonal reference:\n\nSimplifies the process of recalling how and why specific analyses were performed, making it easier to explain your work to collaborators, supervisors, and reviewers.\n\nEfficient modifications:\n\nSimplifies the process of adjusting analyses and figures, saving time when supervisors, collaborators, or reviewers request changes.\n\nStreamlined future projects:\n\nFacilitates the re-use of code and organizational systems for similar tasks in new projects, making them simpler and faster to execute.\n\nDemonstrates rigor and transparency:\n\nEnhances trust in your work by allowing others to verify the accuracy of your methods, improving peer review and reducing the risk of errors or accusations of misconduct.\n\nIncreases impact and citations:\n\nBoosts citation rates by enabling others to reuse your code and data, allowing your research to have a greater influence and be cited in a wider range of contexts.\n\n\nAdvantages for other researchers\n\nFacilitates learning:\n\nProvides others with a head start by sharing data and code for easier learning and faster analysis.\n\nEnables reproducibility:\n\nMakes it easier for others to reproduce and build upon your work, supporting stronger and more compatible research.\n\nError detection:\n\nHelps others identify and correct mistakes, protecting the scientific community from errors.\n\n\nAlston, J. M., and J. A. Rick. 2021. A Beginner’s Guide to Conducting Reproducible Research. The Bulletin of the Ecological Society of America 102(2). https://doi.org/10.1002/bes2.1801."
   },
   {
     "objectID": "index.html#why-for-reproducible-research",
     "href": "index.html#why-for-reproducible-research",
     "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "Why  for reproducible research?",
-    "text": "Why  for reproducible research?"
+    "text": "Why  for reproducible research?\n\nOpen source accessibility:\n\nFreely available to everyone, eliminating cost barriers and promoting inclusive access to research tools.\n\nComprehensive documentation:\n\nEncourages thorough documentation, making it easier to track and replicate analyses across different projects.\n\nIntegrated version control:\n\nSeamlessly integrates with version control systems, ensuring that changes are tracked and reproducibility is maintained.\n\nConsistency across platforms:\n\nProvides a stable environment that works consistently across different operating systems, enhancing reproducibility.\n\nBroad community support:\n\nBacked by a large, active community that contributes to continuous improvements, making it a reliable choice for long-term research projects.\n\nFlexibility and adaptability:\n\nOffers a wide range of tools and functions that can be adapted to various research needs, ensuring that diverse research tasks can be handled within a reproducible framework.\n\n\nSiraji, M. A., and M. Rahman. 2024. Primer on Reproducible Research in R: Enhancing Transparency and Scientific Rigor. Clocks & Sleep 6(1): 1–10. https://doi.org/10.3390/clockssleep6010001."
   },
   {
     "objectID": "index.html#rstudio-projects",
@@ -279,7 +279,9 @@
     "href": "index.html#a-brief-introduction-to-quarto",
     "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "A brief introduction to Quarto",
-    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\nSome of the creative ways in which you can use Quarto is:\n\n1. Visualize and publish interactive plots using html widgets\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\n\n\n2. Create interactive geo-spatial mapping segments\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
+
+    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\nSome of the creative ways in which you can use Quarto is:\n\n1. Visualize and publish interactive plots using html widgets\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\n\n\n\n\n\n\n2. Create interactive geo-spatial mapping segments\n\nlibrary(leaflet)\n\nError in library(leaflet): there is no package called 'leaflet'\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")\n\nError in addMarkers(., lng = 8.548, lat = 47.376, popup = \"ETH\"): could not find function \"addMarkers\"\n\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
+
   },
   {
     "objectID": "index.html#r-project-to-zenodo-workflow",
@@ -289,6 +291,58 @@
     "text": "R project to Zenodo workflow"
   },
   {
+
+    "objectID": "presentation.html",
+    "href": "presentation.html",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
+    "section": "",
+    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#setting-up-a-project-with-renv",
+    "href": "contents/Zenodo_workflow.html#setting-up-a-project-with-renv",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "",
+    "text": "Initialize renv in your project:\n\nUse renv::init() to initialize renv in your project directory.\n\n\n# initialize the project environment\nrenv::init()\n\n\nThis command creates an isolated environment for your project, and ensures that all package dependencies are managed within that environment. When you run renv::init(), several important files and directories are created:\n\nrenv.lock, a lock file that records the exact versions of all packages installed and used in your project. This file is crucial for replicating the environment on other machines or by other people.\n.Rprofile, this file is automatically run every time you start R in your project, and renv uses it to configure your R session to use the packages in your project library.\n\nrenv/ directory, a directory that stores the local library of packages specific to your project. It also contains metadata and configuration files that renv uses to manage the environment.\nOther directories and files are also created. To share an R environment, renv.lock, .Rprofile, renv/settings.json and renv/activate.R must be provided."
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#managing-packages-with-renv",
+    "href": "contents/Zenodo_workflow.html#managing-packages-with-renv",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "",
+    "text": "Install packages within renv\n\nInstall packages as usual. Then running renv::snapshot() will include the library in the lock file if it is loaded in a script located within the project folder\n\n\n# Install a library, e.g dplyr\ninstall.packages(\"dplyr\")\n\n# load the package\nlibrary(dplyr)\n\n# create the snapshot\nrenv::snapshot()"
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#reuse-an-existing-renv-project-environment",
+    "href": "contents/Zenodo_workflow.html#reuse-an-existing-renv-project-environment",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "",
+    "text": "Get all the packages used in the existing environment installed on your computer\n\nCopy the project folder to your machine.\nRun renv::restore() in the root folder of the project where the .lock file is located. This will replicate the environment from an existing lockfile and install all packages with the correct versions.\n\n\n# install packages used in the environment\nrenv::restore()"
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#install-zen4r-to-access-zenodo-through-r",
+    "href": "contents/Zenodo_workflow.html#install-zen4r-to-access-zenodo-through-r",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "Install zen4R to access Zenodo through r",
+    "text": "Install zen4R to access Zenodo through r\n\nZenodo can be accessed with r library zen4R to upload, edit, publish and download data.\n\nInstall zen4R library with the following code:\n\n\n# install dependency \"remotes\"\ninstall.packages(\"remotes\")\n\n#install zen4R\nrequire(\"remotes\")\ninstall_github(\"eblondel/zen4R\")"
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#create-a-new-zenodo-record",
+    "href": "contents/Zenodo_workflow.html#create-a-new-zenodo-record",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "Create a new Zenodo record",
+    "text": "Create a new Zenodo record\n\nA zenodo record includes metadata, data and a DOI which is automatically generated by Zenodo for all uploads.\n\nGo to https://zenodo.org/account/settings/applications/. This requires a Zenodo account. Sign up if necessary or log in.\nOnce you’re logged in create a new “Personal access token”.\nThen run the following code in r to c create a new record\n\n\nlibrary(zen4R)\n\n# Create manager to access your Zenodo repository\nzenodo &lt;- ZenodoManager$new(\n  token = \"your_token\", \n  logger = \"INFO\" \n)\n\n# Create a new empty record\nmyrec &lt;- ZenodoRecord$new()\n\nThe types of metadata that can be included in a Zenodo record are vast. A full list can be found in the documentation at https://developers.zenodo.org/#representation. The code below gives some examples:\n\nmyrec$setTitle(\"zen4R\") # title of the record\nmyrec$addAdditionalTitle(\"This is an alternative title\", type = \"alternative-title\")\nmyrec$setDescription(\"Interface to 'Zenodo' REST API\") #description\nmyrec$addAdditionalDescription(\"This is an abstract\", type = \"abstract\")\nmyrec$setPublicationDate(\"2024-09-16\") #Format YYYY-MM-DD\nmyrec$setResourceType(\"dataset\")\nmyrec$addCreator(firstname = \"Manuel\", lastname = \"Kurmann\", role = \"datamanager\", orcid = \"0000-0001-8411-3966\")\nmyrec$setKeywords(c(\"R\",\"dataset\")) #For filtering\nmyrec$addReference(\"Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API\")\nmyrec$setPublisher(\"CRAN\") #Publisher\n\nA record can be deposited on Zenodo before it is published. This will add the record to your account without making it public yet. A deposited record can still be edited or deleted. If you prefer a graphical interface, you can also edit the record on the Zenodo website.\n\n# deposit record\nmyrec &lt;- zenodo$depositRecord(myrec, publish = TRUE)\n\n# add data to the record\nzenodo$uploadFile(\"path/to/your/file\", record = myrec)\n\n# publish record\nmyrec &lt;- zenodo$publishRecord(myrec$id)\n\n# delete record if you want to start over\nzenodo$deleteRecord(myrec$id)"
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#edit-published-zenodo-records",
+    "href": "contents/Zenodo_workflow.html#edit-published-zenodo-records",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "Edit published Zenodo records",
+    "text": "Edit published Zenodo records\n\nIt is also possible to edit or update the metadata of published records.\n\n# get your record by metadata query, e.g. by title\nmyrec &lt;- zenodo$getDepositions(q='title:zen4R')\n\n# get depositions creates a list, access first element\nmyrec &lt;- myrec[[1]]\n\n# edit metadata\nmyrec &lt;- zenodo$editRecord(myrec$id)\nmyrec$setTitle(\"zen4R 2.0\")\n\n#redeposit and publish the edited record\nmyrec &lt;- zenodo$depositRecord(myrec, publish = TRUE)\n\nIt is not possible to edit the data attached to a published record. However, it is possible to upload an updated version.\n\n# get your record by metadata query, e.g. by title\nmyrec &lt;- zenodo$getDepositions(q='title:zen4R 2.0')\n\n# get depositions creates a list, access first element\nmyrec &lt;- myrec[[1]]\n\n# edit data, delete_latest_files = TRUE deletes data of previous version,\nmyrec &lt;- zenodo$depositRecordVersion(myrec, delete_latest_files = TRUE, files = \"path/to/your/new/file\", publish = TRUE)"
+
     "objectID": "contents/Rprojects.html#sec-projects",
     "href": "contents/Rprojects.html#sec-projects",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
@@ -476,5 +530,6 @@
     "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "Version control with Git",
     "text": "Version control with Git"
+
   }
 ]

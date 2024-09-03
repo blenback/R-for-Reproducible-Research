@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Reproducible Research with  and </title>
+<title>intro – Reproducible Research with &lt;img style="vertical-align:middle; height:1em; border: none; background: none;" src="assets/images/Rlogo.png"&gt; and &lt;img style="vertical-align:middle; height:1em;" src="assets/images/quarto-logo-trademark.svg"&gt;</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,7 +110,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
   </div>
         <div class="quarto-navbar-tools tools-end">
     <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/blenback/R-for-Reproducible-Research">
@@ -131,13 +131,13 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -214,19 +214,112 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </section>
 <section id="what-is-reproducible-research" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-reproducible-research">What is reproducible research?</h2>
+<ul>
+<li>Ability to replicate results:
+<ul>
+<li>Others can reproduce the results given only the original data, code, and documentation (Essawy et al.&nbsp;2020)</li>
+</ul></li>
+<li>Starts with planning:
+<ul>
+<li>Reproducibility begins with organized data management and sound planning before any analysis is conducted.</li>
+</ul></li>
+<li>Consistent data storage:
+<ul>
+<li>Data should be backed up regularly and stored in multiple locations to prevent loss and ensure accessibility.</li>
+</ul></li>
+<li>Clear documentation:
+<ul>
+<li>Metadata and well-organized files are essential for interpreting and reproducing research, ensuring clarity and usability.</li>
+</ul></li>
+<li>Version vontrol:
+<ul>
+<li>Using version control systems helps track changes and maintain a record of the project’s evolution, aiding in reproducibility.</li>
+</ul></li>
+<li>Standardized formats:
+<ul>
+<li>Data should be stored in nonproprietary, portable formats to ensure broad accessibility and long-term usability.</li>
+</ul></li>
+<li>Open access:
+<ul>
+<li>Data and code should be publicly available in accessible repositories to support transparency and wider use in the scientific community.</li>
+</ul></li>
+</ul>
 </section>
 <section id="why-strive-for-reproducible-research" class="level2">
 <h2 class="anchored" data-anchor-id="why-strive-for-reproducible-research">Why strive for reproducible research?</h2>
+<p>Advantages for your research</p>
 <ul>
 <li>Some fields have suffered a ‘replication crisis’:
 <ul>
 <li>In some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science <!--Give headline figures --></li>
 </ul></li>
+<li>Personal reference:
+<ul>
+<li>Simplifies the process of recalling how and why specific analyses were performed, making it easier to explain your work to collaborators, supervisors, and reviewers.</li>
+</ul></li>
+<li>Efficient modifications:
+<ul>
+<li>Simplifies the process of adjusting analyses and figures, saving time when supervisors, collaborators, or reviewers request changes.</li>
+</ul></li>
+<li>Streamlined future projects:
+<ul>
+<li>Facilitates the re-use of code and organizational systems for similar tasks in new projects, making them simpler and faster to execute.</li>
+</ul></li>
+<li>Demonstrates rigor and transparency:
+<ul>
+<li>Enhances trust in your work by allowing others to verify the accuracy of your methods, improving peer review and reducing the risk of errors or accusations of misconduct.</li>
+</ul></li>
+<li>Increases impact and citations:
+<ul>
+<li>Boosts citation rates by enabling others to reuse your code and data, allowing your research to have a greater influence and be cited in a wider range of contexts.</li>
+</ul></li>
 </ul>
+<p>Advantages for other researchers</p>
+<ul>
+<li>Facilitates learning:
+<ul>
+<li>Provides others with a head start by sharing data and code for easier learning and faster analysis.</li>
+</ul></li>
+<li>Enables reproducibility:
+<ul>
+<li>Makes it easier for others to reproduce and build upon your work, supporting stronger and more compatible research.</li>
+</ul></li>
+<li>Error detection:
+<ul>
+<li>Helps others identify and correct mistakes, protecting the scientific community from errors.</li>
+</ul></li>
+</ul>
+<p>Alston, J. M., and J. A. Rick. 2021. A Beginner’s Guide to Conducting Reproducible Research. The Bulletin of the Ecological Society of America 102(2). https://doi.org/10.1002/bes2.1801.</p>
 </section>
 <section id="why-for-reproducible-research" class="level2">
 <h2 class="anchored" data-anchor-id="why-for-reproducible-research">Why <iconify-icon inline="" icon="fa-brands:r-project"></iconify-icon> for reproducible research?</h2>
-<!-- Presentation content -->
+<ul>
+<li>Open source accessibility:
+<ul>
+<li>Freely available to everyone, eliminating cost barriers and promoting inclusive access to research tools.</li>
+</ul></li>
+<li>Comprehensive documentation:
+<ul>
+<li>Encourages thorough documentation, making it easier to track and replicate analyses across different projects.</li>
+</ul></li>
+<li>Integrated version control:
+<ul>
+<li>Seamlessly integrates with version control systems, ensuring that changes are tracked and reproducibility is maintained.</li>
+</ul></li>
+<li>Consistency across platforms:
+<ul>
+<li>Provides a stable environment that works consistently across different operating systems, enhancing reproducibility.</li>
+</ul></li>
+<li>Broad community support:
+<ul>
+<li>Backed by a large, active community that contributes to continuous improvements, making it a reliable choice for long-term research projects.</li>
+</ul></li>
+<li>Flexibility and adaptability:
+<ul>
+<li>Offers a wide range of tools and functions that can be adapted to various research needs, ensuring that diverse research tasks can be handled within a reproducible framework.</li>
+</ul></li>
+</ul>
+<p>Siraji, M. A., and M. Rahman. 2024. Primer on Reproducible Research in R: Enhancing Transparency and Scientific Rigor. Clocks &amp; Sleep 6(1): 1–10. https://doi.org/10.3390/clockssleep6010001. <!-- Presentation content --></p>
 
 
 </section>
@@ -411,18 +504,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -454,7 +536,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/blenback\.github\.io\/R-for-Reproducible-Research\/");
@@ -462,7 +566,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -800,30 +904,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
     }
-  });
-
-};
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
           </script>
 
 
