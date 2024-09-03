@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Reproducible Research with  and </title>
+<title>rprojects – Reproducible Research with &lt;img style="vertical-align:middle; height:1em; border: none; background: none;" src="assets/images/Rlogo.png"&gt; and &lt;img style="vertical-align:middle; height:1em;" src="assets/images/quarto-logo-trademark.svg"&gt;</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -159,7 +159,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
   </div>
         <div class="quarto-navbar-tools tools-end">
     <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/blenback/R-for-Reproducible-Research">
@@ -180,13 +180,13 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -224,71 +224,266 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 <!-- Web content -->
 <p><strong>Let’s start with a definition of what makes a good R project from Jenny Bryan:</strong></p>
-<p>A good R project… <em>“creates everything it needs, in its own workspace or folder, and it touches nothing it did not create.”</em> Jenny Bryan<span class="citation" data-cites="bryan2017">[<a href="#ref-bryan2017" role="doc-biblioref"><strong>bryan2017?</strong></a>]</span></p>
-<p><strong>Now take a look at these lines of code, of which you have probably seen something similar at the top of many an R script:</strong></p>
+<p>A good R project… <em>“creates everything it needs, in its own workspace or folder, and it touches nothing it did not create.”</em> <span class="citation" data-cites="bryan2017">[<a href="#ref-bryan2017" role="doc-biblioref">1</a>]</span></p>
+<p>This is a good definition that contains concepts, such as the notion that projects should be ‘self-contained’. However we add one more caveat to this definition which is that a good R project should <em>explain itself</em>.</p>
+<p>For the purpose of this workshop we will approach this topic by splitting it up into 6 topics which are highlighted in this graphic:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/project_components.png" class="img-fluid figure-img"></p>
+<figcaption>Graphical overview of components of a good research project in R</figcaption>
+</figure>
+</div>
+<p>As you move through these you will see that there are areas of overlap and complementarity between them. These topics are also central to the choice of approaches in the <a href="@sec-workflows">three workflows for reproducibility</a> that we will share.</p>
+<section id="sec-projects" class="level2">
+<h2 class="anchored" data-anchor-id="sec-projects"><img src="assets/images/RStudio_logo_flat.svg" style="vertical-align:middle; height:1.5em;"> projects</h2>
+<p>How many times have you opened an R script and been greeted by this line:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/ben/path/that/only/I/have"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/ben/path/that/only/I/have"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>While it is well-intentioned (i.e.&nbsp;avoiding the need to have full paths for all objects that will subsequently be loaded or daved ) the problem with it is obvious: This specific path is only relevant for the author and not other potential users and even for the author it is will be invalid if they happen to change computers. The good news is there is a very simple way to avoid having to use <code>setwd()</code> at all by using <a href=""><strong>Rstudio Projects</strong></a>.</p>
+<p>Rstudio projects designate new or existing folders as a defined working directory by creating an <code>.RProj</code> file within them. This means that when you open a project the working directory of the Rstudio session will automatically be set to the directory that the .RProj file is located in and the paths of all files in this folder will be relative to this.</p>
+<p>The <code>.Rproj</code> file can be shared along with the rest of the research project files meaning that others users can easily open the Project to have the same working directory removing the need for those troublesome <code>setwd()</code> lines.</p>
+<section id="sec-creating-projects" class="level3">
+<h3 class="anchored" data-anchor-id="sec-creating-projects">Creating and opening projects</h3>
+<p>Creating an Rstudio project is as simple as using <em>File &gt; New Project</em> in the top left and then choosing between creating the Project in a new or existing directory:</p>
+<p>There are several ways to open a Projects:</p>
+<ol type="1">
+<li>Using <em>File &gt; Open Project</em> in the top left of Rstudio.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/File_open_project.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>Using the drop down menu in the top-right of the Rstudio session.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/Open_project_right.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>Outside of R by double clicking on the <code>.Rproj</code> file in the folder.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/Open_project_explorer.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="sec-rprofile" class="level3">
+<h3 class="anchored" data-anchor-id="sec-rprofile">Utilising project specific <code>.Rprofile</code>’s</h3>
+<p>Another useful feature of Rstudio projects is the ability to store project-specific settings using the <code>.Rprofile</code> file which controls the initialisation behaviour of the R session when the project is opened. A useful application of this for reproducible research projects is automatically open a particular script, for example a master script that runs all the code in the project (which is a concept that will discussed under <a href="@sec-workflow-decomposition">workflow decomposition</a>).</p>
+<p>To do this the contents of your <code>.Rprofile</code> file would like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setHook</span>(<span class="st">"rstudio.sessionInit"</span>, <span class="cf">function</span>(newSession) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (newSession)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Open the script specificed by the path</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    rstudioapi<span class="sc">::</span><span class="fu">navigateToFile</span>(<span class="st">'scripts/script_to_open.R'</span>, <span class="at">line =</span> <span class="sc">-</span><span class="dv">1</span>L, <span class="at">column =</span> <span class="sc">-</span><span class="dv">1</span>L)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>}, <span class="at">action =</span> <span class="st">"append"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The easiest way to create and edit <code>.Rprofile</code> files is to use the functions from the package <a href="https://usethis.r-lib.org/"><code>usethis</code></a>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Note the use of scope = "project" to create a project specific .Rprofile</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">edit_r_profile</span>(<span class="at">scope =</span> <span class="st">"project"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="sec-environment-management" class="level2">
+<h2 class="anchored" data-anchor-id="sec-environment-management">Environment management</h2>
+<p>These lines of code are also probably familiar from the beginning of many an R script:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>But what is wrong with these lines?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/ben/path/that/only/I/have"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Well firstly, there is no indication of what version of the package is to be installed and hence if the code installing this package is old it may not work with the most recent version of the package (This is less of a problem for well established packages like the Tidyverse but for less common packages, that may see large changes between versions, it could be substantial).</p>
+<p>Secondly, having the user install an unspecified version of a package could also cause dependency conflicts with other packages required by the code. This is because almost all packages have some form of dependency (i.e.&nbsp;they use the functionality of) on other packages. This is shown aptly by the image below which, while out-dated now, showed that in 2014 to install the 7 most popular R packages at the time would actually install 63 packages in total when considering their dependencies.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/package_dependencies_2.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Package dependencies of popular R package <span class="citation" data-cites="devries2014">[<a href="#ref-devries2014" role="doc-biblioref">2</a>]</span></figcaption>
+</figure>
 </div>
-<p>Doing guarantees that the project can be moved around on your computer or onto other computers and will still “just work”.</p>
-<ul>
-<li>Projects with Rstudio</li>
-<li>Environment management</li>
-<li>Implement a logical directory structure</li>
-<li>Break up your process (master script and sub-scripts)</li>
-<li>Write clean code</li>
-</ul>
-<section id="rstudio-projects" class="level2">
-<h2 class="anchored" data-anchor-id="rstudio-projects">Rstudio projects</h2>
+<p>However the problem is bigger than just packages because when your code runs your code it is also utilising: - a specific version of R - a specific operating system - Specific versions of system dependencies, i.e.&nbsp;other software in other languages that R packages themselves utilise e.g GDAL for spatial analysis packages like <code>terra</code> .</p>
+<p>All of these things together make up what is known as the ‘environment’ of your code. Hence the process of documenting and managing this environment to is ensure that your code is reproducible (i.e.&nbsp;it not only runs but also consistently produces the same results).</p>
+<p>There are different approaches to environment management that differ in their complexity and hence maybe suited to some projects and not others. For the purpose of this workshop we will focus on what we have found is one of the most user-friendly ways to manage your <em>package environment</em> (caveat that will be discussed) in R which is the package <code>renv</code>. Below we will introduce this package in more detail as it will form a central part of the <a href="@sec-workflows">three workflows for reproducibility</a> that we present.</p>
+<section id="creating-reproducible-environments-with-renv" class="level3">
+<h3 class="anchored" data-anchor-id="creating-reproducible-environments-with-renv">Creating reproducible environments with <code>renv</code></h3>
+<p>As mentioned above <a href="https://rstudio.github.io/renv/articles/renv.html"><code>renv</code></a> is an R package that helps you create reproducible environments for your R projects by not only documenting your package environment but also providing functionality to re-create it.</p>
+<p>It does this by creating <strong>project specific libraries</strong> (i.e.&nbsp;directories: <code>renv/library</code>) which contain all the packages used by your project. This is different from the default approach to package usage and installation whereby all packages are stored in a single library on your machine (system library). Having separate project libraries means “that different projects can use different versions of packages and installing, updating, or removing packages in one project doesn’t affect any other project.” <span class="citation" data-cites="renv">[<a href="#ref-renv" role="doc-biblioref">3</a>]</span>. In order to make sure that your project uses the project library everytime it is opened <code>renv</code> utilises the functionality of <a href="@sec-rprofile"><code>.Rprofile's</code></a> to set the project library as the default library.</p>
+<p>Another key process of renv is to create project specific <strong>lockfiles</strong> (<code>renv.lock</code>) which contain sufficient metadata about each package in the project library so that it can be re-installed on a new machine.</p>
+<p>As alluded to, renv does a great job of managing your packages but is not intended to manage other aspects of your environment such as: tracking your version of R or your operating system. This is why if you want ‘bullet-proof’ reproducibility renv needs to be used alongside other approaches such as containerisation which is the <a href="@sec-docker_workflow">3rd and most complex workflow</a> we will discuss.</p>
 </section>
-<section id="environment-management" class="level2">
-<h2 class="anchored" data-anchor-id="environment-management">Environment management</h2>
-<ul>
-<li>What are environments and why are they needed? (version conflicts/ dependencies etc.</li>
-<li>Intro to renv package for environment management.</li>
-</ul>
 </section>
-<section id="structuring-your-project-directory" class="level2">
-<h2 class="anchored" data-anchor-id="structuring-your-project-directory">Structuring your project directory</h2>
-<ul>
-<li>Set up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)</li>
-</ul>
-</section>
-<section id="writing-clean-code" class="level2">
-<h2 class="anchored" data-anchor-id="writing-clean-code">Writing clean code:</h2>
-<section id="general-good-practice-variable-names-use-functions-for-repetive-tasks" class="level3">
-<h3 class="anchored" data-anchor-id="general-good-practice-variable-names-use-functions-for-repetive-tasks">General good practice: variable names, use functions for repetive tasks</h3>
-</section>
-<section id="script-headers-hint-use-code-snippet" class="level3">
-<h3 class="anchored" data-anchor-id="script-headers-hint-use-code-snippet">Script headers (hint: use code snippet)</h3>
-</section>
-<section id="code-sections" class="level3">
-<h3 class="anchored" data-anchor-id="code-sections">Code sections</h3>
-<p>As you may already know braced sections of code (i.e.&nbsp;function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.</p>
-<p>However, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:</p>
-<p><img src="assets/images/code_section_sequential.png" class="img-fluid"></p>
-<p>Code sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):</p>
+<section id="sec-writing-clean-code" class="level2">
+<h2 class="anchored" data-anchor-id="sec-writing-clean-code">Writing clean code</h2>
+<p>The notion of writing ‘clean’ code can be daunting, especially for those new to programming. However, the most important thing to bear in mind is that there is no objective measure that makes code ‘clean’ vs.&nbsp;‘un-clean’, rather we should of think ‘clean’ coding as the pursuit of making your code easier to read, understand and maintain. Also while we should aspire to writing clean code, it is arguably more important that it functions correctly and efficiently.</p>
+<p>The central concept of clean coding is that, like normal writing, we should follow a set of rules and conventions. For example, in English a sentence should start with a capital letter and end with a full stop. Unfortunately, in terms of writing R code there is not a single set of conventions that everyone proscribes to, instead there are numerous styles that have been outlined and the important thing is to choose a style and apply it consistently in your coding.</p>
+<p>Perhaps the two most common styles are the <a href="https://style.tidyverse.org/">Tidyverse style</a> and the <a href="https://google.github.io/styleguide/Rguide.html">Google R style</a>(Which is actually a derivative of the former). Neither style can be said to be the more correct, rather they express opinionated preferences on a series of common topics such as: Object naming, use of assignment operators, spacing, indentation, line length, parentheses placement, etc.</p>
+<p>Rather than detail all of these topics here we will focus on just on some related tips that we think are most relevant for scientific research coding, including how to automate the formatting of your code to a particular style. However, we encourage you to go through the different style guides when you have the time.</p>
+<section id="sec-script_headers" class="level3">
+<h3 class="anchored" data-anchor-id="sec-script_headers">Script headers</h3>
+<p>Starting your scripts with a consistent header containing information about it’s purpose, author/s, creation and modification dates is a great step making your workflow more understandable and hopefully reproducible. There are no rules as to what such a header should look like but this is the style I like to use:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Section One ---------------------------------</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Section Two =================================</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Section Three #############################</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">#############################################################################</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Script_title: Brief description of script purpose</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Notes: More detailed notes about the script and it's purpose</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Date created: </span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Author(s):</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="do">#############################################################################</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Alternatively you can use the <strong>Code</strong> -&gt; <strong>Insert Section</strong> command. To navigate between code sections you can use the <strong>Jump To</strong> menu available at the bottom of the editor<span class="citation" data-cites="positsupport2024">[<a href="#ref-positsupport2024" role="doc-biblioref">1</a>]</span>:</p>
-<p><img src="assets/images/code_section_jumpto.png" class="img-fluid"></p>
-<p>Or use the document outline pane in the top right corner of the source pane:</p>
-<p><img src="assets/images/code_section_documentpane.dark.png" class="img-fluid"></p>
+<p>To save time inserting this header into new scripts you use Rstudio’s <a href="https://docs.posit.co/ide/user/ide/guide/productivity/snippets.html"><strong>Code snippets</strong></a> feature. Code snippets are simply text macros that quickly insert a section of code using a short keyword.</p>
+<p>To create your own Code snippet go to <em>Tools &gt; Global Options &gt; Code &gt; Edit Snippets</em> and then add a new snippet with your code below it:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/Code_snippet_add.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<p>To use a code snippet simply start typing the keyword in the script and the auto-completion list will appear then press <code>Tab</code> and the code section will be inserted:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/Code_snippet_completion.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
 </section>
-<section id="code-styling" class="level3">
-<h3 class="anchored" data-anchor-id="code-styling">Code styling</h3>
-<p>lintr vs.&nbsp;styler package</p>
+<section id="sec-code_sections" class="level3">
+<h3 class="anchored" data-anchor-id="sec-code_sections">Code sections</h3>
+<p>As you may already know braced (<code>{}</code>) sections of code (i.e.&nbsp;function definitions, conditional blocks, etc.) can be folded to hide their contents in RStudio by clicking on the small triangle in the left margin.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/code_section_sequential.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<p>However, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis (<a href="@sec-workflow-decomposition">discussed in more detail later</a>). In this regard, another good tip is to give the resulting sections sequential alphabetical or numerical Pre-fixes. Code sections are created by inserting a comment line that contains at least four trailing dashes (<code>-</code>), equal signs (<code>=</code>), or pound signs (<code>#</code>):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Section One ---------------------------------</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Section Two =================================</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Section Three #############################</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Alternatively you can use the <em>Code &gt; Insert Section</em> command.</p>
+<p>To navigate between code sections:</p>
+<ul>
+<li>Use the <strong>Jump To</strong> menu available at the bottom of the editor<span class="citation" data-cites="positsupport2024">[<a href="#ref-positsupport2024" role="doc-biblioref">4</a>]</span></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/code_section_jumpto.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li>Use the document outline pane in the top right corner of the source pane</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/code_section_documentpane.dark.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="automating-the-styling-of-your-code" class="level3">
+<h3 class="anchored" data-anchor-id="automating-the-styling-of-your-code">Automating the styling of your code</h3>
+<p>There are two R packages that are very helpful in terms of ensuring your code confirms to a consistent style: <a href="https://lintr.r-lib.org/"><code>lintr</code></a> and <a href="https://styler.r-lib.org/"><code>styler</code></a>.</p>
+<ul>
+<li><code>lintr</code> checks your code for common style issues and potential programming errors then presents them to you to correct, think of it like doing a ‘spellcheck’ on a written document.</li>
+<li><code>styler</code> is more <em>active</em> in the sense that it automatically format’s your code to a particular style, the default of which is the tidyverse style.</li>
+</ul>
+<p>To use lintr and styler you call their functions like any package but styler can also be used through the <strong>Rstudio Addins</strong> menu below the Navigation bar as shown in this gif:</p>
+<p><img src="https://raw.githubusercontent.com/lorenzwalthert/some_raw_data/master/styler_0.1.gif" width="50%"></p>
+<p>Another very useful feature of both packages is that they can be used as part of a continuous integration (CI) workflow using a version control application like Git. This is a topic that we will cover as part of our <a href="@sec-git_workflow">Version control with Git</a> workflow but what it means is that the styler and lintr functions are run automatically when you push your code to a remote repository.</p>
+</section>
+</section>
+<section id="sec-workflow-decomposition" class="level2">
+<h2 class="anchored" data-anchor-id="sec-workflow-decomposition">Workflow decomposition</h2>
+<p>In computer sciences workflow decomposition refers to the structuring or compartmentalising of your code into seperate logical parts that makes it easier to maintain <span class="citation" data-cites="decompos2024">[<a href="#ref-decompos2024" role="doc-biblioref">5</a>]</span>.</p>
+<p>In terms of coding scientific research projects many of us probably already instinctively do decomposition to some degree by splitting typical processes such as data preparation, statistical modelling, analysis of results and producing final visualizations.</p>
+<p>However this is not always realized in the most understandable way, for example we may have seperate scripts with logical sounding names like: <code>Data_prep.R</code> and <code>Data_analysis.R</code> but can others really be expected to know exactly which order these must be run in, or indeed whether they even need to be run sequentially at all?</p>
+<p>A good 1st step to remedying this is to give your scripts sequential numeric tags in their names, e.g.&nbsp;<code>01_Data_prep.R</code>, <code>02_Data_analysis.R</code>. This will also ensure that they are presented in numerical order when placed in a designated directory <a href="@sec-structuring">Structuring your project directory</a> and can be explicitly described in your <a href="@sec-documentation">project documentation</a>.</p>
+<p>But you can take this to the next level by creating a <em>Master</em> script that sources your other scripts in sequence (think of them as <em>sub-scripts</em>) so that users of your code need only run one script. To do this is as simple as creating the master script as you would any normal R script (<em>File &gt; New File &gt; R script</em>) and then using the <code>base::source()</code> function to run the sub-scripts:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">#############################################################################</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Master_script: Run steps of research project in order</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Date created: 30/7/2024</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Author(s): Jane Doe</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="do">#############################################################################</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="do">### A- Prepare dependent variable data</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">#Prepare LULC data</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"Scripts/Preparation/Dep_var_dat_prep.R"</span>, <span class="at">local =</span> scripting_env)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="do">### B- Prepare independent variable data</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Prepare predictor data</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"Scripts/Preparation/Ind_var_data_prep.R"</span>, <span class="at">local =</span> scripting_env)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="do">### C- Perform statisical modelling</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"Scripts/Modelling/Fit_stat_models.R"</span>, <span class="at">local =</span> scripting_env)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>As you can see in this example code I have also made use of a <a href="@sec-script_headers">script header</a> and <a href="@sec-code_sections">code sections</a>, that were previously discussed, to make the division of sub-processes even clearer. Another advantage of this approach is that all sub-scripts can utilise the same environment (defined by the <code>source(local= )</code> argument) which means that each individual script does not need to load packages or paths as objects.</p>
+<p>Finally, within your sub-scripts processes should also be seperated into code sections and ideally any repetitive tasks should be performed with custom functions which again are contained within their own files.</p>
+<p>Following this approach you end up with a workflow that will look something like this:</p>
+<p><img src="assets/images/workflow_decomposition.png" class="img-fluid" style="width:100.0%"></p>
+<p>The benefit of this hierarchical approach to structuring is that it is not only easier to debug and maintain individual processes but it is also more amenable to adding new processes.</p>
+</section>
+<section id="sec-structuring" class="level2">
+<h2 class="anchored" data-anchor-id="sec-structuring">Structuring your project directory</h2>
+<p>Similar to having clean code, having a clean project directory that has well-organised sub-directories goes a long way towards making your projects code easier to understand for others. For software development there are numerous sets of conventions for directories structures although these are not always so applicable for scientific research projects. However we can borrow some basic principles, try to use: - Use logical naming - Stick to a consistent style, i.e.&nbsp;use of captialisation and seperators - Make use of nested sub-directories e.g <code>data/raw/climatic/precipitation/2020/precip_2020.rds</code> vs.&nbsp;<code>data/precip_2020_raw.rds</code>. This is very helpful when it comes to programatically constructing file paths especially in projects with a lot of data.</p>
+<p>As an example my go-to project directory structure looks like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>└── my_project</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    ├── data <span class="co"># The research data</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    │   ├── raw</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    │   └── processed</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    ├── output <span class="co"># Storing results</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    ├── publication <span class="co"># Containing the academic manuscript of the project</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    ├── src <span class="co"># For all files that perform operations in the project</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    │   ├── scripts</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    │   └── functions</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    └── tools <span class="co"># Auxilliary files and settings</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Rather than manually create this directory structure everytime you start a new project, save yourself some time and automate it by using Rstudio’s <a href="https://docs.posit.co/ide/user/ide/guide/productivity/project-templates.html"><strong>Project Templates</strong></a> functionality. This allows you to select a custom template as an option when creating a new <a href="@sec-creating-projects">Rstudio project</a> through the New project wizard (<em>File &gt; New Project &gt; New Directory &gt; New Project Template</em>).</p>
+<p>To implement this even as an intermediate R user is fairly labor intensive as your custom project directory template needs to be contained within an R-package, in order to be available in the wizard. However, quite a few templates with directory structures appropriate for scientific research projects have been created by others:</p>
+<ul>
+<li><p><a href="https://github.com/benmarwick/rrtools"><code>rrtools</code></a></p></li>
+<li><p><a href="http://projecttemplate.net/"><code>ProjectTemplate</code></a></p></li>
+<li><p><a href="https://pakillo.github.io/template/"><code>template</code></a></p></li>
+<li><p><a href="https://dreamrs.github.io/addinit/"><code>addinit</code></a> (Not a template but an interactive shiny add-in for project creation)</p></li>
+</ul>
+</section>
+<section id="sec-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="sec-documentation">Project documentation</h2>
+<p>As an example of why documentation is important think about if you bought a new table from Ikea only to excitedly rip open the box and find that there are no instructions for how to assemble it. Sure, you know what a table is supposedly to look like and given enough time you will end up with something that will probably be mostly right but maybe it’s missing small details. Also it will probably take you just as long to take it apart in 5 years time. Well, working with undocumented code for research projects is similar except a lot more complicated!</p>
+<p>Writing comprehensive documentation that covers all aspects of our projects is time-consuming which is why it is often neglected. For example, there are a lot of different metadata conventions that exist that you could apply. However, learning and adhering strictly to these can be overwhelming and possibly lead to the opposite effect i.e.&nbsp;they are not simple for others to understand either.</p>
+<p>In response to this there has been a movement in the R research community to adopt the <em>research as package</em> approach, which, as the name suggests, involves creating your project as an R-package which has a strict set of conventions for documentation <span class="citation" data-cites="marwick2018">[<a href="#ref-marwick2018" role="doc-biblioref">6</a>]</span>. This is a viable approach for those who are familiar with R-packages but is arguably not the best for all projects and users.</p>
+<p>Instead, we would suggest to follow the maxim of <em>not letting the perfect be the enemy of the good</em> and to focus on these key areas:</p>
+<ul>
+<li><p><strong>Provide adequate in-script commentary</strong>: This is perhaps contentious for those from a software development community, but given the choice I would rather have to read through a script with too many comments than one with too few. However remember that comments should be used to explain the purpose of the code, not what the code is doing. In line with this use <a href="@sec-script_headers">script headers</a>.</p></li>
+<li><p><strong>Document your functions with <code>roxygen</code> skeletons</strong>:</p></li>
+<li><p><strong>Include a <code>README</code> file</strong>: README files are where you should document your project at the macro-level i.e.&nbsp;what it is about and how it is supposed to work.</p></li>
+</ul>
+<p>The latter of these two are more detailed so we have provided further information and tips in sections below.</p>
+<section id="sec-roxygen" class="level3">
+<h3 class="anchored" data-anchor-id="sec-roxygen">Function documentation with roxygen</h3>
+<p>Base R provides a standard way of documenting a package where each function is documented in a topic, an .Rd file (“R documentation”) in the man/ directory. .Rd files use a custom syntax, loosely based on LaTeX, and can be rendered to HTML, plain text, or pdf, as needed, for viewing in different contexts <span class="citation" data-cites="wickham2024">[<a href="#ref-wickham2024" role="doc-biblioref">7</a>]</span>.</p>
+<p>R</p>
+</section>
+<section id="tips-for-readme-writing" class="level3">
+<h3 class="anchored" data-anchor-id="tips-for-readme-writing">Tips for README writing</h3>
+<p>If you look at the source code of R packages or projects that use R in Github repositories you will see that they all contain <code>README.md</code> files. This is the markdown format of the README file and is the most common format for README files in R projects. These files are often accompanied by the corresponding file <code>README.Rmd</code> which can be used to generate the <code>README.md</code> file. Markdown format is used for README’s because it can be read by many programs anrendd ered in a variety of formats.</p>
+<p>https://usethis.r-lib.org/reference/use_readme_rmd.html</p>
 <!-- Presentation content -->
 
 
@@ -297,8 +492,26 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-bryan2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Bryan J (2017) <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Project-oriented workflow</a></div>
+</div>
+<div id="ref-devries2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Vries A de (2014) <a href="https://blog.revolutionanalytics.com/2014/07/revisiting-package-dependencies.html">Revisiting package dependencies</a></div>
+</div>
+<div id="ref-renv" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Ushey K, Wickham H (2024) <a href="https://CRAN.R-project.org/package=renv">Renv: Project environments</a></div>
+</div>
 <div id="ref-positsupport2024" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Posit Support (2024) <a href="https://support.posit.co/hc/en-us/articles/200484568-Code-Folding-and-Sections-in-the-RStudio-IDE">Code folding and sections in the RStudio IDE</a></div>
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Posit Support (2024) <a href="https://support.posit.co/hc/en-us/articles/200484568-Code-Folding-and-Sections-in-the-RStudio-IDE">Code folding and sections in the RStudio IDE</a></div>
+</div>
+<div id="ref-decompos2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">(2024) <a href="https://en.wikipedia.org/w/index.php?title=Decomposition_(computer_science)&amp;oldid=1225228761">Decomposition (computer science)</a></div>
+</div>
+<div id="ref-marwick2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Marwick B, Boettiger C, Mullen L (2018) Packaging data analytical work reproducibly using r (and friends). The American Statistician 72(1):80–88. <a href="https://doi.org/10.1080/00031305.2017.1375986">https://doi.org/10.1080/00031305.2017.1375986</a></div>
+</div>
+<div id="ref-wickham2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Wickham H, Bryan J (2024) <a href="https://r-pkgs.org/">R packages (2e)</a>, 2nd Edition</div>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -480,18 +693,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -523,7 +725,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/blenback\.github\.io\/R-for-Reproducible-Research\/");
@@ -531,7 +755,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
