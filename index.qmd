@@ -38,7 +38,7 @@ This image highlights some the key concepts we will discuss in the workshop, whi
 ## Rstudio project to Zenodo pipeline {#sec-zenodo_workflow}
 
 ![](assets/images/project_zenodo_workflow.png){.lightbox width="70%" fig-align="center"}
-<!--{{< include contents/Zenodo_workflow.qmd >}}-->
+{{< include contents/Zenodo_workflow.qmd >}}
 
 ## Containerisation with Docker{#sec-docker_workflow}
 <!--{{< include contents/Docker_workflow.qmd >}}-->
