@@ -102,9 +102,9 @@
   {
     "objectID": "contents/Zenodo_workflow.html",
     "href": "contents/Zenodo_workflow.html",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "title": "Use renv to create project-specific environments in R",
     "section": "",
-    "text": "Back to top"
+    "text": "Initialize renv in your project:\n\nUse renv::init() to initialize renv in your project directory.\n\n\n# initialize the project environment\nrenv::init()\n\n\nThis command creates an isolated environment for your project, and ensures that all package dependencies are managed within that environment. When you run renv::init(), several important files and directories are created:\n\nrenv.lock, a lock file that records the exact versions of all packages installed and used in your project. This file is crucial for replicating the environment on other machines or by other people.\n.Rprofile, this file is automatically run every time you start R in your project, and renv uses it to configure your R session to use the packages in your project library.\n\nrenv/ directory, a directory that stores the local library of packages specific to your project. It also contains metadata and configuration files that renv uses to manage the environment.\nOther directories and files are also created. To share an R environment, renv.lock, .Rprofile, renv/settings.json and renv/activate.R must be provided.\n\n\n\n\n\n\nInstall packages within renv\n\nInstall packages as usual. Then running renv::snapshot() will include the library in the lock file if it is loaded in a script located within the project folder\n\n\n# Install a library, e.g dplyr\ninstall.packages(\"dplyr\")\n\n# load the package\nlibrary(dplyr)\n\n# create the snapshot\nrenv::snapshot()\n\n\n\n\n\n\nGet all the packages used in the existing environment installed on your computer\n\nCopy the project folder to your machine.\nRun renv::restore() in the root folder of the project where the .lock file is located. This will replicate the environment from an existing lockfile and install all packages with the correct versions.\n\n\n# install packages used in the environment\nrenv::restore()"
   },
   {
     "objectID": "contents/Quarto_intro.html",
@@ -297,5 +297,47 @@
     "crumbs": [
       "View in presentation format"
     ]
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#setting-up-a-project-with-renv",
+    "href": "contents/Zenodo_workflow.html#setting-up-a-project-with-renv",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "",
+    "text": "Initialize renv in your project:\n\nUse renv::init() to initialize renv in your project directory.\n\n\n# initialize the project environment\nrenv::init()\n\n\nThis command creates an isolated environment for your project, and ensures that all package dependencies are managed within that environment. When you run renv::init(), several important files and directories are created:\n\nrenv.lock, a lock file that records the exact versions of all packages installed and used in your project. This file is crucial for replicating the environment on other machines or by other people.\n.Rprofile, this file is automatically run every time you start R in your project, and renv uses it to configure your R session to use the packages in your project library.\n\nrenv/ directory, a directory that stores the local library of packages specific to your project. It also contains metadata and configuration files that renv uses to manage the environment.\nOther directories and files are also created. To share an R environment, renv.lock, .Rprofile, renv/settings.json and renv/activate.R must be provided."
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#managing-packages-with-renv",
+    "href": "contents/Zenodo_workflow.html#managing-packages-with-renv",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "",
+    "text": "Install packages within renv\n\nInstall packages as usual. Then running renv::snapshot() will include the library in the lock file if it is loaded in a script located within the project folder\n\n\n# Install a library, e.g dplyr\ninstall.packages(\"dplyr\")\n\n# load the package\nlibrary(dplyr)\n\n# create the snapshot\nrenv::snapshot()"
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#reuse-an-existing-renv-project-environment",
+    "href": "contents/Zenodo_workflow.html#reuse-an-existing-renv-project-environment",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "",
+    "text": "Get all the packages used in the existing environment installed on your computer\n\nCopy the project folder to your machine.\nRun renv::restore() in the root folder of the project where the .lock file is located. This will replicate the environment from an existing lockfile and install all packages with the correct versions.\n\n\n# install packages used in the environment\nrenv::restore()"
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#install-zen4r-to-access-zenodo-through-r",
+    "href": "contents/Zenodo_workflow.html#install-zen4r-to-access-zenodo-through-r",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "Install zen4R to access Zenodo through r",
+    "text": "Install zen4R to access Zenodo through r\n\nZenodo can be accessed with r library zen4R to upload, edit, publish and download data.\n\nInstall zen4R library with the following code:\n\n\n# install dependency \"remotes\"\ninstall.packages(\"remotes\")\n\n#install zen4R\nrequire(\"remotes\")\ninstall_github(\"eblondel/zen4R\")"
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#create-a-new-zenodo-record",
+    "href": "contents/Zenodo_workflow.html#create-a-new-zenodo-record",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "Create a new Zenodo record",
+    "text": "Create a new Zenodo record\n\nA zenodo record includes metadata, data and a DOI which is automatically generated by Zenodo for all uploads.\n\nGo to https://zenodo.org/account/settings/applications/. This requires a Zenodo account. Sign up if necessary or log in.\nOnce you’re logged in create a new “Personal access token”.\nThen run the following code in r to c create a new record\n\n\nlibrary(zen4R)\n\n# Create manager to access your Zenodo repository\nzenodo &lt;- ZenodoManager$new(\n  token = \"your_token\", \n  logger = \"INFO\" \n)\n\n# Create a new empty record\nmyrec &lt;- ZenodoRecord$new()\n\nThe types of metadata that can be included in a Zenodo record are vast. A full list can be found in the documentation at https://developers.zenodo.org/#representation. The code below gives some examples:\n\nmyrec$setTitle(\"zen4R\") # title of the record\nmyrec$addAdditionalTitle(\"This is an alternative title\", type = \"alternative-title\")\nmyrec$setDescription(\"Interface to 'Zenodo' REST API\") #description\nmyrec$addAdditionalDescription(\"This is an abstract\", type = \"abstract\")\nmyrec$setPublicationDate(\"2024-09-16\") #Format YYYY-MM-DD\nmyrec$setResourceType(\"dataset\")\nmyrec$addCreator(firstname = \"Manuel\", lastname = \"Kurmann\", role = \"datamanager\", orcid = \"0000-0001-8411-3966\")\nmyrec$setKeywords(c(\"R\",\"dataset\")) #For filtering\nmyrec$addReference(\"Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API\")\nmyrec$setPublisher(\"CRAN\") #Publisher\n\nA record can be deposited on Zenodo before it is published. This will add the record to your account without making it public yet. A deposited record can still be edited or deleted. If you prefer a graphical interface, you can also edit the record on the Zenodo website.\n\n# deposit record\nmyrec &lt;- zenodo$depositRecord(myrec, publish = TRUE)\n\n# add data to the record\nzenodo$uploadFile(\"path/to/your/file\", record = myrec)\n\n# publish record\nmyrec &lt;- zenodo$publishRecord(myrec$id)\n\n# delete record if you want to start over\nzenodo$deleteRecord(myrec$id)"
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#edit-published-zenodo-records",
+    "href": "contents/Zenodo_workflow.html#edit-published-zenodo-records",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "Edit published Zenodo records",
+    "text": "Edit published Zenodo records\n\nIt is also possible to edit or update the metadata of published records.\n\n# get your record by metadata query, e.g. by title\nmyrec &lt;- zenodo$getDepositions(q='title:zen4R')\n\n# get depositions creates a list, access first element\nmyrec &lt;- myrec[[1]]\n\n# edit metadata\nmyrec &lt;- zenodo$editRecord(myrec$id)\nmyrec$setTitle(\"zen4R 2.0\")\n\n#redeposit and publish the edited record\nmyrec &lt;- zenodo$depositRecord(myrec, publish = TRUE)\n\nIt is not possible to edit the data attached to a published record. However, it is possible to upload an updated version.\n\n# get your record by metadata query, e.g. by title\nmyrec &lt;- zenodo$getDepositions(q='title:zen4R 2.0')\n\n# get depositions creates a list, access first element\nmyrec &lt;- myrec[[1]]\n\n# edit data, delete_latest_files = TRUE deletes data of previous version,\nmyrec &lt;- zenodo$depositRecordVersion(myrec, delete_latest_files = TRUE, files = \"path/to/your/new/file\", publish = TRUE)"
   }
 ]
