@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2022-12-12">
 
-<title>docker_workflow – Reproducible Research with &lt;img style="vertical-align:middle; height:1em; border: none; background: none;" src="assets/images/Rlogo.png"&gt; and &lt;img style="vertical-align:middle; height:1em;" src="assets/images/quarto-logo-trademark.svg"&gt;</title>
+<title>Project Templates – Reproducible Research with  and </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -82,12 +117,12 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../index.css">
-<meta property="og:title" content="Reproducible Research with  and ">
+<meta property="og:title" content="Project Templates – Reproducible Research with  and ">
 <meta property="og:description" content="Website for workshop in reproducible research with R and Quarto">
 <meta property="og:site_name" content="Reproducible Research with <img style=&quot;vertical-align:middle; height:1em; border: none; background: none;&quot; src=&quot;assets/images/Rlogo.png&quot;> and <img style=&quot;vertical-align:middle; height:1em;&quot; src=&quot;assets/images/quarto-logo-trademark.svg&quot;>">
-<meta name="twitter:title" content="Reproducible Research with  and ">
+<meta name="twitter:title" content="Project Templates – Reproducible Research with  and ">
 <meta name="twitter:description" content="Website for workshop in reproducible research with R and Quarto">
-<meta name="twitter:image" content="https://blenback.github.io/R-for-Reproducible-Research/contents/media/preview.png">
+<meta name="twitter:image" content="https://blenback.github.io/R-for-Reproducible-Research/assets/media/preview.png">
 <meta name="twitter:creator" content="@Blen_Back">
 <meta name="twitter:site" content="@Blen_Back">
 <meta name="twitter:card" content="summary_large_image">
@@ -130,7 +165,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Project Templates</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -166,24 +201,160 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Project Templates</h1>
+</div>
 
 
 
-<!-- Web content -->
-<p>When to use this workflow:</p>
-<p>Challenges: - Docker is command line interface</p>
-<p>Containerization?</p>
-<p>Docker The main advantages of using Docker within your development environment are:</p>
-<p>Reproducibility - Docker enables you to seamlessly package your code and its dependencies into a single container and execute, test, share, and deploy it with a high level of consistency Collaboration - Docker solves the dependencies madness when a team of developers works together on a specific project. Having a unified environment saves a ton of time during the development step. For example, if one developer gets some error, it is easy for other developers to reproduce the error and help debug it</p>
-<p>terms: image container Dockerfile Dockerhub</p>
-<p>##Using Docker with R ### Rocker</p>
-<section id="practical-example-with-dockerfiler-package" class="level3">
-<h3 class="anchored" data-anchor-id="practical-example-with-dockerfiler-package">Practical example with dockerfiler package</h3>
-<p>Manually creating the Dockerfile: https://colinfay.me/docker-r-reproducibility/</p>
-<p>The main advantages of using Docker within your development environment are: https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf https://thinkr-open.github.io/dockerfiler/ https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/</p>
-<p>stevedore package for pulling images from Dockerhub using the Docker API https://richfitz.github.io/stevedore/</p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<p>RStudio includes support for custom, user-defined project templates. Project templates can be used to create new projects with a pre-specified structure.</p>
+<p>Project templates can be accessed through the <strong>New Project…</strong> wizard. All registered project templates are made available within the <strong>New Directory</strong> portion of the wizard:</p>
+<p><img src="images/new-project.png" class="img-fluid" alt="A screenshot of the RStudio > New Project wizard"></p>
+<p>R packages are the primary vehicle through which RStudio project templates are distributed. Package authors can provide a small bit of metadata describing the template functions available in their package – RStudio will discover these project templates on start up, and make them available in the <strong>New Project…</strong> dialog.</p>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>We’ll use the <a href="https://github.com/rstudio/ptexamples">ptexamples</a> package to illustrate how a project template can be defined. This package exports a project template that is presented like so from the <strong>New Project…</strong> wizard:</p>
+<p><img src="images/ptexamples-wizard.png" class="img-fluid" alt="A screenshot of the Create Example Project Template wizard with a directory name and other user input options."></p>
+<p>After the user clicks <strong>Create Project</strong>, a new project will be created, and the <code>hello_world()</code> template function will be called to initialize the project. Here’s what the IDE looks like after calling this template function with the aforementioned inputs:</p>
+<p><img src="images/ptexamples-rstudio.png" class="img-fluid" alt="A screenshot of the newly created ptexamples RStudio project displaying the index with the user inputs."></p>
+<p>To try using this project template locally, install the package:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># if needed install.packages("devtools")</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"rstudio/ptexamples"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Restart RStudio and then access the <code>ptexamples</code> template from the <strong>New Project</strong> wizard.</p>
+</section>
+<section id="defining-the-template-function" class="level2">
+<h2 class="anchored" data-anchor-id="defining-the-template-function">Defining the Template Function</h2>
+<p>The <code>ptexamples</code> package contains a function, <a href="https://github.com/rstudio/ptexamples/blob/master/R/hello_world.R"><code>hello_world()</code></a>, intended to be used as a project template. The function has the signature:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>hello_world <span class="ot">&lt;-</span> <span class="cf">function</span>(path, ...) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ensure path exists</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(path, <span class="at">recursive =</span> <span class="cn">TRUE</span>, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># generate header for file</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  header <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"# This file was generated by a call to 'ptexamples::hello_world()'."</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"# The following inputs were received:"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># collect inputs and paste together as 'Parameter: Value'</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  dots <span class="ot">&lt;-</span> <span class="fu">list</span>(...)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">seq_along</span>(dots), <span class="cf">function</span>(i) {</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    key <span class="ot">&lt;-</span> <span class="fu">names</span>(dots)[[i]]</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    val <span class="ot">&lt;-</span> dots[[i]]</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste0</span>(key, <span class="st">": "</span>, val)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># collect into single text string</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  contents <span class="ot">&lt;-</span> <span class="fu">paste</span>(</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(header, <span class="at">collapse =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>),</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(text, <span class="at">collapse =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>),</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="co"># write to index file</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">writeLines</span>(contents, <span class="at">con =</span> <span class="fu">file.path</span>(path, <span class="st">"INDEX"</span>))</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When this function is invoked by RStudio, it will receive the <code>path</code> as the path to the newly created project, as well as arguments as received from its input widgets. This function collects its inputs, and echos them to a file called <code>INDEX</code> in the newly-created project path.</p>
+</section>
+<section id="defining-the-template-metadata" class="level2">
+<h2 class="anchored" data-anchor-id="defining-the-template-metadata">Defining the Template Metadata</h2>
+<p>After defining a function to be used as a project template, some initial metadata must be provided to let RStudio know how to use this function as a project template. The <code>ptexamples</code> package defines a project template in a file located at:</p>
+<p><a href="https://github.com/rstudio/ptexamples/blob/master/inst/rstudio/templates/project/hello_world.dcf">inst/rstudio/templates/project/hello_world.dcf</a></p>
+<p>The first set of fields are used to define primary information about the project template:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Binding</span><span class="kw">:</span><span class="at"> hello_world</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Title</span><span class="kw">:</span><span class="at"> Example Project Template</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">OpenFiles</span><span class="kw">:</span><span class="at"> INDEX</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>The <strong>Binding</strong> field tells RStudio which R function the project template is associated with. When a user creates a new project using this template, the <code>hello_world()</code> function defined by this package will be used to generate the project.</p></li>
+<li><p>The <strong>Title</strong> field is used and shown within the new project wizard.</p></li>
+<li><p>The <strong>OpenFiles</strong> field instructs the IDE to open a file called <code>INDEX</code> when the project is first opened, after creating the project.</p></li>
+</ul>
+<p>The following sets of fields are used to define input widgets:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Parameter</span><span class="kw">:</span><span class="at"> check</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Widget</span><span class="kw">:</span><span class="at"> CheckboxInput</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Label</span><span class="kw">:</span><span class="at"> Checkbox Input</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">Default</span><span class="kw">:</span><span class="at"> </span><span class="ch">On</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">Position</span><span class="kw">:</span><span class="at"> left</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>The <strong>Parameter</strong> field is used to identify the parameter name. That is, the value of the widget used here will be associated with the parameter called <code>check</code> when passed to the template function <code>hello_world()</code>.</p></li>
+<li><p>The <strong>Widget</strong> field is used to specify the type of widget to be used. Here, we use a checkbox, to allow for ‘on / off’ input from the user.</p></li>
+<li><p>The <strong>Label</strong> field is used to give a label associated with the checkbox.</p></li>
+<li><p>The <strong>Default</strong> field gives the default value for the checkbox input – here, we want to default having the checkbox ‘on’, or checked.</p></li>
+<li><p>The <strong>Position</strong> field tells the RStudio IDE that this widget should be displayed on the left side of the wizard dialog.</p></li>
+</ul>
+<p>All together, this information tells RStudio that <code>hello_world()</code> is a function to be used in generating new projects, as well as what widgets should be used for arguments that <code>hello_world()</code> can accept.</p>
+</section>
+<section id="primary-metadata" class="level2">
+<h2 class="anchored" data-anchor-id="primary-metadata">Primary Metadata</h2>
+<p>The following fields are accepted as part of the primary metadata regarding a project template:</p>
+<ul>
+<li><p><strong>Binding</strong> <em>(required)</em>: The name of the R function to be called when this project template is invoked.</p></li>
+<li><p><strong>Title</strong> <em>(required)</em>: The title to be shown within the <strong>New Project…</strong> wizard.</p></li>
+<li><p><strong>Subtitle</strong>: The subtitle to be shown within the <strong>New Project…</strong> wizard. This will be shown when the user hovers over the project name in the dialog. When unsupplied, this field will be generated based on the content of the <strong>Title</strong> field.</p></li>
+<li><p><strong>Caption</strong>: The caption to be shown on the landing page for this template function. When unsupplied, this field will be generated based on the content of the <strong>Title</strong> field.</p></li>
+<li><p><strong>Icon</strong>: The path to an icon, on disk, to be used in the dialog. Must be a <code>.png</code> file of size less than 64kb.</p></li>
+<li><p><strong>OpenFiles</strong>: A comma-delimited set of values, indicating files that should be opened by RStudio when the project is generated. Shell-style globs can be used to indicate when multiple files matching some pattern should be opened – for example, <code>OpenFiles: R/*.R</code> would indicate that RStudio should open all <code>.R</code> files within the <code>R</code> folder of the generated project.</p></li>
+</ul>
+</section>
+<section id="input-widgets" class="level2">
+<h2 class="anchored" data-anchor-id="input-widgets">Input Widgets</h2>
+<p>The following widget types are accepted for the <strong>Widget</strong> field in widget descriptions.</p>
+<section id="checkboxinput" class="level3">
+<h3 class="anchored" data-anchor-id="checkboxinput">CheckboxInput</h3>
+<p>Represent a <code>TRUE</code> / <code>FALSE</code> input value using a checkbox.</p>
+<section id="example-1" class="level4">
+<h4 class="anchored" data-anchor-id="example-1">Example</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Parameter</span><span class="kw">:</span><span class="at"> check</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Widget</span><span class="kw">:</span><span class="at"> CheckboxInput</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Label</span><span class="kw">:</span><span class="at"> label</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="selectinput" class="level3">
+<h3 class="anchored" data-anchor-id="selectinput">SelectInput</h3>
+<p>Select a single item out of a menu list of items. The <strong>Fields</strong> field should be a comma-separated list of fields to be included in the select input.</p>
+<section id="example-2" class="level4">
+<h4 class="anchored" data-anchor-id="example-2">Example</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Parameter</span><span class="kw">:</span><span class="at"> project_type</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Widget</span><span class="kw">:</span><span class="at"> SelectInput</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Label</span><span class="kw">:</span><span class="at"> Project Type</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">Fields</span><span class="kw">:</span><span class="at"> project, package</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="textinput" class="level4">
+<h4 class="anchored" data-anchor-id="textinput">TextInput</h4>
+<p>Accept unrestricted text input from the user.</p>
+</section>
+<section id="example-3" class="level4">
+<h4 class="anchored" data-anchor-id="example-3">Example</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Parameter</span><span class="kw">:</span><span class="at"> author</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Widget</span><span class="kw">:</span><span class="at"> TextInput</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Label</span><span class="kw">:</span><span class="at"> Author</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="fileinput" class="level3">
+<h3 class="anchored" data-anchor-id="fileinput">FileInput</h3>
+<p>Provide the path to a file on disk.</p>
+<section id="example-4" class="level4">
+<h4 class="anchored" data-anchor-id="example-4">Example</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Parameter</span><span class="kw">:</span><span class="at"> file</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Widget</span><span class="kw">:</span><span class="at"> FileInput</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Label</span><span class="kw">:</span><span class="at"> Data file</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
