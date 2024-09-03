@@ -1,3 +1,45 @@
+---
+bibliography: references.bib
+execute:
+  echo: true
+  eval: false
+  error: false
+---
+
+<!-- Web content -->
+
+When to use this workflow: 
+
+Challenges:
+-   Docker is command line interface
+
+Containerization?
+
+Docker
+The main advantages of using Docker within your development environment are:
+
+Reproducibility - Docker enables you to seamlessly package your code and its dependencies into a single container and execute, test, share, and deploy it with a high level of consistency
+Collaboration - Docker solves the dependencies madness when a team of developers works together on a specific project. Having a unified environment saves a ton of time during the development step. For example, if one developer gets some error, it is easy for other developers to reproduce the error and help debug it
+
+terms:
+image
+container
+Dockerfile
+Dockerhub
 
 
+##Using Docker with R
+### Rocker
+
+### Practical example with dockerfiler package
+
+Manually creating the Dockerfile: https://colinfay.me/docker-r-reproducibility/
+
+The main advantages of using Docker within your development environment are:
+https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf
+https://thinkr-open.github.io/dockerfiler/
+https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/
+
+stevedore package for pulling images from Dockerhub using the Docker API
+https://richfitz.github.io/stevedore/
 

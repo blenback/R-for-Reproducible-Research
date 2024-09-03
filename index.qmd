@@ -11,6 +11,7 @@ format:
     number-sections: true
     number-depth: 1
 citation-location: margin
+lightbox: true
 ---
 
 ![](assets/images/graphical_abstract_dark.png){.lightbox width="70%" fig-align="center"}
@@ -34,10 +35,17 @@ This image highlights some the key concepts we will discuss in the workshop, whi
 
 # Workflows for Reproducibility {#sec-workflows}
 
+## Rstudio project to Zenodo pipeline {#sec-zenodo_workflow}
+
+![](assets/images/project_zenodo_workflow.png){.lightbox width="70%" fig-align="center"}
 <!--{{< include contents/Zenodo_workflow.qmd >}}-->
 
+## Containerisation with Docker{#sec-docker_workflow}
 <!--{{< include contents/Docker_workflow.qmd >}}-->
 
+## Version control with Git{#sec-git_workflow}
+
+![](assets/images/version_control_workflow.png){.lightbox width="70%" fig-align="center"}
 <!--{{< include contents/Git_workflow.qmd >}}-->
 
 # Quarto {#sec-Quarto}
