@@ -8,28 +8,38 @@ execute:
 
 <!-- Web content -->
 
-When to use this workflow: 
+::: {.content-visible when-format="html"}
 
-Challenges:
--   Docker is command line interface
+![](assets/images/Docker_workflow.png){.lightbox width="70%" fig-align="center"}
 
-Containerization?
+**The title of this workflow raises two questions, the first being: what is containerization?**
 
-Docker
-The main advantages of using Docker within your development environment are:
+Simply put containerization is the process of bundling code along with all of it's dependencies, i.e. all the components we discussed as making up the [environment](@sec-environment-management), including the operating system, software libraries (packages), and other system software. The fact everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service. This also makes containerization something of a gold standard for reproducibility as the entire environment is explicitly re-produced. 
 
-Reproducibility - Docker enables you to seamlessly package your code and its dependencies into a single container and execute, test, share, and deploy it with a high level of consistency
-Collaboration - Docker solves the dependencies madness when a team of developers works together on a specific project. Having a unified environment saves a ton of time during the development step. For example, if one developer gets some error, it is easy for other developers to reproduce the error and help debug it
+**and the second: what is Docker?**
 
-terms:
-image
-container
-Dockerfile
-Dockerhub
+[Docker](https://www.docker.com/) is an open-source, and the most popular, platform for containerization. Before we dive into a practical example using Docker for research projects with R it is important to introduce some three key terms that we will come across:
+
+-   `Dockerfile`: The first step in the containerization process, they are a straightforward text file containing a collection of commands or procedures to create a new Docker Image. In this sense we can consider a Dockerfile are the source code of Docker Image. Importantly, Dockerfiles typically start from a base image, which is a existing Docker Image that your image is extending. 
+
+-   `Docker Image`: A read-only file that contains the instructions for creating a Docker Container. Think of an image as the blueprint of what will be in a container when it is running. Docker Images can be shared via [Dockerhub](https://hub.docker.com/), so that they can be used by others.
+
+-   `Docker Container`:  Is an actual running instance of a Docker image. It runs completely isolated from the host environment by default and only accesses host files (i.e. data) if it has been configured to do so. It is possible to create multiple containers simultaneously from the same Docker Image, and each container can be started, stopped, moved, and deleted independently of the others.
+
+The graphic below show the relationships between these components including the central commands of Docker that connect them `build` and `run`:
+
+![](assets/images/docker_explainer.png){.lightbox width="70%" fig-align="center"}
+
+### Using Docker with R
+
+So to create a `Docker Image` to containerize our R research projects we need to start by creating a `Dockerfile` and, as mentioned above this starts with a base image. In our case this base image must logically include R and RStudio (if we want to utilise the RStudio Projects features).
+
+Fortunately there is a project that specifically catalogs and manages Docker Images for R projects: [`Rocker`](https://rocker-project.org/). The images available through the Rocker project not only include different versions of R and RStudio but also images containing collections of R packages for specific purposes (e.g. tidyverse for data wrangling and visualisation, geospatial packages etc.).
+
+In terms of actually creating the `Dockerfile` for our R project, this can be done manually (See a good R-focused tutorial here)
 
 
-##Using Docker with R
-### Rocker
+
 
 ### Practical example with dockerfiler package
 
@@ -42,4 +52,6 @@ https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/
 
 stevedore package for pulling images from Dockerhub using the Docker API
 https://richfitz.github.io/stevedore/
+
+:::
 

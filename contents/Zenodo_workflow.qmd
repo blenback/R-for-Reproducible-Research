@@ -1,12 +1,14 @@
 ---
 execute:
+  echo: true
   eval: false
+  error: false
 editor: 
   markdown: 
     wrap: 72
 ---
-# Use renv to create project-specific environments in R
-## Setting Up a Project with renv
+## Use renv to create project-specific environments in R
+### Setting Up a Project with renv
 
 -   Initialize renv in your project:
     -   Use renv::init() to initialize renv in your project directory.

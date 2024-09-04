@@ -91,7 +91,10 @@ Secondly, having the user install an unspecified version of a package could also
 
 ![Package dependencies of popular R package [@devries2014]](assets/images/package_dependencies_2.png){width="50%" fig-align="center"}
 
-However the problem is bigger than just packages because when your code runs your code it is also utilising: - a specific version of R - a specific operating system - Specific versions of system dependencies, i.e. other software in other languages that R packages themselves utilise e.g GDAL for spatial analysis packages like `terra` .
+However the problem is bigger than just packages because when your code runs it is also utilising:
+-   a specific version of R
+-   a specific operating system
+-   Specific versions of system dependencies, i.e. other software in other languages that R packages themselves utilise e.g GDAL for spatial analysis packages like `terra`.
 
 All of these things together make up what is known as the 'environment' of your code. Hence the process of documenting and managing this environment to is ensure that your code is reproducible (i.e. it not only runs but also consistently produces the same results).
 

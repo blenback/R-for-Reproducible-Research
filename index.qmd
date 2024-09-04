@@ -12,6 +12,10 @@ format:
     number-depth: 1
 citation-location: margin
 lightbox: true
+execute:
+  echo: true
+  eval: false
+  error: false
 ---
 
 ![](assets/images/graphical_abstract_dark.png){.lightbox width="70%" fig-align="center"}
@@ -35,13 +39,25 @@ This image highlights some the key concepts we will discuss in the workshop, whi
 
 # Workflows for Reproducibility {#sec-workflows}
 
+For this workshop we will outline three different workflows for creating reproducible research projects with R combined with other tools. We have named these workflows as follows:
+1. Rstudio project to Zenodo pipeline
+2. Containerization with Docker
+3. Version control with Git
+
+These workflows are inter-related in the sense that 2. and 3. build upon elements of the first and indeed the techniques of the latter workflows can also be combined together. The workflows differ in the level of reproducibility they ensure but the trade-off for better reproducibility is increased complexity. As such we would suggest that the most reproducible workflow may not always be the most appropriate to implement dependent on the needs of your research project and the capabilities of the collaborators involved.
+
+** TO DO?: Add a table to compare the workflows **
+
+Of course, these workflows are by no-means the only way of doing things and indeed we would actively encourage you to expand upon them in developing your own preferred approach.  
+
 ## Rstudio project to Zenodo pipeline {#sec-zenodo_workflow}
 
 ![](assets/images/project_zenodo_workflow.png){.lightbox width="70%" fig-align="center"}
 {{< include contents/Zenodo_workflow.qmd >}}
 
 ## Containerisation with Docker{#sec-docker_workflow}
-<!--{{< include contents/Docker_workflow.qmd >}}-->
+
+{{< include contents/Docker_workflow.qmd >}}
 
 ## Version control with Git{#sec-git_workflow}
 
