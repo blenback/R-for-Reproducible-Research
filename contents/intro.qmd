@@ -130,20 +130,20 @@ science, as it raises doubts about the validity of research findings.
 Conducting reproducible research simplifies the process of remembering
 how and why specific analyses were performed. This makes it easier to
 explain your work to collaborators, supervisors, and reviewers,
-enhancing communication throughout your project​ [@alston2021]
+enhancing communication throughout your project. [@alston2021]
 
 **Efficient**
 
 Modifications Reproducible research enables you to quickly adjust
 analyses and figures when requested by supervisors, collaborators, or
 reviewers. This streamlined process can save substantial time during
-revisions​ [@alston2021]
+revisions. [@alston2021]
 
 **Streamlined Future Projects**
 
 By maintaining well-organized and reproducible systems, you can reuse
 code and organizational structures for future projects. This reduces the
-time and effort required for similar tasks in subsequent research​
+time and effort required for similar tasks in subsequent research.
 [@alston2021]
 
 **Demonstrates Rigor and Transparency**
@@ -151,14 +151,15 @@ time and effort required for similar tasks in subsequent research​
 Reproducibility demonstrates scientific rigor and transparency. It
 allows others to verify your methods and results, improving the peer
 review process and reducing the risk of errors or accusations of
-misconduct​ [@alston2021]
+misconduct. [@alston2021]
 
 **Increases Impact and Citations**
 
 Making your research reproducible can lead to higher citation rates
 [@piwowar2007] [@mckiernan2016]. By sharing your code and data, you
 enable others to reuse your work, broadening its impact and increasing
-its relevance in the scientific community​ [@whitlock2011] [@culina2018].
+its relevance in the scientific community. [@whitlock2011]
+[@culina2018].
 
 ### Advantages of Reproducibility for Other Researchers
 
@@ -166,20 +167,21 @@ its relevance in the scientific community​ [@whitlock2011] [@culina2018].
 
 Sharing data and code helps others learn from your work more easily. New
 researchers can use your data and code as a reference, speeding up their
-learning curve and improving the quality of their analyses​ [@alston2021]
+learning curve and improving the quality of their analyses.
+[@alston2021]
 
 **Enables Reproducibility**
 
 Reproducible research makes it simpler for others to reproduce and build
 upon your work, fostering more compatible and robust research across
-studies​ [@alston2021]
+studies. [@alston2021]
 
 **Error Detection**
 
 By allowing others to access and review your data and code,
 reproducibility helps detect and correct errors, ensuring that mistakes
 are caught early and reducing the chance of their propagation in future
-research​ [@alston2021]
+research. [@alston2021]
 
 ## Why {{< iconify fa-brands r-project >}} for reproducible research?
 
@@ -193,35 +195,35 @@ Accessibility R is freely available to everyone, eliminating cost
 barriers and promoting inclusive access to research tools. This
 open-source model ensures that researchers around the world can use and
 contribute to its development, fostering a collaborative research
-environment​ [@siraji2023]
+environment. [@siraji2023]
 
 **Comprehensive Documentation**
 
 R encourages thorough documentation of the entire research process. This
 ensures that analyses are well-tracked and can be easily replicated
 across different projects, enhancing the overall transparency and
-reliability of the research​.
+reliability of the research.
 
 **Integrated Version Control**
 
 R seamlessly integrates with version control systems like Git, allowing
 researchers to track changes to code, data, and documents. This helps
 maintain a detailed record of a project's evolution and ensures that all
-steps are easily reproducible​ [@siraji2023]
+steps are easily reproducible. [@siraji2023]
 
 **Consistency Across Platforms**
 
 R provides a stable environment that works consistently across different
 operating systems, whether you are using Windows, Mac, or Linux. This
 cross-platform consistency greatly enhances the reproducibility of
-research across diverse systems​.
+research across diverse systems.
 
 **Broad Community Support**
 
 The R community is large and active, continuously contributing to the
 improvement of the software. This broad support makes R a reliable
 choice for long-term research projects, ensuring that new tools and
-methods are constantly being developed and shared​.
+methods are constantly being developed and shared.
 
 **Flexibility and Adaptability**
 
@@ -230,6 +232,7 @@ various research needs. This flexibility allows researchers to handle
 diverse tasks within a reproducible framework, making it a versatile
 tool for projects of all kinds.
 :::
+
 <!-- Presentation content -->
 
 ::: {.content-visible when-format="revealjs"}
@@ -276,7 +279,17 @@ Let's hear your thoughts: What does reproducible research mean to you?
 
 ## The FAIR standard
 
-The FAIR standard was developed....
+-   **Findability, Accessibility, Interoperability, and
+    Reusability** (FAIR).
+
+-   Developed by diverse stakeholders (academia, industry, funders,
+    publishers).
+
+-   Addressed the need for infrastructure supporting data reuse.
+
+-   Emphasis on both human and machine readability.
+
+[@wilkinson2016]
 
 ## Why strive for reproducible research?
 
