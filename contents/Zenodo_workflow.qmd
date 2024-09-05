@@ -7,6 +7,9 @@ editor:
 bibliography: references.bib
 ---
 
+<!-- Web content -->
+
+::: {.content-hidden when-format="revealjs"}
 ### Environment Management with renv
 
 renv is a powerful R package designed to help manage project
@@ -97,8 +100,68 @@ analysis was conducted and share it along with their data and code.
 Together, renv and Zenodo form a comprehensive solution for
 reproducible, open science research in accordance with the FAIR guiding
 principles [@wilkinson2016].
+:::
 
-    
-    # edit data, delete_latest_files = TRUE deletes data of previous version,
-    myrec <- zenodo$depositRecordVersion(myrec, delete_latest_files = TRUE, files = "path/to/your/new/file", publish = TRUE)
-    ```
+<!-- Presentation content -->
+
+::: {.content-visible when-format="revealjs"}
+### Managing Project Environments with renv
+
+-   renv creates project-specific libraries
+
+-   Captures package versions in a renv.lock file
+
+-   Ensures reproducibility across machines
+
+-   Centralizes environment management within each project
+
+### renv Workflow
+
+-   Initialize renv to isolate project dependencies
+
+-   Snapshot dependencies to create a lockfile
+
+-   Restore environments using renv::restore()
+
+-   Easy integration with RStudio for workflow management
+
+### Limitations of renv
+
+-   Does not manage R versions or external dependencies
+
+-   Focuses on internal reproducibility
+
+-   Best combined with containerization (e.g., Docker)
+
+-   Complements external repositories (e.g., Zenodo)
+
+### Publishing and Archiving with Zenodo
+
+-   Provides long-term storage for research outputs
+
+-   Assigns permanent DOIs for citations
+
+-   Supports versioning for transparency
+
+-   Simplifies archiving from GitHub with DOI snapshots
+
+### Enhancing Workflow with zen4R
+
+-   Upload datasets, code, and metadata from R to Zenodo
+
+-   Automate publication and deposition management
+
+-   Retrieve and update Zenodo records directly in R
+
+-   Facilitates integration and reproducibility in R workflows
+
+### Combining renv and Zenodo
+
+-   RENV manages internal project environments
+
+-   Zenodo ensures external reproducibility with archiving
+
+-   Together, they provide a comprehensive solution
+
+-   Aligns with open science and FAIR principles
+:::
