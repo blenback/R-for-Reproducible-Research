@@ -1,0 +1,11 @@
+---
+execute:
+  echo: true
+  eval: false
+  error: false
+---
+
+
+## Rstudio project to Zenodo exercise {#sec-Rproj_zenodo_exercise}
+
+

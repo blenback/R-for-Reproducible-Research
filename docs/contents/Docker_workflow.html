@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Reproducible Research with  and </title>
+<title>docker_workflow – Reproducible Research with &lt;img style="vertical-align:middle; height:1em; border: none; background: none;" src="assets/images/Rlogo.png"&gt; and &lt;img style="vertical-align:middle; height:1em;" src="assets/images/quarto-logo-trademark.svg"&gt;</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,9 +107,9 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
     <span class="navbar-title">Reproducible Research with <img style="vertical-align:middle; height:1em; border: none; background: none;" src="assets/images/Rlogo.png"> and <img style="vertical-align:middle; height:1em;" src="assets/images/quarto-logo-trademark.svg"></span>
     </a>
   </div>
-        <div class="quarto-navbar-tools">
+        <div class="quarto-navbar-tools tools-end">
     <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/blenback/R-for-Reproducible-Research">
@@ -130,13 +130,13 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -181,25 +181,36 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p><strong>The title of this workflow raises two questions, the first being: what is containerization?</strong></p>
 <p>Simply put containerization is the process of bundling code along with all of it’s dependencies, i.e.&nbsp;all the components we discussed as making up the <a href="@sec-environment-management">environment</a>, including the operating system, software libraries (packages), and other system software. The fact everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service. This also makes containerization something of a gold standard for reproducibility as the entire environment is explicitly re-produced.</p>
 <p><strong>and the second: what is Docker?</strong></p>
-<p>Docker is an open-source, and the most popular, platform for containerization. Before we dive into a practical example using Docker for research projects with R it is important to introduce some three key terms that we will come across:</p>
+<p><a href="https://www.docker.com/">Docker</a> is an open-source, and the most popular, platform for containerization. Before we dive into a practical example using Docker for research projects with R it is important to introduce some three key terms that we will come across:</p>
 <ul>
-<li><p><code>Dockerfile</code>: A straightforward text file containing a collection of commands or procedures to create a new Docker image. In thise sense we can consider a Dockerfile are the source code of Docker Image.</p></li>
-<li><p><code>Docker Image</code>: A read-only file that contains the instructions for creating a Docker container. Think of an image as the blueprint of what will be in a container when it is running.</p></li>
-<li><p><code>Docker Container</code>: Is an actual running instance of a Docker image. It runs completely isolated from the host environment by default, only accessing host files and ports if configured to do so.</p></li>
+<li><p><code>Dockerfile</code>: The first step in the containerization process, they are a straightforward text file containing a collection of commands or procedures to create a new Docker Image. In this sense we can consider a Dockerfile are the source code of Docker Image. Importantly, Dockerfiles typically start from a base image, which is a existing Docker Image that your image is extending.</p></li>
+<li><p><code>Docker Image</code>: A read-only file that contains the instructions for creating a Docker Container. Think of an image as the blueprint of what will be in a container when it is running. Docker Images can be shared via <a href="https://hub.docker.com/">Dockerhub</a>, so that they can be used by others.</p></li>
+<li><p><code>Docker Container</code>: Is an actual running instance of a Docker image. It runs completely isolated from the host environment by default and only accesses host files (i.e.&nbsp;data) if it has been configured to do so. It is possible to create multiple containers simultaneously from the same Docker Image, and each container can be started, stopped, moved, and deleted independently of the others.</p></li>
 </ul>
+<p>The graphic below show the relationships between these components including the central commands of Docker that connect them <code>build</code> and <code>run</code>:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="assets/images/docker_explainer.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="assets/images/docker_explainer.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
-<p>Docker The main advantages of using Docker within your development environment are:</p>
-<p>Reproducibility - Docker enables you to seamlessly package your code and its dependencies into a single container and execute, test, share, and deploy it with a high level of consistency Collaboration - Docker solves the dependencies madness when a team of developers works together on a specific project. Having a unified environment saves a ton of time during the development step. For example, if one developer gets some error, it is easy for other developers to reproduce the error and help debug it</p>
-<p>terms: image container Dockerfile Dockerhub</p>
-<p>##Using Docker with R ### Rocker</p>
-<section id="practical-example-with-dockerfiler-package" class="level3">
-<h3 class="anchored" data-anchor-id="practical-example-with-dockerfiler-package">Practical example with dockerfiler package</h3>
-<p>Manually creating the Dockerfile: https://colinfay.me/docker-r-reproducibility/</p>
-<p>The main advantages of using Docker within your development environment are: https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf https://thinkr-open.github.io/dockerfiler/ https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/</p>
+<section id="using-docker-with-r" class="level3">
+<h3 class="anchored" data-anchor-id="using-docker-with-r">Using Docker with R</h3>
+<p>So to create a <code>Docker Image</code> to containerize our R research projects we need to start by creating a <code>Dockerfile</code> and, as mentioned above, this should start with a base image. In our case this base image must logically include R and RStudio (if we want to utilise the RStudio Projects features).</p>
+<p>Fortunately there is a project that specifically catalogs and manages Docker Images for R projects: <a href="https://rocker-project.org/"><code>Rocker</code></a>. The images available through the Rocker project not only include different versions of R and RStudio but also images containing collections of R packages for specific purposes (e.g.&nbsp;tidyverse for data wrangling and visualisation, geospatial packages etc.).</p>
+<p>In terms of actually creating the <code>Dockerfile</code> for our R project, this can be done manually (See a good R-focused tutorial<a href="https://colinfay.me/docker-r-reproducibility/">here</a>), however there are also R packages that can help with this process such as <a href="https://thinkr-open.github.io/dockerfiler/"><code>dockerfiler</code></a> and the <code>[rrtools</code>](https://github.com/benmarwick/rrtools) package.</p>
+<p>For our workflow we will use the <code>dockerfiler</code> package. - Main function of the package is <code>dockerfile_build()</code> which creates a Dockerfile and builds a Docker image from it.</p>
+</section>
+<section id="docker-with-renv" class="level3">
+<h3 class="anchored" data-anchor-id="docker-with-renv">Docker with renv</h3>
+</section>
+<section id="creating-docker-image" class="level3">
+<h3 class="anchored" data-anchor-id="creating-docker-image">Creating docker image</h3>
+</section>
+<section id="running-docker-container" class="level3">
+<h3 class="anchored" data-anchor-id="running-docker-container">Running docker container</h3>
+<p>data(“RiceFarms”) write.csv(RiceFarms, “data/RiceFarms.csv”)</p>
+<p>https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf</p>
+<p>https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/</p>
 <p>stevedore package for pulling images from Dockerhub using the Docker API https://richfitz.github.io/stevedore/</p>
 
 
@@ -385,18 +396,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -428,7 +428,47 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/blenback\.github\.io\/R-for-Reproducible-Research\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -463,7 +503,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -752,30 +796,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
     }
-  });
-
-};
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
           </script>
 
 

@@ -64,8 +64,8 @@ fig-align="center"}
 ### Using Docker with R
 
 So to create a `Docker Image` to containerize our R research projects we
-need to start by creating a `Dockerfile` and, as mentioned above this
-starts with a base image. In our case this base image must logically
+need to start by creating a `Dockerfile` and, as mentioned above, this should
+start with a base image. In our case this base image must logically
 include R and RStudio (if we want to utilise the RStudio Projects
 features).
 
@@ -77,17 +77,29 @@ collections of R packages for specific purposes (e.g. tidyverse for data
 wrangling and visualisation, geospatial packages etc.).
 
 In terms of actually creating the `Dockerfile` for our R project, this
-can be done manually (See a good R-focused tutorial here)
+can be done manually (See a good R-focused tutorial[here](https://colinfay.me/docker-r-reproducibility/)), however there are also R packages that can help with this process such as [`dockerfiler`](https://thinkr-open.github.io/dockerfiler/) and the `[rrtools`](https://github.com/benmarwick/rrtools) package. 
 
-### Practical example with dockerfiler package
+For our workflow we will use the `dockerfiler` package.
+- Main function of the package is `dockerfile_build()` which creates a Dockerfile and builds a Docker image from it.
 
-Manually creating the Dockerfile:
-https://colinfay.me/docker-r-reproducibility/
 
-The main advantages of using Docker within your development environment
-are:
+
+### Docker with renv
+
+### Creating docker image 
+
+### Running docker container
+
+
+
+
+
+
+
+
+
 https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf
-https://thinkr-open.github.io/dockerfiler/
+
 https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/
 
 stevedore package for pulling images from Dockerhub using the Docker API
