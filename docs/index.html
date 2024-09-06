@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Reproducible Research with  and  - Workflows for data, projects and publications</title>
+<title>Untitled – Reproducible Research with  and </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -44,13 +97,22 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/iconify-1.0.8/iconify-icon.min.js"></script>
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -59,6 +121,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -73,28 +136,14 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </script>
-<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-<script src="site_libs/plotly-binding-4.10.4/plotly.js"></script>
-<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
-<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
-<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
-<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
-<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
-<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
-<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
-<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-<script src="site_libs/leaflet-binding-2.2.1/leaflet.js"></script>
 
 
-<meta property="og:title" content="Reproducible Research with  and  - Workflows for data, projects and publications">
+<link rel="stylesheet" href="index.css">
+<meta property="og:title" content="Untitled – Reproducible Research with  and ">
 <meta property="og:description" content="A workshop presented at the Landscape 2024 conference, Berlin">
 <meta property="og:image" content="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png">
-<meta property="og:site-name" content="Reproducible Research with <img style=&quot;vertical-align:middle; height:1em; border: none; background: none;&quot; src=&quot;assets/images/Rlogo.png&quot;> and <img style=&quot;vertical-align:middle; height:1em;&quot; src=&quot;assets/images/quarto-logo-trademark.svg&quot;>">
-<meta name="twitter:title" content="Reproducible Research with  and  - Workflows for data, projects and publications">
+<meta property="og:site_name" content="Reproducible Research with <img style=&quot;vertical-align:middle; height:1em; border: none; background: none;&quot; src=&quot;assets/images/Rlogo.png&quot;> and <img style=&quot;vertical-align:middle; height:1em;&quot; src=&quot;assets/images/quarto-logo-trademark.svg&quot;>">
+<meta name="twitter:title" content="Untitled – Reproducible Research with  and ">
 <meta name="twitter:description" content="A workshop presented at the Landscape 2024 conference, Berlin">
 <meta name="twitter:image" content="https://blenback.github.io/R-for-Reproducible-Research/media/preview.png">
 <meta name="twitter:creator" content="@Blen_Back">
@@ -102,28 +151,28 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Reproducible Research with <img style="vertical-align:middle; height:1em; border: none; background: none;" src="assets/images/Rlogo.png"> and <img style="vertical-align:middle; height:1em;" src="assets/images/quarto-logo-trademark.svg"></span>
     </a>
   </div>
-        <div class="quarto-navbar-tools ms-auto">
+        <div class="quarto-navbar-tools tools-end">
     <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="https://github.com/blenback/R-for-Reproducible-Research">
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/blenback/R-for-Reproducible-Research">
             Source Code
             </a>
           </li>
           <li>
-            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="https://github.com/blenback/R-for-Reproducible-Research/issues">
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/blenback/R-for-Reproducible-Research/issues">
             Report a Bug
             </a>
           </li>
@@ -136,13 +185,13 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Workflows for data, projects and publications</li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Untitled</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -151,7 +200,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -161,7 +210,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/presentation.html" class="sidebar-item-text sidebar-link"><i class="bi bi-file-earmark-easel" role="img">
+  <a href="./presentation.html" class="sidebar-item-text sidebar-link"><i class="bi bi-file-earmark-easel" role="img">
 </i> 
  <span class="menu-text">View in presentation format</span></a>
   </div>
@@ -171,39 +220,64 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#sec-background" id="toc-sec-background" class="nav-link active" data-scroll-target="#sec-background"><span class="header-section-number">1</span> Background</a>
   <ul class="collapse">
   <li><a href="#about-us" id="toc-about-us" class="nav-link" data-scroll-target="#about-us">About us</a></li>
+  <li><a href="#what-is-reproducible-research" id="toc-what-is-reproducible-research" class="nav-link" data-scroll-target="#what-is-reproducible-research">What is reproducible research?</a></li>
+  <li><a href="#why-strive-for-reproducible-research" id="toc-why-strive-for-reproducible-research" class="nav-link" data-scroll-target="#why-strive-for-reproducible-research">Why strive for reproducible research?</a></li>
+  <li><a href="#why-for-reproducible-research" id="toc-why-for-reproducible-research" class="nav-link" data-scroll-target="#why-for-reproducible-research">Why <iconify-icon inline="" icon="fa-brands:r-project"></iconify-icon> for reproducible research?</a></li>
   </ul></li>
-  <li><a href="#research-projects-with-r" id="toc-research-projects-with-r" class="nav-link" data-scroll-target="#research-projects-with-r">Research projects with R</a></li>
-  <li><a href="#workflows-for-reproducibility" id="toc-workflows-for-reproducibility" class="nav-link" data-scroll-target="#workflows-for-reproducibility">3 workflows for Reproducibility</a></li>
-  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a>
+  <li><a href="#sec-Rprojects" id="toc-sec-Rprojects" class="nav-link" data-scroll-target="#sec-Rprojects"><span class="header-section-number">2</span> Research projects with R</a>
   <ul class="collapse">
-  <li><a href="#a-brief-introduction-to-quarto" id="toc-a-brief-introduction-to-quarto" class="nav-link" data-scroll-target="#a-brief-introduction-to-quarto">A brief introduction to Quarto</a>
-  <ul class="collapse">
-  <li><a href="#some-of-the-creative-ways-in-which-you-can-use-quarto-is" id="toc-some-of-the-creative-ways-in-which-you-can-use-quarto-is" class="nav-link" data-scroll-target="#some-of-the-creative-ways-in-which-you-can-use-quarto-is">Some of the creative ways in which you can use Quarto is:</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"><!-- Web content --></a></li>
+  <li><a href="#sec-projects" id="toc-sec-projects" class="nav-link" data-scroll-target="#sec-projects"><img src="assets/images/RStudio_logo_flat.svg" style="vertical-align:middle; height:1.5em;"> projects</a></li>
+  <li><a href="#sec-environment-management" id="toc-sec-environment-management" class="nav-link" data-scroll-target="#sec-environment-management">Environment management</a></li>
+  <li><a href="#sec-writing-clean-code" id="toc-sec-writing-clean-code" class="nav-link" data-scroll-target="#sec-writing-clean-code">Writing clean code</a></li>
+  <li><a href="#sec-workflow-decomposition" id="toc-sec-workflow-decomposition" class="nav-link" data-scroll-target="#sec-workflow-decomposition">Workflow decomposition</a></li>
+  <li><a href="#sec-structuring" id="toc-sec-structuring" class="nav-link" data-scroll-target="#sec-structuring">Structuring your project directory</a></li>
+  <li><a href="#sec-documentation" id="toc-sec-documentation" class="nav-link" data-scroll-target="#sec-documentation">Project documentation</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"><!-- Presentation content --></a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#guided-excercises" id="toc-guided-excercises" class="nav-link" data-scroll-target="#guided-excercises">Guided excercises</a>
+  <li><a href="#sec-workflows" id="toc-sec-workflows" class="nav-link" data-scroll-target="#sec-workflows"><span class="header-section-number">3</span> Workflows for Reproducibility</a>
   <ul class="collapse">
-  <li><a href="#r-project-to-zenodo-workflow" id="toc-r-project-to-zenodo-workflow" class="nav-link" data-scroll-target="#r-project-to-zenodo-workflow">R project to Zenodo workflow</a></li>
+  <li><a href="#sec-zenodo_workflow" id="toc-sec-zenodo_workflow" class="nav-link" data-scroll-target="#sec-zenodo_workflow">Rstudio project to Zenodo pipeline</a></li>
+  <li><a href="#use-renv-to-create-project-specific-environments-in-r" id="toc-use-renv-to-create-project-specific-environments-in-r" class="nav-link" data-scroll-target="#use-renv-to-create-project-specific-environments-in-r">Use renv to create project-specific environments in R</a></li>
+  <li><a href="#managing-packages-with-renv" id="toc-managing-packages-with-renv" class="nav-link" data-scroll-target="#managing-packages-with-renv">Managing Packages with renv</a></li>
+  <li><a href="#reuse-an-existing-renv-project-environment" id="toc-reuse-an-existing-renv-project-environment" class="nav-link" data-scroll-target="#reuse-an-existing-renv-project-environment">Reuse an existing renv project environment:</a></li>
+  </ul></li>
+  <li><a href="#publish-your-work-with-zenodo-to-make-it-accessible-and-citable" id="toc-publish-your-work-with-zenodo-to-make-it-accessible-and-citable" class="nav-link" data-scroll-target="#publish-your-work-with-zenodo-to-make-it-accessible-and-citable"><span class="header-section-number">4</span> Publish your work with Zenodo to make it accessible and citable</a>
+  <ul class="collapse">
+  <li><a href="#install-zen4r-to-access-zenodo-through-r" id="toc-install-zen4r-to-access-zenodo-through-r" class="nav-link" data-scroll-target="#install-zen4r-to-access-zenodo-through-r">Install zen4R to access Zenodo through r</a></li>
+  <li><a href="#create-a-new-zenodo-record" id="toc-create-a-new-zenodo-record" class="nav-link" data-scroll-target="#create-a-new-zenodo-record">Create a new Zenodo record</a></li>
+  <li><a href="#edit-published-zenodo-records" id="toc-edit-published-zenodo-records" class="nav-link" data-scroll-target="#edit-published-zenodo-records">Edit published Zenodo records</a></li>
+  <li><a href="#sec-docker_workflow" id="toc-sec-docker_workflow" class="nav-link" data-scroll-target="#sec-docker_workflow">Containerisation with Docker</a></li>
+  <li><a href="#sec-git_workflow" id="toc-sec-git_workflow" class="nav-link" data-scroll-target="#sec-git_workflow">Version control with Git</a></li>
+  </ul></li>
+  <li><a href="#sec-Quarto" id="toc-sec-Quarto" class="nav-link" data-scroll-target="#sec-Quarto"><span class="header-section-number">5</span> Quarto</a>
+  <ul class="collapse">
+  <li><a href="#a-brief-introduction-to-quarto" id="toc-a-brief-introduction-to-quarto" class="nav-link" data-scroll-target="#a-brief-introduction-to-quarto">A brief introduction to Quarto</a></li>
+  </ul></li>
+  <li><a href="#sec-exercises" id="toc-sec-exercises" class="nav-link" data-scroll-target="#sec-exercises"><span class="header-section-number">6</span> Guided excercises</a>
+  <ul class="collapse">
+  <li><a href="#sec-Rproj_zenodo_exercise" id="toc-sec-Rproj_zenodo_exercise" class="nav-link" data-scroll-target="#sec-Rproj_zenodo_exercise">Rstudio project to Zenodo exercise</a></li>
+  <li><a href="#containerisation-with-docker-exercise" id="toc-containerisation-with-docker-exercise" class="nav-link" data-scroll-target="#containerisation-with-docker-exercise">Containerisation with Docker exercise</a></li>
   <li><a href="#write-a-paper-with-quarto" id="toc-write-a-paper-with-quarto" class="nav-link" data-scroll-target="#write-a-paper-with-quarto">Write a paper with Quarto</a></li>
   </ul></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#sec-resources" id="toc-sec-resources" class="nav-link" data-scroll-target="#sec-resources"><span class="header-section-number">7</span> Resources</a></li>
   </ul>
 </nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Workflows for data, projects and publications</h1>
+<h1 class="title">Untitled</h1>
 <p class="subtitle lead">A workshop presented at the <a href="https://landscape2024.org/frontend/index.php?folder_id=7393&amp;page_id=">Landscape 2024 conference</a>, Berlin</p>
 </div>
 
@@ -217,49 +291,718 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
   </div>
   
 
+
 </header>
 
-<p><img src="assets/images/graphical_abstract_dark_test.png" class="img-fluid" style="width:70.0%"></p>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/graphical_abstract_dark.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="assets/images/graphical_abstract_dark.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+</figure>
+</div>
+<p>This image highlights some the key concepts we will discuss in the workshop, which have been divided into seperate sections:</p>
+<ol type="1">
+<li><a href="@sec-background">Background</a>: Some introductory information on why reproducible and transparent research is important.</li>
+<li><a href="@sec-Rprojects">Research projects with R</a>: Starting from the basics to develop good practice for creating research projects with R, focusing on some features of Rstudio as an Integrated Development Environment that can help ensure your work is reproducible.</li>
+<li><a href="@sec-workflows">Workflows for reproducibility</a>: Here we present three workflows of differing levels of complexity and discusses how they can be combined and which might be best given the research needs.</li>
+<li><a href="@sec-Quarto">Quarto</a>: Here we introduce the open-source scientific and technical publishing system Quarto which can be used for numerous academic activities including preparing manuscripts.</li>
+<li><a href="@sec-exercises">Guided exercises</a>: Now it’s time to get hands-on with some guided exercises to put into practice some of the concepts we have discussed.</li>
+<li><a href="@sec-resources">Resources</a>: A collection of resources that we find particularly helpful in our own journey towards reproducible research.</li>
+</ol>
+<section id="sec-background" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Background</h1>
+<!-- Web content -->
 <section id="about-us" class="level2">
 <h2 class="anchored" data-anchor-id="about-us">About us</h2>
-<div class="grid" style="display: flex; justify-content: center; align-items: center; text-align: center;">
+<p>We are four researchers from the research group <a href="https://plus.ethz.ch/">Planning of Landscape and Urban Systems (PLUS)</a> at <a href="https://ethz.ch/en.html">ETH Zürich</a>. Click on the social icons below our pictures to find out more about our individual research or get in touch with us.</p>
+<div class="grid" style="display: flex; text-align: center;">
 <div class="g-col-6">
-<p><img src="https://github.com/blenback.png" class="picture lightbox img-fluid"></p>
+<p><a href="assets/images/Ben.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="assets/images/Ben.jpg" class="picture img-fluid"></a></p>
 <section id="ben-black" class="level3">
 <h3 class="anchored" data-anchor-id="ben-black">Ben Black</h3>
 <p><em>Doctoral Researcher</em></p>
-<p><a href="https://blenback.github.io/" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:house-chimney-user" style="font-size: 1.5em;"></iconify-icon></a> <a href="mailto:bblack@ethz.ch" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:envelope" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://www.linkedin.com/in/ben-black-9889a1150/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:linkedin" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://github.com/blenback/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:github" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://www.researchgate.net/profile/Benjamin-Black-5/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:researchgate" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://twitter.com/Blen_Back/" class="iconify-icon"><iconify-icon inline="" icon="simple-icons:x" style="font-size: 1.5em;"></iconify-icon></a></p>
+<p><a href="https://blenback.github.io/" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:house-chimney-user" style="font-size: 1.5em;"></iconify-icon></a> <a href="mailto:bblack@ethz.ch" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:envelope" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://www.linkedin.com/in/ben-black-9889a1150/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:linkedin" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://github.com/blenback/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:github" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://www.researchgate.net/profile/Benjamin-Black-5/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:researchgate" style="font-size: 1.5em;"></iconify-icon></a></p>
 </section>
 </div>
-<section id="nivedita-harisena" class="level3 g-col-6">
+<div class="g-col-6">
+<p><a href="assets/images/nivedita.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="assets/images/nivedita.jpg" class="picture img-fluid"></a></p>
+<section id="nivedita-harisena" class="level3">
 <h3 class="anchored" data-anchor-id="nivedita-harisena">Nivedita Harisena</h3>
 <p><em>Doctoral Researcher</em></p>
-<p><a href="https://blenback.github.io/" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:house-chimney-user" style="font-size: 1.5em;"></iconify-icon></a> <a href="mailto:bblack@ethz.ch" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:envelope" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://www.linkedin.com/in/ben-black-9889a1150/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:linkedin" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://github.com/blenback/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:github" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://www.researchgate.net/profile/Benjamin-Black-5/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:researchgate" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://twitter.com/Blen_Back/" class="iconify-icon"><iconify-icon inline="" icon="simple-icons:x" style="font-size: 1.5em;"></iconify-icon></a></p>
+<p><a href="https://irl.ethz.ch/people/person-detail.Mjg5Mjgx.TGlzdC8zNzc5LC0xMzk1OTgzMDM3.html" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:house-chimney-user" style="font-size: 1.5em;"></iconify-icon></a> <a href="mailto:nharisena@ethz.ch" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:envelope" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://www.linkedin.com/in/nivedita-varma-harisena-667298141/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:linkedin" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://github.com/NVHarisena1" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:github" style="font-size: 1.5em;"></iconify-icon></a></p>
 </section>
-<section id="maarten-van-strien" class="level3 g-col-6">
+</div>
+<div class="g-col-6">
+<p><a href="assets/images/Manuel.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="assets/images/Manuel.jpg" class="picture img-fluid"></a></p>
+<section id="manuel-kurmann" class="level3">
+<h3 class="anchored" data-anchor-id="manuel-kurmann">Manuel Kurmann</h3>
+<p><em>Research Assistant</em></p>
+<p><a href="https://irl.ethz.ch/people/person-detail.MjM2NjYz.TGlzdC8zNzc5LC0xMzk1OTgzMDM3.html" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:house-chimney-user" style="font-size: 1.5em;"></iconify-icon></a> <a href="mailto:mankurma@student.ethz.ch" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:envelope" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://www.linkedin.com/in/manuel-kurmann-696577251/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:linkedin" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://github.com/ManuelKurmann" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:github" style="font-size: 1.5em;"></iconify-icon></a></p>
+</section>
+</div>
+<div class="g-col-6">
+<p><a href="assets/images/Maarten.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="assets/images/Maarten.jpg" class="picture img-fluid"></a></p>
+<section id="maarten-van-strien" class="level3">
 <h3 class="anchored" data-anchor-id="maarten-van-strien">Maarten Van Strien</h3>
 <p><em>Senior scientist</em></p>
-<p><a href="https://blenback.github.io/" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:house-chimney-user" style="font-size: 1.5em;"></iconify-icon></a> <a href="mailto:bblack@ethz.ch" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:envelope" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://www.linkedin.com/in/ben-black-9889a1150/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:linkedin" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://github.com/blenback/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:github" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://www.researchgate.net/profile/Benjamin-Black-5/" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:researchgate" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://twitter.com/Blen_Back/" class="iconify-icon"><iconify-icon inline="" icon="simple-icons:x" style="font-size: 1.5em;"></iconify-icon></a></p>
+<p><a href="https://irl.ethz.ch/people/person-detail.MTYzODAz.TGlzdC8xNzM4LC0xMzk1OTgzMDM3.html" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:house-chimney-user" style="font-size: 1.5em;"></iconify-icon></a> <a href="mailto:vanstrien@ethz.ch" class="iconify-icon"><iconify-icon inline="" icon="fa6-solid:envelope" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://www.linkedin.com/in/maarten-van-strien-347b6747/?originalSubdomain=ch" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:linkedin" style="font-size: 1.5em;"></iconify-icon></a> <a href="https://www.researchgate.net/profile/Maarten-Van-Strien" class="iconify-icon"><iconify-icon inline="" icon="fa6-brands:researchgate" style="font-size: 1.5em;"></iconify-icon></a></p>
 </section>
+</div>
+</div>
+</section>
+<section id="what-is-reproducible-research" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-reproducible-research">What is reproducible research?</h2>
+<ul>
+<li>Ability to replicate results:
+<ul>
+<li>Others can reproduce the results given only the original data, code, and documentation (Essawy et al.&nbsp;2020)</li>
+</ul></li>
+<li>Starts with planning:
+<ul>
+<li>Reproducibility begins with organized data management and sound planning before any analysis is conducted.</li>
+</ul></li>
+<li>Consistent data storage:
+<ul>
+<li>Data should be backed up regularly and stored in multiple locations to prevent loss and ensure accessibility.</li>
+</ul></li>
+<li>Clear documentation:
+<ul>
+<li>Metadata and well-organized files are essential for interpreting and reproducing research, ensuring clarity and usability.</li>
+</ul></li>
+<li>Version vontrol:
+<ul>
+<li>Using version control systems helps track changes and maintain a record of the project’s evolution, aiding in reproducibility.</li>
+</ul></li>
+<li>Standardized formats:
+<ul>
+<li>Data should be stored in nonproprietary, portable formats to ensure broad accessibility and long-term usability.</li>
+</ul></li>
+<li>Open access:
+<ul>
+<li>Data and code should be publicly available in accessible repositories to support transparency and wider use in the scientific community.</li>
+</ul></li>
+</ul>
+</section>
+<section id="why-strive-for-reproducible-research" class="level2">
+<h2 class="anchored" data-anchor-id="why-strive-for-reproducible-research">Why strive for reproducible research?</h2>
+<p>Advantages for your research</p>
+<ul>
+<li>Some fields have suffered a ‘replication crisis’:
+<ul>
+<li>In some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science <!--Give headline figures --></li>
+</ul></li>
+<li>Personal reference:
+<ul>
+<li>Simplifies the process of recalling how and why specific analyses were performed, making it easier to explain your work to collaborators, supervisors, and reviewers.</li>
+</ul></li>
+<li>Efficient modifications:
+<ul>
+<li>Simplifies the process of adjusting analyses and figures, saving time when supervisors, collaborators, or reviewers request changes.</li>
+</ul></li>
+<li>Streamlined future projects:
+<ul>
+<li>Facilitates the re-use of code and organizational systems for similar tasks in new projects, making them simpler and faster to execute.</li>
+</ul></li>
+<li>Demonstrates rigor and transparency:
+<ul>
+<li>Enhances trust in your work by allowing others to verify the accuracy of your methods, improving peer review and reducing the risk of errors or accusations of misconduct.</li>
+</ul></li>
+<li>Increases impact and citations:
+<ul>
+<li>Boosts citation rates by enabling others to reuse your code and data, allowing your research to have a greater influence and be cited in a wider range of contexts.</li>
+</ul></li>
+</ul>
+<p>Advantages for other researchers</p>
+<ul>
+<li>Facilitates learning:
+<ul>
+<li>Provides others with a head start by sharing data and code for easier learning and faster analysis.</li>
+</ul></li>
+<li>Enables reproducibility:
+<ul>
+<li>Makes it easier for others to reproduce and build upon your work, supporting stronger and more compatible research.</li>
+</ul></li>
+<li>Error detection:
+<ul>
+<li>Helps others identify and correct mistakes, protecting the scientific community from errors.</li>
+</ul></li>
+</ul>
+<p>Alston, J. M., and J. A. Rick. 2021. A Beginner’s Guide to Conducting Reproducible Research. The Bulletin of the Ecological Society of America 102(2). https://doi.org/10.1002/bes2.1801.</p>
+</section>
+<section id="why-for-reproducible-research" class="level2">
+<h2 class="anchored" data-anchor-id="why-for-reproducible-research">Why <iconify-icon inline="" icon="fa-brands:r-project"></iconify-icon> for reproducible research?</h2>
+<ul>
+<li>Open source accessibility:
+<ul>
+<li>Freely available to everyone, eliminating cost barriers and promoting inclusive access to research tools.</li>
+</ul></li>
+<li>Comprehensive documentation:
+<ul>
+<li>Encourages thorough documentation, making it easier to track and replicate analyses across different projects.</li>
+</ul></li>
+<li>Integrated version control:
+<ul>
+<li>Seamlessly integrates with version control systems, ensuring that changes are tracked and reproducibility is maintained.</li>
+</ul></li>
+<li>Consistency across platforms:
+<ul>
+<li>Provides a stable environment that works consistently across different operating systems, enhancing reproducibility.</li>
+</ul></li>
+<li>Broad community support:
+<ul>
+<li>Backed by a large, active community that contributes to continuous improvements, making it a reliable choice for long-term research projects.</li>
+</ul></li>
+<li>Flexibility and adaptability:
+<ul>
+<li>Offers a wide range of tools and functions that can be adapted to various research needs, ensuring that diverse research tasks can be handled within a reproducible framework.</li>
+</ul></li>
+</ul>
+<p>Siraji, M. A., and M. Rahman. 2024. Primer on Reproducible Research in R: Enhancing Transparency and Scientific Rigor. Clocks &amp; Sleep 6(1): 1–10. https://doi.org/10.3390/clockssleep6010001. <!-- Presentation content --></p>
+</section>
+</section>
+<section id="sec-Rprojects" class="level1 page-columns page-full" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Research projects with R</h1>
+<section id="section-1" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="section-1"><!-- Web content --></h2>
+<p><strong>Let’s start with a definition of what makes a good R project from Jenny Bryan:</strong></p>
+<p>A good R project… <em>“creates everything it needs, in its own workspace or folder, and it touches nothing it did not create.”</em> <span class="citation" data-cites="bryan2017">[<a href="#ref-bryan2017" role="doc-biblioref">1</a>]</span></p>
+<div class="no-row-height column-margin column-container"><div id="ref-bryan2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Bryan J (2017) <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Project-oriented workflow</a></div>
+</div></div><p>This is a good definition that contains concepts, such as the notion that projects should be ‘self-contained’. However we add one more caveat to this definition which is that a good R project should <em>explain itself</em>.</p>
+<p>For the purpose of this workshop we will approach this topic by splitting it up into 6 topics which are highlighted in this graphic:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/project_components.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Graphical overview of components of a good research project in R"><img src="assets/images/project_components.png" class="img-fluid figure-img" alt="Graphical overview of components of a good research project in R"></a></p>
+<figcaption>Graphical overview of components of a good research project in R</figcaption>
+</figure>
+</div>
+<p>As you move through these you will see that there are areas of overlap and complementarity between them. These topics are also central to the choice of approaches in the <a href="@sec-workflows">three workflows for reproducibility</a> that we will share.</p>
+</section>
+<section id="sec-projects" class="level2">
+<h2 class="anchored" data-anchor-id="sec-projects"><img src="assets/images/RStudio_logo_flat.svg" style="vertical-align:middle; height:1.5em;"> projects</h2>
+<p>How many times have you opened an R script and been greeted by this line:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/ben/path/that/only/I/have"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>While it is well-intentioned (i.e.&nbsp;avoiding the need to have full paths for all objects that will subsequently be loaded or daved ) the problem with it is obvious: This specific path is only relevant for the author and not other potential users and even for the author it is will be invalid if they happen to change computers. The good news is there is a very simple way to avoid having to use <code>setwd()</code> at all by using <a href=""><strong>Rstudio Projects</strong></a>.</p>
+<p>Rstudio projects designate new or existing folders as a defined working directory by creating an <code>.RProj</code> file within them. This means that when you open a project the working directory of the Rstudio session will automatically be set to the directory that the .RProj file is located in and the paths of all files in this folder will be relative to this.</p>
+<p>The <code>.Rproj</code> file can be shared along with the rest of the research project files meaning that others users can easily open the Project to have the same working directory removing the need for those troublesome <code>setwd()</code> lines.</p>
+<section id="sec-creating-projects" class="level3">
+<h3 class="anchored" data-anchor-id="sec-creating-projects">Creating and opening projects</h3>
+<p>Creating an Rstudio project is as simple as using <em>File &gt; New Project</em> in the top left and then choosing between creating the Project in a new or existing directory:</p>
+<p>There are several ways to open a Projects:</p>
+<ol type="1">
+<li>Using <em>File &gt; Open Project</em> in the top left of Rstudio.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/File_open_project.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="assets/images/File_open_project.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>Using the drop down menu in the top-right of the Rstudio session.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Open_project_right.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="assets/images/Open_project_right.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>Outside of R by double clicking on the <code>.Rproj</code> file in the folder.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Open_project_explorer.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="assets/images/Open_project_explorer.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+</section>
+<section id="sec-rprofile" class="level3">
+<h3 class="anchored" data-anchor-id="sec-rprofile">Utilising project specific <code>.Rprofile</code>’s</h3>
+<p>Another useful feature of Rstudio projects is the ability to store project-specific settings using the <code>.Rprofile</code> file which controls the initialisation behaviour of the R session when the project is opened. A useful application of this for reproducible research projects is automatically open a particular script, for example a master script that runs all the code in the project (which is a concept that will discussed under <a href="@sec-workflow-decomposition">workflow decomposition</a>).</p>
+<p>To do this the contents of your <code>.Rprofile</code> file would like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setHook</span>(<span class="st">"rstudio.sessionInit"</span>, <span class="cf">function</span>(newSession) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (newSession)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Open the script specificed by the path</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    rstudioapi<span class="sc">::</span><span class="fu">navigateToFile</span>(<span class="st">'scripts/script_to_open.R'</span>, <span class="at">line =</span> <span class="sc">-</span><span class="dv">1</span>L, <span class="at">column =</span> <span class="sc">-</span><span class="dv">1</span>L)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>}, <span class="at">action =</span> <span class="st">"append"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The easiest way to create and edit <code>.Rprofile</code> files is to use the functions from the package <a href="https://usethis.r-lib.org/"><code>usethis</code></a>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Note the use of scope = "project" to create a project specific .Rprofile</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">edit_r_profile</span>(<span class="at">scope =</span> <span class="st">"project"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
-<section id="research-projects-with-r" class="level1">
-<h1>Research projects with R</h1>
+<section id="sec-environment-management" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sec-environment-management">Environment management</h2>
+<p>These lines of code are also probably familiar from the beginning of many an R script:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>But what is wrong with these lines?</p>
+<p>Well firstly, there is no indication of what version of the package is to be installed and hence if the code installing this package is old it may not work with the most recent version of the package (This is less of a problem for well established packages like the Tidyverse but for less common packages, that may see large changes between versions, it could be substantial).</p>
+<p>Secondly, having the user install an unspecified version of a package could also cause dependency conflicts with other packages required by the code. This is because almost all packages have some form of dependency (i.e.&nbsp;they use the functionality of) on other packages. This is shown aptly by the image below which, while out-dated now, showed that in 2014 to install the 7 most popular R packages at the time would actually install 63 packages in total when considering their dependencies.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/package_dependencies_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Package dependencies of popular R package [@devries2014]"><img src="assets/images/package_dependencies_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" alt="Package dependencies of popular R package [2]"></a></p>
+</figure>
+</div>
+<figcaption>Package dependencies of popular R package <span class="citation" data-cites="devries2014">[<a href="#ref-devries2014" role="doc-biblioref">2</a>]</span></figcaption>
+<div class="no-row-height column-margin column-container"><div id="ref-devries2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Vries A de (2014) <a href="https://blog.revolutionanalytics.com/2014/07/revisiting-package-dependencies.html">Revisiting package dependencies</a></div>
+</div></div></figure>
+</div>
+<p>However the problem is bigger than just packages because when your code runs it is also utilising:</p>
+<ul>
+<li><p>A specific version of R</p></li>
+<li><p>A specific operating system</p></li>
+<li><p>Specific versions of system dependencies, i.e.&nbsp;other software in other languages that R packages themselves utilise e.g GDAL for spatial analysis packages like <code>terra</code>.</p></li>
+</ul>
+<p>All of these things together make up what is known as the ‘environment’ of your code. Hence the process of documenting and managing this environment to is ensure that your code is reproducible (i.e.&nbsp;it not only runs but also consistently produces the same results).</p>
+<p>There are different approaches to environment management that differ in their complexity and hence maybe suited to some projects and not others. For the purpose of this workshop we will focus on what we have found is one of the most user-friendly ways to manage your <em>package environment</em> (caveat that will be discussed) in R which is the package <code>renv</code>. Below we will introduce this package in more detail as it will form a central part of the <a href="@sec-workflows">three workflows for reproducibility</a> that we present.</p>
+<section id="creating-reproducible-environments-with-renv" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="creating-reproducible-environments-with-renv">Creating reproducible environments with <code>renv</code></h3>
+<p>As mentioned above <a href="https://rstudio.github.io/renv/articles/renv.html"><code>renv</code></a> is an R package that helps you create reproducible environments for your R projects by not only documenting your package environment but also providing functionality to re-create it.</p>
+<p>It does this by creating <strong>project specific libraries</strong> (i.e.&nbsp;directories: <code>renv/library</code>) which contain all the packages used by your project. This is different from the default approach to package usage and installation whereby all packages are stored in a single library on your machine (system library). Having separate project libraries means “that different projects can use different versions of packages and installing, updating, or removing packages in one project doesn’t affect any other project.” <span class="citation" data-cites="renv">[<a href="#ref-renv" role="doc-biblioref">3</a>]</span>. In order to make sure that your project uses the project library everytime it is opened <code>renv</code> utilises the functionality of <a href="@sec-rprofile"><code>.Rprofile's</code></a> to set the project library as the default library.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-renv" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Ushey K, Wickham H (2024) <a href="https://CRAN.R-project.org/package=renv">Renv: Project environments</a></div>
+</div></div><p>Another key process of renv is to create project specific <strong>lockfiles</strong> (<code>renv.lock</code>) which contain sufficient metadata about each package in the project library so that it can be re-installed on a new machine.</p>
+<p>As alluded to, renv does a great job of managing your packages but is not intended to manage other aspects of your environment such as: tracking your version of R or your operating system. This is why if you want ‘bullet-proof’ reproducibility renv needs to be used alongside other approaches such as containerization which is the <a href="@sec-docker_workflow">3rd and most complex workflow</a> we will discuss.</p>
 </section>
-<section id="workflows-for-reproducibility" class="level1">
-<h1>3 workflows for Reproducibility</h1>
-<!--{{< include contents/Zenodo_workflow.qmd >}}-->
-<!--{{< include contents/Docker_workflow.qmd >}}-->
-<!--{{< include contents/Git_workflow.qmd >}}-->
 </section>
-<section id="quarto" class="level1">
-<h1>Quarto</h1>
+<section id="sec-writing-clean-code" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sec-writing-clean-code">Writing clean code</h2>
+<p>The notion of writing ‘clean’ code can be daunting, especially for those new to programming. However, the most important thing to bear in mind is that there is no objective measure that makes code ‘clean’ vs.&nbsp;‘un-clean’, rather we should of think ‘clean’ coding as the pursuit of making your code easier to read, understand and maintain. Also while we should aspire to writing clean code, it is arguably more important that it functions correctly and efficiently.</p>
+<p>The central concept of clean coding is that, like normal writing, we should follow a set of rules and conventions. For example, in English a sentence should start with a capital letter and end with a full stop. Unfortunately, in terms of writing R code there is not a single set of conventions that everyone proscribes to, instead there are numerous styles that have been outlined and the important thing is to choose a style and apply it consistently in your coding.</p>
+<p>Perhaps the two most common styles are the <a href="https://style.tidyverse.org/">Tidyverse style</a> and the <a href="https://google.github.io/styleguide/Rguide.html">Google R style</a> (Which is actually a derivative of the former). Neither style can be said to be the more correct, rather they express opinionated preferences on a series of common topics such as: Object naming, use of assignment operators, spacing, indentation, line length, parentheses placement, etc.</p>
+<p>Rather than detail all of these topics here we will focus on just on some related tips that we think are most relevant for scientific research coding, including how to automate the formatting of your code to a particular style. However, we encourage you to go through the different style guides when you have the time.</p>
+<section id="sec-script_headers" class="level3">
+<h3 class="anchored" data-anchor-id="sec-script_headers">Script headers</h3>
+<p>Starting your scripts with a consistent header containing information about it’s purpose, author/s, creation and modification dates is a great step making your workflow more understandable and hopefully reproducible. There are no rules as to what such a header should look like but this is the style I like to use:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">#############################################################################</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Script_title: Brief description of script purpose</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Notes: More detailed notes about the script and it's purpose</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Date created: </span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Author(s):</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="do">#############################################################################</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To save time inserting this header into new scripts you use Rstudio’s <a href="https://docs.posit.co/ide/user/ide/guide/productivity/snippets.html"><strong>Code snippets</strong></a> feature. Code snippets are simply text macros that quickly insert a section of code using a short keyword.</p>
+<p>To create your own Code snippet go to <em>Tools &gt; Global Options &gt; Code &gt; Edit Snippets</em> and then add a new snippet with your code below it:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Code_snippet_add.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="assets/images/Code_snippet_add.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<p>To use a code snippet simply start typing the keyword in the script and the auto-completion list will appear then press <code>Tab</code> and the code section will be inserted:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Code_snippet_completion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="assets/images/Code_snippet_completion.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+</section>
+<section id="sec-code_sections" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sec-code_sections">Code sections</h3>
+<p>As you may already know braced (<code>{}</code>) sections of code (i.e.&nbsp;function definitions, conditional blocks, etc.) can be folded to hide their contents in RStudio by clicking on the small triangle in the left margin.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/code_section_sequential.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="assets/images/code_section_sequential.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<p>However, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis (<a href="@sec-workflow-decomposition">discussed in more detail later</a>). In this regard, another good tip is to give the resulting sections sequential alphabetical or numerical Pre-fixes. Code sections are created by inserting a comment line that contains at least four trailing dashes (<code>-</code>), equal signs (<code>=</code>), or pound signs (<code>#</code>):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Section One ---------------------------------</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Section Two =================================</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Section Three #############################</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Alternatively you can use the <em>Code &gt; Insert Section</em> command.</p>
+<p>To navigate between code sections:</p>
+<ul>
+<li>Use the <strong>Jump To</strong> menu available at the bottom of the editor<span class="citation" data-cites="positsupport2024">[<a href="#ref-positsupport2024" role="doc-biblioref">4</a>]</span></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="ref-positsupport2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Posit Support (2024) <a href="https://support.posit.co/hc/en-us/articles/200484568-Code-Folding-and-Sections-in-the-RStudio-IDE">Code folding and sections in the RStudio IDE</a></div>
+</div></div><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/code_section_jumpto.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="assets/images/code_section_jumpto.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+<ul>
+<li>Use the document outline pane in the top right corner of the source pane</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/code_section_documentpane.dark.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="assets/images/code_section_documentpane.dark.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="automating-the-styling-of-your-code" class="level3">
+<h3 class="anchored" data-anchor-id="automating-the-styling-of-your-code">Automating the styling of your code</h3>
+<p>There are two R packages that are very helpful in terms of ensuring your code confirms to a consistent style: <a href="https://lintr.r-lib.org/"><code>lintr</code></a> and <a href="https://styler.r-lib.org/"><code>styler</code></a>.</p>
+<ul>
+<li><code>lintr</code> checks your code for common style issues and potential programming errors then presents them to you to correct, think of it like doing a ‘spellcheck’ on a written document.</li>
+<li><code>styler</code> is more <em>active</em> in the sense that it automatically format’s your code to a particular style, the default of which is the tidyverse style.</li>
+</ul>
+<p>To use lintr and styler you call their functions like any package but styler can also be used through the <strong>Rstudio Addins</strong> menu below the Navigation bar as shown in this gif:</p>
+<p><img src="https://raw.githubusercontent.com/lorenzwalthert/some_raw_data/master/styler_0.1.gif" width="50%"></p>
+<p>Another very useful feature of both packages is that they can be used as part of a continuous integration (CI) workflow using a version control application like Git. This is a topic that we will cover as part of our <a href="@sec-git_workflow">Version control with Git</a> workflow but what it means is that the styler and lintr functions are run automatically when you push your code to a remote repository.</p>
+</section>
+</section>
+<section id="sec-workflow-decomposition" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sec-workflow-decomposition">Workflow decomposition</h2>
+<p>In computer sciences workflow decomposition refers to the structuring or compartmentalising of your code into seperate logical parts that makes it easier to maintain <span class="citation" data-cites="decompos2024">[<a href="#ref-decompos2024" role="doc-biblioref">5</a>]</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-decompos2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">(2024) <a href="https://en.wikipedia.org/w/index.php?title=Decomposition_(computer_science)&amp;oldid=1225228761">Decomposition (computer science)</a></div>
+</div></div><p>In terms of coding scientific research projects many of us probably already instinctively do decomposition to some degree by splitting typical processes such as data preparation, statistical modelling, analysis of results and producing final visualizations.</p>
+<p>However this is not always realized in the most understandable way, for example we may have seperate scripts with logical sounding names like: <code>Data_prep.R</code> and <code>Data_analysis.R</code> but can others really be expected to know exactly which order these must be run in, or indeed whether they even need to be run sequentially at all?</p>
+<p>A good 1st step to remedying this is to give your scripts sequential numeric tags in their names, e.g.&nbsp;<code>01_Data_prep.R</code>, <code>02_Data_analysis.R</code>. This will also ensure that they are presented in numerical order when placed in a designated directory <a href="@sec-structuring">Structuring your project directory</a> and can be explicitly described in your <a href="@sec-documentation">project documentation</a>.</p>
+<p>But you can take this to the next level by creating a <em>Master</em> script that sources your other scripts in sequence (think of them as <em>sub-scripts</em>) so that users of your code need only run one script. To do this is as simple as creating the master script as you would any normal R script (<em>File &gt; New File &gt; R script</em>) and then using the <code>base::source()</code> function to run the sub-scripts:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">#############################################################################</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Master_script: Run steps of research project in order</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="do">##</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Date created: 30/7/2024</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Author(s): Jane Doe</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="do">#############################################################################</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="do">### A- Prepare dependent variable data</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">#Prepare LULC data</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"Scripts/Preparation/Dep_var_dat_prep.R"</span>, <span class="at">local =</span> scripting_env)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="do">### B- Prepare independent variable data</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Prepare predictor data</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"Scripts/Preparation/Ind_var_data_prep.R"</span>, <span class="at">local =</span> scripting_env)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="do">### C- Perform statisical modelling</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"Scripts/Modelling/Fit_stat_models.R"</span>, <span class="at">local =</span> scripting_env)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>As you can see in this example code I have also made use of a <a href="@sec-script_headers">script header</a> and <a href="@sec-code_sections">code sections</a>, that were previously discussed, to make the division of sub-processes even clearer. Another advantage of this approach is that all sub-scripts can utilise the same environment (defined by the <code>source(local= )</code> argument) which means that each individual script does not need to load packages or paths as objects.</p>
+<p>Finally, within your sub-scripts processes should also be seperated into code sections and ideally any repetitive tasks should be performed with custom functions which again are contained within their own files.</p>
+<p>Following this approach you end up with a workflow that will look something like this:</p>
+<p><a href="assets/images/workflow_decomposition.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="assets/images/workflow_decomposition.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>The benefit of this hierarchical approach to structuring is that it is not only easier to debug and maintain individual processes but it is also more amenable to adding new processes.</p>
+</section>
+<section id="sec-structuring" class="level2">
+<h2 class="anchored" data-anchor-id="sec-structuring">Structuring your project directory</h2>
+<p>Similar to having clean code, having a clean project directory that has well-organised sub-directories goes a long way towards making your projects code easier to understand for others. For software development there are numerous sets of conventions for directories structures although these are not always so applicable for scientific research projects. However we can borrow some basic principles, try to use: - Use logical naming - Stick to a consistent style, i.e.&nbsp;use of captialisation and seperators - Make use of nested sub-directories e.g <code>data/raw/climatic/precipitation/2020/precip_2020.rds</code> vs.&nbsp;<code>data/precip_2020_raw.rds</code>. This is very helpful when it comes to programatically constructing file paths especially in projects with a lot of data.</p>
+<p>As an example my go-to project directory structure looks like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>└── my_project</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    ├── data <span class="co"># The research data</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    │   ├── raw</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    │   └── processed</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    ├── output <span class="co"># Storing results</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    ├── publication <span class="co"># Containing the academic manuscript of the project</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    ├── src <span class="co"># For all files that perform operations in the project</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    │   ├── scripts</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    │   └── functions</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    └── tools <span class="co"># Auxilliary files and settings</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Rather than manually create this directory structure everytime you start a new project, save yourself some time and automate it by using Rstudio’s <a href="https://docs.posit.co/ide/user/ide/guide/productivity/project-templates.html"><strong>Project Templates</strong></a> functionality. This allows you to select a custom template as an option when creating a new <a href="@sec-creating-projects">Rstudio project</a> through the New project wizard (<em>File &gt; New Project &gt; New Directory &gt; New Project Template</em>).</p>
+<p>To implement this even as an intermediate R user is fairly labor intensive as your custom project directory template needs to be contained within an R-package, in order to be available in the wizard. However, quite a few templates with directory structures appropriate for scientific research projects have been created by others:</p>
+<ul>
+<li><p><a href="https://github.com/benmarwick/rrtools"><code>rrtools</code></a></p></li>
+<li><p><a href="http://projecttemplate.net/"><code>ProjectTemplate</code></a></p></li>
+<li><p><a href="https://pakillo.github.io/template/"><code>template</code></a></p></li>
+<li><p><a href="https://dreamrs.github.io/addinit/"><code>addinit</code></a> (Not a template but an interactive shiny add-in for project creation)</p></li>
+</ul>
+</section>
+<section id="sec-documentation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sec-documentation">Project documentation</h2>
+<p>As an example of why documentation is important think about if you bought a new table from Ikea only to excitedly rip open the box and find that there are no instructions for how to assemble it. Sure, you know what a table is supposedly to look like and given enough time you will end up with something that will probably be mostly right but maybe it’s missing small details. Also it will probably take you just as long to take it apart in 5 years time. Well, working with undocumented code for research projects is similar except a lot more complicated!</p>
+<p>Writing comprehensive documentation that covers all aspects of our projects is time-consuming which is why it is often neglected. For example, there are a lot of different metadata conventions that exist that you could apply. However, learning and adhering strictly to these can be overwhelming and possibly lead to the opposite effect i.e.&nbsp;they are not simple for others to understand either.</p>
+<p>In response to this there has been a movement in the R research community to adopt the <em>research as package</em> approach, which, as the name suggests, involves creating your project as an R-package which has a strict set of conventions for documentation <span class="citation" data-cites="marwick2018">[<a href="#ref-marwick2018" role="doc-biblioref">6</a>]</span>. This is a viable approach for those who are familiar with R-packages but is arguably not the best for all projects and users.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-marwick2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Marwick B, Boettiger C, Mullen L (2018) Packaging data analytical work reproducibly using r (and friends). The American Statistician 72(1):80–88. <a href="https://doi.org/10.1080/00031305.2017.1375986">https://doi.org/10.1080/00031305.2017.1375986</a></div>
+</div></div><p>Instead, we would suggest to follow the maxim of <em>not letting the perfect be the enemy of the good</em> and to focus on these key areas:</p>
+<ul>
+<li><p><strong>Provide adequate in-script commentary</strong>: This is perhaps contentious for those from a software development community, but given the choice I would rather have to read through a script with too many comments than one with too few. However remember that comments should be used to explain the purpose of the code, not what the code is doing. In line with this use <a href="@sec-script_headers">script headers</a>.</p></li>
+<li><p><strong>Document your functions with <code>roxygen</code> skeletons</strong>:</p></li>
+<li><p><strong>Include a <code>README</code> file</strong>: README files are where you should document your project at the macro-level i.e.&nbsp;what it is about and how it is supposed to work.</p></li>
+</ul>
+<p>The latter of these two are more detailed so we have provided further information and tips in sections below.</p>
+<section id="sec-roxygen" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sec-roxygen">Function documentation with <code>roxygen2</code></h3>
+<p>Base R provides a standard way of documenting a package where each function is documented in an <code>.Rd</code> file (R documentation). This documentation uses a custom syntax to detail key aspects of the functions such as their input parameters, outputs and any package dependencies <span class="citation" data-cites="wickham2024">[<a href="#ref-wickham2024" role="doc-biblioref">7</a>]</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-wickham2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Wickham H, Bryan J (2024) <a href="https://r-pkgs.org/">R packages (2e)</a>, 2nd Edition</div>
+</div></div><p>In the case of many research projects you will not be creating a package however it is still useful to apply this documentation style to your functions as it is a good way to make them understandable and easier to modify by others. For example, having clear information about the object (e.g.&nbsp;a vector or data.frame) that a function accepts, saves others time in guessing what the function is expecting if they are trying to use new data.</p>
+<p>However, rather than manually writing <code>.Rd</code> files, we can use the <code>roxygen2</code> package to automatically generate these files from a block of comments that are added to the top of the function scripts. To add this comment block, place your cursor inside a function you want to document and press <code>Ctrl + Shift + R</code> (or <code>Cmd + Shift + R</code> on Mac) or you can go to <em>code tools &gt; insert roxygen skeleton</em> (code tools is represented by the wand icon in the top row of the source pane). As you can see in this gif below, when you insert the roxygen block it will already contain the names of the function names, its arguments and any returns and the function name. You can then fill in the rest of the information, such as the description and dependencies etc. for a guide to these other fields see the <a href="https://roxygen2.r-lib.org/articles/rd.html">roxygen2 documentation</a>.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><a href="https://jozef.io/img/r102-01-add-roxy-skeleton.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Inserting roxygen block [@hajnala2018]"><img src="https://jozef.io/img/r102-01-add-roxy-skeleton.gif" class="img-fluid figure-img" style="width:50.0%" alt="Inserting roxygen block"></a></p>
+<figcaption>Inserting roxygen block <span class="citation" data-cites="hajnala2018">[<a href="#ref-hajnala2018" role="doc-biblioref">8</a>]</span></figcaption>
+<div class="no-row-height column-margin column-container"><div id="ref-hajnala2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Hajnala J (2018) <a href="https://jozef.io/r102-addin-roxytags/">RStudio:addins part 2 - roxygen documentation formatting made easy - jozef’s rblog</a></div>
+</div></div></figure>
+</div>
+</section>
+<section id="tips-for-readme-writing" class="level3">
+<h3 class="anchored" data-anchor-id="tips-for-readme-writing">Tips for README writing</h3>
+<p>If you look at the source code of R packages or projects that use R in Github repositories you will see that they all contain <code>README.md</code> files. This is the markdown format of the README file and is the most common format for README files in R projects. These files are often accompanied by the corresponding file <code>README.Rmd</code> which generates the <code>README.md</code> file. Markdown format is used for README’s because it can be read by many programs and rendered in a variety of formats. In this sense writing the README for your project in markdown makes sense and there tools available to help you do this such as the <code>usethis</code> package which has a function <a href="https://usethis.r-lib.org/reference/use_readme_rmd.html"><code>use_readme_rmd()</code></a> that will create a <code>README.Rmd</code> file for you. However, depending on who you anticipate using your project you may also want to create your README as a raw text file (<code>.txt</code>) which may be a more familiar format for some users and again can be opened by many different programs.</p>
+<p>Again there is not a single standardised format for what should be included in your README file but here is an example of a README file that was written for one of the authors code/data upload alongside a publication: <a href="assets/README_demo.txt">README.txt</a></p>
+<p>You will see that one of the things this README includes is a tree diagram which shows the directory structure of the project right down to the file level. This is a useful way to give an overview of what users should find included in the project and then explanatory notes can be added to explain the purpose of each file or directory. Such a diagram can be easily generated using the <code>fs</code> package:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"fs"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fs)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#vector path of the target directory to make a file tree from</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>Target_dir <span class="ot">&lt;-</span> <span class="st">"YOUR DIR"</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#produce tree diagram of directory sub-dirs and files and save output using capture.ouput from base R utils.</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">capture.output</span>(<span class="fu">dir_tree</span>(Target_dir), <span class="at">file=</span> <span class="st">'Dir_tree_output.txt'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2"><!-- Presentation content --></h2>
+<hr>
+</section>
+</section>
+<section id="sec-workflows" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Workflows for Reproducibility</h1>
+<p>For this workshop we will outline three different workflows for creating reproducible research projects with R combined with other tools. We have named these workflows as follows: 1. Rstudio project to Zenodo pipeline 2. Containerization with Docker 3. Version control with Git</p>
+<p>These workflows are inter-related in the sense that 2. and 3. build upon elements of the first and indeed the techniques of the latter workflows can also be combined together. The workflows differ in the level of reproducibility they ensure but the trade-off for better reproducibility is increased complexity. As such we would suggest that the most reproducible workflow may not always be the most appropriate to implement dependent on the needs of your research project and the capabilities of the collaborators involved.</p>
+<p>** TO DO?: Add a table to compare the workflows **</p>
+<p>Of course, these workflows are by no-means the only way of doing things and indeed we would actively encourage you to expand upon them in developing your own preferred approach.</p>
+<section id="sec-zenodo_workflow" class="level2">
+<h2 class="anchored" data-anchor-id="sec-zenodo_workflow">Rstudio project to Zenodo pipeline</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/project_zenodo_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="assets/images/project_zenodo_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+</figure>
+</div>
+</section>
+<section id="use-renv-to-create-project-specific-environments-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="use-renv-to-create-project-specific-environments-in-r">Use renv to create project-specific environments in R</h2>
+<section id="setting-up-a-project-with-renv" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-a-project-with-renv">Setting Up a Project with renv</h3>
+<ul>
+<li>Initialize renv in your project:
+<ul>
+<li>Use renv::init() to initialize renv in your project directory.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># initialize the project environment</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>This command creates an isolated environment for your project, and ensures that all package dependencies are managed within that environment. When you run renv::init(), several important files and directories are created:
+<ul>
+<li>renv.lock, a lock file that records the exact versions of all packages installed and used in your project. This file is crucial for replicating the environment on other machines or by other people.</li>
+<li>.Rprofile, this file is automatically run every time you start R in your project, and renv uses it to configure your R session to use the packages in your project library.</li>
+</ul></li>
+<li>renv/ directory, a directory that stores the local library of packages specific to your project. It also contains metadata and configuration files that renv uses to manage the environment.</li>
+<li>Other directories and files are also created. To share an R environment, renv.lock, .Rprofile, renv/settings.json and renv/activate.R must be provided.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="managing-packages-with-renv" class="level2">
+<h2 class="anchored" data-anchor-id="managing-packages-with-renv">Managing Packages with renv</h2>
+<ul>
+<li>Install packages within renv
+<ul>
+<li>Install packages as usual. Then running renv::snapshot() will include the library in the lock file if it is loaded in a script located within the project folder</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install a library, e.g dplyr</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># load the package</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># create the snapshot</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ul>
+</section>
+<section id="reuse-an-existing-renv-project-environment" class="level2">
+<h2 class="anchored" data-anchor-id="reuse-an-existing-renv-project-environment">Reuse an existing renv project environment:</h2>
+<ul>
+<li>Get all the packages used in the existing environment installed on your computer
+<ul>
+<li>Copy the project folder to your machine.</li>
+<li>Run renv::restore() in the root folder of the project where the .lock file is located. This will replicate the environment from an existing lockfile and install all packages with the correct versions.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install packages used in the environment</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ul>
+</section>
+</section>
+<section id="publish-your-work-with-zenodo-to-make-it-accessible-and-citable" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Publish your work with Zenodo to make it accessible and citable</h1>
+<section id="install-zen4r-to-access-zenodo-through-r" class="level2">
+<h2 class="anchored" data-anchor-id="install-zen4r-to-access-zenodo-through-r">Install zen4R to access Zenodo through r</h2>
+<ul>
+<li>Zenodo can be accessed with r library zen4R to upload, edit, publish and download data.
+<ul>
+<li>Install zen4R library with the following code:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install dependency "remotes"</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#install zen4R</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"eblondel/zen4R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ul>
+</section>
+<section id="create-a-new-zenodo-record" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-new-zenodo-record">Create a new Zenodo record</h2>
+<ul>
+<li><p>A zenodo record includes metadata, data and a DOI which is automatically generated by Zenodo for all uploads.</p>
+<ul>
+<li>Go to https://zenodo.org/account/settings/applications/. This requires a Zenodo account. Sign up if necessary or log in.</li>
+<li>Once you’re logged in create a new “Personal access token”.</li>
+<li>Then run the following code in r to c create a new record</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zen4R)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create manager to access your Zenodo repository</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>zenodo <span class="ot">&lt;-</span> ZenodoManager<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">token =</span> <span class="st">"your_token"</span>, </span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">logger =</span> <span class="st">"INFO"</span> </span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new empty record</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> ZenodoRecord<span class="sc">$</span><span class="fu">new</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>The types of metadata that can be included in a Zenodo record are vast. A full list can be found in the documentation at https://developers.zenodo.org/#representation. The code below gives some examples:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"zen4R"</span>) <span class="co"># title of the record</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalTitle</span>(<span class="st">"This is an alternative title"</span>, <span class="at">type =</span> <span class="st">"alternative-title"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setDescription</span>(<span class="st">"Interface to 'Zenodo' REST API"</span>) <span class="co">#description</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalDescription</span>(<span class="st">"This is an abstract"</span>, <span class="at">type =</span> <span class="st">"abstract"</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setPublicationDate</span>(<span class="st">"2024-09-16"</span>) <span class="co">#Format YYYY-MM-DD</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setResourceType</span>(<span class="st">"dataset"</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addCreator</span>(<span class="at">firstname =</span> <span class="st">"Manuel"</span>, <span class="at">lastname =</span> <span class="st">"Kurmann"</span>, <span class="at">role =</span> <span class="st">"datamanager"</span>, <span class="at">orcid =</span> <span class="st">"0000-0001-8411-3966"</span>)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setKeywords</span>(<span class="fu">c</span>(<span class="st">"R"</span>,<span class="st">"dataset"</span>)) <span class="co">#For filtering</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addReference</span>(<span class="st">"Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API"</span>)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setPublisher</span>(<span class="st">"CRAN"</span>) <span class="co">#Publisher</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>A record can be deposited on Zenodo before it is published. This will add the record to your account without making it public yet. A deposited record can still be edited or deleted. If you prefer a graphical interface, you can also edit the record on the Zenodo website.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># deposit record</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># add data to the record</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>zenodo<span class="sc">$</span><span class="fu">uploadFile</span>(<span class="st">"path/to/your/file"</span>, <span class="at">record =</span> myrec)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># publish record</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">publishRecord</span>(myrec<span class="sc">$</span>id)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co"># delete record if you want to start over</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>zenodo<span class="sc">$</span><span class="fu">deleteRecord</span>(myrec<span class="sc">$</span>id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ul>
+</section>
+<section id="edit-published-zenodo-records" class="level2">
+<h2 class="anchored" data-anchor-id="edit-published-zenodo-records">Edit published Zenodo records</h2>
+<ul>
+<li><p>It is also possible to edit or update the metadata of published records.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get your record by metadata query, e.g. by title</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:zen4R'</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># get depositions creates a list, access first element</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># edit metadata</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">editRecord</span>(myrec<span class="sc">$</span>id)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"zen4R 2.0"</span>)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co">#redeposit and publish the edited record</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>It is not possible to edit the data attached to a published record. However, it is possible to upload an updated version.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get your record by metadata query, e.g. by title</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:zen4R 2.0'</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># get depositions creates a list, access first element</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># edit data, delete_latest_files = TRUE deletes data of previous version,</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecordVersion</span>(myrec, <span class="at">delete_latest_files =</span> <span class="cn">TRUE</span>, <span class="at">files =</span> <span class="st">"path/to/your/new/file"</span>, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ul>
+</section>
+<section id="sec-docker_workflow" class="level2">
+<h2 class="anchored" data-anchor-id="sec-docker_workflow">Containerisation with Docker</h2>
+<!-- Web content -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Docker_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="assets/images/Docker_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+</figure>
+</div>
+<p><strong>The title of this workflow raises two questions, the first being: what is containerization?</strong></p>
+<p>Simply put containerization is the process of bundling code along with all of it’s dependencies, i.e.&nbsp;all the components we discussed as making up the <a href="@sec-environment-management">environment</a>, including the operating system, software libraries (packages), and other system software. The fact everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service. This also makes containerization something of a gold standard for reproducibility as the entire environment is explicitly re-produced.</p>
+<p><strong>and the second: what is Docker?</strong></p>
+<p><a href="https://www.docker.com/">Docker</a> is an open-source, and the most popular, platform for containerization. Before we dive into a practical example using Docker for research projects with R it is important to introduce some three key terms that we will come across:</p>
+<ul>
+<li><p><code>Dockerfile</code>: The first step in the containerization process, they are a straightforward text file containing a collection of commands or procedures to create a new Docker Image. In this sense we can consider a Dockerfile are the source code of Docker Image. Importantly, Dockerfiles typically start from a base image, which is a existing Docker Image that your image is extending.</p></li>
+<li><p><code>Docker Image</code>: A read-only file that contains the instructions for creating a Docker Container. Think of an image as the blueprint of what will be in a container when it is running. Docker Images can be shared via <a href="https://hub.docker.com/">Dockerhub</a>, so that they can be used by others.</p></li>
+<li><p><code>Docker Container</code>: Is an actual running instance of a Docker image. It runs completely isolated from the host environment by default and only accesses host files (i.e.&nbsp;data) if it has been configured to do so. It is possible to create multiple containers simultaneously from the same Docker Image, and each container can be started, stopped, moved, and deleted independently of the others.</p></li>
+</ul>
+<p>The graphic below show the relationships between these components including the central commands of Docker that connect them <code>build</code> and <code>run</code>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/docker_explainer.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="assets/images/docker_explainer.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+</figure>
+</div>
+<section id="using-docker-with-r" class="level3">
+<h3 class="anchored" data-anchor-id="using-docker-with-r">Using Docker with R</h3>
+<p>So to create a <code>Docker Image</code> to containerize our R research projects we need to start by creating a <code>Dockerfile</code> and, as mentioned above, this should start with a base image. In our case this base image must logically include R and RStudio (if we want to utilise the RStudio Projects features).</p>
+<p>Fortunately there is a project that specifically catalogs and manages Docker Images for R projects: <a href="https://rocker-project.org/"><code>Rocker</code></a>. The images available through the Rocker project not only include different versions of R and RStudio but also images containing collections of R packages for specific purposes (e.g.&nbsp;tidyverse for data wrangling and visualisation, geospatial packages etc.).</p>
+<p>In terms of actually creating the <code>Dockerfile</code> for our R project, this can be done manually (See a good R-focused tutorial<a href="https://colinfay.me/docker-r-reproducibility/">here</a>), however there are also R packages that can help with this process such as <a href="https://thinkr-open.github.io/dockerfiler/"><code>dockerfiler</code></a> and the <code>[rrtools</code>](https://github.com/benmarwick/rrtools) package.</p>
+<p>For our workflow we will use the <code>dockerfiler</code> package. - Main function of the package is <code>dockerfile_build()</code> which creates a Dockerfile and builds a Docker image from it.</p>
+</section>
+<section id="docker-with-renv" class="level3">
+<h3 class="anchored" data-anchor-id="docker-with-renv">Docker with renv</h3>
+</section>
+<section id="creating-docker-image" class="level3">
+<h3 class="anchored" data-anchor-id="creating-docker-image">Creating docker image</h3>
+</section>
+<section id="running-docker-container" class="level3">
+<h3 class="anchored" data-anchor-id="running-docker-container">Running docker container</h3>
+<p>https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf</p>
+<p>https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/</p>
+<p>stevedore package for pulling images from Dockerhub using the Docker API https://richfitz.github.io/stevedore/</p>
+</section>
+</section>
+<section id="sec-git_workflow" class="level2">
+<h2 class="anchored" data-anchor-id="sec-git_workflow">Version control with Git</h2>
+<p><a href="assets/images/version_control_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="assets/images/version_control_workflow.png" class="img-fluid quarto-figure quarto-figure-center" style="width:70.0%"></a> <!--{{< include contents/Git_workflow.qmd >}}--></p>
+</section>
+</section>
+<section id="sec-Quarto" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Quarto</h1>
+<!-- Web content -->
 <section id="a-brief-introduction-to-quarto" class="level2">
 <h2 class="anchored" data-anchor-id="a-brief-introduction-to-quarto">A brief introduction to Quarto</h2>
-<p>Quatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.</p>
+<p>Quatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.</p>
 <section id="quarto-allows-you-to" class="level4">
 <h4 class="anchored" data-anchor-id="quarto-allows-you-to">Quarto allows you to:</h4>
 <ul>
@@ -274,43 +1017,53 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <section id="visualize-and-publish-interactive-plots-using-html-widgets" class="level4">
 <h4 class="anchored" data-anchor-id="visualize-and-publish-interactive-plots-using-html-widgets">1. Visualize and publish interactive plots using html widgets</h4>
 <div class="cell">
-<div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-52bdbf9d3a3b963142e7" style="width:100%;height:454px;"></div>
-<script type="application/json" data-for="htmlwidget-52bdbf9d3a3b963142e7">{"x":{"data":[{"orientation":"v","width":[0.11250000000000004,0.11249999999999982,0.11249999999999982,0.11249999999999982,0.11250000000000071],"base":[0,0,0,0,0],"x":[0.60625000000000007,1.6062500000000002,2.6062500000000002,3.6062500000000002,4.6062500000000002],"y":[210,96,84,205,146],"text":["count:  210<br />cut: Fair<br />clarity: I1","count:   96<br />cut: Good<br />clarity: I1","count:   84<br />cut: Very Good<br />clarity: I1","count:  205<br />cut: Premium<br />clarity: I1","count:  146<br />cut: Ideal<br />clarity: I1"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(68,1,84,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"I1","legendgroup":"I1","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.11250000000000004,0.11249999999999982,0.11249999999999982,0.11249999999999982,0.11250000000000071],"base":[0,0,0,0,0],"x":[0.71875,1.71875,2.71875,3.71875,4.71875],"y":[466,1081,2100,2949,2598],"text":["count:  466<br />cut: Fair<br />clarity: SI2","count: 1081<br />cut: Good<br />clarity: SI2","count: 2100<br />cut: Very Good<br />clarity: SI2","count: 2949<br />cut: Premium<br />clarity: SI2","count: 2598<br />cut: Ideal<br />clarity: SI2"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(70,51,126,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"SI2","legendgroup":"SI2","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.11250000000000004,0.11249999999999982,0.11249999999999982,0.11249999999999982,0.11250000000000071],"base":[0,0,0,0,0],"x":[0.83125000000000004,1.83125,2.8312499999999998,3.8312499999999998,4.8312499999999998],"y":[408,1560,3240,3575,4282],"text":["count:  408<br />cut: Fair<br />clarity: SI1","count: 1560<br />cut: Good<br />clarity: SI1","count: 3240<br />cut: Very Good<br />clarity: SI1","count: 3575<br />cut: Premium<br />clarity: SI1","count: 4282<br />cut: Ideal<br />clarity: SI1"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(54,92,141,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"SI1","legendgroup":"SI1","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.11250000000000004,0.11249999999999982,0.11249999999999982,0.11249999999999982,0.11250000000000071],"base":[0,0,0,0,0],"x":[0.94374999999999998,1.9437500000000001,2.9437500000000001,3.9437500000000001,4.9437499999999996],"y":[261,978,2591,3357,5071],"text":["count:  261<br />cut: Fair<br />clarity: VS2","count:  978<br />cut: Good<br />clarity: VS2","count: 2591<br />cut: Very Good<br />clarity: VS2","count: 3357<br />cut: Premium<br />clarity: VS2","count: 5071<br />cut: Ideal<br />clarity: VS2"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(39,127,142,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"VS2","legendgroup":"VS2","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.11249999999999993,0.11249999999999982,0.11249999999999982,0.11250000000000071,0.11250000000000071],"base":[0,0,0,0,0],"x":[1.0562499999999999,2.0562499999999999,3.0562499999999999,4.0562500000000004,5.0562500000000004],"y":[170,648,1775,1989,3589],"text":["count:  170<br />cut: Fair<br />clarity: VS1","count:  648<br />cut: Good<br />clarity: VS1","count: 1775<br />cut: Very Good<br />clarity: VS1","count: 1989<br />cut: Premium<br />clarity: VS1","count: 3589<br />cut: Ideal<br />clarity: VS1"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(31,161,135,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"VS1","legendgroup":"VS1","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.11249999999999982,0.11249999999999982,0.11249999999999982,0.11250000000000071,0.11250000000000071],"base":[0,0,0,0,0],"x":[1.16875,2.1687500000000002,3.1687500000000002,4.1687500000000002,5.1687500000000002],"y":[69,286,1235,870,2606],"text":["count:   69<br />cut: Fair<br />clarity: VVS2","count:  286<br />cut: Good<br />clarity: VVS2","count: 1235<br />cut: Very Good<br />clarity: VVS2","count:  870<br />cut: Premium<br />clarity: VVS2","count: 2606<br />cut: Ideal<br />clarity: VVS2"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(74,193,109,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"VVS2","legendgroup":"VVS2","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.11249999999999982,0.11249999999999982,0.11249999999999982,0.11250000000000071,0.11250000000000071],"base":[0,0,0,0,0],"x":[1.28125,2.28125,3.28125,4.28125,5.28125],"y":[17,186,789,616,2047],"text":["count:   17<br />cut: Fair<br />clarity: VVS1","count:  186<br />cut: Good<br />clarity: VVS1","count:  789<br />cut: Very Good<br />clarity: VVS1","count:  616<br />cut: Premium<br />clarity: VVS1","count: 2047<br />cut: Ideal<br />clarity: VVS1"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(159,218,58,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"VVS1","legendgroup":"VVS1","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.11249999999999982,0.11249999999999982,0.11249999999999982,0.11250000000000071,0.11250000000000071],"base":[0,0,0,0,0],"x":[1.3937499999999998,2.3937499999999998,3.3937499999999998,4.3937499999999998,5.3937499999999998],"y":[9,71,268,230,1212],"text":["count:    9<br />cut: Fair<br />clarity: IF","count:   71<br />cut: Good<br />clarity: IF","count:  268<br />cut: Very Good<br />clarity: IF","count:  230<br />cut: Premium<br />clarity: IF","count: 1212<br />cut: Ideal<br />clarity: IF"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(253,231,37,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"IF","legendgroup":"IF","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.437051532941947,"r":7.3059360730593621,"b":40.391389432485333,"l":48.949771689497723},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["Fair","Good","Very Good","Premium","Ideal"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["Fair","Good","Very Good","Premium","Ideal"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"cut","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-253.55000000000001,5324.5500000000002],"tickmode":"array","ticktext":["0","1000","2000","3000","4000","5000"],"tickvals":[0,1000,2000.0000000000002,3000,4000,5000],"categoryorder":"array","categoryarray":["0","1000","2000","3000","4000","5000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"count","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"clarity","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"93b015ff72bf":{"x":{},"fill":{},"type":"bar"}},"cur_data":"93b015ff72bf","visdat":{"93b015ff72bf":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">fill =</span> clarity)) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>            <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplotly</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="create-interactive-geo-spatial-mapping-segments" class="level4">
 <h4 class="anchored" data-anchor-id="create-interactive-geo-spatial-mapping-segments">2. Create interactive geo-spatial mapping segments</h4>
 <div class="cell">
-<div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-445c55a49ac6c0be7932" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-445c55a49ac6c0be7932">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[47.376,8.548,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"ETH",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[47.376,47.376],"lng":[8.548,8.548]}},"evals":[],"jsHooks":[]}</script>
-</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span>  <span class="co"># Add default OpenStreetMap map tiles</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">lng=</span> <span class="fl">8.548</span>, <span class="at">lat=</span><span class="fl">47.376</span>, <span class="at">popup=</span><span class="st">"ETH"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="create-multi-purpose-dashboards-to-demostrate-your-research-output" class="level4">
 <h4 class="anchored" data-anchor-id="create-multi-purpose-dashboards-to-demostrate-your-research-output">3. Create multi-purpose dashboards to demostrate your research output</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p><a href="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
+<!-- Presentation content -->
 </section>
 </section>
 </section>
 </section>
-<section id="guided-excercises" class="level1">
-<h1>Guided excercises</h1>
-<section id="r-project-to-zenodo-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="r-project-to-zenodo-workflow">R project to Zenodo workflow</h2>
+<section id="sec-exercises" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Guided excercises</h1>
+<section id="sec-Rproj_zenodo_exercise" class="level2">
+<h2 class="anchored" data-anchor-id="sec-Rproj_zenodo_exercise">Rstudio project to Zenodo exercise</h2>
+</section>
+<section id="containerisation-with-docker-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="containerisation-with-docker-exercise">Containerisation with Docker exercise</h2>
+<p>In this exercise we will create a Docker container for a simple R project. The project is the same that is created in the first workflow <a href="@sec-Rproj_zenodo_exercise">exercise</a>, however to save time or in case you haven’t completed this exercise we will start with the finished output from it.</p>
+<p><br><a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download Source Code Files</b></a></p>
 </section>
 <section id="write-a-paper-with-quarto" class="level2">
 <h2 class="anchored" data-anchor-id="write-a-paper-with-quarto">Write a paper with Quarto</h2>
 </section>
 </section>
-<section id="resources" class="level1">
-<h1>Resources</h1>
+<section id="sec-resources" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Resources</h1>
+<!--{{\< include contents/resources.qmd \>}}-->
+
 
 
 </section>
@@ -357,6 +1110,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -425,13 +1205,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -466,18 +1248,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -509,11 +1280,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/blenback\.github\.io\/R-for-Reproducible-Research\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -523,8 +1333,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -536,7 +1355,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -580,6 +1522,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -605,6 +1548,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -667,13 +1636,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left"><i class="fa-regular fa-copyright" aria-label="copyright"></i> Benjamin Black, 2024<br> All content licensed under <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-sa" aria-label="creative-commons-sa"></i> <i class="fa-brands fa-creative-commons-nc" aria-label="creative-commons-nc"></i> <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">(CC BY-NC-SA 4.0)</a></div>   
+    <div class="nav-footer-left">
+<p><i class="fa-regular fa-copyright" aria-label="copyright"></i> Benjamin Black, 2024<br> All content licensed under <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-sa" aria-label="creative-commons-sa"></i> <i class="fa-brands fa-creative-commons-nc" aria-label="creative-commons-nc"></i> <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">(CC BY-NC-SA 4.0)</a></p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
-    <div class="nav-footer-right">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a><br></div>
+    <div class="nav-footer-right">
+<p>Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a><br></p>
+</div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
 
 
 

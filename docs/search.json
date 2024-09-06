@@ -1,394 +1,535 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "{width=80% fig-align:center}"
-  },
-  {
-    "objectID": "index.html#schedule",
-    "href": "index.html#schedule",
+    "objectID": "presentation.html#rstudio-projects",
+    "href": "presentation.html#rstudio-projects",
     "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
-  },
-  {
-    "objectID": "index.html#about-us",
-    "href": "index.html#about-us",
-    "title": "Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\n\n\n\nBen Black\nDoctoral Researcher\n     \n\n\n\nNivedita Harisena\nDoctoral Researcher\n     \n\n\nMaarten Van Strien\nSenior scientist"
-  },
-  {
-    "objectID": "index.html#about-us-1",
-    "href": "index.html#about-us-1",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\nNivedita Harisena"
-  },
-  {
-    "objectID": "index.html#about-us-2",
-    "href": "index.html#about-us-2",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us"
-  },
-  {
-    "objectID": "index.html#maarten-van-strien",
-    "href": "index.html#maarten-van-strien",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien"
-  },
-  {
-    "objectID": "main_dark.html",
-    "href": "main_dark.html",
-    "title": "Reproducible Research with R and Quarto: Workflows for data, projects and publications",
-    "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "main_dark.html#about-us",
-    "href": "main_dark.html#about-us",
-    "title": "Reproducible Research with R and Quarto: Workflows for data, projects and publications",
-    "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "main_dark.html#about-us-1",
-    "href": "main_dark.html#about-us-1",
-    "title": "Reproducible Research with R and Quarto: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\nNivedita Harisena"
-  },
-  {
-    "objectID": "main_dark.html#about-us-2",
-    "href": "main_dark.html#about-us-2",
-    "title": "Reproducible Research with R and Quarto: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us"
-  },
-  {
-    "objectID": "main_dark.html#maarten-van-strien",
-    "href": "main_dark.html#maarten-van-strien",
-    "title": "Reproducible Research with R and Quarto: Workflows for data, projects and publications",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien"
-  },
-  {
-    "objectID": "contents/about.html",
-    "href": "contents/about.html",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "",
-    "text": "Doctoral Researcher\n     \n\n\n\n\nDoctoral Researcher\n     \n\n\n\nSenior scientist\n     \n\n\n\n\n\n\n\nDoctoral Researcher\n     \n\n\n\n\nDoctoral Researcher\n     \n\n\n\n\nSenior scientist"
-  },
-  {
-    "objectID": "contents/about.html#about-us",
-    "href": "contents/about.html#about-us",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "",
-    "text": "Doctoral Researcher\n     \n\n\n\n\nDoctoral Researcher\n     \n\n\n\nSenior scientist\n     \n\n\n\n\n\n\n\nDoctoral Researcher\n     \n\n\n\n\nDoctoral Researcher\n     \n\n\n\n\nSenior scientist"
-  },
-  {
-    "objectID": "contents/about.html#about-us-1",
-    "href": "contents/about.html#about-us-1",
-    "title": "Reproducible Research with R and Quarto",
-    "section": "About us",
-    "text": "About us\n\nNivedita Harisena"
-  },
-  {
-    "objectID": "contents/about.html#about-us-2",
-    "href": "contents/about.html#about-us-2",
-    "title": "Reproducible Research with R and Quarto",
-    "section": "About us",
-    "text": "About us"
-  },
-  {
-    "objectID": "contents/about.html#maarten-van-strien",
-    "href": "contents/about.html#maarten-van-strien",
-    "title": "Reproducible Research with R and Quarto",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien",
+    "section": "Rstudio projects",
+    "text": "Rstudio projects",
     "crumbs": [
-      "Excercises",
-      "About us"
+      "View in presentation format"
     ]
   },
   {
-    "objectID": "Presentation.html",
-    "href": "Presentation.html",
+    "objectID": "presentation.html#environment-management",
+    "href": "presentation.html#environment-management",
     "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "Presentation.html#schedule",
-    "href": "Presentation.html#schedule",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
-  },
-  {
-    "objectID": "Presentation.html#about-us",
-    "href": "Presentation.html#about-us",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "Presentation.html#about-us-1",
-    "href": "Presentation.html#about-us-1",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\nNivedita Harisena"
-  },
-  {
-    "objectID": "Presentation.html#about-us-2",
-    "href": "Presentation.html#about-us-2",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us"
-  },
-  {
-    "objectID": "Presentation.html#maarten-van-strien",
-    "href": "Presentation.html#maarten-van-strien",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien"
-  },
-  {
-    "objectID": "Presentation-web.html",
-    "href": "Presentation-web.html",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
-  },
-  {
-    "objectID": "Presentation-web.html#schedule",
-    "href": "Presentation-web.html#schedule",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
-  },
-  {
-    "objectID": "Presentation-web.html#about-us",
-    "href": "Presentation-web.html#about-us",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "Presentation-web.html#about-us-1",
-    "href": "Presentation-web.html#about-us-1",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\nNivedita Harisena"
-  },
-  {
-    "objectID": "Presentation-web.html#about-us-2",
-    "href": "Presentation-web.html#about-us-2",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us"
-  },
-  {
-    "objectID": "Presentation-web.html#maarten-van-strien",
-    "href": "Presentation-web.html#maarten-van-strien",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien"
-  },
-  {
-    "objectID": "Presentation-revealjs.html#schedule",
-    "href": "Presentation-revealjs.html#schedule",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "Schedule",
-    "text": "Schedule\n\n\nIntroduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
-  },
-  {
-    "objectID": "Presentation-revealjs.html#about-us",
-    "href": "Presentation-revealjs.html#about-us",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "Presentation-revealjs.html#about-us-1",
-    "href": "Presentation-revealjs.html#about-us-1",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nNivedita Harisena"
-  },
-  {
-    "objectID": "Presentation-revealjs.html#about-us-2",
-    "href": "Presentation-revealjs.html#about-us-2",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us"
-  },
-  {
-    "objectID": "Presentation-revealjs.html#maarten-van-strien",
-    "href": "Presentation-revealjs.html#maarten-van-strien",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien"
-  },
-  {
-    "objectID": "presentation.html",
-    "href": "presentation.html",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "",
-    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)"
-  },
-  {
-    "objectID": "presentation.html#about-us",
-    "href": "presentation.html#about-us",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\n\n\n\nBen Black\nDoctoral Researcher\n     \n\n\nNivedita Harisena\nDoctoral Researcher\n     \n\n\nMaarten Van Strien\nSenior scientist"
-  },
-  {
-    "objectID": "presentation-revealjs.html#about-us",
-    "href": "presentation-revealjs.html#about-us",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "presentation-revealjs.html#about-us-1",
-    "href": "presentation-revealjs.html#about-us-1",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nNivedita Harisena"
-  },
-  {
-    "objectID": "presentation-revealjs.html#about-us-2",
-    "href": "presentation-revealjs.html#about-us-2",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nMaarten Van Strien"
-  },
-  {
-    "objectID": "presentation-revealjs.html#maarten-van-strien",
-    "href": "presentation-revealjs.html#maarten-van-strien",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "Maarten Van Strien",
-    "text": "Maarten Van Strien"
-  },
-  {
-    "objectID": "index-revealjs.html#about-us",
-    "href": "index-revealjs.html#about-us",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "index-revealjs.html#about-us-1",
-    "href": "index-revealjs.html#about-us-1",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nNivedita Harisena"
-  },
-  {
-    "objectID": "index-revealjs.html#about-us-2",
-    "href": "index-revealjs.html#about-us-2",
-    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nMaarten Van Strien"
-  },
-  {
-    "objectID": "presentation.html#about-us-1",
-    "href": "presentation.html#about-us-1",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nBen Black\n\n\n\n\n\n\n \n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
-  },
-  {
-    "objectID": "presentation.html#about-us-2",
-    "href": "presentation.html#about-us-2",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "About us",
-    "text": "About us\nNivedita Harisena"
-  },
-  {
-    "objectID": "exercises.html",
-    "href": "exercises.html",
-    "title": "Guided excercies",
-    "section": "",
-    "text": "R project to Zenodo workflow\n\n\n\n\n Back to top",
+    "section": "Environment management",
+    "text": "Environment management\n\nWhat are environments and why are they needed? (version conflicts/ dependencies etc.\nIntro to renv package for environment management.",
     "crumbs": [
-      "Guided excercies"
+      "View in presentation format"
     ]
   },
   {
-    "objectID": "index.html#a-brief-introduction-to-quarto",
-    "href": "index.html#a-brief-introduction-to-quarto",
-    "title": "Workflows for data, projects and publications",
-    "section": "A brief introduction to Quarto",
-    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\nSome of the creative ways in which you can use Quarto is:\n\n1. Visualize and publish interactive plots using html widgets\n\n\n\n\n\n\n\n\n2. Create interactive geo-spatial mapping segments\n\n\n\n\n\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
+    "objectID": "presentation.html#structuring-your-project-directory",
+    "href": "presentation.html#structuring-your-project-directory",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
+    "section": "Structuring your project directory",
+    "text": "Structuring your project directory\n\nSet up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)",
+    "crumbs": [
+      "View in presentation format"
+    ]
   },
   {
-    "objectID": "index.html#r-project-to-zenodo-workflow",
-    "href": "index.html#r-project-to-zenodo-workflow",
-    "title": "Workflows for data, projects and publications",
-    "section": "R project to Zenodo workflow",
-    "text": "R project to Zenodo workflow"
+    "objectID": "presentation.html#writing-clean-code",
+    "href": "presentation.html#writing-clean-code",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
+    "section": "Writing clean code:",
+    "text": "Writing clean code:\n\nGeneral good practice: variable names, use functions for repetive tasks\n\n\nScript headers (hint: use code snippet)\n\n\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[2]:\n\nOr use the document outline pane in the top right corner of the source pane:\n\n\n\nCode styling\nlintr vs. styler package",
+    "crumbs": [
+      "View in presentation format"
+    ]
   },
   {
-    "objectID": "index.html#write-a-paper-with-quarto",
-    "href": "index.html#write-a-paper-with-quarto",
-    "title": "Workflows for data, projects and publications",
-    "section": "Write a paper with Quarto",
-    "text": "Write a paper with Quarto"
+    "objectID": "presentation.html#two-cardinal-sins-of-reproducibilty",
+    "href": "presentation.html#two-cardinal-sins-of-reproducibilty",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Two cardinal sins of reproducibilty",
+    "text": "Two cardinal sins of reproducibilty\n\ninstall.packages(\"ggplot2\")\nsetwd(\"C:/Users/ben/path/that/only/I/have\")\n\nYou might have seen such lines commonly used but what is the problem with them?",
+    "crumbs": [
+      "View in presentation format"
+    ]
   },
   {
-    "objectID": "contents/about.html#ben-black",
-    "href": "contents/about.html#ben-black",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Ben Black",
-    "text": "Ben Black\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
+    "objectID": "presentation.html#two-cardinal-sins-of-reproducibilty-1",
+    "href": "presentation.html#two-cardinal-sins-of-reproducibilty-1",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Two cardinal sins of reproducibilty",
+    "text": "Two cardinal sins of reproducibilty\n\ninstall.packages(\"ggplot2\")\nsetwd(\"C:/Users/ben/path/that/only/I/have\")\n\nWhat is a good R project?\nA good R project… “creates everything it needs, in its own workspace or folder, and it touches nothing it did not create” Jenny Bryan[1]\nDoing guarantees that the project can be moved around on your computer or onto other computers and will still “just work”.",
+    "crumbs": [
+      "View in presentation format"
+    ]
   },
   {
-    "objectID": "contents/about.html#nivedita-harisena",
-    "href": "contents/about.html#nivedita-harisena",
-    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
-    "section": "Nivedita Harisena",
-    "text": "Nivedita Harisena\n\n\n\n\n\n blenback.github.io  bblack@ethz.ch  Ben Black  @blenback  Black  @Blen_Back"
+    "objectID": "presentation.html#good-project-orientated-habits",
+    "href": "presentation.html#good-project-orientated-habits",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Good project-orientated habits:",
+    "text": "Good project-orientated habits:\n\nTake advantage of IDE features (.Rproj, .Rprofile)\nManage your environment\nUse logical directory structures\nBreak up your process (master script and sub-scripts)\nWriting clean code",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#rstudio-projects-1",
+    "href": "presentation.html#rstudio-projects-1",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Rstudio projects",
+    "text": "Rstudio projects",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#environment-management-1",
+    "href": "presentation.html#environment-management-1",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Environment management",
+    "text": "Environment management\nWhat are environments and why are they needed? (version conflicts/ dependencies etc. Intro to renv package for environment management. Set up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#writing-clean-code-1",
+    "href": "presentation.html#writing-clean-code-1",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Writing clean code:",
+    "text": "Writing clean code:\nUse a consistent header (hint: use code snippet)\nGeneral good practice: variable names, use functions for repetive tasks\ncode folding\nSyntax lintr vs. styler package",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html",
+    "href": "contents/Zenodo_workflow.html",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "",
+    "text": "Initialize renv in your project:\n\nUse renv::init() to initialize renv in your project directory.\n\n\n# initialize the project environment\nrenv::init()\n\n\nThis command creates an isolated environment for your project, and ensures that all package dependencies are managed within that environment. When you run renv::init(), several important files and directories are created:\n\nrenv.lock, a lock file that records the exact versions of all packages installed and used in your project. This file is crucial for replicating the environment on other machines or by other people.\n.Rprofile, this file is automatically run every time you start R in your project, and renv uses it to configure your R session to use the packages in your project library.\n\nrenv/ directory, a directory that stores the local library of packages specific to your project. It also contains metadata and configuration files that renv uses to manage the environment.\nOther directories and files are also created. To share an R environment, renv.lock, .Rprofile, renv/settings.json and renv/activate.R must be provided.\n\n\n\n\n\n\nInstall packages within renv\n\nInstall packages as usual. Then running renv::snapshot() will include the library in the lock file if it is loaded in a script located within the project folder\n\n\n# Install a library, e.g dplyr\ninstall.packages(\"dplyr\")\n\n# load the package\nlibrary(dplyr)\n\n# create the snapshot\nrenv::snapshot()\n\n\n\n\n\n\nGet all the packages used in the existing environment installed on your computer\n\nCopy the project folder to your machine.\nRun renv::restore() in the root folder of the project where the .lock file is located. This will replicate the environment from an existing lockfile and install all packages with the correct versions.\n\n\n# install packages used in the environment\nrenv::restore()"
   },
   {
     "objectID": "contents/Quarto_intro.html",
     "href": "contents/Quarto_intro.html",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "",
-    "text": "Quatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\n\n\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
+    "text": "Quatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\nError in train(..., self = self): unused argument (list(\"cut\", \"clarity\", \"count\", \"weight\"))\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
   },
   {
     "objectID": "contents/Quarto_intro.html#a-brief-introduction-to-quarto",
     "href": "contents/Quarto_intro.html#a-brief-introduction-to-quarto",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "",
-    "text": "Quatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\n\n\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
+    "text": "Quatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\n\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\nError in train(..., self = self): unused argument (list(\"cut\", \"clarity\", \"count\", \"weight\"))\n\n\n\n\n\n\nlibrary(leaflet)\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")"
   },
   {
-    "objectID": "presentation.html#about-us-3",
-    "href": "presentation.html#about-us-3",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
+    "objectID": "contents/Git_workflow.html",
+    "href": "contents/Git_workflow.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "contents/Docker_workflow.html",
+    "href": "contents/Docker_workflow.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "contents/Exercise_intro.html",
+    "href": "contents/Exercise_intro.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "contents/intro.html",
+    "href": "contents/intro.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "We are four researchers from the research group Planning of Landscape and Urban Systems (PLUS) at ETH Zürich. Click on the social icons below our pictures to find out more about our individual research or get in touch with us.\n\n\n\n\n\nDoctoral Researcher\n    \n\n\n\n\n\n\nDoctoral Researcher\n   \n\n\n\n\n\n\nResearch Assistant\n   \n\n\n\n\n\n\nSenior scientist"
+  },
+  {
+    "objectID": "contents/intro.html#about-us",
+    "href": "contents/intro.html#about-us",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "We are four researchers from the research group Planning of Landscape and Urban Systems (PLUS) at ETH Zürich. Click on the social icons below our pictures to find out more about our individual research or get in touch with us.\n\n\n\n\n\nDoctoral Researcher\n    \n\n\n\n\n\n\nDoctoral Researcher\n   \n\n\n\n\n\n\nResearch Assistant\n   \n\n\n\n\n\n\nSenior scientist"
+  },
+  {
+    "objectID": "contents/intro.html#what-is-reproducible-research",
+    "href": "contents/intro.html#what-is-reproducible-research",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "What is reproducible research?",
+    "text": "What is reproducible research?\n\nAbility to replicate results:\n\nOthers can reproduce the results given only the original data, code, and documentation (Essawy et al. 2020)\n\nStarts with planning:\n\nReproducibility begins with organized data management and sound planning before any analysis is conducted.\n\nConsistent data storage:\n\nData should be backed up regularly and stored in multiple locations to prevent loss and ensure accessibility.\n\nClear documentation:\n\nMetadata and well-organized files are essential for interpreting and reproducing research, ensuring clarity and usability.\n\nVersion vontrol:\n\nUsing version control systems helps track changes and maintain a record of the project’s evolution, aiding in reproducibility.\n\nStandardized formats:\n\nData should be stored in nonproprietary, portable formats to ensure broad accessibility and long-term usability.\n\nOpen access:\n\nData and code should be publicly available in accessible repositories to support transparency and wider use in the scientific community."
+  },
+  {
+    "objectID": "contents/intro.html#why-strive-for-reproducible-research",
+    "href": "contents/intro.html#why-strive-for-reproducible-research",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Why strive for reproducible research?",
+    "text": "Why strive for reproducible research?\nAdvantages for your research\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science \n\nPersonal reference:\n\nSimplifies the process of recalling how and why specific analyses were performed, making it easier to explain your work to collaborators, supervisors, and reviewers.\n\nEfficient modifications:\n\nSimplifies the process of adjusting analyses and figures, saving time when supervisors, collaborators, or reviewers request changes.\n\nStreamlined future projects:\n\nFacilitates the re-use of code and organizational systems for similar tasks in new projects, making them simpler and faster to execute.\n\nDemonstrates rigor and transparency:\n\nEnhances trust in your work by allowing others to verify the accuracy of your methods, improving peer review and reducing the risk of errors or accusations of misconduct.\n\nIncreases impact and citations:\n\nBoosts citation rates by enabling others to reuse your code and data, allowing your research to have a greater influence and be cited in a wider range of contexts.\n\n\nAdvantages for other researchers\n\nFacilitates learning:\n\nProvides others with a head start by sharing data and code for easier learning and faster analysis.\n\nEnables reproducibility:\n\nMakes it easier for others to reproduce and build upon your work, supporting stronger and more compatible research.\n\nError detection:\n\nHelps others identify and correct mistakes, protecting the scientific community from errors.\n\n\nAlston, J. M., and J. A. Rick. 2021. A Beginner’s Guide to Conducting Reproducible Research. The Bulletin of the Ecological Society of America 102(2). https://doi.org/10.1002/bes2.1801."
+  },
+  {
+    "objectID": "contents/intro.html#why-for-reproducible-research",
+    "href": "contents/intro.html#why-for-reproducible-research",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Why  for reproducible research?",
+    "text": "Why  for reproducible research?\n\nOpen source accessibility:\n\nFreely available to everyone, eliminating cost barriers and promoting inclusive access to research tools.\n\nComprehensive documentation:\n\nEncourages thorough documentation, making it easier to track and replicate analyses across different projects.\n\nIntegrated version control:\n\nSeamlessly integrates with version control systems, ensuring that changes are tracked and reproducibility is maintained.\n\nConsistency across platforms:\n\nProvides a stable environment that works consistently across different operating systems, enhancing reproducibility.\n\nBroad community support:\n\nBacked by a large, active community that contributes to continuous improvements, making it a reliable choice for long-term research projects.\n\nFlexibility and adaptability:\n\nOffers a wide range of tools and functions that can be adapted to various research needs, ensuring that diverse research tasks can be handled within a reproducible framework.\n\n\nSiraji, M. A., and M. Rahman. 2024. Primer on Reproducible Research in R: Enhancing Transparency and Scientific Rigor. Clocks & Sleep 6(1): 1–10. https://doi.org/10.3390/clockssleep6010001."
+  },
+  {
+    "objectID": "contents/Rprojects.html",
+    "href": "contents/Rprojects.html",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Let’s start with a definition of what makes a good R project from Jenny Bryan:\nA good R project… “creates everything it needs, in its own workspace or folder, and it touches nothing it did not create.” [1]\nThis is a good definition that contains concepts, such as the notion that projects should be ‘self-contained’. However we add one more caveat to this definition which is that a good R project should explain itself.\nFor the purpose of this workshop we will approach this topic by splitting it up into 6 topics which are highlighted in this graphic:\nAs you move through these you will see that there are areas of overlap and complementarity between them. These topics are also central to the choice of approaches in the three workflows for reproducibility that we will share."
+  },
+  {
+    "objectID": "contents/Rprojects.html#rstudio-projects",
+    "href": "contents/Rprojects.html#rstudio-projects",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Rstudio projects",
+    "text": "Rstudio projects"
+  },
+  {
+    "objectID": "contents/Rprojects.html#environment-management",
+    "href": "contents/Rprojects.html#environment-management",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Environment management",
+    "text": "Environment management\n\nWhat are environments and why are they needed? (version conflicts/ dependencies etc.\nIntro to renv package for environment management."
+  },
+  {
+    "objectID": "contents/Rprojects.html#structuring-your-project-directory",
+    "href": "contents/Rprojects.html#structuring-your-project-directory",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Structuring your project directory",
+    "text": "Structuring your project directory\n\nSet up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)"
+  },
+  {
+    "objectID": "contents/Rprojects.html#writing-clean-code",
+    "href": "contents/Rprojects.html#writing-clean-code",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Writing clean code:",
+    "text": "Writing clean code:\n\nGeneral good practice: variable names, use functions for repetive tasks\n\n\nScript headers (hint: use code snippet)\n\n\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[1]:\n\nOr use the document outline pane in the top right corner of the source pane:\n\n\n\nCode styling\nlintr vs. styler package"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "",
+    "text": "This image highlights some the key concepts we will discuss in the workshop, which have been divided into seperate sections:"
+  },
+  {
+    "objectID": "index.html#about-us",
+    "href": "index.html#about-us",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "About us",
-    "text": "About us\nMaarten Van Strien"
+    "text": "About us\nWe are four researchers from the research group Planning of Landscape and Urban Systems (PLUS) at ETH Zürich. Click on the social icons below our pictures to find out more about our individual research or get in touch with us.\n\n\n\n\nBen Black\nDoctoral Researcher\n    \n\n\n\n\n\nNivedita Harisena\nDoctoral Researcher\n   \n\n\n\n\n\nManuel Kurmann\nResearch Assistant\n   \n\n\n\n\n\nMaarten Van Strien\nSenior scientist"
   },
   {
-    "objectID": "presentation.html#a-brief-introduction-to-quarto",
-    "href": "presentation.html#a-brief-introduction-to-quarto",
-    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
+    "objectID": "index.html#what-is-reproducible-research",
+    "href": "index.html#what-is-reproducible-research",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "What is reproducible research?",
+    "text": "What is reproducible research?\n\nAbility to replicate results:\n\nOthers can reproduce the results given only the original data, code, and documentation (Essawy et al. 2020)\n\nStarts with planning:\n\nReproducibility begins with organized data management and sound planning before any analysis is conducted.\n\nConsistent data storage:\n\nData should be backed up regularly and stored in multiple locations to prevent loss and ensure accessibility.\n\nClear documentation:\n\nMetadata and well-organized files are essential for interpreting and reproducing research, ensuring clarity and usability.\n\nVersion vontrol:\n\nUsing version control systems helps track changes and maintain a record of the project’s evolution, aiding in reproducibility.\n\nStandardized formats:\n\nData should be stored in nonproprietary, portable formats to ensure broad accessibility and long-term usability.\n\nOpen access:\n\nData and code should be publicly available in accessible repositories to support transparency and wider use in the scientific community."
+  },
+  {
+    "objectID": "index.html#why-strive-for-reproducible-research",
+    "href": "index.html#why-strive-for-reproducible-research",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Why strive for reproducible research?",
+    "text": "Why strive for reproducible research?\nAdvantages for your research\n\nSome fields have suffered a ‘replication crisis’:\n\nIn some cases headline results unable to be reproduced using reported data and methods: Lowers trust in science \n\nPersonal reference:\n\nSimplifies the process of recalling how and why specific analyses were performed, making it easier to explain your work to collaborators, supervisors, and reviewers.\n\nEfficient modifications:\n\nSimplifies the process of adjusting analyses and figures, saving time when supervisors, collaborators, or reviewers request changes.\n\nStreamlined future projects:\n\nFacilitates the re-use of code and organizational systems for similar tasks in new projects, making them simpler and faster to execute.\n\nDemonstrates rigor and transparency:\n\nEnhances trust in your work by allowing others to verify the accuracy of your methods, improving peer review and reducing the risk of errors or accusations of misconduct.\n\nIncreases impact and citations:\n\nBoosts citation rates by enabling others to reuse your code and data, allowing your research to have a greater influence and be cited in a wider range of contexts.\n\n\nAdvantages for other researchers\n\nFacilitates learning:\n\nProvides others with a head start by sharing data and code for easier learning and faster analysis.\n\nEnables reproducibility:\n\nMakes it easier for others to reproduce and build upon your work, supporting stronger and more compatible research.\n\nError detection:\n\nHelps others identify and correct mistakes, protecting the scientific community from errors.\n\n\nAlston, J. M., and J. A. Rick. 2021. A Beginner’s Guide to Conducting Reproducible Research. The Bulletin of the Ecological Society of America 102(2). https://doi.org/10.1002/bes2.1801."
+  },
+  {
+    "objectID": "index.html#why-for-reproducible-research",
+    "href": "index.html#why-for-reproducible-research",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Why  for reproducible research?",
+    "text": "Why  for reproducible research?\n\nOpen source accessibility:\n\nFreely available to everyone, eliminating cost barriers and promoting inclusive access to research tools.\n\nComprehensive documentation:\n\nEncourages thorough documentation, making it easier to track and replicate analyses across different projects.\n\nIntegrated version control:\n\nSeamlessly integrates with version control systems, ensuring that changes are tracked and reproducibility is maintained.\n\nConsistency across platforms:\n\nProvides a stable environment that works consistently across different operating systems, enhancing reproducibility.\n\nBroad community support:\n\nBacked by a large, active community that contributes to continuous improvements, making it a reliable choice for long-term research projects.\n\nFlexibility and adaptability:\n\nOffers a wide range of tools and functions that can be adapted to various research needs, ensuring that diverse research tasks can be handled within a reproducible framework.\n\n\nSiraji, M. A., and M. Rahman. 2024. Primer on Reproducible Research in R: Enhancing Transparency and Scientific Rigor. Clocks & Sleep 6(1): 1–10. https://doi.org/10.3390/clockssleep6010001."
+  },
+  {
+    "objectID": "index.html#rstudio-projects",
+    "href": "index.html#rstudio-projects",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Rstudio projects",
+    "text": "Rstudio projects"
+  },
+  {
+    "objectID": "index.html#environment-management",
+    "href": "index.html#environment-management",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Environment management",
+    "text": "Environment management\n\nWhat are environments and why are they needed? (version conflicts/ dependencies etc.\nIntro to renv package for environment management."
+  },
+  {
+    "objectID": "index.html#structuring-your-project-directory",
+    "href": "index.html#structuring-your-project-directory",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Structuring your project directory",
+    "text": "Structuring your project directory\n\nSet up a consistent directory structure: Data/, scripts/, results/ tools/ (not every project will be the same!)"
+  },
+  {
+    "objectID": "index.html#writing-clean-code",
+    "href": "index.html#writing-clean-code",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Writing clean code:",
+    "text": "Writing clean code:\n\nGeneral good practice: variable names, use functions for repetive tasks\n\n\nScript headers (hint: use code snippet)\n\n\nCode sections\nAs you may already know braced sections of code (i.e. function definitions, conditional blocks, etc.) can be folded in RStudio by clicking on the small triangle in the margin.\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis. In this regard, another good tip is to give the resulting sections sequential numerical IDs:\n\nCode sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code -&gt; Insert Section command. To navigate between code sections you can use the Jump To menu available at the bottom of the editor[2]:\n\n2. Posit Support (2024) Code folding and sections in the RStudio IDE\n\nOr use the document outline pane in the top right corner of the source pane:\n\n\n\nCode styling\nlintr vs. styler package"
+  },
+  {
+    "objectID": "index.html#a-brief-introduction-to-quarto",
+    "href": "index.html#a-brief-introduction-to-quarto",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
     "section": "A brief introduction to Quarto",
-    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the intrgration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\nSome of the creative ways in which you can use Quarto is:\n1. Visualize and publish interactive plots using html widgets\n\n\nWarning: package 'plotly' was built under R version 4.3.3\n\n\n\nAttaching package: 'plotly'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\n\n\n\n\n\n2. Create interactive geo-spatial mapping segments\n\n\nWarning: package 'leaflet' was built under R version 4.3.2\n\n\n\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
+
+    "text": "A brief introduction to Quarto\nQuatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.\n\nQuarto allows you to:\n\nCreate dynamic content that is updated as your code changes\nNumerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing\nPublish your work as websites or books\nEdit with any text editor including VS Code, RStudio and more\n\n\n\nSome of the creative ways in which you can use Quarto is:\n\n1. Visualize and publish interactive plots using html widgets\n\nlibrary(ggplot2)\nlibrary(plotly)\np &lt;- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +\n            geom_bar(position = \"dodge\")\nggplotly(p)\n\n\n\n\n\n\n\n2. Create interactive geo-spatial mapping segments\n\nlibrary(leaflet)\n\nError in library(leaflet): there is no package called 'leaflet'\n\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng= 8.548, lat=47.376, popup=\"ETH\")\n\nError in addMarkers(., lng = 8.548, lat = 47.376, popup = \"ETH\"): could not find function \"addMarkers\"\n\n\n\n\n3. Create multi-purpose dashboards to demostrate your research output"
+
   },
   {
-    "objectID": "presentation.html#test",
-    "href": "presentation.html#test",
+    "objectID": "index.html#r-project-to-zenodo-workflow",
+    "href": "index.html#r-project-to-zenodo-workflow",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "R project to Zenodo workflow",
+    "text": "R project to Zenodo workflow"
+  },
+  {
+
+    "objectID": "presentation.html",
+    "href": "presentation.html",
     "title": "Reproducible Research with  and : Workflows for data, projects and publications",
-    "section": "test",
-    "text": "test"
+    "section": "",
+    "text": "Introduction (15 mins)\nResearch projects with R (30 mins)\nComfort break (10 mins)\n3 workflows for Reproducibility (20 mins)\nQuarto (20 mins)\nComfort break (10 mins)\nExercise time (45 mins)\nQ&A + feedback (30 mins)",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#setting-up-a-project-with-renv",
+    "href": "contents/Zenodo_workflow.html#setting-up-a-project-with-renv",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "",
+    "text": "Initialize renv in your project:\n\nUse renv::init() to initialize renv in your project directory.\n\n\n# initialize the project environment\nrenv::init()\n\n\nThis command creates an isolated environment for your project, and ensures that all package dependencies are managed within that environment. When you run renv::init(), several important files and directories are created:\n\nrenv.lock, a lock file that records the exact versions of all packages installed and used in your project. This file is crucial for replicating the environment on other machines or by other people.\n.Rprofile, this file is automatically run every time you start R in your project, and renv uses it to configure your R session to use the packages in your project library.\n\nrenv/ directory, a directory that stores the local library of packages specific to your project. It also contains metadata and configuration files that renv uses to manage the environment.\nOther directories and files are also created. To share an R environment, renv.lock, .Rprofile, renv/settings.json and renv/activate.R must be provided."
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#managing-packages-with-renv",
+    "href": "contents/Zenodo_workflow.html#managing-packages-with-renv",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "",
+    "text": "Install packages within renv\n\nInstall packages as usual. Then running renv::snapshot() will include the library in the lock file if it is loaded in a script located within the project folder\n\n\n# Install a library, e.g dplyr\ninstall.packages(\"dplyr\")\n\n# load the package\nlibrary(dplyr)\n\n# create the snapshot\nrenv::snapshot()"
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#reuse-an-existing-renv-project-environment",
+    "href": "contents/Zenodo_workflow.html#reuse-an-existing-renv-project-environment",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "",
+    "text": "Get all the packages used in the existing environment installed on your computer\n\nCopy the project folder to your machine.\nRun renv::restore() in the root folder of the project where the .lock file is located. This will replicate the environment from an existing lockfile and install all packages with the correct versions.\n\n\n# install packages used in the environment\nrenv::restore()"
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#install-zen4r-to-access-zenodo-through-r",
+    "href": "contents/Zenodo_workflow.html#install-zen4r-to-access-zenodo-through-r",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "Install zen4R to access Zenodo through r",
+    "text": "Install zen4R to access Zenodo through r\n\nZenodo can be accessed with r library zen4R to upload, edit, publish and download data.\n\nInstall zen4R library with the following code:\n\n\n# install dependency \"remotes\"\ninstall.packages(\"remotes\")\n\n#install zen4R\nrequire(\"remotes\")\ninstall_github(\"eblondel/zen4R\")"
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#create-a-new-zenodo-record",
+    "href": "contents/Zenodo_workflow.html#create-a-new-zenodo-record",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "Create a new Zenodo record",
+    "text": "Create a new Zenodo record\n\nA zenodo record includes metadata, data and a DOI which is automatically generated by Zenodo for all uploads.\n\nGo to https://zenodo.org/account/settings/applications/. This requires a Zenodo account. Sign up if necessary or log in.\nOnce you’re logged in create a new “Personal access token”.\nThen run the following code in r to c create a new record\n\n\nlibrary(zen4R)\n\n# Create manager to access your Zenodo repository\nzenodo &lt;- ZenodoManager$new(\n  token = \"your_token\", \n  logger = \"INFO\" \n)\n\n# Create a new empty record\nmyrec &lt;- ZenodoRecord$new()\n\nThe types of metadata that can be included in a Zenodo record are vast. A full list can be found in the documentation at https://developers.zenodo.org/#representation. The code below gives some examples:\n\nmyrec$setTitle(\"zen4R\") # title of the record\nmyrec$addAdditionalTitle(\"This is an alternative title\", type = \"alternative-title\")\nmyrec$setDescription(\"Interface to 'Zenodo' REST API\") #description\nmyrec$addAdditionalDescription(\"This is an abstract\", type = \"abstract\")\nmyrec$setPublicationDate(\"2024-09-16\") #Format YYYY-MM-DD\nmyrec$setResourceType(\"dataset\")\nmyrec$addCreator(firstname = \"Manuel\", lastname = \"Kurmann\", role = \"datamanager\", orcid = \"0000-0001-8411-3966\")\nmyrec$setKeywords(c(\"R\",\"dataset\")) #For filtering\nmyrec$addReference(\"Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API\")\nmyrec$setPublisher(\"CRAN\") #Publisher\n\nA record can be deposited on Zenodo before it is published. This will add the record to your account without making it public yet. A deposited record can still be edited or deleted. If you prefer a graphical interface, you can also edit the record on the Zenodo website.\n\n# deposit record\nmyrec &lt;- zenodo$depositRecord(myrec, publish = TRUE)\n\n# add data to the record\nzenodo$uploadFile(\"path/to/your/file\", record = myrec)\n\n# publish record\nmyrec &lt;- zenodo$publishRecord(myrec$id)\n\n# delete record if you want to start over\nzenodo$deleteRecord(myrec$id)"
+  },
+  {
+    "objectID": "contents/Zenodo_workflow.html#edit-published-zenodo-records",
+    "href": "contents/Zenodo_workflow.html#edit-published-zenodo-records",
+    "title": "Use renv to create project-specific environments in R",
+    "section": "Edit published Zenodo records",
+    "text": "Edit published Zenodo records\n\nIt is also possible to edit or update the metadata of published records.\n\n# get your record by metadata query, e.g. by title\nmyrec &lt;- zenodo$getDepositions(q='title:zen4R')\n\n# get depositions creates a list, access first element\nmyrec &lt;- myrec[[1]]\n\n# edit metadata\nmyrec &lt;- zenodo$editRecord(myrec$id)\nmyrec$setTitle(\"zen4R 2.0\")\n\n#redeposit and publish the edited record\nmyrec &lt;- zenodo$depositRecord(myrec, publish = TRUE)\n\nIt is not possible to edit the data attached to a published record. However, it is possible to upload an updated version.\n\n# get your record by metadata query, e.g. by title\nmyrec &lt;- zenodo$getDepositions(q='title:zen4R 2.0')\n\n# get depositions creates a list, access first element\nmyrec &lt;- myrec[[1]]\n\n# edit data, delete_latest_files = TRUE deletes data of previous version,\nmyrec &lt;- zenodo$depositRecordVersion(myrec, delete_latest_files = TRUE, files = \"path/to/your/new/file\", publish = TRUE)"
+
+    "objectID": "contents/Rprojects.html#sec-projects",
+    "href": "contents/Rprojects.html#sec-projects",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": " projects",
+    "text": "projects\nHow many times have you opened an R script and been greeted by this line:\n\nsetwd(\"C:/Users/ben/path/that/only/I/have\")\n\nWhile it is well-intentioned (i.e. avoiding the need to have full paths for all objects that will subsequently be loaded or daved ) the problem with it is obvious: This specific path is only relevant for the author and not other potential users and even for the author it is will be invalid if they happen to change computers. The good news is there is a very simple way to avoid having to use setwd() at all by using Rstudio Projects.\nRstudio projects designate new or existing folders as a defined working directory by creating an .RProj file within them. This means that when you open a project the working directory of the Rstudio session will automatically be set to the directory that the .RProj file is located in and the paths of all files in this folder will be relative to this.\nThe .Rproj file can be shared along with the rest of the research project files meaning that others users can easily open the Project to have the same working directory removing the need for those troublesome setwd() lines.\n\nCreating and opening projects\nCreating an Rstudio project is as simple as using File &gt; New Project in the top left and then choosing between creating the Project in a new or existing directory:\nThere are several ways to open a Projects:\n\nUsing File &gt; Open Project in the top left of Rstudio.\n\n\n\n\n\n\n\nUsing the drop down menu in the top-right of the Rstudio session.\n\n\n\n\n\n\n\nOutside of R by double clicking on the .Rproj file in the folder.\n\n\n\n\n\n\n\n\nUtilising project specific .Rprofile’s\nAnother useful feature of Rstudio projects is the ability to store project-specific settings using the .Rprofile file which controls the initialisation behaviour of the R session when the project is opened. A useful application of this for reproducible research projects is automatically open a particular script, for example a master script that runs all the code in the project (which is a concept that will discussed under workflow decomposition).\nTo do this the contents of your .Rprofile file would like this:\n\nsetHook(\"rstudio.sessionInit\", function(newSession) {\n  if (newSession)\n    # Open the script specificed by the path\n    rstudioapi::navigateToFile('scripts/script_to_open.R', line = -1L, column = -1L)\n}, action = \"append\")\n\nThe easiest way to create and edit .Rprofile files is to use the functions from the package usethis:\n\n# Note the use of scope = \"project\" to create a project specific .Rprofile\nusethis::edit_r_profile(scope = \"project\")"
+  },
+  {
+    "objectID": "contents/Rprojects.html#sec-environment-management",
+    "href": "contents/Rprojects.html#sec-environment-management",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Environment management",
+    "text": "Environment management\nThese lines of code are also probably familiar from the beginning of many an R script:\n\ninstall.packages(\"ggplot2\")\nlibrary(ggplot2)\n\nBut what is wrong with these lines?\nWell firstly, there is no indication of what version of the package is to be installed and hence if the code installing this package is old it may not work with the most recent version of the package (This is less of a problem for well established packages like the Tidyverse but for less common packages, that may see large changes between versions, it could be substantial).\nSecondly, having the user install an unspecified version of a package could also cause dependency conflicts with other packages required by the code. This is because almost all packages have some form of dependency (i.e. they use the functionality of) on other packages. This is shown aptly by the image below which, while out-dated now, showed that in 2014 to install the 7 most popular R packages at the time would actually install 63 packages in total when considering their dependencies.\n\n\n\nPackage dependencies of popular R package [2]\n\n\nHowever the problem is bigger than just packages because when your code runs your code it is also utilising: - a specific version of R - a specific operating system - Specific versions of system dependencies, i.e. other software in other languages that R packages themselves utilise e.g GDAL for spatial analysis packages like terra .\nAll of these things together make up what is known as the ‘environment’ of your code. Hence the process of documenting and managing this environment to is ensure that your code is reproducible (i.e. it not only runs but also consistently produces the same results).\nThere are different approaches to environment management that differ in their complexity and hence maybe suited to some projects and not others. For the purpose of this workshop we will focus on what we have found is one of the most user-friendly ways to manage your package environment (caveat that will be discussed) in R which is the package renv. Below we will introduce this package in more detail as it will form a central part of the three workflows for reproducibility that we present.\n\nCreating reproducible environments with renv\nAs mentioned above renv is an R package that helps you create reproducible environments for your R projects by not only documenting your package environment but also providing functionality to re-create it.\nIt does this by creating project specific libraries (i.e. directories: renv/library) which contain all the packages used by your project. This is different from the default approach to package usage and installation whereby all packages are stored in a single library on your machine (system library). Having separate project libraries means “that different projects can use different versions of packages and installing, updating, or removing packages in one project doesn’t affect any other project.” [3]. In order to make sure that your project uses the project library everytime it is opened renv utilises the functionality of .Rprofile's to set the project library as the default library.\nAnother key process of renv is to create project specific lockfiles (renv.lock) which contain sufficient metadata about each package in the project library so that it can be re-installed on a new machine.\nAs alluded to, renv does a great job of managing your packages but is not intended to manage other aspects of your environment such as: tracking your version of R or your operating system. This is why if you want ‘bullet-proof’ reproducibility renv needs to be used alongside other approaches such as containerisation which is the 3rd and most complex workflow we will discuss."
+  },
+  {
+    "objectID": "contents/Rprojects.html#sec-structuring",
+    "href": "contents/Rprojects.html#sec-structuring",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Structuring your project directory",
+    "text": "Structuring your project directory\nSimilar to having clean code, having a clean project directory that has well-organised sub-directories goes a long way towards making your projects code easier to understand for others. For software development there are numerous sets of conventions for directories structures although these are not always so applicable for scientific research projects. However we can borrow some basic principles, try to use: - Use logical naming - Stick to a consistent style, i.e. use of captialisation and seperators - Make use of nested sub-directories e.g data/raw/climatic/precipitation/2020/precip_2020.rds vs. data/precip_2020_raw.rds. This is very helpful when it comes to programatically constructing file paths especially in projects with a lot of data.\nAs an example my go-to project directory structure looks like this:\n\n└── my_project\n    ├── data # The research data\n    │   ├── raw\n    │   └── processed\n    ├── output # Storing results\n    ├── publication # Containing the academic manuscript of the project\n    ├── src # For all files that perform operations in the project\n    │   ├── scripts\n    │   └── functions\n    └── tools # Auxilliary files and settings\n\nRather than manually create this directory structure everytime you start a new project, save yourself some time and automate it by using Rstudio’s Project Templates functionality. This allows you to select a custom template as an option when creating a new Rstudio project through the New project wizard (File &gt; New Project &gt; New Directory &gt; New Project Template).\nTo implement this even as an intermediate R user is fairly labor intensive as your custom project directory template needs to be contained within an R-package, in order to be available in the wizard. However, quite a few templates with directory structures appropriate for scientific research projects have been created by others:\n\nrrtools\nProjectTemplate\ntemplate\naddinit (Not a template but an interactive shiny add-in for project creation)"
+  },
+  {
+    "objectID": "contents/Rprojects.html#sec-workflow-decomposition",
+    "href": "contents/Rprojects.html#sec-workflow-decomposition",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Workflow decomposition",
+    "text": "Workflow decomposition\nIn computer sciences workflow decomposition refers to the structuring or compartmentalising of your code into seperate logical parts that makes it easier to maintain [5].\nIn terms of coding scientific research projects many of us probably already instinctively do decomposition to some degree by splitting typical processes such as data preparation, statistical modelling, analysis of results and producing final visualizations.\nHowever this is not always realized in the most understandable way, for example we may have seperate scripts with logical sounding names like: Data_prep.R and Data_analysis.R but can others really be expected to know exactly which order these must be run in, or indeed whether they even need to be run sequentially at all?\nA good 1st step to remedying this is to give your scripts sequential numeric tags in their names, e.g. 01_Data_prep.R, 02_Data_analysis.R. This will also ensure that they are presented in numerical order when placed in a designated directory Structuring your project directory and can be explicitly described in your project documentation.\nBut you can take this to the next level by creating a Master script that sources your other scripts in sequence (think of them as sub-scripts) so that users of your code need only run one script. To do this is as simple as creating the master script as you would any normal R script (File &gt; New File &gt; R script) and then using the base::source() function to run the sub-scripts:\n\n#############################################################################\n## Master_script: Run steps of research project in order\n##\n## Date created: 30/7/2024\n## Author(s): Jane Doe\n#############################################################################\n\n### =========================================================================\n### A- Prepare dependent variable data\n### =========================================================================\n\n#Prepare LULC data\nsource(\"Scripts/Preparation/Dep_var_dat_prep.R\", local = scripting_env)\n\n### =========================================================================\n### B- Prepare independent variable data\n### =========================================================================\n\n#Prepare predictor data\nsource(\"Scripts/Preparation/Ind_var_data_prep.R\", local = scripting_env)\n\n### =========================================================================\n### C- Perform statisical modelling\n### =========================================================================\n\nsource(\"Scripts/Modelling/Fit_stat_models.R\", local = scripting_env)\n\nAs you can see in this example code I have also made use of a script header and code sections, that were previously discussed, to make the division of sub-processes even clearer. Another advantage of this approach is that all sub-scripts can utilise the same environment (defined by the source(local= ) argument) which means that each individual script does not need to load packages or paths as objects.\nFinally, within your sub-scripts processes should also be seperated into code sections and ideally any repetitive tasks should be performed with custom functions which again are contained within their own files.\nFollowing this approach you end up with a workflow that will look something like this:\n\nThe benefit of this hierarchical approach to structuring is that it is not only easier to debug and maintain individual processes but it is also more amenable to adding new processes."
+  },
+  {
+    "objectID": "contents/Rprojects.html#sec-writing-clean-code",
+    "href": "contents/Rprojects.html#sec-writing-clean-code",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Writing clean code",
+    "text": "Writing clean code\nThe notion of writing ‘clean’ code can be daunting, especially for those new to programming. However, the most important thing to bear in mind is that there is no objective measure that makes code ‘clean’ vs. ‘un-clean’, rather we should of think ‘clean’ coding as the pursuit of making your code easier to read, understand and maintain. Also while we should aspire to writing clean code, it is arguably more important that it functions correctly and efficiently.\nThe central concept of clean coding is that, like normal writing, we should follow a set of rules and conventions. For example, in English a sentence should start with a capital letter and end with a full stop. Unfortunately, in terms of writing R code there is not a single set of conventions that everyone proscribes to, instead there are numerous styles that have been outlined and the important thing is to choose a style and apply it consistently in your coding.\nPerhaps the two most common styles are the Tidyverse style and the Google R style(Which is actually a derivative of the former). Neither style can be said to be the more correct, rather they express opinionated preferences on a series of common topics such as: Object naming, use of assignment operators, spacing, indentation, line length, parentheses placement, etc.\nRather than detail all of these topics here we will focus on just on some related tips that we think are most relevant for scientific research coding, including how to automate the formatting of your code to a particular style. However, we encourage you to go through the different style guides when you have the time.\n\nScript headers\nStarting your scripts with a consistent header containing information about it’s purpose, author/s, creation and modification dates is a great step making your workflow more understandable and hopefully reproducible. There are no rules as to what such a header should look like but this is the style I like to use:\n\n#############################################################################\n## Script_title: Brief description of script purpose\n##\n## Notes: More detailed notes about the script and it's purpose\n##\n## Date created: \n## Author(s):\n#############################################################################\n\nTo save time inserting this header into new scripts you use Rstudio’s Code snippets feature. Code snippets are simply text macros that quickly insert a section of code using a short keyword.\nTo create your own Code snippet go to Tools &gt; Global Options &gt; Code &gt; Edit Snippets and then add a new snippet with your code below it:\n\n\n\n\n\nTo use a code snippet simply start typing the keyword in the script and the auto-completion list will appear then press Tab and the code section will be inserted:\n\n\n\n\n\n\n\nCode sections\nAs you may already know braced ({}) sections of code (i.e. function definitions, conditional blocks, etc.) can be folded to hide their contents in RStudio by clicking on the small triangle in the left margin.\n\n\n\n\n\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis (discussed in more detail later). In this regard, another good tip is to give the resulting sections sequential alphabetical or numerical Pre-fixes. Code sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code &gt; Insert Section command.\nTo navigate between code sections:\n\nUse the Jump To menu available at the bottom of the editor[4]\n\n\n\n\n\n\n\nUse the document outline pane in the top right corner of the source pane\n\n\n\n\n\n\n\n\nAutomating the styling of your code\nThere are two R packages that are very helpful in terms of ensuring your code confirms to a consistent style: lintr and styler.\n\nlintr checks your code for common style issues and potential programming errors then presents them to you to correct, think of it like doing a ‘spellcheck’ on a written document.\nstyler is more active in the sense that it automatically format’s your code to a particular style, the default of which is the tidyverse style.\n\nTo use lintr and styler you call their functions like any package but styler can also be used through the Rstudio Addins menu below the Navigation bar as shown in this gif:\n\nAnother very useful feature of both packages is that they can be used as part of a continuous integration (CI) workflow using a version control application like Git. This is a topic that we will cover as part of our Version control with Git workflow but what it means is that the styler and lintr functions are run automatically when you push your code to a remote repository."
+  },
+  {
+    "objectID": "index.html#sec-projects",
+    "href": "index.html#sec-projects",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": " projects",
+    "text": "projects\nHow many times have you opened an R script and been greeted by this line:\n\nsetwd(\"C:/Users/ben/path/that/only/I/have\")\n\nWhile it is well-intentioned (i.e. avoiding the need to have full paths for all objects that will subsequently be loaded or daved ) the problem with it is obvious: This specific path is only relevant for the author and not other potential users and even for the author it is will be invalid if they happen to change computers. The good news is there is a very simple way to avoid having to use setwd() at all by using Rstudio Projects.\nRstudio projects designate new or existing folders as a defined working directory by creating an .RProj file within them. This means that when you open a project the working directory of the Rstudio session will automatically be set to the directory that the .RProj file is located in and the paths of all files in this folder will be relative to this.\nThe .Rproj file can be shared along with the rest of the research project files meaning that others users can easily open the Project to have the same working directory removing the need for those troublesome setwd() lines.\n\nCreating and opening projects\nCreating an Rstudio project is as simple as using File &gt; New Project in the top left and then choosing between creating the Project in a new or existing directory:\nThere are several ways to open a Projects:\n\nUsing File &gt; Open Project in the top left of Rstudio.\n\n\n\n\n\n\n\nUsing the drop down menu in the top-right of the Rstudio session.\n\n\n\n\n\n\n\nOutside of R by double clicking on the .Rproj file in the folder.\n\n\n\n\n\n\n\n\nUtilising project specific .Rprofile’s\nAnother useful feature of Rstudio projects is the ability to store project-specific settings using the .Rprofile file which controls the initialisation behaviour of the R session when the project is opened. A useful application of this for reproducible research projects is automatically open a particular script, for example a master script that runs all the code in the project (which is a concept that will discussed under workflow decomposition).\nTo do this the contents of your .Rprofile file would like this:\n\nsetHook(\"rstudio.sessionInit\", function(newSession) {\n  if (newSession)\n    # Open the script specificed by the path\n    rstudioapi::navigateToFile('scripts/script_to_open.R', line = -1L, column = -1L)\n}, action = \"append\")\n\nThe easiest way to create and edit .Rprofile files is to use the functions from the package usethis:\n\n# Note the use of scope = \"project\" to create a project specific .Rprofile\nusethis::edit_r_profile(scope = \"project\")"
+  },
+  {
+    "objectID": "index.html#sec-environment-management",
+    "href": "index.html#sec-environment-management",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Environment management",
+    "text": "Environment management\nThese lines of code are also probably familiar from the beginning of many an R script:\n\ninstall.packages(\"ggplot2\")\nlibrary(ggplot2)\n\nBut what is wrong with these lines?\nWell firstly, there is no indication of what version of the package is to be installed and hence if the code installing this package is old it may not work with the most recent version of the package (This is less of a problem for well established packages like the Tidyverse but for less common packages, that may see large changes between versions, it could be substantial).\nSecondly, having the user install an unspecified version of a package could also cause dependency conflicts with other packages required by the code. This is because almost all packages have some form of dependency (i.e. they use the functionality of) on other packages. This is shown aptly by the image below which, while out-dated now, showed that in 2014 to install the 7 most popular R packages at the time would actually install 63 packages in total when considering their dependencies.\n\n\n\n\n\n\n\nPackage dependencies of popular R package [2]\n\n2. Vries A de (2014) Revisiting package dependencies\n\n\nHowever the problem is bigger than just packages because when your code runs your code it is also utilising: - a specific version of R - a specific operating system - Specific versions of system dependencies, i.e. other software in other languages that R packages themselves utilise e.g GDAL for spatial analysis packages like terra .\nAll of these things together make up what is known as the ‘environment’ of your code. Hence the process of documenting and managing this environment to is ensure that your code is reproducible (i.e. it not only runs but also consistently produces the same results).\nThere are different approaches to environment management that differ in their complexity and hence maybe suited to some projects and not others. For the purpose of this workshop we will focus on what we have found is one of the most user-friendly ways to manage your package environment (caveat that will be discussed) in R which is the package renv. Below we will introduce this package in more detail as it will form a central part of the three workflows for reproducibility that we present.\n\nCreating reproducible environments with renv\nAs mentioned above renv is an R package that helps you create reproducible environments for your R projects by not only documenting your package environment but also providing functionality to re-create it.\nIt does this by creating project specific libraries (i.e. directories: renv/library) which contain all the packages used by your project. This is different from the default approach to package usage and installation whereby all packages are stored in a single library on your machine (system library). Having separate project libraries means “that different projects can use different versions of packages and installing, updating, or removing packages in one project doesn’t affect any other project.” [3]. In order to make sure that your project uses the project library everytime it is opened renv utilises the functionality of .Rprofile's to set the project library as the default library.\n\n3. Ushey K, Wickham H (2024) Renv: Project environments\nAnother key process of renv is to create project specific lockfiles (renv.lock) which contain sufficient metadata about each package in the project library so that it can be re-installed on a new machine.\nAs alluded to, renv does a great job of managing your packages but is not intended to manage other aspects of your environment such as: tracking your version of R or your operating system. This is why if you want ‘bullet-proof’ reproducibility renv needs to be used alongside other approaches such as containerisation which is the 3rd and most complex workflow we will discuss."
+  },
+  {
+    "objectID": "index.html#sec-structuring",
+    "href": "index.html#sec-structuring",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Structuring your project directory",
+    "text": "Structuring your project directory\nSimilar to having clean code, having a clean project directory that has well-organised sub-directories goes a long way towards making your projects code easier to understand for others. For software development there are numerous sets of conventions for directories structures although these are not always so applicable for scientific research projects. However we can borrow some basic principles, try to use: - Use logical naming - Stick to a consistent style, i.e. use of captialisation and seperators - Make use of nested sub-directories e.g data/raw/climatic/precipitation/2020/precip_2020.rds vs. data/precip_2020_raw.rds. This is very helpful when it comes to programatically constructing file paths especially in projects with a lot of data.\nAs an example my go-to project directory structure looks like this:\n\n└── my_project\n    ├── data # The research data\n    │   ├── raw\n    │   └── processed\n    ├── output # Storing results\n    ├── publication # Containing the academic manuscript of the project\n    ├── src # For all files that perform operations in the project\n    │   ├── scripts\n    │   └── functions\n    └── tools # Auxilliary files and settings\n\nRather than manually create this directory structure everytime you start a new project, save yourself some time and automate it by using Rstudio’s Project Templates functionality. This allows you to select a custom template as an option when creating a new Rstudio project through the New project wizard (File &gt; New Project &gt; New Directory &gt; New Project Template).\nTo implement this even as an intermediate R user is fairly labor intensive as your custom project directory template needs to be contained within an R-package, in order to be available in the wizard. However, quite a few templates with directory structures appropriate for scientific research projects have been created by others:\n\nrrtools\nProjectTemplate\ntemplate\naddinit (Not a template but an interactive shiny add-in for project creation)"
+  },
+  {
+    "objectID": "index.html#sec-workflow-decomposition",
+    "href": "index.html#sec-workflow-decomposition",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Workflow decomposition",
+    "text": "Workflow decomposition\nIn computer sciences workflow decomposition refers to the structuring or compartmentalising of your code into seperate logical parts that makes it easier to maintain [5].\n\n5. (2024) Decomposition (computer science)\nIn terms of coding scientific research projects many of us probably already instinctively do decomposition to some degree by splitting typical processes such as data preparation, statistical modelling, analysis of results and producing final visualizations.\nHowever this is not always realized in the most understandable way, for example we may have seperate scripts with logical sounding names like: Data_prep.R and Data_analysis.R but can others really be expected to know exactly which order these must be run in, or indeed whether they even need to be run sequentially at all?\nA good 1st step to remedying this is to give your scripts sequential numeric tags in their names, e.g. 01_Data_prep.R, 02_Data_analysis.R. This will also ensure that they are presented in numerical order when placed in a designated directory Structuring your project directory and can be explicitly described in your project documentation.\nBut you can take this to the next level by creating a Master script that sources your other scripts in sequence (think of them as sub-scripts) so that users of your code need only run one script. To do this is as simple as creating the master script as you would any normal R script (File &gt; New File &gt; R script) and then using the base::source() function to run the sub-scripts:\n\n#############################################################################\n## Master_script: Run steps of research project in order\n##\n## Date created: 30/7/2024\n## Author(s): Jane Doe\n#############################################################################\n\n### =========================================================================\n### A- Prepare dependent variable data\n### =========================================================================\n\n#Prepare LULC data\nsource(\"Scripts/Preparation/Dep_var_dat_prep.R\", local = scripting_env)\n\n### =========================================================================\n### B- Prepare independent variable data\n### =========================================================================\n\n#Prepare predictor data\nsource(\"Scripts/Preparation/Ind_var_data_prep.R\", local = scripting_env)\n\n### =========================================================================\n### C- Perform statisical modelling\n### =========================================================================\n\nsource(\"Scripts/Modelling/Fit_stat_models.R\", local = scripting_env)\n\nAs you can see in this example code I have also made use of a script header and code sections, that were previously discussed, to make the division of sub-processes even clearer. Another advantage of this approach is that all sub-scripts can utilise the same environment (defined by the source(local= ) argument) which means that each individual script does not need to load packages or paths as objects.\nFinally, within your sub-scripts processes should also be seperated into code sections and ideally any repetitive tasks should be performed with custom functions which again are contained within their own files.\nFollowing this approach you end up with a workflow that will look something like this:\n\nThe benefit of this hierarchical approach to structuring is that it is not only easier to debug and maintain individual processes but it is also more amenable to adding new processes."
+  },
+  {
+    "objectID": "index.html#sec-writing-clean-code",
+    "href": "index.html#sec-writing-clean-code",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Writing clean code",
+    "text": "Writing clean code\nThe notion of writing ‘clean’ code can be daunting, especially for those new to programming. However, the most important thing to bear in mind is that there is no objective measure that makes code ‘clean’ vs. ‘un-clean’, rather we should of think ‘clean’ coding as the pursuit of making your code easier to read, understand and maintain. Also while we should aspire to writing clean code, it is arguably more important that it functions correctly and efficiently.\nThe central concept of clean coding is that, like normal writing, we should follow a set of rules and conventions. For example, in English a sentence should start with a capital letter and end with a full stop. Unfortunately, in terms of writing R code there is not a single set of conventions that everyone proscribes to, instead there are numerous styles that have been outlined and the important thing is to choose a style and apply it consistently in your coding.\nPerhaps the two most common styles are the Tidyverse style and the Google R style(Which is actually a derivative of the former). Neither style can be said to be the more correct, rather they express opinionated preferences on a series of common topics such as: Object naming, use of assignment operators, spacing, indentation, line length, parentheses placement, etc.\nRather than detail all of these topics here we will focus on just on some related tips that we think are most relevant for scientific research coding, including how to automate the formatting of your code to a particular style. However, we encourage you to go through the different style guides when you have the time.\n\nScript headers\nStarting your scripts with a consistent header containing information about it’s purpose, author/s, creation and modification dates is a great step making your workflow more understandable and hopefully reproducible. There are no rules as to what such a header should look like but this is the style I like to use:\n\n#############################################################################\n## Script_title: Brief description of script purpose\n##\n## Notes: More detailed notes about the script and it's purpose\n##\n## Date created: \n## Author(s):\n#############################################################################\n\nTo save time inserting this header into new scripts you use Rstudio’s Code snippets feature. Code snippets are simply text macros that quickly insert a section of code using a short keyword.\nTo create your own Code snippet go to Tools &gt; Global Options &gt; Code &gt; Edit Snippets and then add a new snippet with your code below it:\n\n\n\n\n\nTo use a code snippet simply start typing the keyword in the script and the auto-completion list will appear then press Tab and the code section will be inserted:\n\n\n\n\n\n\n\nCode sections\nAs you may already know braced ({}) sections of code (i.e. function definitions, conditional blocks, etc.) can be folded to hide their contents in RStudio by clicking on the small triangle in the left margin.\n\n\n\n\n\nHowever, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis (discussed in more detail later). In this regard, another good tip is to give the resulting sections sequential alphabetical or numerical Pre-fixes. Code sections are created by inserting a comment line that contains at least four trailing dashes (-), equal signs (=), or pound signs (#):\n\n# Section One ---------------------------------\n \n# Section Two =================================\n \n# Section Three #############################\n\nAlternatively you can use the Code &gt; Insert Section command.\nTo navigate between code sections:\n\nUse the Jump To menu available at the bottom of the editor[4]\n\n\n4. Posit Support (2024) Code folding and sections in the RStudio IDE\n\n\n\n\n\n\nUse the document outline pane in the top right corner of the source pane\n\n\n\n\n\n\n\n\nAutomating the styling of your code\nThere are two R packages that are very helpful in terms of ensuring your code confirms to a consistent style: lintr and styler.\n\nlintr checks your code for common style issues and potential programming errors then presents them to you to correct, think of it like doing a ‘spellcheck’ on a written document.\nstyler is more active in the sense that it automatically format’s your code to a particular style, the default of which is the tidyverse style.\n\nTo use lintr and styler you call their functions like any package but styler can also be used through the Rstudio Addins menu below the Navigation bar as shown in this gif:\n\nAnother very useful feature of both packages is that they can be used as part of a continuous integration (CI) workflow using a version control application like Git. This is a topic that we will cover as part of our Version control with Git workflow but what it means is that the styler and lintr functions are run automatically when you push your code to a remote repository."
+  },
+  {
+    "objectID": "index.html#project-documentation",
+    "href": "index.html#project-documentation",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Project documentation",
+    "text": "Project documentation\n\nCommenting in scripts\nREADME files"
+  },
+  {
+    "objectID": "contents/Rprojects.html#project-documentation",
+    "href": "contents/Rprojects.html#project-documentation",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Project documentation",
+    "text": "Project documentation\n\nCommenting in scripts\nREADME files"
+  },
+  {
+    "objectID": "assets/project-templates.html",
+    "href": "assets/project-templates.html",
+    "title": "Project Templates",
+    "section": "",
+    "text": "RStudio includes support for custom, user-defined project templates. Project templates can be used to create new projects with a pre-specified structure.\nProject templates can be accessed through the New Project… wizard. All registered project templates are made available within the New Directory portion of the wizard:\nR packages are the primary vehicle through which RStudio project templates are distributed. Package authors can provide a small bit of metadata describing the template functions available in their package – RStudio will discover these project templates on start up, and make them available in the New Project… dialog."
+  },
+  {
+    "objectID": "assets/project-templates.html#example",
+    "href": "assets/project-templates.html#example",
+    "title": "Project Templates",
+    "section": "Example",
+    "text": "Example\nWe’ll use the ptexamples package to illustrate how a project template can be defined. This package exports a project template that is presented like so from the New Project… wizard:\n\nAfter the user clicks Create Project, a new project will be created, and the hello_world() template function will be called to initialize the project. Here’s what the IDE looks like after calling this template function with the aforementioned inputs:\n\nTo try using this project template locally, install the package:\n# if needed install.packages(\"devtools\")\ndevtools::install_github(\"rstudio/ptexamples\")\nRestart RStudio and then access the ptexamples template from the New Project wizard."
+  },
+  {
+    "objectID": "assets/project-templates.html#defining-the-template-function",
+    "href": "assets/project-templates.html#defining-the-template-function",
+    "title": "Project Templates",
+    "section": "Defining the Template Function",
+    "text": "Defining the Template Function\nThe ptexamples package contains a function, hello_world(), intended to be used as a project template. The function has the signature:\nhello_world &lt;- function(path, ...) {\n  # ensure path exists\n  dir.create(path, recursive = TRUE, showWarnings = FALSE)\n\n  # generate header for file\n  header &lt;- c(\n    \"# This file was generated by a call to 'ptexamples::hello_world()'.\",\n    \"# The following inputs were received:\",\n    \"\"\n  )\n\n  # collect inputs and paste together as 'Parameter: Value'\n  dots &lt;- list(...)\n  text &lt;- lapply(seq_along(dots), function(i) {\n    key &lt;- names(dots)[[i]]\n    val &lt;- dots[[i]]\n    paste0(key, \": \", val)\n  })\n\n  # collect into single text string\n  contents &lt;- paste(\n    paste(header, collapse = \"\\n\"),\n    paste(text, collapse = \"\\n\"),\n    sep = \"\\n\"\n  )\n\n  # write to index file\n  writeLines(contents, con = file.path(path, \"INDEX\"))\n}\nWhen this function is invoked by RStudio, it will receive the path as the path to the newly created project, as well as arguments as received from its input widgets. This function collects its inputs, and echos them to a file called INDEX in the newly-created project path."
+  },
+  {
+    "objectID": "assets/project-templates.html#defining-the-template-metadata",
+    "href": "assets/project-templates.html#defining-the-template-metadata",
+    "title": "Project Templates",
+    "section": "Defining the Template Metadata",
+    "text": "Defining the Template Metadata\nAfter defining a function to be used as a project template, some initial metadata must be provided to let RStudio know how to use this function as a project template. The ptexamples package defines a project template in a file located at:\ninst/rstudio/templates/project/hello_world.dcf\nThe first set of fields are used to define primary information about the project template:\nBinding: hello_world\nTitle: Example Project Template\nOpenFiles: INDEX\n\nThe Binding field tells RStudio which R function the project template is associated with. When a user creates a new project using this template, the hello_world() function defined by this package will be used to generate the project.\nThe Title field is used and shown within the new project wizard.\nThe OpenFiles field instructs the IDE to open a file called INDEX when the project is first opened, after creating the project.\n\nThe following sets of fields are used to define input widgets:\nParameter: check\nWidget: CheckboxInput\nLabel: Checkbox Input\nDefault: On\nPosition: left\n\nThe Parameter field is used to identify the parameter name. That is, the value of the widget used here will be associated with the parameter called check when passed to the template function hello_world().\nThe Widget field is used to specify the type of widget to be used. Here, we use a checkbox, to allow for ‘on / off’ input from the user.\nThe Label field is used to give a label associated with the checkbox.\nThe Default field gives the default value for the checkbox input – here, we want to default having the checkbox ‘on’, or checked.\nThe Position field tells the RStudio IDE that this widget should be displayed on the left side of the wizard dialog.\n\nAll together, this information tells RStudio that hello_world() is a function to be used in generating new projects, as well as what widgets should be used for arguments that hello_world() can accept."
+  },
+  {
+    "objectID": "assets/project-templates.html#primary-metadata",
+    "href": "assets/project-templates.html#primary-metadata",
+    "title": "Project Templates",
+    "section": "Primary Metadata",
+    "text": "Primary Metadata\nThe following fields are accepted as part of the primary metadata regarding a project template:\n\nBinding (required): The name of the R function to be called when this project template is invoked.\nTitle (required): The title to be shown within the New Project… wizard.\nSubtitle: The subtitle to be shown within the New Project… wizard. This will be shown when the user hovers over the project name in the dialog. When unsupplied, this field will be generated based on the content of the Title field.\nCaption: The caption to be shown on the landing page for this template function. When unsupplied, this field will be generated based on the content of the Title field.\nIcon: The path to an icon, on disk, to be used in the dialog. Must be a .png file of size less than 64kb.\nOpenFiles: A comma-delimited set of values, indicating files that should be opened by RStudio when the project is generated. Shell-style globs can be used to indicate when multiple files matching some pattern should be opened – for example, OpenFiles: R/*.R would indicate that RStudio should open all .R files within the R folder of the generated project."
+  },
+  {
+    "objectID": "assets/project-templates.html#input-widgets",
+    "href": "assets/project-templates.html#input-widgets",
+    "title": "Project Templates",
+    "section": "Input Widgets",
+    "text": "Input Widgets\nThe following widget types are accepted for the Widget field in widget descriptions.\n\nCheckboxInput\nRepresent a TRUE / FALSE input value using a checkbox.\n\nExample\nParameter: check\nWidget: CheckboxInput\nLabel: label\n\n\n\nSelectInput\nSelect a single item out of a menu list of items. The Fields field should be a comma-separated list of fields to be included in the select input.\n\nExample\nParameter: project_type\nWidget: SelectInput\nLabel: Project Type\nFields: project, package\n\n\nTextInput\nAccept unrestricted text input from the user.\n\n\nExample\nParameter: author\nWidget: TextInput\nLabel: Author\n\n\n\nFileInput\nProvide the path to a file on disk.\n\nExample\nParameter: file\nWidget: FileInput\nLabel: Data file"
+  },
+  {
+    "objectID": "index.html#sec-documentation",
+    "href": "index.html#sec-documentation",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Project documentation",
+    "text": "Project documentation\nAs an example of why documentation is important think about if you bought a new table from Ikea only to excitedly rip open the box and find that there are no instructions for how to assemble it. Sure, you know what a table is supposedly to look like and given enough time you will end up with something that will probably be mostly right but maybe it’s missing small details. Also it will probably take you just as long to take it apart in 5 years time. Well, working with undocumented code for research projects is similar except a lot more complicated!\nWriting comprehensive documentation that covers all aspects of our projects is time-consuming which is why it is often neglected. For example, there are a lot of different metadata conventions that exist that you could apply. However, learning and adhering strictly to these can be overwhelming and possibly lead to the opposite effect i.e. they are not simple for others to understand either.\nIn response to this there has been a movement in the R research community to adopt the research as package approach, which, as the name suggests, involves creating your project as an R-package which has a strict set of conventions for documentation [6]. This is a viable approach for those who are familiar with R-packages but is arguably not the best for all projects and users.\n\n6. Marwick B, Boettiger C, Mullen L (2018) Packaging data analytical work reproducibly using r (and friends). The American Statistician 72(1):80–88. https://doi.org/10.1080/00031305.2017.1375986\nInstead, we would suggest to follow the maxim of not letting the perfect be the enemy of the good and to focus on these key areas:\n\nProvide adequate in-script commentary: This is perhaps contentious for those from a software development community, but given the choice I would rather have to read through a script with too many comments than one with too few. However remember that comments should be used to explain the purpose of the code, not what the code is doing. In line with this use script headers.\nDocument your functions with roxygen skeletons:\nInclude a README file: README files are where you should document your project at the macro-level i.e. what it is about and how it is supposed to work.\n\nThe latter of these two are more detailed so we have provided further information and tips in sections below.\n\nFunction documentation with roxygen\nBase R provides a standard way of documenting a package where each function is documented in a topic, an .Rd file (“R documentation”) in the man/ directory. .Rd files use a custom syntax, loosely based on LaTeX, and can be rendered to HTML, plain text, or pdf, as needed, for viewing in different contexts [7].\n\n7. Wickham H, Bryan J (2024) R packages (2e), 2nd Edition\nR\n\n\nTips for README writing\nIf you look at the source code of R packages or projects that use R in Github repositories you will see that they all contain README.md files. This is the markdown format of the README file and is the most common format for README files in R projects. These files are often accompanied by the corresponding file README.Rmd which can be used to generate the README.md file. Markdown format is used for README’s because it can be read by many programs anrendd ered in a variety of formats.\nhttps://usethis.r-lib.org/reference/use_readme_rmd.html"
+  },
+  {
+    "objectID": "contents/Rprojects.html#sec-documentation",
+    "href": "contents/Rprojects.html#sec-documentation",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "Project documentation",
+    "text": "Project documentation\nAs an example of why documentation is important think about if you bought a new table from Ikea only to excitedly rip open the box and find that there are no instructions for how to assemble it. Sure, you know what a table is supposedly to look like and given enough time you will end up with something that will probably be mostly right but maybe it’s missing small details. Also it will probably take you just as long to take it apart in 5 years time. Well, working with undocumented code for research projects is similar except a lot more complicated!\nWriting comprehensive documentation that covers all aspects of our projects is time-consuming which is why it is often neglected. For example, there are a lot of different metadata conventions that exist that you could apply. However, learning and adhering strictly to these can be overwhelming and possibly lead to the opposite effect i.e. they are not simple for others to understand either.\nIn response to this there has been a movement in the R research community to adopt the research as package approach, which, as the name suggests, involves creating your project as an R-package which has a strict set of conventions for documentation [6]. This is a viable approach for those who are familiar with R-packages but is arguably not the best for all projects and users.\nInstead, we would suggest to follow the maxim of not letting the perfect be the enemy of the good and to focus on these key areas:\n\nProvide adequate in-script commentary: This is perhaps contentious for those from a software development community, but given the choice I would rather have to read through a script with too many comments than one with too few. However remember that comments should be used to explain the purpose of the code, not what the code is doing. In line with this use script headers.\nDocument your functions with roxygen skeletons:\nInclude a README file: README files are where you should document your project at the macro-level i.e. what it is about and how it is supposed to work.\n\nThe latter of these two are more detailed so we have provided further information and tips in sections below.\n\nFunction documentation with roxygen\nBase R provides a standard way of documenting a package where each function is documented in a topic, an .Rd file (“R documentation”) in the man/ directory. .Rd files use a custom syntax, loosely based on LaTeX, and can be rendered to HTML, plain text, or pdf, as needed, for viewing in different contexts [7].\nR\n\n\nTips for README writing\nIf you look at the source code of R packages or projects that use R in Github repositories you will see that they all contain README.md files. This is the markdown format of the README file and is the most common format for README files in R projects. These files are often accompanied by the corresponding file README.Rmd which can be used to generate the README.md file. Markdown format is used for README’s because it can be read by many programs anrendd ered in a variety of formats.\nhttps://usethis.r-lib.org/reference/use_readme_rmd.html"
+  },
+  {
+    "objectID": "assets/renv_docker.html",
+    "href": "assets/renv_docker.html",
+    "title": "Using renv with Docker",
+    "section": "",
+    "text": "While renv can help capture the state of your R library at some point in time, there are still other aspects of the system that can influence the run-time behavior of your R application. In particular, the same R code can produce different results depending on:\nAnd so on. Docker is a tool that helps solve this problem through the use of containers. Very roughly speaking, one can think of a container as a small, self-contained system within which different applications can be run. Using Docker, one can declaratively state how a container should be built (what operating system it should use, and what system software should be installed within), and use that system to run applications. (For more details, please see https://environments.rstudio.com/docker.)\nUsing Docker and renv together, one can then ensure that both the underlying system, alongside the required R packages, are fixed and constant for a particular application.\nThe main challenges in using Docker with renv are:\nThis vignette will assume you are already familiar with Docker; if you are not yet familiar with Docker, the Docker Documentation provides a thorough introduction. To learn more about using Docker to manage R environments, visit environments.rstudio.com.\nWe’ll discuss two strategies for using renv with Docker:\nWe’ll also explore the pros and cons of each strategy."
+  },
+  {
+    "objectID": "assets/renv_docker.html#creating-docker-images-with-renv",
+    "href": "assets/renv_docker.html#creating-docker-images-with-renv",
+    "title": "Using renv with Docker",
+    "section": "Creating Docker images with renv",
+    "text": "Creating Docker images with renv\nWith Docker, Dockerfiles are used to define new images. Dockerfiles can be used to declaratively specify how a Docker image should be created. A Docker image captures the state of a machine at some point in time – e.g., a Linux operating system after downloading and installing R 4.3. Docker containers can be created using that image as a base, allowing different independent applications to run using the same pre-defined machine state.\nFirst, you’ll need to get renv installed on your Docker image. The easiest way to accomplish this is with the remotes package. For example, you could install the latest release of renv from CRAN:\nRUN R -e \"install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))\"\nAlternatively, if you needed to use the development version of renv, you could use:\nRUN R -e \"install.packages('remotes', repos = c(CRAN = 'https://cloud.r-project.org'))\"\nRUN R -e \"remotes::install_github('rstudio/renv')\"\nNext, if you’d like the renv.lock lockfile to be used to install R packages when the Docker image is built, you’ll need to copy it to the container:\nWORKDIR /project\nCOPY renv.lock renv.lock\nNext, you need to tell renv which library paths to use for package installation. You can either set the RENV_PATHS_LIBRARY environment variable to a writable path within your Docker container, or copy the renv auto-loader tools into the container so that a project-local library can be automatically provisioned and used when R is launched.\n# approach one\nENV RENV_PATHS_LIBRARY renv/library\n\n# approach two\nRUN mkdir -p renv\nCOPY .Rprofile .Rprofile\nCOPY renv/activate.R renv/activate.R\nCOPY renv/settings.json renv/settings.json\nFinally, you can run renv::restore() to restore packages as defined in the lockfile:\nRUN R -e \"renv::restore()\"\nWith this, renv will download and install the requisite packages as appropriate when the image is created. Any new containers created from this image will hence have those R packages installed and visible at run-time."
+  },
+  {
+    "objectID": "assets/renv_docker.html#speeding-up-package-installations",
+    "href": "assets/renv_docker.html#speeding-up-package-installations",
+    "title": "Using renv with Docker",
+    "section": "Speeding up package installations",
+    "text": "Speeding up package installations\nThe aforementioned approach is useful if you have multiple applications with identical package requirements. In this case, a single image containing this identical package library could serve as the parent image for several containerized applications.\nHowever, renv::restore() is slow – it needs to download and install packages, which can take some time. Thus, some care is required to efficiently make use of the renv cache for projects that require:\n\nBuilding an image multiple times (e.g., to debug the production application as source code is updated), or\nCalling renv::restore() each time the container is run.\n\nThe former process can be sped up using multi-stage builds, the latter by dynamically provisioning R Libraries, as described below.\n\nMulti-stage builds\nFor projects that require repeatedly building an image, multi-stage builds can be used to speed up the build process. With multi-stage builds, multiple FROM statements are used in the Dockerfile and files can be copied across build stages.\nThis approach can be leveraged to generate more efficient builds by dedicating a first stage build to package synchronization and a second stage build to copying files and executing code that may need to be updated often across builds (e.g., code that needs to be debugged in the container).\nTo implement a two stage build, the following code could be used as part of a Dockerfile.\n# STAGE 1: renv-related code\nFROM &lt;parent_image&gt; AS base\n\nWORKDIR /project\n\n# using approach 2 above\nRUN mkdir -p renv\nCOPY renv.lock renv.lock\nCOPY .Rprofile .Rprofile\nCOPY renv/activate.R renv/activate.R\nCOPY renv/settings.dcf renv/settings.dcf\n\n# change default location of cache to project folder\nRUN mkdir renv/.cache\nENV RENV_PATHS_CACHE renv/.cache\n\n# restore \nRUN R -e \"renv::restore()\"\nThe above code uses FROM &lt;parent_image&gt; AS &lt;name&gt; to name the first stage of the build base. Here, &lt;parent_image&gt; should be replaced with an appropriate image name.\nSubsequently, the code uses approach 2 (described above) to copy the auto-loader to the project directory in the image. It additionally creates the renv/.cache directory that is to be used as the renv cache.\nThe second stage of the build is defined by adding the following code to the same Dockerfile, below the previous code chunk.\nFROM &lt;parent_image&gt;\n\nWORKDIR /project\nCOPY --from=base /project .\n\n# add commands that need to be debugged below\nHere, &lt;parent_image&gt; could be the same as the parent image of base, but does not have to be (see documentation for more details).\nThe key line is the COPY command, which specifies that the contents of /project directory from the base image are copied into the /project directory of this image.\nAny commands that will change frequently across builds could be included below the COPY command. If only this code associated with the second stage build is updated then renv::restore() will not be called again at build time. Instead, the layers associated with the base image will be loaded from Docker’s cache, thereby saving significant time in build process.\nIn fact, renv::restore() will only be called when the base image needs to be rebuilt (e.g., when changes are made to renv.lock). Docker’s cache system is generally good at understanding the dependencies of images. However, if you find that the base image is not updating as expected, it is possible to manually enforce a clean build by including the --no-cache option in the call to docker build.\n\n\nDynamically Provisioning R Libraries with renv\nHowever, on occasion, one will have multiple applications built from a single base image, but each application will have its own independent R package requirements. In this case, rather than including the package dependencies in the image itself, it would be preferable for each container to provision its own library at run-time, based on that application’s renv.lock lockfile.\nIn effect, this is as simple as ensuring that renv::restore() happens at container run-time, rather than image build time. However, on its own, renv::restore() is slow – it needs to download and install packages, which could take prohibitively long if an application needs to be run repeatedly.\nThe renv package cache can be used to help ameliorate this issue. When the cache is enabled, whenever renv attempts to install or restore an R package, it first checks to see whether that package is already available within the renv cache. If it is, that instance of the package is linked into the project library. Otherwise, the package is first installed into the renv cache, and then that newly-installed copy is linked for use in the project.\nIn effect, if the renv cache is available, you should only need to pay the cost of package installation once – after that, the newly-installed package will be available for re-use across different projects. At the same time, each project’s library will remain independent and isolated from one another, so installing a package within one container won’t affect another container.\nHowever, by default, each Docker container will have its own independent filesystem. Ideally, we’d like for all containers launched from a particular image to have access to the same renv cache. To accomplish this, we’ll have to tell each container to use an renv cache located on a shared mount.\nIn sum, if we’d like to allow for run-time provisioning of R package dependencies, we will need to ensure the renv cache is located on a shared volume, which is visible to any containers launched. We will accomplish this by:\n\nSetting the RENV_PATHS_CACHE environment variable, to tell the instance of renv running in each container where the global cache lives;\nTelling Docker to mount some filesystem location from the host filesystem, at some location (RENV_PATHS_CACHE_HOST), to a container-specific location (RENV_PATHS_CACHE_CONTAINER).\n\nFor example, if you had a container running a Shiny application:\n# the location of the renv cache on the host machine\nRENV_PATHS_CACHE_HOST=/opt/local/renv/cache\n\n# where the cache should be mounted in the container\nRENV_PATHS_CACHE_CONTAINER=/renv/cache\n\n# run the container with the host cache mounted in the container\ndocker run --rm \\\n    -e \"RENV_PATHS_CACHE=${RENV_PATHS_CACHE_CONTAINER}\" \\\n    -v \"${RENV_PATHS_CACHE_HOST}:${RENV_PATHS_CACHE_CONTAINER}\" \\\n    -p 14618:14618 \\\n    R -s -e 'renv::restore(); shiny::runApp(host = \"0.0.0.0\", port = 14618)'\nWith this, any calls to renv APIs within the created docker container will have access to the mounted cache. The first time you run a container, renv will likely need to populate the cache, and so some time will be spent downloading and installing the required packages. Subsequent runs will be much faster, as renv will be able to reuse the global package cache.\nThe primary downside with this approach compared to the image-based approach is that it requires you to modify how containers are created, and requires a bit of extra orchestration in how containers are launched. However, once the renv cache is active, newly-created containers will launch very quickly, and a single image can then be used as a base for a myriad of different containers and applications, each with their own independent package dependencies."
+  },
+  {
+    "objectID": "assets/renv_docker.html#handling-the-renv-autoloader",
+    "href": "assets/renv_docker.html#handling-the-renv-autoloader",
+    "title": "Using renv with Docker",
+    "section": "Handling the renv autoloader",
+    "text": "Handling the renv autoloader\nWhen R is launched within a project folder, the renv auto-loader (if present) will attempt to download and install renv into the project library. Depending on how your Docker container is configured, this could fail. For example:\nError installing renv:\n======================\nERROR: unable to create '/usr/local/pipe/renv/library/master/R-4.0/x86_64-pc-linux-gnu/renv'\nWarning messages:\n1: In system2(r, args, stdout = TRUE, stderr = TRUE) :\n  running command ''/usr/lib/R/bin/R' --vanilla CMD INSTALL -l 'renv/library/master/R-4.0/x86_64-pc-linux-gnu' '/tmp/RtmpwM7ooh/renv_0.12.2.tar.gz' 2&gt;&1' had status 1\n2: Failed to find an renv installation: the project will not be loaded.\nUse `renv::activate()` to re-initialize the project.\nBootstrapping renv into the project library might be unnecessary for you. If that is the case, then you can avoid this behavior by launching R with the --vanilla flag set; for example:\nR --vanilla -s -e 'renv::restore()'"
+  },
+  {
+    "objectID": "index.html#sec-zenodo_workflow",
+    "href": "index.html#sec-zenodo_workflow",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Rstudio project to Zenodo pipeline",
+    "text": "Rstudio project to Zenodo pipeline"
+  },
+  {
+    "objectID": "index.html#sec-docker_workflow",
+    "href": "index.html#sec-docker_workflow",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Containerisation with Docker",
+    "text": "Containerisation with Docker"
+  },
+  {
+    "objectID": "index.html#sec-git_workflow",
+    "href": "index.html#sec-git_workflow",
+    "title": "Reproducible Research with  and : Workflows for projects and publications",
+    "section": "Version control with Git",
+    "text": "Version control with Git"
+
   }
 ]

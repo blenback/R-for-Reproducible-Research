@@ -2,10 +2,6 @@
 title: 'Reproducible Research with <img style="vertical-align:middle; height:35px; width: 35px; border: none;
   background: none;" src="assets/images/Rlogo.png"> and <img style="vertical-align:middle; height:35px; width: 140px;" src="assets/images/quarto-logo-trademark.svg">: Workflows for data, projects and publications'
 subtitle: 'Landscape 2024 masterclass'
-execute:
-  echo: false
-  error: true
-  warning: true
 format:
   revealjs:
     theme: [default, clean.scss]
@@ -17,7 +13,6 @@ format:
     date-format: long
     cap-location: bottom
     preview-links: true
-    preload-iframes: true
 author:
   - name: Ben Black
     orcid: 0000-0002-8113-2114
@@ -51,14 +46,16 @@ date: last-modified
 :::
 
 # Introduction
-{{< include contents/about.qmd >}}
+
+<!-- {{< include contents/intro.qmd >}} -->
 
 # Research projects with R
+
 {{< include contents/Rprojects.qmd >}}
 
 # Let's take a 10 minute break!
 
-# 3 workflows for Reproducibility
+# Workflows for Reproducibility
 
 <!--{{< include contents/Zenodo_workflow.qmd >}}-->
 
@@ -68,7 +65,7 @@ date: last-modified
 
 # Quarto
 
-{{< include contents/Quarto_intro.qmd >}}
+<!-- {{< include contents/Quarto_intro.qmd >}} -->
 
 # Let's take another 10 minute break!
 

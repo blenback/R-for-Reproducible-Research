@@ -4,7 +4,6 @@ project:
 
 website:
   back-to-top-navigation: true
-  #bread-crumbs: false
   title: 'Reproducible Research with <img style="vertical-align:middle; height:1em; border: none; background: none;" src="assets/images/Rlogo.png"> and <img style="vertical-align:middle; height:1em;" src="assets/images/quarto-logo-trademark.svg">'
   search: TRUE #add search bar
   site-url: "https://blenback.github.io/R-for-Reproducible-Research/"
@@ -26,7 +25,7 @@ website:
     right: |
       Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)<br>
   navbar:
-    alignment: "center"
+    align: "center"
     background: secondary
     foreground: light
     tools:
@@ -37,32 +36,38 @@ website:
           - text: Report a Bug
             url:  https://github.com/blenback/R-for-Reproducible-Research/issues
   sidebar:
-    alignment: "left"
-    style: "docked"
+    align: "left"
+    style: "floating"
     border: false
     search: true
     contents:
       - text: "View in presentation format"
         icon: "bi-file-earmark-easel"
-        href: docs/presentation.html
-    collapse-level: 3
+        href: presentation.html
+    collapse-level: 1
   
 format:
   html:
     theme: 
       light: [cosmo, theme-light.scss]
       dark: [cosmo, theme-dark.scss]
-    #clean.scss
-    #css: css/styles.css
-    page-layout: article
+    code-copy: true
+    code-overflow: wrap
+    css: index.css
     grid:
-      sidebar-width: 500px
-      body-width: 1100px
-      margin-width: 50px
-      gutter-width: 1.5rem
-
+      sidebar-width: 250px
+      body-width: 1300px
+      margin-width: 100px
+crossref:
+  fig-title: ''
+  fig-labels: none
+bibliography: references.bib
+csl: diabetologia.csl
 execute:
-  echo: false
   error: true
   warning: false
+  freeze: auto
+    
+    
+
 

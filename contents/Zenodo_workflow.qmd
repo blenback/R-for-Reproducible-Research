@@ -1,3 +1,224 @@
+---
+execute:
+  echo: true
+  eval: false
+  error: false
+editor: 
+  markdown: 
+    wrap: 72
+bibliography: references.bib
+---
 
 
+<!-- Web content -->
 
+::: {.content-hidden when-format="revealjs"}
+### Environment Management with renv
+
+renv is a powerful R package designed to help manage project
+environments by creating project-specific libraries and lockfiles. As
+mentioned earlier, renv captures the exact versions of R packages used
+in a project, storing this information in a renv.lock file. This allows
+users to recreate the exact package environment when revisiting a
+project or transferring it to a different machine, ensuring
+reproducibility.
+
+The renv workflow is straightforward:
+
+-   Initialize renv in a project: renv creates a separate library in the
+    project folder, isolating the packages from the system-wide library.
+
+-   Snapshot dependencies: renv scans the project, identifying which
+    packages are being used and recording their versions in the
+    lockfile.
+
+-   Restore environments: Anyone cloning or receiving the project can
+    run renv::restore() to install the exact versions of the packages
+    listed in the lockfile, reproducing the original project
+    environment.
+
+One of the core strengths of renv is its flexibility. It integrates
+seamlessly with tools like RStudio, allowing easy management of
+dependencies without disrupting existing workflows. This makes it
+particularly well-suited for ensuring that research projects are
+reproducible across different systems and platforms.
+
+However, renv does not manage the **entire system environment** (such as
+the version of R itself or external dependencies like system libraries).
+For complete reproducibility, combining renv with containerization tools
+(like Docker) or publishing outputs (such as code or data) via
+repositories like Zenodo is recommended. The use of renv allows
+researchers to easily capture and restore the R environment, while
+repositories can ensure the long-term availability of the project’s
+outputs.
+
+The code specific workflow is straightforward and well explained in the
+documentation: <https://rstudio.github.io/renv/articles/renv.html>
+
+### Publishing and Archiving with Zenodo
+
+Zenodo complements renv by providing a platform to publish, archive, and
+share research outputs, including datasets, code, and publications.
+Created by CERN and OpenAIRE, Zenodo ensures that research artifacts are
+accessible for the long term, aligning with open science principles.
+Each item published on Zenodo is assigned a permanent DOI, making it
+easy to reference and cite in academic work.
+
+A unique feature of Zenodo is its support for versioning. Researchers
+can update their work over time, while earlier versions remain
+accessible, ensuring transparency and reproducibility. This versioning
+system is crucial in scientific research, where updated analyses and
+data corrections are often necessary, but reproducibility of original
+work must be maintained.
+
+The zen4R package [@blondel2024] enhances the integration of R with
+Zenodo by providing tools to programmatically interact with Zenodo’s API
+directly from R. This package allows researchers to:
+
+-   Upload datasets and code to Zenodo.
+
+-   Automate the publication process by creating new records, updating
+    metadata, and managing depositions.
+
+-   Retrieve information about existing Zenodo records.
+
+This makes it easier to publish research outputs, ensuring that
+versioning, DOIs, and metadata management are handled efficiently within
+R workflows, facilitating reproducibility and sharing in open science
+practices. Learn more about the zen4R package:
+<https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html>
+
+Zenodo also integrates seamlessly with GitHub. When a research project
+(e.g., code) is hosted on GitHub, Zenodo can automatically archive the
+repository upon each new release, creating a snapshot with a DOI. This
+integration simplifies the process of ensuring that research code is
+preserved in an immutable form, contributing to better practices in
+reproducible science.
+
+While renv focuses on internal reproducibility by controlling the R
+environment, Zenodo ensures external reproducibility by providing a
+stable and citable repository for the research outputs. Combining both
+tools allows researchers to capture the environment in which their
+analysis was conducted and share it along with their data and code.
+Together, renv and Zenodo form a comprehensive solution for
+reproducible, open science research in accordance with the FAIR guiding
+principles [@wilkinson2016].
+:::
+
+<!-- Presentation content -->
+
+::: {.content-visible when-format="revealjs"}
+### Managing Project Environments with renv
+
+-   renv creates project-specific libraries
+
+-   Captures package versions in a renv.lock file
+
+-   Ensures reproducibility across machines
+
+-   Centralizes environment management within each project
+
+::: {.notes}
+-   renv helps manage R package environments by creating isolated libraries specific to each project, ensuring that the project uses only the packages it needs.
+
+-   The renv.lock file records exact versions of all installed packages, allowing consistent reproducibility.
+
+-   This feature is especially useful for transferring projects between machines, maintaining a controlled environment.
+
+-   It centralizes the environment management within the project folder, avoiding conflicts with global R libraries.
+:::
+### renv Workflow
+
+-   Initialize renv to isolate project dependencies
+
+-   Snapshot dependencies to create a lockfile
+
+-   Restore environments using renv::restore()
+
+-   Easy integration with RStudio for workflow management
+
+::: {.notes}
+-   Initialize renv in a project to isolate packages from the system-wide library.
+
+-   Snapshot the project’s package dependencies, generating a lockfile (renv.lock).
+
+-   Restore the environment by reinstalling packages using the lockfile.
+
+-   renv integrates smoothly with RStudio, making it easy to use alongside other development tools.
+:::
+### Limitations of renv
+
+-   Does not manage R versions or external dependencies
+
+-   Focuses on internal reproducibility
+
+-   Best combined with containerization (e.g., Docker)
+
+-   Complements external repositories (e.g., Zenodo)
+
+::: {.notes}
+-   renv does not manage system-wide components like the R version or external libraries.
+
+-   renv ensures internal reproducibility.
+
+-   For full reproducibility, renv should be combined with tools like Docker for system environment control.
+
+-   Publishing platforms like Zenodo can be used to store code and data for long-term preservation.
+:::
+### Publishing and Archiving with Zenodo
+
+-   Provides long-term storage for research outputs
+
+-   Assigns permanent DOIs for citations
+
+-   Supports versioning for transparency
+
+-   Simplifies archiving from GitHub with DOI snapshots
+
+::: {.notes}
+-   Zenodo provides a repository for long-term archiving of datasets, code, and publications, ensuring accessibility.
+
+-   Each uploaded item is assigned a permanent DOI for easy citation in research.
+
+-   Zenodo’s versioning feature allows researchers to update projects while keeping previous versions accessible.
+
+-   Integration with GitHub allows automatic archiving of new code releases, creating DOI-linked snapshots.
+:::
+### Enhancing Workflow with zen4R
+
+-   Upload datasets, code, and metadata from R to Zenodo
+
+-   Automate publication and deposition management
+
+-   Retrieve and update Zenodo records directly in R
+
+-   Facilitates integration and reproducibility in R workflows
+
+::: {.notes}
+-   zen4R allows R users to interact with Zenodo’s API to upload data and code directly from R.
+
+-   It supports automated publication, including metadata management and record updating.
+
+-   Retrieve and update Zenodo records programmatically within R.
+
+-   This makes publishing more efficient, especially in workflows requiring frequent updates or version control.
+:::
+### Combining renv and Zenodo
+
+-   RENV manages internal project environments
+
+-   Zenodo ensures external reproducibility with archiving
+
+-   Together, they provide a comprehensive solution
+
+-   Aligns with open science and FAIR principles
+::: {.notes}
+-   RENV manages internal environments by locking package versions and dependencies.
+
+-   Zenodo provides external storage and ensures reproducibility by archiving and versioning research outputs.
+
+-   Together, they create a comprehensive solution for reproducible, open science projects.
+
+-   This combination aligns with FAIR principles, ensuring data is Findable, Accessible, Interoperable, and Reusable.
+:::
+:::
