@@ -195,14 +195,21 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </div>
 <section id="using-docker-with-r" class="level3">
 <h3 class="anchored" data-anchor-id="using-docker-with-r">Using Docker with R</h3>
-<p>So to create a <code>Docker Image</code> to containerize our R research projects we need to start by creating a <code>Dockerfile</code> and, as mentioned above this starts with a base image. In our case this base image must logically include R and RStudio (if we want to utilise the RStudio Projects features).</p>
+<p>So to create a <code>Docker Image</code> to containerize our R research projects we need to start by creating a <code>Dockerfile</code> and, as mentioned above, this should start with a base image. In our case this base image must logically include R and RStudio (if we want to utilise the RStudio Projects features).</p>
 <p>Fortunately there is a project that specifically catalogs and manages Docker Images for R projects: <a href="https://rocker-project.org/"><code>Rocker</code></a>. The images available through the Rocker project not only include different versions of R and RStudio but also images containing collections of R packages for specific purposes (e.g.&nbsp;tidyverse for data wrangling and visualisation, geospatial packages etc.).</p>
-<p>In terms of actually creating the <code>Dockerfile</code> for our R project, this can be done manually (See a good R-focused tutorial here)</p>
+<p>In terms of actually creating the <code>Dockerfile</code> for our R project, this can be done manually (See a good R-focused tutorial<a href="https://colinfay.me/docker-r-reproducibility/">here</a>), however there are also R packages that can help with this process such as <a href="https://thinkr-open.github.io/dockerfiler/"><code>dockerfiler</code></a> and the <code>[rrtools</code>](https://github.com/benmarwick/rrtools) package.</p>
+<p>For our workflow we will use the <code>dockerfiler</code> package. - Main function of the package is <code>dockerfile_build()</code> which creates a Dockerfile and builds a Docker image from it.</p>
 </section>
-<section id="practical-example-with-dockerfiler-package" class="level3">
-<h3 class="anchored" data-anchor-id="practical-example-with-dockerfiler-package">Practical example with dockerfiler package</h3>
-<p>Manually creating the Dockerfile: https://colinfay.me/docker-r-reproducibility/</p>
-<p>The main advantages of using Docker within your development environment are: https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf https://thinkr-open.github.io/dockerfiler/ https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/</p>
+<section id="docker-with-renv" class="level3">
+<h3 class="anchored" data-anchor-id="docker-with-renv">Docker with renv</h3>
+</section>
+<section id="creating-docker-image" class="level3">
+<h3 class="anchored" data-anchor-id="creating-docker-image">Creating docker image</h3>
+</section>
+<section id="running-docker-container" class="level3">
+<h3 class="anchored" data-anchor-id="running-docker-container">Running docker container</h3>
+<p>https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf</p>
+<p>https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/</p>
 <p>stevedore package for pulling images from Dockerhub using the Docker API https://richfitz.github.io/stevedore/</p>
 
 
@@ -787,8 +794,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-<script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
