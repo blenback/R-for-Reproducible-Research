@@ -60,18 +60,20 @@ Zenodo complements renv by providing a platform to publish, archive, and
 share research outputs, including datasets, code, and publications.
 Created by CERN and OpenAIRE, Zenodo ensures that research artifacts are
 accessible for the long term, aligning with open science principles.
-Each item published on Zenodo is assigned a permanent DOI, making it
-easy to reference and cite in academic work.
+While Zenodo is not the only option, we prefer it because it is free,
+supports up to 60GB per record, and adheres to the FAIR standards.
 
-A unique feature of Zenodo is its support for versioning. Researchers
-can update their work over time, while earlier versions remain
-accessible, ensuring transparency and reproducibility. This versioning
-system is crucial in scientific research, where updated analyses and
-data corrections are often necessary, but reproducibility of original
-work must be maintained.
+Each item published on Zenodo is assigned two DOIs: one at the project
+level and one for each version, making it easy to reference and cite in
+academic work. A unique feature of Zenodo is its support for versioning,
+allowing researchers to update their work over time, while earlier
+versions remain accessible. This ensures transparency and
+reproducibility, crucial in scientific research.
 
-The zen4R package [@blondel2024] enhances the integration of R with
-Zenodo by providing tools to programmatically interact with Zenodo’s API
+Zenodo’s metadata can cross-reference other datasets and code records,
+promoting greater collaboration and integration across projects. The
+zen4R package [@blondel2024] enhances the integration of R with Zenodo
+by providing tools to programmatically interact with Zenodo’s API
 directly from R. This package allows researchers to:
 
 -   Upload datasets and code to Zenodo.
@@ -117,7 +119,7 @@ principles [@wilkinson2016].
 
 -   Centralizes environment management within each project
 
-::: {.notes}
+::: notes
 -   renv helps manage R package environments by creating isolated
     libraries specific to each project, ensuring that the project uses
     only the packages it needs.
@@ -142,7 +144,7 @@ principles [@wilkinson2016].
 
 -   Easy integration with RStudio for workflow management
 
-::: {.notes}
+::: notes
 -   Initialize renv in a project to isolate packages from the
     system-wide library.
 
@@ -165,7 +167,7 @@ principles [@wilkinson2016].
 
 -   Complements external repositories (e.g., Zenodo)
 
-::: {.notes}
+::: notes
 -   renv does not manage system-wide components like the R version or
     external libraries.
 
@@ -188,18 +190,16 @@ principles [@wilkinson2016].
 
 -   Simplifies archiving from GitHub with DOI snapshots
 
-::: {.notes}
--   Zenodo provides a repository for long-term archiving of datasets,
-    code, and publications, ensuring accessibility.
+::: notes
+-   Zenodo provides a repository for long-term archiving of code and datasets, ensuring accessibility.
 
--   Each uploaded item is assigned a permanent DOI for easy citation in
-    research.
+-   Items are assigned permanent DOIs at both project and version levels.
 
 -   Zenodo’s versioning feature allows researchers to update projects
     while keeping previous versions accessible.
 
 -   Integration with GitHub allows automatic archiving of new code
-    releases, creating DOI-linked snapshots.
+    releases, ensuring preservation
 :::
 
 ### Enhancing Workflow with zen4R
@@ -212,7 +212,7 @@ principles [@wilkinson2016].
 
 -   Facilitates integration and reproducibility in R workflows
 
-::: {.notes}
+::: notes
 -   zen4R allows R users to interact with Zenodo’s API to upload data
     and code directly from R.
 
@@ -233,9 +233,9 @@ principles [@wilkinson2016].
 
 -   Together, they provide a comprehensive solution
 
--   Aligns with open science and FAIR principles 
+-   Aligns with open science and FAIR principles
 
-::: {.notes}
+::: notes
 -   RENV manages internal environments by locking package versions and
     dependencies.
 
@@ -248,5 +248,4 @@ principles [@wilkinson2016].
 -   This combination aligns with FAIR principles, ensuring data is
     Findable, Accessible, Interoperable, and Reusable.
 :::
-
 :::
