@@ -55,7 +55,7 @@ date: last-modified
 
 # Let's take a 10 minute break!
 
-# 3 workflows for Reproducibility
+# Workflows for Reproducibility
 
 <!--{{< include contents/Zenodo_workflow.qmd >}}-->
 

@@ -1,0 +1,13 @@
+zen4R-package	zen4R
+download_zenodo	download_zenodo
+export_zenodo	export_zenodo
+get_licenses	get_licenses
+get_versions	get_versions
+get_zenodo	get_zenodo
+human_filesize	human_filesize
+zen4R	zen4R
+zen4RLogger	zen4RLogger
+ZenodoManager	ZenodoManager
+ZenodoRecord	ZenodoRecord
+ZenodoRequest	ZenodoRequest
+zenodo_pat	zenodo_pat

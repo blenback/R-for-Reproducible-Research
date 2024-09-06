@@ -1,0 +1,44 @@
+Package: leaflet.providers
+Type: Package
+Title: Leaflet Providers
+Version: 1.9.0
+Authors@R: c(
+      person("Leslie", "Huang", email = "lesliehuang@nyu.edu", role = c("aut")),
+      person("Barret", "Schloerke", email = "barret@rstudio.com", role = c("ctb", "cre"),
+        comment = c(ORCID = "0000-0001-9986-114X")),
+      person("Leaflet Providers contributors", role = c("ctb", "cph"), comment = "Leaflet Providers plugin"),
+      person("RStudio", role = c("cph", "fnd"))
+    )
+Description: Contains third-party map tile provider information from
+    'Leaflet.js', <https://github.com/leaflet-extras/leaflet-providers>, to be
+    used with the 'leaflet' R package. Additionally, 'leaflet.providers'
+    enables users to retrieve up-to-date provider information between package
+    updates.
+License: BSD_2_clause + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 2.10)
+Suggests: V8, jsonlite, testthat (>= 2.1.0)
+Language: en-US
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+URL: https://github.com/rstudio/leaflet.providers
+BugReports: https://github.com/rstudio/leaflet.providers/issues
+Collate: 'providers_data.R' 'get_current_providers.R'
+RemoteType: github
+RemoteHost: api.github.com
+RemoteRepo: leaflet.providers
+RemoteUsername: rstudio
+RemoteRef: HEAD
+RemoteSha: 86765f1266769cad3ea3dc316cc9271b21c59225
+GithubRepo: leaflet.providers
+GithubUsername: rstudio
+GithubRef: HEAD
+GithubSHA1: 86765f1266769cad3ea3dc316cc9271b21c59225
+NeedsCompilation: no
+Packaged: 2023-07-18 10:15:14 UTC; bblack
+Author: Leslie Huang [aut],
+  Barret Schloerke [ctb, cre] (<https://orcid.org/0000-0001-9986-114X>),
+  Leaflet Providers contributors [ctb, cph] (Leaflet Providers plugin),
+  RStudio [cph, fnd]
+Maintainer: Barret Schloerke <barret@rstudio.com>
+Built: R 4.2.2; ; 2023-07-18 10:15:14 UTC; windows

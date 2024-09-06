@@ -1,11 +1,14 @@
 ---
 execute:
+  echo: true
   eval: false
+  error: false
 editor: 
   markdown: 
     wrap: 72
 bibliography: references.bib
 ---
+
 
 <!-- Web content -->
 

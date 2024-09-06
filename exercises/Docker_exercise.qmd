@@ -1,0 +1,12 @@
+---
+execute:
+  echo: true
+  eval: false
+  error: false
+---
+
+## Containerisation with Docker exercise
+
+In this exercise we will create a Docker container for a simple R project. The project is the same that is created in the first workflow [exercise](@sec-Rproj_zenodo_exercise), however to save time or in case you haven't completed this exercise we will start with the finished output from it.  
+
+<br><a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download Source Code Files</b></a>

@@ -222,7 +222,8 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 
-<!-- Web content -->
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"><!-- Web content --></h2>
 <p><strong>Let’s start with a definition of what makes a good R project from Jenny Bryan:</strong></p>
 <p>A good R project… <em>“creates everything it needs, in its own workspace or folder, and it touches nothing it did not create.”</em> <span class="citation" data-cites="bryan2017">[<a href="#ref-bryan2017" role="doc-biblioref">1</a>]</span></p>
 <p>This is a good definition that contains concepts, such as the notion that projects should be ‘self-contained’. However we add one more caveat to this definition which is that a good R project should <em>explain itself</em>.</p>
@@ -234,6 +235,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </figure>
 </div>
 <p>As you move through these you will see that there are areas of overlap and complementarity between them. These topics are also central to the choice of approaches in the <a href="@sec-workflows">three workflows for reproducibility</a> that we will share.</p>
+</section>
 <section id="sec-projects" class="level2">
 <h2 class="anchored" data-anchor-id="sec-projects"><img src="assets/images/RStudio_logo_flat.svg" style="vertical-align:middle; height:1.5em;"> projects</h2>
 <p>How many times have you opened an R script and been greeted by this line:</p>
@@ -306,7 +308,12 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <figcaption>Package dependencies of popular R package <span class="citation" data-cites="devries2014">[<a href="#ref-devries2014" role="doc-biblioref">2</a>]</span></figcaption>
 </figure>
 </div>
-<p>However the problem is bigger than just packages because when your code runs your code it is also utilising: - a specific version of R - a specific operating system - Specific versions of system dependencies, i.e.&nbsp;other software in other languages that R packages themselves utilise e.g GDAL for spatial analysis packages like <code>terra</code> .</p>
+<p>However the problem is bigger than just packages because when your code runs it is also utilising:</p>
+<ul>
+<li><p>A specific version of R</p></li>
+<li><p>A specific operating system</p></li>
+<li><p>Specific versions of system dependencies, i.e.&nbsp;other software in other languages that R packages themselves utilise e.g GDAL for spatial analysis packages like <code>terra</code>.</p></li>
+</ul>
 <p>All of these things together make up what is known as the ‘environment’ of your code. Hence the process of documenting and managing this environment to is ensure that your code is reproducible (i.e.&nbsp;it not only runs but also consistently produces the same results).</p>
 <p>There are different approaches to environment management that differ in their complexity and hence maybe suited to some projects and not others. For the purpose of this workshop we will focus on what we have found is one of the most user-friendly ways to manage your <em>package environment</em> (caveat that will be discussed) in R which is the package <code>renv</code>. Below we will introduce this package in more detail as it will form a central part of the <a href="@sec-workflows">three workflows for reproducibility</a> that we present.</p>
 <section id="creating-reproducible-environments-with-renv" class="level3">
@@ -314,14 +321,14 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p>As mentioned above <a href="https://rstudio.github.io/renv/articles/renv.html"><code>renv</code></a> is an R package that helps you create reproducible environments for your R projects by not only documenting your package environment but also providing functionality to re-create it.</p>
 <p>It does this by creating <strong>project specific libraries</strong> (i.e.&nbsp;directories: <code>renv/library</code>) which contain all the packages used by your project. This is different from the default approach to package usage and installation whereby all packages are stored in a single library on your machine (system library). Having separate project libraries means “that different projects can use different versions of packages and installing, updating, or removing packages in one project doesn’t affect any other project.” <span class="citation" data-cites="renv">[<a href="#ref-renv" role="doc-biblioref">3</a>]</span>. In order to make sure that your project uses the project library everytime it is opened <code>renv</code> utilises the functionality of <a href="@sec-rprofile"><code>.Rprofile's</code></a> to set the project library as the default library.</p>
 <p>Another key process of renv is to create project specific <strong>lockfiles</strong> (<code>renv.lock</code>) which contain sufficient metadata about each package in the project library so that it can be re-installed on a new machine.</p>
-<p>As alluded to, renv does a great job of managing your packages but is not intended to manage other aspects of your environment such as: tracking your version of R or your operating system. This is why if you want ‘bullet-proof’ reproducibility renv needs to be used alongside other approaches such as containerisation which is the <a href="@sec-docker_workflow">3rd and most complex workflow</a> we will discuss.</p>
+<p>As alluded to, renv does a great job of managing your packages but is not intended to manage other aspects of your environment such as: tracking your version of R or your operating system. This is why if you want ‘bullet-proof’ reproducibility renv needs to be used alongside other approaches such as containerization which is the <a href="@sec-docker_workflow">3rd and most complex workflow</a> we will discuss.</p>
 </section>
 </section>
 <section id="sec-writing-clean-code" class="level2">
 <h2 class="anchored" data-anchor-id="sec-writing-clean-code">Writing clean code</h2>
 <p>The notion of writing ‘clean’ code can be daunting, especially for those new to programming. However, the most important thing to bear in mind is that there is no objective measure that makes code ‘clean’ vs.&nbsp;‘un-clean’, rather we should of think ‘clean’ coding as the pursuit of making your code easier to read, understand and maintain. Also while we should aspire to writing clean code, it is arguably more important that it functions correctly and efficiently.</p>
 <p>The central concept of clean coding is that, like normal writing, we should follow a set of rules and conventions. For example, in English a sentence should start with a capital letter and end with a full stop. Unfortunately, in terms of writing R code there is not a single set of conventions that everyone proscribes to, instead there are numerous styles that have been outlined and the important thing is to choose a style and apply it consistently in your coding.</p>
-<p>Perhaps the two most common styles are the <a href="https://style.tidyverse.org/">Tidyverse style</a> and the <a href="https://google.github.io/styleguide/Rguide.html">Google R style</a>(Which is actually a derivative of the former). Neither style can be said to be the more correct, rather they express opinionated preferences on a series of common topics such as: Object naming, use of assignment operators, spacing, indentation, line length, parentheses placement, etc.</p>
+<p>Perhaps the two most common styles are the <a href="https://style.tidyverse.org/">Tidyverse style</a> and the <a href="https://google.github.io/styleguide/Rguide.html">Google R style</a> (Which is actually a derivative of the former). Neither style can be said to be the more correct, rather they express opinionated preferences on a series of common topics such as: Object naming, use of assignment operators, spacing, indentation, line length, parentheses placement, etc.</p>
 <p>Rather than detail all of these topics here we will focus on just on some related tips that we think are most relevant for scientific research coding, including how to automate the formatting of your code to a particular style. However, we encourage you to go through the different style guides when you have the time.</p>
 <section id="sec-script_headers" class="level3">
 <h3 class="anchored" data-anchor-id="sec-script_headers">Script headers</h3>
@@ -476,19 +483,40 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </ul>
 <p>The latter of these two are more detailed so we have provided further information and tips in sections below.</p>
 <section id="sec-roxygen" class="level3">
-<h3 class="anchored" data-anchor-id="sec-roxygen">Function documentation with roxygen</h3>
-<p>Base R provides a standard way of documenting a package where each function is documented in a topic, an .Rd file (“R documentation”) in the man/ directory. .Rd files use a custom syntax, loosely based on LaTeX, and can be rendered to HTML, plain text, or pdf, as needed, for viewing in different contexts <span class="citation" data-cites="wickham2024">[<a href="#ref-wickham2024" role="doc-biblioref">7</a>]</span>.</p>
-<p>R</p>
+<h3 class="anchored" data-anchor-id="sec-roxygen">Function documentation with <code>roxygen2</code></h3>
+<p>Base R provides a standard way of documenting a package where each function is documented in an <code>.Rd</code> file (R documentation). This documentation uses a custom syntax to detail key aspects of the functions such as their input parameters, outputs and any package dependencies <span class="citation" data-cites="wickham2024">[<a href="#ref-wickham2024" role="doc-biblioref">7</a>]</span>.</p>
+<p>In the case of many research projects you will not be creating a package however it is still useful to apply this documentation style to your functions as it is a good way to make them understandable and easier to modify by others. For example, having clear information about the object (e.g.&nbsp;a vector or data.frame) that a function accepts, saves others time in guessing what the function is expecting if they are trying to use new data.</p>
+<p>However, rather than manually writing <code>.Rd</code> files, we can use the <code>roxygen2</code> package to automatically generate these files from a block of comments that are added to the top of the function scripts. To add this comment block, place your cursor inside a function you want to document and press <code>Ctrl + Shift + R</code> (or <code>Cmd + Shift + R</code> on Mac) or you can go to <em>code tools &gt; insert roxygen skeleton</em> (code tools is represented by the wand icon in the top row of the source pane). As you can see in this gif below, when you insert the roxygen block it will already contain the names of the function names, its arguments and any returns and the function name. You can then fill in the rest of the information, such as the description and dependencies etc. for a guide to these other fields see the <a href="https://roxygen2.r-lib.org/articles/rd.html">roxygen2 documentation</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://jozef.io/img/r102-01-add-roxy-skeleton.gif" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Inserting roxygen block <span class="citation" data-cites="hajnala2018">[<a href="#ref-hajnala2018" role="doc-biblioref"><strong>hajnala2018?</strong></a>]</span></figcaption>
+</figure>
+</div>
 </section>
 <section id="tips-for-readme-writing" class="level3">
 <h3 class="anchored" data-anchor-id="tips-for-readme-writing">Tips for README writing</h3>
-<p>If you look at the source code of R packages or projects that use R in Github repositories you will see that they all contain <code>README.md</code> files. This is the markdown format of the README file and is the most common format for README files in R projects. These files are often accompanied by the corresponding file <code>README.Rmd</code> which can be used to generate the <code>README.md</code> file. Markdown format is used for README’s because it can be read by many programs anrendd ered in a variety of formats.</p>
-<p>https://usethis.r-lib.org/reference/use_readme_rmd.html</p>
-<!-- Presentation content -->
-
-
-
+<p>If you look at the source code of R packages or projects that use R in Github repositories you will see that they all contain <code>README.md</code> files. This is the markdown format of the README file and is the most common format for README files in R projects. These files are often accompanied by the corresponding file <code>README.Rmd</code> which generates the <code>README.md</code> file. Markdown format is used for README’s because it can be read by many programs and rendered in a variety of formats. In this sense writing the README for your project in markdown makes sense and there tools available to help you do this such as the <code>usethis</code> package which has a function <a href="https://usethis.r-lib.org/reference/use_readme_rmd.html"><code>use_readme_rmd()</code></a> that will create a <code>README.Rmd</code> file for you. However, depending on who you anticipate using your project you may also want to create your README as a raw text file (<code>.txt</code>) which may be a more familiar format for some users and again can be opened by many different programs.</p>
+<p>Again there is not a single standardised format for what should be included in your README file but here is an example of a README file that was written for one of the authors code/data upload alongside a publication: <a href="assets/README_demo.txt">README.txt</a></p>
+<p>You will see that one of the things this README includes is a tree diagram which shows the directory structure of the project right down to the file level. This is a useful way to give an overview of what users should find included in the project and then explanatory notes can be added to explain the purpose of each file or directory. Such a diagram can be easily generated using the <code>fs</code> package:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"fs"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fs)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#vector path of the target directory to make a file tree from</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>Target_dir <span class="ot">&lt;-</span> <span class="st">"YOUR DIR"</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#produce tree diagram of directory sub-dirs and files and save output using capture.ouput from base R utils.</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">capture.output</span>(<span class="fu">dir_tree</span>(Target_dir), <span class="at">file=</span> <span class="st">'Dir_tree_output.txt'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"><!-- Presentation content --></h2>
+<hr>
+
+
+
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">

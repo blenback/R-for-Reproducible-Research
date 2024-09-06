@@ -7,7 +7,7 @@ execute:
 ---
 
 <!-- Web content -->
-
+-------------------------------------------------------------------------------
 ::: {.content-visible when-format="html"}
 **Let's start with a definition of what makes a good R project from Jenny Bryan:**
 
@@ -91,7 +91,13 @@ Secondly, having the user install an unspecified version of a package could also
 
 ![Package dependencies of popular R package [@devries2014]](assets/images/package_dependencies_2.png){width="50%" fig-align="center"}
 
-However the problem is bigger than just packages because when your code runs your code it is also utilising: - a specific version of R - a specific operating system - Specific versions of system dependencies, i.e. other software in other languages that R packages themselves utilise e.g GDAL for spatial analysis packages like `terra` .
+However the problem is bigger than just packages because when your code runs it is also utilising:
+
+-   A specific version of R
+
+-   A specific operating system
+
+-   Specific versions of system dependencies, i.e. other software in other languages that R packages themselves utilise e.g GDAL for spatial analysis packages like `terra`.
 
 All of these things together make up what is known as the 'environment' of your code. Hence the process of documenting and managing this environment to is ensure that your code is reproducible (i.e. it not only runs but also consistently produces the same results).
 
@@ -105,7 +111,7 @@ It does this by creating **project specific libraries** (i.e. directories: `renv
 
 Another key process of renv is to create project specific **lockfiles** (`renv.lock`) which contain sufficient metadata about each package in the project library so that it can be re-installed on a new machine.
 
-As alluded to, renv does a great job of managing your packages but is not intended to manage other aspects of your environment such as: tracking your version of R or your operating system. This is why if you want 'bullet-proof' reproducibility renv needs to be used alongside other approaches such as containerisation which is the [3rd and most complex workflow](@sec-docker_workflow) we will discuss.
+As alluded to, renv does a great job of managing your packages but is not intended to manage other aspects of your environment such as: tracking your version of R or your operating system. This is why if you want 'bullet-proof' reproducibility renv needs to be used alongside other approaches such as containerization which is the [3rd and most complex workflow](@sec-docker_workflow) we will discuss.
 
 ## Writing clean code {#sec-writing-clean-code}
 
@@ -113,7 +119,7 @@ The notion of writing 'clean' code can be daunting, especially for those new to 
 
 The central concept of clean coding is that, like normal writing, we should follow a set of rules and conventions. For example, in English a sentence should start with a capital letter and end with a full stop. Unfortunately, in terms of writing R code there is not a single set of conventions that everyone proscribes to, instead there are numerous styles that have been outlined and the important thing is to choose a style and apply it consistently in your coding.
 
-Perhaps the two most common styles are the [Tidyverse style](https://style.tidyverse.org/) and the [Google R style](https://google.github.io/styleguide/Rguide.html)(Which is actually a derivative of the former). Neither style can be said to be the more correct, rather they express opinionated preferences on a series of common topics such as: Object naming, use of assignment operators, spacing, indentation, line length, parentheses placement, etc.
+Perhaps the two most common styles are the [Tidyverse style](https://style.tidyverse.org/) and the [Google R style](https://google.github.io/styleguide/Rguide.html) (Which is actually a derivative of the former). Neither style can be said to be the more correct, rather they express opinionated preferences on a series of common topics such as: Object naming, use of assignment operators, spacing, indentation, line length, parentheses placement, etc.
 
 Rather than detail all of these topics here we will focus on just on some related tips that we think are most relevant for scientific research coding, including how to automate the formatting of your code to a particular style. However, we encourage you to go through the different style guides when you have the time.
 
@@ -287,20 +293,353 @@ Instead, we would suggest to follow the maxim of *not letting the perfect be the
 
 The latter of these two are more detailed so we have provided further information and tips in sections below.
 
-### Function documentation with roxygen {#sec-roxygen}
+### Function documentation with `roxygen2` {#sec-roxygen}
 
-Base R provides a standard way of documenting a package where each function is documented in a topic, an .Rd file (“R documentation”) in the man/ directory. .Rd files use a custom syntax, loosely based on LaTeX, and can be rendered to HTML, plain text, or pdf, as needed, for viewing in different contexts [@wickham2024].
+Base R provides a standard way of documenting a package where each function is documented in an `.Rd` file (R documentation). This documentation uses a custom syntax to detail key aspects of the functions such as their input parameters, outputs and any package dependencies [@wickham2024].
 
-R
+In the case of many research projects you will not be creating a package however it is still useful to apply this documentation style to your functions as it is a good way to make them understandable and easier to modify by others. For example, having clear information about the object (e.g. a vector or data.frame) that a function accepts, saves others time in guessing what the function is expecting if they are trying to use new data.
+
+However, rather than manually writing `.Rd` files, we can use the `roxygen2` package to automatically generate these files from a block of comments that are added to the top of the function scripts. To add this comment block, place your cursor inside a function you want to document and press `Ctrl + Shift + R` (or `Cmd + Shift + R` on Mac) or you can go to *code tools \> insert roxygen skeleton* (code tools is represented by the wand icon in the top row of the source pane). As you can see in this gif below, when you insert the roxygen block it will already contain the names of the function names, its arguments and any returns and the function name. You can then fill in the rest of the information, such as the description and dependencies etc. for a guide to these other fields see the [roxygen2 documentation](https://roxygen2.r-lib.org/articles/rd.html).
+
+![Inserting roxygen block [@hajnala2018]](https://jozef.io/img/r102-01-add-roxy-skeleton.gif){alt="Inserting roxygen block" width="50%"}
 
 ### Tips for README writing
 
-If you look at the source code of R packages or projects that use R in Github repositories you will see that they all contain `README.md` files. This is the markdown format of the README file and is the most common format for README files in R projects. These files are often accompanied by the corresponding file `README.Rmd` which can be used to generate the `README.md` file. Markdown format is used for README's because it can be read by many programs anrendd ered in a variety of formats.
+If you look at the source code of R packages or projects that use R in Github repositories you will see that they all contain `README.md` files. This is the markdown format of the README file and is the most common format for README files in R projects. These files are often accompanied by the corresponding file `README.Rmd` which generates the `README.md` file. Markdown format is used for README's because it can be read by many programs and rendered in a variety of formats. In this sense writing the README for your project in markdown makes sense and there tools available to help you do this such as the `usethis` package which has a function [`use_readme_rmd()`](https://usethis.r-lib.org/reference/use_readme_rmd.html) that will create a `README.Rmd` file for you. However, depending on who you anticipate using your project you may also want to create your README as a raw text file (`.txt`) which may be a more familiar format for some users and again can be opened by many different programs.
 
-https://usethis.r-lib.org/reference/use_readme_rmd.html
+Again there is not a single standardised format for what should be included in your README file but here is an example of a README file that was written for one of the authors code/data upload alongside a publication: [README.txt](assets/README_demo.txt)
+
+You will see that one of the things this README includes is a tree diagram which shows the directory structure of the project right down to the file level. This is a useful way to give an overview of what users should find included in the project and then explanatory notes can be added to explain the purpose of each file or directory. Such a diagram can be easily generated using the `fs` package:
+
+```{r}
+install.packages("fs")
+library(fs)
+
+#vector path of the target directory to make a file tree from
+Target_dir <- "YOUR DIR"
+
+#produce tree diagram of directory sub-dirs and files and save output using capture.ouput from base R utils.
+capture.output(dir_tree(Target_dir), file= 'Dir_tree_output.txt')
+```
+
 :::
 
 <!-- Presentation content -->
+------------------------------------------------------------------------
+
 
 ::: {.content-visible when-format="revealjs"}
+**Let's start with a definition of what makes a good R project from Jenny Bryan:**
+
+A good R project... *"creates everything it needs, in its own workspace or folder, and it touches nothing it did not create."* [@bryan2017]
+
+This is a good definition that contains concepts, such as the notion that projects should be 'self-contained'. However we add one more caveat to this definition which is that a good R project should *explain itself*.
+
+For the purpose of this workshop we will approach this topic by splitting it up into 6 topics which are highlighted in this graphic:
+
+![Graphical overview of components of a good research project in R](assets/images/project_components.png)
+
+As you move through these you will see that there are areas of overlap and complementarity between them. These topics are also central to the choice of approaches in the [three workflows for reproducibility](@sec-workflows) that we will share.
+
+## <img src="assets/images/RStudio_logo_flat.svg" style="vertical-align:middle; height:1.5em;"/> projects 
+
+How many times have you opened an R script and been greeted by this line:
+
+```{r}
+setwd("C:/Users/ben/path/that/only/I/have")
+```
+
+While it is well-intentioned (i.e. avoiding the need to have full paths for all objects that will subsequently be loaded or daved ) the problem with it is obvious: This specific path is only relevant for the author and not other potential users and even for the author it is will be invalid if they happen to change computers. The good news is there is a very simple way to avoid having to use `setwd()` at all by using [**Rstudio Projects**]().
+
+Rstudio projects designate new or existing folders as a defined working directory by creating an `.RProj` file within them. This means that when you open a project the working directory of the Rstudio session will automatically be set to the directory that the .RProj file is located in and the paths of all files in this folder will be relative to this.
+
+The `.Rproj` file can be shared along with the rest of the research project files meaning that others users can easily open the Project to have the same working directory removing the need for those troublesome `setwd()` lines.
+
+### Creating and opening projects {#sec-creating-projects}
+
+Creating an Rstudio project is as simple as using *File \> New Project* in the top left and then choosing between creating the Project in a new or existing directory:
+
+There are several ways to open a Projects:
+
+1.  Using *File \> Open Project* in the top left of Rstudio.
+
+![](assets/images/File_open_project.png){fig-align="center" width="50%"}
+
+2.  Using the drop down menu in the top-right of the Rstudio session.
+
+![](assets/images/Open_project_right.png){fig-align="center" width="50%"}
+
+3.  Outside of R by double clicking on the `.Rproj` file in the folder.
+
+![](assets/images/Open_project_explorer.png){fig-align="center" width="50%"}
+
+### Utilising project specific `.Rprofile`'s {#sec-rprofile}
+
+Another useful feature of Rstudio projects is the ability to store project-specific settings using the `.Rprofile` file which controls the initialisation behaviour of the R session when the project is opened. A useful application of this for reproducible research projects is automatically open a particular script, for example a master script that runs all the code in the project (which is a concept that will discussed under [workflow decomposition](@sec-workflow-decomposition)).
+
+To do this the contents of your `.Rprofile` file would like this:
+
+```{r}
+setHook("rstudio.sessionInit", function(newSession) {
+  if (newSession)
+    # Open the script specificed by the path
+    rstudioapi::navigateToFile('scripts/script_to_open.R', line = -1L, column = -1L)
+}, action = "append")
+```
+
+The easiest way to create and edit `.Rprofile` files is to use the functions from the package [`usethis`](https://usethis.r-lib.org/):
+
+```{r}
+# Note the use of scope = "project" to create a project specific .Rprofile
+usethis::edit_r_profile(scope = "project")
+```
+
+## Environment management 
+
+These lines of code are also probably familiar from the beginning of many an R script:
+
+```{r}
+install.packages("ggplot2")
+library(ggplot2)
+```
+
+But what is wrong with these lines?
+
+Well firstly, there is no indication of what version of the package is to be installed and hence if the code installing this package is old it may not work with the most recent version of the package (This is less of a problem for well established packages like the Tidyverse but for less common packages, that may see large changes between versions, it could be substantial).
+
+Secondly, having the user install an unspecified version of a package could also cause dependency conflicts with other packages required by the code. This is because almost all packages have some form of dependency (i.e. they use the functionality of) on other packages. This is shown aptly by the image below which, while out-dated now, showed that in 2014 to install the 7 most popular R packages at the time would actually install 63 packages in total when considering their dependencies.
+
+![Package dependencies of popular R package [@devries2014]](assets/images/package_dependencies_2.png){width="50%" fig-align="center"}
+
+However the problem is bigger than just packages because when your code runs it is also utilising:
+
+-   A specific version of R
+
+-   A specific operating system
+
+-   Specific versions of system dependencies, i.e. other software in other languages that R packages themselves utilise e.g GDAL for spatial analysis packages like `terra`.
+
+All of these things together make up what is known as the 'environment' of your code. Hence the process of documenting and managing this environment to is ensure that your code is reproducible (i.e. it not only runs but also consistently produces the same results).
+
+There are different approaches to environment management that differ in their complexity and hence maybe suited to some projects and not others. For the purpose of this workshop we will focus on what we have found is one of the most user-friendly ways to manage your *package environment* (caveat that will be discussed) in R which is the package `renv`. Below we will introduce this package in more detail as it will form a central part of the [three workflows for reproducibility](@sec-workflows) that we present.
+
+### Creating reproducible environments with `renv`
+
+As mentioned above [`renv`](https://rstudio.github.io/renv/articles/renv.html) is an R package that helps you create reproducible environments for your R projects by not only documenting your package environment but also providing functionality to re-create it.
+
+It does this by creating **project specific libraries** (i.e. directories: `renv/library`) which contain all the packages used by your project. This is different from the default approach to package usage and installation whereby all packages are stored in a single library on your machine (system library). Having separate project libraries means "that different projects can use different versions of packages and installing, updating, or removing packages in one project doesn't affect any other project." [@renv]. In order to make sure that your project uses the project library everytime it is opened `renv` utilises the functionality of [`.Rprofile's`](@sec-rprofile) to set the project library as the default library.
+
+Another key process of renv is to create project specific **lockfiles** (`renv.lock`) which contain sufficient metadata about each package in the project library so that it can be re-installed on a new machine.
+
+As alluded to, renv does a great job of managing your packages but is not intended to manage other aspects of your environment such as: tracking your version of R or your operating system. This is why if you want 'bullet-proof' reproducibility renv needs to be used alongside other approaches such as containerization which is the [3rd and most complex workflow](@sec-docker_workflow) we will discuss.
+
+## Writing clean code 
+
+The notion of writing 'clean' code can be daunting, especially for those new to programming. However, the most important thing to bear in mind is that there is no objective measure that makes code 'clean' vs. 'un-clean', rather we should of think 'clean' coding as the pursuit of making your code easier to read, understand and maintain. Also while we should aspire to writing clean code, it is arguably more important that it functions correctly and efficiently.
+
+The central concept of clean coding is that, like normal writing, we should follow a set of rules and conventions. For example, in English a sentence should start with a capital letter and end with a full stop. Unfortunately, in terms of writing R code there is not a single set of conventions that everyone proscribes to, instead there are numerous styles that have been outlined and the important thing is to choose a style and apply it consistently in your coding.
+
+Perhaps the two most common styles are the [Tidyverse style](https://style.tidyverse.org/) and the [Google R style](https://google.github.io/styleguide/Rguide.html) (Which is actually a derivative of the former). Neither style can be said to be the more correct, rather they express opinionated preferences on a series of common topics such as: Object naming, use of assignment operators, spacing, indentation, line length, parentheses placement, etc.
+
+Rather than detail all of these topics here we will focus on just on some related tips that we think are most relevant for scientific research coding, including how to automate the formatting of your code to a particular style. However, we encourage you to go through the different style guides when you have the time.
+
+### Script headers {#sec-script_headers}
+
+Starting your scripts with a consistent header containing information about it's purpose, author/s, creation and modification dates is a great step making your workflow more understandable and hopefully reproducible. There are no rules as to what such a header should look like but this is the style I like to use:
+
+```{r}
+#############################################################################
+## Script_title: Brief description of script purpose
+##
+## Notes: More detailed notes about the script and it's purpose
+##
+## Date created: 
+## Author(s):
+#############################################################################
+```
+
+To save time inserting this header into new scripts you use Rstudio's [**Code snippets**](https://docs.posit.co/ide/user/ide/guide/productivity/snippets.html) feature. Code snippets are simply text macros that quickly insert a section of code using a short keyword.
+
+To create your own Code snippet go to *Tools \> Global Options \> Code \> Edit Snippets* and then add a new snippet with your code below it:
+
+![](assets/images/Code_snippet_add.png){fig-align="center" width="50%"}
+
+To use a code snippet simply start typing the keyword in the script and the auto-completion list will appear then press `Tab` and the code section will be inserted:
+
+![](assets/images/Code_snippet_completion.png){fig-align="center" width="50%"}
+
+### Code sections {#sec-code_sections}
+
+As you may already know braced (`{}`) sections of code (i.e. function definitions, conditional blocks, etc.) can be folded to hide their contents in RStudio by clicking on the small triangle in the left margin.
+
+![](assets/images/code_section_sequential.png){fig-align="center" width="50%"}
+
+However, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis ([discussed in more detail later](@sec-workflow-decomposition)). In this regard, another good tip is to give the resulting sections sequential alphabetical or numerical Pre-fixes. Code sections are created by inserting a comment line that contains at least four trailing dashes (`-`), equal signs (`=`), or pound signs (`#`):
+
+```{r}
+#| echo: true
+
+# Section One ---------------------------------
+ 
+# Section Two =================================
+ 
+# Section Three #############################
+```
+
+Alternatively you can use the *Code \> Insert Section* command.
+
+To navigate between code sections:
+
+-   Use the **Jump To** menu available at the bottom of the editor[@positsupport2024]
+
+![](assets/images/code_section_jumpto.png){fig-align="center"}
+
+-   Use the document outline pane in the top right corner of the source pane
+
+![](assets/images/code_section_documentpane.dark.png){fig-align="center"}
+
+### Automating the styling of your code
+
+There are two R packages that are very helpful in terms of ensuring your code confirms to a consistent style: [`lintr`](https://lintr.r-lib.org/) and [`styler`](https://styler.r-lib.org/).
+
+-   `lintr` checks your code for common style issues and potential programming errors then presents them to you to correct, think of it like doing a 'spellcheck' on a written document.
+-   `styler` is more *active* in the sense that it automatically format's your code to a particular style, the default of which is the tidyverse style.
+
+To use lintr and styler you call their functions like any package but styler can also be used through the **Rstudio Addins** menu below the Navigation bar as shown in this gif:
+
+<img src="https://raw.githubusercontent.com/lorenzwalthert/some_raw_data/master/styler_0.1.gif" width="50%"/>
+
+Another very useful feature of both packages is that they can be used as part of a continuous integration (CI) workflow using a version control application like Git. This is a topic that we will cover as part of our [Version control with Git](@sec-git_workflow) workflow but what it means is that the styler and lintr functions are run automatically when you push your code to a remote repository.
+
+## Workflow decomposition 
+
+In computer sciences workflow decomposition refers to the structuring or compartmentalising of your code into seperate logical parts that makes it easier to maintain [@decompos2024].
+
+In terms of coding scientific research projects many of us probably already instinctively do decomposition to some degree by splitting typical processes such as data preparation, statistical modelling, analysis of results and producing final visualizations.
+
+However this is not always realized in the most understandable way, for example we may have seperate scripts with logical sounding names like: `Data_prep.R` and `Data_analysis.R` but can others really be expected to know exactly which order these must be run in, or indeed whether they even need to be run sequentially at all?
+
+A good 1st step to remedying this is to give your scripts sequential numeric tags in their names, e.g. `01_Data_prep.R`, `02_Data_analysis.R`. This will also ensure that they are presented in numerical order when placed in a designated directory [Structuring your project directory](@sec-structuring) and can be explicitly described in your [project documentation](@sec-documentation).
+
+But you can take this to the next level by creating a *Master* script that sources your other scripts in sequence (think of them as *sub-scripts*) so that users of your code need only run one script. To do this is as simple as creating the master script as you would any normal R script (*File \> New File \> R script*) and then using the `base::source()` function to run the sub-scripts:
+
+```{r}
+
+#############################################################################
+## Master_script: Run steps of research project in order
+##
+## Date created: 30/7/2024
+## Author(s): Jane Doe
+#############################################################################
+
+### =========================================================================
+### A- Prepare dependent variable data
+### =========================================================================
+
+#Prepare LULC data
+source("Scripts/Preparation/Dep_var_dat_prep.R", local = scripting_env)
+
+### =========================================================================
+### B- Prepare independent variable data
+### =========================================================================
+
+#Prepare predictor data
+source("Scripts/Preparation/Ind_var_data_prep.R", local = scripting_env)
+
+### =========================================================================
+### C- Perform statisical modelling
+### =========================================================================
+
+source("Scripts/Modelling/Fit_stat_models.R", local = scripting_env)
+
+```
+
+As you can see in this example code I have also made use of a [script header](@sec-script_headers) and [code sections](@sec-code_sections), that were previously discussed, to make the division of sub-processes even clearer. Another advantage of this approach is that all sub-scripts can utilise the same environment (defined by the `source(local= )` argument) which means that each individual script does not need to load packages or paths as objects.
+
+Finally, within your sub-scripts processes should also be seperated into code sections and ideally any repetitive tasks should be performed with custom functions which again are contained within their own files.
+
+Following this approach you end up with a workflow that will look something like this:
+
+![](assets/images/workflow_decomposition.png){width="100%"}
+
+The benefit of this hierarchical approach to structuring is that it is not only easier to debug and maintain individual processes but it is also more amenable to adding new processes.
+
+## Structuring your project directory 
+
+Similar to having clean code, having a clean project directory that has well-organised sub-directories goes a long way towards making your projects code easier to understand for others. For software development there are numerous sets of conventions for directories structures although these are not always so applicable for scientific research projects. However we can borrow some basic principles, try to use: - Use logical naming - Stick to a consistent style, i.e. use of captialisation and seperators - Make use of nested sub-directories e.g `data/raw/climatic/precipitation/2020/precip_2020.rds` vs. `data/precip_2020_raw.rds`. This is very helpful when it comes to programatically constructing file paths especially in projects with a lot of data.
+
+As an example my go-to project directory structure looks like this:
+
+```{r}
+└── my_project
+    ├── data # The research data
+    │   ├── raw
+    │   └── processed
+    ├── output # Storing results
+    ├── publication # Containing the academic manuscript of the project
+    ├── src # For all files that perform operations in the project
+    │   ├── scripts
+    │   └── functions
+    └── tools # Auxilliary files and settings
+```
+
+Rather than manually create this directory structure everytime you start a new project, save yourself some time and automate it by using Rstudio's [**Project Templates**](https://docs.posit.co/ide/user/ide/guide/productivity/project-templates.html) functionality. This allows you to select a custom template as an option when creating a new [Rstudio project](@sec-creating-projects) through the New project wizard (*File \> New Project \> New Directory \> New Project Template*).
+
+To implement this even as an intermediate R user is fairly labor intensive as your custom project directory template needs to be contained within an R-package, in order to be available in the wizard. However, quite a few templates with directory structures appropriate for scientific research projects have been created by others:
+
+-   [`rrtools`](https://github.com/benmarwick/rrtools)
+
+-   [`ProjectTemplate`](http://projecttemplate.net/)
+
+-   [`template`](https://pakillo.github.io/template/)
+
+-   [`addinit`](https://dreamrs.github.io/addinit/) (Not a template but an interactive shiny add-in for project creation)
+
+## Project documentation 
+
+As an example of why documentation is important think about if you bought a new table from Ikea only to excitedly rip open the box and find that there are no instructions for how to assemble it. Sure, you know what a table is supposedly to look like and given enough time you will end up with something that will probably be mostly right but maybe it's missing small details. Also it will probably take you just as long to take it apart in 5 years time. Well, working with undocumented code for research projects is similar except a lot more complicated!
+
+Writing comprehensive documentation that covers all aspects of our projects is time-consuming which is why it is often neglected. For example, there are a lot of different metadata conventions that exist that you could apply. However, learning and adhering strictly to these can be overwhelming and possibly lead to the opposite effect i.e. they are not simple for others to understand either.
+
+In response to this there has been a movement in the R research community to adopt the *research as package* approach, which, as the name suggests, involves creating your project as an R-package which has a strict set of conventions for documentation [@marwick2018]. This is a viable approach for those who are familiar with R-packages but is arguably not the best for all projects and users.
+
+Instead, we would suggest to follow the maxim of *not letting the perfect be the enemy of the good* and to focus on these key areas:
+
+-   **Provide adequate in-script commentary**: This is perhaps contentious for those from a software development community, but given the choice I would rather have to read through a script with too many comments than one with too few. However remember that comments should be used to explain the purpose of the code, not what the code is doing. In line with this use [script headers](@sec-script_headers).
+
+-   **Document your functions with `roxygen` skeletons**:
+
+-   **Include a `README` file**: README files are where you should document your project at the macro-level i.e. what it is about and how it is supposed to work.
+
+The latter of these two are more detailed so we have provided further information and tips in sections below.
+
+### Function documentation with `roxygen2` {#sec-roxygen}
+
+Base R provides a standard way of documenting a package where each function is documented in an `.Rd` file (R documentation). This documentation uses a custom syntax to detail key aspects of the functions such as their input parameters, outputs and any package dependencies [@wickham2024].
+
+In the case of many research projects you will not be creating a package however it is still useful to apply this documentation style to your functions as it is a good way to make them understandable and easier to modify by others. For example, having clear information about the object (e.g. a vector or data.frame) that a function accepts, saves others time in guessing what the function is expecting if they are trying to use new data.
+
+However, rather than manually writing `.Rd` files, we can use the `roxygen2` package to automatically generate these files from a block of comments that are added to the top of the function scripts. To add this comment block, place your cursor inside a function you want to document and press `Ctrl + Shift + R` (or `Cmd + Shift + R` on Mac) or you can go to *code tools \> insert roxygen skeleton* (code tools is represented by the wand icon in the top row of the source pane). As you can see in this gif below, when you insert the roxygen block it will already contain the names of the function names, its arguments and any returns and the function name. You can then fill in the rest of the information, such as the description and dependencies etc. for a guide to these other fields see the [roxygen2 documentation](https://roxygen2.r-lib.org/articles/rd.html).
+
+![Inserting roxygen block [@hajnala2018]](https://jozef.io/img/r102-01-add-roxy-skeleton.gif){alt="Inserting roxygen block" width="50%"}
+
+### Tips for README writing
+
+If you look at the source code of R packages or projects that use R in Github repositories you will see that they all contain `README.md` files. This is the markdown format of the README file and is the most common format for README files in R projects. These files are often accompanied by the corresponding file `README.Rmd` which generates the `README.md` file. Markdown format is used for README's because it can be read by many programs and rendered in a variety of formats. In this sense writing the README for your project in markdown makes sense and there tools available to help you do this such as the `usethis` package which has a function [`use_readme_rmd()`](https://usethis.r-lib.org/reference/use_readme_rmd.html) that will create a `README.Rmd` file for you. However, depending on who you anticipate using your project you may also want to create your README as a raw text file (`.txt`) which may be a more familiar format for some users and again can be opened by many different programs.
+
+Again there is not a single standardised format for what should be included in your README file but here is an example of a README file that was written for one of the authors code/data upload alongside a publication: [README.txt](assets/README_demo.txt)
+
+You will see that one of the things this README includes is a tree diagram which shows the directory structure of the project right down to the file level. This is a useful way to give an overview of what users should find included in the project and then explanatory notes can be added to explain the purpose of each file or directory. Such a diagram can be easily generated using the `fs` package:
+
+```{r}
+install.packages("fs")
+library(fs)
+
+#vector path of the target directory to make a file tree from
+Target_dir <- "YOUR DIR"
+
+#produce tree diagram of directory sub-dirs and files and save output using capture.ouput from base R utils.
+capture.output(dir_tree(Target_dir), file= 'Dir_tree_output.txt')
+```
 :::
+------------------------------------------------------------------------------
