@@ -46,3 +46,11 @@ po/*~
 rsconnect/
 
 /.quarto/
+*.html
+*.html
+*.html
+docs/presentation.html
+docs/index.html
+*.html
+*.html
+/docs
