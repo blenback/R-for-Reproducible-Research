@@ -7,7 +7,6 @@ execute:
 ---
 
 <!-- Web content -->
--------------------------------------------------------------------------------
 ::: {.content-visible when-format="html"}
 **Let's start with a definition of what makes a good R project from Jenny Bryan:**
 
@@ -325,7 +324,6 @@ capture.output(dir_tree(Target_dir), file= 'Dir_tree_output.txt')
 :::
 
 <!-- Presentation content -->
-------------------------------------------------------------------------
 
 
 ::: {.content-visible when-format="revealjs"}
@@ -355,7 +353,7 @@ Rstudio projects designate new or existing folders as a defined working director
 
 The `.Rproj` file can be shared along with the rest of the research project files meaning that others users can easily open the Project to have the same working directory removing the need for those troublesome `setwd()` lines.
 
-### Creating and opening projects {#sec-creating-projects}
+### Creating and opening projects 
 
 Creating an Rstudio project is as simple as using *File \> New Project* in the top left and then choosing between creating the Project in a new or existing directory:
 
@@ -373,7 +371,7 @@ There are several ways to open a Projects:
 
 ![](assets/images/Open_project_explorer.png){fig-align="center" width="50%"}
 
-### Utilising project specific `.Rprofile`'s {#sec-rprofile}
+### Utilising project specific `.Rprofile`'s 
 
 Another useful feature of Rstudio projects is the ability to store project-specific settings using the `.Rprofile` file which controls the initialisation behaviour of the R session when the project is opened. A useful application of this for reproducible research projects is automatically open a particular script, for example a master script that runs all the code in the project (which is a concept that will discussed under [workflow decomposition](@sec-workflow-decomposition)).
 
@@ -443,7 +441,7 @@ Perhaps the two most common styles are the [Tidyverse style](https://style.tidyv
 
 Rather than detail all of these topics here we will focus on just on some related tips that we think are most relevant for scientific research coding, including how to automate the formatting of your code to a particular style. However, we encourage you to go through the different style guides when you have the time.
 
-### Script headers {#sec-script_headers}
+### Script headers 
 
 Starting your scripts with a consistent header containing information about it's purpose, author/s, creation and modification dates is a great step making your workflow more understandable and hopefully reproducible. There are no rules as to what such a header should look like but this is the style I like to use:
 
@@ -468,7 +466,7 @@ To use a code snippet simply start typing the keyword in the script and the auto
 
 ![](assets/images/Code_snippet_completion.png){fig-align="center" width="50%"}
 
-### Code sections {#sec-code_sections}
+### Code sections 
 
 As you may already know braced (`{}`) sections of code (i.e. function definitions, conditional blocks, etc.) can be folded to hide their contents in RStudio by clicking on the small triangle in the left margin.
 
@@ -613,7 +611,7 @@ Instead, we would suggest to follow the maxim of *not letting the perfect be the
 
 The latter of these two are more detailed so we have provided further information and tips in sections below.
 
-### Function documentation with `roxygen2` {#sec-roxygen}
+### Function documentation with `roxygen2` 
 
 Base R provides a standard way of documenting a package where each function is documented in an `.Rd` file (R documentation). This documentation uses a custom syntax to detail key aspects of the functions such as their input parameters, outputs and any package dependencies [@wickham2024].
 
@@ -642,4 +640,3 @@ Target_dir <- "YOUR DIR"
 capture.output(dir_tree(Target_dir), file= 'Dir_tree_output.txt')
 ```
 :::
-------------------------------------------------------------------------------

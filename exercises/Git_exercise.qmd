@@ -1,4 +1,10 @@
 ---
-title: "Untitled"
-editor: visual
+execute:
+  echo: true
+  eval: false
+  error: false
 ---
+
+## Version control with Git exercise
+
+In this exercise we will show how version control with Git can be implemented for an example R project. The project is the same that is created in the first workflow [exercise](@sec-Rproj_zenodo_exercise), however to save time or in case you haven't completed this exercise we will start with the finished output from it.
