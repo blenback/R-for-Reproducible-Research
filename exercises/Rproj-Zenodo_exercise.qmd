@@ -8,4 +8,9 @@ execute:
 
 ## Rstudio project to Zenodo exercise {#sec-Rproj_zenodo_exercise}
 
+If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a>
 
+### Step 1: Download the resources
+
+-   Click here to download the resources for the exercise: <a href="https://drive.google.com/uc?export=download&id=1V30Aa43u-OhUZ829yWZNxWAybz151MGY" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a>
+-   Unzip the downloaded file and move the folder to a location on your computer where you can easily find it.

@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -177,7 +211,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <section id="step-1-download-the-resources" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-download-the-resources">Step 1: Download the resources</h3>
 <ul>
-<li>Click here to download the resources for the exercise: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a></li>
+<li>Click here to download the resources for the exercise: <a href="https://drive.google.com/file/d/1TN3DZqetynnNWlTeV2eKqJDcU53fq9Zg/view?usp=sharing" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a></li>
 <li>Unzip the downloaded file and move the folder to a location on your computer where you can easily find it.</li>
 </ul>
 </section>
@@ -197,25 +231,40 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li>Install the Dockerfiler package: <code>install.packages("dockerfiler")</code>.</li>
 <li>Add the following code to the script:</li>
 </ul>
-<p>library(dockerfiler)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dockerfiler)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dockerfile template</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>my_dock <span class="ot">&lt;-</span> Dockerfile<span class="sc">$</span><span class="fu">new</span>()</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Add maintainer</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>my_dock<span class="sc">$</span><span class="fu">MAINTAINER</span>(<span class="st">"Your_name"</span>, <span class="st">"Your_email"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Add R and RStudio base image</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>my_dock<span class="sc">$</span><span class="fu">FROM</span>(<span class="st">"rocker/rstudio:4.0.3"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Add R packages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
+<section id="creating-docker-image" class="level3">
+<h3 class="anchored" data-anchor-id="creating-docker-image">Creating docker image</h3>
+<p>One of the most important Docker commands is <code>build</code> which creates a <code>Docker image</code> from your <code>Dockerfile</code> instructions.</p>
+<p>There are two ways to use <code>build</code> command: 1. Through a Command Line Interface (CLI) such as the terminal in Rstudio or the terminal in your operating system (e.g Command Prompt for Windows). Open up a new Terminal window and navigate to where your code is located. Then, run the following command. 2. Through the Docker desktop application. Which is more user friendly if you are not familiar with the CLI.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>docker build <span class="sc">-</span>t r<span class="sc">-</span>docker<span class="sc">-</span>demo .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You will then see that a docker image file has been created:</p>
 </section>
-<section id="create-a-dockerfile-template" class="level1">
-<h1>Create a dockerfile template</h1>
-<p>my_dock &lt;- Dockerfile$new()</p>
-</section>
-<section id="add-maintainer" class="level1">
-<h1>Add maintainer</h1>
-<p>my_dock$MAINTAINER(“Your_name”, “Your_email”)</p>
-</section>
-<section id="add-r-and-rstudio-base-image" class="level1">
-<h1>Add R and RStudio base image</h1>
-<p>my_dock$FROM(“rocker/rstudio:4.0.3”)</p>
-</section>
-<section id="add-r-packages" class="level1">
-<h1>Add R packages</h1>
+<section id="running-docker-container" class="level3">
+<h3 class="anchored" data-anchor-id="running-docker-container">Running docker container</h3>
+<div class="notes">
+<p>https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf</p>
+<p>https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/</p>
+<p>stevedore package for pulling images from Dockerhub using the Docker API https://richfitz.github.io/stevedore/</p>
+</div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

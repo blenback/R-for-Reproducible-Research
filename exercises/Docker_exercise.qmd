@@ -13,7 +13,7 @@ If you would prefer to view the exercise script offline, here is a PDF version: 
 
 ### Step 1: Download the resources
 
--   Click here to download the resources for the exercise: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a>
+-   Click here to download the resources for the exercise: <a href="https://drive.google.com/uc?export=download&id=1TN3DZqetynnNWlTeV2eKqJDcU53fq9Zg" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a>
 -   Unzip the downloaded file and move the folder to a location on your computer where you can easily find it.
 
 ### Step 2: Download Docker
@@ -27,7 +27,7 @@ If you would prefer to view the exercise script offline, here is a PDF version: 
 -   Open Rstudio and navigate to the folder you downloaded in step 1.
 -   Create a new R script and name it `Dockerfile.R`.
 -   Install the Dockerfiler package: `install.packages("dockerfiler")`.
--   Add the following code to the script:
+-   Add the following code to the script and replace the entries with your details:
 ```{r}
 library(dockerfiler)
 
@@ -41,6 +41,33 @@ my_dock$MAINTAINER("Your_name", "Your_email")
 my_dock$FROM("rocker/rstudio:4.0.3")
 
 # Add R packages
+```
 
+### Creating docker image 
+
+One of the most important Docker commands is `build` which creates a `Docker image` from your `Dockerfile` instructions.
+
+There are two ways to use `build` command:
+1.    Through a Command Line Interface (CLI) such as the terminal in Rstudio or the terminal in your operating system (e.g Command Prompt for Windows). Open up a new Terminal window and navigate to where your code is located. Then, run the following command.
+2.    Through the Docker desktop application. Which is more user friendly if you are not familiar with the CLI.
+
+```{r}
+docker build -t r-docker-demo .
+```
+
+You will then see that a docker image file has been created:
+
+
+### Running docker container
+
+
+::: notes
+https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf
+
+https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/
+
+stevedore package for pulling images from Dockerhub using the Docker API
+https://richfitz.github.io/stevedore/
+:::
 
 

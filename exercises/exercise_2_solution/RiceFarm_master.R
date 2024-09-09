@@ -7,7 +7,7 @@
 ########################################################################
 
 # Restore the project package environment with renv
-#renv::restore()
+renv::restore()
 
 ### =========================================================================
 ### 01- Data analysis
