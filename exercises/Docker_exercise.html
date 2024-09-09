@@ -82,6 +82,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../index.css">
+<link rel="stylesheet" href="index.css">
 <meta property="og:title" content="Reproducible Research with  and ">
 <meta property="og:description" content="Website for workshop in reproducible research with R and Quarto">
 <meta property="og:site_name" content="Reproducible Research with <img style=&quot;vertical-align:middle; height:1em; border: none; background: none;&quot; src=&quot;assets/images/Rlogo.png&quot;> and <img style=&quot;vertical-align:middle; height:1em;&quot; src=&quot;assets/images/quarto-logo-trademark.svg&quot;>">
@@ -169,10 +170,50 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 
-<section id="containerisation-with-docker-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="containerisation-with-docker-exercise">Containerisation with Docker exercise</h2>
-<p>In this exercise we will create a Docker container for a simple R project. The project is the same that is created in the first workflow <a href="@sec-Rproj_zenodo_exercise">exercise</a>, however to save time or in case you haven’t completed this exercise we will start with the finished output from it.</p>
-<p><br><a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download Source Code Files</b></a></p>
+<section id="sec-docker_exercise" class="level2">
+<h2 class="anchored" data-anchor-id="sec-docker_exercise">Containerization with Docker exercise</h2>
+<p>In this exercise we will create a Docker container for an example R project. The project is the same that is created in the first workflow <a href="@sec-Rproj_zenodo_exercise">exercise</a>, however to save time or in case you haven’t completed this exercise we will start with the finished output from it.</p>
+<p>If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a></p>
+<section id="step-1-download-the-resources" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-download-the-resources">Step 1: Download the resources</h3>
+<ul>
+<li>Click here to download the resources for the exercise: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a></li>
+<li>Unzip the downloaded file and move the folder to a location on your computer where you can easily find it.</li>
+</ul>
+</section>
+<section id="step-2-download-docker" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-download-docker">Step 2: Download Docker</h3>
+<ul>
+<li>Download Docker Desktop for your operating system from the <a href="https://www.docker.com/products/docker-desktop">Docker website</a>.</li>
+<li>Once downloaded run the installer like you would for other software. You may need to restart your computer after installation.</li>
+<li>While this is happening it is useful to make a Docker account. This is not necessary but can be useful for managing your containers. You can also sign in with your GitHub account.</li>
+</ul>
+</section>
+<section id="creating-the-dockerfile" class="level3">
+<h3 class="anchored" data-anchor-id="creating-the-dockerfile">Creating the Dockerfile</h3>
+<ul>
+<li>Open Rstudio and navigate to the folder you downloaded in step 1.</li>
+<li>Create a new R script and name it <code>Dockerfile.R</code>.</li>
+<li>Install the Dockerfiler package: <code>install.packages("dockerfiler")</code>.</li>
+<li>Add the following code to the script:</li>
+</ul>
+<p>library(dockerfiler)</p>
+</section>
+</section>
+<section id="create-a-dockerfile-template" class="level1">
+<h1>Create a dockerfile template</h1>
+<p>my_dock &lt;- Dockerfile$new()</p>
+</section>
+<section id="add-maintainer" class="level1">
+<h1>Add maintainer</h1>
+<p>my_dock$MAINTAINER(“Your_name”, “Your_email”)</p>
+</section>
+<section id="add-r-and-rstudio-base-image" class="level1">
+<h1>Add R and RStudio base image</h1>
+<p>my_dock$FROM(“rocker/rstudio:4.0.3”)</p>
+</section>
+<section id="add-r-packages" class="level1">
+<h1>Add R packages</h1>
 
 
 </section>
@@ -756,6 +797,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
+<script type="application/javascript" src="light-dark.js"></script>
 
 
 

@@ -62,6 +62,9 @@ div.csl-indent {
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -189,34 +192,50 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 <!-- Web content -->
-<section id="environment-management-with-renv" class="level3">
-<h3 class="anchored" data-anchor-id="environment-management-with-renv">Environment Management with renv</h3>
-<p>renv is a powerful R package designed to help manage project environments by creating project-specific libraries and lockfiles. As mentioned earlier, renv captures the exact versions of R packages used in a project, storing this information in a renv.lock file. This allows users to recreate the exact package environment when revisiting a project or transferring it to a different machine, ensuring reproducibility.</p>
-<p>The renv workflow is straightforward:</p>
+<p>The graphic below shows the main steps of this workflow. It starts by developing your research project as an Rstudio project following the <a href="@sec-Rprojects">good practice project guidelines</a> we have discussed. Then, it uses the <code>renv</code> package to manage the project environment so that others can re-create it. Finally, the code, data and environment are uploaded to the open-access repository Zenodo, which provides a DOI for your work, ensuring long-term accessibility and reproducibility.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/project_zenodo_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="assets/images/project_zenodo_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+</figure>
+</div>
+<p><strong>TO DO: Edit this paragraph for accuracy</strong> While renv focuses on internal reproducibility by controlling the R environment, Zenodo ensures external reproducibility by providing a stable and citable repository for the research outputs. Combining both tools allows researchers to capture the environment in which their analysis was conducted and share it along with their data and code. Together, renv and Zenodo form a comprehensive solution for reproducible, open science research in accordance with the FAIR guiding principles <span class="citation" data-cites="wilkinson2016">[<a href="#ref-wilkinson2016" role="doc-biblioref">1</a>]</span>.</p>
+<p>The next sections provide some additional detail on <a href="@sec-renv_workflow">environment management with renv</a> and some background and practical tips on <a href="@sec-zenodo_background">Zenodo</a>. You will have the chance to apply this workflow to an example project in the <a href="@sec-Rproj_zenodo_exercise">accompanying exercise</a>.</p>
+<section id="sec-renv_workflow" class="level3">
+<h3 class="anchored" data-anchor-id="sec-renv_workflow">Environment Management with <code>renv</code></h3>
+<p><code>renv</code> is a powerful R package designed to help manage project environments by creating project-specific libraries and lockfiles. As mentioned earlier, renv captures the exact versions of R packages used in a project, storing this information in a renv.lock file. This allows users to recreate the exact package environment when revisiting a project or transferring it to a different machine, ensuring reproducibility.</p>
+<p>The <code>renv</code> workflow is straightforward:</p>
 <ul>
-<li><p>Initialize renv in a project: renv creates a separate library in the project folder, isolating the packages from the system-wide library.</p></li>
-<li><p>Snapshot dependencies: renv scans the project, identifying which packages are being used and recording their versions in the lockfile.</p></li>
-<li><p>Restore environments: Anyone cloning or receiving the project can run renv::restore() to install the exact versions of the packages listed in the lockfile, reproducing the original project environment.</p></li>
+<li><p><strong>Initialize <code>renv</code> in a project</strong>: renv creates a separate library in the project folder, isolating the packages from the system-wide library.</p></li>
+<li><p><strong>Snapshot dependencies</strong>: <code>renv</code> scans the project, identifying which packages are being used and recording their versions in the lockfile.</p></li>
+<li><p><strong>Restore environments</strong>: Anyone cloning or receiving the project can run <code>renv::restore()</code> to install the exact versions of the packages listed in the lockfile from the project library, reproducing the original project package environment.</p></li>
 </ul>
-<p>One of the core strengths of renv is its flexibility. It integrates seamlessly with tools like RStudio, allowing easy management of dependencies without disrupting existing workflows. This makes it particularly well-suited for ensuring that research projects are reproducible across different systems and platforms.</p>
+<p>One of the core strengths of <code>renv</code> is its flexibility. It integrates seamlessly with tools like RStudio, allowing easy management of dependencies without disrupting existing workflows. This makes it particularly well-suited for ensuring that research projects are reproducible across different systems and platforms.</p>
 <p>However, renv does not manage the <strong>entire system environment</strong> (such as the version of R itself or external dependencies like system libraries). For complete reproducibility, combining renv with containerization tools (like Docker) or publishing outputs (such as code or data) via repositories like Zenodo is recommended. The use of renv allows researchers to easily capture and restore the R environment, while repositories can ensure the long-term availability of the project’s outputs.</p>
-<p>The code specific workflow is straightforward and well explained in the documentation: <a href="https://rstudio.github.io/renv/articles/renv.html" class="uri">https://rstudio.github.io/renv/articles/renv.html</a></p>
 </section>
-<section id="publishing-and-archiving-with-zenodo" class="level3">
-<h3 class="anchored" data-anchor-id="publishing-and-archiving-with-zenodo">Publishing and Archiving with Zenodo</h3>
-<p>Zenodo complements renv by providing a platform to publish, archive, and share research outputs, including datasets, code, and publications. Created by CERN and OpenAIRE, Zenodo ensures that research artifacts are accessible for the long term, aligning with open science principles. Each item published on Zenodo is assigned a permanent DOI, making it easy to reference and cite in academic work.</p>
-<p>A unique feature of Zenodo is its support for versioning. Researchers can update their work over time, while earlier versions remain accessible, ensuring transparency and reproducibility. This versioning system is crucial in scientific research, where updated analyses and data corrections are often necessary, but reproducibility of original work must be maintained.</p>
-<p>The zen4R package <span class="citation" data-cites="blondel2024">[<a href="#ref-blondel2024" role="doc-biblioref"><strong>blondel2024?</strong></a>]</span> enhances the integration of R with Zenodo by providing tools to programmatically interact with Zenodo’s API directly from R. This package allows researchers to:</p>
+<section id="sec-zenodo_background" class="level3">
+<h3 class="anchored" data-anchor-id="sec-zenodo_background"><img src="assets/images/zenodo-blue.svg" style="vertical-align:middle; height:2.75em;"> as a research repository</h3>
+<p><a href="https://zenodo.org/">Zenodo</a> is a platform created under the European Commission’s <a href="https://www.openaire.eu/">OpenAIRE project</a> in partnership with <a href="https://home.cern/">CERN</a> to publish, archive, and share scientific research outputs, including datasets, code, and publications.</p>
+<p>Of course there are many other similar research repositories, such as <a href="https://datadryad.org/stash">Dryad</a>, <a href="https://figshare.com/">Figshare</a>, <a href="https://data.mendeley.com/">Mendeley Data</a> and <a href="https://osf.io/q5j8g/">OSF</a>, but we recommend Zenodo for several reasons:</p>
 <ul>
-<li><p>Upload datasets and code to Zenodo.</p></li>
-<li><p>Automate the publication process by creating new records, updating metadata, and managing depositions.</p></li>
-<li><p>Retrieve information about existing Zenodo records.</p></li>
+<li><p><strong>Generous upload size of 50GB (100 files) per record</strong></p></li>
+<li><p><strong>Aligns with FAIR and Open Science principles</strong>: The practical features of Zenodo that ensure this are described in it’s <a href="https://about.zenodo.org/principles/">principles</a></p></li>
+<li><p><strong>Ability to create communities</strong>: <a href="https://help.zenodo.org/docs/communities/about-communities/">Zenodo Communities</a> are used to group similar records together. This is useful for creating a collection of related research outputs, either for a research group or a large-scale funded project.</p></li>
+<li><p><strong>Long term preservation with assignment of DOIs:</strong> Each item published on Zenodo is assigned a permanent <a href="https://simple.wikipedia.org/wiki/Digital_Object_Identifier"><em>Digital Object Identifier</em> (DOI)</a>, which is a better way than a URL to cite the record in academic writing.</p></li>
+<li><p><strong>Open source</strong>: This means that Zenodo is not just free to use but you can even see the <a href="https://github.com/zenodo/zenodo-rdm">code it is built on</a> and contribute to it.</p></li>
+<li><p><strong>Versioning functionality:</strong> Every record starts with a 1st version and <a href="https://help.zenodo.org/docs/deposit/manage-versions/">new versions can be added as research is updated</a>, while earlier versions remain accessible. This is crucial in scientific research, where updated analyses and data corrections are often necessary, but also transparency around earlier versions of the work should be maintained.</p></li>
+<li><p><strong>Integration with GitHub:</strong> When a research project (e.g., code) is hosted on <a href="@sec-git_workflow">GitHub</a>, Zenodo can be used to <a href="https://help.zenodo.org/docs/profile/linking-accounts/">archive the repository</a> upon each new release, creating a snapshot with a DOI. This means that a version of the code can be more easily cited in scientific publications.</p></li>
+<li><p><strong>Application programming Interface (API) to access records programmatically:</strong> This a useful feature as it allows for interfacing with Zenodo records without using the website and is the backbone of the <code>zen4R</code> package that allows for publishing records directly from R which we discuss in more detail below.</p></li>
 </ul>
-<p>This makes it easier to publish research outputs, ensuring that versioning, DOIs, and metadata management are handled efficiently within R workflows, facilitating reproducibility and sharing in open science practices. Learn more about the zen4R package: <a href="https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html" class="uri">https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html</a></p>
-<p>Zenodo also integrates seamlessly with GitHub. When a research project (e.g., code) is hosted on GitHub, Zenodo can automatically archive the repository upon each new release, creating a snapshot with a DOI. This integration simplifies the process of ensuring that research code is preserved in an immutable form, contributing to better practices in reproducible science.</p>
-<p>While renv focuses on internal reproducibility by controlling the R environment, Zenodo ensures external reproducibility by providing a stable and citable repository for the research outputs. Combining both tools allows researchers to capture the environment in which their analysis was conducted and share it along with their data and code. Together, renv and Zenodo form a comprehensive solution for reproducible, open science research in accordance with the FAIR guiding principles <span class="citation" data-cites="wilkinson2016">[<a href="#ref-wilkinson2016" role="doc-biblioref">1</a>]</span>.</p>
+</section>
+<section id="publishing-to-zenodo-with-zen4r" class="level3">
+<h3 class="anchored" data-anchor-id="publishing-to-zenodo-with-zen4r">Publishing to Zenodo with <code>zen4R</code></h3>
+<p>The <a href="<https://cran.r-project.org/web/packages/zen4R"><code>zen4R</code></a> package <span class="citation" data-cites="blondel2024">[<a href="#ref-blondel2024" role="doc-biblioref"><strong>blondel2024?</strong></a>]</span> provides functions to interact with Zenodo’s API directly from R. The package allows you to:</p>
+<ul>
+<li><p>Retrieve the metadata of, and download, existing Zenodo records.</p></li>
+<li><p>Create new records and versions of records, write their metadata and upload files to Zenodo.</p></li>
+</ul>
+<p>We will use <code>zen4R</code> to publish the code, data, and environment of our example project to Zenodo in the accompanying exercise.</p>
 <!-- Presentation content -->
-<p>:::</p>
 
 
 
@@ -805,6 +824,39 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
+<script type="application/javascript" src="light-dark.js"></script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

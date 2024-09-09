@@ -222,8 +222,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"><!-- Web content --></h2>
+<!-- Web content -->
 <p><strong>Let’s start with a definition of what makes a good R project from Jenny Bryan:</strong></p>
 <p>A good R project… <em>“creates everything it needs, in its own workspace or folder, and it touches nothing it did not create.”</em> <span class="citation" data-cites="bryan2017">[<a href="#ref-bryan2017" role="doc-biblioref">1</a>]</span></p>
 <p>This is a good definition that contains concepts, such as the notion that projects should be ‘self-contained’. However we add one more caveat to this definition which is that a good R project should <em>explain itself</em>.</p>
@@ -235,20 +234,19 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </figure>
 </div>
 <p>As you move through these you will see that there are areas of overlap and complementarity between them. These topics are also central to the choice of approaches in the <a href="@sec-workflows">three workflows for reproducibility</a> that we will share.</p>
-</section>
 <section id="sec-projects" class="level2">
-<h2 class="anchored" data-anchor-id="sec-projects"><img src="assets/images/RStudio_logo_flat.svg" style="vertical-align:middle; height:1.5em;"> projects</h2>
+<h2 class="anchored" data-anchor-id="sec-projects"><img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1.5em;"> projects</h2>
 <p>How many times have you opened an R script and been greeted by this line:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/ben/path/that/only/I/have"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>While it is well-intentioned (i.e.&nbsp;avoiding the need to have full paths for all objects that will subsequently be loaded or daved ) the problem with it is obvious: This specific path is only relevant for the author and not other potential users and even for the author it is will be invalid if they happen to change computers. The good news is there is a very simple way to avoid having to use <code>setwd()</code> at all by using <a href=""><strong>Rstudio Projects</strong></a>.</p>
+<p>While it is well-intentioned (i.e.&nbsp;avoiding the need to have full paths for all objects that will subsequently be loaded or daved ) the problem with it is obvious: This specific path is only relevant for the author and not other potential users and even for the author it will be invalid if they happen to change computers. The good news is there is a very simple way to avoid having to use <code>setwd()</code> at all by using <a href=""><strong>Rstudio Projects</strong></a>.</p>
 <p>Rstudio projects designate new or existing folders as a defined working directory by creating an <code>.RProj</code> file within them. This means that when you open a project the working directory of the Rstudio session will automatically be set to the directory that the .RProj file is located in and the paths of all files in this folder will be relative to this.</p>
 <p>The <code>.Rproj</code> file can be shared along with the rest of the research project files meaning that others users can easily open the Project to have the same working directory removing the need for those troublesome <code>setwd()</code> lines.</p>
 <section id="sec-creating-projects" class="level3">
 <h3 class="anchored" data-anchor-id="sec-creating-projects">Creating and opening projects</h3>
-<p>Creating an Rstudio project is as simple as using <em>File &gt; New Project</em> in the top left and then choosing between creating the Project in a new or existing directory:</p>
-<p>There are several ways to open a Projects:</p>
+<p>Creating an Rstudio project is as simple as using <em>File &gt; New Project</em> in the top left and then choosing between creating the Project in a new or existing directory.</p>
+<p>There are several ways to open a Project:</p>
 <ol type="1">
 <li>Using <em>File &gt; Open Project</em> in the top left of Rstudio.</li>
 </ol>
@@ -490,7 +488,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://jozef.io/img/r102-01-add-roxy-skeleton.gif" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Inserting roxygen block <span class="citation" data-cites="hajnala2018">[<a href="#ref-hajnala2018" role="doc-biblioref"><strong>hajnala2018?</strong></a>]</span></figcaption>
+<figcaption>Inserting roxygen block</figcaption>
 </figure>
 </div>
 </section>
@@ -509,14 +507,11 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#produce tree diagram of directory sub-dirs and files and save output using capture.ouput from base R utils.</span></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">capture.output</span>(<span class="fu">dir_tree</span>(Target_dir), <span class="at">file=</span> <span class="st">'Dir_tree_output.txt'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<!-- Presentation content -->
+
+
+
 </section>
-</section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1"><!-- Presentation content --></h2>
-<hr>
-
-
-
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
@@ -1120,6 +1115,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
+<script type="application/javascript" src="light-dark.js"></script>
 
 
 
