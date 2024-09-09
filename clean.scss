@@ -150,9 +150,9 @@ $selection-bg: #26351c !default;
     justify-content: left;
 
     .quarto-title-author {
-      padding-left: 0em;
-      padding-right: 0em;
-      width: 100%;
+      padding-left: 1em;
+      padding-right: 1em;
+      width: 80%;
     }
   }
 
@@ -357,4 +357,9 @@ $selection-bg: #26351c !default;
   width: auto;
   height: auto;
   object-fit: contain;
+}
+
+code.sourceCode {
+  font-size: 1.3em;
+  /* or try font-size: xx-large; */
 }

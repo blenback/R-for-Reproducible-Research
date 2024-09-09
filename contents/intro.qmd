@@ -73,6 +73,8 @@ with us.
 
 ## What is reproducible research?
 
+**TO DO: Introduce FAIR principles**
+
 Reproducibility is a key aspect of reliable scientific research. It
 enables other researchers to reproduce the same results using the
 original data, code, and documentation [@essawy2020]. Below are the core
@@ -241,7 +243,7 @@ tool for projects of all kinds.
 ### Ben Black
 
 ::: {layout="[0.38, -0.02, 0.60]" layout-valign="center"}
-![](https://github.com/blenback.png){.picture .lightbox}
+![](https://github.com/blenback.png){.picture }
 
 [{{< iconify fa6-solid house-chimney-user >}}
 blenback.github.io](https://blenback.github.io/){style="text-decoration: none;"}<br>

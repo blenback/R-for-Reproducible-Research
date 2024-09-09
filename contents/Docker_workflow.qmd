@@ -79,14 +79,36 @@ wrangling and visualisation, geospatial packages etc.).
 In terms of actually creating the `Dockerfile` for our R project, this
 can be done manually (See a good R-focused tutorial[here](https://colinfay.me/docker-r-reproducibility/)), however there are also R packages that can help with this process such as [`dockerfiler`](https://thinkr-open.github.io/dockerfiler/) and the `[rrtools`](https://github.com/benmarwick/rrtools) package. 
 
-For our workflow we will use the `dockerfiler` package.
-- Main function of the package is `dockerfile_build()` which creates a Dockerfile and builds a Docker image from it.
+For our [exercise](@sec-docker_exercise) of this workflow we will use the `dockerfiler` package, which uses simple assignment lines to add elements to a Dockerfile object, before saving it:
 
+```{R}
+library(dockerfiler)
+# Create a dockerfile template
+my_dock <- Dockerfile$new()
 
+# Add maintainer
+my_dock$MAINTAINER("Jane Doe", "jane_doe@gmail.com")
+
+# Save
+my_dock$write()
+```
 
 ### Docker with renv
 
 ### Creating docker image 
+
+One of the most important Docker commands is `build` which creates a `Docker image` from your `Dockerfile` instructions.
+
+There are two ways to use `build` command:
+1.    Through a Command Line Interface (CLI) such as the terminal in Rstudio or the terminal in your operating system (e.g Command Prompt for Windows). Open up a new Terminal window and navigate to where your code is located. Then, run the following command.
+2.    Through the Docker desktop application. Which is more user friendly if you are not familiar with the CLI.
+
+```{r}
+docker build -t r-docker-demo .
+```
+
+You will then see that a docker image file has been created:
+
 
 ### Running docker container
 
