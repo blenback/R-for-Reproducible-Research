@@ -42,7 +42,7 @@ sandbox = TRUE,
 logger = "INFO" 
 )
     
-#Create a new empty record
+##Prepare a new record to be filled with metadata and uploaded to Zenodo
 myrec <- ZenodoRecord$new()
 ```
 If you want to connect to Zenodo and not the Zenodo sandbox, create the token in your Zenodo account and remove the sandbox = True line in the code above.
@@ -77,20 +77,27 @@ zenodo$deleteRecord(myrec$id)
 
 Once you are satisfied with the record, you can proceed with its publication.
 ```{r}
-#publish record
+#make the record publicly available on Zenodo.
 myrec <- zenodo$publishRecord(myrec$id)
 ```
     
 ### Step 3: Edit a published Zenodo record
 It is also possible to edit or update the metadata of published records.
 ```{r}
-#get your record by metadata query, e.g. by title
+# reconnect to your account if necessary
+zenodo <- ZenodoManager$new(
+  token = "your_token",
+  sandbox = TRUE,
+  logger = "INFO" 
+)
+
+#get your record by querying the metadata, e.g. by title, this will give you a list of all records with that title.
 myrec <- zenodo$getDepositions(q='title:zen4R')
 
-#get depositions creates a list, access first element
+#access the first item in the list, as there should only be one record with that particular title
 myrec <- myrec[[1]]
 
-#edit metadata
+#modify the record's metadata
 myrec <- zenodo$editRecord(myrec$id)
 myrec$setTitle("zen4R 2.0")
 
@@ -113,7 +120,7 @@ myrec <- zenodo$getDepositions(q='title:zen4R 2.0')
 #access the first item in the list, as there should only be one record with that particular title
 myrec <- myrec[[1]]
 
-#edit data, delete_latest_files = TRUE deletes data of previous version,
+#edit data, delete_latest_files = TRUE to not include data of previous version in newer version
 myrec <- zenodo$depositRecordVersion(myrec, delete_latest_files = TRUE, files = "path/to/your/new/file", publish = TRUE)
 ```
     
