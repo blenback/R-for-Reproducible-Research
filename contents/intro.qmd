@@ -134,15 +134,18 @@ of reproducible research:
     Assigning persistent identifiers and providing rich metadata makes
     it easier for researchers and search tools to locate and understand
     datasets, ensuring that your research remains accessible over time.
+    
 -   Accessibility builds on the concept of using nonproprietary formats.
     FAIR emphasizes that data should be retrievable using open,
     standardized protocols, which ensures long-term access to both the
     data and its metadata, even if the data itself becomes unavailable.
+    
 -   Interoperability relates to the consistent use of data standards and
     version control. By using standardized formats and vocabularies,
     research data can be more easily integrated with other datasets,
     supporting reuse and long-term relevance in broader research
     contexts.
+    
 -   Reusability directly aligns with the goals of reproducible research
     by ensuring that data is accompanied by clear licensing and
     provenance, allowing others to confidently reuse it. This principle
