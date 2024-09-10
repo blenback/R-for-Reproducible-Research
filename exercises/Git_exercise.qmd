@@ -8,3 +8,103 @@ execute:
 ## Version control with Git exercise
 
 In this exercise we will show how version control with Git can be implemented for an example R project. The project is the same that is created in the first workflow [exercise](@sec-Rproj_zenodo_exercise), however to save time or in case you haven't completed this exercise we will start with the finished output from it.
+
+If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a>
+
+### Step 1: Download and configure Git
+
+-   Download Git from https://git-scm.com/downloads
+-   Once downloaded open the Git terminal window and type in the following with your credentials
+
+git config --global user.name "NVHarisena1" git config --global user.email "NVHarisena1\@ethz.ch" git config --global --list
+
+The third command should return your updated user-name and email id.
+
+### Step 2: Create a repository on Github
+
+We will make a quick repository on Github for an individual project, without changing much of the specific configurations since it will be beyond the scope of this workshop.
+
+-   Login to your account at https://github.com/
+
+-   Create a new repository by clicking the '+' sign in the top right side of the website or in the 'Start new repository' section in the homepage
+
+-   Provide a clear name for the repository for e.g. "R_repro_nv" and a quick description like "Test for Reproducible research workshop"
+
+-   Set the visibility of the profile to "Public"
+
+-   Initialize this repository with: Add a README file.
+
+-   Select a license for your repository in the "Choose your license" section. Check out [this website](https://choosealicense.com/) to identify which license works for you. Even though it is optional to add license information to a repository, it is good practice to include this ([See more details](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#choosing-the-right-license)).
+
+-   Click the green 'create repository' button
+
+    ![Setting up the repository](assets/images/git_ex1.png){fig-align="left" width="50%"}
+
+### Step 3: Link created repository to R-Studio
+
+-   Open a new session in R studio and create a new project
+
+-   In the 'New Project Wizard' navigate to 'Version Control'\>'Git'
+
+-   In the “repository URL” paste the URL of your new GitHub repository. It will be something like this https://github.com/nvharisena1/R_repro_test.
+
+-   Add folder location where you want the project to be saved locally in your computer in "Create project as subdirectory of" section
+
+-   Click 'Create project'
+
+    ![Linking repository to R-Studio](assets/images/git_ex2.png){fig-align="left" width="50%"}
+
+You will see R-studio has now been set up for your local clone of the project to communicate with your online repository. You can see a drop-down to the right of 'New Branch' button in the Git tab. This will show you all the branches available to pull or push data to. Your drop-down should show only a 'main' branch, since no new branches were created. As stated in the workflow introduction, creating branches is useful for projects with multiple collaborators or sub-themes. Pushing to different branches and then setting up a 'pull-request' to merge to the 'main' branch allows for systematic version control of the project.
+
+```         
+![R-Studio new project session with git link](assets/images/git_ex3.png){fig-align="left" width="50%"}
+```
+
+### Step 4: Add exercise files to the local copy of the project
+
+In the file navigator in the bottom right of Rstudio in the 'files' tab you will see that R-Studio has already navigated to the directory for your project.
+
+-   Create two folders "Exercise" and "Data"
+-   Copy the downloaded "exercise_data" to the two folders: "RiceFarm_project.R" to the exercise folder and the "RiceFarm.csv" to the Data folder; you can do this by navigating to the local directory of the project on windows explorer and copying the data manually. It will automatically show up in the changed files as detected by Git.
+
+You will see that the changes are shown in the Git tab in the top right panel in R-Studio with status and path details of each change.
+
+```         
+![Adding data to project](assets/images/git_ex4.png){fig-align="left" width="50%"}
+```
+
+### Step 5: Edit the README.md
+
+-   Open the README.md from the file viewer pane
+
+-   Add a description section for the project with a heading and a describing sentence, for e.g. "This project is is a test".
+
+-   Add license information for the project, for e.g. "This project is licensed under the terms of the MIT license."
+
+-   Save the file.
+
+    ![Edit README.md](assets/images/git_ex5.png){fig-align="left" width="50%"}
+
+### Step 6: Edit the git.ignore file
+
+The git ignore functionality tells git which files to ignore while 'pushing' the local changes to the remote (online) repository [see more details](https://git-scm.com/docs/gitignore/en).In this example we will tell git to ignore all '.html' files. '.html' files are created when you preview a file, for example click preview on the edited README.md and a .html should be created.
+
+-   Open the .gitignore file and add '.html' in a new line and save the file
+
+    ![Edit .gitignore](assets/images/git_ex6.png){fig-align="left" width="50%"}
+
+### Step 7: Commit and push
+
+-   Click the 'Commit' button in the Git tab
+
+-   Check all the files listed in the top left section
+
+-   Write a sentence describing the changes i.e. "Updated exercise, data, Readme and .gitignore"
+
+-   Click 'Commit' and close the window
+
+-   click 'Push' in the Git tab, a window will pop up showing the interface with the remote system and details of the upload.
+
+    !Commit changes\](assets/images/git_ex7.png){fig-align="left" width="50%"}
+
+Great! You have finished your first project update (local changes committed and pushed) via Git on Rstudio.
