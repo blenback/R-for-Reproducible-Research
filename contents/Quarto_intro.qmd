@@ -14,6 +14,17 @@ Quatro is a unified authoring framework that allows for the integration of code,
 
 -   Edit with any text editor including VS Code, RStudio and more
 
+####  Compatibility Beyond R
+Although Quarto we focus on Quartos integration with R, it is also compatible with other programming languages, making it a flexible choice for a variety of users. Quarto supports:
+
+-   **Python**: You can write Python code in Quarto documents to create visualizations, run analyses, and integrate with Python libraries.
+
+-   **Julia**: Quarto allows seamless integration with Julia for those working in the data science or scientific computing community.
+
+-   **Observable**: For JavaScript users, Quarto supports Observable, allowing you to build interactive documents using JavaScript.
+
+This multi-language support makes Quarto a powerful tool that can adapt to your needs, whether you're working in R, Python, Julia, or even a mix of all three.
+
 ### Some of the creative ways in which you can use Quarto is:
 
 #### 1. Visualize and publish interactive plots using html widgets
@@ -43,6 +54,9 @@ leaflet() %>%
 
 
 ![](https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png){width=60% fig-align="center"}
+#### 4. Create multilingual websites for your research projects
+![](assets/images/quarto_multilingual.png){fig-align="left" width="50%"}
+
 :::
 
 <!-- Presentation content -->
