@@ -222,8 +222,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"><!-- Web content --></h2>
+<!-- Web content -->
 <p><strong>Let’s start with a definition of what makes a good R project from Jenny Bryan:</strong></p>
 <p>A good R project… <em>“creates everything it needs, in its own workspace or folder, and it touches nothing it did not create.”</em> <span class="citation" data-cites="bryan2017">[<a href="#ref-bryan2017" role="doc-biblioref">1</a>]</span></p>
 <p>This is a good definition that contains concepts, such as the notion that projects should be ‘self-contained’. However we add one more caveat to this definition which is that a good R project should <em>explain itself</em>.</p>
@@ -235,20 +234,19 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </figure>
 </div>
 <p>As you move through these you will see that there are areas of overlap and complementarity between them. These topics are also central to the choice of approaches in the <a href="@sec-workflows">three workflows for reproducibility</a> that we will share.</p>
-</section>
 <section id="sec-projects" class="level2">
-<h2 class="anchored" data-anchor-id="sec-projects"><img src="assets/images/RStudio_logo_flat.svg" style="vertical-align:middle; height:1.5em;"> projects</h2>
+<h2 class="anchored" data-anchor-id="sec-projects"><img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1.5em;"> projects</h2>
 <p>How many times have you opened an R script and been greeted by this line:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/ben/path/that/only/I/have"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>While it is well-intentioned (i.e.&nbsp;avoiding the need to have full paths for all objects that will subsequently be loaded or daved ) the problem with it is obvious: This specific path is only relevant for the author and not other potential users and even for the author it is will be invalid if they happen to change computers. The good news is there is a very simple way to avoid having to use <code>setwd()</code> at all by using <a href=""><strong>Rstudio Projects</strong></a>.</p>
+<p>While it is well-intentioned (i.e.&nbsp;avoiding the need to have full paths for all objects that will subsequently be loaded or daved ) the problem with it is obvious: This specific path is only relevant for the author and not other potential users and even for the author it will be invalid if they happen to change computers. The good news is there is a very simple way to avoid having to use <code>setwd()</code> at all by using <a href=""><strong>Rstudio Projects</strong></a>.</p>
 <p>Rstudio projects designate new or existing folders as a defined working directory by creating an <code>.RProj</code> file within them. This means that when you open a project the working directory of the Rstudio session will automatically be set to the directory that the .RProj file is located in and the paths of all files in this folder will be relative to this.</p>
 <p>The <code>.Rproj</code> file can be shared along with the rest of the research project files meaning that others users can easily open the Project to have the same working directory removing the need for those troublesome <code>setwd()</code> lines.</p>
 <section id="sec-creating-projects" class="level3">
 <h3 class="anchored" data-anchor-id="sec-creating-projects">Creating and opening projects</h3>
-<p>Creating an Rstudio project is as simple as using <em>File &gt; New Project</em> in the top left and then choosing between creating the Project in a new or existing directory:</p>
-<p>There are several ways to open a Projects:</p>
+<p>Creating an Rstudio project is as simple as using <em>File &gt; New Project</em> in the top left and then choosing between creating the Project in a new or existing directory.</p>
+<p>There are several ways to open a Project:</p>
 <ol type="1">
 <li>Using <em>File &gt; Open Project</em> in the top left of Rstudio.</li>
 </ol>
@@ -486,17 +484,17 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="sec-roxygen">Function documentation with <code>roxygen2</code></h3>
 <p>Base R provides a standard way of documenting a package where each function is documented in an <code>.Rd</code> file (R documentation). This documentation uses a custom syntax to detail key aspects of the functions such as their input parameters, outputs and any package dependencies <span class="citation" data-cites="wickham2024">[<a href="#ref-wickham2024" role="doc-biblioref">7</a>]</span>.</p>
 <p>In the case of many research projects you will not be creating a package however it is still useful to apply this documentation style to your functions as it is a good way to make them understandable and easier to modify by others. For example, having clear information about the object (e.g.&nbsp;a vector or data.frame) that a function accepts, saves others time in guessing what the function is expecting if they are trying to use new data.</p>
-<p>However, rather than manually writing <code>.Rd</code> files, we can use the <code>roxygen2</code> package to automatically generate these files from a block of comments that are added to the top of the function scripts. To add this comment block, place your cursor inside a function you want to document and press <code>Ctrl + Shift + R</code> (or <code>Cmd + Shift + R</code> on Mac) or you can go to <em>code tools &gt; insert roxygen skeleton</em> (code tools is represented by the wand icon in the top row of the source pane). As you can see in this gif below, when you insert the roxygen block it will already contain the names of the function names, its arguments and any returns and the function name. You can then fill in the rest of the information, such as the description and dependencies etc. for a guide to these other fields see the <a href="https://roxygen2.r-lib.org/articles/rd.html">roxygen2 documentation</a>.</p>
+<p>However, rather than manually writing <code>.Rd</code> files, we can use the <code>roxygen2</code> package to automatically generate these files from a block of comments that are added to the top of the function scripts. To add this comment block, place your cursor inside a function you want to document and press <code>Ctrl + Shift + R</code> (or <code>Cmd + Shift + R</code> on Mac) or you can go to <em>code tools &gt; insert roxygen skeleton</em> (code tools is represented by the wand icon in the top row of the source pane). As you can see in this gif below, when you insert the roxygen block it will already contain the names of the function, its arguments and any returns. You can then fill in the rest of the information, such as the description and dependencies etc. for a guide to these other fields see the <a href="https://roxygen2.r-lib.org/articles/rd.html">roxygen2 documentation</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://jozef.io/img/r102-01-add-roxy-skeleton.gif" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Inserting roxygen block <span class="citation" data-cites="hajnala2018">[<a href="#ref-hajnala2018" role="doc-biblioref"><strong>hajnala2018?</strong></a>]</span></figcaption>
+<figcaption>Inserting roxygen block</figcaption>
 </figure>
 </div>
 </section>
 <section id="tips-for-readme-writing" class="level3">
 <h3 class="anchored" data-anchor-id="tips-for-readme-writing">Tips for README writing</h3>
-<p>If you look at the source code of R packages or projects that use R in Github repositories you will see that they all contain <code>README.md</code> files. This is the markdown format of the README file and is the most common format for README files in R projects. These files are often accompanied by the corresponding file <code>README.Rmd</code> which generates the <code>README.md</code> file. Markdown format is used for README’s because it can be read by many programs and rendered in a variety of formats. In this sense writing the README for your project in markdown makes sense and there tools available to help you do this such as the <code>usethis</code> package which has a function <a href="https://usethis.r-lib.org/reference/use_readme_rmd.html"><code>use_readme_rmd()</code></a> that will create a <code>README.Rmd</code> file for you. However, depending on who you anticipate using your project you may also want to create your README as a raw text file (<code>.txt</code>) which may be a more familiar format for some users and again can be opened by many different programs.</p>
+<p>If you look at the source code of R packages or projects that use R in Github repositories you will see that they all contain <code>README.md</code> files. <code>.md</code> is <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> format which is the most common format for README files in R projects because it can be read by many programs and rendered in a variety of formats. These files are often accompanied by the corresponding file <code>README.Rmd</code> which generates the <code>README.md</code> file. In this sense writing the README for your project in markdown makes sense and there tools available to help you do this such as the <code>usethis</code> package which has a function <a href="https://usethis.r-lib.org/reference/use_readme_rmd.html"><code>use_readme_rmd()</code></a> that will create a <code>README.Rmd</code> file for you. However, depending on who you anticipate using your project you may also want to create your README as a raw text file (<code>.txt</code>) which may be a more familiar format for some users and again can be opened by many different programs.</p>
 <p>Again there is not a single standardised format for what should be included in your README file but here is an example of a README file that was written for one of the authors code/data upload alongside a publication: <a href="assets/README_demo.txt">README.txt</a></p>
 <p>You will see that one of the things this README includes is a tree diagram which shows the directory structure of the project right down to the file level. This is a useful way to give an overview of what users should find included in the project and then explanatory notes can be added to explain the purpose of each file or directory. Such a diagram can be easily generated using the <code>fs</code> package:</p>
 <div class="cell">
@@ -509,14 +507,11 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#produce tree diagram of directory sub-dirs and files and save output using capture.ouput from base R utils.</span></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">capture.output</span>(<span class="fu">dir_tree</span>(Target_dir), <span class="at">file=</span> <span class="st">'Dir_tree_output.txt'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<!-- Presentation content -->
+
+
+
 </section>
-</section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1"><!-- Presentation content --></h2>
-<hr>
-
-
-
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">

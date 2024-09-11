@@ -1,6 +1,6 @@
 ---
-title: 'Reproducible Research with <img style="vertical-align:middle; height:1em; border: none; background: none;" src="assets/images/Rlogo.png"> and <img style="vertical-align:middle; height:1em;" src="assets/images/quarto-logo-trademark.svg">:
-  Workflows for projects and publications'
+title: 'Reproducible Research with <img style="vertical-align:middle; height:35px; width: 35px; border: none;
+  background: none;" src="assets/images/Rlogo.png"> and <img style="vertical-align:middle; height:35px; width: 140px;" src="assets/images/quarto-logo-trademark.svg">: Workflows for data, projects and publications'
 subtitle: "A workshop presented at the [Landscape 2024 conference](https://landscape2024.org/frontend/index.php?folder_id=7393&page_id=), Berlin"
 format:
   html:
@@ -22,12 +22,12 @@ execute:
 
 This image highlights some the key concepts we will discuss in the workshop, which have been divided into seperate sections:
 
-1.    [Background](@sec-background): Some introductory information on why reproducible and transparent research is important.
-2.   [Research projects with R](@sec-Rprojects): Starting from the basics to develop good practice for creating research projects with R, focusing on some features of Rstudio as an Integrated Development Environment that can help ensure your work is reproducible.
-3.   [Workflows for reproducibility](@sec-workflows): Here we present three workflows of differing levels of complexity and discusses how they can be combined and which might be best given the research needs.
-4.   [Quarto](@sec-Quarto): Here we introduce the open-source scientific and technical publishing system Quarto which can be used for numerous academic activities including preparing manuscripts.
-5.   [Guided exercises](@sec-exercises): Now it's time to get hands-on with some guided exercises  to put into practice some of the concepts we have discussed.
-6.   [Resources](@sec-resources): A collection of resources that we find particularly helpful in our own journey towards reproducible research.
+1.  [Background](@sec-background): Some introductory information on why reproducible and transparent research is important.
+2.  [Research projects with R](@sec-Rprojects): Starting from the basics to develop good practice for creating research projects with R, focusing on some features of Rstudio as an Integrated Development Environment that can help ensure your work is reproducible.
+3.  [Workflows for reproducibility](@sec-workflows): Here we present three workflows of differing levels of complexity and discusses how they can be combined and which might be best given the research needs.
+4.  [Quarto](@sec-Quarto): Here we introduce the open-source scientific and technical publishing system Quarto which can be used for numerous academic activities including preparing manuscripts.
+5.  [Guided exercises](@sec-exercises): Now it's time to get hands-on with some guided exercises to put into practice some of the concepts we have discussed.
+6.  [Resources](@sec-resources): A collection of resources that we find particularly helpful in our own journey towards reproducible research.
 
 # Background {#sec-background}
 
@@ -40,29 +40,32 @@ This image highlights some the key concepts we will discuss in the workshop, whi
 # Workflows for Reproducibility {#sec-workflows}
 
 For this workshop we will outline three different workflows for creating reproducible research projects with R combined with other tools. We have named these workflows as follows:
-1. Rstudio project to Zenodo pipeline
-2. Containerization with Docker
-3. Version control with Git
+
+1.  [<img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"/> to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline](#sec-zenodo_workflow)
+
+2.  [Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/>](#sec-docker_workflow)
+
+3.  [Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"/>](#sec-git_workflow)
 
 These workflows are inter-related in the sense that 2. and 3. build upon elements of the first and indeed the techniques of the latter workflows can also be combined together. The workflows differ in the level of reproducibility they ensure but the trade-off for better reproducibility is increased complexity. As such we would suggest that the most reproducible workflow may not always be the most appropriate to implement dependent on the needs of your research project and the capabilities of the collaborators involved.
 
-** TO DO?: Add a table to compare the workflows **
+\*\* TO DO?: Add a table to compare the workflows \*\*
 
-Of course, these workflows are by no-means the only way of doing things and indeed we would actively encourage you to expand upon them in developing your own preferred approach.  
+Of course, these workflows are by no-means the only way of doing things and indeed we would actively encourage you to expand upon them in developing your own preferred approach.
 
-## Rstudio project to Zenodo pipeline {#sec-zenodo_workflow}
+## <img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1.5em;"/> project to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline {#sec-zenodo_workflow}
 
-![](assets/images/project_zenodo_workflow.png){.lightbox width="70%" fig-align="center"}
 {{< include contents/Zenodo_workflow.qmd >}}
 
-## Containerisation with Docker{#sec-docker_workflow}
+## Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/> {#sec-docker_workflow}
 
 {{< include contents/Docker_workflow.qmd >}}
 
-## Version control with Git{#sec-git_workflow}
+## Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"/> {#sec-git_workflow}
 
 ![](assets/images/version_control_workflow.png){.lightbox width="70%" fig-align="center"}
-<!--{{< include contents/Git_workflow.qmd >}}-->
+
+{{< include contents/Git_workflow.qmd >}}
 
 # Quarto {#sec-Quarto}
 
@@ -78,7 +81,6 @@ Of course, these workflows are by no-means the only way of doing things and inde
 
 {{< include exercises/Quarto-manuscript_exercise.qmd >}}
 
-
 # Resources {#sec-resources}
 
-<!--{{\< include contents/resources.qmd \>}}-->
+<!--{{< include contents/resources.qmd >}}-->

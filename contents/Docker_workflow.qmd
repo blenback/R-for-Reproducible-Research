@@ -11,7 +11,7 @@ editor:
 
 <!-- Web content -->
 
-::: {.content-visible when-format="html"}
+::: {.content-hidden when-format="revealjs"}
 ![](assets/images/Docker_workflow.png){.lightbox width="70%"
 fig-align="center"}
 
@@ -79,29 +79,26 @@ wrangling and visualisation, geospatial packages etc.).
 In terms of actually creating the `Dockerfile` for our R project, this
 can be done manually (See a good R-focused tutorial[here](https://colinfay.me/docker-r-reproducibility/)), however there are also R packages that can help with this process such as [`dockerfiler`](https://thinkr-open.github.io/dockerfiler/) and the `[rrtools`](https://github.com/benmarwick/rrtools) package. 
 
-For our workflow we will use the `dockerfiler` package.
-- Main function of the package is `dockerfile_build()` which creates a Dockerfile and builds a Docker image from it.
+For our [exercise](@sec-docker_exercise) of this workflow we will use the `dockerfiler` package, which uses simple assignment lines to add elements to a Dockerfile object, before saving it:
 
+```{R}
+library(dockerfiler)
+# Create a dockerfile template
+my_dock <- Dockerfile$new()
 
+# Add maintainer
+my_dock$MAINTAINER("Jane Doe", "jane_doe@gmail.com")
+
+# Save
+my_dock$write()
+```
 
 ### Docker with renv
 
-### Creating docker image 
-
-### Running docker container
 
 
+:::
 
-
-
-
-
-
-
-https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf
-
-https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/
-
-stevedore package for pulling images from Dockerhub using the Docker API
-https://richfitz.github.io/stevedore/
+<!-- Presentation content -->
+::: {.content-visible when-format="revealjs"}
 :::

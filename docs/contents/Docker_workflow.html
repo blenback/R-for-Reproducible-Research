@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -198,20 +232,22 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p>So to create a <code>Docker Image</code> to containerize our R research projects we need to start by creating a <code>Dockerfile</code> and, as mentioned above, this should start with a base image. In our case this base image must logically include R and RStudio (if we want to utilise the RStudio Projects features).</p>
 <p>Fortunately there is a project that specifically catalogs and manages Docker Images for R projects: <a href="https://rocker-project.org/"><code>Rocker</code></a>. The images available through the Rocker project not only include different versions of R and RStudio but also images containing collections of R packages for specific purposes (e.g.&nbsp;tidyverse for data wrangling and visualisation, geospatial packages etc.).</p>
 <p>In terms of actually creating the <code>Dockerfile</code> for our R project, this can be done manually (See a good R-focused tutorial<a href="https://colinfay.me/docker-r-reproducibility/">here</a>), however there are also R packages that can help with this process such as <a href="https://thinkr-open.github.io/dockerfiler/"><code>dockerfiler</code></a> and the <code>[rrtools</code>](https://github.com/benmarwick/rrtools) package.</p>
-<p>For our workflow we will use the <code>dockerfiler</code> package. - Main function of the package is <code>dockerfile_build()</code> which creates a Dockerfile and builds a Docker image from it.</p>
+<p>For our <a href="@sec-docker_exercise">exercise</a> of this workflow we will use the <code>dockerfiler</code> package, which uses simple assignment lines to add elements to a Dockerfile object, before saving it:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dockerfiler)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dockerfile template</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>my_dock <span class="ot">&lt;-</span> Dockerfile<span class="sc">$</span><span class="fu">new</span>()</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Add maintainer</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>my_dock<span class="sc">$</span><span class="fu">MAINTAINER</span>(<span class="st">"Jane Doe"</span>, <span class="st">"jane_doe@gmail.com"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Save</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>my_dock<span class="sc">$</span><span class="fu">write</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="docker-with-renv" class="level3">
 <h3 class="anchored" data-anchor-id="docker-with-renv">Docker with renv</h3>
-</section>
-<section id="creating-docker-image" class="level3">
-<h3 class="anchored" data-anchor-id="creating-docker-image">Creating docker image</h3>
-</section>
-<section id="running-docker-container" class="level3">
-<h3 class="anchored" data-anchor-id="running-docker-container">Running docker container</h3>
-<p>data(“RiceFarms”) write.csv(RiceFarms, “data/RiceFarms.csv”)</p>
-<p>https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf</p>
-<p>https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/</p>
-<p>stevedore package for pulling images from Dockerhub using the Docker API https://richfitz.github.io/stevedore/</p>
+<!-- Presentation content -->
 
 
 </section>
@@ -796,7 +832,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false,"openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

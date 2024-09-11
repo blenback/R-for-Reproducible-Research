@@ -19,6 +19,10 @@ author:
     email: bblack@ethz.ch
     affiliations:
       - ref: PLUS
+  - name: Manuel Kurmann
+    email: mankurma@student.ethz.ch
+    affiliations:
+      - ref: PLUS
   - name: Nivedita Harisena
     email: nharisena@ethz.ch
     affiliations:
@@ -33,31 +37,61 @@ affiliations:
 date: last-modified
 ---
 
-# Schedule
-::: {.incremental}
-- Introduction (15 mins)
-- Research projects with R (30 mins)
-- Comfort break (10 mins)
-- 3 workflows for Reproducibility (20 mins)
-- Quarto (20 mins)
-- Comfort break (10 mins)
-- Exercise time (45 mins)
-- Q&A + feedback (30 mins)
-:::
+<!-- # Schedule -->
 
-# Introduction
+<!-- ::: {.incremental} -->
+
+<!-- - Introduction (15 mins) -->
+
+<!-- - Research projects with R (30 mins) -->
+
+<!-- - Comfort break (10 mins) -->
+
+<!-- - 3 workflows for Reproducibility (20 mins) -->
+
+<!-- - Quarto (20 mins) -->
+
+<!-- - Comfort break (10 mins) -->
+
+<!-- - Exercise time (45 mins) -->
+
+<!-- - Q&A + feedback (30 mins) -->
+
+<!-- ::: -->
+
+<!-- # Introduction -->
 
 <!-- {{< include contents/intro.qmd >}} -->
 
-# Research projects with R
+<!-- # Research projects with R -->
 
-{{< include contents/Rprojects.qmd >}}
+<!-- {{< include contents/Rprojects.qmd >}} -->
 
-# Let's take a 10 minute break!
+<!-- # Let's take a 10 minute break! -->
 
 # Workflows for Reproducibility
 
-<!--{{< include contents/Zenodo_workflow.qmd >}}-->
+## Workflows for Reproducibility
+
+We will discuss three workflows for reproducibility:
+
+::: {.incremental}
+
+1.  Rstudio project to Zenodo pipeline
+
+2.  Containerization with Docker
+
+3.  Version control with Git
+
+There are suggestions for different approaches and we hope that in future you will be able to adapt these workflows to the needs of your own research projects.
+
+<!-- ::: -->
+
+## Workflows for Reproducibility
+
+**TO DO: Insert comparison of workflows table**
+
+<!-- {{< include contents/Zenodo_workflow.qmd >}} -->
 
 <!--{{< include contents/Docker_workflow.qmd >}}-->
 
@@ -73,10 +107,4 @@ date: last-modified
 
 <!--{{< include contents/Exercise_intro.qmd >}}-->
 
-# Q&A + feedback 
-
-
-
-
-
-
+# Q&A + feedback
