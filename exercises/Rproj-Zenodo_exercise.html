@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -172,6 +206,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 <section id="sec-Rproj_zenodo_exercise" class="level2">
 <h2 class="anchored" data-anchor-id="sec-Rproj_zenodo_exercise">Rstudio project to Zenodo exercise</h2>
+<p>The following exercise is heavily based on <span class="citation" data-cites="blondel2024">[<a href="#ref-blondel2024" role="doc-biblioref"><strong>blondel2024?</strong></a>]</span>. We have extracted the most relevant parts to explain the workflow. If you are interested in more details, check out their user manual at: https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html.</p>
 <p>If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a></p>
 <section id="step-1-download-the-resources" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-download-the-resources">Step 1: Download the resources</h3>
@@ -179,6 +214,113 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li>Click here to download the resources for the exercise: <a href="https://drive.google.com/uc?export=download&amp;id=1V30Aa43u-OhUZ829yWZNxWAybz151MGY" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a></li>
 <li>Unzip the downloaded file and move the folder to a location on your computer where you can easily find it.</li>
 </ul>
+</section>
+<section id="step-1-install-zen4r-to-access-zenodo-through-r" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-install-zen4r-to-access-zenodo-through-r">Step 1: Install zen4R to access Zenodo through r</h3>
+<p>For this exercise we will not be using Zenodo directly but Zenodo Sandbox. The Zenodo Sandbox is a separate, secure testing environment where users can explore Zenodo’s features without impacting the main platform’s publicly accessible data. It allows you to test file uploads, generate test DOIs, and experiment with API integrations. DOIs created in the sandbox are only for testing and use a different prefix. You will need a separate account and access token for the sandbox, distinct from those used on Zenodo’s main site.</p>
+<ul>
+<li>Create an account on https://sandbox.zenodo.org.</li>
+</ul>
+<p>Zenodo can be accessed with r library zen4R to upload, edit, publish and download data.</p>
+<ul>
+<li>Install zen4R library with the following code:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install dependency "remotes"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#install zen4R</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"eblondel/zen4R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-2-create-a-new-zenodo-record" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-create-a-new-zenodo-record">Step 2: Create a new Zenodo record</h3>
+<p>A zenodo record includes metadata, data and a Digital Object Identifier (DOI) which is automatically generated by Zenodo for all uploads. But before you can add records to Zenodo, you need to access your own account through RStudio.</p>
+<ul>
+<li>Go to https://sandbox.zenodo.org/account/settings/applications/.</li>
+<li>Log into your account and then create a new “Personal access token” in the “Applications” section of your account.</li>
+<li>Then run the following code in RStudio to establish the access and create a new record.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zen4R)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Create manager to access your Zenodo repository</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>zenodo <span class="ot">&lt;-</span> ZenodoManager<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">token =</span> <span class="st">"your_token"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">sandbox =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">logger =</span> <span class="st">"INFO"</span> </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Create a new empty record</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> ZenodoRecord<span class="sc">$</span><span class="fu">new</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you want to connect to Zenodo and not the Zenodo sandbox, create the token in your Zenodo account and remove the sandbox = True line in the code above.</p>
+<p>The types of metadata that can be included in a Zenodo record are vast. A full list can be found in the documentation at https://developers.zenodo.org/#representation. The code below gives some examples.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"zen4R"</span>) <span class="co">#title of the record</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalTitle</span>(<span class="st">"This is an alternative title"</span>, <span class="at">type =</span> <span class="st">"alternative-title"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setDescription</span>(<span class="st">"Interface to 'Zenodo' REST API"</span>) <span class="co">#description</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalDescription</span>(<span class="st">"This is an abstract"</span>, <span class="at">type =</span> <span class="st">"abstract"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setPublicationDate</span>(<span class="st">"2024-09-16"</span>) <span class="co">#Format YYYY-MM-DD</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setResourceType</span>(<span class="st">"dataset"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addCreator</span>(<span class="at">firstname =</span> <span class="st">"Yourfirstname"</span>, <span class="at">lastname =</span> <span class="st">"Yourlastname"</span>, <span class="at">role =</span> <span class="st">"datamanager"</span>, <span class="at">orcid =</span> <span class="st">"0000-0001-0002-0003"</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setKeywords</span>(<span class="fu">c</span>(<span class="st">"R"</span>,<span class="st">"dataset"</span>)) <span class="co">#For filtering</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addReference</span>(<span class="st">"Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API"</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setPublisher</span>(<span class="st">"CRAN"</span>) <span class="co">#Publisher</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A record can be deposited on Zenodo before it is published. This will add the record to your account without making it public yet. A deposited record can still be edited or deleted. You can also upload data to a deposited record. If you prefer a graphical interface, you can also edit the record on the Zenodo website.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#deposit record</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#add data to the record, adjust the path below</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>zenodo<span class="sc">$</span><span class="fu">uploadFile</span>(<span class="st">"path/to/your/file"</span>, <span class="at">record =</span> myrec)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#delete record if you want to start over</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>zenodo<span class="sc">$</span><span class="fu">deleteRecord</span>(myrec<span class="sc">$</span>id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Once you are satisfied with the record, you can proceed with its publication.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#publish record</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">publishRecord</span>(myrec<span class="sc">$</span>id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-3-edit-a-published-zenodo-record" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-edit-a-published-zenodo-record">Step 3: Edit a published Zenodo record</h3>
+<p>It is also possible to edit or update the metadata of published records.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#get your record by metadata query, e.g. by title</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:zen4R'</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#get depositions creates a list, access first element</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">#edit metadata</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">editRecord</span>(myrec<span class="sc">$</span>id)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"zen4R 2.0"</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">#redeposit and publish the edited record</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Once a record has been published, it is not possible to edit the data that has been attached to it. However, it is possible to upload an updated version of the data. The previous version of the data will remain accessible via Zenodo. The record will have one overall DOI, while each version will have its own DOI.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># reconnect to your account if necessary</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>zenodo <span class="ot">&lt;-</span> ZenodoManager<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">token =</span> <span class="st">"your_token"</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">sandbox =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">logger =</span> <span class="st">"INFO"</span> </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#get your record by querying the metadata, e.g. by title, this will give you a list of all records with that title.</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:zen4R 2.0'</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">#access the first item in the list, as there should only be one record with that particular title</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">#edit data, delete_latest_files = TRUE deletes data of previous version,</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecordVersion</span>(myrec, <span class="at">delete_latest_files =</span> <span class="cn">TRUE</span>, <span class="at">files =</span> <span class="st">"path/to/your/new/file"</span>, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>
