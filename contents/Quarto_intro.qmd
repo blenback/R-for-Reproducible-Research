@@ -14,8 +14,12 @@ Quatro is a unified authoring framework that allows for the integration of code,
 
 -   Edit with any text editor including VS Code, RStudio and more
 
+-   Easily include citations and bibliographies from tools like Zotero, making it ideal for academic writing and research projects.
+
+-   Efficiently track changes and collaborate using Git or other version control systems, thanks to its text-based document structure.
+
 ####  Compatibility Beyond R
-Although Quarto we focus on Quartos integration with R, it is also compatible with other programming languages, making it a flexible choice for a variety of users. Quarto supports:
+Although we focus on Quartos integration with R, it is also compatible with other programming languages, making it a flexible choice for a variety of users. Quarto supports:
 
 -   **Python**: You can write Python code in Quarto documents to create visualizations, run analyses, and integrate with Python libraries.
 
@@ -51,8 +55,6 @@ leaflet() %>%
 ```
 
 #### 3. Create multi-purpose dashboards to demostrate your research output
-
-
 ![](https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png){width=60% fig-align="center"}
 #### 4. Create multilingual websites for your research projects
 ![](assets/images/quarto_multilingual.png){fig-align="left" width="50%"}
@@ -62,7 +64,69 @@ leaflet() %>%
 <!-- Presentation content -->
 ::: {.content-visible when-format="revealjs"}
 
+### Introduction to Quarto
 
+**A Unified Authoring Framework**
 
+- Integrates code, text, and interactive visuals
+- Produces publishable documents
+- Updates dynamically as code changes
+
+---
+
+### Key Features of Quarto
+
+**What Quarto Allows You To:**
+
+- Create dynamic content that updates with your code
+- Utilize high-quality Pandoc Markdown for formatting
+- Publish your work as websites or books
+- Edit with any text editor (e.g., VS Code, RStudio)
+- Easily include citations from tools like Zotero
+- Collaborate and track changes using Git
+
+---
+
+### Compatibility Beyond R
+
+**Multi-Language Support:**
+
+- **Python**: Create visualizations and run analyses
+- **Julia**: Seamless integration for data science
+- **Observable JavaScript**: Build interactive documents
+- Flexible for mixed-language projects
+
+---
+
+### Some of the creative ways in which you can use Quarto is:
+#### 1. Visualize and publish interactive plots using html widgets
+
+```{r, fig.width=10,fig.height=7}
+library(ggplot2)
+library(plotly)
+p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
+            geom_bar(position = "dodge")
+ggplotly(p)
+```
+---
+
+#### 2. Create interactive geo-spatial mapping segments
+
+```{r}
+
+library(leaflet)
+
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng= 8.548, lat=47.376, popup="ETH")
+
+```
+---
+#### 3. Create multi-purpose dashboards to demostrate your research output
+![](https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png){width=60% fig-align="center"}
+---
+
+#### 4. Create multilingual websites for your research projects
+![](assets/images/quarto_multilingual.png){fig-align="left" width="50%"}
 :::
 
