@@ -59,31 +59,31 @@ date: last-modified
 
 <!-- ::: -->
 
-# Introduction
+<!-- # Introduction -->
 
 <!-- {{< include contents/intro.qmd >}} -->
 
-# Research projects with R
+<!-- # Research projects with R -->
 
-{{< include contents/Rprojects.qmd >}}
+<!-- {{< include contents/Rprojects.qmd >}} -->
 
-# Let's take a 10 minute break!
+<!-- # Let's take a 10 minute break! -->
 
 # Workflows for Reproducibility
 
-<!-- ## Workflows for Reproducibility -->
+## Workflows for Reproducibility
 
-<!-- We will discuss three workflows for reproducibility: -->
+We will discuss three workflows for reproducibility:
 
-<!-- ::: {.incremental} -->
+::: {.incremental}
 
-<!-- 1.  Rstudio project to Zenodo pipeline -->
+1.  Rstudio project to Zenodo pipeline
 
-<!-- 2.  Containerization with Docker -->
+2.  Containerization with Docker
 
-<!-- 3.  Version control with Git -->
+3.  Version control with Git
 
-<!-- There are suggestions for different approaches and we hope that in future you will be able to adapt these workflows to the needs of your own research projects. -->
+There are suggestions for different approaches and we hope that in future you will be able to adapt these workflows to the needs of your own research projects.
 
 <!-- ::: -->
 

@@ -11,7 +11,7 @@ editor:
 
 <!-- Web content -->
 
-::: {.content-visible when-format="html"}
+::: {.content-hidden when-format="revealjs"}
 ![](assets/images/Docker_workflow.png){.lightbox width="70%"
 fig-align="center"}
 
@@ -95,35 +95,10 @@ my_dock$write()
 
 ### Docker with renv
 
-### Creating docker image 
-
-One of the most important Docker commands is `build` which creates a `Docker image` from your `Dockerfile` instructions.
-
-There are two ways to use `build` command:
-1.    Through a Command Line Interface (CLI) such as the terminal in Rstudio or the terminal in your operating system (e.g Command Prompt for Windows). Open up a new Terminal window and navigate to where your code is located. Then, run the following command.
-2.    Through the Docker desktop application. Which is more user friendly if you are not familiar with the CLI.
-
-```{r}
-docker build -t r-docker-demo .
-```
-
-You will then see that a docker image file has been created:
 
 
-### Running docker container
+:::
 
-
-
-
-
-
-
-
-
-https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf
-
-https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/
-
-stevedore package for pulling images from Dockerhub using the Docker API
-https://richfitz.github.io/stevedore/
+<!-- Presentation content -->
+::: {.content-visible when-format="revealjs"}
 :::

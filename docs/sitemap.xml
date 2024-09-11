@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/presentation.html</loc>
-    <lastmod>2024-09-08T11:28:03.013Z</lastmod>
+    <lastmod>2024-09-09T11:37:00.472Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Rproj-Zenodo_exercise.html</loc>
-    <lastmod>2024-09-06T07:48:52.890Z</lastmod>
+    <lastmod>2024-09-09T15:29:54.146Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Git_exercise.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Docker_workflow.html</loc>
-    <lastmod>2024-09-07T11:53:34.246Z</lastmod>
+    <lastmod>2024-09-09T15:12:45.090Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/assets/project-templates.html</loc>
@@ -46,11 +46,11 @@
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Rprojects.html</loc>
-    <lastmod>2024-09-07T13:53:29.509Z</lastmod>
+    <lastmod>2024-09-09T11:35:31.452Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Docker_exercise.html</loc>
-    <lastmod>2024-09-07T14:08:10.587Z</lastmod>
+    <lastmod>2024-09-09T15:25:19.829Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Quarto-manuscript_exercise.html</loc>
