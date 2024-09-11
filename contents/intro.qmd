@@ -73,8 +73,6 @@ with us.
 
 ## What is reproducible research?
 
-**TO DO: Introduce FAIR principles**
-
 Reproducibility is a key aspect of reliable scientific research. It
 enables other researchers to reproduce the same results using the
 original data, code, and documentation [@essawy2020]. Below are the core
@@ -115,6 +113,50 @@ research outputs. [@alston2021][@siraji2023]
 By following these steps, researchers contribute to the wider scientific
 community, ensuring that their work can be efficiently and accurately
 reproduced by others.
+
+**Introducing the FAIR Principles**
+
+While the principles above lay the groundwork for reproducibility, the
+FAIR principles (Findability, Accessibility, Interoperability, and
+Reusability) provide a more comprehensive framework for enhancing the
+value of research data in the digital age. These principles expand on
+reproducibility by emphasizing not only human access to research outputs
+but also machine actionability, ensuring that data can be effectively
+found, accessed, and reused by both people and computational tools​.
+[@wilkinson2016]
+
+**How FAIR Principles Build on Reproducibility**
+
+The FAIR principles naturally complement and expand on the core aspects
+of reproducible research:
+
+-   Findability reinforces the importance of clear documentation.
+    Assigning persistent identifiers and providing rich metadata makes
+    it easier for researchers and search tools to locate and understand
+    datasets, ensuring that your research remains accessible over time.
+    
+-   Accessibility builds on the concept of using nonproprietary formats.
+    FAIR emphasizes that data should be retrievable using open,
+    standardized protocols, which ensures long-term access to both the
+    data and its metadata, even if the data itself becomes unavailable.
+    
+-   Interoperability relates to the consistent use of data standards and
+    version control. By using standardized formats and vocabularies,
+    research data can be more easily integrated with other datasets,
+    supporting reuse and long-term relevance in broader research
+    contexts.
+    
+-   Reusability directly aligns with the goals of reproducible research
+    by ensuring that data is accompanied by clear licensing and
+    provenance, allowing others to confidently reuse it. This principle
+    reinforces the need for thorough documentation and transparent
+    methods.
+
+By incorporating the FAIR principles, researchers ensure that their data
+not only meets the standards of reproducibility but is also optimized
+for long-term use and discovery. This fosters a research environment
+where data is more transparent, accessible, and impactful over time​.
+[@wilkinson2016]
 
 ## Why strive for reproducible research?
 
@@ -243,7 +285,7 @@ tool for projects of all kinds.
 ### Ben Black
 
 ::: {layout="[0.38, -0.02, 0.60]" layout-valign="center"}
-![](https://github.com/blenback.png){.picture }
+![](https://github.com/blenback.png){.picture}
 
 [{{< iconify fa6-solid house-chimney-user >}}
 blenback.github.io](https://blenback.github.io/){style="text-decoration: none;"}<br>

@@ -17,21 +17,19 @@ developing your research project as an Rstudio project following the
 [good practice project guidelines](@sec-Rprojects) we have discussed.
 Then, it uses the `renv` package to manage the project environment so
 that others can re-create it. Finally, the code, data and environment
-are uploaded to the open-access repository Zenodo, which provides a DOI
+are uploaded to the open-access repository `Zenodo`, which provides a DOI
 for your work, ensuring long-term accessibility and reproducibility.
 
 ![](assets/images/project_zenodo_workflow.png){.lightbox width="70%"
 fig-align="center"}
 
-**TO DO: Edit this paragraph for accuracy** While renv focuses on
-internal reproducibility by controlling the R environment, Zenodo
-ensures external reproducibility by providing a stable and citable
-repository for the research outputs. Combining both tools allows
-researchers to capture the environment in which their analysis was
-conducted and share it along with their data and code. Together, renv
-and Zenodo form a comprehensive solution for reproducible, open science
-research in accordance with the FAIR guiding principles
-[@wilkinson2016].
+The `renv` package helps maintain the R environment, allowing others to
+recreate the environment in which your analysis was conducted. By
+combining `renv` with `Zenodo`, you create a comprehensive solution for
+reproducible research. `renv` ensures that the computational environment
+is captured, while `Zenodo` makes your research outputs accessible and
+citable, supporting the FAIR principles of findability, accessibility,
+interoperability, and reusability [@wilkinson2016].
 
 The next sections provide some additional detail on [environment
 management with renv](@sec-renv_workflow) and some background and
@@ -43,7 +41,7 @@ exercise](@sec-Rproj_zenodo_exercise).
 
 `renv` is a powerful R package designed to help manage project
 environments by creating project-specific libraries and lockfiles. As
-mentioned earlier, renv captures the exact versions of R packages used
+mentioned earlier, `renv` captures the exact versions of R packages used
 in a project, storing this information in a renv.lock file. This allows
 users to recreate the exact package environment when revisiting a
 project or transferring it to a different machine, ensuring
@@ -51,9 +49,9 @@ reproducibility.
 
 The `renv` workflow is straightforward:
 
--   **Initialize `renv` in a project**: renv creates a separate library
-    in the project folder, isolating the packages from the system-wide
-    library.
+-   **Initialize `renv` in a project**: `renv` creates a separate
+    library in the project folder, isolating the packages from the
+    system-wide library.
 
 -   **Snapshot dependencies**: `renv` scans the project, identifying
     which packages are being used and recording their versions in the
@@ -70,32 +68,32 @@ dependencies without disrupting existing workflows. This makes it
 particularly well-suited for ensuring that research projects are
 reproducible across different systems and platforms.
 
-However, renv does not manage the **entire system environment** (such as
-the version of R itself or external dependencies like system libraries).
-For complete reproducibility, combining renv with containerization tools
-(like Docker) or publishing outputs (such as code or data) via
-repositories like Zenodo is recommended. The use of renv allows
-researchers to easily capture and restore the R environment, while
-repositories can ensure the long-term availability of the project’s
-outputs.
+However, `renv` does not manage the **entire system environment** (such
+as the version of R itself or external dependencies like system
+libraries). For complete reproducibility, combining `renv` with
+containerization tools (like `Docker`) or publishing outputs (such as code
+or data) via repositories like `Zenodo` is recommended. The use of
+`renv` allows researchers to easily capture and restore the R
+environment, while repositories can ensure the long-term availability of
+the project’s outputs.
 
 ### <img src="assets/images/zenodo-blue.svg" style="vertical-align:middle; height:2.75em;"/> as a research repository {#sec-zenodo_background}
 
 [Zenodo](https://zenodo.org/) is a platform created under the European
-Commission's [OpenAIRE project](https://www.openaire.eu/) in partnership
+Commission‘s [OpenAIRE project](https://www.openaire.eu/) in partnership
 with [CERN](https://home.cern/) to publish, archive, and share
 scientific research outputs, including datasets, code, and publications.
 
 Of course there are many other similar research repositories, such as
 [Dryad](https://datadryad.org/stash), [Figshare](https://figshare.com/),
 [Mendeley Data](https://data.mendeley.com/) and
-[OSF](https://osf.io/q5j8g/), but we recommend Zenodo for several
+[OSF](https://osf.io/q5j8g/), but we recommend `Zenodo` for several
 reasons:
 
 -   **Generous upload size of 50GB (100 files) per record**
 
 -   **Aligns with FAIR and Open Science principles**: The practical
-    features of Zenodo that ensure this are described in it's
+    features of `Zenodo` that ensure this are described in it‘s
     [principles](https://about.zenodo.org/principles/)
 
 -   **Ability to create communities**: [Zenodo
@@ -105,14 +103,14 @@ reasons:
     research group or a large-scale funded project.
 
 -   **Long term preservation with assignment of DOIs:** Each item
-    published on Zenodo is assigned a permanent [*Digital Object
+    published on `Zenodo` is assigned a permanent [*Digital Object
     Identifier*
     (DOI)](https://simple.wikipedia.org/wiki/Digital_Object_Identifier),
     which is a better way than a URL to cite the record in academic
     writing.
 
--   **Open source**: This means that Zenodo is not just free to use but
-    you can even see the [code it is built
+-   **Open source**: This means that `Zenodo` is not just free to use
+    but you can even see the [code it is built
     on](https://github.com/zenodo/zenodo-rdm) and contribute to it.
 
 -   **Versioning functionality:** Every record starts with a 1st version
@@ -124,7 +122,7 @@ reasons:
     the work should be maintained.
 
 -   **Integration with GitHub:** When a research project (e.g., code) is
-    hosted on [GitHub](@sec-git_workflow), Zenodo can be used to
+    hosted on [GitHub](@sec-git_workflow), `Zenodo` can be used to
     [archive the
     repository](https://help.zenodo.org/docs/profile/linking-accounts/)
     upon each new release, creating a snapshot with a DOI. This means
@@ -133,29 +131,29 @@ reasons:
 
 -   **Application programming Interface (API) to access records
     programmatically:** This a useful feature as it allows for
-    interfacing with Zenodo records without using the website and is the
-    backbone of the `zen4R` package that allows for publishing records
-    directly from R which we discuss in more detail below.
+    interfacing with `Zenodo` records without using the website and is
+    the backbone of the `zen4R` package that allows for publishing
+    records directly from R which we discuss in more detail below.
 
-### Publishing to Zenodo with `zen4R`
+### Publishing to `Zenodo` with `zen4R`
 
 The [`zen4R`](%3Chttps://cran.r-project.org/web/packages/zen4R) package
-[@blondel2024] provides functions to interact with Zenodo’s API directly
+[@blondel2024] provides functions to interact with `Zenodo‘s` API directly
 from R. The package allows you to:
 
--   Retrieve the metadata of, and download, existing Zenodo records.
+-   Retrieve the metadata of, and download, existing `Zenodo` records.
 
 -   Create new records and versions of records, write their metadata and
-    upload files to Zenodo.
+    upload files to `Zenodo`.
 
 We will use `zen4R` to publish the code, data, and environment of our
-example project to Zenodo in the accompanying exercise.
+example project to `Zenodo` in the accompanying exercise.
 :::
 
 <!-- Presentation content -->
 
-::: {.content-visible when-format="revealjs"}
-## Rstudio project to Zenodo pipeline
+::: {.content-visible when-format="revealjs"} \## Rstudio project to
+`Zenodo` pipeline
 
 ![](assets/images/project_zenodo_workflow.png){.lightbox width="90%"
 fig-align="center"}
@@ -166,11 +164,11 @@ by developing your research project as an Rstudio project following the
 good practice guidelines we have just discussed. Then, it uses the renv
 package to manage the project environment so that others can re-create
 it. Finally, the code, data and environment are uploaded to the
-open-access repository Zenodo, which provides a DOI for your work,
+open-access repository `Zenodo`, which provides a DOI for your work,
 ensuring long-term accessibility and reproducibility.
 :::
 
-## Rstudio project to Zenodo pipeline
+## Rstudio project to `Zenodo` pipeline
 
 ### Managing Project Environments with renv
 
@@ -183,7 +181,7 @@ ensuring long-term accessibility and reproducibility.
 -   Centralizes package environment management within each project
 
 ::: notes
--   renv helps manage R package environments by creating isolated
+-   `renv` helps manage R package environments by creating isolated
     libraries specific to each project, ensuring that the project uses
     only the packages it needs.
 
@@ -198,7 +196,7 @@ ensuring long-term accessibility and reproducibility.
     folder, avoiding conflicts with global R libraries.
 :::
 
-## Rstudio project to Zenodo pipeline
+## Rstudio project to `Zenodo` pipeline
 
 ### `renv` Workflow
 
@@ -212,7 +210,7 @@ ensuring long-term accessibility and reproducibility.
 -   Easy integration with RStudio for workflow management
 
 ::: notes
--   Initialize renv in a project to isolate packages from the
+-   Initialize `renv` in a project to isolate packages from the
     system-wide library.
 
 -   Snapshot the project’s package dependencies, generating a lockfile
@@ -220,102 +218,107 @@ ensuring long-term accessibility and reproducibility.
 
 -   Restore the environment by reinstalling packages using the lockfile.
 
--   renv integrates smoothly with RStudio, making it easy to use
+-   `renv` integrates smoothly with RStudio, making it easy to use
     alongside other development tools.
 :::
 
-## Rstudio project to Zenodo pipeline
+## Rstudio project to `Zenodo` pipeline
 
-### Limitations of renv
+### Limitations of `renv`
 
--   Does not manage R versions or external dependencies
+-   Does not manage R versions or system-wide dependencies
 
--   Focuses on internal reproducibility
+-   Focuses on managing package environments within R
 
--   Best combined with containerization (e.g., Docker)
+-   Best combined with containerization (e.g., `Docker`) for full reproducibility
 
--   Complements external repositories (e.g., Zenodo)
+-   Complements external repositories (e.g., `Zenodo`) for sharing and preservation
 
 ::: notes
--   renv does not manage system-wide components like the R version or
-    external libraries.
+-   `renv` does not manage system-level dependencies such as the R version or other software your project might rely on (e.g., geospatial libraries like GDAL
 
--   renv ensures internal reproducibility.
+-   `renv` is designed to manage the R package environment, ensuring that the same R packages and versions are used across different machines.
 
--   For full reproducibility, renv should be combined with tools like
-    Docker for system environment control.
+-   For full reproducibility, `renv` should be combined with tools like
+    `Docker` for system environment control.
 
--   Publishing platforms like Zenodo can be used to store code and data
-    for long-term preservation.
+-   Publishing platforms like `Zenodo` can be used to store code and
+    data for long-term preservation.
 :::
 
-## Rstudio project to Zenodo pipeline
+## Rstudio project to `Zenodo` pipeline
 
 ### Publishing and Archiving with Zenodo
 
--   Provides long-term storage for research outputs
+-   Long-term storage with generous 50GB upload limit per record
 
--   Assigns permanent DOIs for citations
+-   Permanent DOIs for easy citation and versioning support for updates
 
--   Supports versioning for transparency
+-   GitHub integration for seamless code archiving with DOI snapshots
 
--   Simplifies archiving from GitHub with DOI snapshots
+-   Supports FAIR principles: aligned with open access, transparency, and reusability
+
+-   Community creation for grouping related research outputs
+
+-   API and open-source: flexible for programmatic access and customization
 
 ::: notes
--   Zenodo provides a repository for long-term archiving of datasets,
-    code, and publications, ensuring accessibility.
+-   `Zenodo` provides long-term storage for a variety of research outputs, including datasets, code, and publications, ensuring that these materials remain accessible over time.
 
--   Each uploaded item is assigned a permanent DOI for easy citation in
-    research.
+-   Every record receives a permanent Digital Object Identifier (DOI), which allows for easy citation in research papers.
 
--   Zenodo’s versioning feature allows researchers to update projects
-    while keeping previous versions accessible.
+-   Integration with GitHub allows researchers to archive their code and generate DOI-linked snapshots with each release.
 
--   Integration with GitHub allows automatic archiving of new code
-    releases, creating DOI-linked snapshots.
+-   `Zenodo` aligns with the FAIR and Open Science principles, supporting open and reusable research outputs
+
+-   The platform allows the creation of communities to group related records, making it useful for creating a collection of related research outputs, either for a
+    research group or a large-scale funded project.
+    
+-   `Zenodo’s` API provides programmatic access for tasks like automating record creation, and its open-source nature allows for customization and contribution to the platform.
 :::
 
-## Rstudio project to Zenodo pipeline
+## Rstudio project to `Zenodo` pipeline
 
-### Streamlining publishing to Zenodo with `zen4R`
+### Streamlining publishing to `Zenodo` with `zen4R`
 
--   Upload datasets, code, and metadata from R to Zenodo
+-   Upload datasets, code, and metadata from R to `Zenodo`
 
 -   Automate publication and deposition management
 
--   Retrieve and update Zenodo records directly in R
+-   Retrieve and update `Zenodo` records directly in R
 
 -   Facilitates integration and reproducibility in R workflows
 
 ::: notes
--   zen4R allows R users to interact with Zenodo’s API to upload data
+-   `zen4R` allows R users to interact with `Zenodo‘s` API to upload data
     and code directly from R.
 
 -   It supports automated publication, including metadata management and
     record updating.
 
--   Retrieve and update Zenodo records programmatically within R.
+-   Retrieve and update `Zenodo` records programmatically within R.
 
 -   This makes publishing more efficient, especially in workflows
     requiring frequent updates or version control.
 :::
 
-## Rstudio project to Zenodo pipeline
+## Rstudio project to `Zenodo` pipeline
 
-### Combining renv and Zenodo
+### Combining `renv` and `Zenodo`
 
--   RENV manages internal project environments
+-   `renv` manages internal project environments
 
--   Zenodo ensures external reproducibility with archiving
+-   `Zenodo` ensures external reproducibility with archiving
 
 -   Together, they provide a comprehensive solution
 
--   Aligns with open science and FAIR principles ::: {.notes}
+-   Aligns with open science and FAIR principles
 
--   RENV manages internal environments by locking package versions and
+::: notes
+-   `renv` manages internal environments by locking package versions and
     dependencies.
 
--   Zenodo provides external storage and ensures reproducibility by
+-   `Zenodo` provides external storage and ensures reproducibility by
     archiving and versioning research outputs.
 
 -   Together, they create a comprehensive solution for reproducible,
@@ -323,4 +326,6 @@ ensuring long-term accessibility and reproducibility.
 
 -   This combination aligns with FAIR principles, ensuring data is
     Findable, Accessible, Interoperable, and Reusable.
+:::
+
 :::

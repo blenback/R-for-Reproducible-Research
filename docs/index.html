@@ -239,6 +239,16 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
   </ul></li>
   <li><a href="#sec-workflows" id="toc-sec-workflows" class="nav-link" data-scroll-target="#sec-workflows"><span class="header-section-number">3</span> Workflows for Reproducibility</a>
   <ul class="collapse">
+<<<<<<< HEAD
+  <li><a href="#sec-zenodo_workflow" id="toc-sec-zenodo_workflow" class="nav-link" data-scroll-target="#sec-zenodo_workflow">Rstudio project to Zenodo pipeline</a></li>
+  <li><a href="#sec-docker_workflow" id="toc-sec-docker_workflow" class="nav-link" data-scroll-target="#sec-docker_workflow">Containerisation with Docker</a></li>
+  <li><a href="#sec-git_workflow" id="toc-sec-git_workflow" class="nav-link" data-scroll-target="#sec-git_workflow">Version control with Git</a></li>
+  </ul></li>
+  <li><a href="#sec-Quarto" id="toc-sec-Quarto" class="nav-link" data-scroll-target="#sec-Quarto"><span class="header-section-number">4</span> Quarto</a>
+  <ul class="collapse">
+  <li><a href="#a-brief-introduction-to-quarto" id="toc-a-brief-introduction-to-quarto" class="nav-link" data-scroll-target="#a-brief-introduction-to-quarto">A brief introduction to Quarto</a></li>
+  </ul></li>
+=======
   <li><a href="#sec-zenodo_workflow" id="toc-sec-zenodo_workflow" class="nav-link" data-scroll-target="#sec-zenodo_workflow"><img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1.5em;"> project to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"> pipeline</a></li>
   <li><a href="#sec-docker_workflow" id="toc-sec-docker_workflow" class="nav-link" data-scroll-target="#sec-docker_workflow">Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"></a></li>
   <li><a href="#sec-git_workflow" id="toc-sec-git_workflow" class="nav-link" data-scroll-target="#sec-git_workflow">Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"></a></li>
@@ -248,6 +258,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
   <ul class="collapse">
   <li><a href="#a-brief-introduction-to" id="toc-a-brief-introduction-to" class="nav-link" data-scroll-target="#a-brief-introduction-to">A brief introduction to <img style="vertical-align:0%; height:0.75em" src="assets/images/quarto-logo-trademark.svg"></a></li>
   </ul></li>
+>>>>>>> main
   <li><a href="#sec-exercises" id="toc-sec-exercises" class="nav-link" data-scroll-target="#sec-exercises"><span class="header-section-number">5</span> Guided excercises</a>
   <ul class="collapse">
   <li><a href="#sec-Rproj_zenodo_exercise" id="toc-sec-Rproj_zenodo_exercise" class="nav-link" data-scroll-target="#sec-Rproj_zenodo_exercise">Rstudio project to Zenodo exercise</a></li>
@@ -343,7 +354,10 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </section>
 <section id="what-is-reproducible-research" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-reproducible-research">What is reproducible research?</h2>
+<<<<<<< HEAD
+=======
 <p><strong>TO DO: Introduce FAIR principles</strong></p>
+>>>>>>> main
 <p>Reproducibility is a key aspect of reliable scientific research. It enables other researchers to reproduce the same results using the original data, code, and documentation <span class="citation" data-cites="essawy2020">[<a href="#ref-essawy2020" role="doc-biblioref"><strong>essawy2020?</strong></a>]</span>. Below are the core principles to ensure reproducibility in research:</p>
 <p><strong>Starts with planning</strong></p>
 <p>Reproducibility begins during the planning stage. It is essential to organize data management and ensure clear protocols are in place even before starting the analysis. Consistent Data Storage Regular backups of data are crucial. Storing data in multiple locations ensures accessibility and minimizes the risk of data loss. <span class="citation" data-cites="alston2021">[<a href="#ref-alston2021" role="doc-biblioref"><strong>alston2021?</strong></a>]</span></p>
@@ -382,7 +396,11 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </section>
 </section>
 <section id="why-for-reproducible-research" class="level2">
+<<<<<<< HEAD
+<h2 class="anchored" data-anchor-id="why-for-reproducible-research">Why <iconify-icon inline="" icon="fa-brands:r-project"></iconify-icon> for reproducible research?</h2>
+=======
 <h2 class="anchored" data-anchor-id="why-for-reproducible-research">Why <iconify-icon role="img" inline="" icon="fa-brands:r-project" aria-label="Icon r-project from fa-brands Iconify.design set." title="Icon r-project from fa-brands Iconify.design set."></iconify-icon> for reproducible research?</h2>
+>>>>>>> main
 <p>R is increasingly recognized as a powerful tool for ensuring reproducibility in scientific research. Here are some key advantages of using R for reproducible research:</p>
 <p><strong>Open Source</strong></p>
 <p>Accessibility R is freely available to everyone, eliminating cost barriers and promoting inclusive access to research tools. This open-source model ensures that researchers around the world can use and contribute to its development, fostering a collaborative research environment. <span class="citation" data-cites="siraji2023">[<a href="#ref-siraji2023" role="doc-biblioref"><strong>siraji2023?</strong></a>]</span></p>
@@ -728,6 +746,31 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p><a href="assets/images/project_zenodo_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="assets/images/project_zenodo_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
+<<<<<<< HEAD
+<!-- Web content -->
+<section id="environment-management-with-renv" class="level3">
+<h3 class="anchored" data-anchor-id="environment-management-with-renv">Environment Management with renv</h3>
+<p>renv is a powerful R package designed to help manage project environments by creating project-specific libraries and lockfiles. As mentioned earlier, renv captures the exact versions of R packages used in a project, storing this information in a renv.lock file. This allows users to recreate the exact package environment when revisiting a project or transferring it to a different machine, ensuring reproducibility.</p>
+<p>The renv workflow is straightforward:</p>
+<ul>
+<li><p>Initialize renv in a project: renv creates a separate library in the project folder, isolating the packages from the system-wide library.</p></li>
+<li><p>Snapshot dependencies: renv scans the project, identifying which packages are being used and recording their versions in the lockfile.</p></li>
+<li><p>Restore environments: Anyone cloning or receiving the project can run renv::restore() to install the exact versions of the packages listed in the lockfile, reproducing the original project environment.</p></li>
+</ul>
+<p>One of the core strengths of renv is its flexibility. It integrates seamlessly with tools like RStudio, allowing easy management of dependencies without disrupting existing workflows. This makes it particularly well-suited for ensuring that research projects are reproducible across different systems and platforms.</p>
+<p>However, renv does not manage the <strong>entire system environment</strong> (such as the version of R itself or external dependencies like system libraries). For complete reproducibility, combining renv with containerization tools (like Docker) or publishing outputs (such as code or data) via repositories like Zenodo is recommended. The use of renv allows researchers to easily capture and restore the R environment, while repositories can ensure the long-term availability of the project’s outputs.</p>
+<p>The code specific workflow is straightforward and well explained in the documentation: <a href="https://rstudio.github.io/renv/articles/renv.html" class="uri">https://rstudio.github.io/renv/articles/renv.html</a></p>
+</section>
+<section id="publishing-and-archiving-with-zenodo" class="level3">
+<h3 class="anchored" data-anchor-id="publishing-and-archiving-with-zenodo">Publishing and Archiving with Zenodo</h3>
+<p>Zenodo complements renv by providing a platform to publish, archive, and share research outputs, including datasets, code, and publications. Created by CERN and OpenAIRE, Zenodo ensures that research artifacts are accessible for the long term, aligning with open science principles. Each item published on Zenodo is assigned a permanent DOI, making it easy to reference and cite in academic work.</p>
+<p>A unique feature of Zenodo is its support for versioning. Researchers can update their work over time, while earlier versions remain accessible, ensuring transparency and reproducibility. This versioning system is crucial in scientific research, where updated analyses and data corrections are often necessary, but reproducibility of original work must be maintained.</p>
+<p>The zen4R package <span class="citation" data-cites="blondel2024">[<a href="#ref-blondel2024" role="doc-biblioref"><strong>blondel2024?</strong></a>]</span> enhances the integration of R with Zenodo by providing tools to programmatically interact with Zenodo’s API directly from R. This package allows researchers to:</p>
+<ul>
+<li><p>Upload datasets and code to Zenodo.</p></li>
+<li><p>Automate the publication process by creating new records, updating metadata, and managing depositions.</p></li>
+<li><p>Retrieve information about existing Zenodo records.</p></li>
+=======
 <p><strong>TO DO: Edit this paragraph for accuracy</strong> While renv focuses on internal reproducibility by controlling the R environment, Zenodo ensures external reproducibility by providing a stable and citable repository for the research outputs. Combining both tools allows researchers to capture the environment in which their analysis was conducted and share it along with their data and code. Together, renv and Zenodo form a comprehensive solution for reproducible, open science research in accordance with the FAIR guiding principles <span class="citation" data-cites="wilkinson2016">[<a href="#ref-wilkinson2016" role="doc-biblioref"><strong>wilkinson2016?</strong></a>]</span>.</p>
 <p>The next sections provide some additional detail on <a href="@sec-renv_workflow">environment management with renv</a> and some background and practical tips on <a href="@sec-zenodo_background">Zenodo</a>. You will have the chance to apply this workflow to an example project in the <a href="@sec-Rproj_zenodo_exercise">accompanying exercise</a>.</p>
 <section id="sec-renv_workflow" class="level3">
@@ -755,7 +798,12 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li><p><strong>Versioning functionality:</strong> Every record starts with a 1st version and <a href="https://help.zenodo.org/docs/deposit/manage-versions/">new versions can be added as research is updated</a>, while earlier versions remain accessible. This is crucial in scientific research, where updated analyses and data corrections are often necessary, but also transparency around earlier versions of the work should be maintained.</p></li>
 <li><p><strong>Integration with GitHub:</strong> When a research project (e.g., code) is hosted on <a href="@sec-git_workflow">GitHub</a>, Zenodo can be used to <a href="https://help.zenodo.org/docs/profile/linking-accounts/">archive the repository</a> upon each new release, creating a snapshot with a DOI. This means that a version of the code can be more easily cited in scientific publications.</p></li>
 <li><p><strong>Application programming Interface (API) to access records programmatically:</strong> This a useful feature as it allows for interfacing with Zenodo records without using the website and is the backbone of the <code>zen4R</code> package that allows for publishing records directly from R which we discuss in more detail below.</p></li>
+>>>>>>> main
 </ul>
+<p>This makes it easier to publish research outputs, ensuring that versioning, DOIs, and metadata management are handled efficiently within R workflows, facilitating reproducibility and sharing in open science practices. Learn more about the zen4R package: <a href="https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html" class="uri">https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html</a></p>
+<p>Zenodo also integrates seamlessly with GitHub. When a research project (e.g., code) is hosted on GitHub, Zenodo can automatically archive the repository upon each new release, creating a snapshot with a DOI. This integration simplifies the process of ensuring that research code is preserved in an immutable form, contributing to better practices in reproducible science.</p>
+<p>While renv focuses on internal reproducibility by controlling the R environment, Zenodo ensures external reproducibility by providing a stable and citable repository for the research outputs. Combining both tools allows researchers to capture the environment in which their analysis was conducted and share it along with their data and code. Together, renv and Zenodo form a comprehensive solution for reproducible, open science research in accordance with the FAIR guiding principles <span class="citation" data-cites="wilkinson2016">[<a href="#ref-wilkinson2016" role="doc-biblioref"><strong>wilkinson2016?</strong></a>]</span>.</p>
+<!-- Presentation content -->
 </section>
 <section id="publishing-to-zenodo-with-zen4r" class="level3">
 <h3 class="anchored" data-anchor-id="publishing-to-zenodo-with-zen4r">Publishing to Zenodo with <code>zen4R</code></h3>
@@ -767,7 +815,10 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p>We will use <code>zen4R</code> to publish the code, data, and environment of our example project to Zenodo in the accompanying exercise.</p>
 <!-- Presentation content -->
 </section>
+<<<<<<< HEAD
+=======
 </section>
+>>>>>>> main
 <section id="sec-docker_workflow" class="level2">
 <h2 class="anchored" data-anchor-id="sec-docker_workflow">Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"></h2>
 <!-- Web content -->
@@ -863,7 +914,10 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </ol>
 </section>
 </section>
+<<<<<<< HEAD
+=======
 </section>
+>>>>>>> main
 <section id="sec-Quarto" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Quarto</h1>
 <!-- Web content -->
@@ -884,21 +938,37 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <section id="visualize-and-publish-interactive-plots-using-html-widgets" class="level4">
 <h4 class="anchored" data-anchor-id="visualize-and-publish-interactive-plots-using-html-widgets">1. Visualize and publish interactive plots using html widgets</h4>
 <div class="cell">
+<<<<<<< HEAD
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">fill =</span> clarity)) <span class="sc">+</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>            <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplotly</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+=======
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">fill =</span> clarity)) <span class="sc">+</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>            <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplotly</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+>>>>>>> main
 </div>
 </section>
 <section id="create-interactive-geo-spatial-mapping-segments" class="level4">
 <h4 class="anchored" data-anchor-id="create-interactive-geo-spatial-mapping-segments">2. Create interactive geo-spatial mapping segments</h4>
 <div class="cell">
+<<<<<<< HEAD
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span>  <span class="co"># Add default OpenStreetMap map tiles</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">lng=</span> <span class="fl">8.548</span>, <span class="at">lat=</span><span class="fl">47.376</span>, <span class="at">popup=</span><span class="st">"ETH"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+=======
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span>  <span class="co"># Add default OpenStreetMap map tiles</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">lng=</span> <span class="fl">8.548</span>, <span class="at">lat=</span><span class="fl">47.376</span>, <span class="at">popup=</span><span class="st">"ETH"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+>>>>>>> main
 </div>
 </section>
 <section id="create-multi-purpose-dashboards-to-demostrate-your-research-output" class="level4">
@@ -996,7 +1066,11 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </section>
 <section id="sec-resources" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Resources</h1>
+<<<<<<< HEAD
+<!--{{\< include contents/resources.qmd \>}}-->
+=======
 <!--{{< include contents/resources.qmd >}}-->
+>>>>>>> main
 
 
 
@@ -1581,8 +1655,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
+<<<<<<< HEAD
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
+=======
 <script type="application/javascript" src="light-dark.js"></script>
 <script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});
+>>>>>>> main
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

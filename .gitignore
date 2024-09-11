@@ -46,3 +46,26 @@ po/*~
 rsconnect/
 
 /.quarto/
+*.html
+*.html
+*.html
+docs/presentation.html
+docs/index.html
+*.html
+*.html
+/docs
+exercises/exercise_1_data/RiceFarms.csv
+exercises/exercise_1_data/RiceFarm_project.R
+exercises/exercise_23_data/.Rprofile
+exercises/exercise_23_data/.DS_Store
+exercises/exercise_23_data/Data/Processed/RiceFarms_summary.csv
+exercises/exercise_23_data/Data/Raw/RiceFarms.csv
+exercises/exercise_23_data/Output/Visualisations/Regional_size_summary_bar.png
+exercises/exercise_23_data/renv.lock
+exercises/exercise_23_data/renv/activate.R
+exercises/exercise_23_data/renv/settings.json
+exercises/exercise_23_data/Rice_farm_analysis.Rproj
+exercises/exercise_23_data/RiceFarm_master.R
+exercises/exercise_23_data/Scripts/01_data_analysis.R
+exercises/exercise_23_data/Scripts/02_data_visualisation.R
+exercises/exercise_23_data/Scripts/RiceFarm_project.R
