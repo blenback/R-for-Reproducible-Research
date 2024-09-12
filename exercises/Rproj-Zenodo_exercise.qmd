@@ -40,8 +40,8 @@ This ensures that your raw data remains untouched and is well-structured.
 
 We'll now organize the project's scripts by splitting the original script into separate analysis and visualization scripts.
 
--   Create a `scripts` folder inside your project directory.
--   Move the original `RiceFarm_project.R` script into the `scripts` folder.
+-   Create a `Scripts` folder inside your project directory.
+-   Move the original `RiceFarm_project.R` script into the `Scripts` folder.
 
 Now, split the script into two parts: - Create two new scripts named `01_data_analysis.R` and `02_data_visualisation.R`.
 
@@ -58,15 +58,22 @@ Now, split the script into two parts: - Create two new scripts named `01_data_an
     # Raw data dir
     raw_dir <- "Data/Raw"
 
-    # vector and create processed data save dir
+    # create processed data save dir
     save_dir <- "Data/Processed"
     dir.create(save_dir,
            showWarnings = FALSE,
            recursive = TRUE)
     ```
 
+    -   Adjust the path for reading the .csv file
+    
+    ```{r}
+    # Load csv file of data
+    rice_data <- read.csv(file.path(raw_dir, "RiceFarms.csv"))
+    ```
+    
     -   Save rice_data_summary to disk after processing:
-
+    
     ```{r}
     # Save the summarized data
     write.csv(rice_data_summary,
@@ -92,10 +99,8 @@ Now, split the script into two parts: - Create two new scripts named `01_data_an
     -   Add code that loads the summarized data from the processed data folder:
 
     ```{r}
-    # Raw data directory
-    raw_dir <- "Data/Raw"
-    # Load csv file of data
-    rice_data <- read.csv(file.path(raw_dir, "RiceFarms.csv"))
+    # load the summarized data
+    rice_data_summary <- read.csv("Data/Processed/RiceFarms_summary.csv")
     ```
 
 ### Step 5: Add Script Headers
@@ -136,6 +141,12 @@ Running this master script will execute both analysis and visualization steps.
 ### Step 7: Initialize renv and Manage Dependencies
 To make your project reproducible, we'll use `renv` to manage dependencies. This ensures that the project can be recreated with the same package versions.
 
+- install renv package
+
+    ```{r}
+    install.packages("renv")
+    ```
+    
 -   Run the following command in your master script to set up the project-specific environment
 
     ```{r}
@@ -151,6 +162,11 @@ This records the project's environment in a renv.lock file, which is essential f
 
 ### Step 8: Automate Opening the Master Script
 For convenience, we can configure RStudio to automatically open the master script when the project is loaded.
+
+-   install the rstudioapi package:
+    ```{r}
+install.packages("rstudioapi")
+    ```
 
 -   Open the `.Rprofile` file in the root of your project directory. The file might be hidden. On Windows click "View" > "Show" > "Hidden items" in the explorer and on MacOS click Press Command+Shift+Dot within the root directory to see the file.
 -   Add the following R code to the `.Rprofile` file:
