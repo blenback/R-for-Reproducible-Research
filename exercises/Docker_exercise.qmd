@@ -37,7 +37,7 @@ If you would prefer to view the exercise script offline, here is a PDF version: 
 
 Alternatively if you look in the system tray on Windows or the top menu bar on Mac. You will see an icon of the Docker whale logo and if you click on this you can see the status of the engine.
 
-![Docker Engine status in system try](assets/images/Docker_running_desktop.png){width="70%" fig-align="center"}
+![Docker Engine status in system try](./assets/images/Docker_running_desktop.png){width="70%" fig-align="center"}
 
 ### Step 4: Creating the Dockerfile
 
@@ -104,19 +104,19 @@ dir.create("/output")
 
 - In Rstudio switch to the terminal tab next to the console pane:
   
-![Rstudio terminal](assets/images/Docker_terminal.png){width="70%" fig-align="center"}
+![Rstudio terminal](./assets/images/Docker_terminal.png){width="70%" fig-align="center"}
   
 - Run the following command:  `docker build  -t ricerarm_01 .` Note: The `-t` flag is used to tag the image with a name (in this case we are using `ricerarm_01`). The `.` at the end of the command is used to specify the current directory as the location of `Dockerfile` that is to be used.
   
 - After running the command you will see the Docker engine pulling the base image from the Docker Hub and then building the image. This process can take a few minutes depending on the size of the base image and the number of packages you are installing. The output in the terminal will look something like this:
   
-![Docker build output in terminal](assets/images/Docker_build_output.png){width="70%" fig-align="center"}
+![Docker build output in terminal](./assets/images/Docker_build_output.png){width="70%" fig-align="center"}
 
 - Once the image has been built you can check that it is there by running the command `docker images` in the terminal. This will show you a list of all the images on your computer. You should see the image you just created in the list.
 
 - Alternatively you can check the image in the Docker desktop app. You will see the image in the list of images on the left of the app window. You can inspect the image by clicking on it and see the details of the image:
 
-![Docker build output in app](assets/images/Docker_build_app.png){width="70%" fig-align="center"}
+![Docker build output in app](./assets/images/Docker_build_app.png){width="70%" fig-align="center"}
 
 ### Step 6: Running the Docker container
 
@@ -126,11 +126,11 @@ dir.create("/output")
 
 - **Or in the Docker desktop app:** Click on the image you want to run and then click the run button in the top right. This will open a window where you can specify the settings for the container but for now you should just run the container with the default settings.
 
-![Docker images in app](assets/images/Docker_image_app.png){width="70%" fig-align="center"}
+![Docker images in app](./assets/images/Docker_image_app.png){width="70%" fig-align="center"}
 
 - After running the container you can also check the status of the container in the Docker desktop app. You will see the container in the list of containers on the left of the app window. You can inspect the container by clicking on it and see the details of the container.
 
-![Docker containers in app](assets/images/Docker_container_app.png){width="70%" fig-align="center"}
+![Docker containers in app](./assets/images/Docker_container_app.png){width="70%" fig-align="center"}
 
 ### Step 8 Copying files from the container to the host
 
@@ -138,12 +138,12 @@ dir.create("/output")
 
 - Instead we will copy the output files from the container using the CLI. To do this you need to know the `container ID` of the container you want to copy files from. You can get the container ID by running the command: `docker ps -a` in the terminal, this will show you a list of all the containers on your computer and in the terminal output you can copy the ID:
 
-![Docker container ID in terminal](assets/images/Docker_container_ID.png){width="70%" fig-align="center"}
+![Docker container ID in terminal](./assets/images/Docker_container_ID.png){width="70%" fig-align="center"}
 
 - Now you have the ID in the terminal run the command: `docker cp <Container ID>:/home/Output/Visualisations/Regional_size_summary_bar.png ./Output/`
 and replace the `<Container ID>` with the ID you copied. The first argument `/home/Output/Visualisations/Regional_size_summary_bar.png` is the path to the file you want to copy in the container. The second argument `./Output/` is the path to the directory to copy the file to on your host machine, again this is a relative path and the `.` specifies the current directory. After running the command you should a message printed in the terminal and the file should be copied to the directory you specified:
 
-![Docker copy output in terminal](assets/images/Docker_copy_output.png){width="70%" fig-align="center"}
+![Docker copy output in terminal](./assets/images/Docker_copy_output.png){width="70%" fig-align="center"}
 
 That's it, you have successfully created a Dockerfile, Docker image and container, run your code inside the container and copied the output back to your host machine. If you were to share the Dockerfile with someone else they could build the image and run the container on their machine and get exactly the same results as you. Obviously this is a very simple example but the same principles apply to more complex projects where reproducibility becomes more challenging. 
 

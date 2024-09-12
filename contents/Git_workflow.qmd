@@ -1,5 +1,4 @@
 ---
-bibliography: references.bib
 execute:
   echo: true
   eval: false
@@ -7,7 +6,10 @@ execute:
 ---
 
 ::: {.content-hidden when-format="revealjs"}
-**Version controlling** software output can have multiple uses including creating a systematic procedure for collaboration, working as a team along with increasing the ease of reproduction of the work by other users or by the original researcher as well. We all know the difficulty of tracing back the workflow of work projects a few months down the line after having shelved it, and it is here that Git and Github can be highly useful (@Alexander2023).
+
+![](assets/images/version_control_workflow.png){width="70%" fig-align="center"}
+
+**Version control** software output can have multiple uses including creating a systematic procedure for collaboration, working as a team along with increasing the ease of reproduction of the work by other users or by the original researcher as well. We all know the difficulty of tracing back the workflow of work projects a few months down the line after having shelved it, and it is here that Git and Github can be highly useful (@Alexander2023).
 
 ### About Git
 

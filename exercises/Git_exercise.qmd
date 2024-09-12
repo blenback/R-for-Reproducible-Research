@@ -38,7 +38,7 @@ We will make a quick repository on Github for an individual project, without cha
 
 - Click the green 'create repository' button
 
-![Setting up the repository](assets/images/git_ex1.png){width="70%" fig-align="center"}
+![Setting up the repository](./assets/images/git_ex1.png){width="70%" fig-align="center"}
 
 ### Step 3: Link created repository to R-Studio
 
@@ -52,11 +52,11 @@ We will make a quick repository on Github for an individual project, without cha
 
 - Click 'Create project'
 
-![Linking repository to R-Studio](assets/images/git_ex2.png){width="70%" fig-align="center"}
+![Linking repository to R-Studio](./assets/images/git_ex2.png){width="70%" fig-align="center"}
 
 You will see R-studio has now been set up for your local clone of the project to communicate with your online repository. You can see a drop-down to the right of 'New Branch' button in the Git tab. This will show you all the branches available to pull or push data to. Your drop-down should show only a 'main' branch, since no new branches were created. As stated in the workflow introduction, creating branches is useful for projects with multiple collaborators or sub-themes. Pushing to different branches and then setting up a 'pull-request' to merge to the 'main' branch allows for systematic version control of the project.
 
-![R-Studio new project session with git link](assets/images/git_ex3.png){width="70%" fig-align="center"}
+![R-Studio new project session with git link](./assets/images/git_ex3.png){width="70%" fig-align="center"}
 
 
 <!-- ### Step 4: Add exercise files to the local copy of the project -->
@@ -68,7 +68,7 @@ You will see R-studio has now been set up for your local clone of the project to
 
 <!-- You will see that the changes are shown in the Git tab in the top right panel in R-Studio with status and path details of each change. -->
 
-<!-- ![Adding data to project](assets/images/git_ex4.png){width="70%" fig-align="center"} -->
+<!-- ![Adding data to project](./assets/images/git_ex4.png){width="70%" fig-align="center"} -->
 
 
 ### Step 5: Edit the `README.md` file
@@ -81,7 +81,7 @@ You will see R-studio has now been set up for your local clone of the project to
 
 -   Save the file.
 
-    ![Edit README.md](assets/images/git_ex5.png){width="70%" fig-align="center"}
+    ![Edit README.md](./assets/images/git_ex5.png){width="70%" fig-align="center"}
 
 ### Step 6: Edit the `.gitignore` file
 
@@ -89,7 +89,7 @@ The git ignore functionality tells git which files to ignore while 'pushing' the
 
 -   Open the `.gitignore` file and add `.html` in a new line and save the file
 
-![Editing the .gitignore file](assets/images/git_ex6.png){width="70%" fig-align="center"}
+![Editing the .gitignore file](./assets/images/git_ex6.png){width="70%" fig-align="center"}
 
 ### Step 7: Commit and push
 
@@ -103,6 +103,6 @@ The git ignore functionality tells git which files to ignore while 'pushing' the
 
 - click `Push` in the Git tab, a window will pop up showing the interface with the remote system and details of the upload.
 
-![Commit changes](assets/images/git_ex7.png){width="70%" fig-align="center"}
+![Commit changes](./assets/images/git_ex7.png){width="70%" fig-align="center"}
 
 Great! You have finished your first project update (local changes committed and pushed) via Git on Rstudio.

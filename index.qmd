@@ -17,6 +17,9 @@ execute:
   echo: true
   eval: false
   error: false
+include-after-body:
+  text: |
+    <script type="application/javascript" src="light-dark.js"></script>
 ---
 
 ![](assets/images/graphical_abstract_dark.png){width="70%" fig-align="center"}
@@ -64,8 +67,6 @@ Of course, these workflows are by no-means the only way of doing things and inde
 
 ## Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"/> {#sec-git_workflow}
 
-![](assets/images/version_control_workflow.png){width="70%" fig-align="center"}
-
 {{< include contents/Git_workflow.qmd >}}
 
 # Quarto {#sec-Quarto}
@@ -85,5 +86,8 @@ Now it's time to get hands on with some guided exercises that will let you put i
 {{< include exercises/Quarto-manuscript_exercise.qmd >}}
 
 # Resources {#sec-resources}
+
+::: {#refs}
+:::
 
 <!--{{< include contents/resources.qmd >}}-->

@@ -1,5 +1,4 @@
 ---
-bibliography: references.bib
 execute:
   echo: true
   eval: false

@@ -1,85 +1,42 @@
 ---
-bibliography: references.bib
 execute:
   echo: true
   eval: false
   error: false
-editor: 
-  markdown: 
-    wrap: 72
 ---
 
 <!-- Web content -->
 
 ::: {.content-hidden when-format="revealjs"}
-![](assets/images/Docker_workflow.png){.lightbox width="70%"
-fig-align="center"}
+![](assets/images/Docker_workflow.png){.lightbox width="70%" fig-align="center"}
 
-**The title of this workflow raises two questions, the first being: what
-is containerization?**
+**The title of this workflow raises two questions, the first being: what is containerization?**
 
-Simply put containerization is the process of bundling code along with
-all of it's dependencies, i.e. all the components we discussed as making
-up the [environment](@sec-environment-management), including the
-operating system, software libraries (packages), and other system
-software. The fact everything needed to run the code is included means
-that the code is portable and can be run on any platform or cloud
-service. This also makes containerization something of a gold standard
-for reproducibility as the entire environment is explicitly re-produced.
+Simply put containerization is the process of bundling code along with all of it's dependencies, i.e. all the components we discussed as making up the [environment](@sec-environment-management), including the operating system, software libraries (packages), and other system software. The fact everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service. This also makes containerization something of a gold standard for reproducibility as the entire environment is explicitly re-produced.
 
 **and the second: what is Docker?**
 
-[Docker](https://www.docker.com/) is an open-source, and the most
-popular, platform for containerization. Before we dive into a practical
-example using Docker for research projects with R it is important to
-introduce some three key terms that we will come across:
+[Docker](https://www.docker.com/) is an open-source, and the most popular, platform for containerization. Before we dive into a practical example using Docker for research projects with R it is important to introduce some three key terms that we will come across:
 
--   `Dockerfile`: The first step in the containerization process, they
-    are a straightforward text file containing a collection of commands
-    or procedures to create a new Docker Image. In this sense we can
-    consider a Dockerfile are the source code of Docker Image.
-    Importantly, Dockerfiles typically start from a base image, which is
-    a existing Docker Image that your image is extending.
+-   `Dockerfile`: The first step in the containerization process, they are a straightforward text file containing a collection of commands or procedures to create a new Docker Image. In this sense we can consider a Dockerfile are the source code of Docker Image. Importantly, Dockerfiles typically start from a base image, which is a existing Docker Image that your image is extending.
 
--   `Docker Image`: A read-only file that contains the instructions for
-    creating a Docker Container. Think of an image as the blueprint of
-    what will be in a container when it is running. Docker Images can be
-    shared via [Dockerhub](https://hub.docker.com/), so that they can be
-    used by others.
+-   `Docker Image`: A read-only file that contains the instructions for creating a Docker Container. Think of an image as the blueprint of what will be in a container when it is running. Docker Images can be shared via [Dockerhub](https://hub.docker.com/), so that they can be used by others.
 
--   `Docker Container`: Is an actual running instance of a Docker image.
-    It runs completely isolated from the host environment by default and
-    only accesses host files (i.e. data) if it has been configured to do
-    so. It is possible to create multiple containers simultaneously from
-    the same Docker Image, and each container can be started, stopped,
-    moved, and deleted independently of the others.
+-   `Docker Container`: Is an actual running instance of a Docker image. It runs completely isolated from the host environment by default and only accesses host files (i.e. data) if it has been configured to do so. It is possible to create multiple containers simultaneously from the same Docker Image, and each container can be started, stopped, moved, and deleted independently of the others.
 
-The graphic below show the relationships between these components
-including the central commands of Docker that connect them `build` and
-`run`:
+The graphic below show the relationships between these components including the central commands of Docker that connect them `build` and `run`:
 
-![](assets/images/docker_explainer.png){.lightbox width="70%"
-fig-align="center"}
+![](assets/images/docker_explainer.png){.lightbox width="70%" fig-align="center"}
 
 ### Using Docker with R
 
-So to create a `Docker Image` to containerize our R research projects we
-need to start by creating a `Dockerfile` and, as mentioned above, this should
-start with a base image. In our case this base image must logically
-include R and RStudio (if we want to utilise the RStudio Projects
-features).
+So to create a `Docker Image` to containerize our R research projects we need to start by creating a `Dockerfile` and, as mentioned above, this should start with a base image. In our case this base image must logically include R and RStudio (if we want to utilise the RStudio Projects features).
 
-Fortunately there is a project that specifically catalogs and manages
-Docker Images for R projects: [`Rocker`](https://rocker-project.org/).
-The images available through the Rocker project not only include
-different versions of R and RStudio but also images containing
-collections of R packages for specific purposes (e.g. tidyverse for data
-wrangling and visualisation, geospatial packages etc.).
+Fortunately there is a project that specifically catalogs and manages Docker Images for R projects: [`Rocker`](https://rocker-project.org/). The images available through the Rocker project not only include different versions of R and RStudio but also images containing collections of R packages for specific purposes (e.g. tidyverse for data wrangling and visualisation, geospatial packages etc.).
 
-In terms of actually creating the `Dockerfile` for our R project, this
-can be done manually (See a good R-focused tutorial[here](https://colinfay.me/docker-r-reproducibility/)), however there are also R packages that can help with this process such as [`dockerfiler`](https://thinkr-open.github.io/dockerfiler/) and the `[rrtools`](https://github.com/benmarwick/rrtools) package. 
+In terms of actually creating the `Dockerfile` for our R project, this can be done manually (See a good R-focused tutorial[here](https://colinfay.me/docker-r-reproducibility/)), however there are also R packages that can help with this process such as [`dockerfiler`](https://thinkr-open.github.io/dockerfiler/) and the `[rrtools`\](https://github.com/benmarwick/rrtools) package.
 
-For our [exercise](@sec-docker_exercise) of this workflow we will use the `dockerfiler` package, which creates a custom class object that represents the Dockerfile and has slots corresponding to common elements of Docker images. This allows us to add elements to the dockerfile in a more R-like way. The following code snippet demonstrates adding `Maintainer` details to a Dockerfile object, before saving it:
+For our [exercise](@sec-docker_exercise) of this workflow we will use the `dockerfiler` package, which creates a custom class object that represents the Dockerfile and has slots corresponding to common elements of Docker images. This allows us to add elements to the dockerfile in a more R-like way. The following code snippet demonstrates adding `Maintainer` details to a `Dockerfile` object, before saving it:
 
 ```{R}
 library(dockerfiler)
@@ -93,12 +50,19 @@ my_dock$MAINTAINER("Jane Doe", "jane_doe@gmail.com")
 my_dock$write()
 ```
 
-### Docker with renv
+### Docker with `renv`
 
+Docker can be used with the `renv` package to [manage the package environment of your project](@sec-environment-management).
+
+There are two methods of implementing this which come with their own considerations:
+
+1.  **Use `renv` to install packages when the Docker image is built**: This approach is useful if yo plan to have have multiple projects with **identical package requirements**. This because by creating an image containing this package library you can simply re-use the image as a base for new images for different projects [@ushey2024].**Warning:** Restoring the package library (`renv::restore()`) when building the image will be slow if there are large numbers of packages so try to avoid the need to re-build the base image many times.
+2.  **Use `renv` to install/restore packages only when Docker containers are run**: This approach is better when you plan to have multiple projects that are built from the same base image but require **different package requirements**. Hence it is preferable to not included the package library in the image but instead to mount different project specific libraries to the container when it is run [@ushey2024]. If project libraries are dynamically provisioned in this way and `renv::restore()` is run with caching this means that the packages are not re-installed everytime the container is run.
 
 
 :::
 
 <!-- Presentation content -->
+
 ::: {.content-visible when-format="revealjs"}
 :::
