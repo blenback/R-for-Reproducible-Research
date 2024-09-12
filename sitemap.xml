@@ -2,54 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Docker_workflow.html</loc>
-    <lastmod>2024-09-12T15:37:31.178Z</lastmod>
+    <lastmod>2024-09-12T15:54:18.986Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Rprojects.html</loc>
-    <lastmod>2024-09-12T15:37:31.178Z</lastmod>
+    <lastmod>2024-09-12T15:54:18.986Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Quarto_intro.html</loc>
-    <lastmod>2024-09-12T15:37:31.178Z</lastmod>
+    <lastmod>2024-09-12T15:54:18.986Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/index.html</loc>
-    <lastmod>2024-09-12T15:37:31.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Docker_exercise.html</loc>
-    <lastmod>2024-09-12T15:37:31.322Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Rproj-Zenodo_exercise.html</loc>
-    <lastmod>2024-09-12T15:37:31.322Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/presentation.html</loc>
-    <lastmod>2024-09-12T15:37:31.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Quarto-manuscript_exercise.html</loc>
-    <lastmod>2024-09-12T15:37:31.322Z</lastmod>
+    <lastmod>2024-09-12T15:54:19.198Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Git_exercise.html</loc>
-    <lastmod>2024-09-12T15:37:31.322Z</lastmod>
+    <lastmod>2024-09-12T15:54:19.130Z</lastmod>
   </url>
   <url>
-    <loc>https://blenback.github.io/R-for-Reproducible-Research/assets/renv_docker.html</loc>
-    <lastmod>2024-09-12T15:37:31.178Z</lastmod>
+    <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Quarto-manuscript_exercise.html</loc>
+    <lastmod>2024-09-12T15:54:19.130Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blenback.github.io/R-for-Reproducible-Research/presentation.html</loc>
+    <lastmod>2024-09-12T15:54:19.198Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Rproj-Zenodo_exercise.html</loc>
+    <lastmod>2024-09-12T15:54:19.130Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blenback.github.io/R-for-Reproducible-Research/exercises/Docker_exercise.html</loc>
+    <lastmod>2024-09-12T15:54:19.130Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Git_workflow.html</loc>
-    <lastmod>2024-09-12T15:37:31.178Z</lastmod>
+    <lastmod>2024-09-12T15:54:18.986Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/intro.html</loc>
-    <lastmod>2024-09-12T15:37:31.178Z</lastmod>
+    <lastmod>2024-09-12T15:54:18.990Z</lastmod>
   </url>
   <url>
     <loc>https://blenback.github.io/R-for-Reproducible-Research/contents/Zenodo_workflow.html</loc>
-    <lastmod>2024-09-12T15:37:31.178Z</lastmod>
+    <lastmod>2024-09-12T15:54:18.986Z</lastmod>
   </url>
 </urlset>
