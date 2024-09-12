@@ -3,7 +3,7 @@
 ::: {.content-hidden when-format="revealjs"}
 ## A brief introduction to Quarto
 
-Quatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.
+Quarto is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.
 
 #### Quarto allows you to:
 
@@ -57,7 +57,11 @@ leaflet() %>%
 
 #### 3. Create multi-purpose dashboards to demostrate your research output
 
-![](https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png){width="60%" fig-align="center"} \#### 4. Create multilingual websites for your research projects ![](assets/images/quarto_multilingual.png){fig-align="left" width="50%"}
+![](https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png){fig-align="center" width="70%"} 
+
+#### 4. Create multilingual websites for your research projects
+
+![](assets/images/quarto_multilingual.png){fig-align="center" width="70%"}
 :::
 
 <!-- Presentation content -->
@@ -71,8 +75,6 @@ leaflet() %>%
 -   Produces publishable documents
 -   Updates dynamically as code changes
 
-------------------------------------------------------------------------
-
 ### Key Features of Quarto
 
 **What Quarto Allows You To:**
@@ -84,7 +86,6 @@ leaflet() %>%
 -   Easily include citations from tools like Zotero
 -   Collaborate and track changes using Git
 
-------------------------------------------------------------------------
 
 ### Compatibility Beyond R
 
@@ -95,7 +96,6 @@ leaflet() %>%
 -   **Observable JavaScript**: Build interactive documents
 -   Flexible for mixed-language projects
 
-------------------------------------------------------------------------
 
 ### Some of the creative ways in which you can use Quarto is:
 
@@ -109,7 +109,6 @@ p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
 ggplotly(p)
 ```
 
-------------------------------------------------------------------------
 
 #### 2. Create interactive geo-spatial mapping segments
 
@@ -123,12 +122,12 @@ leaflet() %>%
 
 ```
 
----
+
 #### 3. Create multi-purpose dashboards to demostrate your research output
-![](https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png){width=60% fig-align="center"}
----
+
+![](https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png){fig-align="center"}
 
 #### 4. Create multilingual websites for your research projects
 
-![](assets/images/quarto_multilingual.png){fig-align="left" width="50%"}
+![](assets/images/quarto_multilingual.png){fig-align="left"}
 :::

@@ -17,17 +17,16 @@ developing your research project as an Rstudio project following the
 [good practice project guidelines](@sec-Rprojects) we have discussed.
 Then, it uses the `renv` package to manage the project environment so
 that others can re-create it. Finally, the code, data and environment
-are uploaded to the open-access repository `Zenodo`, which provides a DOI
+are uploaded to the open-access repository Zenodo, which provides a DOI
 for your work, ensuring long-term accessibility and reproducibility.
 
-![](assets/images/project_zenodo_workflow.png){.lightbox width="70%"
-fig-align="center"}
+![](assets/images/project_zenodo_workflow.png){.lightbox width="70%" fig-align="center"}
 
 The `renv` package helps maintain the R environment, allowing others to
 recreate the environment in which your analysis was conducted. By
-combining `renv` with `Zenodo`, you create a comprehensive solution for
+combining `renv` with Zenodo, you create a comprehensive solution for
 reproducible research. `renv` ensures that the computational environment
-is captured, while `Zenodo` makes your research outputs accessible and
+is captured, while Zenodo makes your research outputs accessible and
 citable, supporting the FAIR principles of findability, accessibility,
 interoperability, and reusability [@wilkinson2016].
 
@@ -71,8 +70,8 @@ reproducible across different systems and platforms.
 However, `renv` does not manage the **entire system environment** (such
 as the version of R itself or external dependencies like system
 libraries). For complete reproducibility, combining `renv` with
-containerization tools (like `Docker`) or publishing outputs (such as code
-or data) via repositories like `Zenodo` is recommended. The use of
+containerization tools (like [Docker](@#sec-docker_workflow)) or publishing outputs (such as code
+or data) via repositories like Zenodo is recommended. The use of
 `renv` allows researchers to easily capture and restore the R
 environment, while repositories can ensure the long-term availability of
 the project’s outputs.
@@ -87,13 +86,13 @@ scientific research outputs, including datasets, code, and publications.
 Of course there are many other similar research repositories, such as
 [Dryad](https://datadryad.org/stash), [Figshare](https://figshare.com/),
 [Mendeley Data](https://data.mendeley.com/) and
-[OSF](https://osf.io/q5j8g/), but we recommend `Zenodo` for several
+[OSF](https://osf.io/q5j8g/), but we recommend Zenodo for several
 reasons:
 
 -   **Generous upload size of 50GB (100 files) per record**
 
 -   **Aligns with FAIR and Open Science principles**: The practical
-    features of `Zenodo` that ensure this are described in it‘s
+    features of Zenodo that ensure this are described in it‘s
     [principles](https://about.zenodo.org/principles/)
 
 -   **Ability to create communities**: [Zenodo
@@ -103,13 +102,13 @@ reasons:
     research group or a large-scale funded project.
 
 -   **Long term preservation with assignment of DOIs:** Each item
-    published on `Zenodo` is assigned a permanent [*Digital Object
+    published on Zenodo is assigned a permanent [*Digital Object
     Identifier*
     (DOI)](https://simple.wikipedia.org/wiki/Digital_Object_Identifier),
     which is a better way than a URL to cite the record in academic
     writing.
 
--   **Open source**: This means that `Zenodo` is not just free to use
+-   **Open source**: This means that Zenodo is not just free to use
     but you can even see the [code it is built
     on](https://github.com/zenodo/zenodo-rdm) and contribute to it.
 
@@ -122,7 +121,7 @@ reasons:
     the work should be maintained.
 
 -   **Integration with GitHub:** When a research project (e.g., code) is
-    hosted on [GitHub](@sec-git_workflow), `Zenodo` can be used to
+    hosted on [GitHub](@sec-git_workflow), Zenodo can be used to
     [archive the
     repository](https://help.zenodo.org/docs/profile/linking-accounts/)
     upon each new release, creating a snapshot with a DOI. This means
@@ -131,11 +130,11 @@ reasons:
 
 -   **Application programming Interface (API) to access records
     programmatically:** This a useful feature as it allows for
-    interfacing with `Zenodo` records without using the website and is
+    interfacing with Zenodo records without using the website and is
     the backbone of the `zen4R` package that allows for publishing
     records directly from R which we discuss in more detail below.
 
-### Publishing to `Zenodo` with `zen4R`
+### Publishing to Zenodo with `zen4R`
 
 The [`zen4R`](%3Chttps://cran.r-project.org/web/packages/zen4R) package
 [@blondel2024] provides functions to interact with `Zenodo‘s` API directly
@@ -152,8 +151,9 @@ example project to `Zenodo` in the accompanying exercise.
 
 <!-- Presentation content -->
 
-::: {.content-visible when-format="revealjs"} \## Rstudio project to
-`Zenodo` pipeline
+::: {.content-visible when-format="revealjs"} 
+
+## Rstudio project to `Zenodo` pipeline
 
 ![](assets/images/project_zenodo_workflow.png){.lightbox width="90%"
 fig-align="center"}

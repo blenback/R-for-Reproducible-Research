@@ -239,29 +239,17 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
   </ul></li>
   <li><a href="#sec-workflows" id="toc-sec-workflows" class="nav-link" data-scroll-target="#sec-workflows"><span class="header-section-number">3</span> Workflows for Reproducibility</a>
   <ul class="collapse">
-<<<<<<< HEAD
-  <li><a href="#sec-zenodo_workflow" id="toc-sec-zenodo_workflow" class="nav-link" data-scroll-target="#sec-zenodo_workflow">Rstudio project to Zenodo pipeline</a></li>
-  <li><a href="#sec-docker_workflow" id="toc-sec-docker_workflow" class="nav-link" data-scroll-target="#sec-docker_workflow">Containerisation with Docker</a></li>
-  <li><a href="#sec-git_workflow" id="toc-sec-git_workflow" class="nav-link" data-scroll-target="#sec-git_workflow">Version control with Git</a></li>
+  <li><a href="#sec-zenodo_workflow" id="toc-sec-zenodo_workflow" class="nav-link" data-scroll-target="#sec-zenodo_workflow"><img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1.5em;"> project to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"> pipeline</a></li>
+  <li><a href="#sec-docker_workflow" id="toc-sec-docker_workflow" class="nav-link" data-scroll-target="#sec-docker_workflow">Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"></a></li>
+  <li><a href="#sec-git_workflow" id="toc-sec-git_workflow" class="nav-link" data-scroll-target="#sec-git_workflow">Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"></a></li>
   </ul></li>
   <li><a href="#sec-Quarto" id="toc-sec-Quarto" class="nav-link" data-scroll-target="#sec-Quarto"><span class="header-section-number">4</span> Quarto</a>
   <ul class="collapse">
   <li><a href="#a-brief-introduction-to-quarto" id="toc-a-brief-introduction-to-quarto" class="nav-link" data-scroll-target="#a-brief-introduction-to-quarto">A brief introduction to Quarto</a></li>
   </ul></li>
-=======
-  <li><a href="#sec-zenodo_workflow" id="toc-sec-zenodo_workflow" class="nav-link" data-scroll-target="#sec-zenodo_workflow"><img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1.5em;"> project to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"> pipeline</a></li>
-  <li><a href="#sec-docker_workflow" id="toc-sec-docker_workflow" class="nav-link" data-scroll-target="#sec-docker_workflow">Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"></a></li>
-  <li><a href="#sec-git_workflow" id="toc-sec-git_workflow" class="nav-link" data-scroll-target="#sec-git_workflow">Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"></a></li>
-  <li><a href="#about-git" id="toc-about-git" class="nav-link" data-scroll-target="#about-git">About Git</a></li>
-  </ul></li>
-  <li><a href="#sec-Quarto" id="toc-sec-Quarto" class="nav-link" data-scroll-target="#sec-Quarto"><span class="header-section-number">4</span> Quarto</a>
-  <ul class="collapse">
-  <li><a href="#a-brief-introduction-to" id="toc-a-brief-introduction-to" class="nav-link" data-scroll-target="#a-brief-introduction-to">A brief introduction to <img style="vertical-align:0%; height:0.75em" src="assets/images/quarto-logo-trademark.svg"></a></li>
-  </ul></li>
->>>>>>> main
   <li><a href="#sec-exercises" id="toc-sec-exercises" class="nav-link" data-scroll-target="#sec-exercises"><span class="header-section-number">5</span> Guided excercises</a>
   <ul class="collapse">
-  <li><a href="#sec-Rproj_zenodo_exercise" id="toc-sec-Rproj_zenodo_exercise" class="nav-link" data-scroll-target="#sec-Rproj_zenodo_exercise">Rstudio project to Zenodo exercise</a></li>
+  <li><a href="#sec-Rproj_zenodo_exercise" id="toc-sec-Rproj_zenodo_exercise" class="nav-link" data-scroll-target="#sec-Rproj_zenodo_exercise">Create an RStudio Project and upload to Zenodo</a></li>
   <li><a href="#sec-docker_exercise" id="toc-sec-docker_exercise" class="nav-link" data-scroll-target="#sec-docker_exercise">Containerization with Docker exercise</a></li>
   <li><a href="#version-control-with-git-exercise" id="toc-version-control-with-git-exercise" class="nav-link" data-scroll-target="#version-control-with-git-exercise">Version control with Git exercise</a></li>
   <li><a href="#write-a-paper-with-quarto" id="toc-write-a-paper-with-quarto" class="nav-link" data-scroll-target="#write-a-paper-with-quarto">Write a paper with Quarto</a></li>
@@ -354,10 +342,6 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </section>
 <section id="what-is-reproducible-research" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-reproducible-research">What is reproducible research?</h2>
-<<<<<<< HEAD
-=======
-<p><strong>TO DO: Introduce FAIR principles</strong></p>
->>>>>>> main
 <p>Reproducibility is a key aspect of reliable scientific research. It enables other researchers to reproduce the same results using the original data, code, and documentation <span class="citation" data-cites="essawy2020">[<a href="#ref-essawy2020" role="doc-biblioref"><strong>essawy2020?</strong></a>]</span>. Below are the core principles to ensure reproducibility in research:</p>
 <p><strong>Starts with planning</strong></p>
 <p>Reproducibility begins during the planning stage. It is essential to organize data management and ensure clear protocols are in place even before starting the analysis. Consistent Data Storage Regular backups of data are crucial. Storing data in multiple locations ensures accessibility and minimizes the risk of data loss. <span class="citation" data-cites="alston2021">[<a href="#ref-alston2021" role="doc-biblioref"><strong>alston2021?</strong></a>]</span></p>
@@ -368,6 +352,17 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p><strong>Is accessible</strong></p>
 <p>Data should be stored in nonproprietary, portable formats to ensure broad accessibility and long-term usability. This practice ensures that researchers can access the data without relying on specific software tools. Making data and code publicly available in accessible repositories supports scientific transparency and allows broader use of research outputs. [<span class="citation" data-cites="alston2021">[<a href="#ref-alston2021" role="doc-biblioref"><strong>alston2021?</strong></a>]</span>]<span class="citation" data-cites="siraji2023">[<a href="#ref-siraji2023" role="doc-biblioref"><strong>siraji2023?</strong></a>]</span></p>
 <p>By following these steps, researchers contribute to the wider scientific community, ensuring that their work can be efficiently and accurately reproduced by others.</p>
+<p><strong>Introducing the FAIR Principles</strong></p>
+<p>While the principles above lay the groundwork for reproducibility, the FAIR principles (Findability, Accessibility, Interoperability, and Reusability) provide a more comprehensive framework for enhancing the value of research data in the digital age. These principles expand on reproducibility by emphasizing not only human access to research outputs but also machine actionability, ensuring that data can be effectively found, accessed, and reused by both people and computational tools​. <span class="citation" data-cites="wilkinson2016">[<a href="#ref-wilkinson2016" role="doc-biblioref"><strong>wilkinson2016?</strong></a>]</span></p>
+<p><strong>How FAIR Principles Build on Reproducibility</strong></p>
+<p>The FAIR principles naturally complement and expand on the core aspects of reproducible research:</p>
+<ul>
+<li><p>Findability reinforces the importance of clear documentation. Assigning persistent identifiers and providing rich metadata makes it easier for researchers and search tools to locate and understand datasets, ensuring that your research remains accessible over time.</p></li>
+<li><p>Accessibility builds on the concept of using nonproprietary formats. FAIR emphasizes that data should be retrievable using open, standardized protocols, which ensures long-term access to both the data and its metadata, even if the data itself becomes unavailable.</p></li>
+<li><p>Interoperability relates to the consistent use of data standards and version control. By using standardized formats and vocabularies, research data can be more easily integrated with other datasets, supporting reuse and long-term relevance in broader research contexts.</p></li>
+<li><p>Reusability directly aligns with the goals of reproducible research by ensuring that data is accompanied by clear licensing and provenance, allowing others to confidently reuse it. This principle reinforces the need for thorough documentation and transparent methods.</p></li>
+</ul>
+<p>By incorporating the FAIR principles, researchers ensure that their data not only meets the standards of reproducibility but is also optimized for long-term use and discovery. This fosters a research environment where data is more transparent, accessible, and impactful over time​. <span class="citation" data-cites="wilkinson2016">[<a href="#ref-wilkinson2016" role="doc-biblioref"><strong>wilkinson2016?</strong></a>]</span></p>
 </section>
 <section id="why-strive-for-reproducible-research" class="level2">
 <h2 class="anchored" data-anchor-id="why-strive-for-reproducible-research">Why strive for reproducible research?</h2>
@@ -396,11 +391,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </section>
 </section>
 <section id="why-for-reproducible-research" class="level2">
-<<<<<<< HEAD
-<h2 class="anchored" data-anchor-id="why-for-reproducible-research">Why <iconify-icon inline="" icon="fa-brands:r-project"></iconify-icon> for reproducible research?</h2>
-=======
 <h2 class="anchored" data-anchor-id="why-for-reproducible-research">Why <iconify-icon role="img" inline="" icon="fa-brands:r-project" aria-label="Icon r-project from fa-brands Iconify.design set." title="Icon r-project from fa-brands Iconify.design set."></iconify-icon> for reproducible research?</h2>
->>>>>>> main
 <p>R is increasingly recognized as a powerful tool for ensuring reproducibility in scientific research. Here are some key advantages of using R for reproducible research:</p>
 <p><strong>Open Source</strong></p>
 <p>Accessibility R is freely available to everyone, eliminating cost barriers and promoting inclusive access to research tools. This open-source model ensures that researchers around the world can use and contribute to its development, fostering a collaborative research environment. <span class="citation" data-cites="siraji2023">[<a href="#ref-siraji2023" role="doc-biblioref"><strong>siraji2023?</strong></a>]</span></p>
@@ -746,79 +737,46 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p><a href="assets/images/project_zenodo_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="assets/images/project_zenodo_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
-<<<<<<< HEAD
-<!-- Web content -->
-<section id="environment-management-with-renv" class="level3">
-<h3 class="anchored" data-anchor-id="environment-management-with-renv">Environment Management with renv</h3>
-<p>renv is a powerful R package designed to help manage project environments by creating project-specific libraries and lockfiles. As mentioned earlier, renv captures the exact versions of R packages used in a project, storing this information in a renv.lock file. This allows users to recreate the exact package environment when revisiting a project or transferring it to a different machine, ensuring reproducibility.</p>
-<p>The renv workflow is straightforward:</p>
-<ul>
-<li><p>Initialize renv in a project: renv creates a separate library in the project folder, isolating the packages from the system-wide library.</p></li>
-<li><p>Snapshot dependencies: renv scans the project, identifying which packages are being used and recording their versions in the lockfile.</p></li>
-<li><p>Restore environments: Anyone cloning or receiving the project can run renv::restore() to install the exact versions of the packages listed in the lockfile, reproducing the original project environment.</p></li>
-</ul>
-<p>One of the core strengths of renv is its flexibility. It integrates seamlessly with tools like RStudio, allowing easy management of dependencies without disrupting existing workflows. This makes it particularly well-suited for ensuring that research projects are reproducible across different systems and platforms.</p>
-<p>However, renv does not manage the <strong>entire system environment</strong> (such as the version of R itself or external dependencies like system libraries). For complete reproducibility, combining renv with containerization tools (like Docker) or publishing outputs (such as code or data) via repositories like Zenodo is recommended. The use of renv allows researchers to easily capture and restore the R environment, while repositories can ensure the long-term availability of the project’s outputs.</p>
-<p>The code specific workflow is straightforward and well explained in the documentation: <a href="https://rstudio.github.io/renv/articles/renv.html" class="uri">https://rstudio.github.io/renv/articles/renv.html</a></p>
-</section>
-<section id="publishing-and-archiving-with-zenodo" class="level3">
-<h3 class="anchored" data-anchor-id="publishing-and-archiving-with-zenodo">Publishing and Archiving with Zenodo</h3>
-<p>Zenodo complements renv by providing a platform to publish, archive, and share research outputs, including datasets, code, and publications. Created by CERN and OpenAIRE, Zenodo ensures that research artifacts are accessible for the long term, aligning with open science principles. Each item published on Zenodo is assigned a permanent DOI, making it easy to reference and cite in academic work.</p>
-<p>A unique feature of Zenodo is its support for versioning. Researchers can update their work over time, while earlier versions remain accessible, ensuring transparency and reproducibility. This versioning system is crucial in scientific research, where updated analyses and data corrections are often necessary, but reproducibility of original work must be maintained.</p>
-<p>The zen4R package <span class="citation" data-cites="blondel2024">[<a href="#ref-blondel2024" role="doc-biblioref"><strong>blondel2024?</strong></a>]</span> enhances the integration of R with Zenodo by providing tools to programmatically interact with Zenodo’s API directly from R. This package allows researchers to:</p>
-<ul>
-<li><p>Upload datasets and code to Zenodo.</p></li>
-<li><p>Automate the publication process by creating new records, updating metadata, and managing depositions.</p></li>
-<li><p>Retrieve information about existing Zenodo records.</p></li>
-=======
-<p><strong>TO DO: Edit this paragraph for accuracy</strong> While renv focuses on internal reproducibility by controlling the R environment, Zenodo ensures external reproducibility by providing a stable and citable repository for the research outputs. Combining both tools allows researchers to capture the environment in which their analysis was conducted and share it along with their data and code. Together, renv and Zenodo form a comprehensive solution for reproducible, open science research in accordance with the FAIR guiding principles <span class="citation" data-cites="wilkinson2016">[<a href="#ref-wilkinson2016" role="doc-biblioref"><strong>wilkinson2016?</strong></a>]</span>.</p>
+<p>The <code>renv</code> package helps maintain the R environment, allowing others to recreate the environment in which your analysis was conducted. By combining <code>renv</code> with Zenodo, you create a comprehensive solution for reproducible research. <code>renv</code> ensures that the computational environment is captured, while Zenodo makes your research outputs accessible and citable, supporting the FAIR principles of findability, accessibility, interoperability, and reusability <span class="citation" data-cites="wilkinson2016">[<a href="#ref-wilkinson2016" role="doc-biblioref"><strong>wilkinson2016?</strong></a>]</span>.</p>
 <p>The next sections provide some additional detail on <a href="@sec-renv_workflow">environment management with renv</a> and some background and practical tips on <a href="@sec-zenodo_background">Zenodo</a>. You will have the chance to apply this workflow to an example project in the <a href="@sec-Rproj_zenodo_exercise">accompanying exercise</a>.</p>
 <section id="sec-renv_workflow" class="level3">
 <h3 class="anchored" data-anchor-id="sec-renv_workflow">Environment Management with <code>renv</code></h3>
-<p><code>renv</code> is a powerful R package designed to help manage project environments by creating project-specific libraries and lockfiles. As mentioned earlier, renv captures the exact versions of R packages used in a project, storing this information in a renv.lock file. This allows users to recreate the exact package environment when revisiting a project or transferring it to a different machine, ensuring reproducibility.</p>
+<p><code>renv</code> is a powerful R package designed to help manage project environments by creating project-specific libraries and lockfiles. As mentioned earlier, <code>renv</code> captures the exact versions of R packages used in a project, storing this information in a renv.lock file. This allows users to recreate the exact package environment when revisiting a project or transferring it to a different machine, ensuring reproducibility.</p>
 <p>The <code>renv</code> workflow is straightforward:</p>
 <ul>
-<li><p><strong>Initialize <code>renv</code> in a project</strong>: renv creates a separate library in the project folder, isolating the packages from the system-wide library.</p></li>
+<li><p><strong>Initialize <code>renv</code> in a project</strong>: <code>renv</code> creates a separate library in the project folder, isolating the packages from the system-wide library.</p></li>
 <li><p><strong>Snapshot dependencies</strong>: <code>renv</code> scans the project, identifying which packages are being used and recording their versions in the lockfile.</p></li>
 <li><p><strong>Restore environments</strong>: Anyone cloning or receiving the project can run <code>renv::restore()</code> to install the exact versions of the packages listed in the lockfile from the project library, reproducing the original project package environment.</p></li>
 </ul>
 <p>One of the core strengths of <code>renv</code> is its flexibility. It integrates seamlessly with tools like RStudio, allowing easy management of dependencies without disrupting existing workflows. This makes it particularly well-suited for ensuring that research projects are reproducible across different systems and platforms.</p>
-<p>However, renv does not manage the <strong>entire system environment</strong> (such as the version of R itself or external dependencies like system libraries). For complete reproducibility, combining renv with containerization tools (like Docker) or publishing outputs (such as code or data) via repositories like Zenodo is recommended. The use of renv allows researchers to easily capture and restore the R environment, while repositories can ensure the long-term availability of the project’s outputs.</p>
+<p>However, <code>renv</code> does not manage the <strong>entire system environment</strong> (such as the version of R itself or external dependencies like system libraries). For complete reproducibility, combining <code>renv</code> with containerization tools (like <a href="@#sec-docker_workflow">Docker</a>) or publishing outputs (such as code or data) via repositories like Zenodo is recommended. The use of <code>renv</code> allows researchers to easily capture and restore the R environment, while repositories can ensure the long-term availability of the project’s outputs.</p>
 </section>
 <section id="sec-zenodo_background" class="level3">
 <h3 class="anchored" data-anchor-id="sec-zenodo_background"><img src="assets/images/zenodo-blue.svg" style="vertical-align:middle; height:2.75em;"> as a research repository</h3>
-<p><a href="https://zenodo.org/">Zenodo</a> is a platform created under the European Commission’s <a href="https://www.openaire.eu/">OpenAIRE project</a> in partnership with <a href="https://home.cern/">CERN</a> to publish, archive, and share scientific research outputs, including datasets, code, and publications.</p>
+<p><a href="https://zenodo.org/">Zenodo</a> is a platform created under the European Commission‘s <a href="https://www.openaire.eu/">OpenAIRE project</a> in partnership with <a href="https://home.cern/">CERN</a> to publish, archive, and share scientific research outputs, including datasets, code, and publications.</p>
 <p>Of course there are many other similar research repositories, such as <a href="https://datadryad.org/stash">Dryad</a>, <a href="https://figshare.com/">Figshare</a>, <a href="https://data.mendeley.com/">Mendeley Data</a> and <a href="https://osf.io/q5j8g/">OSF</a>, but we recommend Zenodo for several reasons:</p>
 <ul>
 <li><p><strong>Generous upload size of 50GB (100 files) per record</strong></p></li>
-<li><p><strong>Aligns with FAIR and Open Science principles</strong>: The practical features of Zenodo that ensure this are described in it’s <a href="https://about.zenodo.org/principles/">principles</a></p></li>
+<li><p><strong>Aligns with FAIR and Open Science principles</strong>: The practical features of Zenodo that ensure this are described in it‘s <a href="https://about.zenodo.org/principles/">principles</a></p></li>
 <li><p><strong>Ability to create communities</strong>: <a href="https://help.zenodo.org/docs/communities/about-communities/">Zenodo Communities</a> are used to group similar records together. This is useful for creating a collection of related research outputs, either for a research group or a large-scale funded project.</p></li>
 <li><p><strong>Long term preservation with assignment of DOIs:</strong> Each item published on Zenodo is assigned a permanent <a href="https://simple.wikipedia.org/wiki/Digital_Object_Identifier"><em>Digital Object Identifier</em> (DOI)</a>, which is a better way than a URL to cite the record in academic writing.</p></li>
 <li><p><strong>Open source</strong>: This means that Zenodo is not just free to use but you can even see the <a href="https://github.com/zenodo/zenodo-rdm">code it is built on</a> and contribute to it.</p></li>
 <li><p><strong>Versioning functionality:</strong> Every record starts with a 1st version and <a href="https://help.zenodo.org/docs/deposit/manage-versions/">new versions can be added as research is updated</a>, while earlier versions remain accessible. This is crucial in scientific research, where updated analyses and data corrections are often necessary, but also transparency around earlier versions of the work should be maintained.</p></li>
 <li><p><strong>Integration with GitHub:</strong> When a research project (e.g., code) is hosted on <a href="@sec-git_workflow">GitHub</a>, Zenodo can be used to <a href="https://help.zenodo.org/docs/profile/linking-accounts/">archive the repository</a> upon each new release, creating a snapshot with a DOI. This means that a version of the code can be more easily cited in scientific publications.</p></li>
 <li><p><strong>Application programming Interface (API) to access records programmatically:</strong> This a useful feature as it allows for interfacing with Zenodo records without using the website and is the backbone of the <code>zen4R</code> package that allows for publishing records directly from R which we discuss in more detail below.</p></li>
->>>>>>> main
 </ul>
-<p>This makes it easier to publish research outputs, ensuring that versioning, DOIs, and metadata management are handled efficiently within R workflows, facilitating reproducibility and sharing in open science practices. Learn more about the zen4R package: <a href="https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html" class="uri">https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html</a></p>
-<p>Zenodo also integrates seamlessly with GitHub. When a research project (e.g., code) is hosted on GitHub, Zenodo can automatically archive the repository upon each new release, creating a snapshot with a DOI. This integration simplifies the process of ensuring that research code is preserved in an immutable form, contributing to better practices in reproducible science.</p>
-<p>While renv focuses on internal reproducibility by controlling the R environment, Zenodo ensures external reproducibility by providing a stable and citable repository for the research outputs. Combining both tools allows researchers to capture the environment in which their analysis was conducted and share it along with their data and code. Together, renv and Zenodo form a comprehensive solution for reproducible, open science research in accordance with the FAIR guiding principles <span class="citation" data-cites="wilkinson2016">[<a href="#ref-wilkinson2016" role="doc-biblioref"><strong>wilkinson2016?</strong></a>]</span>.</p>
-<!-- Presentation content -->
 </section>
 <section id="publishing-to-zenodo-with-zen4r" class="level3">
 <h3 class="anchored" data-anchor-id="publishing-to-zenodo-with-zen4r">Publishing to Zenodo with <code>zen4R</code></h3>
-<p>The <a href="<https://cran.r-project.org/web/packages/zen4R"><code>zen4R</code></a> package <span class="citation" data-cites="blondel2024">[<a href="#ref-blondel2024" role="doc-biblioref"><strong>blondel2024?</strong></a>]</span> provides functions to interact with Zenodo’s API directly from R. The package allows you to:</p>
+<p>The <a href="<https://cran.r-project.org/web/packages/zen4R"><code>zen4R</code></a> package <span class="citation" data-cites="blondel2024">[<a href="#ref-blondel2024" role="doc-biblioref"><strong>blondel2024?</strong></a>]</span> provides functions to interact with <code>Zenodo‘s</code> API directly from R. The package allows you to:</p>
 <ul>
-<li><p>Retrieve the metadata of, and download, existing Zenodo records.</p></li>
-<li><p>Create new records and versions of records, write their metadata and upload files to Zenodo.</p></li>
+<li><p>Retrieve the metadata of, and download, existing <code>Zenodo</code> records.</p></li>
+<li><p>Create new records and versions of records, write their metadata and upload files to <code>Zenodo</code>.</p></li>
 </ul>
-<p>We will use <code>zen4R</code> to publish the code, data, and environment of our example project to Zenodo in the accompanying exercise.</p>
+<p>We will use <code>zen4R</code> to publish the code, data, and environment of our example project to <code>Zenodo</code> in the accompanying exercise.</p>
 <!-- Presentation content -->
 </section>
-<<<<<<< HEAD
-=======
 </section>
->>>>>>> main
 <section id="sec-docker_workflow" class="level2">
 <h2 class="anchored" data-anchor-id="sec-docker_workflow">Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"></h2>
 <!-- Web content -->
@@ -847,7 +805,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p>So to create a <code>Docker Image</code> to containerize our R research projects we need to start by creating a <code>Dockerfile</code> and, as mentioned above, this should start with a base image. In our case this base image must logically include R and RStudio (if we want to utilise the RStudio Projects features).</p>
 <p>Fortunately there is a project that specifically catalogs and manages Docker Images for R projects: <a href="https://rocker-project.org/"><code>Rocker</code></a>. The images available through the Rocker project not only include different versions of R and RStudio but also images containing collections of R packages for specific purposes (e.g.&nbsp;tidyverse for data wrangling and visualisation, geospatial packages etc.).</p>
 <p>In terms of actually creating the <code>Dockerfile</code> for our R project, this can be done manually (See a good R-focused tutorial<a href="https://colinfay.me/docker-r-reproducibility/">here</a>), however there are also R packages that can help with this process such as <a href="https://thinkr-open.github.io/dockerfiler/"><code>dockerfiler</code></a> and the <code>[rrtools</code>](https://github.com/benmarwick/rrtools) package.</p>
-<p>For our <a href="@sec-docker_exercise">exercise</a> of this workflow we will use the <code>dockerfiler</code> package, which uses simple assignment lines to add elements to a Dockerfile object, before saving it:</p>
+<p>For our <a href="@sec-docker_exercise">exercise</a> of this workflow we will use the <code>dockerfiler</code> package, which creates a custom class object that represents the Dockerfile and has slots corresponding to common elements of Docker images. This allows us to add elements to the dockerfile in a more R-like way. The following code snippet demonstrates adding <code>Maintainer</code> details to a Dockerfile object, before saving it:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dockerfiler)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dockerfile template</span></span>
@@ -872,22 +830,24 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p><a href="assets/images/version_control_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="assets/images/version_control_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
-<p>Version controlling software output can have multiple uses including creating a systematic procedure for collaboration and working as a team along with increasing the ease of reproduction of the work by other users or by the original researcher as well. We all know the difficulty of tracing back the workflow of work projects a few months down the line after having shelved it, and it is here that Git and Github can be highly useful (<span class="citation" data-cites="Alexander2023">[<a href="#ref-Alexander2023" role="doc-biblioref"><strong>Alexander2023?</strong></a>]</span>).</p>
+<p><strong>Version controlling</strong> software output can have multiple uses including creating a systematic procedure for collaboration, working as a team along with increasing the ease of reproduction of the work by other users or by the original researcher as well. We all know the difficulty of tracing back the workflow of work projects a few months down the line after having shelved it, and it is here that Git and Github can be highly useful (<span class="citation" data-cites="Alexander2023">[<a href="#ref-Alexander2023" role="doc-biblioref"><strong>Alexander2023?</strong></a>]</span>).</p>
+<section id="about-git" class="level3">
+<h3 class="anchored" data-anchor-id="about-git">About Git</h3>
+<p><strong>Git</strong> allows us to make snapshot or record of the changes undertaken in a script, and store it as with a message that defines the change. In this way even after multiple updates, the history is preserved allowing us to revert, compare and systematically trace back the workflow development.</p>
+<p><strong>Git</strong> is useful also for data scientists and researchers that work individually yet want to create systematically reproducible workflows with version control (<span class="citation" data-cites="Alexander2023">[<a href="#ref-Alexander2023" role="doc-biblioref"><strong>Alexander2023?</strong></a>]</span>).</p>
 </section>
-<section id="about-git" class="level2">
-<h2 class="anchored" data-anchor-id="about-git">About Git</h2>
-<p>Git allows us to make snapshot or record of the changes undertaken in a script, and store it as with a message that defines the change. In this way even after multiple updates, the history is preserved allowing us to revert, compare and systematically trace back the workflow development.</p>
-<p>Git is useful also for data scientists and researchers that work individually yet want to create systematically reproducible workflows with version control (<span class="citation" data-cites="Alexander2023">[<a href="#ref-Alexander2023" role="doc-biblioref"><strong>Alexander2023?</strong></a>]</span>).</p>
 <section id="sec-Gitrepo" class="level3">
 <h3 class="anchored" data-anchor-id="sec-Gitrepo">GitHub repositories and functionalities</h3>
-<p>The version controlled code and all other auxiliary files related to the project are stored in a Github repository that is created by the user in their account on Github. A repository can either be set as public or private as per the users need for visibility of their work.</p>
-<p>To help with version control Github repositories provide multiple functionalities including creating ‘branches’, ‘clones’, merging multiple branches, setting up a pull request before merge etc. As we go deeper into more complicated workflows handled by multiple developers, Github allows many more functionalities as checks and balances to code development. However, we will limit our understanding to what is needed to create work with a version control history allowing for small scale collaboration, but with the main goal of creating reproducible research <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories">Click to see more details</a>.</p>
-<p>####Basic functionalities</p>
+<p>The version controlled code and all other auxiliary files related to the project are stored in a Github repository which was created by the user in their account on Github. A repository can either be set as public or private as per the users need for visibility of their work.</p>
+<p>To help with version control Github repositories provide multiple functionalities like creating ‘branches’, ‘clones’, ‘merging’ multiple branches, setting up a ‘pull request’ before merge etc. As we get into more complicated workflows handled by multiple developers, Github allows many more functionalities as checks and balances to code development. However, we will limit our understanding to what is needed to create work with a version control history allowing for small scale collaboration, but with the main goal of creating reproducible research (<a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories">see more details</a>).</p>
+</section>
+<section id="basic-functionalities" class="level3">
+<h3 class="anchored" data-anchor-id="basic-functionalities">Basic functionalities</h3>
 <ul>
-<li><p>Creating a repository and setting up user authorisations: A project repository must first be set up on GitHub as either a private or a public repository. If it is not an individual project, collaborators can be added with appropriate (read or write) permission levels [Click here to see more] (https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-user-account-settings/permission-levels-for-a-personal-account-repository). It is good to elaborate the ‘Readme’ file so as to help viewers get an idea of the repository <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">click here to see more details</a>.</p></li>
-<li><p>Push and Pull: The data and code related to a project must be cloned from the remote version to a local version before changes are made. Make sure to pull from updated (i.e.&nbsp;merged branches; see below) branches before making changes. Once changes are made the user must ‘commit’ all the correct changes. Once this is done the changed code can be pushed back to the appropriate branch with a ‘<a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull-request</a>’.</p></li>
-<li><p>Branching and merging : Git allows users to create <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#working-with-branches">branches</a> that feed into the ‘main’ branch of a project repository on GitHub. Each branch can be created either for different tasks or for different users as per the requirement. To <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github">merge branches into ‘main’ users have to set up a pull-request</a> which needs to be approved by an authorised user.</p></li>
-<li><p>Git provides additionally many more <a href="https://education.github.com/git-cheat-sheet-education.pdf">functionalities</a> for identifying differences changed files or between branches, to make temporary commits and to revert back to a certain commit in history, however this is beyond the scope of this workshop.</p></li>
+<li><p><strong>Creating a repository and setting up user authorisations</strong>: A project repository must first be set up on GitHub as either a private or a public repository. If it is not an individual project, collaborators can be added with appropriate (read or write) permission levels (<a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-user-account-settings/permission-levels-for-a-personal-account-repository">see more details</a>). It is good to elaborate the ‘Readme’ file so as to help viewers get an idea of the repository (<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">see more details</a>).</p></li>
+<li><p><strong>Push and Pull</strong>: The data and code related to a project must be cloned from the remote version to a local version before changes are made. Make sure to pull from updated (i.e.&nbsp;merged branches; see below) branches before making changes. Once changes are made the user must ‘commit’ all the correct changes. Once this is done the changed code can be pushed back to the branch.</p></li>
+<li><p><strong>Branching and merging</strong> : Git allows users to create <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#working-with-branches">branches</a> that feed into the ‘main’ branch of a project repository on GitHub. Each branch can be created either for different tasks or for different users as per the requirement. To <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github">merge branches into ‘main’ users have to set up a pull-request</a> which needs to be approved by an authorised user.</p></li>
+<li><p>Git provides additionally <strong>many more <a href="https://education.github.com/git-cheat-sheet-education.pdf">functionalities</a></strong> for identifying differences between changed files or between branches, to make temporary commits and to revert back to a certain commit in history. However this is beyond the scope of this workshop.</p></li>
 </ul>
 </section>
 <section id="git-in-r-studio" class="level3">
@@ -897,7 +857,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/git_R_snapshot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Git intergration into R-Studio"><img src="assets/images/git_R_snapshot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" alt="Git intergration into R-Studio"></a></p>
+<p><a href="assets/images/screenshot_R_studio_git.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Git intergration into R-Studio"><img src="assets/images/screenshot_R_studio_git.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Git intergration into R-Studio"></a></p>
 </figure>
 </div>
 <figcaption>Git intergration into R-Studio</figcaption>
@@ -908,22 +868,19 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <section id="additional-functionalities" class="level3">
 <h3 class="anchored" data-anchor-id="additional-functionalities">Additional functionalities</h3>
 <ol type="1">
-<li><p>Public Github repositories can now be archived on Zenodo as a permanent record of the work with a Digital Object Identifier (DOI) that can be cited in academic work <a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">Click to see more details</a>.</p></li>
+<li><p>Public Github repositories can now be archived on Zenodo as a permanent record of the work with a Digital Object Identifier (DOI) that can be cited in academic work (<a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">Click to see more details</a>).</p></li>
 <li><p>GitHub further provides advanced functionalities like <a href="https://docs.github.com/en/actions/about-github-actions/understanding-github-actions">GitHub Actions</a> that allows the user to automate certain processes for application development or project management.</p></li>
-<li><p>GitHub releases can be automatically published on Docker Hub or GitHub packages as part of a Continuous Integration(CI) workflow.<a href="https://docs.github.com/en/actions/use-cases-and-examples/publishing-packages/publishing-docker-images">Click here for more details</a></p></li>
+<li><p>GitHub releases can be automatically published on Docker Hub or GitHub packages as part of a Continuous Integration(CI) workflow (<a href="https://docs.github.com/en/actions/use-cases-and-examples/publishing-packages/publishing-docker-images">see more details</a>).</p></li>
 </ol>
 </section>
 </section>
-<<<<<<< HEAD
-=======
 </section>
->>>>>>> main
 <section id="sec-Quarto" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Quarto</h1>
 <!-- Web content -->
-<section id="a-brief-introduction-to" class="level2">
-<h2 class="anchored" data-anchor-id="a-brief-introduction-to">A brief introduction to <img style="vertical-align:0%; height:0.75em" src="assets/images/quarto-logo-trademark.svg"></h2>
-<p>Quatro is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.</p>
+<section id="a-brief-introduction-to-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="a-brief-introduction-to-quarto">A brief introduction to Quarto</h2>
+<p>Quarto is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.</p>
 <section id="quarto-allows-you-to" class="level4">
 <h4 class="anchored" data-anchor-id="quarto-allows-you-to">Quarto allows you to:</h4>
 <ul>
@@ -931,51 +888,55 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li><p>Numerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing</p></li>
 <li><p>Publish your work as websites or books</p></li>
 <li><p>Edit with any text editor including VS Code, RStudio and more</p></li>
+<li><p>Easily include citations and bibliographies from tools like Zotero, making it ideal for academic writing and research projects.</p></li>
+<li><p>Efficiently track changes and collaborate using Git or other version control systems, thanks to its text-based document structure.</p></li>
 </ul>
+</section>
+<section id="compatibility-beyond-r" class="level4">
+<h4 class="anchored" data-anchor-id="compatibility-beyond-r">Compatibility Beyond R</h4>
+<p>Although we focus on Quartos integration with R, it is also compatible with other programming languages, making it a flexible choice for a variety of users. Quarto supports:</p>
+<ul>
+<li><p><strong>Python</strong>: You can write Python code in Quarto documents to create visualizations, run analyses, and integrate with Python libraries.</p></li>
+<li><p><strong>Julia</strong>: Quarto allows seamless integration with Julia for those working in the data science or scientific computing community.</p></li>
+<li><p><strong>Observable</strong>: For JavaScript users, Quarto supports Observable, allowing you to build interactive documents using JavaScript.</p></li>
+</ul>
+<p>This multi-language support makes Quarto a powerful tool that can adapt to your needs, whether you’re working in R, Python, Julia, or even a mix of all three.</p>
 </section>
 <section id="some-of-the-creative-ways-in-which-you-can-use-quarto-is" class="level3">
 <h3 class="anchored" data-anchor-id="some-of-the-creative-ways-in-which-you-can-use-quarto-is">Some of the creative ways in which you can use Quarto is:</h3>
 <section id="visualize-and-publish-interactive-plots-using-html-widgets" class="level4">
 <h4 class="anchored" data-anchor-id="visualize-and-publish-interactive-plots-using-html-widgets">1. Visualize and publish interactive plots using html widgets</h4>
 <div class="cell">
-<<<<<<< HEAD
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">fill =</span> clarity)) <span class="sc">+</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>            <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplotly</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-=======
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">fill =</span> clarity)) <span class="sc">+</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>            <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplotly</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
->>>>>>> main
 </div>
 </section>
 <section id="create-interactive-geo-spatial-mapping-segments" class="level4">
 <h4 class="anchored" data-anchor-id="create-interactive-geo-spatial-mapping-segments">2. Create interactive geo-spatial mapping segments</h4>
 <div class="cell">
-<<<<<<< HEAD
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span>  <span class="co"># Add default OpenStreetMap map tiles</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">lng=</span> <span class="fl">8.548</span>, <span class="at">lat=</span><span class="fl">47.376</span>, <span class="at">popup=</span><span class="st">"ETH"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-=======
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span>  <span class="co"># Add default OpenStreetMap map tiles</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">lng=</span> <span class="fl">8.548</span>, <span class="at">lat=</span><span class="fl">47.376</span>, <span class="at">popup=</span><span class="st">"ETH"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
->>>>>>> main
 </div>
 </section>
 <section id="create-multi-purpose-dashboards-to-demostrate-your-research-output" class="level4">
 <h4 class="anchored" data-anchor-id="create-multi-purpose-dashboards-to-demostrate-your-research-output">3. Create multi-purpose dashboards to demostrate your research output</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a></p>
+<p><a href="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+</figure>
+</div>
+</section>
+<section id="create-multilingual-websites-for-your-research-projects" class="level4">
+<h4 class="anchored" data-anchor-id="create-multilingual-websites-for-your-research-projects">4. Create multilingual websites for your research projects</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/quarto_multilingual.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="assets/images/quarto_multilingual.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
 <!-- Presentation content -->
@@ -985,80 +946,658 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </section>
 <section id="sec-exercises" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Guided excercises</h1>
+<p>Now it’s time to get hands on with some guided exercises that will let you put into practice the <a href="@sec-workflows">three workflows for reproducible research</a> that we have introduced as well as writing a academic manuscript using <a href="@sec-Quarto">Quarto</a>. Each exercise is available to download as a PDF if you prefer to view the instructions offline and the files required for each are available to download at the start of each exercise.</p>
 <section id="sec-Rproj_zenodo_exercise" class="level2">
-<h2 class="anchored" data-anchor-id="sec-Rproj_zenodo_exercise">Rstudio project to Zenodo exercise</h2>
-<p>If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a></p>
-<section id="step-1-download-the-resources" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-download-the-resources">Step 1: Download the resources</h3>
+<h2 class="anchored" data-anchor-id="sec-Rproj_zenodo_exercise">Create an RStudio Project and upload to Zenodo</h2>
+<p>In this exercise you will first setup a basic RStudio project following the good practices introduced in the <a href="@sec-Rprojects">Research projects with R</a> section. As part of this We will initialize <code>renv</code> to manage package dependencies, ensuring reproducibility. After this you will upload the project to Zenodo so that it can be shared with others.</p>
+<p>If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://blenback.github.io/R-for-Reproducible-Research/exercises/Rproj-Zenodo_exercise.pdf" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a></p>
+<section id="step-1-download-the-exercise-resources" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-download-the-exercise-resources">Step 1: Download the exercise resources</h3>
 <ul>
 <li>Click here to download the resources for the exercise: <a href="https://drive.google.com/uc?export=download&amp;id=1V30Aa43u-OhUZ829yWZNxWAybz151MGY" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a></li>
 <li>Unzip the downloaded file and move the folder to a location on your computer where you can easily find it.</li>
 </ul>
 </section>
+<section id="step-2-create-a-new-rstudio-project" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-create-a-new-rstudio-project">Step 2: Create a new RStudio Project</h3>
+<p>Start by creating a new RStudio project in the root of the <code>exercise_1_data</code> directory. you have just downloaded. You can name the project what you like but in this example, we have named it <code>Rice_farm_analysis.proj</code>.</p>
+<ul>
+<li>Open RStudio.</li>
+<li>Create the project using: <em>File &gt; New Project &gt; Existing Directory</em>.</li>
+<li>Select the <code>exercise_1_data</code> folder as the location and give the project a name, for example, <code>Rice_farm_analysis.proj</code>.</li>
+</ul>
+<p>This creates a <code>.Rproj</code> file in the root of your project to help manage the workspace and project-specific settings.</p>
+</section>
+<section id="step-3-organize-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-organize-the-data">Step 3: Organize the data</h3>
+<p>It’s good practice to organize raw and processed data in separate folders. Let’s start by organizing the data:</p>
+<ul>
+<li>Create a directory <code>Data/Raw</code> inside your project folder.</li>
+<li>Move the provided CSV file into this <code>Data/Raw</code> directory.</li>
+</ul>
+</section>
+<section id="step-4-organize-and-split-your-scripts" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-organize-and-split-your-scripts">Step 4: Organize and split your scripts</h3>
+<p>We’ll now organize the project’s scripts by splitting the original script into separate <em>analysis</em> and <em>visualization</em> scripts.</p>
+<ul>
+<li>Create a <code>scripts</code> folder inside your project directory.</li>
+<li>Move the original <code>RiceFarm_project.R</code> script into the <code>scripts</code> folder.</li>
+<li>Create two new scripts named <code>01_data_analysis.R</code> and <code>02_data_visualisation.R</code>.</li>
+</ul>
+<section id="for-01_data_analysis.r" class="level4">
+<h4 class="anchored" data-anchor-id="for-01_data_analysis.r">For <code>01_data_analysis.R</code></h4>
+<ul>
+<li><p>Copy the following code from <code>RiceFarm_project.R</code>:</p>
+<ul>
+<li>The call to the relevant library <code>library(stringr)</code></li>
+<li>Everything before the call to the <code>ggplot()</code> function</li>
+</ul></li>
+<li><p>In addition to this, replace the <code>setwd()</code> function with this code to set up relative paths, create a directory to save the processed data in and save <code>rice_data_summary</code> to disk after processing:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Raw data dir</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>raw_dir <span class="ot">&lt;-</span> <span class="st">"Data/Raw"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># vector and create processed data save dir</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>save_dir <span class="ot">&lt;-</span> <span class="st">"Data/Processed"</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(save_dir,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">showWarnings =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the summarized data</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(rice_data_summary,</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>          <span class="fu">file.path</span>(save_dir, <span class="st">"RiceFarms_summary.csv"</span>),</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>          <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="for-02_data_visualisation.r" class="level4">
+<h4 class="anchored" data-anchor-id="for-02_data_visualisation.r">For <code>02_data_visualisation.R</code></h4>
+<ul>
+<li><p>Copy the following code from <code>RiceFarm_project.R</code>:</p>
+<ul>
+<li>The call to the relevant library <code>library(ggplot2)</code></li>
+<li>The call to the functions <code>ggplot()</code> and <code>ggsave()</code></li>
+</ul></li>
+<li><p>Add the following code after the <code>library()</code> call to create an output directory for the plots and load the summarized data from the processed data folder:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Directory for saving plots</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>plot_dir <span class="ot">&lt;-</span> <span class="st">"Output/Visualisations"</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(plot_dir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Raw data directory</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>raw_dir <span class="ot">&lt;-</span> <span class="st">"Data/Raw"</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Load csv file of data</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>rice_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(raw_dir, <span class="st">"RiceFarms.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="step-5-add-script-headers" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-add-script-headers">Step 5: Add script headers</h3>
+<p>Add headers to both new scripts. You can use this template:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------------------------</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Script Name: [01_data_analysis.R / 02_data_visualisation.R]</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Project: Rice Farm Analysis</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Purpose: [Data analysis / Data visualization]</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Author: [Your Name]</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Date: [YYYY-MM-DD]</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------------------------</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-6-create-a-master-script" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-create-a-master-script">Step 6: Create a master script</h3>
+<p>As a next step you will create a master script that runs both the data analysis and visualization scripts.</p>
+<ul>
+<li><p>In the root of your project, create a new file named <code>RiceFarm_master.R</code></p></li>
+<li><p>Add a header as in Step 5.</p></li>
+<li><p>Add the following code snippet to the script to source <code>01_data_analysis.R</code> and <code>02_data_visualisation.R</code>:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="do">###=========================================================================</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="do">### 01- Data analysis</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Source the data analysis script</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"Scripts/01_data_analysis.R"</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="do">### 02- Data visualization</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="do">### =========================================================================</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Source the data visualization script</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"Scripts/02_data_visualisation.R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Running this master script will execute both analysis and visualization steps.</p>
+</section>
+<section id="step-7-initialize-renv-to-manage-package-dependencies" class="level3">
+<h3 class="anchored" data-anchor-id="step-7-initialize-renv-to-manage-package-dependencies">Step 7: Initialize <code>renv</code> to manage package dependencies</h3>
+<p>We will use <a href="https://rstudio.github.io/renv/articles/renv.html"><code>renv</code></a> to make your projects package environment reproducible.</p>
+<ul>
+<li>Run the following command in your master script to set up the project-specific environment</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This creates a local library for your project and captures the required packages.</p>
+<ul>
+<li>Once the initialization is complete, run:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This records the project’s environment in a <code>renv.lock</code> file, which is essential for reproducibility.</p>
+</section>
+<section id="step-8-automate-opening-of-the-master-script" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-automate-opening-of-the-master-script">Step 8: Automate opening of the master script</h3>
+<p>For convenience, we will configure RStudio to automatically open the master script when the project is loaded.</p>
+<ul>
+<li><p>Open the <code>.Rprofile</code> file in the root of your project directory. The file might be hidden. On Windows click <em>View &gt; Show &gt; Hidden items</em> in the explorer and on MacOS click Press Command+Shift+Dot within the root directory to see the file.</p></li>
+<li><p>Add the following R code to the <code>.Rprofile</code> file:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsetHook</span>(<span class="st">"rstudio.sessionInit"</span>, <span class="cf">function</span>(newSession) {</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (newSession)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    rstudioapi<span class="sc">::</span><span class="fu">navigateToFile</span>(<span class="st">'RiceFarm_master.R'</span>, <span class="at">line =</span> <span class="sc">-</span><span class="dv">1</span>L, <span class="at">column =</span> <span class="sc">-</span><span class="dv">1</span>L)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>}, <span class="at">action =</span> <span class="st">"append"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-9-re-snapshot-the-project" class="level3">
+<h3 class="anchored" data-anchor-id="step-9-re-snapshot-the-project">Step 9: Re-snapshot the Project</h3>
+<p>After modifying the <code>.Rprofile</code> file, it’s important to capture these changes in the <code>renv.lock</code> file.</p>
+<ul>
+<li>Run the following command in your master script to ensure that the <code>rstudioapi</code> package (which enables automatic script opening) is included in the snapshot:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now we a have a nicely organised project structure with the workflow decomposed into seperate scripts and a master script that to run the whole project.</p>
+</section>
+<section id="step-10-install-zen4r-to-access-zenodo-through-r" class="level3">
+<h3 class="anchored" data-anchor-id="step-10-install-zen4r-to-access-zenodo-through-r">Step 10: Install <code>zen4R</code> to access Zenodo through R</h3>
+<p>The following steps are heavily based on <span class="citation" data-cites="blondel2024">[<a href="#ref-blondel2024" role="doc-biblioref"><strong>blondel2024?</strong></a>]</span>. We have extracted the most relevant parts to explain the workflow. If you are interested in more details, check out their user manual at: https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html.</p>
+<p>For this exercise we will not be using Zenodo directly but Zenodo Sandbox. The Zenodo Sandbox is a separate, secure testing environment where users can explore Zenodo‘s features without impacting the main platform‘s publicly accessible data. It allows you to test file uploads, generate test DOIs, and experiment with API integrations. DOIs created in the sandbox are only for testing and use a different prefix. You will need a separate account and access token for the sandbox, distinct from those used on Zenodo‘s main site.</p>
+<ul>
+<li>Create an account on <a href="https://sandbox.zenodo.org">https://sandbox.zenodo.org</a>.</li>
+</ul>
+<p>Zenodo can be accessed with the R package <code>zen4R</code> to upload, edit, publish and download data.</p>
+<ul>
+<li>Create a new R script outside of the project directory.</li>
+<li>Install zen4R library with the following code:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install dependency "remotes"</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co">#install zen4R</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"eblondel/zen4R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-11-create-a-new-zenodo-record" class="level3">
+<h3 class="anchored" data-anchor-id="step-11-create-a-new-zenodo-record">Step 11: Create a new Zenodo record</h3>
+<p>A Zenodo record includes metadata, data and a Digital Object Identifier (DOI) which is automatically generated by Zenodo for all uploads. But before you can add records to Zenodo, you need to get access to your account through R.</p>
+<ul>
+<li>Go to <a href="https://sandbox.zenodo.org/account/settings/applications/">https://sandbox.zenodo.org/account/settings/applications/</a>.</li>
+<li>Log into your account and then create a new “Personal access token” in the “Applications” section of your account.</li>
+<li>Then run the following code in your script to establish the access and create a new record.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zen4R)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Create manager to access your Zenodo repository</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>zenodo <span class="ot">&lt;-</span> ZenodoManager<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">token =</span> <span class="st">"your_token"</span>,</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sandbox =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">logger =</span> <span class="st">"INFO"</span> </span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="do">##Prepare a new record to be filled with metadata and uploaded to Zenodo</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> ZenodoRecord<span class="sc">$</span><span class="fu">new</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you want to connect to Zenodo and not Zenodo Sandbox, create the token in your Zenodo account and remove the line <code>sandbox = True</code> in the code above.</p>
+<p>The types of metadata that can be included in a Zenodo record are vast. A full list can be found in the <a href="https://developers.zenodo.org/#representation">documentation</a> .</p>
+<ul>
+<li>Copy and run the example below to add metadata to your record.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"RiceFarm"</span>) <span class="co">#title of the record</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalTitle</span>(<span class="st">"This is an alternative title"</span>, <span class="at">type =</span> <span class="st">"alternative-title"</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setDescription</span>(<span class="st">"Calculating statistics of RiceFarm dataset"</span>) <span class="co">#description</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalDescription</span>(<span class="st">"This is an abstract"</span>, <span class="at">type =</span> <span class="st">"abstract"</span>)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setPublicationDate</span>(<span class="st">"2024-09-16"</span>) <span class="co">#Format YYYY-MM-DD</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setResourceType</span>(<span class="st">"dataset"</span>)</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addCreator</span>(<span class="at">firstname =</span> <span class="st">"Yourfirstname"</span>, <span class="at">lastname =</span> <span class="st">"Yourlastname"</span>, <span class="at">role =</span> <span class="st">"datamanager"</span>, <span class="at">orcid =</span> <span class="st">"0000-0001-0002-0003"</span>)</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setKeywords</span>(<span class="fu">c</span>(<span class="st">"R"</span>,<span class="st">"dataset"</span>)) <span class="co">#For filtering</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addReference</span>(<span class="st">"Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A record can be deposited on Zenodo before it is published. This will add the record to your account without making it public yet. A deposited record can still be edited or deleted. You can also upload data to a deposited record. If you prefer a graphical interface, you can also edit the record on the Zenodo website.</p>
+<ul>
+<li>Deposit the record on Zenodo:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#deposit record</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p>View the deposited record at https://sandbox.zenodo.org/me/uploads?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest</p></li>
+<li><p>Compress your project directory to a .zip file.</p></li>
+<li><p>Upload the .zip file to your deposited record:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#add data to the record, adjust the path below</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>zenodo<span class="sc">$</span><span class="fu">uploadFile</span>(<span class="st">"path/to/your/file"</span>, <span class="at">record =</span> myrec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Publish the record:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#make the record publicly available on Zenodo (Sandbox).</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">publishRecord</span>(myrec<span class="sc">$</span>id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-12-edit-a-published-zenodo-record" class="level3">
+<h3 class="anchored" data-anchor-id="step-12-edit-a-published-zenodo-record">Step 12: Edit a published Zenodo record</h3>
+<ul>
+<li>It is also possible to edit or update the metadata of published records:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#get your record by metadata query, e.g. by title</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:zen4R'</span>)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co">#get depositions creates a list, access first element</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co">#edit metadata</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">editRecord</span>(myrec<span class="sc">$</span>id)</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"zen4R 2.0"</span>)</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="co">#redeposit and publish the edited record</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p>Once a record has been published, it is not possible to edit the data that has been attached to it. However, it is possible to upload an updated version of the data. The previous version of the data will remain accessible via Zenodo. The record will have one overall DOI, while each version will have its own DOI.</p></li>
+<li><p>Reconnect to your account:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>zenodo <span class="ot">&lt;-</span> ZenodoManager<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">token =</span> <span class="st">"your_token"</span>,</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">sandbox =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">logger =</span> <span class="st">"INFO"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Access your record:<br>
+</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">#get your record by querying the metadata, e.g. by title, this will give you a list of all records with that title.</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:RiceFarm Statistics'</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co">#access the first item in the list, as there should only be one record with that particular title</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Rename your .zip file on your computer</li>
+<li>Upload the renamed .zip file:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#edit data, delete_latest_files = TRUE to not include data of previous version in newer version</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecordVersion</span>(myrec, <span class="at">delete_latest_files =</span> <span class="cn">TRUE</span>, <span class="at">files =</span> <span class="st">"path/to/your/new/file"</span>, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Again, go to https://sandbox.zenodo.org/me/uploads?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest</li>
+<li>Activate “View all versions” on the left hand side.</li>
+<li>Check if both versions show up</li>
+</ul>
+</section>
 </section>
 <section id="sec-docker_exercise" class="level2">
 <h2 class="anchored" data-anchor-id="sec-docker_exercise">Containerization with Docker exercise</h2>
-<p>In this exercise we will create a Docker container for an example R project. The project is the same that is created in the first workflow <a href="@sec-Rproj_zenodo_exercise">exercise</a>, however to save time or in case you haven’t completed this exercise we will start with the finished output from it.</p>
-<p>If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a></p>
-<section id="step-1-download-the-resources-1" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-download-the-resources-1">Step 1: Download the resources</h3>
+<p>In this exercise we will create and run a Docker container for an example R project. The project is the same that is created in the first workflow <a href="@sec-Rproj_zenodo_exercise">exercise</a>, however to save time or in case you haven’t completed this exercise we will start with the finished output from it.</p>
+<p><strong>Warning</strong>: Docker is a complex software and getting Docker Desktop running on different machines is not always smooth. For example, I had no problem getting it running on my desktop computer but my work laptop did not have the capabilities. If you do run into issues there is good support available online but also asking for help from your IT department may be a good idea.</p>
+<p>If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://blenback.github.io/R-for-Reproducible-Research/exercises/Docker_exercise.pdf" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a></p>
+<section id="step-1-download-the-resources" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-download-the-resources">Step 1: Download the resources</h3>
 <ul>
-<li>Click here to download the resources for the exercise: <a href="https://drive.google.com/uc?export=download&amp;id=1TN3DZqetynnNWlTeV2eKqJDcU53fq9Zg" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a></li>
-<li>Unzip the downloaded file and move the folder to a location on your computer where you can easily find it.</li>
+<li><p>Click here to download the resources for the exercise: <a href="https://drive.google.com/uc?export=download&amp;id=1TN3DZqetynnNWlTeV2eKqJDcU53fq9Zg" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a></p></li>
+<li><p>Unzip the downloaded file and move the folder to a location on your computer where you can easily find it.</p></li>
 </ul>
 </section>
 <section id="step-2-download-docker" class="level3">
 <h3 class="anchored" data-anchor-id="step-2-download-docker">Step 2: Download Docker</h3>
 <ul>
-<li>Download Docker Desktop for your operating system from the <a href="https://www.docker.com/products/docker-desktop">Docker website</a>.</li>
-<li>Once downloaded run the installer like you would for other software. You may need to restart your computer after installation.</li>
-<li>While this is happening it is useful to make a Docker account. This is not necessary but can be useful for managing your containers. You can also sign in with your GitHub account.</li>
+<li><p>Download Docker Desktop for your operating system from the <a href="https://www.docker.com/products/docker-desktop">Docker website</a>.</p></li>
+<li><p>Once downloaded run the installer like you would for other software. If your computer is managed by your institution or your employer you will likely need an admin account to run the installer and you may need to restart your computer after installation.</p></li>
+<li><p>While you are running the installer it is useful to make a Docker account. This is not necessary but can be useful for managing your containers. You can also sign in with your GitHub account.</p></li>
 </ul>
 </section>
-<section id="creating-the-dockerfile" class="level3">
-<h3 class="anchored" data-anchor-id="creating-the-dockerfile">Creating the Dockerfile</h3>
+<section id="step-3-open-docker-desktop" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-open-docker-desktop">Step 3: Open Docker desktop</h3>
+<ul>
+<li><p>Open the Docker desktop app. If the app does not open you may need to yourself to the program user-group on your computer. This is a common issue on Windows machines because only the admin account is added to the user-group by default. To add yourself to the user-group search computer management in the start menu and right-click and select to run it with admin privileges. Then navigate to Local Users and Groups -&gt; Groups -&gt; Docker Users. Right click on Docker Users and select Add to Group. Then add your user account to the group.</p></li>
+<li><p>Once the Docker desktop app is open it should automatically start the docker engine which is the software that runs the containers. In the bottom left of app window you will see the status of the engine.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Docker_running_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Docker Engine status in app"><img src="assets/images/Docker_running_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker Engine status in app"></a></p>
+</figure>
+</div>
+<figcaption>Docker Engine status in app</figcaption>
+</figure>
+</div>
+<p>Alternatively if you look in the system tray on Windows or the top menu bar on Mac. You will see an icon of the Docker whale logo and if you click on this you can see the status of the engine.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Docker_running_desktop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Docker Engine status in system try"><img src="assets/images/Docker_running_desktop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker Engine status in system try"></a></p>
+</figure>
+</div>
+<figcaption>Docker Engine status in system try</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-4-creating-the-dockerfile" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-creating-the-dockerfile">Step 4: Creating the Dockerfile</h3>
 <ul>
 <li>Open Rstudio and navigate to the folder you downloaded in step 1.</li>
-<li>Create a new R script and name it <code>Dockerfile.R</code>.</li>
+<li>Create a new R script and name it <code>Create_Dockerfile.R</code>.</li>
 <li>Install the Dockerfiler package: <code>install.packages("dockerfiler")</code>.</li>
 <li>Add the following code to the script and replace the entries with your details:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dockerfiler)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dockerfile template</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>my_dock <span class="ot">&lt;-</span> Dockerfile<span class="sc">$</span><span class="fu">new</span>()</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Add maintainer</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>my_dock<span class="sc">$</span><span class="fu">MAINTAINER</span>(<span class="st">"Your_name"</span>, <span class="st">"Your_email"</span>)</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Add R and RStudio base image</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>my_dock<span class="sc">$</span><span class="fu">FROM</span>(<span class="st">"rocker/rstudio:4.0.3"</span>)</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Add R packages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load dockerfiler package</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dockerfiler)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Get your R version to select a base image to use for your image/container</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="fu">R.Version</span>()<span class="sc">$</span>version.string </span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dockerfile template object using the Dockerfile class from the</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="co"># dockerfiler package and specify your version of R in the base image name</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="co"># my version is 4.3.1 hence the base image is rocker/r-ver:4.3.1</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="co"># but you should replace the end of this string with your version number from above</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock <span class="ot">&lt;-</span> Dockerfile<span class="sc">$</span><span class="fu">new</span>(<span class="at">FROM =</span> <span class="st">"rocker/r-ver:4.3.1"</span>)</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Add maintainer information (replace with your details)</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">MAINTAINER</span>(<span class="st">"Your_name"</span>, <span class="st">"Your_email"</span>)</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a><span class="co"># By default docker images contain a home directory and because our project</span></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="co"># is simple we will move the files we need there</span></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the data directory </span></span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a><span class="co"># (1st argument is the source, 2nd is the destination in the container)</span></span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">COPY</span>(<span class="st">"/Data"</span>, <span class="st">"/home/Data"</span>)</span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the scripts directory</span></span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">COPY</span>(<span class="st">"/Scripts"</span>, <span class="st">"/home/Scripts"</span>)</span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the master script</span></span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">COPY</span>(<span class="st">"/RiceFarm_master.R"</span>, <span class="st">"/home"</span>)</span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a><span class="co"># For our project we need "ggplot2" and "stringr" packages</span></span>
+<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a><span class="co"># We could try to find a base image on Rocker that has these installed</span></span>
+<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a><span class="co"># But because we are not using lots of packages lets just install them in the container</span></span>
+<span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that the R commands are wrapped in `r()` which is a helper function from dockerfiler</span></span>
+<span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a><span class="co"># that then wraps the command in the correct syntax for the Dockerfile</span></span>
+<span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">RUN</span>(<span class="fu">r</span>(<span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)))</span>
+<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">RUN</span>(<span class="fu">r</span>(<span class="fu">install.packages</span>(<span class="st">"stringr"</span>)))</span>
+<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the command to run the master script</span></span>
+<span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Note the use of `Rscript` which is the command line tool included with R to run scripts</span></span>
+<span id="cb31-39"><a href="#cb31-39" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">CMD</span>(<span class="st">"Rscript /home/RiceFarm_master.R "</span>)</span>
+<span id="cb31-40"><a href="#cb31-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-41"><a href="#cb31-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the Dockerfile</span></span>
+<span id="cb31-42"><a href="#cb31-42" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">write</span>()</span>
+<span id="cb31-43"><a href="#cb31-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-44"><a href="#cb31-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dir in the host directory to receive the results from container</span></span>
+<span id="cb31-45"><a href="#cb31-45" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"/output"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>After running this code you will see that a <code>Dockerfile</code> has been created in the directory where you downloaded the resources.</li>
+</ul>
+</section>
+<section id="step-5-creating-the-docker-image" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-creating-the-docker-image">Step 5: Creating the Docker image</h3>
+<ul>
+<li><p>The Docker command <code>build</code> is used to create a <code>Docker image</code> from the instructions contained in your <code>Dockerfile</code>.</p></li>
+<li><p>The <code>build</code> command should be called through a Command Line Interface (CLI) such as the terminal in Rstudio or the CLI of your operating system (e.g Command Prompt for Windows).</p></li>
+<li><p>In Rstudio switch to the terminal tab next to the console pane:</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Docker_terminal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Rstudio terminal"><img src="assets/images/Docker_terminal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Rstudio terminal"></a></p>
+</figure>
+</div>
+<figcaption>Rstudio terminal</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Run the following command: <code>docker build  -t ricerarm_01 .</code> Note: The <code>-t</code> flag is used to tag the image with a name (in this case we are using <code>ricerarm_01</code>). The <code>.</code> at the end of the command is used to specify the current directory as the location of <code>Dockerfile</code> that is to be used.</p></li>
+<li><p>After running the command you will see the Docker engine pulling the base image from the Docker Hub and then building the image. This process can take a few minutes depending on the size of the base image and the number of packages you are installing. The output in the terminal will look something like this:</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Docker_build_output.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Docker build output in terminal"><img src="assets/images/Docker_build_output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker build output in terminal"></a></p>
+</figure>
+</div>
+<figcaption>Docker build output in terminal</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Once the image has been built you can check that it is there by running the command <code>docker images</code> in the terminal. This will show you a list of all the images on your computer. You should see the image you just created in the list.</p></li>
+<li><p>Alternatively you can check the image in the Docker desktop app. You will see the image in the list of images on the left of the app window. You can inspect the image by clicking on it and see the details of the image:</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Docker_build_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Docker build output in app"><img src="assets/images/Docker_build_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker build output in app"></a></p>
+</figure>
+</div>
+<figcaption>Docker build output in app</figcaption>
+</figure>
 </div>
 </section>
-<section id="creating-docker-image" class="level3">
-<h3 class="anchored" data-anchor-id="creating-docker-image">Creating docker image</h3>
-<p>One of the most important Docker commands is <code>build</code> which creates a <code>Docker image</code> from your <code>Dockerfile</code> instructions.</p>
-<p>There are two ways to use <code>build</code> command: 1. Through a Command Line Interface (CLI) such as the terminal in Rstudio or the terminal in your operating system (e.g Command Prompt for Windows). Open up a new Terminal window and navigate to where your code is located. Then, run the following command. 2. Through the Docker desktop application. Which is more user friendly if you are not familiar with the CLI.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>docker build <span class="sc">-</span>t r<span class="sc">-</span>docker<span class="sc">-</span>demo .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="step-6-running-the-docker-container" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-running-the-docker-container">Step 6: Running the Docker container</h3>
+<ul>
+<li><p>The Docker command <code>run</code> is used to run a container from an image.</p></li>
+<li><p><strong>This can be done through the CLI:</strong> In the terminal tab in Rstudio run the following command: <code>docker run ricerarm_01</code>.</p></li>
+<li><p><strong>Or in the Docker desktop app:</strong> Click on the image you want to run and then click the run button in the top right. This will open a window where you can specify the settings for the container but for now you should just run the container with the default settings.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Docker_image_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30" title="Docker images in app"><img src="assets/images/Docker_image_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker images in app"></a></p>
+</figure>
 </div>
-<p>You will then see that a docker image file has been created:</p>
+<figcaption>Docker images in app</figcaption>
+</figure>
+</div>
+<ul>
+<li>After running the container you can also check the status of the container in the Docker desktop app. You will see the container in the list of containers on the left of the app window. You can inspect the container by clicking on it and see the details of the container.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Docker_container_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="Docker containers in app"><img src="assets/images/Docker_container_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker containers in app"></a></p>
+</figure>
+</div>
+<figcaption>Docker containers in app</figcaption>
+</figure>
+</div>
 </section>
-<section id="running-docker-container" class="level3">
-<h3 class="anchored" data-anchor-id="running-docker-container">Running docker container</h3>
-<div class="notes">
-<p>https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf</p>
-<p>https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/</p>
-<p>stevedore package for pulling images from Dockerhub using the Docker API https://richfitz.github.io/stevedore/</p>
+<section id="step-8-copying-files-from-the-container-to-the-host" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-copying-files-from-the-container-to-the-host">Step 8 Copying files from the container to the host</h3>
+<ul>
+<li><p>One way to access the files created inside your container is to mount a directory from your host machine to a directory in the the container. This is done using the <code>-v</code> flag in the <code>docker run</code> command. However, this is not so effective in the example container we are using because the code is completed in a matter of seconds and after that the container is exited.</p></li>
+<li><p>Instead we will copy the output files from the container using the CLI. To do this you need to know the <code>container ID</code> of the container you want to copy files from. You can get the container ID by running the command: <code>docker ps -a</code> in the terminal, this will show you a list of all the containers on your computer and in the terminal output you can copy the ID:</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Docker_container_ID.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32" title="Docker container ID in terminal"><img src="assets/images/Docker_container_ID.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker container ID in terminal"></a></p>
+</figure>
 </div>
+<figcaption>Docker container ID in terminal</figcaption>
+</figure>
+</div>
+<ul>
+<li>Now you have the ID in the terminal run the command: <code>docker cp &lt;Container ID&gt;:/home/Output/Visualisations/Regional_size_summary_bar.png ./Output/</code> and replace the <code>&lt;Container ID&gt;</code> with the ID you copied. The first argument <code>/home/Output/Visualisations/Regional_size_summary_bar.png</code> is the path to the file you want to copy in the container. The second argument <code>./Output/</code> is the path to the directory to copy the file to on your host machine, again this is a relative path and the <code>.</code> specifies the current directory. After running the command you should a message printed in the terminal and the file should be copied to the directory you specified:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/Docker_copy_output.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33" title="Docker copy output in terminal"><img src="assets/images/Docker_copy_output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker copy output in terminal"></a></p>
+</figure>
+</div>
+<figcaption>Docker copy output in terminal</figcaption>
+</figure>
+</div>
+<p>That’s it, you have successfully created a Dockerfile, Docker image and container, run your code inside the container and copied the output back to your host machine. If you were to share the Dockerfile with someone else they could build the image and run the container on their machine and get exactly the same results as you. Obviously this is a very simple example but the same principles apply to more complex projects where reproducibility becomes more challenging.</p>
 </section>
 </section>
 <section id="version-control-with-git-exercise" class="level2">
 <h2 class="anchored" data-anchor-id="version-control-with-git-exercise">Version control with Git exercise</h2>
 <p>In this exercise we will show how version control with Git can be implemented for an example R project. The project is the same that is created in the first workflow <a href="@sec-Rproj_zenodo_exercise">exercise</a>, however to save time or in case you haven’t completed this exercise we will start with the finished output from it.</p>
+<p>If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a></p>
+<section id="step-1-download-and-configure-git" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-download-and-configure-git">Step 1: Download and configure Git</h3>
+<ul>
+<li>Download Git from https://git-scm.com/downloads</li>
+<li>Once downloaded open the Git terminal window and type in the following with your credentials</li>
+</ul>
+<p><code>git config --global user.name "NVHarisena1" git config --global user.email "NVHarisena1\@ethz.ch" git config --global --list</code></p>
+<p>The third command should return your updated user-name and email id.</p>
+</section>
+<section id="step-2-create-a-repository-on-github" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-create-a-repository-on-github">Step 2: Create a repository on Github</h3>
+<p>We will make a quick repository on Github for an individual project, without changing much of the specific configurations since it will be beyond the scope of this workshop.</p>
+<ul>
+<li><p>Login to your account at https://github.com/</p></li>
+<li><p>Create a new repository by clicking the ‘+’ sign in the top right side of the website or in the ‘Start new repository’ section in the homepage</p></li>
+<li><p>Provide a clear name for the repository for e.g.&nbsp;“R_repro_nv” and a quick description like “Test for Reproducible research workshop”</p></li>
+<li><p>Set the visibility of the profile to “Public”</p></li>
+<li><p>Initialize this repository with: Add a README file.</p></li>
+<li><p>Select a license for your repository in the “Choose your license” section. Check out <a href="https://choosealicense.com/">this website</a> to identify which license works for you. Even though it is optional to add license information to a repository, it is good practice to include this (<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#choosing-the-right-license">See more details</a>).</p></li>
+<li><p>Click the green ‘create repository’ button</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/git_ex1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34" title="Setting up the repository"><img src="assets/images/git_ex1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Setting up the repository"></a></p>
+</figure>
+</div>
+<figcaption>Setting up the repository</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-3-link-created-repository-to-r-studio" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-link-created-repository-to-r-studio">Step 3: Link created repository to R-Studio</h3>
+<ul>
+<li><p>Open a new session in R studio and create a new project</p></li>
+<li><p>In the ‘New Project Wizard’ navigate to ‘Version Control’&gt;‘Git’</p></li>
+<li><p>In the “repository URL” paste the URL of your new GitHub repository. It will be something like this https://github.com/nvharisena1/R_repro_test.</p></li>
+<li><p>Add folder location where you want the project to be saved locally in your computer in “Create project as subdirectory of” section</p></li>
+<li><p>Click ‘Create project’</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/git_ex2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35" title="Linking repository to R-Studio"><img src="assets/images/git_ex2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Linking repository to R-Studio"></a></p>
+</figure>
+</div>
+<figcaption>Linking repository to R-Studio</figcaption>
+</figure>
+</div>
+<p>You will see R-studio has now been set up for your local clone of the project to communicate with your online repository. You can see a drop-down to the right of ‘New Branch’ button in the Git tab. This will show you all the branches available to pull or push data to. Your drop-down should show only a ‘main’ branch, since no new branches were created. As stated in the workflow introduction, creating branches is useful for projects with multiple collaborators or sub-themes. Pushing to different branches and then setting up a ‘pull-request’ to merge to the ‘main’ branch allows for systematic version control of the project.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/git_ex3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36" title="R-Studio new project session with git link"><img src="assets/images/git_ex3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="R-Studio new project session with git link"></a></p>
+</figure>
+</div>
+<figcaption>R-Studio new project session with git link</figcaption>
+</figure>
+</div>
+<!-- ### Step 4: Add exercise files to the local copy of the project -->
+<!-- In the file navigator in the bottom right of Rstudio in the 'files' tab you will see that R-Studio has already navigated to the directory for your project. -->
+<!-- -   Create two folders "Exercise" and "Data" -->
+<!-- -   Copy the downloaded "exercise_data" to the two folders: "RiceFarm_project.R" to the exercise folder and the "RiceFarm.csv" to the Data folder; you can do this by navigating to the local directory of the project on windows explorer and copying the data manually. It will automatically show up in the changed files as detected by Git. -->
+<!-- You will see that the changes are shown in the Git tab in the top right panel in R-Studio with status and path details of each change. -->
+<!-- ![Adding data to project](assets/images/git_ex4.png){width="70%" fig-align="center"} -->
+</section>
+<section id="step-5-edit-the-readme.md-file" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-edit-the-readme.md-file">Step 5: Edit the <code>README.md</code> file</h3>
+<ul>
+<li><p>Open the README.md from the file viewer pane</p></li>
+<li><p>Add a description section for the project with a heading and a describing sentence, for e.g.&nbsp;“This project is is a test”.</p></li>
+<li><p>Add license information for the project, for e.g.&nbsp;“This project is licensed under the terms of the MIT license.”</p></li>
+<li><p>Save the file.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/git_ex5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37" title="Edit README.md"><img src="assets/images/git_ex5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Edit README.md"></a></p>
+</figure>
+</div>
+<figcaption>Edit README.md</figcaption>
+</figure>
+</div></li>
+</ul>
+</section>
+<section id="step-6-edit-the-.gitignore-file" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-edit-the-.gitignore-file">Step 6: Edit the <code>.gitignore</code> file</h3>
+<p>The git ignore functionality tells git which files to ignore while ‘pushing’ the local changes to the remote (online) repository <a href="https://git-scm.com/docs/gitignore/en">see more details</a>.In this example we will tell git to ignore all <code>.html</code> files. <code>.html</code> files are created when you preview a file, for example click preview on the edited <code>README.md</code> and a <code>.html</code> should be created.</p>
+<ul>
+<li>Open the <code>.gitignore</code> file and add <code>.html</code> in a new line and save the file</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/git_ex6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38" title="Editing the .gitignore file"><img src="assets/images/git_ex6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Editing the .gitignore file"></a></p>
+</figure>
+</div>
+<figcaption>Editing the .gitignore file</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-7-commit-and-push" class="level3">
+<h3 class="anchored" data-anchor-id="step-7-commit-and-push">Step 7: Commit and push</h3>
+<ul>
+<li><p>Click the <code>Commit</code> button in the Git tab</p></li>
+<li><p>Check all the files listed in the top left section</p></li>
+<li><p>Write a sentence describing the changes i.e.&nbsp;<em>“Updated exercise, data, Readme and .gitignore”</em></p></li>
+<li><p>Click <code>Commit</code> and close the window</p></li>
+<li><p>click <code>Push</code> in the Git tab, a window will pop up showing the interface with the remote system and details of the upload.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/images/git_ex7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39" title="Commit changes"><img src="assets/images/git_ex7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Commit changes"></a></p>
+</figure>
+</div>
+<figcaption>Commit changes</figcaption>
+</figure>
+</div>
+<p>Great! You have finished your first project update (local changes committed and pushed) via Git on Rstudio.</p>
+</section>
 </section>
 <section id="write-a-paper-with-quarto" class="level2">
 <h2 class="anchored" data-anchor-id="write-a-paper-with-quarto">Write a paper with Quarto</h2>
@@ -1066,11 +1605,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </section>
 <section id="sec-resources" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Resources</h1>
-<<<<<<< HEAD
-<!--{{\< include contents/resources.qmd \>}}-->
-=======
 <!--{{< include contents/resources.qmd >}}-->
->>>>>>> main
 
 
 
@@ -1655,12 +2190,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-<<<<<<< HEAD
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
-=======
 <script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});
->>>>>>> main
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

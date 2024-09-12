@@ -12,13 +12,14 @@ format:
     number-depth: 1
 citation-location: margin
 lightbox: true
+fig-align: center
 execute:
   echo: true
   eval: false
   error: false
 ---
 
-![](assets/images/graphical_abstract_dark.png){.lightbox width="70%" fig-align="center"}
+![](assets/images/graphical_abstract_dark.png){width="70%" fig-align="center"}
 
 This image highlights some the key concepts we will discuss in the workshop, which have been divided into seperate sections:
 
@@ -63,7 +64,7 @@ Of course, these workflows are by no-means the only way of doing things and inde
 
 ## Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"/> {#sec-git_workflow}
 
-![](assets/images/version_control_workflow.png){.lightbox width="70%" fig-align="center"}
+![](assets/images/version_control_workflow.png){width="70%" fig-align="center"}
 
 {{< include contents/Git_workflow.qmd >}}
 
@@ -72,6 +73,8 @@ Of course, these workflows are by no-means the only way of doing things and inde
 {{< include contents/Quarto_intro.qmd >}}
 
 # Guided excercises {#sec-exercises}
+
+Now it's time to get hands on with some guided exercises that will let you put into practice the [three workflows for reproducible research](@sec-workflows) that we have introduced as well as writing a academic manuscript using [Quarto](@sec-Quarto). Each exercise is available to download as a PDF if you prefer to view the instructions offline and the files required for each are available to download at the start of each exercise.
 
 {{< include exercises/Rproj-Zenodo_exercise.qmd >}}
 

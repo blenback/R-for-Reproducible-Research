@@ -79,7 +79,7 @@ wrangling and visualisation, geospatial packages etc.).
 In terms of actually creating the `Dockerfile` for our R project, this
 can be done manually (See a good R-focused tutorial[here](https://colinfay.me/docker-r-reproducibility/)), however there are also R packages that can help with this process such as [`dockerfiler`](https://thinkr-open.github.io/dockerfiler/) and the `[rrtools`](https://github.com/benmarwick/rrtools) package. 
 
-For our [exercise](@sec-docker_exercise) of this workflow we will use the `dockerfiler` package, which uses simple assignment lines to add elements to a Dockerfile object, before saving it:
+For our [exercise](@sec-docker_exercise) of this workflow we will use the `dockerfiler` package, which creates a custom class object that represents the Dockerfile and has slots corresponding to common elements of Docker images. This allows us to add elements to the dockerfile in a more R-like way. The following code snippet demonstrates adding `Maintainer` details to a Dockerfile object, before saving it:
 
 ```{R}
 library(dockerfiler)
