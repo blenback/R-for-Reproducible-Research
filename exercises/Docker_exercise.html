@@ -206,62 +206,182 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 <section id="sec-docker_exercise" class="level2">
 <h2 class="anchored" data-anchor-id="sec-docker_exercise">Containerization with Docker exercise</h2>
-<p>In this exercise we will create a Docker container for an example R project. The project is the same that is created in the first workflow <a href="@sec-Rproj_zenodo_exercise">exercise</a>, however to save time or in case you haven’t completed this exercise we will start with the finished output from it.</p>
-<p>If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a></p>
+<p>In this exercise we will create and run a Docker container for an example R project. The project is the same that is created in the first workflow <a href="@sec-Rproj_zenodo_exercise">exercise</a>, however to save time or in case you haven’t completed this exercise we will start with the finished output from it.</p>
+<p><strong>Warning</strong>: Docker is a complex software and getting Docker Desktop running on different machines is not always smooth. For example, I had no problem getting it running on my desktop computer but my work laptop did not have the capabilities. If you do run into issues there is good support available online but also asking for help from your IT department may be a good idea.</p>
+<p>If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://blenback.github.io/R-for-Reproducible-Research/exercises/Docker_exercise.pdf" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a></p>
 <section id="step-1-download-the-resources" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-download-the-resources">Step 1: Download the resources</h3>
 <ul>
-<li>Click here to download the resources for the exercise: <a href="https://drive.google.com/uc?export=download&amp;id=1TN3DZqetynnNWlTeV2eKqJDcU53fq9Zg" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a></li>
-<li>Unzip the downloaded file and move the folder to a location on your computer where you can easily find it.</li>
+<li><p>Click here to download the resources for the exercise: <a href="https://drive.google.com/uc?export=download&amp;id=1TN3DZqetynnNWlTeV2eKqJDcU53fq9Zg" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a></p></li>
+<li><p>Unzip the downloaded file and move the folder to a location on your computer where you can easily find it.</p></li>
 </ul>
 </section>
 <section id="step-2-download-docker" class="level3">
 <h3 class="anchored" data-anchor-id="step-2-download-docker">Step 2: Download Docker</h3>
 <ul>
-<li>Download Docker Desktop for your operating system from the <a href="https://www.docker.com/products/docker-desktop">Docker website</a>.</li>
-<li>Once downloaded run the installer like you would for other software. You may need to restart your computer after installation.</li>
-<li>While this is happening it is useful to make a Docker account. This is not necessary but can be useful for managing your containers. You can also sign in with your GitHub account.</li>
+<li><p>Download Docker Desktop for your operating system from the <a href="https://www.docker.com/products/docker-desktop">Docker website</a>.</p></li>
+<li><p>Once downloaded run the installer like you would for other software. If your computer is managed by your institution or your employer you will likely need an admin account to run the installer and you may need to restart your computer after installation.</p></li>
+<li><p>While you are running the installer it is useful to make a Docker account. This is not necessary but can be useful for managing your containers. You can also sign in with your GitHub account.</p></li>
 </ul>
 </section>
-<section id="creating-the-dockerfile" class="level3">
-<h3 class="anchored" data-anchor-id="creating-the-dockerfile">Creating the Dockerfile</h3>
+<section id="step-3-open-docker-desktop" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-open-docker-desktop">Step 3: Open Docker desktop</h3>
+<ul>
+<li><p>Open the Docker desktop app. If the app does not open you may need to yourself to the program user-group on your computer. This is a common issue on Windows machines because only the admin account is added to the user-group by default. To add yourself to the user-group search computer management in the start menu and right-click and select to run it with admin privileges. Then navigate to Local Users and Groups -&gt; Groups -&gt; Docker Users. Right click on Docker Users and select Add to Group. Then add your user account to the group.</p></li>
+<li><p>Once the Docker desktop app is open it should automatically start the docker engine which is the software that runs the containers. In the bottom left of app window you will see the status of the engine.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/Docker_running_app.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Docker Engine status in app</figcaption>
+</figure>
+</div>
+<p>Alternatively if you look in the system tray on Windows or the top menu bar on Mac. You will see an icon of the Docker whale logo and if you click on this you can see the status of the engine.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/Docker_running_desktop.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Docker Engine status in system try</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-4-creating-the-dockerfile" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-creating-the-dockerfile">Step 4: Creating the Dockerfile</h3>
 <ul>
 <li>Open Rstudio and navigate to the folder you downloaded in step 1.</li>
-<li>Create a new R script and name it <code>Dockerfile.R</code>.</li>
+<li>Create a new R script and name it <code>Create_Dockerfile.R</code>.</li>
 <li>Install the Dockerfiler package: <code>install.packages("dockerfiler")</code>.</li>
 <li>Add the following code to the script and replace the entries with your details:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dockerfiler)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dockerfile template</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>my_dock <span class="ot">&lt;-</span> Dockerfile<span class="sc">$</span><span class="fu">new</span>()</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Add maintainer</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>my_dock<span class="sc">$</span><span class="fu">MAINTAINER</span>(<span class="st">"Your_name"</span>, <span class="st">"Your_email"</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Add R and RStudio base image</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>my_dock<span class="sc">$</span><span class="fu">FROM</span>(<span class="st">"rocker/rstudio:4.0.3"</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Add R packages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load dockerfiler package</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dockerfiler)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Get your R version to select a base image to use for your image/container</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">R.Version</span>()<span class="sc">$</span>version.string </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dockerfile template object using the Dockerfile class from the</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># dockerfiler package and specify your version of R in the base image name</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># my version is 4.3.1 hence the base image is rocker/r-ver:4.3.1</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># but you should replace the end of this string with your version number from above</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock <span class="ot">&lt;-</span> Dockerfile<span class="sc">$</span><span class="fu">new</span>(<span class="at">FROM =</span> <span class="st">"rocker/r-ver:4.3.1"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Add maintainer information (replace with your details)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">MAINTAINER</span>(<span class="st">"Your_name"</span>, <span class="st">"Your_email"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># By default docker images contain a home directory and because our project</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># is simple we will move the files we need there</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the data directory </span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># (1st argument is the source, 2nd is the destination in the container)</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">COPY</span>(<span class="st">"/Data"</span>, <span class="st">"/home/Data"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the scripts directory</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">COPY</span>(<span class="st">"/Scripts"</span>, <span class="st">"/home/Scripts"</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the master script</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">COPY</span>(<span class="st">"/RiceFarm_master.R"</span>, <span class="st">"/home"</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># For our project we need "ggplot2" and "stringr" packages</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># We could try to find a base image on Rocker that has these installed</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># But because we are not using lots of packages lets just install them in the container</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that the R commands are wrapped in `r()` which is a helper function from dockerfiler</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co"># that then wraps the command in the correct syntax for the Dockerfile</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">RUN</span>(<span class="fu">r</span>(<span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)))</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">RUN</span>(<span class="fu">r</span>(<span class="fu">install.packages</span>(<span class="st">"stringr"</span>)))</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the command to run the master script</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Note the use of `Rscript` which is the command line tool included with R to run scripts</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">CMD</span>(<span class="st">"Rscript /home/RiceFarm_master.R "</span>)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the Dockerfile</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">write</span>()</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dir in the host directory to receive the results from container</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"/output"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>After running this code you will see that a <code>Dockerfile</code> has been created in the directory where you downloaded the resources.</li>
+</ul>
+</section>
+<section id="step-5-creating-the-docker-image" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-creating-the-docker-image">Step 5: Creating the Docker image</h3>
+<ul>
+<li><p>The Docker command <code>build</code> is used to create a <code>Docker image</code> from the instructions contained in your <code>Dockerfile</code>.</p></li>
+<li><p>The <code>build</code> command should be called through a Command Line Interface (CLI) such as the terminal in Rstudio or the CLI of your operating system (e.g Command Prompt for Windows).</p></li>
+<li><p>In Rstudio switch to the terminal tab next to the console pane:</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/Docker_terminal.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Rstudio terminal</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Run the following command: <code>docker build  -t ricerarm_01 .</code> Note: The <code>-t</code> flag is used to tag the image with a name (in this case we are using <code>ricerarm_01</code>). The <code>.</code> at the end of the command is used to specify the current directory as the location of <code>Dockerfile</code> that is to be used.</p></li>
+<li><p>After running the command you will see the Docker engine pulling the base image from the Docker Hub and then building the image. This process can take a few minutes depending on the size of the base image and the number of packages you are installing. The output in the terminal will look something like this:</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/Docker_build_output.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Docker build output in terminal</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Once the image has been built you can check that it is there by running the command <code>docker images</code> in the terminal. This will show you a list of all the images on your computer. You should see the image you just created in the list.</p></li>
+<li><p>Alternatively you can check the image in the Docker desktop app. You will see the image in the list of images on the left of the app window. You can inspect the image by clicking on it and see the details of the image:</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/Docker_build_app.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Docker build output in app</figcaption>
+</figure>
 </div>
 </section>
-<section id="creating-docker-image" class="level3">
-<h3 class="anchored" data-anchor-id="creating-docker-image">Creating docker image</h3>
-<p>One of the most important Docker commands is <code>build</code> which creates a <code>Docker image</code> from your <code>Dockerfile</code> instructions.</p>
-<p>There are two ways to use <code>build</code> command: 1. Through a Command Line Interface (CLI) such as the terminal in Rstudio or the terminal in your operating system (e.g Command Prompt for Windows). Open up a new Terminal window and navigate to where your code is located. Then, run the following command. 2. Through the Docker desktop application. Which is more user friendly if you are not familiar with the CLI.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>docker build <span class="sc">-</span>t r<span class="sc">-</span>docker<span class="sc">-</span>demo .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="step-6-running-the-docker-container" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-running-the-docker-container">Step 6: Running the Docker container</h3>
+<ul>
+<li><p>The Docker command <code>run</code> is used to run a container from an image.</p></li>
+<li><p><strong>This can be done through the CLI:</strong> In the terminal tab in Rstudio run the following command: <code>docker run ricerarm_01</code>.</p></li>
+<li><p><strong>Or in the Docker desktop app:</strong> Click on the image you want to run and then click the run button in the top right. This will open a window where you can specify the settings for the container but for now you should just run the container with the default settings.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/Docker_image_app.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Docker images in app</figcaption>
+</figure>
 </div>
-<p>You will then see that a docker image file has been created:</p>
+<ul>
+<li>After running the container you can also check the status of the container in the Docker desktop app. You will see the container in the list of containers on the left of the app window. You can inspect the container by clicking on it and see the details of the container.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/Docker_container_app.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Docker containers in app</figcaption>
+</figure>
+</div>
 </section>
-<section id="running-docker-container" class="level3">
-<h3 class="anchored" data-anchor-id="running-docker-container">Running docker container</h3>
-<div class="notes">
-<p>https://github.com/noamross/nyhackr-docker-talk/blob/master/Noam_Ross_DockerForTheUseR_nyhackr_2018-07-10.pdf</p>
-<p>https://www.statworx.com/en/content-hub/blog/running-your-r-script-in-docker/</p>
-<p>stevedore package for pulling images from Dockerhub using the Docker API https://richfitz.github.io/stevedore/</p>
+<section id="step-8-copying-files-from-the-container-to-the-host" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-copying-files-from-the-container-to-the-host">Step 8 Copying files from the container to the host</h3>
+<ul>
+<li><p>One way to access the files created inside your container is to mount a directory from your host machine to a directory in the the container. This is done using the <code>-v</code> flag in the <code>docker run</code> command. However, this is not so effective in the example container we are using because the code is completed in a matter of seconds and after that the container is exited.</p></li>
+<li><p>Instead we will copy the output files from the container using the CLI. To do this you need to know the <code>container ID</code> of the container you want to copy files from. You can get the container ID by running the command: <code>docker ps -a</code> in the terminal, this will show you a list of all the containers on your computer and in the terminal output you can copy the ID:</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/Docker_container_ID.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Docker container ID in terminal</figcaption>
+</figure>
 </div>
+<ul>
+<li>Now you have the ID in the terminal run the command: <code>docker cp &lt;Container ID&gt;:/home/Output/Visualisations/Regional_size_summary_bar.png ./Output/</code> and replace the <code>&lt;Container ID&gt;</code> with the ID you copied. The first argument <code>/home/Output/Visualisations/Regional_size_summary_bar.png</code> is the path to the file you want to copy in the container. The second argument <code>./Output/</code> is the path to the directory to copy the file to on your host machine, again this is a relative path and the <code>.</code> specifies the current directory. After running the command you should a message printed in the terminal and the file should be copied to the directory you specified:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/Docker_copy_output.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Docker copy output in terminal</figcaption>
+</figure>
+</div>
+<p>That’s it, you have successfully created a Dockerfile, Docker image and container, run your code inside the container and copied the output back to your host machine. If you were to share the Dockerfile with someone else they could build the image and run the container on their machine and get exactly the same results as you. Obviously this is a very simple example but the same principles apply to more complex projects where reproducibility becomes more challenging.</p>
 
 
 </section>
@@ -846,7 +966,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-<script type="application/javascript" src="light-dark.js"></script>
 
 
 

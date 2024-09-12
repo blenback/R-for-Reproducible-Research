@@ -188,21 +188,29 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 
-<p>Version controlling software output can have multiple uses including creating a systematic procedure for collaboration and working as a team along with increasing the ease of reproduction of the work by other users or by the original researcher as well. We all know the difficulty of tracing back the workflow of work projects a few months down the line after having shelved it, and it is here that Git and Github can be highly useful (<span class="citation" data-cites="Alexander2023">[<a href="#ref-Alexander2023" role="doc-biblioref">1</a>]</span>).</p>
-<section id="about-git" class="level2">
-<h2 class="anchored" data-anchor-id="about-git">About Git</h2>
-<p>Git allows us to make snapshot or record of the changes undertaken in a script, and store it as with a message that defines the change. In this way even after multiple updates, the history is preserved allowing us to revert, compare and systematically trace back the workflow development.</p>
-<p>Git is useful also for data scientists and researchers that work individually yet want to create systematically reproducible workflows with version control (<span class="citation" data-cites="Alexander2023">[<a href="#ref-Alexander2023" role="doc-biblioref">1</a>]</span>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/version_control_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<p><strong>Version control</strong> software output can have multiple uses including creating a systematic procedure for collaboration, working as a team along with increasing the ease of reproduction of the work by other users or by the original researcher as well. We all know the difficulty of tracing back the workflow of work projects a few months down the line after having shelved it, and it is here that Git and Github can be highly useful (<span class="citation" data-cites="Alexander2023">[<a href="#ref-Alexander2023" role="doc-biblioref">1</a>]</span>).</p>
+<section id="about-git" class="level3">
+<h3 class="anchored" data-anchor-id="about-git">About Git</h3>
+<p><strong>Git</strong> allows us to make snapshot or record of the changes undertaken in a script, and store it as with a message that defines the change. In this way even after multiple updates, the history is preserved allowing us to revert, compare and systematically trace back the workflow development.</p>
+<p><strong>Git</strong> is useful also for data scientists and researchers that work individually yet want to create systematically reproducible workflows with version control (<span class="citation" data-cites="Alexander2023">[<a href="#ref-Alexander2023" role="doc-biblioref">1</a>]</span>).</p>
+</section>
 <section id="sec-Gitrepo" class="level3">
 <h3 class="anchored" data-anchor-id="sec-Gitrepo">GitHub repositories and functionalities</h3>
-<p>The version controlled code and all other auxiliary files related to the project are stored in a Github repository that is created by the user in their account on Github. A repository can either be set as public or private as per the users need for visibility of their work.</p>
-<p>To help with version control Github repositories provide multiple functionalities including creating ‘branches’, ‘clones’, merging multiple branches, setting up a pull request before merge etc. As we go deeper into more complicated workflows handled by multiple developers, Github allows many more functionalities as checks and balances to code development. However, we will limit our understanding to what is needed to create work with a version control history allowing for small scale collaboration, but with the main goal of creating reproducible research <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories">Click to see more details</a>.</p>
-<p>####Basic functionalities</p>
+<p>The version controlled code and all other auxiliary files related to the project are stored in a Github repository which was created by the user in their account on Github. A repository can either be set as public or private as per the users need for visibility of their work.</p>
+<p>To help with version control Github repositories provide multiple functionalities like creating ‘branches’, ‘clones’, ‘merging’ multiple branches, setting up a ‘pull request’ before merge etc. As we get into more complicated workflows handled by multiple developers, Github allows many more functionalities as checks and balances to code development. However, we will limit our understanding to what is needed to create work with a version control history allowing for small scale collaboration, but with the main goal of creating reproducible research (<a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories">see more details</a>).</p>
+</section>
+<section id="basic-functionalities" class="level3">
+<h3 class="anchored" data-anchor-id="basic-functionalities">Basic functionalities</h3>
 <ul>
-<li><p>Creating a repository and setting up user authorisations: A project repository must first be set up on GitHub as either a private or a public repository. If it is not an individual project, collaborators can be added with appropriate (read or write) permission levels [Click here to see more] (https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-user-account-settings/permission-levels-for-a-personal-account-repository). It is good to elaborate the ‘Readme’ file so as to help viewers get an idea of the repository <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">click here to see more details</a>.</p></li>
-<li><p>Push and Pull: The data and code related to a project must be cloned from the remote version to a local version before changes are made. Make sure to pull from updated (i.e.&nbsp;merged branches; see below) branches before making changes. Once changes are made the user must ‘commit’ all the correct changes. Once this is done the changed code can be pushed back to the appropriate branch with a ‘<a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull-request</a>’.</p></li>
-<li><p>Branching and merging : Git allows users to create <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#working-with-branches">branches</a> that feed into the ‘main’ branch of a project repository on GitHub. Each branch can be created either for different tasks or for different users as per the requirement. To <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github">merge branches into ‘main’ users have to set up a pull-request</a> which needs to be approved by an authorised user.</p></li>
-<li><p>Git provides additionally many more <a href="https://education.github.com/git-cheat-sheet-education.pdf">functionalities</a> for identifying differences changed files or between branches, to make temporary commits and to revert back to a certain commit in history, however this is beyond the scope of this workshop.</p></li>
+<li><p><strong>Creating a repository and setting up user authorisations</strong>: A project repository must first be set up on GitHub as either a private or a public repository. If it is not an individual project, collaborators can be added with appropriate (read or write) permission levels (<a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-user-account-settings/permission-levels-for-a-personal-account-repository">see more details</a>). It is good to elaborate the ‘Readme’ file so as to help viewers get an idea of the repository (<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">see more details</a>).</p></li>
+<li><p><strong>Push and Pull</strong>: The data and code related to a project must be cloned from the remote version to a local version before changes are made. Make sure to pull from updated (i.e.&nbsp;merged branches; see below) branches before making changes. Once changes are made the user must ‘commit’ all the correct changes. Once this is done the changed code can be pushed back to the branch.</p></li>
+<li><p><strong>Branching and merging</strong> : Git allows users to create <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches#working-with-branches">branches</a> that feed into the ‘main’ branch of a project repository on GitHub. Each branch can be created either for different tasks or for different users as per the requirement. To <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github">merge branches into ‘main’ users have to set up a pull-request</a> which needs to be approved by an authorised user.</p></li>
+<li><p>Git provides additionally <strong>many more <a href="https://education.github.com/git-cheat-sheet-education.pdf">functionalities</a></strong> for identifying differences between changed files or between branches, to make temporary commits and to revert back to a certain commit in history. However this is beyond the scope of this workshop.</p></li>
 </ul>
 </section>
 <section id="git-in-r-studio" class="level3">
@@ -210,7 +218,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p>When a Github repository is connected to an R project, R-studio adds a ‘Git’ tab (see image below) with ‘push’, ‘pull’, ‘commit’ and ‘diff’ functionalities. We can switch branches to pull from or push to and additionally trace the history of changes in the Github respository by all users.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/images/git_R_snapshot.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="assets/images/screenshot_R_studio_git.png" class="img-fluid figure-img" style="width:70.0%"></p>
 <figcaption>Git intergration into R-Studio</figcaption>
 </figure>
 </div>
@@ -219,14 +227,13 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <section id="additional-functionalities" class="level3">
 <h3 class="anchored" data-anchor-id="additional-functionalities">Additional functionalities</h3>
 <ol type="1">
-<li><p>Public Github repositories can now be archived on Zenodo as a permanent record of the work with a Digital Object Identifier (DOI) that can be cited in academic work <a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">Click to see more details</a>.</p></li>
+<li><p>Public Github repositories can now be archived on Zenodo as a permanent record of the work with a Digital Object Identifier (DOI) that can be cited in academic work (<a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">Click to see more details</a>).</p></li>
 <li><p>GitHub further provides advanced functionalities like <a href="https://docs.github.com/en/actions/about-github-actions/understanding-github-actions">GitHub Actions</a> that allows the user to automate certain processes for application development or project management.</p></li>
-<li><p>GitHub releases can be automatically published on Docker Hub or GitHub packages as part of a Continuous Integration(CI) workflow.<a href="https://docs.github.com/en/actions/use-cases-and-examples/publishing-packages/publishing-docker-images">Click here for more details</a></p></li>
+<li><p>GitHub releases can be automatically published on Docker Hub or GitHub packages as part of a Continuous Integration(CI) workflow (<a href="https://docs.github.com/en/actions/use-cases-and-examples/publishing-packages/publishing-docker-images">see more details</a>).</p></li>
 </ol>
 
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
@@ -812,7 +819,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-<script type="application/javascript" src="light-dark.js"></script>
 
 
 
