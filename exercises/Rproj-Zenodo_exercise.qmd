@@ -7,14 +7,19 @@ execute:
 
 ## RStudio Project Setup and `Zenodo` upload {#sec-Rproj_zenodo_exercise}
 
-<<<<<<< HEAD
 ### RStudio Project Setup and Best Practices
 
-This section walks you through the setup of a basic RStudio project with good practices for organizing data, scripts, and version control introduced in [Rproject section](%7B@sec-projects%7D). We‘ll also initialize `renv` to manage package dependencies, ensuring reproducibility.
+This section walks you through the setup of a basic RStudio project with good practices for organizing data, scripts, and version control introduced in [Rproject section](%7B@sec-projects%7D). We‘ll also initialize `renv` to manage package dependencies, ensuring reproducibility. Once the project is set up, we'll go through the publishing to Zenodo described in the [Zenodo workflow](%7B@sec-zenodo_workflow%7D) section.
 
-### Step 1: Create a New RStudio Project
+If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a>
 
-Start by creating a new RStudio project in the root of the `exercise_data` directory. You can name the project as you like. In this example, we will use Rice_farm_analysis.proj.
+### Step 1: Download the exercise
+-   Start by downloading the resources for the exercise: <a href="https://drive.google.com/uc?export=download&id=1V30Aa43u-OhUZ829yWZNxWAybz151MGY" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a>
+-   Unzip the downloaded file. Move the folder to a location on your computer where you can easily find it.
+
+### Step 2: Create a New RStudio Project
+
+ creating a new RStudio project in the root of the `exercise_data` directory. You can name the project as you like. In this example, we will use Rice_farm_analysis.proj.
 
 -   Open RStudio.
 -   Click on "File" \> "New Project" \> "Existing Directory".
@@ -22,7 +27,7 @@ Start by creating a new RStudio project in the root of the `exercise_data` direc
 
 This creates a `.Rproj` file in the root of your project to help manage the workspace and project-specific settings.
 
-### Step 2: Organize Your Data
+### Step 3: Organize Your Data
 
 It's good practice to organize raw and processed data in separate folders. Let’s start by organizing the data:
 
@@ -31,7 +36,7 @@ It's good practice to organize raw and processed data in separate folders. Let�
 
 This ensures that your raw data remains untouched and is well-structured.
 
-### Step 3: Organize and Split Your Scripts
+### Step 4: Organize and Split Your Scripts
 
 We'll now organize the project's scripts by splitting the original script into separate analysis and visualization scripts.
 
@@ -93,7 +98,7 @@ Now, split the script into two parts: - Create two new scripts named `01_data_an
     rice_data <- read.csv(file.path(raw_dir, "RiceFarms.csv"))
     ```
 
-### Step 4: Add Script Headers
+### Step 5: Add Script Headers
 -   Add headers to both new scripts. You can use this template:
     ```{r}
     # -----------------------------------------------
@@ -105,7 +110,7 @@ Now, split the script into two parts: - Create two new scripts named `01_data_an
     # -----------------------------------------------
     ```
 
-### Step 5: Create a Master Script
+### Step 6: Create a Master Script
 As a next step you will create a master script that ties together and runs both the data analysis and visualization scripts.
 
 -   In the root of your project, create a new file named `RiceFarm_master.R`
@@ -128,7 +133,7 @@ As a next step you will create a master script that ties together and runs both 
     ```
 Running this master script will execute both analysis and visualization steps.
 
-### Step 6: Initialize renv and Manage Dependencies
+### Step 7: Initialize renv and Manage Dependencies
 To make your project reproducible, we'll use `renv` to manage dependencies. This ensures that the project can be recreated with the same package versions.
 
 -   Run the following command in your master script to set up the project-specific environment
@@ -144,7 +149,7 @@ This creates a local library for your project and captures the required packages
     ```
 This records the project's environment in a renv.lock file, which is essential for reproducibility.
 
-### Step 7: Automate Opening the Master Script
+### Step 8: Automate Opening the Master Script
 For convenience, we can configure RStudio to automatically open the master script when the project is loaded.
 
 -   Open the `.Rprofile` file in the root of your project directory. The file might be hidden. On Windows click "View" > "Show" > "Hidden items" in the explorer and on MacOS click Press Command+Shift+Dot within the root directory to see the file.
@@ -156,7 +161,7 @@ For convenience, we can configure RStudio to automatically open the master scrip
 }, action = "append")
     ```
     
-### Step 8: Re-snapshot the Project
+### Step 9: Re-snapshot the Project
 After modifying the `.Rprofile` file, it’s important to capture these changes in the `renv.lock` file.
 
 -   Run the following command in your master script to ensure that the `rstudioapi` package (which enables automatic script opening) is included in the snapshot:
@@ -164,128 +169,8 @@ After modifying the `.Rprofile` file, it’s important to capture these changes 
     renv::snapshot()
     ```
 =======
-## Rstudio project to Zenodo exercise {#sec-Rproj_zenodo_exercise}
-The following exercise is heavily based on [@blondel2024]. We have extracted the most relevant parts to explain the workflow. If you are interested in more details, check out their user manual at: https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html.
 
-If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a>
-
-### Step 1: Download the resources
-
--   Click here to download the resources for the exercise: <a href="https://drive.google.com/uc?export=download&id=1V30Aa43u-OhUZ829yWZNxWAybz151MGY" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a>
--   Unzip the downloaded file and move the folder to a location on your computer where you can easily find it.
-
-### Step 1: Install zen4R to access Zenodo through r
-For this exercise we will not be using Zenodo directly but Zenodo Sandbox. The Zenodo Sandbox is a separate, secure testing environment where users can explore Zenodo’s features without impacting the main platform's publicly accessible data. It allows you to test file uploads, generate test DOIs, and experiment with API integrations. DOIs created in the sandbox are only for testing and use a different prefix. You will need a separate account and access token for the sandbox, distinct from those used on Zenodo’s main site.
-
--   Create an account on https://sandbox.zenodo.org.
-
-Zenodo can be accessed with r library zen4R to upload, edit, publish and download data.
-
--   Install zen4R library with the following code:
-```{r}
-#install dependency "remotes"
-install.packages("remotes")
-    
-#install zen4R
-require("remotes")
-install_github("eblondel/zen4R")
-```
-
-### Step 2: Create a new Zenodo record
-A zenodo record includes metadata, data and a  Digital Object Identifier (DOI) which is automatically generated by Zenodo for all uploads. But before you can add records to Zenodo, you need to access your own account through RStudio. 
-
--   Go to https://sandbox.zenodo.org/account/settings/applications/.
--   Log into your account and then create a new "Personal access token" in the "Applications" section of your account.
--   Then run the following code in RStudio to establish the access and create a new record.
-```{r}
-library(zen4R)
-    
-#Create manager to access your Zenodo repository
-zenodo <- ZenodoManager$new(
-token = "your_token",
-sandbox = TRUE,
-logger = "INFO" 
-)
-    
-#Create a new empty record
-myrec <- ZenodoRecord$new()
-```
-If you want to connect to Zenodo and not the Zenodo sandbox, create the token in your Zenodo account and remove the sandbox = True line in the code above.
-
-
-The types of metadata that can be included in a Zenodo record are vast. A full list can be found in the documentation at https://developers.zenodo.org/#representation. The code below gives some examples.
-```{r}
-myrec$setTitle("zen4R") #title of the record
-myrec$addAdditionalTitle("This is an alternative title", type = "alternative-title")
-myrec$setDescription("Interface to 'Zenodo' REST API") #description
-myrec$addAdditionalDescription("This is an abstract", type = "abstract")
-myrec$setPublicationDate("2024-09-16") #Format YYYY-MM-DD
-myrec$setResourceType("dataset")
-myrec$addCreator(firstname = "Yourfirstname", lastname = "Yourlastname", role = "datamanager", orcid = "0000-0001-0002-0003")
-myrec$setKeywords(c("R","dataset")) #For filtering
-myrec$addReference("Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API")
-myrec$setPublisher("CRAN") #Publisher
-```
-    
-A record can be deposited on Zenodo before it is published. This will add the record to your account without making it public yet. A deposited record can still be edited or deleted. You can also upload data to a deposited record. If you prefer a graphical interface, you can also edit the record on the Zenodo website.
-```{r}
-#deposit record
-myrec <- zenodo$depositRecord(myrec, publish = TRUE)
-
-#add data to the record, adjust the path below
-zenodo$uploadFile("path/to/your/file", record = myrec)
-
-#delete record if you want to start over
-zenodo$deleteRecord(myrec$id)
-```
-
-
-Once you are satisfied with the record, you can proceed with its publication.
-```{r}
-#publish record
-myrec <- zenodo$publishRecord(myrec$id)
-```
-    
-### Step 3: Edit a published Zenodo record
-It is also possible to edit or update the metadata of published records.
-```{r}
-#get your record by metadata query, e.g. by title
-myrec <- zenodo$getDepositions(q='title:zen4R')
-
-#get depositions creates a list, access first element
-myrec <- myrec[[1]]
-
-#edit metadata
-myrec <- zenodo$editRecord(myrec$id)
-myrec$setTitle("zen4R 2.0")
-
-#redeposit and publish the edited record
-myrec <- zenodo$depositRecord(myrec, publish = TRUE)
-```
-
-Once a record has been published, it is not possible to edit the data that has been attached to it. However, it is possible to upload an updated version of the data. The previous version of the data will remain accessible via Zenodo. The record will have one overall DOI, while each version will have its own DOI.
-```{r}
-# reconnect to your account if necessary
-zenodo <- ZenodoManager$new(
-  token = "your_token",
-  sandbox = TRUE,
-  logger = "INFO" 
-)
-
-#get your record by querying the metadata, e.g. by title, this will give you a list of all records with that title.
-myrec <- zenodo$getDepositions(q='title:zen4R 2.0')
-
-#access the first item in the list, as there should only be one record with that particular title
-myrec <- myrec[[1]]
-
-#edit data, delete_latest_files = TRUE deletes data of previous version,
-myrec <- zenodo$depositRecordVersion(myrec, delete_latest_files = TRUE, files = "path/to/your/new/file", publish = TRUE)
-```
->>>>>>> main
-
-
-
-### Step 9: Install zen4R to access `Zenodo` through r
+### Step 10: Install zen4R to access `Zenodo` through r
 
 Now that the project is set up and organized, it's time to share it with the wider research community on Zenodo. The following steps are heavily based on [@blondel2024]. We have extracted the most relevant parts to explain the workflow. If you are interested in more details, check out their user manual at: https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html.
 
@@ -305,7 +190,7 @@ For this exercise we will not be using `Zenodo` directly but `Zenodo Sandbox`. T
     install_github("eblondel/zen4R")
     ```
 
-### Step 10: Create a new `Zenodo` record
+### Step 11: Create a new `Zenodo` record
 
 A `Zenodo` record includes metadata, data and a Digital Object Identifier (DOI) which is automatically generated by `Zenodo` for all uploads. But before you can add records to `Zenodo`, you need to get access to your account through R.
 
@@ -364,7 +249,7 @@ A record can be deposited on `Zenodo` before it is published. This will add the 
     myrec <- zenodo$publishRecord(myrec$id)
     ```
 
-### Step 11: Edit a published `Zenodo` record
+### Step 12: Edit a published `Zenodo` record
 
 It is also possible to edit or update the metadata of published records.
 
