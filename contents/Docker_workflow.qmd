@@ -65,4 +65,25 @@ There are two methods of implementing this which come with their own considerati
 <!-- Presentation content -->
 
 ::: {.content-visible when-format="revealjs"}
+## Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/>
+
+![](assets/images/Docker_workflow.png){.lightbox width="70%" fig-align="center"}
+
+
+## Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/>
+
+### What is containerization?
+
+
+
+## Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/>
+
+### What is Docker?
+
+
+## Using Docker with R
+
+## Docker with `renv`
+
+
 :::

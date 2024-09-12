@@ -54,7 +54,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -232,7 +251,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p>So to create a <code>Docker Image</code> to containerize our R research projects we need to start by creating a <code>Dockerfile</code> and, as mentioned above, this should start with a base image. In our case this base image must logically include R and RStudio (if we want to utilise the RStudio Projects features).</p>
 <p>Fortunately there is a project that specifically catalogs and manages Docker Images for R projects: <a href="https://rocker-project.org/"><code>Rocker</code></a>. The images available through the Rocker project not only include different versions of R and RStudio but also images containing collections of R packages for specific purposes (e.g.&nbsp;tidyverse for data wrangling and visualisation, geospatial packages etc.).</p>
 <p>In terms of actually creating the <code>Dockerfile</code> for our R project, this can be done manually (See a good R-focused tutorial<a href="https://colinfay.me/docker-r-reproducibility/">here</a>), however there are also R packages that can help with this process such as <a href="https://thinkr-open.github.io/dockerfiler/"><code>dockerfiler</code></a> and the <code>[rrtools</code>](https://github.com/benmarwick/rrtools) package.</p>
-<p>For our <a href="@sec-docker_exercise">exercise</a> of this workflow we will use the <code>dockerfiler</code> package, which creates a custom class object that represents the Dockerfile and has slots corresponding to common elements of Docker images. This allows us to add elements to the dockerfile in a more R-like way. The following code snippet demonstrates adding <code>Maintainer</code> details to a Dockerfile object, before saving it:</p>
+<p>For our <a href="@sec-docker_exercise">exercise</a> of this workflow we will use the <code>dockerfiler</code> package, which creates a custom class object that represents the Dockerfile and has slots corresponding to common elements of Docker images. This allows us to add elements to the dockerfile in a more R-like way. The following code snippet demonstrates adding <code>Maintainer</code> details to a <code>Dockerfile</code> object, before saving it:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dockerfiler)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dockerfile template</span></span>
@@ -246,13 +265,24 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </div>
 </section>
 <section id="docker-with-renv" class="level3">
-<h3 class="anchored" data-anchor-id="docker-with-renv">Docker with renv</h3>
+<h3 class="anchored" data-anchor-id="docker-with-renv">Docker with <code>renv</code></h3>
+<p>Docker can be used with the <code>renv</code> package to <a href="@sec-environment-management">manage the package environment of your project</a>.</p>
+<p>There are two methods of implementing this which come with their own considerations:</p>
+<ol type="1">
+<li><strong>Use <code>renv</code> to install packages when the Docker image is built</strong>: This approach is useful if yo plan to have have multiple projects with <strong>identical package requirements</strong>. This because by creating an image containing this package library you can simply re-use the image as a base for new images for different projects <span class="citation" data-cites="ushey2024">[<a href="#ref-ushey2024" role="doc-biblioref">1</a>]</span>.<strong>Warning:</strong> Restoring the package library (<code>renv::restore()</code>) when building the image will be slow if there are large numbers of packages so try to avoid the need to re-build the base image many times.</li>
+<li><strong>Use <code>renv</code> to install/restore packages only when Docker containers are run</strong>: This approach is better when you plan to have multiple projects that are built from the same base image but require <strong>different package requirements</strong>. Hence it is preferable to not included the package library in the image but instead to mount different project specific libraries to the container when it is run <span class="citation" data-cites="ushey2024">[<a href="#ref-ushey2024" role="doc-biblioref">1</a>]</span>. If project libraries are dynamically provisioned in this way and <code>renv::restore()</code> is run with caching this means that the packages are not re-installed everytime the container is run.</li>
+</ol>
 <!-- Presentation content -->
+
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-ushey2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Ushey K, Wickham H (2024) <a href="https://rstudio.github.io/renv/articles/docker.html">Using renv with docker</a></div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -831,7 +861,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":false,"selector":".lightbox","closeEffect":"zoom"});
+<script type="application/javascript" src="light-dark.js"></script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

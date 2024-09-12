@@ -17,9 +17,6 @@ execute:
   echo: true
   eval: false
   error: false
-include-after-body:
-  text: |
-    <script type="application/javascript" src="light-dark.js"></script>
 ---
 
 ![](assets/images/graphical_abstract_dark.png){width="70%" fig-align="center"}
@@ -45,11 +42,11 @@ This image highlights some the key concepts we will discuss in the workshop, whi
 
 For this workshop we will outline three different workflows for creating reproducible research projects with R combined with other tools. We have named these workflows as follows:
 
-1.  [<img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"/> to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline](#sec-zenodo_workflow)
+1.  [<img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"/> to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline](@sec-zenodo_workflow)
 
-2.  [Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/>](#sec-docker_workflow)
+2.  [Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/>](@sec-docker_workflow)
 
-3.  [Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"/>](#sec-git_workflow)
+3.  [Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"/>](@sec-git_workflow)
 
 These workflows are inter-related in the sense that 2. and 3. build upon elements of the first and indeed the techniques of the latter workflows can also be combined together. The workflows differ in the level of reproducibility they ensure but the trade-off for better reproducibility is increased complexity. As such we would suggest that the most reproducible workflow may not always be the most appropriate to implement dependent on the needs of your research project and the capabilities of the collaborators involved.
 
@@ -57,15 +54,15 @@ These workflows are inter-related in the sense that 2. and 3. build upon element
 
 Of course, these workflows are by no-means the only way of doing things and indeed we would actively encourage you to expand upon them in developing your own preferred approach.
 
-## <img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1.5em;"/> project to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline {#sec-zenodo_workflow}
+## <img src="assets/images/Rstudio.dark.svg" style="vertical-align:middle; height:1.5em;"/> project to <img src="assets/images/Zenodo.light.svg" style="vertical-align:0%; height:0.85em;"/> pipeline {#sec-zenodo_workflow}
 
 {{< include contents/Zenodo_workflow.qmd >}}
 
-## Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/> {#sec-docker_workflow}
+## Containerization with <img src="assets/images/Docker.light.svg" style="vertical-align:0%; height:1.25em;"/> {#sec-docker_workflow}
 
 {{< include contents/Docker_workflow.qmd >}}
 
-## Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"/> {#sec-git_workflow}
+## Version control with <img src="assets/images/Github.dark.svg" style="vertical-align:0%; height:0.75em;"/> {#sec-git_workflow}
 
 {{< include contents/Git_workflow.qmd >}}
 

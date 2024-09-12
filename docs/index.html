@@ -239,9 +239,9 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
   </ul></li>
   <li><a href="#sec-workflows" id="toc-sec-workflows" class="nav-link" data-scroll-target="#sec-workflows"><span class="header-section-number">3</span> Workflows for Reproducibility</a>
   <ul class="collapse">
-  <li><a href="#sec-zenodo_workflow" id="toc-sec-zenodo_workflow" class="nav-link" data-scroll-target="#sec-zenodo_workflow"><img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1.5em;"> project to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"> pipeline</a></li>
-  <li><a href="#sec-docker_workflow" id="toc-sec-docker_workflow" class="nav-link" data-scroll-target="#sec-docker_workflow">Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"></a></li>
-  <li><a href="#sec-git_workflow" id="toc-sec-git_workflow" class="nav-link" data-scroll-target="#sec-git_workflow">Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"></a></li>
+  <li><a href="#sec-zenodo_workflow" id="toc-sec-zenodo_workflow" class="nav-link" data-scroll-target="#sec-zenodo_workflow"><img src="assets/images/Rstudio.dark.svg" style="vertical-align:middle; height:1.5em;"> project to <img src="assets/images/Zenodo.light.svg" style="vertical-align:0%; height:0.85em;"> pipeline</a></li>
+  <li><a href="#sec-docker_workflow" id="toc-sec-docker_workflow" class="nav-link" data-scroll-target="#sec-docker_workflow">Containerization with <img src="assets/images/Docker.light.svg" style="vertical-align:0%; height:1.25em;"></a></li>
+  <li><a href="#sec-git_workflow" id="toc-sec-git_workflow" class="nav-link" data-scroll-target="#sec-git_workflow">Version control with <img src="assets/images/Github.dark.svg" style="vertical-align:0%; height:0.75em;"></a></li>
   </ul></li>
   <li><a href="#sec-Quarto" id="toc-sec-Quarto" class="nav-link" data-scroll-target="#sec-Quarto"><span class="header-section-number">4</span> Quarto</a>
   <ul class="collapse">
@@ -741,15 +741,15 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <h1 data-number="3"><span class="header-section-number">3</span> Workflows for Reproducibility</h1>
 <p>For this workshop we will outline three different workflows for creating reproducible research projects with R combined with other tools. We have named these workflows as follows:</p>
 <ol type="1">
-<li><p><a href="#sec-zenodo_workflow"><img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"> to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"> pipeline</a></p></li>
-<li><p><a href="#sec-docker_workflow">Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"></a></p></li>
-<li><p><a href="#sec-git_workflow">Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"></a></p></li>
+<li><p><a href="@sec-zenodo_workflow"><img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"> to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"> pipeline</a></p></li>
+<li><p><a href="@sec-docker_workflow">Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"></a></p></li>
+<li><p><a href="@sec-git_workflow">Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"></a></p></li>
 </ol>
 <p>These workflows are inter-related in the sense that 2. and 3. build upon elements of the first and indeed the techniques of the latter workflows can also be combined together. The workflows differ in the level of reproducibility they ensure but the trade-off for better reproducibility is increased complexity. As such we would suggest that the most reproducible workflow may not always be the most appropriate to implement dependent on the needs of your research project and the capabilities of the collaborators involved.</p>
 <p>** TO DO?: Add a table to compare the workflows **</p>
 <p>Of course, these workflows are by no-means the only way of doing things and indeed we would actively encourage you to expand upon them in developing your own preferred approach.</p>
 <section id="sec-zenodo_workflow" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="sec-zenodo_workflow"><img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1.5em;"> project to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"> pipeline</h2>
+<h2 class="anchored" data-anchor-id="sec-zenodo_workflow"><img src="assets/images/Rstudio.dark.svg" style="vertical-align:middle; height:1.5em;"> project to <img src="assets/images/Zenodo.light.svg" style="vertical-align:0%; height:0.85em;"> pipeline</h2>
 <!-- Web content -->
 <p>The graphic below shows the main steps of this workflow. It starts by developing your research project as an Rstudio project following the <a href="@sec-Rprojects">good practice project guidelines</a> we have discussed. Then, it uses the <code>renv</code> package to manage the project environment so that others can re-create it. Finally, the code, data and environment are uploaded to the open-access repository Zenodo, which provides a DOI for your work, ensuring long-term accessibility and reproducibility.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -800,7 +800,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </section>
 </section>
 <section id="sec-docker_workflow" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="sec-docker_workflow">Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"></h2>
+<h2 class="anchored" data-anchor-id="sec-docker_workflow">Containerization with <img src="assets/images/Docker.light.svg" style="vertical-align:0%; height:1.25em;"></h2>
 <!-- Web content -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -854,7 +854,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </div></div></section>
 </section>
 <section id="sec-git_workflow" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="sec-git_workflow">Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"></h2>
+<h2 class="anchored" data-anchor-id="sec-git_workflow">Version control with <img src="assets/images/Github.dark.svg" style="vertical-align:0%; height:0.75em;"></h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="assets/images/version_control_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="assets/images/version_control_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
@@ -2225,7 +2225,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
