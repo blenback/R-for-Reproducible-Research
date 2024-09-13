@@ -7,22 +7,26 @@ execute:
 
 ## R and Git
 
+{{< iconify fluent-mdl2:blog>}}
 https://rstudio.github.io/renv/articles/renv.html
 
 
 
 ## Quarto
-
+{{< iconify ph:video>}}
 https://youtu.be/w3X76e_tZr8?si=bE4OfrNm-wLaeBlk
 
+{{< iconify ph:video>}}
 https://youtu.be/EbAAmrB0luA?si=yUXEup4qpRXCDh5k
 
+{{< iconify fluent-mdl2:blog>}}
 https://www.marvinschmitt.com/blog/website-tutorial-quarto/
 
+{{< iconify fluent-mdl2:blog>}}
 https://marioangst.com/en/blog/posts/multi-language-quarto/
 
 
 
 ## Zenodo
-
+{{< iconify fluent-mdl2:live-site>}}
 https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html
