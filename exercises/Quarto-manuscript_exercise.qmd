@@ -1,4 +1,10 @@
+---
+execute:
+  echo: true
+  eval: false
+  error: false
+---
 
-## Write a paper with Quarto
+## Write a paper with Quarto{#sec-Quarto_exercise}
 
 Because Quarto is bundled with Rstudio if you have a recent version of Rstudio you may already have Quarto installed. If not, you can install Quarto from CRAN with the following command:

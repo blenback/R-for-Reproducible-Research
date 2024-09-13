@@ -57,9 +57,8 @@ Docker can be used with the `renv` package to [manage the package environment of
 There are two methods of implementing this which come with their own considerations:
 
 1.  **Use `renv` to install packages when the Docker image is built**: This approach is useful if yo plan to have have multiple projects with **identical package requirements**. This because by creating an image containing this package library you can simply re-use the image as a base for new images for different projects [@ushey2024].**Warning:** Restoring the package library (`renv::restore()`) when building the image will be slow if there are large numbers of packages so try to avoid the need to re-build the base image many times.
+
 2.  **Use `renv` to install/restore packages only when Docker containers are run**: This approach is better when you plan to have multiple projects that are built from the same base image but require **different package requirements**. Hence it is preferable to not included the package library in the image but instead to mount different project specific libraries to the container when it is run [@ushey2024]. If project libraries are dynamically provisioned in this way and `renv::restore()` is run with caching this means that the packages are not re-installed everytime the container is run.
-
-
 :::
 
 <!-- Presentation content -->
@@ -69,21 +68,15 @@ There are two methods of implementing this which come with their own considerati
 
 ![](assets/images/Docker_workflow.png){.lightbox width="70%" fig-align="center"}
 
-
 ## Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/>
 
 ### What is containerization?
-
-
 
 ## Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/>
 
 ### What is Docker?
 
-
 ## Using Docker with R
 
 ## Docker with `renv`
-
-
 :::

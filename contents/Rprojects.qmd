@@ -175,7 +175,7 @@ To navigate between code sections:
 
 -   Use the document outline pane in the top right corner of the source pane
 
-![](assets/images/code_section_documentpane.dark.png){fig-align="center"}
+![](assets/images/code_section_documentpane.light.png){fig-align="center"}
 
 ### Automating the styling of your code
 
@@ -186,7 +186,7 @@ There are two R packages that are very helpful in terms of ensuring your code co
 
 To use lintr and styler you call their functions like any package but styler can also be used through the **Rstudio Addins** menu below the Navigation bar as shown in this gif:
 
-<img src="https://raw.githubusercontent.com/lorenzwalthert/some_raw_data/master/styler_0.1.gif" width="50%"/>
+![](https://raw.githubusercontent.com/lorenzwalthert/some_raw_data/master/styler_0.1.gif){fig-align="center" width="70%"}
 
 Another very useful feature of both packages is that they can be used as part of a continuous integration (CI) workflow using a version control application like Git. This is a topic that we will cover as part of our [Version control with Git](@sec-git_workflow) workflow but what it means is that the styler and lintr functions are run automatically when you push your code to a remote repository.
 

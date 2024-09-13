@@ -13,10 +13,6 @@ format:
 citation-location: margin
 lightbox: true
 fig-align: center
-execute:
-  echo: true
-  eval: false
-  error: false
 ---
 
 ![](assets/images/graphical_abstract_dark.png){width="70%" fig-align="center"}
@@ -24,10 +20,15 @@ execute:
 This image highlights some the key concepts we will discuss in the workshop, which have been divided into seperate sections:
 
 1.  [Background](@sec-background): Some introductory information on why reproducible and transparent research is important.
+
 2.  [Research projects with R](@sec-Rprojects): Starting from the basics to develop good practice for creating research projects with R, focusing on some features of Rstudio as an Integrated Development Environment that can help ensure your work is reproducible.
+
 3.  [Workflows for reproducibility](@sec-workflows): Here we present three workflows of differing levels of complexity and discusses how they can be combined and which might be best given the research needs.
+
 4.  [Quarto](@sec-Quarto): Here we introduce the open-source scientific and technical publishing system Quarto which can be used for numerous academic activities including preparing manuscripts.
+
 5.  [Guided exercises](@sec-exercises): Now it's time to get hands-on with some guided exercises to put into practice some of the concepts we have discussed.
+
 6.  [Resources](@sec-resources): A collection of resources that we find particularly helpful in our own journey towards reproducible research.
 
 # Background {#sec-background}
@@ -84,7 +85,4 @@ Now it's time to get hands on with some guided exercises that will let you put i
 
 # Resources {#sec-resources}
 
-::: {#refs}
-:::
-
-<!--{{< include contents/resources.qmd >}}-->
+{{< include contents/Resources.qmd >}}

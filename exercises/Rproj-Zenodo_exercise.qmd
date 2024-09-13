@@ -5,7 +5,7 @@ execute:
   error: false
 ---
 
-## Create an RStudio Project and upload to Zenodo {#sec-Rproj_zenodo_exercise}
+## RStudio Project to Zenodo exercise {#sec-Rproj_zenodo_exercise}
 
 In this exercise you will first setup a basic RStudio project following the good practices introduced in the [Research projects with R](@sec-Rprojects) section. As part of this We will initialize `renv` to manage package dependencies, ensuring reproducibility. After this you will upload the project to Zenodo so that it can be shared with others.
 

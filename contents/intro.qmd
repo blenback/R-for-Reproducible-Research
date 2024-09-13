@@ -1,7 +1,8 @@
 ---
-editor: 
-  markdown: 
-    wrap: 72
+execute:
+  echo: true
+  eval: false
+  error: false
 ---
 
 <!-- Web content -->
