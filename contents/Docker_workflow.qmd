@@ -8,13 +8,14 @@ execute:
 <!-- Web content -->
 
 ::: {.content-hidden when-format="revealjs"}
-![](assets/images/Docker_workflow.png){.lightbox width="70%" fig-align="center"}
+![](assets/images/Docker_workflow.png){.lightbox width="90%" fig-align="center"}
 
-**The title of this workflow raises two questions, the first being: what is containerization?**
+**The title of this workflow raises two questions, the first being: what is containerization? and the second: what is Docker?**
+### Containerisation
 
 Simply put containerization is the process of bundling code along with all of it's dependencies, i.e. all the components we discussed as making up the [environment](@sec-environment-management), including the operating system, software libraries (packages), and other system software. The fact everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service. This also makes containerization something of a gold standard for reproducibility as the entire environment is explicitly re-produced.
 
-**and the second: what is Docker?**
+### Docker
 
 [Docker](https://www.docker.com/) is an open-source, and the most popular, platform for containerization. Before we dive into a practical example using Docker for research projects with R it is important to introduce some three key terms that we will come across:
 
@@ -24,9 +25,7 @@ Simply put containerization is the process of bundling code along with all of it
 
 -   `Docker Container`: Is an actual running instance of a Docker image. It runs completely isolated from the host environment by default and only accesses host files (i.e. data) if it has been configured to do so. It is possible to create multiple containers simultaneously from the same Docker Image, and each container can be started, stopped, moved, and deleted independently of the others.
 
-The graphic below show the relationships between these components including the central commands of Docker that connect them `build` and `run`:
-
-![](assets/images/docker_explainer.png){.lightbox width="70%" fig-align="center"}
+The graphic above shows the relationships between these components including the central commands of Docker that connect them `build` and `run`.
 
 ### Using Docker with R
 

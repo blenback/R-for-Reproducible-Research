@@ -829,24 +829,21 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <!-- Web content -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/Docker_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="assets/images/Docker_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+<p><a href="assets/images/Docker_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="assets/images/Docker_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div>
-<p><strong>The title of this workflow raises two questions, the first being: what is containerization?</strong></p>
+<p><strong>The title of this workflow raises two questions, the first being: what is containerization? and the second: what is Docker?</strong> ### Containerisation</p>
 <p>Simply put containerization is the process of bundling code along with all of it’s dependencies, i.e.&nbsp;all the components we discussed as making up the <a href="@sec-environment-management">environment</a>, including the operating system, software libraries (packages), and other system software. The fact everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service. This also makes containerization something of a gold standard for reproducibility as the entire environment is explicitly re-produced.</p>
-<p><strong>and the second: what is Docker?</strong></p>
+<section id="docker" class="level3">
+<h3 class="anchored" data-anchor-id="docker">Docker</h3>
 <p><a href="https://www.docker.com/">Docker</a> is an open-source, and the most popular, platform for containerization. Before we dive into a practical example using Docker for research projects with R it is important to introduce some three key terms that we will come across:</p>
 <ul>
 <li><p><code>Dockerfile</code>: The first step in the containerization process, they are a straightforward text file containing a collection of commands or procedures to create a new Docker Image. In this sense we can consider a Dockerfile are the source code of Docker Image. Importantly, Dockerfiles typically start from a base image, which is a existing Docker Image that your image is extending.</p></li>
 <li><p><code>Docker Image</code>: A read-only file that contains the instructions for creating a Docker Container. Think of an image as the blueprint of what will be in a container when it is running. Docker Images can be shared via <a href="https://hub.docker.com/">Dockerhub</a>, so that they can be used by others.</p></li>
 <li><p><code>Docker Container</code>: Is an actual running instance of a Docker image. It runs completely isolated from the host environment by default and only accesses host files (i.e.&nbsp;data) if it has been configured to do so. It is possible to create multiple containers simultaneously from the same Docker Image, and each container can be started, stopped, moved, and deleted independently of the others.</p></li>
 </ul>
-<p>The graphic below show the relationships between these components including the central commands of Docker that connect them <code>build</code> and <code>run</code>:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/images/docker_explainer.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="assets/images/docker_explainer.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
-</figure>
-</div>
+<p>The graphic above shows the relationships between these components including the central commands of Docker that connect them <code>build</code> and <code>run</code>.</p>
+</section>
 <section id="using-docker-with-r" class="level3">
 <h3 class="anchored" data-anchor-id="using-docker-with-r">Using Docker with R</h3>
 <p>So to create a <code>Docker Image</code> to containerize our R research projects we need to start by creating a <code>Dockerfile</code> and, as mentioned above, this should start with a base image. In our case this base image must logically include R and RStudio (if we want to utilise the RStudio Projects features).</p>
@@ -882,7 +879,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="sec-git_workflow">Version control with <img src="assets/images/Github.dark.svg" style="vertical-align:0%; height:0.75em;"></h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/version_control_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="assets/images/version_control_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+<p><a href="assets/images/version_control_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="assets/images/version_control_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
 <p><strong>Version control</strong> software output can have multiple uses including creating a systematic procedure for collaboration, working as a team along with increasing the ease of reproduction of the work by other users or by the original researcher as well. We all know the difficulty of tracing back the workflow of work projects a few months down the line after having shelved it, and it is here that Git and Github can be highly useful (<span class="citation" data-cites="Alexander2023">[<a href="#ref-Alexander2023" role="doc-biblioref">21</a>]</span>).</p>
@@ -914,7 +911,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/screenshot_R_studio_git.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Git intergration into R-Studio"><img src="assets/images/screenshot_R_studio_git.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Git intergration into R-Studio"></a></p>
+<p><a href="assets/images/screenshot_R_studio_git.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Git intergration into R-Studio"><img src="assets/images/screenshot_R_studio_git.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Git intergration into R-Studio"></a></p>
 </figure>
 </div>
 <figcaption>Git intergration into R-Studio</figcaption>
@@ -942,7 +939,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </div><div class="column" style="width:30%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/quarto_diamond_logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="assets/images/quarto_diamond_logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+<p><a href="assets/images/quarto_diamond_logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="assets/images/quarto_diamond_logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
 </div>
@@ -990,7 +987,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/Personal_website.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Researchers personal website"><img src="assets/images/Personal_website.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Researchers personal website"></a></p>
+<p><a href="assets/images/Personal_website.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="Researchers personal website"><img src="assets/images/Personal_website.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Researchers personal website"></a></p>
 </figure>
 </div>
 <figcaption>Researchers personal website</figcaption>
@@ -1003,7 +1000,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/NASCENT_website.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="NASCENT-Peru website"><img src="assets/images/NASCENT_website.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="NASCENT-Peru website"></a></p>
+<p><a href="assets/images/NASCENT_website.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="NASCENT-Peru website"><img src="assets/images/NASCENT_website.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="NASCENT-Peru website"></a></p>
 </figure>
 </div>
 <figcaption>NASCENT-Peru website</figcaption>
@@ -1111,8 +1108,8 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"border-color"</span> <span class="ot">=</span> <span class="st">"rgba(0,0,0,0.5)"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-e1cbefe90dc8223b387b" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-e1cbefe90dc8223b387b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"zoomControl":false,"attributionControl":false},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addAwesomeMarkers","args":[-12.038,-77.04300000000001,{"icon":"home","markerColor":"darkgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Lima, National Workshop 9th May",null,null,null,"Lima, National Workshop, 9th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-12.594,-69.18899999999999,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Puerto Maldonado, Regional Workshop",null,null,null,"Puerto Maldonado Regional Workshop 28th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-9.526,-77.529,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Huaraz, Regional Workshop",null,null,null,"Huaraz, Regional Workshop 4th June",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-6.485,-76.37,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Tarapoto, Regional Workshop",null,null,null,"Tarapoto, Regional Workshop 10th June",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-5.19449,-80.63282,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Piura, Regional Workshop",null,null,null,"Piura, Regional Workshop 20th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]}],"limits":{"lat":[-12.594,-5.19449],"lng":[-80.63282,-69.18899999999999]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-6bd84a333087bf8a4735" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-6bd84a333087bf8a4735">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"zoomControl":false,"attributionControl":false},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addAwesomeMarkers","args":[-12.038,-77.04300000000001,{"icon":"home","markerColor":"darkgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Lima, National Workshop 9th May",null,null,null,"Lima, National Workshop, 9th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-12.594,-69.18899999999999,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Puerto Maldonado, Regional Workshop",null,null,null,"Puerto Maldonado Regional Workshop 28th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-9.526,-77.529,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Huaraz, Regional Workshop",null,null,null,"Huaraz, Regional Workshop 4th June",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-6.485,-76.37,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Tarapoto, Regional Workshop",null,null,null,"Tarapoto, Regional Workshop 10th June",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-5.19449,-80.63282,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Piura, Regional Workshop",null,null,null,"Piura, Regional Workshop 20th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]}],"limits":{"lat":[-12.594,-5.19449],"lng":[-80.63282,-69.18899999999999]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <!-- Presentation content -->
@@ -1458,7 +1455,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/Docker_running_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Docker Engine status in app"><img src="assets/images/Docker_running_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker Engine status in app"></a></p>
+<p><a href="assets/images/Docker_running_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Docker Engine status in app"><img src="assets/images/Docker_running_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker Engine status in app"></a></p>
 </figure>
 </div>
 <figcaption>Docker Engine status in app</figcaption>
@@ -1469,7 +1466,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_running_desktop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Docker Engine status in system try"><img src="./assets/images/Docker_running_desktop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker Engine status in system try"></a></p>
+<p><a href="./assets/images/Docker_running_desktop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Docker Engine status in system try"><img src="./assets/images/Docker_running_desktop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker Engine status in system try"></a></p>
 </figure>
 </div>
 <figcaption>Docker Engine status in system try</figcaption>
@@ -1546,7 +1543,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_terminal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Rstudio terminal"><img src="./assets/images/Docker_terminal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Rstudio terminal"></a></p>
+<p><a href="./assets/images/Docker_terminal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Rstudio terminal"><img src="./assets/images/Docker_terminal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Rstudio terminal"></a></p>
 </figure>
 </div>
 <figcaption>Rstudio terminal</figcaption>
@@ -1560,7 +1557,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_build_output.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30" title="Docker build output in terminal"><img src="./assets/images/Docker_build_output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker build output in terminal"></a></p>
+<p><a href="./assets/images/Docker_build_output.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Docker build output in terminal"><img src="./assets/images/Docker_build_output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker build output in terminal"></a></p>
 </figure>
 </div>
 <figcaption>Docker build output in terminal</figcaption>
@@ -1574,7 +1571,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_build_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="Docker build output in app"><img src="./assets/images/Docker_build_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker build output in app"></a></p>
+<p><a href="./assets/images/Docker_build_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30" title="Docker build output in app"><img src="./assets/images/Docker_build_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker build output in app"></a></p>
 </figure>
 </div>
 <figcaption>Docker build output in app</figcaption>
@@ -1592,7 +1589,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_image_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32" title="Docker images in app"><img src="./assets/images/Docker_image_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker images in app"></a></p>
+<p><a href="./assets/images/Docker_image_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="Docker images in app"><img src="./assets/images/Docker_image_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker images in app"></a></p>
 </figure>
 </div>
 <figcaption>Docker images in app</figcaption>
@@ -1605,7 +1602,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_container_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33" title="Docker containers in app"><img src="./assets/images/Docker_container_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker containers in app"></a></p>
+<p><a href="./assets/images/Docker_container_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32" title="Docker containers in app"><img src="./assets/images/Docker_container_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker containers in app"></a></p>
 </figure>
 </div>
 <figcaption>Docker containers in app</figcaption>
@@ -1622,7 +1619,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_container_ID.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34" title="Docker container ID in terminal"><img src="./assets/images/Docker_container_ID.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker container ID in terminal"></a></p>
+<p><a href="./assets/images/Docker_container_ID.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33" title="Docker container ID in terminal"><img src="./assets/images/Docker_container_ID.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker container ID in terminal"></a></p>
 </figure>
 </div>
 <figcaption>Docker container ID in terminal</figcaption>
@@ -1635,7 +1632,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_copy_output.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35" title="Docker copy output in terminal"><img src="./assets/images/Docker_copy_output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker copy output in terminal"></a></p>
+<p><a href="./assets/images/Docker_copy_output.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34" title="Docker copy output in terminal"><img src="./assets/images/Docker_copy_output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker copy output in terminal"></a></p>
 </figure>
 </div>
 <figcaption>Docker copy output in terminal</figcaption>
@@ -1673,7 +1670,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/git_ex1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36" title="Setting up the repository"><img src="./assets/images/git_ex1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Setting up the repository"></a></p>
+<p><a href="./assets/images/git_ex1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35" title="Setting up the repository"><img src="./assets/images/git_ex1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Setting up the repository"></a></p>
 </figure>
 </div>
 <figcaption>Setting up the repository</figcaption>
@@ -1693,7 +1690,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/git_ex2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37" title="Linking repository to R-Studio"><img src="./assets/images/git_ex2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Linking repository to R-Studio"></a></p>
+<p><a href="./assets/images/git_ex2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36" title="Linking repository to R-Studio"><img src="./assets/images/git_ex2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Linking repository to R-Studio"></a></p>
 </figure>
 </div>
 <figcaption>Linking repository to R-Studio</figcaption>
@@ -1704,7 +1701,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/git_ex3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38" title="R-Studio new project session with git link"><img src="./assets/images/git_ex3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="R-Studio new project session with git link"></a></p>
+<p><a href="./assets/images/git_ex3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37" title="R-Studio new project session with git link"><img src="./assets/images/git_ex3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="R-Studio new project session with git link"></a></p>
 </figure>
 </div>
 <figcaption>R-Studio new project session with git link</figcaption>
@@ -1728,7 +1725,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/git_ex5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39" title="Edit README.md"><img src="./assets/images/git_ex5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Edit README.md"></a></p>
+<p><a href="./assets/images/git_ex5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38" title="Edit README.md"><img src="./assets/images/git_ex5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Edit README.md"></a></p>
 </figure>
 </div>
 <figcaption>Edit README.md</figcaption>
@@ -1746,7 +1743,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/git_ex6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40" title="Editing the .gitignore file"><img src="./assets/images/git_ex6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Editing the .gitignore file"></a></p>
+<p><a href="./assets/images/git_ex6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39" title="Editing the .gitignore file"><img src="./assets/images/git_ex6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Editing the .gitignore file"></a></p>
 </figure>
 </div>
 <figcaption>Editing the .gitignore file</figcaption>
@@ -1766,7 +1763,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/git_ex7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41" title="Commit changes"><img src="./assets/images/git_ex7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Commit changes"></a></p>
+<p><a href="./assets/images/git_ex7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40" title="Commit changes"><img src="./assets/images/git_ex7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Commit changes"></a></p>
 </figure>
 </div>
 <figcaption>Commit changes</figcaption>
@@ -2379,7 +2376,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

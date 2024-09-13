@@ -25,6 +25,7 @@ As you move through these you will see that there are areas of overlap and compl
 How many times have you opened an R script and been greeted by this line:
 
 ```{r}
+#| eval: false
 setwd("C:/Users/ben/path/that/only/I/have")
 ```
 
@@ -59,6 +60,7 @@ Another useful feature of Rstudio projects is the ability to store project-speci
 To do this the contents of your `.Rprofile` file would like this:
 
 ```{r}
+#| eval: false
 setHook("rstudio.sessionInit", function(newSession) {
   if (newSession)
     # Open the script specificed by the path
@@ -69,6 +71,7 @@ setHook("rstudio.sessionInit", function(newSession) {
 The easiest way to create and edit `.Rprofile` files is to use the functions from the package [`usethis`](https://usethis.r-lib.org/):
 
 ```{r}
+#| eval: false
 # Note the use of scope = "project" to create a project specific .Rprofile
 usethis::edit_r_profile(scope = "project")
 ```
@@ -78,6 +81,7 @@ usethis::edit_r_profile(scope = "project")
 These lines of code are also probably familiar from the beginning of many an R script:
 
 ```{r}
+#| eval: false
 install.packages("ggplot2")
 library(ggplot2)
 ```
@@ -156,7 +160,6 @@ As you may already know braced (`{}`) sections of code (i.e. function definition
 However, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis ([discussed in more detail later](@sec-workflow-decomposition)). In this regard, another good tip is to give the resulting sections sequential alphabetical or numerical Pre-fixes. Code sections are created by inserting a comment line that contains at least four trailing dashes (`-`), equal signs (`=`), or pound signs (`#`):
 
 ```{r}
-#| echo: true
 
 # Section One ---------------------------------
  
@@ -203,7 +206,7 @@ A good 1st step to remedying this is to give your scripts sequential numeric tag
 But you can take this to the next level by creating a *Master* script that sources your other scripts in sequence (think of them as *sub-scripts*) so that users of your code need only run one script. To do this is as simple as creating the master script as you would any normal R script (*File \> New File \> R script*) and then using the `base::source()` function to run the sub-scripts:
 
 ```{r}
-
+#| eval: false
 #############################################################################
 ## Master_script: Run steps of research project in order
 ##
@@ -250,6 +253,7 @@ Similar to having clean code, having a clean project directory that has well-org
 As an example my go-to project directory structure looks like this:
 
 ```{r}
+#| eval: false
 └── my_project
     ├── data # The research data
     │   ├── raw
@@ -311,6 +315,7 @@ Again there is not a single standardised format for what should be included in y
 You will see that one of the things this README includes is a tree diagram which shows the directory structure of the project right down to the file level. This is a useful way to give an overview of what users should find included in the project and then explanatory notes can be added to explain the purpose of each file or directory. Such a diagram can be easily generated using the `fs` package:
 
 ```{r}
+#| eval: false
 install.packages("fs")
 library(fs)
 
@@ -350,6 +355,8 @@ capture.output(dir_tree(Target_dir), file= 'Dir_tree_output.txt')
 Recognise this?
 
 ```{r}
+#| eval: false
+#| echo: true
 setwd("C:/Users/ben/path/that/only/I/have")
 ```
 
@@ -414,6 +421,8 @@ Outside of R by double clicking on the `.Rproj` file in the folder.
 -   File is run every time the project is opened, can be used to perform actions such as opening a particular script:
 
 ```{r}
+#| eval: false
+#| echo: true
 setHook("rstudio.sessionInit", function(newSession) {
   if (newSession)
     # Open the script specificed by the path
@@ -428,6 +437,8 @@ setHook("rstudio.sessionInit", function(newSession) {
 The easiest way to create and edit `.Rprofile` files is to use the functions from the package [`usethis`](https://usethis.r-lib.org/):
 
 ```{r}
+#| eval: false
+#| echo: true
 # Note the use of scope = "project" to create a project specific .Rprofile
 usethis::edit_r_profile(scope = "project")
 ```
@@ -437,6 +448,8 @@ usethis::edit_r_profile(scope = "project")
 Familiar lines from the beginning of many an R script:
 
 ```{r}
+#| eval: false
+#| echo: true
 install.packages("ggplot2")
 library(ggplot2)
 ```
@@ -642,7 +655,6 @@ To use a code snippet simply start typing the keyword in the script and the auto
 -   Code sections are created by inserting a comment line that contains at least four trailing dashes (`-`), equal signs (`=`), or pound signs (`#`):
 
 ```{r}
-#| echo: true
 
 # Section One ---------------------------------
  
@@ -699,7 +711,8 @@ To navigate between code sections:
 -   To do this create the master script as you would any normal R script (*File \> New File \> R script*) and then use the `base::source()` function to run the sub-scripts:
 
 ```{r}
-
+#| eval: false
+#| echo: true
 #############################################################################
 ## Master_script: Run steps of research project in order
 #############################################################################
@@ -740,6 +753,8 @@ The benefit of this hierarchical approach to structuring is that it is not only 
 As an example my go-to project directory structure looks like this:
 
 ```{r}
+#| eval: false
+#| echo: true
 └── my_project
     ├── data # The research data
     │   ├── raw
@@ -856,6 +871,8 @@ These files are often accompanied by the corresponding file `README.Rmd` which g
 - Useful to include a tree diagram of the project directory structure down to the file level: 
 
 ```{r}{.smaller}
+#| eval: false
+#| echo: true
 ├── Data
 │   ├── Processed
 │   │   └── RiceFarms_summary.csv
@@ -879,6 +896,8 @@ You will see that one of the things this README includes is a tree diagram which
 
 - Such a diagram can be easily generated using the `fs` package:
 ```{r}
+#| eval: false
+#| echo: true
 install.packages("fs")
 library(fs)
 
