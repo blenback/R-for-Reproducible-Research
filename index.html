@@ -218,17 +218,6 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
         <div id="quarto-search" class="" title="Search"></div>
         </div>
         </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./presentation.html" class="sidebar-item-text sidebar-link"><i class="bi bi-file-earmark-easel" role="img">
-</i> 
- <span class="menu-text">View in presentation format</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
@@ -263,7 +252,6 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
   <li><a href="#version-control-with-git-exercise" id="toc-version-control-with-git-exercise" class="nav-link" data-scroll-target="#version-control-with-git-exercise">Version control with Git exercise</a></li>
   <li><a href="#sec-Quarto_exercise" id="toc-sec-Quarto_exercise" class="nav-link" data-scroll-target="#sec-Quarto_exercise">Write a paper with Quarto</a></li>
   </ul></li>
-  <li><a href="#sec-resources" id="toc-sec-resources" class="nav-link" data-scroll-target="#sec-resources"><span class="header-section-number">6</span> Resources</a></li>
   </ul>
 </nav>
 </nav>
@@ -306,8 +294,8 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li><p><a href="@sec-workflows">Workflows for reproducibility</a>: Here we present three workflows of differing levels of complexity and discusses how they can be combined and which might be best given the research needs.</p></li>
 <li><p><a href="@sec-Quarto">Quarto</a>: Here we introduce the open-source scientific and technical publishing system Quarto which can be used for numerous academic activities including preparing manuscripts.</p></li>
 <li><p><a href="@sec-exercises">Guided exercises</a>: Now it’s time to get hands-on with some guided exercises to put into practice some of the concepts we have discussed.</p></li>
-<li><p><a href="@sec-resources">Resources</a>: A collection of resources that we find particularly helpful in our own journey towards reproducible research.</p></li>
 </ol>
+<!-- 6.  [Resources](@sec-resources): A collection of resources that we find particularly helpful in our own journey towards reproducible research. -->
 <section id="sec-background" class="level1 page-columns page-full" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Background</h1>
 <!-- Web content -->
@@ -768,7 +756,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p><a href="assets/images/project_zenodo_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="assets/images/project_zenodo_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
-<p>The graphic above shows the main steps of this workflow. It starts by developing your research project as an Rstudio project following the <a href="@sec-Rprojects">good practice project guidelines</a> we have discussed. Then, it uses the <code>renv</code> package to manage the project environment so that others can re-create it. Finally, the code, data and environment are uploaded to the open-access repository Zenodo, which provides a DOI for your work, ensuring long-term accessibility and reproducibility.</p>
+<p>The graphic above shows the main steps of this workflow. It starts by developing your research project as an Rstudio project following the <a href="@sec-Rprojects">good practice project guidelines</a> we have discussed. Then, it uses the <code>renv</code> package to manage the project environment so that others can re-create it. Finally, the code, data and environment are uploaded to the open-access repository <code>Zenodo</code>, which provides a DOI for your work, ensuring long-term accessibility and reproducibility.</p>
 <p>The <code>renv</code> package helps maintain the R environment, allowing others to recreate the environment in which your analysis was conducted. By combining <code>renv</code> with Zenodo, you create a comprehensive solution for reproducible research. <code>renv</code> ensures that the computational environment is captured, while Zenodo makes your research outputs accessible and citable, supporting the FAIR principles of findability, accessibility, interoperability, and reusability <span class="citation" data-cites="wilkinson2016">[<a href="#ref-wilkinson2016" role="doc-biblioref">4</a>]</span>.</p>
 <div class="no-row-height column-margin column-container"><div id="ref-wilkinson2016" class="csl-entry" role="listitem">
 <div class="csl-left-margin">4. </div><div class="csl-right-inline">Wilkinson MD, Dumontier M, Aalbersberg IjJ, et al (2016) The <span>FAIR</span> <span>Guiding</span> <span>Principles</span> for scientific data management and stewardship. Scientific Data 3(1):160018. <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a></div>
@@ -783,7 +771,8 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li><p><strong>Restore environments</strong>: Anyone cloning or receiving the project can run <code>renv::restore()</code> to install the exact versions of the packages listed in the lockfile from the project library, reproducing the original project package environment.</p></li>
 </ul>
 <p>One of the core strengths of <code>renv</code> is its flexibility. It integrates seamlessly with tools like RStudio, allowing easy management of dependencies without disrupting existing workflows. This makes it particularly well-suited for ensuring that research projects are reproducible across different systems and platforms.</p>
-<p>However, <code>renv</code> does not manage the <strong>entire system environment</strong> (such as the version of R itself or external dependencies like system libraries). For complete reproducibility, combining <code>renv</code> with containerization tools (like <a href="@#sec-docker_workflow">Docker</a>) or publishing outputs (such as code or data) via repositories like Zenodo is recommended. The use of <code>renv</code> allows researchers to easily capture and restore the R environment, while repositories can ensure the long-term availability of the project’s outputs.</p>
+<p>However, <code>renv</code> does not manage the <strong>entire system environment</strong> (such as the version of R itself or external dependencies like system libraries). For complete reproducibility, combining <code>renv</code> with</p>
+<p>containerization tools (like <a href="@#sec-docker_workflow">Docker</a>) or publishing outputs (such as code or data) via repositories like Zenodo is recommended.</p>
 </section>
 <section id="sec-zenodo_background" class="level3">
 <h3 class="anchored" data-anchor-id="sec-zenodo_background"><img src="assets/images/zenodo-blue.svg" style="vertical-align:middle; height:2.75em;"> as a research repository</h3>
@@ -816,24 +805,21 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <!-- Web content -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/Docker_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="assets/images/Docker_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+<p><a href="assets/images/Docker_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="assets/images/Docker_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div>
-<p><strong>The title of this workflow raises two questions, the first being: what is containerization?</strong></p>
+<p><strong>The title of this workflow raises two questions, the first being: what is containerization? and the second: what is Docker?</strong> ### Containerisation</p>
 <p>Simply put containerization is the process of bundling code along with all of it’s dependencies, i.e.&nbsp;all the components we discussed as making up the <a href="@sec-environment-management">environment</a>, including the operating system, software libraries (packages), and other system software. The fact everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service. This also makes containerization something of a gold standard for reproducibility as the entire environment is explicitly re-produced.</p>
-<p><strong>and the second: what is Docker?</strong></p>
+<section id="docker" class="level3">
+<h3 class="anchored" data-anchor-id="docker">Docker</h3>
 <p><a href="https://www.docker.com/">Docker</a> is an open-source, and the most popular, platform for containerization. Before we dive into a practical example using Docker for research projects with R it is important to introduce some three key terms that we will come across:</p>
 <ul>
 <li><p><code>Dockerfile</code>: The first step in the containerization process, they are a straightforward text file containing a collection of commands or procedures to create a new Docker Image. In this sense we can consider a Dockerfile are the source code of Docker Image. Importantly, Dockerfiles typically start from a base image, which is a existing Docker Image that your image is extending.</p></li>
 <li><p><code>Docker Image</code>: A read-only file that contains the instructions for creating a Docker Container. Think of an image as the blueprint of what will be in a container when it is running. Docker Images can be shared via <a href="https://hub.docker.com/">Dockerhub</a>, so that they can be used by others.</p></li>
 <li><p><code>Docker Container</code>: Is an actual running instance of a Docker image. It runs completely isolated from the host environment by default and only accesses host files (i.e.&nbsp;data) if it has been configured to do so. It is possible to create multiple containers simultaneously from the same Docker Image, and each container can be started, stopped, moved, and deleted independently of the others.</p></li>
 </ul>
-<p>The graphic below show the relationships between these components including the central commands of Docker that connect them <code>build</code> and <code>run</code>:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/images/docker_explainer.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="assets/images/docker_explainer.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
-</figure>
-</div>
+<p>The graphic above shows the relationships between these components including the central commands of Docker that connect them <code>build</code> and <code>run</code>.</p>
+</section>
 <section id="using-docker-with-r" class="level3">
 <h3 class="anchored" data-anchor-id="using-docker-with-r">Using Docker with R</h3>
 <p>So to create a <code>Docker Image</code> to containerize our R research projects we need to start by creating a <code>Dockerfile</code> and, as mentioned above, this should start with a base image. In our case this base image must logically include R and RStudio (if we want to utilise the RStudio Projects features).</p>
@@ -869,7 +855,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="sec-git_workflow">Version control with <img src="assets/images/Github.dark.svg" style="vertical-align:0%; height:0.75em;"></h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/version_control_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="assets/images/version_control_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+<p><a href="assets/images/version_control_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="assets/images/version_control_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
 <p><strong>Version control</strong> software output can have multiple uses including creating a systematic procedure for collaboration, working as a team along with increasing the ease of reproduction of the work by other users or by the original researcher as well. We all know the difficulty of tracing back the workflow of work projects a few months down the line after having shelved it, and it is here that Git and Github can be highly useful (<span class="citation" data-cites="Alexander2023">[<a href="#ref-Alexander2023" role="doc-biblioref">21</a>]</span>).</p>
@@ -901,7 +887,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/screenshot_R_studio_git.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Git intergration into R-Studio"><img src="assets/images/screenshot_R_studio_git.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Git intergration into R-Studio"></a></p>
+<p><a href="assets/images/screenshot_R_studio_git.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Git intergration into R-Studio"><img src="assets/images/screenshot_R_studio_git.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Git intergration into R-Studio"></a></p>
 </figure>
 </div>
 <figcaption>Git intergration into R-Studio</figcaption>
@@ -929,7 +915,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </div><div class="column" style="width:30%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/quarto_diamond_logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="assets/images/quarto_diamond_logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+<p><a href="assets/images/quarto_diamond_logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="assets/images/quarto_diamond_logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
 </div>
@@ -977,7 +963,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/Personal_website.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Researchers personal website"><img src="assets/images/Personal_website.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Researchers personal website"></a></p>
+<p><a href="assets/images/Personal_website.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="Researchers personal website"><img src="assets/images/Personal_website.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Researchers personal website"></a></p>
 </figure>
 </div>
 <figcaption>Researchers personal website</figcaption>
@@ -990,7 +976,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/NASCENT_website.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="NASCENT-Peru website"><img src="assets/images/NASCENT_website.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="NASCENT-Peru website"></a></p>
+<p><a href="assets/images/NASCENT_website.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="NASCENT-Peru website"><img src="assets/images/NASCENT_website.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="NASCENT-Peru website"></a></p>
 </figure>
 </div>
 <figcaption>NASCENT-Peru website</figcaption>
@@ -1016,7 +1002,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <ul>
 <li><a href="https://plotly.com/python/">Plotly</a></li>
 <li><a href="https://ipyleaflet.readthedocs.io/en/latest/">Leaflet</a></li>
-<li><a href="./docs/interactive/widgets/jupyter.qmd">Jupyter Widgets</a></li>
+<li><a href="https://ipywidgets.readthedocs.io/en/latest/">Jupyter Widgets</a></li>
 <li><a href="https://www.htmlwidgets.org/">htmlwidgets</a></li>
 <li><a href="https://observablehq.com/@observablehq/observables-not-javascript">ObservableJS</a></li>
 <li><a href="https://shiny.rstudio.com/">Shiny</a></li>
@@ -1098,8 +1084,8 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"border-color"</span> <span class="ot">=</span> <span class="st">"rgba(0,0,0,0.5)"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-56c76f3ed8c949e2fa02" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-56c76f3ed8c949e2fa02">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"zoomControl":false,"attributionControl":false},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addAwesomeMarkers","args":[-12.038,-77.04300000000001,{"icon":"home","markerColor":"darkgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Lima, National Workshop 9th May",null,null,null,"Lima, National Workshop, 9th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-12.594,-69.18899999999999,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Puerto Maldonado, Regional Workshop",null,null,null,"Puerto Maldonado Regional Workshop 28th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-9.526,-77.529,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Huaraz, Regional Workshop",null,null,null,"Huaraz, Regional Workshop 4th June",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-6.485,-76.37,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Tarapoto, Regional Workshop",null,null,null,"Tarapoto, Regional Workshop 10th June",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-5.19449,-80.63282,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Piura, Regional Workshop",null,null,null,"Piura, Regional Workshop 20th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]}],"limits":{"lat":[-12.594,-5.19449],"lng":[-80.63282,-69.18899999999999]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-ea74f603cdc4ead48aff" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-ea74f603cdc4ead48aff">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"zoomControl":false,"attributionControl":false},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addAwesomeMarkers","args":[-12.038,-77.04300000000001,{"icon":"home","markerColor":"darkgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Lima, National Workshop 9th May",null,null,null,"Lima, National Workshop, 9th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-12.594,-69.18899999999999,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Puerto Maldonado, Regional Workshop",null,null,null,"Puerto Maldonado Regional Workshop 28th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-9.526,-77.529,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Huaraz, Regional Workshop",null,null,null,"Huaraz, Regional Workshop 4th June",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-6.485,-76.37,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Tarapoto, Regional Workshop",null,null,null,"Tarapoto, Regional Workshop 10th June",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-5.19449,-80.63282,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Piura, Regional Workshop",null,null,null,"Piura, Regional Workshop 20th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]}],"limits":{"lat":[-12.594,-5.19449],"lng":[-80.63282,-69.18899999999999]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <!-- Presentation content -->
@@ -1110,7 +1096,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <p>Now it’s time to get hands on with some guided exercises that will let you put into practice the <a href="@sec-workflows">three workflows for reproducible research</a> that we have introduced as well as writing a academic manuscript using <a href="@sec-Quarto">Quarto</a>. Each exercise is available to download as a PDF if you prefer to view the instructions offline and the files required for each are available to download at the start of each exercise.</p>
 <section id="sec-Rproj_zenodo_exercise" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="sec-Rproj_zenodo_exercise">RStudio Project to Zenodo exercise</h2>
-<p>In this exercise you will first setup a basic RStudio project following the good practices introduced in the <a href="@sec-Rprojects">Research projects with R</a> section. As part of this We will initialize <code>renv</code> to manage package dependencies, ensuring reproducibility. After this you will upload the project to Zenodo so that it can be shared with others.</p>
+<p>In this exercise you will setup of a basic RStudio project following good practices for organizing data, writing clean code and decomposing your workflow introduced in <a href="@sec-projects">Rproject section</a>. We‘ll also initialize <code>renv</code> to manage package dependencies, ensuring reproducibility. Once the project is set up, we’ll go through the process of how to publish the project to Zenodo as described in the <a href="@sec-zenodo_workflow">Zenodo workflow</a> section.</p>
 <p>If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://blenback.github.io/R-for-Reproducible-Research/exercises/Rproj-Zenodo_exercise.pdf" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a></p>
 <section id="step-1-download-the-exercise-resources" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-download-the-exercise-resources">Step 1: Download the exercise resources</h3>
@@ -1129,8 +1115,8 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 </ul>
 <p>This creates a <code>.Rproj</code> file in the root of your project to help manage the workspace and project-specific settings.</p>
 </section>
-<section id="step-3-organize-the-data" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-organize-the-data">Step 3: Organize the data</h3>
+<section id="step-3-organize-your-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-organize-your-data">Step 3: Organize Your Data</h3>
 <p>It’s good practice to organize raw and processed data in separate folders. Let’s start by organizing the data:</p>
 <ul>
 <li>Create a directory <code>Data/Raw</code> inside your project folder.</li>
@@ -1138,7 +1124,12 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 </ul>
 </section>
 <section id="step-4-organize-and-split-your-scripts" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-organize-and-split-your-scripts">Step 4: Organize and split your scripts</h3>
+<h3 class="anchored" data-anchor-id="step-4-organize-and-split-your-scripts">Step 4: Organize and Split Your Scripts</h3>
+<p>We’ll now organize the project’s scripts by splitting the original script into separate analysis and visualization scripts.</p>
+<ul>
+<li>Create a <code>Scripts</code> folder inside your project directory.</li>
+<li>Move the original <code>RiceFarm_project.R</code> script into the <code>Scripts</code> folder.</li>
+</ul>
 <p>We’ll now organize the project’s scripts by splitting the original script into separate <em>analysis</em> and <em>visualization</em> scripts.</p>
 <ul>
 <li>Create a <code>scripts</code> folder inside your project directory.</li>
@@ -1156,14 +1147,14 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <li><p>In addition to this, replace the <code>setwd()</code> function with this code to set up relative paths, create a directory to save the processed data in and save <code>rice_data_summary</code> to disk after processing:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Raw data dir</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>raw_dir <span class="ot">&lt;-</span> <span class="st">"Data/Raw"</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># vector and create processed data save dir</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>save_dir <span class="ot">&lt;-</span> <span class="st">"Data/Processed"</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(save_dir,</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">showWarnings =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># vector and create processed data save dir</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>save_dir <span class="ot">&lt;-</span> <span class="st">"Data/Processed"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(save_dir,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">showWarnings =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Load csv file of data</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>rice_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(raw_dir, <span class="st">"RiceFarms.csv"</span>))</span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the summarized data</span></span>
 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(rice_data_summary,</span>
@@ -1185,18 +1176,17 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Directory for saving plots</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>plot_dir <span class="ot">&lt;-</span> <span class="st">"Output/Visualisations"</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(plot_dir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Raw data directory</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>raw_dir <span class="ot">&lt;-</span> <span class="st">"Data/Raw"</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Load csv file of data</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>rice_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(raw_dir, <span class="st">"RiceFarms.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># load the summarized data</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>rice_data_summary <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Data/Processed/RiceFarms_summary.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
 <section id="step-5-add-script-headers" class="level3">
-<h3 class="anchored" data-anchor-id="step-5-add-script-headers">Step 5: Add script headers</h3>
-<p>Add headers to both new scripts. You can use this template:</p>
+<h3 class="anchored" data-anchor-id="step-5-add-script-headers">Step 5: Add Script Headers</h3>
+<ul>
+<li>Add headers to both new scripts. You can use this template:</li>
+</ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------------------------</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Script Name: [01_data_analysis.R / 02_data_visualisation.R]</span></span>
@@ -1236,17 +1226,36 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <h3 class="anchored" data-anchor-id="step-7-initialize-renv-to-manage-package-dependencies">Step 7: Initialize <code>renv</code> to manage package dependencies</h3>
 <p>We will use <a href="https://rstudio.github.io/renv/articles/renv.html"><code>renv</code></a> to make your projects package environment reproducible.</p>
 <ul>
+<li>install renv package</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
 <li>Run the following command in your master script to set up the project-specific environment</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This creates a local library for your project and captures the required packages.</p>
 <ul>
 <li>Once the initialization is complete, run:</li>
 </ul>
+</section>
+<section id="step-8-automate-opening-the-master-script" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-automate-opening-the-master-script">Step 8: Automate Opening the Master Script</h3>
+<p>For convenience, we can configure RStudio to automatically open the master script when the project is loaded.</p>
+<ul>
+<li>install the rstudioapi package:</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"rstudioapi"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Open the <code>.Rprofile</code> file in the root of your project directory. The file might be hidden. On Windows click “View” &gt; “Show” &gt; “Hidden items” in the explorer and on MacOS click Press Command+Shift+Dot within the root directory to see the file.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This records the project’s environment in a <code>renv.lock</code> file, which is essential for reproducibility.</p>
 </section>
@@ -1258,10 +1267,10 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <li><p>Add the following R code to the <code>.Rprofile</code> file:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsetHook</span>(<span class="st">"rstudio.sessionInit"</span>, <span class="cf">function</span>(newSession) {</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (newSession)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    rstudioapi<span class="sc">::</span><span class="fu">navigateToFile</span>(<span class="st">'RiceFarm_master.R'</span>, <span class="at">line =</span> <span class="sc">-</span><span class="dv">1</span>L, <span class="at">column =</span> <span class="sc">-</span><span class="dv">1</span>L)</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>}, <span class="at">action =</span> <span class="st">"append"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsetHook</span>(<span class="st">"rstudio.sessionInit"</span>, <span class="cf">function</span>(newSession) {</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (newSession)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    rstudioapi<span class="sc">::</span><span class="fu">navigateToFile</span>(<span class="st">'RiceFarm_master.R'</span>, <span class="at">line =</span> <span class="sc">-</span><span class="dv">1</span>L, <span class="at">column =</span> <span class="sc">-</span><span class="dv">1</span>L)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>}, <span class="at">action =</span> <span class="st">"append"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-9-re-snapshot-the-project" class="level3">
@@ -1271,7 +1280,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <li>Run the following command in your master script to ensure that the <code>rstudioapi</code> package (which enables automatic script opening) is included in the snapshot:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now we a have a nicely organised project structure with the workflow decomposed into seperate scripts and a master script that to run the whole project.</p>
 </section>
@@ -1290,12 +1299,12 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <li>Install zen4R library with the following code:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install dependency "remotes"</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co">#install zen4R</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"eblondel/zen4R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install dependency "remotes"</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co">#install zen4R</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"eblondel/zen4R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-11-create-a-new-zenodo-record" class="level3">
@@ -1307,41 +1316,41 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <li>Then run the following code in your script to establish the access and create a new record.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zen4R)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Create manager to access your Zenodo repository</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>zenodo <span class="ot">&lt;-</span> ZenodoManager<span class="sc">$</span><span class="fu">new</span>(</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">token =</span> <span class="st">"your_token"</span>,</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sandbox =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">logger =</span> <span class="st">"INFO"</span> </span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="do">##Prepare a new record to be filled with metadata and uploaded to Zenodo</span></span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> ZenodoRecord<span class="sc">$</span><span class="fu">new</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zen4R)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Create manager to access your Zenodo repository</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>zenodo <span class="ot">&lt;-</span> ZenodoManager<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">token =</span> <span class="st">"your_token"</span>,</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sandbox =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">logger =</span> <span class="st">"INFO"</span> </span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="do">##Prepare a new record to be filled with metadata and uploaded to Zenodo</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> ZenodoRecord<span class="sc">$</span><span class="fu">new</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you want to connect to Zenodo and not Zenodo Sandbox, create the token in your Zenodo account and remove the line <code>sandbox = True</code> in the code above.</p>
-<p>The types of metadata that can be included in a Zenodo record are vast. A full list can be found in the <a href="https://developers.zenodo.org/#representation">documentation</a> .</p>
+<p>The types of metadata that can be included in a Zenodo record are vast. A full list can be found in the <a href="https://developers.zenodo.org/#representation">documentation</a>.</p>
 <ul>
 <li>Copy and run the example below to add metadata to your record.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"RiceFarm"</span>) <span class="co">#title of the record</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalTitle</span>(<span class="st">"This is an alternative title"</span>, <span class="at">type =</span> <span class="st">"alternative-title"</span>)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setDescription</span>(<span class="st">"Calculating statistics of RiceFarm dataset"</span>) <span class="co">#description</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalDescription</span>(<span class="st">"This is an abstract"</span>, <span class="at">type =</span> <span class="st">"abstract"</span>)</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setPublicationDate</span>(<span class="st">"2024-09-16"</span>) <span class="co">#Format YYYY-MM-DD</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setResourceType</span>(<span class="st">"dataset"</span>)</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addCreator</span>(<span class="at">firstname =</span> <span class="st">"Yourfirstname"</span>, <span class="at">lastname =</span> <span class="st">"Yourlastname"</span>, <span class="at">role =</span> <span class="st">"datamanager"</span>, <span class="at">orcid =</span> <span class="st">"0000-0001-0002-0003"</span>)</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setKeywords</span>(<span class="fu">c</span>(<span class="st">"R"</span>,<span class="st">"dataset"</span>)) <span class="co">#For filtering</span></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addReference</span>(<span class="st">"Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"RiceFarm"</span>) <span class="co">#title of the record</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalTitle</span>(<span class="st">"This is an alternative title"</span>, <span class="at">type =</span> <span class="st">"alternative-title"</span>)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setDescription</span>(<span class="st">"Calculating statistics of RiceFarm dataset"</span>) <span class="co">#description</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalDescription</span>(<span class="st">"This is an abstract"</span>, <span class="at">type =</span> <span class="st">"abstract"</span>)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setPublicationDate</span>(<span class="st">"2024-09-16"</span>) <span class="co">#Format YYYY-MM-DD</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setResourceType</span>(<span class="st">"dataset"</span>)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addCreator</span>(<span class="at">firstname =</span> <span class="st">"Yourfirstname"</span>, <span class="at">lastname =</span> <span class="st">"Yourlastname"</span>, <span class="at">role =</span> <span class="st">"datamanager"</span>, <span class="at">orcid =</span> <span class="st">"0000-0001-0002-0003"</span>)</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setKeywords</span>(<span class="fu">c</span>(<span class="st">"R"</span>,<span class="st">"dataset"</span>)) <span class="co">#For filtering</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addReference</span>(<span class="st">"Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A record can be deposited on Zenodo before it is published. This will add the record to your account without making it public yet. A deposited record can still be edited or deleted. You can also upload data to a deposited record. If you prefer a graphical interface, you can also edit the record on the Zenodo website.</p>
 <ul>
 <li>Deposit the record on Zenodo:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#deposit record</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#deposit record</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><p>View the deposited record at https://sandbox.zenodo.org/me/uploads?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest</p></li>
@@ -1349,15 +1358,15 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <li><p>Upload the .zip file to your deposited record:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#add data to the record, adjust the path below</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>zenodo<span class="sc">$</span><span class="fu">uploadFile</span>(<span class="st">"path/to/your/file"</span>, <span class="at">record =</span> myrec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#add data to the record, adjust the path below</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>zenodo<span class="sc">$</span><span class="fu">uploadFile</span>(<span class="st">"path/to/your/file"</span>, <span class="at">record =</span> myrec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Publish the record:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#make the record publicly available on Zenodo (Sandbox).</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">publishRecord</span>(myrec<span class="sc">$</span>id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#make the record publicly available on Zenodo (Sandbox).</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">publishRecord</span>(myrec<span class="sc">$</span>id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-12-edit-a-published-zenodo-record" class="level3">
@@ -1366,47 +1375,46 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <li>It is also possible to edit or update the metadata of published records:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#get your record by metadata query, e.g. by title</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:zen4R'</span>)</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co">#get depositions creates a list, access first element</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co">#edit metadata</span></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">editRecord</span>(myrec<span class="sc">$</span>id)</span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"zen4R 2.0"</span>)</span>
-<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="co">#redeposit and publish the edited record</span></span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#get your record by metadata query, e.g. by title</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:zen4R'</span>)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co">#get depositions creates a list, access first element</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co">#edit metadata</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">editRecord</span>(myrec<span class="sc">$</span>id)</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"zen4R 2.0"</span>)</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="co">#redeposit and publish the edited record</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><p>Once a record has been published, it is not possible to edit the data that has been attached to it. However, it is possible to upload an updated version of the data. The previous version of the data will remain accessible via Zenodo. The record will have one overall DOI, while each version will have its own DOI.</p></li>
 <li><p>Reconnect to your account:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>zenodo <span class="ot">&lt;-</span> ZenodoManager<span class="sc">$</span><span class="fu">new</span>(</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">token =</span> <span class="st">"your_token"</span>,</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">sandbox =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">logger =</span> <span class="st">"INFO"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>zenodo <span class="ot">&lt;-</span> ZenodoManager<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">token =</span> <span class="st">"your_token"</span>,</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">sandbox =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">logger =</span> <span class="st">"INFO"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li>Access your record:<br>
-</li>
+<li>Access your record:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#get your record by querying the metadata, e.g. by title, this will give you a list of all records with that title.</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:RiceFarm Statistics'</span>)</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co">#access the first item in the list, as there should only be one record with that particular title</span></span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#get your record by querying the metadata, e.g. by title, this will give you a list of all records with that title.</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:RiceFarm Statistics'</span>)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co">#access the first item in the list, as there should only be one record with that particular title</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Rename your .zip file on your computer</li>
 <li>Upload the renamed .zip file:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">#edit data, delete_latest_files = TRUE to not include data of previous version in newer version</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecordVersion</span>(myrec, <span class="at">delete_latest_files =</span> <span class="cn">TRUE</span>, <span class="at">files =</span> <span class="st">"path/to/your/new/file"</span>, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#edit data, delete_latest_files = TRUE to not include data of previous version in newer version</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecordVersion</span>(myrec, <span class="at">delete_latest_files =</span> <span class="cn">TRUE</span>, <span class="at">files =</span> <span class="st">"path/to/your/new/file"</span>, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Again, go to https://sandbox.zenodo.org/me/uploads?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest</li>
@@ -1445,7 +1453,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/Docker_running_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Docker Engine status in app"><img src="assets/images/Docker_running_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker Engine status in app"></a></p>
+<p><a href="assets/images/Docker_running_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Docker Engine status in app"><img src="assets/images/Docker_running_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker Engine status in app"></a></p>
 </figure>
 </div>
 <figcaption>Docker Engine status in app</figcaption>
@@ -1456,7 +1464,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_running_desktop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Docker Engine status in system try"><img src="./assets/images/Docker_running_desktop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker Engine status in system try"></a></p>
+<p><a href="./assets/images/Docker_running_desktop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Docker Engine status in system try"><img src="./assets/images/Docker_running_desktop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker Engine status in system try"></a></p>
 </figure>
 </div>
 <figcaption>Docker Engine status in system try</figcaption>
@@ -1472,51 +1480,51 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <li>Add the following code to the script and replace the entries with your details:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load dockerfiler package</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dockerfiler)</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Get your R version to select a base image to use for your image/container</span></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="fu">R.Version</span>()<span class="sc">$</span>version.string </span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dockerfile template object using the Dockerfile class from the</span></span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="co"># dockerfiler package and specify your version of R in the base image name</span></span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="co"># my version is 4.3.1 hence the base image is rocker/r-ver:4.3.1</span></span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="co"># but you should replace the end of this string with your version number from above</span></span>
-<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock <span class="ot">&lt;-</span> Dockerfile<span class="sc">$</span><span class="fu">new</span>(<span class="at">FROM =</span> <span class="st">"rocker/r-ver:4.3.1"</span>)</span>
-<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Add maintainer information (replace with your details)</span></span>
-<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">MAINTAINER</span>(<span class="st">"Your_name"</span>, <span class="st">"Your_email"</span>)</span>
-<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a><span class="co"># By default docker images contain a home directory and because our project</span></span>
-<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a><span class="co"># is simple we will move the files we need there</span></span>
-<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the data directory </span></span>
-<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a><span class="co"># (1st argument is the source, 2nd is the destination in the container)</span></span>
-<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">COPY</span>(<span class="st">"/Data"</span>, <span class="st">"/home/Data"</span>)</span>
-<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the scripts directory</span></span>
-<span id="cb30-24"><a href="#cb30-24" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">COPY</span>(<span class="st">"/Scripts"</span>, <span class="st">"/home/Scripts"</span>)</span>
-<span id="cb30-25"><a href="#cb30-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-26"><a href="#cb30-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the master script</span></span>
-<span id="cb30-27"><a href="#cb30-27" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">COPY</span>(<span class="st">"/RiceFarm_master.R"</span>, <span class="st">"/home"</span>)</span>
-<span id="cb30-28"><a href="#cb30-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-29"><a href="#cb30-29" aria-hidden="true" tabindex="-1"></a><span class="co"># For our project we need "ggplot2" and "stringr" packages</span></span>
-<span id="cb30-30"><a href="#cb30-30" aria-hidden="true" tabindex="-1"></a><span class="co"># We could try to find a base image on Rocker that has these installed</span></span>
-<span id="cb30-31"><a href="#cb30-31" aria-hidden="true" tabindex="-1"></a><span class="co"># But because we are not using lots of packages lets just install them in the container</span></span>
-<span id="cb30-32"><a href="#cb30-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that the R commands are wrapped in `r()` which is a helper function from dockerfiler</span></span>
-<span id="cb30-33"><a href="#cb30-33" aria-hidden="true" tabindex="-1"></a><span class="co"># that then wraps the command in the correct syntax for the Dockerfile</span></span>
-<span id="cb30-34"><a href="#cb30-34" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">RUN</span>(<span class="fu">r</span>(<span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)))</span>
-<span id="cb30-35"><a href="#cb30-35" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">RUN</span>(<span class="fu">r</span>(<span class="fu">install.packages</span>(<span class="st">"stringr"</span>)))</span>
-<span id="cb30-36"><a href="#cb30-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-37"><a href="#cb30-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the command to run the master script</span></span>
-<span id="cb30-38"><a href="#cb30-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Note the use of `Rscript` which is the command line tool included with R to run scripts</span></span>
-<span id="cb30-39"><a href="#cb30-39" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">CMD</span>(<span class="st">"Rscript /home/RiceFarm_master.R "</span>)</span>
-<span id="cb30-40"><a href="#cb30-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-41"><a href="#cb30-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the Dockerfile</span></span>
-<span id="cb30-42"><a href="#cb30-42" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">write</span>()</span>
-<span id="cb30-43"><a href="#cb30-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-44"><a href="#cb30-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dir in the host directory to receive the results from container</span></span>
-<span id="cb30-45"><a href="#cb30-45" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"/output"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load dockerfiler package</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dockerfiler)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Get your R version to select a base image to use for your image/container</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="fu">R.Version</span>()<span class="sc">$</span>version.string </span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dockerfile template object using the Dockerfile class from the</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="co"># dockerfiler package and specify your version of R in the base image name</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="co"># my version is 4.3.1 hence the base image is rocker/r-ver:4.3.1</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="co"># but you should replace the end of this string with your version number from above</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock <span class="ot">&lt;-</span> Dockerfile<span class="sc">$</span><span class="fu">new</span>(<span class="at">FROM =</span> <span class="st">"rocker/r-ver:4.3.1"</span>)</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Add maintainer information (replace with your details)</span></span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">MAINTAINER</span>(<span class="st">"Your_name"</span>, <span class="st">"Your_email"</span>)</span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a><span class="co"># By default docker images contain a home directory and because our project</span></span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a><span class="co"># is simple we will move the files we need there</span></span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the data directory </span></span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a><span class="co"># (1st argument is the source, 2nd is the destination in the container)</span></span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">COPY</span>(<span class="st">"/Data"</span>, <span class="st">"/home/Data"</span>)</span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the scripts directory</span></span>
+<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">COPY</span>(<span class="st">"/Scripts"</span>, <span class="st">"/home/Scripts"</span>)</span>
+<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the master script</span></span>
+<span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">COPY</span>(<span class="st">"/RiceFarm_master.R"</span>, <span class="st">"/home"</span>)</span>
+<span id="cb32-28"><a href="#cb32-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-29"><a href="#cb32-29" aria-hidden="true" tabindex="-1"></a><span class="co"># For our project we need "ggplot2" and "stringr" packages</span></span>
+<span id="cb32-30"><a href="#cb32-30" aria-hidden="true" tabindex="-1"></a><span class="co"># We could try to find a base image on Rocker that has these installed</span></span>
+<span id="cb32-31"><a href="#cb32-31" aria-hidden="true" tabindex="-1"></a><span class="co"># But because we are not using lots of packages lets just install them in the container</span></span>
+<span id="cb32-32"><a href="#cb32-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that the R commands are wrapped in `r()` which is a helper function from dockerfiler</span></span>
+<span id="cb32-33"><a href="#cb32-33" aria-hidden="true" tabindex="-1"></a><span class="co"># that then wraps the command in the correct syntax for the Dockerfile</span></span>
+<span id="cb32-34"><a href="#cb32-34" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">RUN</span>(<span class="fu">r</span>(<span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)))</span>
+<span id="cb32-35"><a href="#cb32-35" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">RUN</span>(<span class="fu">r</span>(<span class="fu">install.packages</span>(<span class="st">"stringr"</span>)))</span>
+<span id="cb32-36"><a href="#cb32-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-37"><a href="#cb32-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the command to run the master script</span></span>
+<span id="cb32-38"><a href="#cb32-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Note the use of `Rscript` which is the command line tool included with R to run scripts</span></span>
+<span id="cb32-39"><a href="#cb32-39" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">CMD</span>(<span class="st">"Rscript /home/RiceFarm_master.R "</span>)</span>
+<span id="cb32-40"><a href="#cb32-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-41"><a href="#cb32-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the Dockerfile</span></span>
+<span id="cb32-42"><a href="#cb32-42" aria-hidden="true" tabindex="-1"></a>RiceFarm_dock<span class="sc">$</span><span class="fu">write</span>()</span>
+<span id="cb32-43"><a href="#cb32-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-44"><a href="#cb32-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dir in the host directory to receive the results from container</span></span>
+<span id="cb32-45"><a href="#cb32-45" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"/output"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>After running this code you will see that a <code>Dockerfile</code> has been created in the directory where you downloaded the resources.</li>
@@ -1533,7 +1541,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_terminal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Rstudio terminal"><img src="./assets/images/Docker_terminal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Rstudio terminal"></a></p>
+<p><a href="./assets/images/Docker_terminal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Rstudio terminal"><img src="./assets/images/Docker_terminal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Rstudio terminal"></a></p>
 </figure>
 </div>
 <figcaption>Rstudio terminal</figcaption>
@@ -1547,7 +1555,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_build_output.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30" title="Docker build output in terminal"><img src="./assets/images/Docker_build_output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker build output in terminal"></a></p>
+<p><a href="./assets/images/Docker_build_output.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Docker build output in terminal"><img src="./assets/images/Docker_build_output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker build output in terminal"></a></p>
 </figure>
 </div>
 <figcaption>Docker build output in terminal</figcaption>
@@ -1561,7 +1569,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_build_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="Docker build output in app"><img src="./assets/images/Docker_build_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker build output in app"></a></p>
+<p><a href="./assets/images/Docker_build_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30" title="Docker build output in app"><img src="./assets/images/Docker_build_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker build output in app"></a></p>
 </figure>
 </div>
 <figcaption>Docker build output in app</figcaption>
@@ -1579,7 +1587,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_image_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32" title="Docker images in app"><img src="./assets/images/Docker_image_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker images in app"></a></p>
+<p><a href="./assets/images/Docker_image_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="Docker images in app"><img src="./assets/images/Docker_image_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker images in app"></a></p>
 </figure>
 </div>
 <figcaption>Docker images in app</figcaption>
@@ -1592,7 +1600,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_container_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33" title="Docker containers in app"><img src="./assets/images/Docker_container_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker containers in app"></a></p>
+<p><a href="./assets/images/Docker_container_app.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32" title="Docker containers in app"><img src="./assets/images/Docker_container_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker containers in app"></a></p>
 </figure>
 </div>
 <figcaption>Docker containers in app</figcaption>
@@ -1609,7 +1617,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_container_ID.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34" title="Docker container ID in terminal"><img src="./assets/images/Docker_container_ID.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker container ID in terminal"></a></p>
+<p><a href="./assets/images/Docker_container_ID.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33" title="Docker container ID in terminal"><img src="./assets/images/Docker_container_ID.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker container ID in terminal"></a></p>
 </figure>
 </div>
 <figcaption>Docker container ID in terminal</figcaption>
@@ -1622,7 +1630,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/Docker_copy_output.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35" title="Docker copy output in terminal"><img src="./assets/images/Docker_copy_output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker copy output in terminal"></a></p>
+<p><a href="./assets/images/Docker_copy_output.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34" title="Docker copy output in terminal"><img src="./assets/images/Docker_copy_output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Docker copy output in terminal"></a></p>
 </figure>
 </div>
 <figcaption>Docker copy output in terminal</figcaption>
@@ -1660,7 +1668,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/git_ex1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36" title="Setting up the repository"><img src="./assets/images/git_ex1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Setting up the repository"></a></p>
+<p><a href="./assets/images/git_ex1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35" title="Setting up the repository"><img src="./assets/images/git_ex1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Setting up the repository"></a></p>
 </figure>
 </div>
 <figcaption>Setting up the repository</figcaption>
@@ -1680,7 +1688,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/git_ex2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37" title="Linking repository to R-Studio"><img src="./assets/images/git_ex2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Linking repository to R-Studio"></a></p>
+<p><a href="./assets/images/git_ex2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36" title="Linking repository to R-Studio"><img src="./assets/images/git_ex2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Linking repository to R-Studio"></a></p>
 </figure>
 </div>
 <figcaption>Linking repository to R-Studio</figcaption>
@@ -1691,7 +1699,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/git_ex3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38" title="R-Studio new project session with git link"><img src="./assets/images/git_ex3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="R-Studio new project session with git link"></a></p>
+<p><a href="./assets/images/git_ex3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37" title="R-Studio new project session with git link"><img src="./assets/images/git_ex3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="R-Studio new project session with git link"></a></p>
 </figure>
 </div>
 <figcaption>R-Studio new project session with git link</figcaption>
@@ -1715,7 +1723,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/git_ex5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39" title="Edit README.md"><img src="./assets/images/git_ex5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Edit README.md"></a></p>
+<p><a href="./assets/images/git_ex5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38" title="Edit README.md"><img src="./assets/images/git_ex5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Edit README.md"></a></p>
 </figure>
 </div>
 <figcaption>Edit README.md</figcaption>
@@ -1733,7 +1741,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/git_ex6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40" title="Editing the .gitignore file"><img src="./assets/images/git_ex6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Editing the .gitignore file"></a></p>
+<p><a href="./assets/images/git_ex6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39" title="Editing the .gitignore file"><img src="./assets/images/git_ex6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Editing the .gitignore file"></a></p>
 </figure>
 </div>
 <figcaption>Editing the .gitignore file</figcaption>
@@ -1753,7 +1761,7 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./assets/images/git_ex7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41" title="Commit changes"><img src="./assets/images/git_ex7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Commit changes"></a></p>
+<p><a href="./assets/images/git_ex7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40" title="Commit changes"><img src="./assets/images/git_ex7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Commit changes"></a></p>
 </figure>
 </div>
 <figcaption>Commit changes</figcaption>
@@ -1764,22 +1772,10 @@ Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboar
 </section>
 <section id="sec-Quarto_exercise" class="level2">
 <h2 class="anchored" data-anchor-id="sec-Quarto_exercise">Write a paper with Quarto</h2>
-<p>Because Quarto is bundled with Rstudio if you have a recent version of Rstudio you may already have Quarto installed. If not, you can install Quarto from CRAN with the following command:</p>
-</section>
-</section>
-<section id="sec-resources" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Resources</h1>
-<section id="r-and-git" class="level3">
-<h3 class="anchored" data-anchor-id="r-and-git">R and Git</h3>
-</section>
-<section id="docker-and-r" class="level3">
-<h3 class="anchored" data-anchor-id="docker-and-r">Docker and R</h3>
-</section>
-<section id="quarto-11" class="level3">
-<h3 class="anchored" data-anchor-id="quarto-11">Quarto</h3>
-<p>https://youtu.be/w3X76e_tZr8?si=bE4OfrNm-wLaeBlk</p>
-<p>https://youtu.be/EbAAmrB0luA?si=yUXEup4qpRXCDh5k</p>
-<p>https://kazuyanagimoto.com/blog/2022/12/27/quarto_tips/</p>
+<p>** Exercise content comoing soon! **</p>
+<!-- Because Quarto is bundled with Rstudio if you have a recent version of Rstudio you may already have Quarto installed. If not, you can install Quarto from CRAN with the following command: -->
+<!-- # Resources {#sec-resources} -->
+<!-- {{< include contents/Resources.qmd >}} -->
 
 
 
@@ -2366,7 +2362,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":false});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

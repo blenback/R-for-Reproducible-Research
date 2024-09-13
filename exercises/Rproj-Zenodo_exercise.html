@@ -202,17 +202,6 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
         <div id="quarto-search" class="" title="Search"></div>
         </div>
         </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../presentation.html" class="sidebar-item-text sidebar-link"><i class="bi bi-file-earmark-easel" role="img">
-</i> 
- <span class="menu-text">View in presentation format</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -225,7 +214,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 <section id="sec-Rproj_zenodo_exercise" class="level2">
 <h2 class="anchored" data-anchor-id="sec-Rproj_zenodo_exercise">RStudio Project to Zenodo exercise</h2>
-<p>In this exercise you will first setup a basic RStudio project following the good practices introduced in the <a href="@sec-Rprojects">Research projects with R</a> section. As part of this We will initialize <code>renv</code> to manage package dependencies, ensuring reproducibility. After this you will upload the project to Zenodo so that it can be shared with others.</p>
+<p>In this exercise you will setup of a basic RStudio project following good practices for organizing data, writing clean code and decomposing your workflow introduced in <a href="@sec-projects">Rproject section</a>. We‘ll also initialize <code>renv</code> to manage package dependencies, ensuring reproducibility. Once the project is set up, we’ll go through the process of how to publish the project to Zenodo as described in the <a href="@sec-zenodo_workflow">Zenodo workflow</a> section.</p>
 <p>If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://blenback.github.io/R-for-Reproducible-Research/exercises/Rproj-Zenodo_exercise.pdf" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a></p>
 <section id="step-1-download-the-exercise-resources" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-download-the-exercise-resources">Step 1: Download the exercise resources</h3>
@@ -244,8 +233,8 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </ul>
 <p>This creates a <code>.Rproj</code> file in the root of your project to help manage the workspace and project-specific settings.</p>
 </section>
-<section id="step-3-organize-the-data" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-organize-the-data">Step 3: Organize the data</h3>
+<section id="step-3-organize-your-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-organize-your-data">Step 3: Organize Your Data</h3>
 <p>It’s good practice to organize raw and processed data in separate folders. Let’s start by organizing the data:</p>
 <ul>
 <li>Create a directory <code>Data/Raw</code> inside your project folder.</li>
@@ -253,7 +242,12 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </ul>
 </section>
 <section id="step-4-organize-and-split-your-scripts" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-organize-and-split-your-scripts">Step 4: Organize and split your scripts</h3>
+<h3 class="anchored" data-anchor-id="step-4-organize-and-split-your-scripts">Step 4: Organize and Split Your Scripts</h3>
+<p>We’ll now organize the project’s scripts by splitting the original script into separate analysis and visualization scripts.</p>
+<ul>
+<li>Create a <code>Scripts</code> folder inside your project directory.</li>
+<li>Move the original <code>RiceFarm_project.R</code> script into the <code>Scripts</code> folder.</li>
+</ul>
 <p>We’ll now organize the project’s scripts by splitting the original script into separate <em>analysis</em> and <em>visualization</em> scripts.</p>
 <ul>
 <li>Create a <code>scripts</code> folder inside your project directory.</li>
@@ -271,14 +265,14 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li><p>In addition to this, replace the <code>setwd()</code> function with this code to set up relative paths, create a directory to save the processed data in and save <code>rice_data_summary</code> to disk after processing:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Raw data dir</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>raw_dir <span class="ot">&lt;-</span> <span class="st">"Data/Raw"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># vector and create processed data save dir</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>save_dir <span class="ot">&lt;-</span> <span class="st">"Data/Processed"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(save_dir,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">showWarnings =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># vector and create processed data save dir</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>save_dir <span class="ot">&lt;-</span> <span class="st">"Data/Processed"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(save_dir,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">showWarnings =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Load csv file of data</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>rice_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(raw_dir, <span class="st">"RiceFarms.csv"</span>))</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the summarized data</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(rice_data_summary,</span>
@@ -300,18 +294,17 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Directory for saving plots</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>plot_dir <span class="ot">&lt;-</span> <span class="st">"Output/Visualisations"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(plot_dir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Raw data directory</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>raw_dir <span class="ot">&lt;-</span> <span class="st">"Data/Raw"</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Load csv file of data</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>rice_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(raw_dir, <span class="st">"RiceFarms.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># load the summarized data</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>rice_data_summary <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Data/Processed/RiceFarms_summary.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
 <section id="step-5-add-script-headers" class="level3">
-<h3 class="anchored" data-anchor-id="step-5-add-script-headers">Step 5: Add script headers</h3>
-<p>Add headers to both new scripts. You can use this template:</p>
+<h3 class="anchored" data-anchor-id="step-5-add-script-headers">Step 5: Add Script Headers</h3>
+<ul>
+<li>Add headers to both new scripts. You can use this template:</li>
+</ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------------------------</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Script Name: [01_data_analysis.R / 02_data_visualisation.R]</span></span>
@@ -351,17 +344,36 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="step-7-initialize-renv-to-manage-package-dependencies">Step 7: Initialize <code>renv</code> to manage package dependencies</h3>
 <p>We will use <a href="https://rstudio.github.io/renv/articles/renv.html"><code>renv</code></a> to make your projects package environment reproducible.</p>
 <ul>
+<li>install renv package</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
 <li>Run the following command in your master script to set up the project-specific environment</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This creates a local library for your project and captures the required packages.</p>
 <ul>
 <li>Once the initialization is complete, run:</li>
 </ul>
+</section>
+<section id="step-8-automate-opening-the-master-script" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-automate-opening-the-master-script">Step 8: Automate Opening the Master Script</h3>
+<p>For convenience, we can configure RStudio to automatically open the master script when the project is loaded.</p>
+<ul>
+<li>install the rstudioapi package:</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"rstudioapi"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Open the <code>.Rprofile</code> file in the root of your project directory. The file might be hidden. On Windows click “View” &gt; “Show” &gt; “Hidden items” in the explorer and on MacOS click Press Command+Shift+Dot within the root directory to see the file.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This records the project’s environment in a <code>renv.lock</code> file, which is essential for reproducibility.</p>
 </section>
@@ -373,10 +385,10 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li><p>Add the following R code to the <code>.Rprofile</code> file:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsetHook</span>(<span class="st">"rstudio.sessionInit"</span>, <span class="cf">function</span>(newSession) {</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (newSession)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    rstudioapi<span class="sc">::</span><span class="fu">navigateToFile</span>(<span class="st">'RiceFarm_master.R'</span>, <span class="at">line =</span> <span class="sc">-</span><span class="dv">1</span>L, <span class="at">column =</span> <span class="sc">-</span><span class="dv">1</span>L)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>}, <span class="at">action =</span> <span class="st">"append"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsetHook</span>(<span class="st">"rstudio.sessionInit"</span>, <span class="cf">function</span>(newSession) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (newSession)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    rstudioapi<span class="sc">::</span><span class="fu">navigateToFile</span>(<span class="st">'RiceFarm_master.R'</span>, <span class="at">line =</span> <span class="sc">-</span><span class="dv">1</span>L, <span class="at">column =</span> <span class="sc">-</span><span class="dv">1</span>L)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>}, <span class="at">action =</span> <span class="st">"append"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-9-re-snapshot-the-project" class="level3">
@@ -386,7 +398,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li>Run the following command in your master script to ensure that the <code>rstudioapi</code> package (which enables automatic script opening) is included in the snapshot:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now we a have a nicely organised project structure with the workflow decomposed into seperate scripts and a master script that to run the whole project.</p>
 </section>
@@ -403,12 +415,12 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li>Install zen4R library with the following code:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install dependency "remotes"</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#install zen4R</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"eblondel/zen4R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install dependency "remotes"</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#install zen4R</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"eblondel/zen4R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-11-create-a-new-zenodo-record" class="level3">
@@ -420,41 +432,41 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li>Then run the following code in your script to establish the access and create a new record.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zen4R)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Create manager to access your Zenodo repository</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>zenodo <span class="ot">&lt;-</span> ZenodoManager<span class="sc">$</span><span class="fu">new</span>(</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">token =</span> <span class="st">"your_token"</span>,</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sandbox =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">logger =</span> <span class="st">"INFO"</span> </span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="do">##Prepare a new record to be filled with metadata and uploaded to Zenodo</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> ZenodoRecord<span class="sc">$</span><span class="fu">new</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zen4R)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Create manager to access your Zenodo repository</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>zenodo <span class="ot">&lt;-</span> ZenodoManager<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">token =</span> <span class="st">"your_token"</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sandbox =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">logger =</span> <span class="st">"INFO"</span> </span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="do">##Prepare a new record to be filled with metadata and uploaded to Zenodo</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> ZenodoRecord<span class="sc">$</span><span class="fu">new</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you want to connect to Zenodo and not Zenodo Sandbox, create the token in your Zenodo account and remove the line <code>sandbox = True</code> in the code above.</p>
-<p>The types of metadata that can be included in a Zenodo record are vast. A full list can be found in the <a href="https://developers.zenodo.org/#representation">documentation</a> .</p>
+<p>The types of metadata that can be included in a Zenodo record are vast. A full list can be found in the <a href="https://developers.zenodo.org/#representation">documentation</a>.</p>
 <ul>
 <li>Copy and run the example below to add metadata to your record.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"RiceFarm"</span>) <span class="co">#title of the record</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalTitle</span>(<span class="st">"This is an alternative title"</span>, <span class="at">type =</span> <span class="st">"alternative-title"</span>)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setDescription</span>(<span class="st">"Calculating statistics of RiceFarm dataset"</span>) <span class="co">#description</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalDescription</span>(<span class="st">"This is an abstract"</span>, <span class="at">type =</span> <span class="st">"abstract"</span>)</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setPublicationDate</span>(<span class="st">"2024-09-16"</span>) <span class="co">#Format YYYY-MM-DD</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setResourceType</span>(<span class="st">"dataset"</span>)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addCreator</span>(<span class="at">firstname =</span> <span class="st">"Yourfirstname"</span>, <span class="at">lastname =</span> <span class="st">"Yourlastname"</span>, <span class="at">role =</span> <span class="st">"datamanager"</span>, <span class="at">orcid =</span> <span class="st">"0000-0001-0002-0003"</span>)</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setKeywords</span>(<span class="fu">c</span>(<span class="st">"R"</span>,<span class="st">"dataset"</span>)) <span class="co">#For filtering</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addReference</span>(<span class="st">"Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"RiceFarm"</span>) <span class="co">#title of the record</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalTitle</span>(<span class="st">"This is an alternative title"</span>, <span class="at">type =</span> <span class="st">"alternative-title"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setDescription</span>(<span class="st">"Calculating statistics of RiceFarm dataset"</span>) <span class="co">#description</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addAdditionalDescription</span>(<span class="st">"This is an abstract"</span>, <span class="at">type =</span> <span class="st">"abstract"</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setPublicationDate</span>(<span class="st">"2024-09-16"</span>) <span class="co">#Format YYYY-MM-DD</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setResourceType</span>(<span class="st">"dataset"</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addCreator</span>(<span class="at">firstname =</span> <span class="st">"Yourfirstname"</span>, <span class="at">lastname =</span> <span class="st">"Yourlastname"</span>, <span class="at">role =</span> <span class="st">"datamanager"</span>, <span class="at">orcid =</span> <span class="st">"0000-0001-0002-0003"</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setKeywords</span>(<span class="fu">c</span>(<span class="st">"R"</span>,<span class="st">"dataset"</span>)) <span class="co">#For filtering</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">addReference</span>(<span class="st">"Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A record can be deposited on Zenodo before it is published. This will add the record to your account without making it public yet. A deposited record can still be edited or deleted. You can also upload data to a deposited record. If you prefer a graphical interface, you can also edit the record on the Zenodo website.</p>
 <ul>
 <li>Deposit the record on Zenodo:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#deposit record</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#deposit record</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><p>View the deposited record at https://sandbox.zenodo.org/me/uploads?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest</p></li>
@@ -462,15 +474,15 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li><p>Upload the .zip file to your deposited record:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#add data to the record, adjust the path below</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>zenodo<span class="sc">$</span><span class="fu">uploadFile</span>(<span class="st">"path/to/your/file"</span>, <span class="at">record =</span> myrec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#add data to the record, adjust the path below</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>zenodo<span class="sc">$</span><span class="fu">uploadFile</span>(<span class="st">"path/to/your/file"</span>, <span class="at">record =</span> myrec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Publish the record:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#make the record publicly available on Zenodo (Sandbox).</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">publishRecord</span>(myrec<span class="sc">$</span>id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#make the record publicly available on Zenodo (Sandbox).</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">publishRecord</span>(myrec<span class="sc">$</span>id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-12-edit-a-published-zenodo-record" class="level3">
@@ -479,47 +491,46 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li>It is also possible to edit or update the metadata of published records:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#get your record by metadata query, e.g. by title</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:zen4R'</span>)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co">#get depositions creates a list, access first element</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co">#edit metadata</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">editRecord</span>(myrec<span class="sc">$</span>id)</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"zen4R 2.0"</span>)</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co">#redeposit and publish the edited record</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#get your record by metadata query, e.g. by title</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:zen4R'</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">#get depositions creates a list, access first element</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co">#edit metadata</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">editRecord</span>(myrec<span class="sc">$</span>id)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>myrec<span class="sc">$</span><span class="fu">setTitle</span>(<span class="st">"zen4R 2.0"</span>)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co">#redeposit and publish the edited record</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecord</span>(myrec, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><p>Once a record has been published, it is not possible to edit the data that has been attached to it. However, it is possible to upload an updated version of the data. The previous version of the data will remain accessible via Zenodo. The record will have one overall DOI, while each version will have its own DOI.</p></li>
 <li><p>Reconnect to your account:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>zenodo <span class="ot">&lt;-</span> ZenodoManager<span class="sc">$</span><span class="fu">new</span>(</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">token =</span> <span class="st">"your_token"</span>,</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">sandbox =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">logger =</span> <span class="st">"INFO"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>zenodo <span class="ot">&lt;-</span> ZenodoManager<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">token =</span> <span class="st">"your_token"</span>,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">sandbox =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">logger =</span> <span class="st">"INFO"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li>Access your record:<br>
-</li>
+<li>Access your record:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#get your record by querying the metadata, e.g. by title, this will give you a list of all records with that title.</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:RiceFarm Statistics'</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">#access the first item in the list, as there should only be one record with that particular title</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#get your record by querying the metadata, e.g. by title, this will give you a list of all records with that title.</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">getDepositions</span>(<span class="at">q=</span><span class="st">'title:RiceFarm Statistics'</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co">#access the first item in the list, as there should only be one record with that particular title</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> myrec[[<span class="dv">1</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Rename your .zip file on your computer</li>
 <li>Upload the renamed .zip file:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#edit data, delete_latest_files = TRUE to not include data of previous version in newer version</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecordVersion</span>(myrec, <span class="at">delete_latest_files =</span> <span class="cn">TRUE</span>, <span class="at">files =</span> <span class="st">"path/to/your/new/file"</span>, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#edit data, delete_latest_files = TRUE to not include data of previous version in newer version</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>myrec <span class="ot">&lt;-</span> zenodo<span class="sc">$</span><span class="fu">depositRecordVersion</span>(myrec, <span class="at">delete_latest_files =</span> <span class="cn">TRUE</span>, <span class="at">files =</span> <span class="st">"path/to/your/new/file"</span>, <span class="at">publish =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Again, go to https://sandbox.zenodo.org/me/uploads?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest</li>

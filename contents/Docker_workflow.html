@@ -204,17 +204,6 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
         <div id="quarto-search" class="" title="Search"></div>
         </div>
         </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../presentation.html" class="sidebar-item-text sidebar-link"><i class="bi bi-file-earmark-easel" role="img">
-</i> 
- <span class="menu-text">View in presentation format</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -228,24 +217,21 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <!-- Web content -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/images/Docker_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="assets/images/Docker_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+<p><a href="assets/images/Docker_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="assets/images/Docker_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></a></p>
 </figure>
 </div>
-<p><strong>The title of this workflow raises two questions, the first being: what is containerization?</strong></p>
+<p><strong>The title of this workflow raises two questions, the first being: what is containerization? and the second: what is Docker?</strong> ### Containerisation</p>
 <p>Simply put containerization is the process of bundling code along with all of it’s dependencies, i.e.&nbsp;all the components we discussed as making up the <a href="@sec-environment-management">environment</a>, including the operating system, software libraries (packages), and other system software. The fact everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service. This also makes containerization something of a gold standard for reproducibility as the entire environment is explicitly re-produced.</p>
-<p><strong>and the second: what is Docker?</strong></p>
+<section id="docker" class="level3">
+<h3 class="anchored" data-anchor-id="docker">Docker</h3>
 <p><a href="https://www.docker.com/">Docker</a> is an open-source, and the most popular, platform for containerization. Before we dive into a practical example using Docker for research projects with R it is important to introduce some three key terms that we will come across:</p>
 <ul>
 <li><p><code>Dockerfile</code>: The first step in the containerization process, they are a straightforward text file containing a collection of commands or procedures to create a new Docker Image. In this sense we can consider a Dockerfile are the source code of Docker Image. Importantly, Dockerfiles typically start from a base image, which is a existing Docker Image that your image is extending.</p></li>
 <li><p><code>Docker Image</code>: A read-only file that contains the instructions for creating a Docker Container. Think of an image as the blueprint of what will be in a container when it is running. Docker Images can be shared via <a href="https://hub.docker.com/">Dockerhub</a>, so that they can be used by others.</p></li>
 <li><p><code>Docker Container</code>: Is an actual running instance of a Docker image. It runs completely isolated from the host environment by default and only accesses host files (i.e.&nbsp;data) if it has been configured to do so. It is possible to create multiple containers simultaneously from the same Docker Image, and each container can be started, stopped, moved, and deleted independently of the others.</p></li>
 </ul>
-<p>The graphic below show the relationships between these components including the central commands of Docker that connect them <code>build</code> and <code>run</code>:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/images/docker_explainer.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="assets/images/docker_explainer.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
-</figure>
-</div>
+<p>The graphic above shows the relationships between these components including the central commands of Docker that connect them <code>build</code> and <code>run</code>.</p>
+</section>
 <section id="using-docker-with-r" class="level3">
 <h3 class="anchored" data-anchor-id="using-docker-with-r">Using Docker with R</h3>
 <p>So to create a <code>Docker Image</code> to containerize our R research projects we need to start by creating a <code>Dockerfile</code> and, as mentioned above, this should start with a base image. In our case this base image must logically include R and RStudio (if we want to utilise the RStudio Projects features).</p>
@@ -862,7 +848,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
