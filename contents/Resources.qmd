@@ -1,0 +1,28 @@
+---
+execute:
+  echo: true
+  eval: false
+  error: false
+---
+
+## R and Git
+
+https://rstudio.github.io/renv/articles/renv.html
+
+
+
+## Quarto
+
+https://youtu.be/w3X76e_tZr8?si=bE4OfrNm-wLaeBlk
+
+https://youtu.be/EbAAmrB0luA?si=yUXEup4qpRXCDh5k
+
+https://www.marvinschmitt.com/blog/website-tutorial-quarto/
+
+https://marioangst.com/en/blog/posts/multi-language-quarto/
+
+
+
+## Zenodo
+
+https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html
