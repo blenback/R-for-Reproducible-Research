@@ -10,6 +10,8 @@ execute:
 [<img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"/> to <img src="assets/images/blog.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline]
 https://rstudio.github.io/renv/articles/renv.html
 
+[<img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"/> to <img src="assets/images/website.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline]
+https://intro2r.com/
 
 
 ## Quarto
