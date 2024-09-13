@@ -255,7 +255,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p>Docker can be used with the <code>renv</code> package to <a href="@sec-environment-management">manage the package environment of your project</a>.</p>
 <p>There are two methods of implementing this which come with their own considerations:</p>
 <ol type="1">
-<li><p><strong>Use <code>renv</code> to install packages when the Docker image is built</strong>: This approach is useful if yo plan to have have multiple projects with <strong>identical package requirements</strong>. This because by creating an image containing this package library you can simply re-use the image as a base for new images for different projects <span class="citation" data-cites="ushey2024">[<a href="#ref-ushey2024" role="doc-biblioref">1</a>]</span>.<strong>Warning:</strong> Restoring the package library (<code>renv::restore()</code>) when building the image will be slow if there are large numbers of packages so try to avoid the need to re-build the base image many times.</p></li>
+<li><p><strong>Use <code>renv</code> to install packages when the Docker image is built</strong>: This approach is useful if you plan to have multiple projects with <strong>identical package requirements</strong>. This because by creating an image containing this package library you can simply re-use the image as a base for new images for different projects <span class="citation" data-cites="ushey2024">[<a href="#ref-ushey2024" role="doc-biblioref">1</a>]</span>.<strong>Warning:</strong> Restoring the package library (<code>renv::restore()</code>) when building the image will be slow if there are large numbers of packages so try to avoid the need to re-build the base image many times.</p></li>
 <li><p><strong>Use <code>renv</code> to install/restore packages only when Docker containers are run</strong>: This approach is better when you plan to have multiple projects that are built from the same base image but require <strong>different package requirements</strong>. Hence it is preferable to not included the package library in the image but instead to mount different project specific libraries to the container when it is run <span class="citation" data-cites="ushey2024">[<a href="#ref-ushey2024" role="doc-biblioref">1</a>]</span>. If project libraries are dynamically provisioned in this way and <code>renv::restore()</code> is run with caching this means that the packages are not re-installed everytime the container is run.</p></li>
 </ol>
 <!-- Presentation content -->
@@ -848,7 +848,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
