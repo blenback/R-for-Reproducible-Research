@@ -215,34 +215,33 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 <!-- Web content -->
-<section id="a-brief-introduction-to-quarto" class="level2">
-<h2 class="anchored" data-anchor-id="a-brief-introduction-to-quarto">A brief introduction to Quarto</h2>
-<p>Quarto is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.</p>
-<section id="quarto-allows-you-to" class="level4">
-<h4 class="anchored" data-anchor-id="quarto-allows-you-to">Quarto allows you to:</h4>
+<p><a href="https://quarto.org/">Quarto</a> is an open source scientific and technical publishing system developed by <a href="https://posit.co/">Posit</a> the same company that also created Rstudio. Quarto allows you to integrate code in multiple programming languages, with written material, and a wide variety of interactive visual components into a range of different document formats. If you are familiar with <a href="https://rmarkdown.rstudio.com/">Rmarkdown</a> then you will find Quarto familiar as it is in many way an evolution of this.</p>
+<p>The Quarto website presents <a href="https://quarto.org/docs/gallery/">many examples</a> of the application of the software but here we will focus on some of it’s key uses and features that are relevants for academics and producing reproducible research.</p>
+<section id="writing-academic-manuscripts" class="level3">
+<h3 class="anchored" data-anchor-id="writing-academic-manuscripts">Writing academic manuscripts</h3>
+<p>We all know how painful it can be switching between multiple programs to produce academic manuscripts, maybe you write your text in word, and produce your visualizations in R or Python before having to convert the end result to PDF for submission. This is especially annoying when you need to update parts of the manuscript as part of the review process.</p>
+<p>Quarto solves this problem by allowing you to write full academic manuscripts from start to finish including text, code, and visualizations in a single program. This functionality has been expanded even further with the release of <a href="https://quarto.org/docs/manuscripts/">Quarto Manuscripts</a> as a project type from Quarto version 1.4.</p>
+<p>Some key benefits of writing your manuscript with Quarto include:</p>
 <ul>
-<li><p>Create dynamic content that is updated as your code changes</p></li>
-<li><p>Numerous thematic settings for high quality formatting including ‘Pandoc’ markdown support for equations and cross-referencing</p></li>
-<li><p>Publish your work as websites or books</p></li>
-<li><p>Edit with any text editor including VS Code, RStudio and more</p></li>
-<li><p>Easily include citations and bibliographies from tools like Zotero, making it ideal for academic writing and research projects.</p></li>
-<li><p>Efficiently track changes and collaborate using Git or other version control systems, thanks to its text-based document structure.</p></li>
+<li><p>Figures and tables are dynamically updated as your code changes</p></li>
+<li><p>Supports the use and inclusion of R, Python and Julia code as well as LaTeX and Markdown</p></li>
+<li><p>Simple cross-referencing capability for figures, tables, and sections</p></li>
+<li><p>Documents can be rendered as Word, PDF, or HTML</p></li>
+<li><p>Easily include citations and bibliographies from Crossref, DataCite, and PubMed as well as with direct integration with <a href="https://www.zotero.org/">Zotero</a></p></li>
+<li><p>Numerous high quality formatting options for equations and tables</p></li>
+<li><p>Quarto’s <code>.qmd</code> files can be edited with various code/text editors including VS Code, RStudio and more</p></li>
+<li><p>Track changes and collaborate using Git or other version control systems.</p></li>
 </ul>
+<p>Writing your academic manuscripts with Quarto is more reproducible as it allows others to use your underlying manuscript file in combination with your data to directly re-create your results.</p>
 </section>
-<section id="compatibility-beyond-r" class="level4">
-<h4 class="anchored" data-anchor-id="compatibility-beyond-r">Compatibility Beyond R</h4>
-<p>Although we focus on Quartos integration with R, it is also compatible with other programming languages, making it a flexible choice for a variety of users. Quarto supports:</p>
-<ul>
-<li><p><strong>Python</strong>: You can write Python code in Quarto documents to create visualizations, run analyses, and integrate with Python libraries.</p></li>
-<li><p><strong>Julia</strong>: Quarto allows seamless integration with Julia for those working in the data science or scientific computing community.</p></li>
-<li><p><strong>Observable</strong>: For JavaScript users, Quarto supports Observable, allowing you to build interactive documents using JavaScript.</p></li>
-</ul>
-<p>This multi-language support makes Quarto a powerful tool that can adapt to your needs, whether you’re working in R, Python, Julia, or even a mix of all three.</p>
+<section id="presentations-with-revealjs" class="level3">
+<h3 class="anchored" data-anchor-id="presentations-with-revealjs">Presentations with RevealJS</h3>
 </section>
-<section id="some-of-the-creative-ways-in-which-you-can-use-quarto-is" class="level3">
-<h3 class="anchored" data-anchor-id="some-of-the-creative-ways-in-which-you-can-use-quarto-is">Some of the creative ways in which you can use Quarto is:</h3>
-<section id="visualize-and-publish-interactive-plots-using-html-widgets" class="level4">
-<h4 class="anchored" data-anchor-id="visualize-and-publish-interactive-plots-using-html-widgets">1. Visualize and publish interactive plots using html widgets</h4>
+<section id="creating-and-publish-interactive-visualisations" class="level3">
+<h3 class="anchored" data-anchor-id="creating-and-publish-interactive-visualisations">Creating and publish interactive visualisations</h3>
+<section id="plots" class="level4">
+<h4 class="anchored" data-anchor-id="plots">Plots</h4>
+<p>plotly, Observable JS, Shiny</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -257,8 +256,8 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </div>
 </div>
 </section>
-<section id="create-interactive-geo-spatial-mapping-segments" class="level4">
-<h4 class="anchored" data-anchor-id="create-interactive-geo-spatial-mapping-segments">2. Create interactive geo-spatial mapping segments</h4>
+<section id="maps-with-leaflet" class="level4">
+<h4 class="anchored" data-anchor-id="maps-with-leaflet">Maps with Leaflet</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -266,21 +265,22 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span>  <span class="co"># Add default OpenStreetMap map tiles</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">lng=</span> <span class="fl">8.548</span>, <span class="at">lat=</span><span class="fl">47.376</span>, <span class="at">popup=</span><span class="st">"ETH"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-94972de2d0b2c104ca19" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-94972de2d0b2c104ca19">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[47.376,8.548,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"ETH",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[47.376,47.376],"lng":[8.548,8.548]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-327c27fbde4c0e202742" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-327c27fbde4c0e202742">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[47.376,8.548,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"ETH",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[47.376,47.376],"lng":[8.548,8.548]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
-<section id="create-multi-purpose-dashboards-to-demostrate-your-research-output" class="level4">
-<h4 class="anchored" data-anchor-id="create-multi-purpose-dashboards-to-demostrate-your-research-output">3. Create multi-purpose dashboards to demostrate your research output</h4>
+</section>
+<section id="dashboards-to-demostrate-your-research-output" class="level3">
+<h3 class="anchored" data-anchor-id="dashboards-to-demostrate-your-research-output">Dashboards to demostrate your research output</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
 </section>
-<section id="create-multilingual-websites-for-your-research-projects" class="level4">
-<h4 class="anchored" data-anchor-id="create-multilingual-websites-for-your-research-projects">4. Create multilingual websites for your research projects</h4>
+<section id="create-multilingual-websites-for-your-research-projects" class="level3">
+<h3 class="anchored" data-anchor-id="create-multilingual-websites-for-your-research-projects">Create multilingual websites for your research projects</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/images/quarto_multilingual.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
@@ -289,8 +289,6 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <!-- Presentation content -->
 
 
-</section>
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
