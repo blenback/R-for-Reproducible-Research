@@ -8,15 +8,16 @@ execute:
 <!-- Web content -->
 
 ::: {.content-hidden when-format="revealjs"}
-The graphic below shows the main steps of this workflow. It starts by
+
+![](assets/images/project_zenodo_workflow.png){.lightbox width="70%" fig-align="center"}
+
+The graphic above shows the main steps of this workflow. It starts by
 developing your research project as an Rstudio project following the
 [good practice project guidelines](@sec-Rprojects) we have discussed.
 Then, it uses the `renv` package to manage the project environment so
 that others can re-create it. Finally, the code, data and environment
 are uploaded to the open-access repository Zenodo, which provides a DOI
 for your work, ensuring long-term accessibility and reproducibility.
-
-![](assets/images/project_zenodo_workflow.png){.lightbox width="70%" fig-align="center"}
 
 The `renv` package helps maintain the R environment, allowing others to
 recreate the environment in which your analysis was conducted. By

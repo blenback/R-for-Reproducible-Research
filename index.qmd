@@ -43,15 +43,13 @@ This image highlights some the key concepts we will discuss in the workshop, whi
 
 For this workshop we will outline three different workflows for creating reproducible research projects with R combined with other tools. We have named these workflows as follows:
 
-1.  [<img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"/> to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline](@sec-zenodo_workflow)
+1.  <img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"/> to <img src="assets/images/Zenodo.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline
 
-2.  [Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/>](@sec-docker_workflow)
+2.  Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/>
 
-3.  [Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"/>](@sec-git_workflow)
+3.  Version control with <img src="assets/images/Github.light.svg" style="vertical-align:0%; height:0.75em;"/>
 
 These workflows are inter-related in the sense that 2. and 3. build upon elements of the first and indeed the techniques of the latter workflows can also be combined together. The workflows differ in the level of reproducibility they ensure but the trade-off for better reproducibility is increased complexity. As such we would suggest that the most reproducible workflow may not always be the most appropriate to implement dependent on the needs of your research project and the capabilities of the collaborators involved.
-
-\*\* TO DO?: Add a table to compare the workflows \*\*
 
 Of course, these workflows are by no-means the only way of doing things and indeed we would actively encourage you to expand upon them in developing your own preferred approach.
 
@@ -67,6 +65,7 @@ Of course, these workflows are by no-means the only way of doing things and inde
 
 {{< include contents/Git_workflow.qmd >}}
 
+
 # Quarto {#sec-Quarto}
 
 {{< include contents/Quarto_intro.qmd >}}
@@ -75,6 +74,7 @@ Of course, these workflows are by no-means the only way of doing things and inde
 
 Now it's time to get hands on with some guided exercises that will let you put into practice the [three workflows for reproducible research](@sec-workflows) that we have introduced as well as writing a academic manuscript using [Quarto](@sec-Quarto). Each exercise is available to download as a PDF if you prefer to view the instructions offline and the files required for each are available to download at the start of each exercise.
 
+
 {{< include exercises/Rproj-Zenodo_exercise.qmd >}}
 
 {{< include exercises/Docker_exercise.qmd >}}
@@ -82,6 +82,7 @@ Now it's time to get hands on with some guided exercises that will let you put i
 {{< include exercises/Git_exercise.qmd >}}
 
 {{< include exercises/Quarto-manuscript_exercise.qmd >}}
+
 
 # Resources {#sec-resources}
 

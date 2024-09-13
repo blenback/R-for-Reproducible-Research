@@ -58,6 +58,7 @@ format:
       sidebar-width: 250px
       body-width: 1200px
       margin-width: 200px
+      gutter-width: 1.5rem
 crossref:
   fig-title: ''
   fig-labels: none
