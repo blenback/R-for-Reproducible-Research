@@ -38,6 +38,8 @@ In terms of actually creating the `Dockerfile` for our R project, this can be do
 For our [exercise](@sec-docker_exercise) of this workflow we will use the `dockerfiler` package, which creates a custom class object that represents the Dockerfile and has slots corresponding to common elements of Docker images. This allows us to add elements to the dockerfile in a more R-like way. The following code snippet demonstrates adding `Maintainer` details to a `Dockerfile` object, before saving it:
 
 ```{R}
+#| eval: false
+#| echo: true
 library(dockerfiler)
 # Create a dockerfile template
 my_dock <- Dockerfile$new()

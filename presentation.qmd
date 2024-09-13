@@ -35,6 +35,8 @@ affiliations:
   - id: PLUS
     name: "Planning of Landscape and Urban Systems (PLUS), ETH Zurich"
 date: last-modified
+execute:
+  eval: false
 ---
 
 # Schedule
