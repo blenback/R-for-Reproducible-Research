@@ -16,8 +16,8 @@ developing your research project as an Rstudio project following the
 [good practice project guidelines](@sec-Rprojects) we have discussed.
 Then, it uses the `renv` package to manage the project environment so
 that others can re-create it. Finally, the code, data and environment
-are uploaded to the open-access repository Zenodo, which provides a DOI
-for your work, ensuring long-term accessibility and reproducibility.
+are uploaded to the open-access repository `Zenodo`, which provides a
+DOI for your work, ensuring long-term accessibility and reproducibility.
 
 The `renv` package helps maintain the R environment, allowing others to
 recreate the environment in which your analysis was conducted. By
@@ -67,11 +67,9 @@ reproducible across different systems and platforms.
 However, `renv` does not manage the **entire system environment** (such
 as the version of R itself or external dependencies like system
 libraries). For complete reproducibility, combining `renv` with
+
 containerization tools (like [Docker](@#sec-docker_workflow)) or publishing outputs (such as code
-or data) via repositories like Zenodo is recommended. The use of
-`renv` allows researchers to easily capture and restore the R
-environment, while repositories can ensure the long-term availability of
-the project’s outputs.
+or data) via repositories like Zenodo is recommended.
 
 ### <img src="assets/images/zenodo-blue.svg" style="vertical-align:middle; height:2.75em;"/> as a research repository {#sec-zenodo_background}
 
@@ -133,9 +131,10 @@ reasons:
 
 ### Publishing to Zenodo with `zen4R`
 
+
 The [`zen4R`](%3Chttps://cran.r-project.org/web/packages/zen4R) package
-[@blondel2024] provides functions to interact with `Zenodo‘s` API directly
-from R. The package allows you to:
+[@blondel2024] provides functions to interact with `Zenodo‘s` API
+directly from R. The package allows you to:
 
 -   Retrieve the metadata of, and download, existing `Zenodo` records.
 
@@ -227,14 +226,20 @@ ensuring long-term accessibility and reproducibility.
 
 -   Focuses on managing package environments within R
 
--   Best combined with containerization (e.g., `Docker`) for full reproducibility
+-   Best combined with containerization (e.g., `Docker`) for full
+    reproducibility
 
--   Complements external repositories (e.g., `Zenodo`) for sharing and preservation
+-   Complements external repositories (e.g., `Zenodo`) for sharing and
+    preservation
 
 ::: notes
--   `renv` does not manage system-level dependencies such as the R version or other software your project might rely on (e.g., geospatial libraries like GDAL
+-   `renv` does not manage system-level dependencies such as the R
+    version or other software your project might rely on (e.g.,
+    geospatial libraries like GDAL
 
--   `renv` is designed to manage the R package environment, ensuring that the same R packages and versions are used across different machines.
+-   `renv` is designed to manage the R package environment, ensuring
+    that the same R packages and versions are used across different
+    machines.
 
 -   For full reproducibility, `renv` should be combined with tools like
     `Docker` for system environment control.
@@ -253,25 +258,36 @@ ensuring long-term accessibility and reproducibility.
 
 -   GitHub integration for seamless code archiving with DOI snapshots
 
--   Supports FAIR principles: aligned with open access, transparency, and reusability
+-   Supports FAIR principles: aligned with open access, transparency,
+    and reusability
 
 -   Community creation for grouping related research outputs
 
--   API and open-source: flexible for programmatic access and customization
+-   API and open-source: flexible for programmatic access and
+    customization
 
 ::: notes
--   `Zenodo` provides long-term storage for a variety of research outputs, including datasets, code, and publications, ensuring that these materials remain accessible over time.
+-   `Zenodo` provides long-term storage for a variety of research
+    outputs, including datasets, code, and publications, ensuring that
+    these materials remain accessible over time.
 
--   Every record receives a permanent Digital Object Identifier (DOI), which allows for easy citation in research papers.
+-   Every record receives a permanent Digital Object Identifier (DOI),
+    which allows for easy citation in research papers.
 
--   Integration with GitHub allows researchers to archive their code and generate DOI-linked snapshots with each release.
+-   Integration with GitHub allows researchers to archive their code and
+    generate DOI-linked snapshots with each release.
 
--   `Zenodo` aligns with the FAIR and Open Science principles, supporting open and reusable research outputs
+-   `Zenodo` aligns with the FAIR and Open Science principles,
+    supporting open and reusable research outputs
 
--   The platform allows the creation of communities to group related records, making it useful for creating a collection of related research outputs, either for a
-    research group or a large-scale funded project.
-    
--   `Zenodo’s` API provides programmatic access for tasks like automating record creation, and its open-source nature allows for customization and contribution to the platform.
+-   The platform allows the creation of communities to group related
+    records, making it useful for creating a collection of related
+    research outputs, either for a research group or a large-scale
+    funded project.
+
+-   `Zenodo’s` API provides programmatic access for tasks like
+    automating record creation, and its open-source nature allows for
+    customization and contribution to the platform.
 :::
 
 ## Rstudio project to `Zenodo` pipeline
@@ -287,8 +303,8 @@ ensuring long-term accessibility and reproducibility.
 -   Facilitates integration and reproducibility in R workflows
 
 ::: notes
--   `zen4R` allows R users to interact with `Zenodo‘s` API to upload data
-    and code directly from R.
+-   `zen4R` allows R users to interact with `Zenodo‘s` API to upload
+    data and code directly from R.
 
 -   It supports automated publication, including metadata management and
     record updating.

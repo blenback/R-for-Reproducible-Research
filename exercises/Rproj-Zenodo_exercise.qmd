@@ -7,7 +7,7 @@ execute:
 
 ## RStudio Project to Zenodo exercise {#sec-Rproj_zenodo_exercise}
 
-In this exercise you will first setup a basic RStudio project following the good practices introduced in the [Research projects with R](@sec-Rprojects) section. As part of this We will initialize `renv` to manage package dependencies, ensuring reproducibility. After this you will upload the project to Zenodo so that it can be shared with others.
+In this exercise you will setup of a basic RStudio project following good practices for organizing data, writing clean code and decomposing your workflow introduced in [Rproject section](@sec-projects). We‘ll also initialize `renv` to manage package dependencies, ensuring reproducibility. Once the project is set up, we'll go through the process of how to publish the project to Zenodo as described in the [Zenodo workflow](@sec-zenodo_workflow) section.
 
 If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://blenback.github.io/R-for-Reproducible-Research/exercises/Rproj-Zenodo_exercise.pdf" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a>
 
@@ -26,14 +26,19 @@ Start by creating a new RStudio project in the root of the `exercise_1_data` dir
 
 This creates a `.Rproj` file in the root of your project to help manage the workspace and project-specific settings.
 
-### Step 3: Organize the data
+### Step 3: Organize Your Data
 
 It's good practice to organize raw and processed data in separate folders. Let’s start by organizing the data:
 
 -   Create a directory `Data/Raw` inside your project folder.
 -   Move the provided CSV file into this `Data/Raw` directory.
 
-### Step 4: Organize and split your scripts
+### Step 4: Organize and Split Your Scripts
+
+We'll now organize the project's scripts by splitting the original script into separate analysis and visualization scripts.
+
+-   Create a `Scripts` folder inside your project directory.
+-   Move the original `RiceFarm_project.R` script into the `Scripts` folder.
 
 We'll now organize the project's scripts by splitting the original script into separate *analysis* and *visualization* scripts.
 
@@ -51,14 +56,14 @@ We'll now organize the project's scripts by splitting the original script into s
 -   In addition to this, replace the `setwd()` function with this code to set up relative paths, create a directory to save the processed data in and save `rice_data_summary` to disk after processing:
 
 ```{r}
-# Raw data dir
-raw_dir <- "Data/Raw"
-
 # vector and create processed data save dir
 save_dir <- "Data/Processed"
 dir.create(save_dir,
            showWarnings = FALSE,
            recursive = TRUE)
+
+# Load csv file of data
+rice_data <- read.csv(file.path(raw_dir, "RiceFarms.csv"))
   
 # Save the summarized data
 write.csv(rice_data_summary,
@@ -79,27 +84,22 @@ write.csv(rice_data_summary,
 # Directory for saving plots
 plot_dir <- "Output/Visualisations"
 dir.create(plot_dir, showWarnings = FALSE, recursive = TRUE)
-    
-# Raw data directory
-raw_dir <- "Data/Raw"
 
-# Load csv file of data
-rice_data <- read.csv(file.path(raw_dir, "RiceFarms.csv"))
+# load the summarized data
+rice_data_summary <- read.csv("Data/Processed/RiceFarms_summary.csv")
 ```
 
-### Step 5: Add script headers
-
-Add headers to both new scripts. You can use this template:
-
-```{r}
-# -----------------------------------------------
-# Script Name: [01_data_analysis.R / 02_data_visualisation.R]
-# Project: Rice Farm Analysis
-# Purpose: [Data analysis / Data visualization]
-# Author: [Your Name]
-# Date: [YYYY-MM-DD]
-# -----------------------------------------------
-```
+### Step 5: Add Script Headers
+-   Add headers to both new scripts. You can use this template:
+    ```{r}
+    # -----------------------------------------------
+    # Script Name: [01_data_analysis.R / 02_data_visualisation.R]
+    # Project: Rice Farm Analysis
+    # Purpose: [Data analysis / Data visualization]
+    # Author: [Your Name]
+    # Date: [YYYY-MM-DD]
+    # -----------------------------------------------
+    ```
 
 ### Step 6: Create a master script
 
@@ -133,6 +133,12 @@ Running this master script will execute both analysis and visualization steps.
 
 We will use [`renv`](https://rstudio.github.io/renv/articles/renv.html) to make your projects package environment reproducible.
 
+- install renv package
+
+    ```{r}
+    install.packages("renv")
+    ```
+    
 -   Run the following command in your master script to set up the project-specific environment
 
 ```{r}
@@ -142,6 +148,16 @@ renv::init()
 This creates a local library for your project and captures the required packages.
 
 -   Once the initialization is complete, run:
+
+### Step 8: Automate Opening the Master Script
+For convenience, we can configure RStudio to automatically open the master script when the project is loaded.
+
+-   install the rstudioapi package:
+    ```{r}
+install.packages("rstudioapi")
+    ```
+
+-   Open the `.Rprofile` file in the root of your project directory. The file might be hidden. On Windows click "View" > "Show" > "Hidden items" in the explorer and on MacOS click Press Command+Shift+Dot within the root directory to see the file.
 
 ```{r}
 renv::snapshot()
@@ -163,7 +179,7 @@ rsetHook("rstudio.sessionInit", function(newSession) {
     rstudioapi::navigateToFile('RiceFarm_master.R', line = -1L, column = -1L)
 }, action = "append")
 ```
-
+    
 ### Step 9: Re-snapshot the Project
 
 After modifying the `.Rprofile` file, it’s important to capture these changes in the `renv.lock` file.
@@ -216,54 +232,47 @@ zenodo <- ZenodoManager$new(
     logger = "INFO" 
     )
         
-##Prepare a new record to be filled with metadata and uploaded to Zenodo
-myrec <- ZenodoRecord$new()
-```
+    ##Prepare a new record to be filled with metadata and uploaded to Zenodo
+    myrec <- ZenodoRecord$new()
+    ```
+If you want to connect to `Zenodo` and not `Zenodo Sandbox`, create the token in your `Zenodo` account and remove the line `sandbox = True` in the code above.
 
-If you want to connect to Zenodo and not Zenodo Sandbox, create the token in your Zenodo account and remove the line `sandbox = True` in the code above.
-
-The types of metadata that can be included in a Zenodo record are vast. A full list can be found in the [documentation](https://developers.zenodo.org/#representation) .
+The types of metadata that can be included in a `Zenodo` record are vast. A full list can be found in the documentation at https://developers.zenodo.org/#representation. 
 
 -   Copy and run the example below to add metadata to your record.
+    ```{r}
+    myrec$setTitle("RiceFarm") #title of the record
+    myrec$addAdditionalTitle("This is an alternative title", type = "alternative-title")
+    myrec$setDescription("Calculating statistics of RiceFarm dataset") #description
+    myrec$addAdditionalDescription("This is an abstract", type = "abstract")
+    myrec$setPublicationDate("2024-09-16") #Format YYYY-MM-DD
+    myrec$setResourceType("dataset")
+    myrec$addCreator(firstname = "Yourfirstname", lastname = "Yourlastname", role = "datamanager", orcid = "0000-0001-0002-0003")
+    myrec$setKeywords(c("R","dataset")) #For filtering
+    myrec$addReference("Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API")
+    ```
 
-```{r}
-myrec$setTitle("RiceFarm") #title of the record
-myrec$addAdditionalTitle("This is an alternative title", type = "alternative-title")
-myrec$setDescription("Calculating statistics of RiceFarm dataset") #description
-myrec$addAdditionalDescription("This is an abstract", type = "abstract")
-myrec$setPublicationDate("2024-09-16") #Format YYYY-MM-DD
-myrec$setResourceType("dataset")
-myrec$addCreator(firstname = "Yourfirstname", lastname = "Yourlastname", role = "datamanager", orcid = "0000-0001-0002-0003")
-myrec$setKeywords(c("R","dataset")) #For filtering
-myrec$addReference("Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API")
-```
+A record can be deposited on `Zenodo` before it is published. This will add the record to your account without making it public yet. A deposited record can still be edited or deleted. You can also upload data to a deposited record. If you prefer a graphical interface, you can also edit the record on the `Zenodo` website.
 
-A record can be deposited on Zenodo before it is published. This will add the record to your account without making it public yet. A deposited record can still be edited or deleted. You can also upload data to a deposited record. If you prefer a graphical interface, you can also edit the record on the Zenodo website.
-
--   Deposit the record on Zenodo:
-
-```{r}
-#deposit record
-myrec <- zenodo$depositRecord(myrec, publish = TRUE)
-```
-
+-   Deposit the record on `Zenodo`:
+    ```{r}
+    #deposit record
+    myrec <- zenodo$depositRecord(myrec, publish = TRUE)
+    ```
 -   View the deposited record at https://sandbox.zenodo.org/me/uploads?q=&l=list&p=1&s=10&sort=newest
 
 -   Compress your project directory to a .zip file.
-
 -   Upload the .zip file to your deposited record:
-
-```{r}
-#add data to the record, adjust the path below
-zenodo$uploadFile("path/to/your/file", record = myrec)
-```
+    ```{r}
+    #add data to the record, adjust the path below
+    zenodo$uploadFile("path/to/your/file", record = myrec)
+    ```
 
 -   Publish the record:
-
-```{r}
-#make the record publicly available on Zenodo (Sandbox).
-myrec <- zenodo$publishRecord(myrec$id)
-```
+    ```{r}
+    #make the record publicly available on Zenodo (Sandbox).
+    myrec <- zenodo$publishRecord(myrec$id)
+    ```
 
 ### Step 12: Edit a published Zenodo record
 

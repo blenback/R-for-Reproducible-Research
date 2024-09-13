@@ -5,18 +5,28 @@ execute:
   error: false
 ---
 
-### R and Git
+## R and Git
+
+[<img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"/> to <img src="assets/images/blog.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline]
+https://rstudio.github.io/renv/articles/renv.html
+
+[<img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"/> to <img src="assets/images/website.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline]
+https://intro2r.com/
 
 
-### Docker and R
-
-
-
-### Quarto
-
+## Quarto
+[<img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"/> to <img src="assets/images/video.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline]
 https://youtu.be/w3X76e_tZr8?si=bE4OfrNm-wLaeBlk
 
 https://youtu.be/EbAAmrB0luA?si=yUXEup4qpRXCDh5k
 
-https://kazuyanagimoto.com/blog/2022/12/27/quarto_tips/
+[<img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"/> to <img src="assets/images/blog.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline]
+https://www.marvinschmitt.com/blog/website-tutorial-quarto/
 
+https://marioangst.com/en/blog/posts/multi-language-quarto/
+
+
+
+## Zenodo
+[<img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1em;"/> to <img src="assets/images/website.dark.svg" style="vertical-align:0%; height:0.85em;"/> pipeline]
+https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html
