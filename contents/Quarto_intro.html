@@ -123,12 +123,14 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <script src="../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
 <link href="../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
 <script src="../site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+<link href="../site_libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.css" rel="stylesheet">
+<script src="../site_libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.min.js"></script>
+<link href="../site_libs/fontawesome-4.7.0/font-awesome.min.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../index.css">
 <meta property="og:title" content="Reproducible Research with  and ">
 <meta property="og:description" content="Website for workshop in reproducible research with R and Quarto">
-<meta property="og:image" content="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png">
 <meta property="og:site_name" content="Reproducible Research with <img style=&quot;vertical-align:middle; height:1em; border: none; background: none;&quot; src=&quot;assets/images/Rlogo.png&quot;> and <img style=&quot;vertical-align:middle; height:1em;&quot; src=&quot;assets/images/quarto-logo-trademark.svg&quot;>">
 <meta name="twitter:title" content="Reproducible Research with  and ">
 <meta name="twitter:description" content="Website for workshop in reproducible research with R and Quarto">
@@ -215,8 +217,18 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 <!-- Web content -->
-<p><a href="https://quarto.org/">Quarto</a> is an open source scientific and technical publishing system developed by <a href="https://posit.co/">Posit</a> the same company that also created Rstudio. Quarto allows you to integrate code in multiple programming languages, with written material, and a wide variety of interactive visual components into a range of different document formats. If you are familiar with <a href="https://rmarkdown.rstudio.com/">Rmarkdown</a> then you will find Quarto familiar as it is in many way an evolution of this.</p>
-<p>The Quarto website presents <a href="https://quarto.org/docs/gallery/">many examples</a> of the application of the software but here we will focus on some of it’s key uses and features that are relevants for academics and producing reproducible research.</p>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><a href="https://quarto.org/">Quarto</a> is an open source scientific and technical publishing system developed by <a href="https://posit.co/">Posit</a> the same company that also created Rstudio. Quarto allows you to integrate code in multiple programming languages, with written material, and a wide variety of interactive visual components into a range of different document formats. If you are familiar with <a href="https://rmarkdown.rstudio.com/">Rmarkdown</a> then you will find Quarto familiar as it is in many ways an evolution of this.</p>
+<p>The Quarto website presents <a href="https://quarto.org/docs/gallery/">many examples</a> of the application of the software but here we will focus on some of it’s key uses and features that are relevant for academics and producing reproducible research.</p>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/quarto_diamond_logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 <section id="writing-academic-manuscripts" class="level3">
 <h3 class="anchored" data-anchor-id="writing-academic-manuscripts">Writing academic manuscripts</h3>
 <p>We all know how painful it can be switching between multiple programs to produce academic manuscripts, maybe you write your text in word, and produce your visualizations in R or Python before having to convert the end result to PDF for submission. This is especially annoying when you need to update parts of the manuscript as part of the review process.</p>
@@ -228,63 +240,154 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li><p>Simple cross-referencing capability for figures, tables, and sections</p></li>
 <li><p>Documents can be rendered as Word, PDF, or HTML</p></li>
 <li><p>Easily include citations and bibliographies from Crossref, DataCite, and PubMed as well as with direct integration with <a href="https://www.zotero.org/">Zotero</a></p></li>
-<li><p>Numerous high quality formatting options for equations and tables</p></li>
+<li><p>High quality formatting options for equations and tables</p></li>
 <li><p>Quarto’s <code>.qmd</code> files can be edited with various code/text editors including VS Code, RStudio and more</p></li>
 <li><p>Track changes and collaborate using Git or other version control systems.</p></li>
 </ul>
 <p>Writing your academic manuscripts with Quarto is more reproducible as it allows others to use your underlying manuscript file in combination with your data to directly re-create your results.</p>
+<p>In one of our exercises you will practice <a href="@sec-Quarto_exercise">creating a manuscript with Quarto for an example project</a></p>
 </section>
 <section id="presentations-with-revealjs" class="level3">
 <h3 class="anchored" data-anchor-id="presentations-with-revealjs">Presentations with RevealJS</h3>
+<p>Quarto also allows you to create presentations in several formats <a href="https://revealjs.com/">RevealJS</a>, <a href="https://quarto.org/docs/presentations/powerpoint.html">Microsoft Powerpoint</a> and <a href="https://quarto.org/docs/presentations/beamer.html">Beamer</a> using a common syntax. In fact the <a href="https://blenback.github.io/R-for-Reproducible-Research/presentation.html">presentation document</a> for this workshop is created using Quarto and RevealJS.</p>
+<p>Some useful features of making presentations with Quarto include:</p>
+<ul>
+<li><p>Selection of pre-existing modern themes with functionality to publish your own theme.</p></li>
+<li><p>Include interactive content: Executable code blocks and visual components (graphs and maps)</p></li>
+<li><p>Dynamic resizing of content depending on screen size</p></li>
+<li><p>Functionality for slide notes, automatic transitions, timers etc.</p></li>
+<li><p>Easy export to PDF or HTML</p></li>
+<li><p>Similar to manuscripts code-based content is dynamically updated.</p></li>
+</ul>
 </section>
-<section id="creating-and-publish-interactive-visualisations" class="level3">
-<h3 class="anchored" data-anchor-id="creating-and-publish-interactive-visualisations">Creating and publish interactive visualisations</h3>
-<section id="plots" class="level4">
-<h4 class="anchored" data-anchor-id="plots">Plots</h4>
-<p>plotly, Observable JS, Shiny</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in library(plotly): there is no package called 'plotly'</code></pre>
+<section id="websites" class="level3">
+<h3 class="anchored" data-anchor-id="websites">Websites</h3>
+<p>Quarto can also be used to create websites that can be freely hosted through Github Pages or other services like Netlify or Posit Connect. This is a great way to share your research with a wider audience or promote your work. Creating Quarto websites is an intuitive and user-friendly process and because it uses the <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap</a> framework there is a lot of guidance available for customizing beyond the 25 default themes</p>
+<p>Some examples from the authors:</p>
+<ul>
+<li><p>This website is created with Quarto and hosted on Github Pages and you can see all of it’s source code <a href="https://github.com/blenback/R-for-Reproducible-Research">here</a>.</p></li>
+<li><p>This is an example of personal website created by Ben to share publications, presentations and blog content: <a href="https://blenback.github.io/" class="uri">https://blenback.github.io/</a></p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/Personal_website.gif" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Researchers personal website</figcaption>
+</figure>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">fill =</span> clarity)) <span class="sc">+</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>            <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplotly</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in ggplotly(p): could not find function "ggplotly"</code></pre>
+<ul>
+<li>This is a Multi-lingual website created for a research project in Peru to share progress and results of the project: <a href="https://nascent-peru.github.io/" class="uri">https://nascent-peru.github.io/</a>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/NASCENT_website.gif" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>NASCENT-Peru website</figcaption>
+</figure>
 </div>
-</div>
-</section>
-<section id="maps-with-leaflet" class="level4">
-<h4 class="anchored" data-anchor-id="maps-with-leaflet">Maps with Leaflet</h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span>  <span class="co"># Add default OpenStreetMap map tiles</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">lng=</span> <span class="fl">8.548</span>, <span class="at">lat=</span><span class="fl">47.376</span>, <span class="at">popup=</span><span class="st">"ETH"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-327c27fbde4c0e202742" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-327c27fbde4c0e202742">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[47.376,8.548,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"ETH",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[47.376,47.376],"lng":[8.548,8.548]}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-</section>
 </section>
 <section id="dashboards-to-demostrate-your-research-output" class="level3">
 <h3 class="anchored" data-anchor-id="dashboards-to-demostrate-your-research-output">Dashboards to demostrate your research output</h3>
-<div class="quarto-figure quarto-figure-center">
+<p><a href="https://quarto.org/docs/dashboards/">Quarto dashboards</a> allow you to arrange multiple interactive or static components in a single page with a highly customizable layout. These components can include text summaries, tables, plots, maps and more. This is a great way to collect feedback on aspects of your research during the development process or to present your results in a visually appealing way.</p>
+<p>Here is an interactive example produced using Python interactive plots:</p>
 <figure class="figure">
-<p><img src="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+<iframe width="650" height="650" src="https://jjallaire.github.io/gapminder-dashboard/" title="Gapminder dashboard from JJallaire">
+</iframe>
+<figcaption>
+Gapminder dashboard from <a href="https://jjallaire.github.io/gapminder-dashboard/">JJallaire</a>.
+</figcaption>
 </figure>
-</div>
+<!-- ![](https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png){fig-align="center" width="70%"} -->
 </section>
-<section id="create-multilingual-websites-for-your-research-projects" class="level3">
-<h3 class="anchored" data-anchor-id="create-multilingual-websites-for-your-research-projects">Create multilingual websites for your research projects</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/images/quarto_multilingual.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+<section id="data-exploration-and-visualization" class="level3">
+<h3 class="anchored" data-anchor-id="data-exploration-and-visualization">Data exploration and visualization</h3>
+<p>As has been mentioned already Quarto provides a lot of options for creating interactive data visualisations, tables and diagrams using frameworks such as:</p>
+<ul>
+<li><a href="https://plotly.com/python/">Plotly</a></li>
+<li><a href="https://ipyleaflet.readthedocs.io/en/latest/">Leaflet</a></li>
+<li><a href="../docs/interactive/widgets/jupyter.qmd">Jupyter Widgets</a></li>
+<li><a href="https://www.htmlwidgets.org/">htmlwidgets</a></li>
+<li><a href="https://observablehq.com/@observablehq/observables-not-javascript">ObservableJS</a></li>
+<li><a href="https://shiny.rstudio.com/">Shiny</a></li>
+</ul>
+<p>There are lots of examples of these on the <a href="https://quarto.org/docs/gallery/#interactive-docs">Quarto website</a> but one we particularly like is Leaflet which allows you to create interactive maps with markers, popups and other features. In a research context this is useful to others to explore the spatial results of your research. Here is a simple example we used to show the locations and timings of workshops we were conducting in Peru.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fontawesome)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>national <span class="ot">&lt;-</span> <span class="fu">makeAwesomeIcon</span>(<span class="at">text =</span> <span class="fu">fa</span>(<span class="st">"people-roof"</span>),</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                              <span class="at">iconColor =</span> <span class="st">'white'</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                              <span class="at">library =</span> <span class="st">'fa'</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                              <span class="at">markerColor =</span> <span class="st">'darkgreen'</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>regional <span class="ot">&lt;-</span> <span class="fu">makeAwesomeIcon</span>(<span class="at">text =</span> <span class="fu">fa</span>(<span class="st">"people-roof"</span>),</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                              <span class="at">iconColor =</span> <span class="st">'white'</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                              <span class="at">library =</span> <span class="st">'fa'</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                              <span class="at">markerColor =</span> <span class="st">'lightgreen'</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">#uncomment for saving map</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#Workshop_locations &lt;- </span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">leaflet</span>(<span class="at">options =</span> <span class="fu">leafletOptions</span>(<span class="at">zoomControl =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">attributionControl=</span><span class="cn">FALSE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="co">#addProviderTiles(providers$Esri.WorldTerrain) %&gt;%</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span>  <span class="co"># Add default OpenStreetMap map tiles</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addAwesomeMarkers</span>(<span class="at">lng=</span><span class="sc">-</span><span class="fl">77.043</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>                    <span class="at">lat=</span><span class="sc">-</span><span class="fl">12.038</span>,</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>                    <span class="at">icon=</span> national,</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                    <span class="at">popup=</span><span class="st">"Lima, National Workshop 9th May"</span>,</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>                    <span class="at">label =</span> <span class="st">"Lima, National Workshop, 9th May"</span>,</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labelOptions =</span> <span class="fu">labelOptions</span>(<span class="co">#noHide = TRUE,</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">direction =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">style =</span> <span class="fu">list</span>(<span class="st">"color"</span> <span class="ot">=</span> <span class="st">"black"</span>,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-family"</span> <span class="ot">=</span> <span class="st">"Roboto"</span>,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-style"</span> <span class="ot">=</span> <span class="st">"italic"</span>,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"box-shadow"</span> <span class="ot">=</span> <span class="st">"3px 3px rgba(0,0,0,0.25)"</span>,</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-size"</span> <span class="ot">=</span> <span class="st">"12px"</span>,</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"border-color"</span> <span class="ot">=</span> <span class="st">"rgba(0,0,0,0.5)"</span>)))<span class="sc">%&gt;%</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addAwesomeMarkers</span>(<span class="at">lng=</span><span class="sc">-</span><span class="fl">69.189</span>, <span class="at">lat=</span><span class="sc">-</span><span class="fl">12.594</span>, <span class="at">icon =</span> regional, <span class="at">popup=</span><span class="st">"Puerto Maldonado, Regional Workshop"</span>, <span class="at">label =</span> <span class="st">"Puerto Maldonado Regional Workshop 28th May"</span>,</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labelOptions =</span> <span class="fu">labelOptions</span>(<span class="co">#noHide = TRUE,</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">direction =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">style =</span> <span class="fu">list</span>(<span class="st">"color"</span> <span class="ot">=</span> <span class="st">"black"</span>,</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-family"</span> <span class="ot">=</span> <span class="st">"Roboto"</span>,</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-style"</span> <span class="ot">=</span> <span class="st">"italic"</span>,</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"box-shadow"</span> <span class="ot">=</span> <span class="st">"3px 3px rgba(0,0,0,0.25)"</span>,</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-size"</span> <span class="ot">=</span> <span class="st">"12px"</span>,</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"border-color"</span> <span class="ot">=</span> <span class="st">"rgba(0,0,0,0.5)"</span>)))<span class="sc">%&gt;%</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addAwesomeMarkers</span>(<span class="at">lng=</span><span class="sc">-</span><span class="fl">77.529</span>, <span class="at">lat=</span><span class="sc">-</span><span class="fl">9.526</span>, <span class="at">icon =</span> regional, <span class="at">popup=</span><span class="st">"Huaraz, Regional Workshop"</span>, <span class="at">label =</span> <span class="st">"Huaraz, Regional Workshop 4th June"</span>,</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labelOptions =</span> <span class="fu">labelOptions</span>(<span class="co">#noHide = TRUE,</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">direction =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">style =</span> <span class="fu">list</span>(<span class="st">"color"</span> <span class="ot">=</span> <span class="st">"black"</span>,</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-family"</span> <span class="ot">=</span> <span class="st">"Roboto"</span>,</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-style"</span> <span class="ot">=</span> <span class="st">"italic"</span>,</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"box-shadow"</span> <span class="ot">=</span> <span class="st">"3px 3px rgba(0,0,0,0.25)"</span>,</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-size"</span> <span class="ot">=</span> <span class="st">"12px"</span>,</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"border-color"</span> <span class="ot">=</span> <span class="st">"rgba(0,0,0,0.5)"</span>)))<span class="sc">%&gt;%</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addAwesomeMarkers</span>(<span class="at">lng=</span><span class="sc">-</span><span class="fl">76.370</span>, <span class="at">lat=</span><span class="sc">-</span><span class="fl">6.485</span>, <span class="at">icon =</span> regional, <span class="at">popup=</span><span class="st">"Tarapoto, Regional Workshop"</span>, <span class="at">label =</span> <span class="st">"Tarapoto, Regional Workshop 10th June"</span>,</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labelOptions =</span> <span class="fu">labelOptions</span>(<span class="co">#noHide = TRUE,</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">direction =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">style =</span> <span class="fu">list</span>(<span class="st">"color"</span> <span class="ot">=</span> <span class="st">"black"</span>,</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-family"</span> <span class="ot">=</span> <span class="st">"Roboto"</span>,</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-style"</span> <span class="ot">=</span> <span class="st">"italic"</span>,</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"box-shadow"</span> <span class="ot">=</span> <span class="st">"3px 3px rgba(0,0,0,0.25)"</span>,</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-size"</span> <span class="ot">=</span> <span class="st">"12px"</span>,</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"border-color"</span> <span class="ot">=</span> <span class="st">"rgba(0,0,0,0.5)"</span>)))<span class="sc">%&gt;%</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addAwesomeMarkers</span>(<span class="at">lng=</span><span class="sc">-</span><span class="fl">80.63282</span>, <span class="at">lat=</span><span class="sc">-</span><span class="fl">5.19449</span>, <span class="at">icon =</span> regional, <span class="at">popup=</span><span class="st">"Piura, Regional Workshop"</span>, <span class="at">label=</span><span class="st">"Piura, Regional Workshop 20th May"</span>,</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labelOptions =</span> <span class="fu">labelOptions</span>(<span class="co">#noHide = TRUE,</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">direction =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">style =</span> <span class="fu">list</span>(<span class="st">"color"</span> <span class="ot">=</span> <span class="st">"black"</span>,</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-family"</span> <span class="ot">=</span> <span class="st">"Roboto"</span>,</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-style"</span> <span class="ot">=</span> <span class="st">"italic"</span>,</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"box-shadow"</span> <span class="ot">=</span> <span class="st">"3px 3px rgba(0,0,0,0.25)"</span>,</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"font-size"</span> <span class="ot">=</span> <span class="st">"12px"</span>,</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>                                                <span class="st">"border-color"</span> <span class="ot">=</span> <span class="st">"rgba(0,0,0,0.5)"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-c20f53ed1a217755b308" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-c20f53ed1a217755b308">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"zoomControl":false,"attributionControl":false},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addAwesomeMarkers","args":[-12.038,-77.04300000000001,{"icon":"home","markerColor":"darkgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Lima, National Workshop 9th May",null,null,null,"Lima, National Workshop, 9th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-12.594,-69.18899999999999,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Puerto Maldonado, Regional Workshop",null,null,null,"Puerto Maldonado Regional Workshop 28th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-9.526,-77.529,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Huaraz, Regional Workshop",null,null,null,"Huaraz, Regional Workshop 4th June",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-6.485,-76.37,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Tarapoto, Regional Workshop",null,null,null,"Tarapoto, Regional Workshop 10th June",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]},{"method":"addAwesomeMarkers","args":[-5.19449,-80.63282,{"icon":"home","markerColor":"lightgreen","iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","text":"<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 640 512\" style=\"height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5V480c0 17.7-14.3 32-32 32H120c-17.7 0-32-14.3-32-32V441.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3h19.5c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6h19.5c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5V480c0 17.7-14.3 32-32 32H472c-17.7 0-32-14.3-32-32V441.5l-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5V400c0 17.7-14.3 32-32 32H296c-17.7 0-32-14.3-32-32V345.5l-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z\"/><\/svg>","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Piura, Regional Workshop",null,null,null,"Piura, Regional Workshop 20th May",{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"style":{"color":"black","font-family":"Roboto","font-style":"italic","box-shadow":"3px 3px rgba(0,0,0,0.25)","font-size":"12px","border-color":"rgba(0,0,0,0.5)"},"className":"","sticky":true},null]}],"limits":{"lat":[-12.594,-5.19449],"lng":[-80.63282,-69.18899999999999]}},"evals":[],"jsHooks":[]}</script>
+</div>
 </div>
 <!-- Presentation content -->
 
