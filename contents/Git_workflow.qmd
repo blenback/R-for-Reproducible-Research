@@ -1,13 +1,15 @@
 ---
-bibliography: references.bib
 execute:
   echo: true
   eval: false
   error: false
 ---
 
-::: {.content-visible when-format="html"}
-**Version controlling** software output can have multiple uses including creating a systematic procedure for collaboration, working as a team along with increasing the ease of reproduction of the work by other users or by the original researcher as well. We all know the difficulty of tracing back the workflow of work projects a few months down the line after having shelved it, and it is here that Git and Github can be highly useful (@Alexander2023).
+::: {.content-hidden when-format="revealjs"}
+
+![](assets/images/version_control_workflow.png){width="70%" fig-align="center"}
+
+**Version control** software output can have multiple uses including creating a systematic procedure for collaboration, working as a team along with increasing the ease of reproduction of the work by other users or by the original researcher as well. We all know the difficulty of tracing back the workflow of work projects a few months down the line after having shelved it, and it is here that Git and Github can be highly useful (@Alexander2023).
 
 ### About Git
 
@@ -35,7 +37,7 @@ To help with version control Github repositories provide multiple functionalitie
 
 When a Github repository is connected to an R project, R-studio adds a 'Git' tab (see image below) with 'push', 'pull', 'commit' and 'diff' functionalities. We can switch branches to pull from or push to and additionally trace the history of changes in the Github respository by all users.
 
-![Git intergration into R-Studio](assets/images/screenshot_R_studio_git.png){fig-align="center" width="50%"}
+![Git intergration into R-Studio](assets/images/screenshot_R_studio_git.png){width="70%" fig-align="center"}
 
 Alternatively you can also use [Github desktop](https://github.com/apps/desktop) to perform the same functionalities.
 
@@ -59,9 +61,7 @@ Alternatively you can also use [Github desktop](https://github.com/apps/desktop)
 
 -   **Push** and **Pull**?
 
--   
-
-    ![Git terminologies](assets/images/Git_terminology.png){fig-align="center" width="50%"}
+![Git terminologies](assets/images/Git_terminology.png){width="70%" fig-align="center"}
 
 -   Git cheatsheet: https://education.github.com/git-cheat-sheet-education.pdf
 

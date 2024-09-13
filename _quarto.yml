@@ -56,8 +56,9 @@ format:
     css: index.css
     grid:
       sidebar-width: 250px
-      body-width: 1300px
-      margin-width: 100px
+      body-width: 1200px
+      margin-width: 200px
+      gutter-width: 1.5rem
 crossref:
   fig-title: ''
   fig-labels: none
@@ -66,10 +67,11 @@ csl: diabetologia.csl
 execute:
   error: true
   warning: false
-  freeze: auto
 include-after-body:
   text: |
     <script type="application/javascript" src="light-dark.js"></script>
+
+
     
     
 

@@ -41,5 +41,10 @@ dir.create("/output")
 # Now in the terminal build the Docker image
 # docker build --build-arg WHEN=2019-01-06 -t analysis .
 
+
+
 # run in the terminal with the '-v' flag to extract the results from the container
 # docker run -v ~/output:/home/Outputs/Visualisations  analysis 
+
+# copy the results to the output directory
+# cp -r /home/Outputs/Visualisations ~/output

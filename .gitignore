@@ -53,7 +53,9 @@ docs/presentation.html
 docs/index.html
 *.html
 *.html
-/docs
+/docs/assets
+/docs/contents
+/docs/site_libs
 exercises/exercise_1_data/RiceFarms.csv
 exercises/exercise_1_data/RiceFarm_project.R
 exercises/exercise_23_data/.Rprofile
