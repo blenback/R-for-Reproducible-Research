@@ -14,7 +14,7 @@ execute:
 ::: {.column width="70%"}
 [Quarto](https://quarto.org/) is an open source scientific and technical publishing system developed by [Posit](https://posit.co/) the same company that also created Rstudio. Quarto allows you to integrate code in multiple programming languages, with written material, and a wide variety of interactive visual components into a range of different document formats. If you are familiar with [Rmarkdown](https://rmarkdown.rstudio.com/) then you will find Quarto familiar as it is in many ways an evolution of this.
 
-The Quarto website presents [many examples](https://quarto.org/docs/gallery/) of the application of the software but here we will focus on some of it's key uses and features that are relevants for academics and producing reproducible research.
+The Quarto website presents [many examples](https://quarto.org/docs/gallery/) of the application of the software but here we will focus on some of it's key uses and features that are relevant for academics and producing reproducible research.
 :::
 
 ::: {.column width="30%"}
@@ -58,9 +58,9 @@ Some useful features of making presentations with Quarto include:
 
 -   Selection of pre-existing modern themes with functionality to publish your own theme.
 
--   Include interactive content: Executable code block and visual components (graphs and maps)
+-   Include interactive content: Executable code blocks and visual components (graphs and maps)
 
--   Dynamic Resizing of content depending on screen size
+-   Dynamic resizing of content depending on screen size
 
 -   Functionality for slide notes, automatic transitions, timers etc.
 
@@ -106,12 +106,12 @@ Here is an interactive example produced using Python interactive plots:
 
 As has been mentioned already Quarto provides a lot of options for creating interactive data visualisations, tables and diagrams using frameworks such as:
 
--    [Plotly](https://plotly.com/python/)
--    [Leaflet](https://ipyleaflet.readthedocs.io/en/latest/)
--    [Jupyter Widgets](/docs/interactive/widgets/jupyter.qmd)
--    [htmlwidgets](https://www.htmlwidgets.org/)
--    [ObservableJS](https://observablehq.com/@observablehq/observables-not-javascript)
--    [Shiny](https://shiny.rstudio.com/)
+-   [Plotly](https://plotly.com/python/)
+-   [Leaflet](https://ipyleaflet.readthedocs.io/en/latest/)
+-   [Jupyter Widgets](/docs/interactive/widgets/jupyter.qmd)
+-   [htmlwidgets](https://www.htmlwidgets.org/)
+-   [ObservableJS](https://observablehq.com/@observablehq/observables-not-javascript)
+-   [Shiny](https://shiny.rstudio.com/)
 
 There are lots of examples of these on the [Quarto website](https://quarto.org/docs/gallery/#interactive-docs) but one we particularly like is Leaflet which allows you to create interactive maps with markers, popups and other features. In a research context this is useful to others to explore the spatial results of your research. Here is a simple example we used to show the locations and timings of workshops we were conducting in Peru.
 
@@ -199,45 +199,228 @@ regional <- makeAwesomeIcon(text = fa("people-roof"),
 <!-- Presentation content -->
 
 ::: {.content-visible when-format="revealjs"}
-### Introduction to Quarto
+## Quarto
 
-**A Unified Authoring Framework**
+::: {.columns .v-center-container}
+::: {.column width="70%"}
+-   An open source scientific and technical publishing system
 
--   Integrates code, text, and interactive visuals
--   Produces publishable documents
--   Updates dynamically as code changes
+-   Integrates code in multiple programming languages, written material, and interactive visual components
 
-### Key Features of Quarto
+-   Produces a range of document formats including HTML, PDF, and Word
 
-**What Quarto Allows You To:**
+-   Developed by [Posit](https://posit.co/) the same company that created Rstudio.
+:::
 
--   Create dynamic content that updates with your code
--   Utilize high-quality Pandoc Markdown for formatting
--   Publish your work as websites or books
--   Edit with any text editor (e.g., VS Code, RStudio)
--   Easily include citations from tools like Zotero
--   Collaborate and track changes using Git
+::: {.column width="30%"}
+![](assets/images/quarto_diamond_logo.png){fig-align="center"}
+:::
+:::
 
-### Compatibility Beyond R
+## Quarto
 
-**Multi-Language Support:**
+-   Quarto website presents [many examples](https://quarto.org/docs/gallery/) of it's applications
+-   We will focus on some of it's key uses and features that are relevant for academics and producing reproducible research.
+    -   Academic manuscripts
+    -   Presentations
+    -   Websites
+    -   Interactive dashboards
+    -   Data exploration and visualization
 
--   **Python**: Create visualizations and run analyses
--   **Julia**: Seamless integration for data science
--   **Observable JavaScript**: Build interactive documents
--   Flexible for mixed-language projects
+## Quarto
 
-### Some of the creative ways in which you can use Quarto is:
+### Writing academic manuscripts
 
-#### 1. Visualize and publish interactive plots using html widgets
+How many programs do you currently use when writing academic papers?
 
-#### 2. Create interactive geo-spatial mapping segments
+![A common workflow of academic papers [@lusseau2024]](assets/images/trad_paper_workflow.png){fig-align="center"}
 
-#### 3. Create multi-purpose dashboards to demostrate your research output
+## Quarto
 
-![](https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png){fig-align="center"}
+### Writing academic manuscripts
 
-#### 4. Create multilingual websites for your research projects
+Quarto solves this problem by allowing you to write full academic manuscripts from start to finish including text, code, and visualizations in a single document:
 
-![](assets/images/quarto_multilingual.png){fig-align="left"}
+![](assets/images/quarto_document_writing.png){fig-align="center"}
+
+## Quarto
+
+### Writing academic manuscripts
+
+Key benefits:
+
+-   Figures and tables are dynamically updated as your code changes
+
+-   Supports code in R, Python and Julia as well as LaTeX and Markdown content
+
+-   Easy Cross-referencing capability for figures, tables, and sections
+
+-   Documents can be rendered as Word, PDF, or HTML
+
+-   Include Citations and bibliographies using Crossref, DataCite, PubMed and direct integration with [Zotero](https://www.zotero.org/)
+
+-   Quarto's `.qmd` files can be edited with various code/text editors (VS Code, RStudio etc.)
+
+::: fragment
+**More reproducible as it allows others to use your underlying manuscript file in combination with your data to directly re-create your results.**
+:::
+
+## Quarto
+
+### Presentations
+
+Several formats: [RevealJS](https://revealjs.com/), [Microsoft Powerpoint](https://quarto.org/docs/presentations/powerpoint.html) and [Beamer](https://quarto.org/docs/presentations/beamer.html) using a common syntax.
+
+Useful features:
+
+-   Modern themes with functionality to publish your own theme.
+
+-   Interactive content: Executable code blocks, graphs, maps
+
+-   Dynamic resizing of content depending on screen size
+
+-   Functionality for slide notes, automatic transitions, timers etc.
+
+-   Easy export to PDF or HTML
+
+-   Similar to manuscripts code-based content is dynamically updated.
+
+## Quarto
+
+### Websites
+
+Websites to act as guides, tutorials or teaching materials:
+
+![](assets/images/workshop_website.png){fig-align="center"}
+
+## Quarto
+
+### Websites
+
+Personal websites to share publications and presentations:
+
+![](assets/images/Personal_website.gif){fig-align="center"}
+
+## Quarto
+
+### Websites
+
+Websites for research projects to share progress and results:
+
+![](assets/images/NASCENT_website.gif){fig-align="center"}
+
+## Quarto
+
+### Dashboards
+
+::: {.columns .v-center-container}
+::: {.column width="60%"}
+-   Arrange multiple interactive or static components in a single page with a highly customizable layout.
+-   Components can include text summaries, tables, plots, maps and more.
+-   Uses: Collect feedback on aspects of your research during development or present your results in a visually appealing way.
+:::
+
+::: {.column width="40%"}
+![Gapminder dashboard from [JJallaire](https://jjallaire.github.io/gapminder-dashboard/)](assets/images/dashboard.gif){fig-align="center"}
+:::
+:::
+
+## Quarto
+
+### Data exploration and visualization
+
+::: {.columns .v-center-container}
+::: {.column width="50%"}
+
+Many options for interactive data visualisations, tables and diagrams using:
+
+-   [Plotly](https://plotly.com/python/)
+-   [Leaflet](https://ipyleaflet.readthedocs.io/en/latest/)
+-   [Jupyter Widgets](/docs/interactive/widgets/jupyter.qmd)
+-   [htmlwidgets](https://www.htmlwidgets.org/)
+-   [ObservableJS](https://observablehq.com/@observablehq/observables-not-javascript)
+-   [Shiny](https://shiny.rstudio.com/)
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| eval: true
+#| output: true
+#| include: true
+
+library(leaflet)
+library(fontawesome)
+library(mapview)
+
+
+national <- makeAwesomeIcon(text = fa("people-roof"),
+                              iconColor = 'white',
+                              library = 'fa',
+                              markerColor = 'darkgreen')
+  
+regional <- makeAwesomeIcon(text = fa("people-roof"),
+                              iconColor = 'white',
+                              library = 'fa',
+                              markerColor = 'lightgreen')
+
+
+#uncomment for saving map
+#Workshop_locations <- 
+  leaflet(options = leafletOptions(zoomControl = FALSE,
+                                 attributionControl=FALSE)) %>%
+  #addProviderTiles(providers$Esri.WorldTerrain) %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addAwesomeMarkers(lng=-77.043,
+                    lat=-12.038,
+                    icon= national,
+                    popup="Lima, National Workshop 9th May",
+                    label = "Lima, National Workshop, 9th May",
+                    labelOptions = labelOptions(#noHide = TRUE,
+                                                direction = "bottom",
+                                                style = list("color" = "black",
+                                                "font-family" = "Roboto",
+                                                "font-style" = "italic",
+                                                "box-shadow" = "3px 3px rgba(0,0,0,0.25)",
+                                                "font-size" = "12px",
+                                                "border-color" = "rgba(0,0,0,0.5)")))%>%
+  addAwesomeMarkers(lng=-69.189, lat=-12.594, icon = regional, popup="Puerto Maldonado, Regional Workshop", label = "Puerto Maldonado Regional Workshop 28th May",
+                    labelOptions = labelOptions(#noHide = TRUE,
+                                                direction = "bottom",
+                                                style = list("color" = "black",
+                                                "font-family" = "Roboto",
+                                                "font-style" = "italic",
+                                                "box-shadow" = "3px 3px rgba(0,0,0,0.25)",
+                                                "font-size" = "12px",
+                                                "border-color" = "rgba(0,0,0,0.5)")))%>%
+  addAwesomeMarkers(lng=-77.529, lat=-9.526, icon = regional, popup="Huaraz, Regional Workshop", label = "Huaraz, Regional Workshop 4th June",
+                    labelOptions = labelOptions(#noHide = TRUE,
+                                                direction = "bottom",
+                                                style = list("color" = "black",
+                                                "font-family" = "Roboto",
+                                                "font-style" = "italic",
+                                                "box-shadow" = "3px 3px rgba(0,0,0,0.25)",
+                                                "font-size" = "12px",
+                                                "border-color" = "rgba(0,0,0,0.5)")))%>%
+  addAwesomeMarkers(lng=-76.370, lat=-6.485, icon = regional, popup="Tarapoto, Regional Workshop", label = "Tarapoto, Regional Workshop 10th June",
+                    labelOptions = labelOptions(#noHide = TRUE,
+                                                direction = "bottom",
+                                                style = list("color" = "black",
+                                                "font-family" = "Roboto",
+                                                "font-style" = "italic",
+                                                "box-shadow" = "3px 3px rgba(0,0,0,0.25)",
+                                                "font-size" = "12px",
+                                                "border-color" = "rgba(0,0,0,0.5)")))%>%
+  addAwesomeMarkers(lng=-80.63282, lat=-5.19449, icon = regional, popup="Piura, Regional Workshop", label="Piura, Regional Workshop 20th May",
+                    labelOptions = labelOptions(#noHide = TRUE,
+                                                direction = "bottom",
+                                                style = list("color" = "black",
+                                                "font-family" = "Roboto",
+                                                "font-style" = "italic",
+                                                "box-shadow" = "3px 3px rgba(0,0,0,0.25)",
+                                                "font-size" = "12px",
+                                                "border-color" = "rgba(0,0,0,0.5)")))
+```
+:::
+:::
 :::

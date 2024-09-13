@@ -69,37 +69,37 @@ date: last-modified
 
 <!-- # Let's take a 10 minute break! -->
 
-# Workflows for Reproducibility
+<!-- # Workflows for Reproducibility -->
 
-## Workflows for Reproducibility
+<!-- ## Workflows for Reproducibility -->
 
-We will discuss three workflows for reproducibility:
+<!-- We will discuss three workflows for reproducibility: -->
 
-::: {.incremental}
+<!-- ::: {.incremental} -->
 
-1.  Rstudio project to Zenodo pipeline
+<!-- 1.  Rstudio project to Zenodo pipeline -->
 
-2.  Containerization with Docker
+<!-- 2.  Containerization with Docker -->
 
-3.  Version control with Git
+<!-- 3.  Version control with Git -->
 
-There are suggestions for different approaches and we hope that in future you will be able to adapt these workflows to the needs of your own research projects.
+<!-- There are suggestions for different approaches and we hope that in future you will be able to adapt these workflows to the needs of your own research projects. -->
 
 <!-- ::: -->
 
-## Workflows for Reproducibility
+<!-- ## Workflows for Reproducibility -->
 
-**TO DO: Insert comparison of workflows table**
+<!-- **TO DO: Insert comparison of workflows table** -->
 
 <!-- {{< include contents/Zenodo_workflow.qmd >}} -->
 
-<!--{{< include contents/Docker_workflow.qmd >}}-->
+<!-- {{< include contents/Docker_workflow.qmd >}} -->
 
-<!--{{< include contents/Git_workflow.qmd >}}-->
+<!-- {{< include contents/Git_workflow.qmd >}} -->
 
 # Quarto
 
-<!-- {{< include contents/Quarto_intro.qmd >}} -->
+{{< include contents/Quarto_intro.qmd >}}
 
 # Let's take another 10 minute break!
 
@@ -108,3 +108,6 @@ There are suggestions for different approaches and we hope that in future you wi
 <!--{{< include contents/Exercise_intro.qmd >}}-->
 
 # Q&A + feedback
+
+# Bibliography
+

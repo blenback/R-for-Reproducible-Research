@@ -115,7 +115,7 @@
     "href": "contents/Quarto_intro.html",
     "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
     "section": "",
-    "text": "Quarto is an open source scientific and technical publishing system developed by Posit the same company that also created Rstudio. Quarto allows you to integrate code in multiple programming languages, with written material, and a wide variety of interactive visual components into a range of different document formats. If you are familiar with Rmarkdown then you will find Quarto familiar as it is in many ways an evolution of this.\nThe Quarto website presents many examples of the application of the software but here we will focus on some of it’s key uses and features that are relevants for academics and producing reproducible research.\n\n\n\n\n\n\n\n\n\nWriting academic manuscripts\nWe all know how painful it can be switching between multiple programs to produce academic manuscripts, maybe you write your text in word, and produce your visualizations in R or Python before having to convert the end result to PDF for submission. This is especially annoying when you need to update parts of the manuscript as part of the review process.\nQuarto solves this problem by allowing you to write full academic manuscripts from start to finish including text, code, and visualizations in a single program. This functionality has been expanded even further with the release of Quarto Manuscripts as a project type from Quarto version 1.4.\nSome key benefits of writing your manuscript with Quarto include:\n\nFigures and tables are dynamically updated as your code changes\nSupports the use and inclusion of R, Python and Julia code as well as LaTeX and Markdown\nSimple cross-referencing capability for figures, tables, and sections\nDocuments can be rendered as Word, PDF, or HTML\nEasily include citations and bibliographies from Crossref, DataCite, and PubMed as well as with direct integration with Zotero\nHigh quality formatting options for equations and tables\nQuarto’s .qmd files can be edited with various code/text editors including VS Code, RStudio and more\nTrack changes and collaborate using Git or other version control systems.\n\nWriting your academic manuscripts with Quarto is more reproducible as it allows others to use your underlying manuscript file in combination with your data to directly re-create your results.\n\n\nPresentations with RevealJS\nQuarto also allows you to create presentations in several formats RevealJS, Microsoft Powerpoint and Beamer using a common syntax. In fact the presentation document for this workshop is created using Quarto and RevealJS.\nSome useful features of making presentations with Quarto include:\n\nSelection of pre-existing modern themes with functionality to publish your own theme.\nInclude interactive content: Executable code block and visual components (graphs and maps)\nDynamic Resizing of content depending on screen size\nFunctionality for slide notes, automatic transitions, timers etc.\nEasy export to PDF or HTML\nSimilar to manuscripts code-based content is dynamically updated.\n\n\n\nWebsites\nQuarto can also be used to create websites that can be freely hosted through Github Pages or other services like Netlify or Posit Connect. This is a great way to share your research with a wider audience or promote your work. Creating Quarto websites is an intuitive and user-friendly process and because it uses the Bootstrap framework there is a lot of guidance available for customizing beyond the 25 default themes\nSome examples from the authors:\n\nThis website is created with Quarto and hosted on Github Pages and you can see all of it’s source code here.\nThis is an example of personal website created by Ben to share publications, presentations and blog content: https://blenback.github.io/\n\n\n\n\nResearchers personal website\n\n\n\nThis is a Multi-lingual website created for a research project in Peru to share progress and results of the project: https://nascent-peru.github.io/.\n\n\n\n\nNASCENT-Peru website\n\n\n\n\nDashboards to demostrate your research output\nQuarto dashboards allow you to arrange multiple interactive or static components in a single page with a highly customizable layout. These components can include text summaries, tables, plots, maps and more. This is a great way to collect feedback on aspects of your research during the development process or to present your results in a visually appealing way.\nHere is an interactive example produced using Python interactive plots:\n\n\n\n\nGapminder dashboard from JJallaire.\n\n\n\n\n\nData exploration and visualization\nAs has been mentioned already Quarto provides a lot of options for creating interactive data visualisations, tables and diagrams using frameworks such as:\n\nPlotly\nLeaflet\nJupyter Widgets\nhtmlwidgets\nObservableJS\nShiny\n\nThere are lots of examples of these on the Quarto website but one we particularly like is Leaflet which allows you to create interactive maps with markers, popups and other features. In a research context this is useful to others to explore the spatial results of your research.\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "Quarto is an open source scientific and technical publishing system developed by Posit the same company that also created Rstudio. Quarto allows you to integrate code in multiple programming languages, with written material, and a wide variety of interactive visual components into a range of different document formats. If you are familiar with Rmarkdown then you will find Quarto familiar as it is in many ways an evolution of this.\nThe Quarto website presents many examples of the application of the software but here we will focus on some of it’s key uses and features that are relevants for academics and producing reproducible research.\n\n\n\n\n\n\n\n\n\nWriting academic manuscripts\nWe all know how painful it can be switching between multiple programs to produce academic manuscripts, maybe you write your text in word, and produce your visualizations in R or Python before having to convert the end result to PDF for submission. This is especially annoying when you need to update parts of the manuscript as part of the review process.\nQuarto solves this problem by allowing you to write full academic manuscripts from start to finish including text, code, and visualizations in a single program. This functionality has been expanded even further with the release of Quarto Manuscripts as a project type from Quarto version 1.4.\nSome key benefits of writing your manuscript with Quarto include:\n\nFigures and tables are dynamically updated as your code changes\nSupports the use and inclusion of R, Python and Julia code as well as LaTeX and Markdown\nSimple cross-referencing capability for figures, tables, and sections\nDocuments can be rendered as Word, PDF, or HTML\nEasily include citations and bibliographies from Crossref, DataCite, and PubMed as well as with direct integration with Zotero\nHigh quality formatting options for equations and tables\nQuarto’s .qmd files can be edited with various code/text editors including VS Code, RStudio and more\nTrack changes and collaborate using Git or other version control systems.\n\nWriting your academic manuscripts with Quarto is more reproducible as it allows others to use your underlying manuscript file in combination with your data to directly re-create your results.\nIn one of our exercises you will practice creating a manuscript with Quarto for an example project\n\n\nPresentations with RevealJS\nQuarto also allows you to create presentations in several formats RevealJS, Microsoft Powerpoint and Beamer using a common syntax. In fact the presentation document for this workshop is created using Quarto and RevealJS.\nSome useful features of making presentations with Quarto include:\n\nSelection of pre-existing modern themes with functionality to publish your own theme.\nInclude interactive content: Executable code block and visual components (graphs and maps)\nDynamic Resizing of content depending on screen size\nFunctionality for slide notes, automatic transitions, timers etc.\nEasy export to PDF or HTML\nSimilar to manuscripts code-based content is dynamically updated.\n\n\n\nWebsites\nQuarto can also be used to create websites that can be freely hosted through Github Pages or other services like Netlify or Posit Connect. This is a great way to share your research with a wider audience or promote your work. Creating Quarto websites is an intuitive and user-friendly process and because it uses the Bootstrap framework there is a lot of guidance available for customizing beyond the 25 default themes\nSome examples from the authors:\n\nThis website is created with Quarto and hosted on Github Pages and you can see all of it’s source code here.\nThis is an example of personal website created by Ben to share publications, presentations and blog content: https://blenback.github.io/\n\n\n\n\nResearchers personal website\n\n\n\nThis is a Multi-lingual website created for a research project in Peru to share progress and results of the project: https://nascent-peru.github.io/.\n\n\n\n\nNASCENT-Peru website\n\n\n\n\nDashboards to demostrate your research output\nQuarto dashboards allow you to arrange multiple interactive or static components in a single page with a highly customizable layout. These components can include text summaries, tables, plots, maps and more. This is a great way to collect feedback on aspects of your research during the development process or to present your results in a visually appealing way.\nHere is an interactive example produced using Python interactive plots:\n\n\n\n\nGapminder dashboard from JJallaire.\n\n\n\n\n\nData exploration and visualization\nAs has been mentioned already Quarto provides a lot of options for creating interactive data visualisations, tables and diagrams using frameworks such as:\n\nPlotly\nLeaflet\nJupyter Widgets\nhtmlwidgets\nObservableJS\nShiny\n\nThere are lots of examples of these on the Quarto website but one we particularly like is Leaflet which allows you to create interactive maps with markers, popups and other features. In a research context this is useful to others to explore the spatial results of your research. Here is a simple example we used to show the locations and timings of workshops we were conducting in Peru.\n\n\nCode\nlibrary(leaflet)\nlibrary(fontawesome)\nlibrary(mapview)\n\n\nnational &lt;- makeAwesomeIcon(text = fa(\"people-roof\"),\n                              iconColor = 'white',\n                              library = 'fa',\n                              markerColor = 'darkgreen')\n  \nregional &lt;- makeAwesomeIcon(text = fa(\"people-roof\"),\n                              iconColor = 'white',\n                              library = 'fa',\n                              markerColor = 'lightgreen')\n\n\n#uncomment for saving map\n#Workshop_locations &lt;- \n  leaflet(options = leafletOptions(zoomControl = FALSE,\n                                 attributionControl=FALSE)) %&gt;%\n  #addProviderTiles(providers$Esri.WorldTerrain) %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addAwesomeMarkers(lng=-77.043,\n                    lat=-12.038,\n                    icon= national,\n                    popup=\"Lima, National Workshop 9th May\",\n                    label = \"Lima, National Workshop, 9th May\",\n                    labelOptions = labelOptions(#noHide = TRUE,\n                                                direction = \"bottom\",\n                                                style = list(\"color\" = \"black\",\n                                                \"font-family\" = \"Roboto\",\n                                                \"font-style\" = \"italic\",\n                                                \"box-shadow\" = \"3px 3px rgba(0,0,0,0.25)\",\n                                                \"font-size\" = \"12px\",\n                                                \"border-color\" = \"rgba(0,0,0,0.5)\")))%&gt;%\n  addAwesomeMarkers(lng=-69.189, lat=-12.594, icon = regional, popup=\"Puerto Maldonado, Regional Workshop\", label = \"Puerto Maldonado Regional Workshop 28th May\",\n                    labelOptions = labelOptions(#noHide = TRUE,\n                                                direction = \"bottom\",\n                                                style = list(\"color\" = \"black\",\n                                                \"font-family\" = \"Roboto\",\n                                                \"font-style\" = \"italic\",\n                                                \"box-shadow\" = \"3px 3px rgba(0,0,0,0.25)\",\n                                                \"font-size\" = \"12px\",\n                                                \"border-color\" = \"rgba(0,0,0,0.5)\")))%&gt;%\n  addAwesomeMarkers(lng=-77.529, lat=-9.526, icon = regional, popup=\"Huaraz, Regional Workshop\", label = \"Huaraz, Regional Workshop 4th June\",\n                    labelOptions = labelOptions(#noHide = TRUE,\n                                                direction = \"bottom\",\n                                                style = list(\"color\" = \"black\",\n                                                \"font-family\" = \"Roboto\",\n                                                \"font-style\" = \"italic\",\n                                                \"box-shadow\" = \"3px 3px rgba(0,0,0,0.25)\",\n                                                \"font-size\" = \"12px\",\n                                                \"border-color\" = \"rgba(0,0,0,0.5)\")))%&gt;%\n  addAwesomeMarkers(lng=-76.370, lat=-6.485, icon = regional, popup=\"Tarapoto, Regional Workshop\", label = \"Tarapoto, Regional Workshop 10th June\",\n                    labelOptions = labelOptions(#noHide = TRUE,\n                                                direction = \"bottom\",\n                                                style = list(\"color\" = \"black\",\n                                                \"font-family\" = \"Roboto\",\n                                                \"font-style\" = \"italic\",\n                                                \"box-shadow\" = \"3px 3px rgba(0,0,0,0.25)\",\n                                                \"font-size\" = \"12px\",\n                                                \"border-color\" = \"rgba(0,0,0,0.5)\")))%&gt;%\n  addAwesomeMarkers(lng=-80.63282, lat=-5.19449, icon = regional, popup=\"Piura, Regional Workshop\", label=\"Piura, Regional Workshop 20th May\",\n                    labelOptions = labelOptions(#noHide = TRUE,\n                                                direction = \"bottom\",\n                                                style = list(\"color\" = \"black\",\n                                                \"font-family\" = \"Roboto\",\n                                                \"font-style\" = \"italic\",\n                                                \"box-shadow\" = \"3px 3px rgba(0,0,0,0.25)\",\n                                                \"font-size\" = \"12px\",\n                                                \"border-color\" = \"rgba(0,0,0,0.5)\")))\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "contents/Rprojects.html",
@@ -319,5 +319,129 @@
     "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "Write a paper with Quarto",
     "text": "Write a paper with Quarto\nBecause Quarto is bundled with Rstudio if you have a recent version of Rstudio you may already have Quarto installed. If not, you can install Quarto from CRAN with the following command:"
+  },
+  {
+    "objectID": "index.html#sec-Quarto_exercise",
+    "href": "index.html#sec-Quarto_exercise",
+    "title": "Reproducible Research with  and : Workflows for data, projects and publications",
+    "section": "Write a paper with Quarto",
+    "text": "Write a paper with Quarto\nBecause Quarto is bundled with Rstudio if you have a recent version of Rstudio you may already have Quarto installed. If not, you can install Quarto from CRAN with the following command:"
+  },
+  {
+    "objectID": "presentation.html#quarto-1",
+    "href": "presentation.html#quarto-1",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Quarto",
+    "text": "Quarto\n\n\n\nAn open source scientific and technical publishing system\nIntegrates code in multiple programming languages, written material, and interactive visual components\nProduces a range of document formats including HTML, PDF, and Word\nDeveloped by Posit the same company that created Rstudio.",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#quarto-2",
+    "href": "presentation.html#quarto-2",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Quarto",
+    "text": "Quarto\n\nQuarto website presents many examples of it’s applications\nWe will focus on some of it’s key uses and features that are relevant for academics and producing reproducible research.\n\nAcademic manuscripts\nPresentations\nWebsites\nInteractive dashboards\nData exploration and visualization",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "exercises/Quarto-manuscript_exercise.html#sec-Quarto_exercise",
+    "href": "exercises/Quarto-manuscript_exercise.html#sec-Quarto_exercise",
+    "title": "Reproducible Research with <img style=\"vertical-align:middle; height:1em; border: none; background: none;\" src=\"assets/images/Rlogo.png\"> and <img style=\"vertical-align:middle; height:1em;\" src=\"assets/images/quarto-logo-trademark.svg\">",
+    "section": "",
+    "text": "Because Quarto is bundled with Rstudio if you have a recent version of Rstudio you may already have Quarto installed. If not, you can install Quarto from CRAN with the following command:"
+  },
+  {
+    "objectID": "presentation.html#quarto-3",
+    "href": "presentation.html#quarto-3",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Quarto",
+    "text": "Quarto\nWriting academic manuscripts\nHow many programs do you currently use when writing academic papers?\n\nA common workflow of academic papers [1]",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#quarto-4",
+    "href": "presentation.html#quarto-4",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Quarto",
+    "text": "Quarto\nWriting academic manuscripts\nQuarto solves this problem by allowing you to write full academic manuscripts from start to finish including text, code, and visualizations in a single document:",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#quarto-5",
+    "href": "presentation.html#quarto-5",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Quarto",
+    "text": "Quarto\nWriting academic manuscripts\nKey benefits:\n\nFigures and tables are dynamically updated as your code changes\nSupports code in R, Python and Julia as well as LaTeX and Markdown content\nEasy Cross-referencing capability for figures, tables, and sections\nDocuments can be rendered as Word, PDF, or HTML\nInclude Citations and bibliographies using Crossref, DataCite, PubMed and direct integration with Zotero\nQuarto’s .qmd files can be edited with various code/text editors (VS Code, RStudio etc.)\n\n\nMore reproducible as it allows others to use your underlying manuscript file in combination with your data to directly re-create your results.",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#quarto-6",
+    "href": "presentation.html#quarto-6",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Quarto",
+    "text": "Quarto\nPresentations\nSeveral formats: RevealJS, Microsoft Powerpoint and Beamer using a common syntax.\nUseful features:\n\nModern themes with functionality to publish your own theme.\nInteractive content: Executable code blocks, graphs, maps\nDynamic resizing of content depending on screen size\nFunctionality for slide notes, automatic transitions, timers etc.\nEasy export to PDF or HTML\nSimilar to manuscripts code-based content is dynamically updated.",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#quarto-7",
+    "href": "presentation.html#quarto-7",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Quarto",
+    "text": "Quarto\nWebsites\nWebsites to act as guides, tutorials or teaching materials:",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#quarto-8",
+    "href": "presentation.html#quarto-8",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Quarto",
+    "text": "Quarto\nWebsites\nPersonal websites to share publications and presentations:",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#quarto-9",
+    "href": "presentation.html#quarto-9",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Quarto",
+    "text": "Quarto\nWebsites\nWebsites for research projects to share progress and results:",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#quarto-10",
+    "href": "presentation.html#quarto-10",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Quarto",
+    "text": "Quarto\nDashboards\n\n\n\nArrange multiple interactive or static components in a single page with a highly customizable layout.\nComponents can include text summaries, tables, plots, maps and more.\nUses: Collect feedback on aspects of your research during development or present your results in a visually appealing way.\n\n\n\n\n\nGapminder dashboard from JJallaire",
+    "crumbs": [
+      "View in presentation format"
+    ]
+  },
+  {
+    "objectID": "presentation.html#quarto-11",
+    "href": "presentation.html#quarto-11",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Quarto",
+    "text": "Quarto\nData exploration and visualization\n\n\nMany options for interactive data visualisations, tables and diagrams using:\n\nPlotly\nLeaflet\nJupyter Widgets\nhtmlwidgets\nObservableJS\nShiny",
+    "crumbs": [
+      "View in presentation format"
+    ]
   }
 ]
