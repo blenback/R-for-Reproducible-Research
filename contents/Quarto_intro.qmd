@@ -1,39 +1,47 @@
 <!-- Web content -->
 
 ::: {.content-hidden when-format="revealjs"}
-## A brief introduction to Quarto
 
-Quarto is a unified authoring framework that allows for the integration of code, written material and a wide variety of interactive visual formats into one publishable finished document.
+[Quarto](https://quarto.org/) is an open source scientific and technical publishing system developed by [Posit](https://posit.co/) the same company that also created Rstudio. Quarto allows you to integrate code in multiple programming languages, with written material, and a wide variety of interactive visual components into a range of different document formats. If you are familiar with [Rmarkdown](https://rmarkdown.rstudio.com/) then you will find Quarto familiar as it is in many way an evolution of this.
 
-#### Quarto allows you to:
+The Quarto website presents [many examples](https://quarto.org/docs/gallery/) of the application of the software but here we will focus on some of it's key uses and features that are relevants for academics and producing reproducible research. 
 
--   Create dynamic content that is updated as your code changes
+### Writing academic manuscripts
 
--   Numerous thematic settings for high quality formatting including 'Pandoc' markdown support for equations and cross-referencing
+We all know how painful it can be switching between multiple programs to produce academic manuscripts, maybe you write your text in word, and produce your visualizations in R or Python before having to convert the end result to PDF for submission. This is especially annoying when you need to update parts of the manuscript as part of the review process. 
 
--   Publish your work as websites or books
+Quarto solves this problem by allowing you to write full academic manuscripts from start to finish including text, code, and visualizations in a single program. This functionality has been expanded even further with the release of [Quarto Manuscripts](https://quarto.org/docs/manuscripts/) as a project type from Quarto version 1.4. 
 
--   Edit with any text editor including VS Code, RStudio and more
+Some key benefits of writing your manuscript with Quarto include:
 
--   Easily include citations and bibliographies from tools like Zotero, making it ideal for academic writing and research projects.
+- Figures and tables are dynamically updated as your code changes
 
--   Efficiently track changes and collaborate using Git or other version control systems, thanks to its text-based document structure.
+- Supports the use and inclusion of R, Python and Julia code as well as LaTeX and Markdown  
 
-#### Compatibility Beyond R
+- Simple cross-referencing capability for figures, tables, and sections
 
-Although we focus on Quartos integration with R, it is also compatible with other programming languages, making it a flexible choice for a variety of users. Quarto supports:
+- Documents can be rendered as Word, PDF, or HTML
 
--   **Python**: You can write Python code in Quarto documents to create visualizations, run analyses, and integrate with Python libraries.
+- Easily include citations and bibliographies from Crossref, DataCite, and PubMed as well as with direct integration with [Zotero](https://www.zotero.org/)
 
--   **Julia**: Quarto allows seamless integration with Julia for those working in the data science or scientific computing community.
+- Numerous high quality formatting options for equations and tables 
 
--   **Observable**: For JavaScript users, Quarto supports Observable, allowing you to build interactive documents using JavaScript.
+- Quarto's `.qmd` files can be edited with various code/text editors including VS Code, RStudio and more
 
-This multi-language support makes Quarto a powerful tool that can adapt to your needs, whether you're working in R, Python, Julia, or even a mix of all three.
+- Track changes and collaborate using Git or other version control systems.
 
-### Some of the creative ways in which you can use Quarto is:
+Writing your academic manuscripts with Quarto is more reproducible as it allows others to use your underlying manuscript file in combination with your data to directly re-create your results. 
 
-#### 1. Visualize and publish interactive plots using html widgets
+### Presentations with RevealJS
+
+
+
+
+### Creating and publish interactive visualisations
+
+#### Plots
+
+plotly, Observable JS, Shiny
 
 ```{r, fig.width=10,fig.height=7}
 library(ggplot2)
@@ -43,7 +51,7 @@ p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
 ggplotly(p)
 ```
 
-#### 2. Create interactive geo-spatial mapping segments
+#### Maps with Leaflet
 
 ```{r}
 
@@ -55,14 +63,16 @@ leaflet() %>%
 
 ```
 
-#### 3. Create multi-purpose dashboards to demostrate your research output
+### Dashboards to demostrate your research output
 
 ![](https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png){fig-align="center" width="70%"} 
 
-#### 4. Create multilingual websites for your research projects
+### Create multilingual websites for your research projects
 
 ![](assets/images/quarto_multilingual.png){fig-align="center" width="70%"}
 :::
+
+
 
 <!-- Presentation content -->
 

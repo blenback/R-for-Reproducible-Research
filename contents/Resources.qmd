@@ -1,0 +1,18 @@
+---
+execute:
+  echo: true
+  eval: false
+  error: false
+---
+
+## R and Git
+
+
+
+
+## Quarto
+
+https://youtu.be/w3X76e_tZr8?si=bE4OfrNm-wLaeBlk
+
+https://youtu.be/EbAAmrB0luA?si=yUXEup4qpRXCDh5k
+

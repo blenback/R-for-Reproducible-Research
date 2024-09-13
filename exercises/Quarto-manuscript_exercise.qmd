@@ -1,2 +1,4 @@
 
 ## Write a paper with Quarto
+
+Because Quarto is bundled with Rstudio if you have a recent version of Rstudio you may already have Quarto installed. If not, you can install Quarto from CRAN with the following command:
