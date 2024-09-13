@@ -1,8 +1,8 @@
 ---
-editor: 
-  markdown: 
-    wrap: 72
-bibliography: references.bib
+execute:
+  echo: true
+  eval: false
+  error: false
 ---
 
 <!-- Web content -->
