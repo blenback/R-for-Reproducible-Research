@@ -347,7 +347,7 @@
     "href": "presentation.html#quarto-3",
     "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
     "section": "Quarto",
-    "text": "Quarto\nWriting academic manuscripts\nHow many programs do you currently use when writing academic papers?\n\nA common workflow of academic papers [8]"
+    "text": "Quarto\nWriting academic manuscripts\nHow many programs do you currently use when writing academic papers?\n\nA common workflow of academic papers [9]"
   },
   {
     "objectID": "presentation.html#quarto-4",
@@ -466,7 +466,7 @@
     "href": "presentation.html#containerization-with-1",
     "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
     "section": "Containerization with ",
-    "text": "Containerization with \nWhat is containerization?"
+    "text": "Containerization with \nWhat is containerization?\nContainerization is the process of bundling code along with all of it’s dependencies including: - The operating system - Software libraries (packages) - Other system software.\nEverything needed to run the code is included means that the code is portable and can be run on any platform or cloud service.\nThis makes containerization the gold standard for reproducibility ## Containerization with \n\n\nWhat is Docker?"
   },
   {
     "objectID": "presentation.html#containerization-with-2",
@@ -487,7 +487,7 @@
     "href": "presentation.html#docker-with-renv-1",
     "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
     "section": "Docker with renv",
-    "text": "Docker with renv\nWhy Git and GitHub?\n\nVersion control: A more systematic way to organise data beyond “dataprep_1”, “dataprep_final”, “dataprep_finalfinal” etc.\nSystematic documentation and storage of code changes allowing us to track changes and revert back to previous versions when needed.\n\nTerminologies\n\nPush and Pull?\n\n\nGit terminologies\nGit cheatsheet: https://education.github.com/git-cheat-sheet-education.pdf\n\nSteps for using Git and GitHub (To be done in the exercises - basic)\n\nCreate a GitHub repository in your account\nDownload and install Git\nAdd credentials for your account to Git\nLink RProject to Github repository\nOpen, checkout and navigate Git repository local version via Rstudio\nBasic functionalities of Git in Rstudio\n\nAdditional fucntionalities\n\nGitHub repositories can be archived on Zenodo and thus get a DOI.\nGitHub actions\nGitHub releases can be continuously integrated into DockerHub or GitHub Packages"
+    "text": "Docker with renv"
   },
   {
     "objectID": "presentation.html#about-us-1",
@@ -1025,5 +1025,75 @@
     "title": "Reproducible Research with  and : Workflows for data, projects and publications",
     "section": "Zenodo",
     "text": "Zenodo\n[ to  pipeline] https://cran.r-project.org/web/packages/zen4R/vignettes/zen4R.html"
+  },
+  {
+    "objectID": "presentation.html#containerization-with-docker",
+    "href": "presentation.html#containerization-with-docker",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Containerization with Docker",
+    "text": "Containerization with Docker\nWhat is containerization?\nContainerization is the process of bundling code along with all of it’s dependencies including:\n\nThe operating system\nSoftware libraries (packages)\nOther system software\n\nEverything needed to run the code is included means that the code is portable and can be run on any platform or cloud service.\nThis makes containerization the gold standard for reproducibility"
+  },
+  {
+    "objectID": "presentation.html#containerization-with-docker-1",
+    "href": "presentation.html#containerization-with-docker-1",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Containerization with Docker",
+    "text": "Containerization with Docker\nWhat is containerization?\nContainerization is the process of bundling code along with all of it’s dependencies including:\n\nThe operating system\nSoftware libraries (packages)\nOther system software\n\nEverything needed to run the code is included means that the code is portable and can be run on any platform or cloud service.\nThis makes containerization the gold standard for reproducibility"
+  },
+  {
+    "objectID": "presentation.html#containerization-with-docker-2",
+    "href": "presentation.html#containerization-with-docker-2",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Containerization with Docker",
+    "text": "Containerization with Docker\nWhat is Docker?\n\n\nDocker is an open-source, and the most popular, platform for containerization."
+  },
+  {
+    "objectID": "presentation.html#containerization-with-docker-3",
+    "href": "presentation.html#containerization-with-docker-3",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Containerization with Docker",
+    "text": "Containerization with Docker\n\nDockerfile:\n\nText file containing a collection of commands to create a new Docker Image.\nIncludes the details of the environment required to create to run the code and the command to do it.\nTypically start from a base image, i.e an existing Docker Image."
+  },
+  {
+    "objectID": "presentation.html#containerization-with-docker-4",
+    "href": "presentation.html#containerization-with-docker-4",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Containerization with Docker",
+    "text": "Containerization with Docker\n\nDocker Image:\n\nA read-only file that contains the instructions for creating a Docker Container.\nBlueprint of what will be in a container when it is running.\nDocker Images can be shared via Dockerhub, so that they can be used by others."
+  },
+  {
+    "objectID": "presentation.html#containerization-with-docker-5",
+    "href": "presentation.html#containerization-with-docker-5",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Containerization with Docker",
+    "text": "Containerization with Docker\n\nDocker Container:\n\nA running instance of a Docker image that runs code with it’s environment\nRuns in isolation from the host, only accesses host files (i.e. data) if it has been configured to do so.\nPossible to create multiple containers simultaneously from the same Docker Image.\n\n\n\nDocker Container: Is an actual running instance of a Docker image. It runs completely isolated from the host environment by default and only accesses host files (i.e. data) if it has been configured to do so. It is possible to create multiple containers simultaneously from the same Docker Image, and each container can be started, stopped, moved, and deleted independently of the others."
+  },
+  {
+    "objectID": "presentation.html#containerization-with-docker-6",
+    "href": "presentation.html#containerization-with-docker-6",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Containerization with Docker",
+    "text": "Containerization with Docker\nUsing Docker with R\nTwo main resources that can help in the creation of containerized R projects:\n\nRocker:\n\n\nA project that catalogs and manages Docker Images for R projects.\nBasic images include different versions of R and RStudio\nOther images offering collections of R packages for specific purposes (e.g. tidyverse)."
+  },
+  {
+    "objectID": "presentation.html#containerization-with-docker-7",
+    "href": "presentation.html#containerization-with-docker-7",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Containerization with Docker",
+    "text": "Containerization with Docker\nUsing Docker with R\nTwo main resources that can help in the creation of containerized R projects:\n\nDockerfile:\n\n\nA package which creates a custom class object that represents the Dockerfile\nHas slots corresponding to common elements of Docker images allowing to add elements to the dockerfile in R."
+  },
+  {
+    "objectID": "presentation.html#containerization-with-docker-8",
+    "href": "presentation.html#containerization-with-docker-8",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Containerization with Docker",
+    "text": "Containerization with Docker\nDocker with renv\nTwo methods of integrating renv with Docker to manage the package environment of your project:\n\nUse renv to install packages when the Docker image is built:\n\n\nUseful for multiple projects with identical package requirements because you can re-use the image as a base for new images[8].\nRestoring the package library (renv::restore()) when building the image is slow so try to avoid the need to re-build the base image many times."
+  },
+  {
+    "objectID": "presentation.html#containerization-with-docker-9",
+    "href": "presentation.html#containerization-with-docker-9",
+    "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
+    "section": "Containerization with Docker",
+    "text": "Containerization with Docker\nDocker with renv\nTwo methods of integrating renv with Docker to manage the package environment of your project:\n\nUse renv to install/restore packages only when Docker containers are run:\n\n\nBetter when you plan to have multiple projects built from the same base image but with different package requirements.\nPackage library is not included in the image but instead different project specific libraries are mounted to the container when it is run [8].\nIf renv::restore() is run with caching, packages are not re-installed everytime the container is run.\n\nWhy Git and GitHub?\n\nVersion control: A more systematic way to organise data beyond “dataprep_1”, “dataprep_final”, “dataprep_finalfinal” etc.\nSystematic documentation and storage of code changes allowing us to track changes and revert back to previous versions when needed.\n\nTerminologies\n\nPush and Pull?\n\n\nGit terminologies\nGit cheatsheet: https://education.github.com/git-cheat-sheet-education.pdf\n\nSteps for using Git and GitHub (To be done in the exercises - basic)\n\nCreate a GitHub repository in your account\nDownload and install Git\nAdd credentials for your account to Git\nLink RProject to Github repository\nOpen, checkout and navigate Git repository local version via Rstudio\nBasic functionalities of Git in Rstudio\n\nAdditional fucntionalities\n\nGitHub repositories can be archived on Zenodo and thus get a DOI.\nGitHub actions\nGitHub releases can be continuously integrated into DockerHub or GitHub Packages"
   }
 ]

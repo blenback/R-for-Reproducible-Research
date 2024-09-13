@@ -91,8 +91,6 @@ These are suggestions for different approaches and we hope that in future you wi
 
 :::
 
-## Workflows for Reproducibility
-
 {{< include contents/Zenodo_workflow.qmd >}}
 
 {{< include contents/Docker_workflow.qmd >}}
