@@ -29,7 +29,7 @@ This image highlights some the key concepts we will discuss in the workshop, whi
 
 5.  [Guided exercises](@sec-exercises): Now it's time to get hands-on with some guided exercises to put into practice some of the concepts we have discussed.
 
-6.  [Resources](@sec-resources): A collection of resources that we find particularly helpful in our own journey towards reproducible research.
+<!-- 6.  [Resources](@sec-resources): A collection of resources that we find particularly helpful in our own journey towards reproducible research. -->
 
 # Background {#sec-background}
 
@@ -74,7 +74,6 @@ Of course, these workflows are by no-means the only way of doing things and inde
 
 Now it's time to get hands on with some guided exercises that will let you put into practice the [three workflows for reproducible research](@sec-workflows) that we have introduced as well as writing a academic manuscript using [Quarto](@sec-Quarto). Each exercise is available to download as a PDF if you prefer to view the instructions offline and the files required for each are available to download at the start of each exercise.
 
-
 {{< include exercises/Rproj-Zenodo_exercise.qmd >}}
 
 {{< include exercises/Docker_exercise.qmd >}}
@@ -84,6 +83,6 @@ Now it's time to get hands on with some guided exercises that will let you put i
 {{< include exercises/Quarto-manuscript_exercise.qmd >}}
 
 
-# Resources {#sec-resources}
+<!-- # Resources {#sec-resources} -->
 
-{{< include contents/Resources.qmd >}}
+<!-- {{< include contents/Resources.qmd >}} -->

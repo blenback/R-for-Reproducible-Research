@@ -356,13 +356,13 @@ focused on reproducible research too: EXAMPLE
     modelling, spatial analysis, visualisation (Many packages developed
     by academics)
 
-BUT just using {{< iconify fa-brands r-project >}} doesn't necessarily
-make your research reproducible...
-
-We have put together this workshop to share some advice for best
-practice and tips that we have picked up along the way.
+**But just using {{< iconify fa-brands r-project >}} doesn't necessarily
+make your research reproducible...**
 
 ## Workshop concept
 
-![](assets/images/graphical_abstract_dark.png){width="70%"}
+![](assets/images/graphical_abstract_dark.png){width="70%" fig-align="center"}
+
+We have put together this workshop to share some advice for best
+practice and tips that we have picked up along the way.
 :::
