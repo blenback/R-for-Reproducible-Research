@@ -31,6 +31,7 @@ jobs:
             any::rmarkdown
             any::leaflet
             any::tidyverse
+            any::mapview
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
