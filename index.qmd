@@ -85,4 +85,4 @@ Now it's time to get hands on with some guided exercises that will let you put i
 
 <!-- # Resources {#sec-resources} -->
 
-<!-- {{< include contents/Resources.qmd >}} -->
+{{< include contents/Resources.qmd >}}

@@ -41,24 +41,22 @@ execute:
 
 # Schedule
 
-::: {.incremental}
+::: incremental
+-   Introduction (15 mins)
 
-- Introduction (15 mins)
+-   Research projects with R (30 mins)
 
-- Research projects with R (30 mins)
+-   Comfort break (10 mins)
 
-- Comfort break (10 mins)
+-   3 workflows for Reproducibility (20 mins)
 
-- 3 workflows for Reproducibility (20 mins)
+-   Quarto (20 mins)
 
-- Quarto (20 mins)
+-   Comfort break (10 mins)
 
-- Comfort break (10 mins)
+-   Exercise time (45 mins)
 
-- Exercise time (45 mins)
-
-- Q&A + feedback (30 mins)
-
+-   Discussion + feedback (30 mins)
 :::
 
 # Introduction
@@ -77,8 +75,7 @@ execute:
 
 We will discuss three workflows for reproducibility:
 
-::: {.incremental}
-
+::: incremental
 1.  Rstudio project to Zenodo pipeline
 
 2.  Containerization with Docker
@@ -86,9 +83,8 @@ We will discuss three workflows for reproducibility:
 3.  Version control with Git
 :::
 
-:::{.fragment}
+::: fragment
 These are suggestions for different approaches and we hope that in future you will be able to adapt these workflows to the needs of your own research projects.
-
 :::
 
 {{< include contents/Zenodo_workflow.qmd >}}
@@ -107,9 +103,34 @@ These are suggestions for different approaches and we hope that in future you wi
 
 ## Guided exercises
 
-On the website for the masterclass under the heading 
+On the website for the masterclass under the heading **Guided exercises** you will find 4 exercises that put into practice the workflows we have discussed as well as the starting to write an academic manuscript with Quarto.
 
-# Q&A + feedback
+-   The exercises build incrementally on each other but they don't need to be completed in order.
+
+-   Choose which one interests you most or depending on your existing knowledge and expertise.
+
+-   We have allocated 45 minutes to work on the exercises and we will be here to help you if you have any questions.
+
+{{< include contents/exercises.qmd >}}
+
+# Discussion and Feedback
+
+## Discussion and Feedback
+
+This is an open discussion so feel free to raise any points you might have, but here are some ideas: 
+
+- Any questions of understanding or clarification about the content we have covered today?
+
+- What are your own experiences with trying to make your work reproducible? Particular successes or obstacles you have encountered? 
+
+- Are there any other tools or workflows that you have found useful that you would like to share with the group?
+
+- Have you encountered any particular differences in the way that reproducibility is approached in your field/discipline?
+
+::: notes
+We have allocated 30 minutes for an open discussion and feedback
+:::
+
+
 
 # Bibliography
-
