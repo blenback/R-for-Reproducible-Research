@@ -18,7 +18,7 @@ For the purpose of this workshop we will approach this topic by splitting it up 
 
 ![Graphical overview of components of a good research project in R](assets/images/project_components.png)
 
-As you move through these you will see that there are areas of overlap and complementarity between them. These topics are also central to the choice of approaches in the [three workflows for reproducibility](@sec-workflows) that we will share.
+As you move through these you will see that there are areas of overlap and complementarity between them. These topics are also central to the choice of approaches in the [three workflows for reproducibility](index.qmd#sec-workflows) that we will share.
 
 ## <img src="assets/images/Rstudio.light.svg" style="vertical-align:middle; height:1.5em;"/> projects {#sec-projects}
 
@@ -55,7 +55,7 @@ There are several ways to open a Project:
 
 ### Utilising project specific `.Rprofile`'s {#sec-rprofile}
 
-Another useful feature of Rstudio projects is the ability to store project-specific settings using the `.Rprofile` file which controls the initialisation behaviour of the R session when the project is opened. A useful application of this for reproducible research projects is automatically open a particular script, for example a master script that runs all the code in the project (which is a concept that will discussed under [workflow decomposition](@sec-workflow-decomposition)).
+Another useful feature of Rstudio projects is the ability to store project-specific settings using the `.Rprofile` file which controls the initialisation behaviour of the R session when the project is opened. A useful application of this for reproducible research projects is automatically open a particular script, for example a master script that runs all the code in the project (which is a concept that will discussed under [workflow decomposition](Rprojects.qmd#sec-workflow-decomposition)).
 
 To do this the contents of your `.Rprofile` file would like this:
 
@@ -104,17 +104,17 @@ However the problem is bigger than just packages because when your code runs it 
 
 All of these things together make up what is known as the 'environment' of your code. Hence the process of documenting and managing this environment to is ensure that your code is reproducible (i.e. it not only runs but also consistently produces the same results).
 
-There are different approaches to environment management that differ in their complexity and hence maybe suited to some projects and not others. For the purpose of this workshop we will focus on what we have found is one of the most user-friendly ways to manage your *package environment* (caveat that will be discussed) in R which is the package `renv`. Below we will introduce this package in more detail as it will form a central part of the [three workflows for reproducibility](@sec-workflows) that we present.
+There are different approaches to environment management that differ in their complexity and hence maybe suited to some projects and not others. For the purpose of this workshop we will focus on what we have found is one of the most user-friendly ways to manage your *package environment* (caveat that will be discussed) in R which is the package `renv`. Below we will introduce this package in more detail as it will form a central part of the [three workflows for reproducibility](index.qmd#sec-workflows) that we present.
 
 ### Creating reproducible environments with `renv`
 
 As mentioned above [`renv`](https://rstudio.github.io/renv/articles/renv.html) is an R package that helps you create reproducible environments for your R projects by not only documenting your package environment but also providing functionality to re-create it.
 
-It does this by creating **project specific libraries** (i.e. directories: `renv/library`) which contain all the packages used by your project. This is different from the default approach to package usage and installation whereby all packages are stored in a single library on your machine (system library). Having separate project libraries means "that different projects can use different versions of packages and installing, updating, or removing packages in one project doesn't affect any other project." [@renv]. In order to make sure that your project uses the project library everytime it is opened `renv` utilises the functionality of [`.Rprofile's`](@sec-rprofile) to set the project library as the default library.
+It does this by creating **project specific libraries** (i.e. directories: `renv/library`) which contain all the packages used by your project. This is different from the default approach to package usage and installation whereby all packages are stored in a single library on your machine (system library). Having separate project libraries means "that different projects can use different versions of packages and installing, updating, or removing packages in one project doesn't affect any other project." [@renv]. In order to make sure that your project uses the project library everytime it is opened `renv` utilises the functionality of [`.Rprofile's`](Rprojects.qmd#sec-rprofile) to set the project library as the default library.
 
 Another key process of renv is to create project specific **lockfiles** (`renv.lock`) which contain sufficient metadata about each package in the project library so that it can be re-installed on a new machine.
 
-As alluded to, renv does a great job of managing your packages but is not intended to manage other aspects of your environment such as: tracking your version of R or your operating system. This is why if you want 'bullet-proof' reproducibility renv needs to be used alongside other approaches such as containerization which is the [3rd and most complex workflow](@sec-docker_workflow) we will discuss.
+As alluded to, renv does a great job of managing your packages but is not intended to manage other aspects of your environment such as: tracking your version of R or your operating system. This is why if you want 'bullet-proof' reproducibility renv needs to be used alongside other approaches such as containerization which is the [3rd and most complex workflow](index.qmd#sec-docker_workflow) we will discuss.
 
 ## Writing clean code {#sec-writing-clean-code}
 
@@ -157,7 +157,7 @@ As you may already know braced (`{}`) sections of code (i.e. function definition
 
 ![](assets/images/code_section_sequential.png){fig-align="center" width="50%"}
 
-However, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis ([discussed in more detail later](@sec-workflow-decomposition)). In this regard, another good tip is to give the resulting sections sequential alphabetical or numerical Pre-fixes. Code sections are created by inserting a comment line that contains at least four trailing dashes (`-`), equal signs (`=`), or pound signs (`#`):
+However, an often overlooked feature is the ability to create named code sections that can be also folded, as well as easily navigated between. These can be used to break longer scripts into a set of discrete regions according to specific parts of the analysis ([discussed in more detail later](Rprojects.qmd#sec-workflow-decomposition)). In this regard, another good tip is to give the resulting sections sequential alphabetical or numerical Pre-fixes. Code sections are created by inserting a comment line that contains at least four trailing dashes (`-`), equal signs (`=`), or pound signs (`#`):
 
 ```{r}
 
@@ -191,7 +191,7 @@ To use lintr and styler you call their functions like any package but styler can
 
 ![](https://raw.githubusercontent.com/lorenzwalthert/some_raw_data/master/styler_0.1.gif){fig-align="center" width="70%"}
 
-Another very useful feature of both packages is that they can be used as part of a continuous integration (CI) workflow using a version control application like Git. This is a topic that we will cover as part of our [Version control with Git](@sec-git_workflow) workflow but what it means is that the styler and lintr functions are run automatically when you push your code to a remote repository.
+Another very useful feature of both packages is that they can be used as part of a continuous integration (CI) workflow using a version control application like Git. This is a topic that we will cover as part of our [Version control with Git](index.qmd#sec-git_workflow) workflow but what it means is that the styler and lintr functions are run automatically when you push your code to a remote repository.
 
 ## Workflow decomposition {#sec-workflow-decomposition}
 
@@ -201,7 +201,7 @@ In terms of coding scientific research projects many of us probably already inst
 
 However this is not always realized in the most understandable way, for example we may have seperate scripts with logical sounding names like: `Data_prep.R` and `Data_analysis.R` but can others really be expected to know exactly which order these must be run in, or indeed whether they even need to be run sequentially at all?
 
-A good 1st step to remedying this is to give your scripts sequential numeric tags in their names, e.g. `01_Data_prep.R`, `02_Data_analysis.R`. This will also ensure that they are presented in numerical order when placed in a designated directory [Structuring your project directory](@sec-structuring) and can be explicitly described in your [project documentation](@sec-documentation).
+A good 1st step to remedying this is to give your scripts sequential numeric tags in their names, e.g. `01_Data_prep.R`, `02_Data_analysis.R`. This will also ensure that they are presented in numerical order when placed in a designated directory [Structuring your project directory](Rprojects.qmd#sec-structuring) and can be explicitly described in your [project documentation](Rprojects.qmd#sec-documentation).
 
 But you can take this to the next level by creating a *Master* script that sources your other scripts in sequence (think of them as *sub-scripts*) so that users of your code need only run one script. To do this is as simple as creating the master script as you would any normal R script (*File \> New File \> R script*) and then using the `base::source()` function to run the sub-scripts:
 
@@ -236,7 +236,7 @@ source("Scripts/Modelling/Fit_stat_models.R", local = scripting_env)
 
 ```
 
-As you can see in this example code I have also made use of a [script header](@sec-script_headers) and [code sections](@sec-code_sections), that were previously discussed, to make the division of sub-processes even clearer. Another advantage of this approach is that all sub-scripts can utilise the same environment (defined by the `source(local= )` argument) which means that each individual script does not need to load packages or paths as objects.
+As you can see in this example code I have also made use of a [script header](Rprojects.qmd#sec-script_headers) and [code sections](Rprojects.qmd#sec-code_sections), that were previously discussed, to make the division of sub-processes even clearer. Another advantage of this approach is that all sub-scripts can utilise the same environment (defined by the `source(local= )` argument) which means that each individual script does not need to load packages or paths as objects.
 
 Finally, within your sub-scripts processes should also be seperated into code sections and ideally any repetitive tasks should be performed with custom functions which again are contained within their own files.
 
@@ -266,7 +266,7 @@ As an example my go-to project directory structure looks like this:
     └── tools # Auxilliary files and settings
 ```
 
-Rather than manually create this directory structure everytime you start a new project, save yourself some time and automate it by using Rstudio's [**Project Templates**](https://docs.posit.co/ide/user/ide/guide/productivity/project-templates.html) functionality. This allows you to select a custom template as an option when creating a new [Rstudio project](@sec-creating-projects) through the New project wizard (*File \> New Project \> New Directory \> New Project Template*).
+Rather than manually create this directory structure everytime you start a new project, save yourself some time and automate it by using Rstudio's [**Project Templates**](https://docs.posit.co/ide/user/ide/guide/productivity/project-templates.html) functionality. This allows you to select a custom template as an option when creating a new [Rstudio project](Rprojects.qmd#sec-creating-projects) through the New project wizard (*File \> New Project \> New Directory \> New Project Template*).
 
 To implement this even as an intermediate R user is fairly labor intensive as your custom project directory template needs to be contained within an R-package, in order to be available in the wizard. However, quite a few templates with directory structures appropriate for scientific research projects have been created by others:
 
@@ -288,7 +288,7 @@ In response to this there has been a movement in the R research community to ado
 
 Instead, we would suggest to follow the maxim of *not letting the perfect be the enemy of the good* and to focus on these key areas:
 
--   **Provide adequate in-script commentary**: This is perhaps contentious for those from a software development community, but given the choice I would rather have to read through a script with too many comments than one with too few. However remember that comments should be used to explain the purpose of the code, not what the code is doing. In line with this use [script headers](@sec-script_headers).
+-   **Provide adequate in-script commentary**: This is perhaps contentious for those from a software development community, but given the choice I would rather have to read through a script with too many comments than one with too few. However remember that comments should be used to explain the purpose of the code, not what the code is doing. In line with this use [script headers](Rprojects.qmd#sec-script_headers).
 
 -   **Document your functions with `roxygen` skeletons**:
 

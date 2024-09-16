@@ -13,7 +13,7 @@ execute:
 
 The graphic above shows the main steps of this workflow. It starts by
 developing your research project as an Rstudio project following the
-[good practice project guidelines](@sec-Rprojects) we have discussed.
+[good practice project guidelines](index.qmd#sec-Rprojects) we have discussed.
 Then, it uses the `renv` package to manage the project environment so
 that others can re-create it. Finally, the code, data and environment
 are uploaded to the open-access repository `Zenodo`, which provides a
@@ -28,10 +28,10 @@ citable, supporting the FAIR principles of findability, accessibility,
 interoperability, and reusability [@wilkinson2016].
 
 The next sections provide some additional detail on [environment
-management with renv](@sec-renv_workflow) and some background and
-practical tips on [Zenodo](@sec-zenodo_background). You will have the
+management with renv](Zenodo_workflow.qmd#sec-renv_workflow) and some background and
+practical tips on [Zenodo](Zenodo_workflow.qmd#sec-zenodo_background). You will have the
 chance to apply this workflow to an example project in the [accompanying
-exercise](@sec-Rproj_zenodo_exercise).
+exercise](Rproj_zenodo_exercise.qmd#sec-Rproj_zenodo_exercise).
 
 ### Environment Management with `renv` {#sec-renv_workflow}
 
@@ -68,7 +68,7 @@ However, `renv` does not manage the **entire system environment** (such
 as the version of R itself or external dependencies like system
 libraries). For complete reproducibility, combining `renv` with
 
-containerization tools (like [Docker](@#sec-docker_workflow)) or publishing outputs (such as code
+containerization tools (like [Docker](index.qmd#sec-docker_workflow)) or publishing outputs (such as code
 or data) via repositories like Zenodo is recommended.
 
 ### <img src="assets/images/zenodo-blue.svg" style="vertical-align:middle; height:2.75em;"/> as a research repository {#sec-zenodo_background}
@@ -116,7 +116,7 @@ reasons:
     the work should be maintained.
 
 -   **Integration with GitHub:** When a research project (e.g., code) is
-    hosted on [GitHub](@sec-git_workflow), Zenodo can be used to
+    hosted on [GitHub](index.qmd#sec-git_workflow), Zenodo can be used to
     [archive the
     repository](https://help.zenodo.org/docs/profile/linking-accounts/)
     upon each new release, creating a snapshot with a DOI. This means
@@ -189,7 +189,7 @@ ensuring long-term accessibility and reproducibility.
 
 ## Rstudio project to `Zenodo` pipeline
 
-### `renv` Workflow
+### `renv` Workflow 
 
 -   Initialize `renv` inside the project directory to identify
     dependencies using `renv::init()`

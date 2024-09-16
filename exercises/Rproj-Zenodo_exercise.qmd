@@ -177,7 +177,7 @@ For convenience, we will configure RStudio to automatically open the master scri
 -   Add the following R code to the `.Rprofile` file:
 
 ```{r}
-rsetHook("rstudio.sessionInit", function(newSession) {
+setHook("rstudio.sessionInit", function(newSession) {
   if (newSession)
     rstudioapi::navigateToFile('RiceFarm_master.R', line = -1L, column = -1L)
 }, action = "append")

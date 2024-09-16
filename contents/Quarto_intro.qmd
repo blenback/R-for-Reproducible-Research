@@ -48,7 +48,7 @@ Some key benefits of writing your manuscript with Quarto include:
 
 Writing your academic manuscripts with Quarto is more reproducible as it allows others to use your underlying manuscript file in combination with your data to directly re-create your results.
 
-In one of our exercises you will practice [creating a manuscript with Quarto for an example project](@sec-Quarto_exercise)
+In one of our exercises you will practice [creating a manuscript with Quarto for an example project](Quarto-manuscript_exercise.qmd#sec-Quarto_exercise)
 
 ### Presentations with RevealJS
 
