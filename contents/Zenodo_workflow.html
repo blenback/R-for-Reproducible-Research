@@ -197,9 +197,9 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p><a href="assets/images/project_zenodo_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="assets/images/project_zenodo_workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
-<p>The graphic above shows the main steps of this workflow. It starts by developing your research project as an Rstudio project following the <a href="@sec-Rprojects">good practice project guidelines</a> we have discussed. Then, it uses the <code>renv</code> package to manage the project environment so that others can re-create it. Finally, the code, data and environment are uploaded to the open-access repository <code>Zenodo</code>, which provides a DOI for your work, ensuring long-term accessibility and reproducibility.</p>
+<p>The graphic above shows the main steps of this workflow. It starts by developing your research project as an Rstudio project following the <a href="index.qmd#sec-Rprojects">good practice project guidelines</a> we have discussed. Then, it uses the <code>renv</code> package to manage the project environment so that others can re-create it. Finally, the code, data and environment are uploaded to the open-access repository <code>Zenodo</code>, which provides a DOI for your work, ensuring long-term accessibility and reproducibility.</p>
 <p>The <code>renv</code> package helps maintain the R environment, allowing others to recreate the environment in which your analysis was conducted. By combining <code>renv</code> with Zenodo, you create a comprehensive solution for reproducible research. <code>renv</code> ensures that the computational environment is captured, while Zenodo makes your research outputs accessible and citable, supporting the FAIR principles of findability, accessibility, interoperability, and reusability <span class="citation" data-cites="wilkinson2016">[<a href="#ref-wilkinson2016" role="doc-biblioref">1</a>]</span>.</p>
-<p>The next sections provide some additional detail on <a href="@sec-renv_workflow">environment management with renv</a> and some background and practical tips on <a href="@sec-zenodo_background">Zenodo</a>. You will have the chance to apply this workflow to an example project in the <a href="@sec-Rproj_zenodo_exercise">accompanying exercise</a>.</p>
+<p>The next sections provide some additional detail on <a href="../contents/Zenodo_workflow.html#sec-renv_workflow">environment management with renv</a> and some background and practical tips on <a href="../contents/Zenodo_workflow.html#sec-zenodo_background">Zenodo</a>. You will have the chance to apply this workflow to an example project in the <a href="Rproj_zenodo_exercise.qmd#sec-Rproj_zenodo_exercise">accompanying exercise</a>.</p>
 <section id="sec-renv_workflow" class="level3">
 <h3 class="anchored" data-anchor-id="sec-renv_workflow">Environment Management with <code>renv</code></h3>
 <p><code>renv</code> is a powerful R package designed to help manage project environments by creating project-specific libraries and lockfiles. As mentioned earlier, <code>renv</code> captures the exact versions of R packages used in a project, storing this information in a renv.lock file. This allows users to recreate the exact package environment when revisiting a project or transferring it to a different machine, ensuring reproducibility.</p>
@@ -211,7 +211,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </ul>
 <p>One of the core strengths of <code>renv</code> is its flexibility. It integrates seamlessly with tools like RStudio, allowing easy management of dependencies without disrupting existing workflows. This makes it particularly well-suited for ensuring that research projects are reproducible across different systems and platforms.</p>
 <p>However, <code>renv</code> does not manage the <strong>entire system environment</strong> (such as the version of R itself or external dependencies like system libraries). For complete reproducibility, combining <code>renv</code> with</p>
-<p>containerization tools (like <a href="@#sec-docker_workflow">Docker</a>) or publishing outputs (such as code or data) via repositories like Zenodo is recommended.</p>
+<p>containerization tools (like <a href="index.qmd#sec-docker_workflow">Docker</a>) or publishing outputs (such as code or data) via repositories like Zenodo is recommended.</p>
 </section>
 <section id="sec-zenodo_background" class="level3">
 <h3 class="anchored" data-anchor-id="sec-zenodo_background"><img src="assets/images/zenodo-blue.svg" style="vertical-align:middle; height:2.75em;"> as a research repository</h3>
@@ -224,7 +224,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li><p><strong>Long term preservation with assignment of DOIs:</strong> Each item published on Zenodo is assigned a permanent <a href="https://simple.wikipedia.org/wiki/Digital_Object_Identifier"><em>Digital Object Identifier</em> (DOI)</a>, which is a better way than a URL to cite the record in academic writing.</p></li>
 <li><p><strong>Open source</strong>: This means that Zenodo is not just free to use but you can even see the <a href="https://github.com/zenodo/zenodo-rdm">code it is built on</a> and contribute to it.</p></li>
 <li><p><strong>Versioning functionality:</strong> Every record starts with a 1st version and <a href="https://help.zenodo.org/docs/deposit/manage-versions/">new versions can be added as research is updated</a>, while earlier versions remain accessible. This is crucial in scientific research, where updated analyses and data corrections are often necessary, but also transparency around earlier versions of the work should be maintained.</p></li>
-<li><p><strong>Integration with GitHub:</strong> When a research project (e.g., code) is hosted on <a href="@sec-git_workflow">GitHub</a>, Zenodo can be used to <a href="https://help.zenodo.org/docs/profile/linking-accounts/">archive the repository</a> upon each new release, creating a snapshot with a DOI. This means that a version of the code can be more easily cited in scientific publications.</p></li>
+<li><p><strong>Integration with GitHub:</strong> When a research project (e.g., code) is hosted on <a href="index.qmd#sec-git_workflow">GitHub</a>, Zenodo can be used to <a href="https://help.zenodo.org/docs/profile/linking-accounts/">archive the repository</a> upon each new release, creating a snapshot with a DOI. This means that a version of the code can be more easily cited in scientific publications.</p></li>
 <li><p><strong>Application programming Interface (API) to access records programmatically:</strong> This a useful feature as it allows for interfacing with Zenodo records without using the website and is the backbone of the <code>zen4R</code> package that allows for publishing records directly from R which we discuss in more detail below.</p></li>
 </ul>
 </section>
@@ -829,7 +829,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
