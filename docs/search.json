@@ -860,7 +860,7 @@
     "href": "presentation.html#writing-clean-code-5",
     "title": "Reproducible Research with  and \n\n\t\n\t\n\t\n\t\n\n\n\n\n\n\n\n\n: Workflows for data, projects and publications",
     "section": "3. Writing clean code",
-    "text": "3. Writing clean code\nScript headers\n\nStarting your scripts with a consistent header containing information about it’s purpose, author/s, creation and modification dates is very helpful!\nThere are no rules as to what this should look like but this is an example:",
+    "text": "3. Writing clean code\nScript headers\n\nStarting your scripts with a consistent header containing information about it’s purpose, author/s, creation and modification dates is very helpful!\nThere are no rules as to what this should look like but this is an example:\n\n```{r}\n#############################################################################\n## Script_title: Brief description of script purpose\n##\n## Notes: More detailed notes about the script and it's purpose\n##\n## Date created: \n## Author(s):\n##################################################################\n```",
     "crumbs": [
       "View in presentation format"
     ]

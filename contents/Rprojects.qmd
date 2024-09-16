@@ -865,7 +865,7 @@ These files are often accompanied by the corresponding file `README.Rmd` which g
 
 -   Useful to include a tree diagram of the project directory structure down to the file level:
 
-`{r}{.smaller} #| eval: false #| echo: true ├── Data │   ├── Processed │   │   └── RiceFarms_summary.csv │   └── Raw │       └── RiceFarms.csv ├── Output │   └── Regional_size_summary_bar.png └── Scripts     ├── 01_data_analysis.R     └── 02_data_visualisation.R`
+```{{r}} ├── Data │   ├── Processed │   │   └── RiceFarms_summary.csv │   └── Raw │       └── RiceFarms.csv ├── Output │   └── Regional_size_summary_bar.png └── Scripts     ├── 01_data_analysis.R     └── 02_data_visualisation.R```
 
 ::: notes
 You will see that one of the things this README includes is a tree diagram which shows the directory structure of the project right down to the file level. This is a useful way to give an overview of what users should find included in the project and then explanatory notes can be added to explain the purpose of each file or directory. Such a diagram can be easily generated using the `fs` package:
