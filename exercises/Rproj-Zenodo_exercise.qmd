@@ -9,7 +9,9 @@ execute:
 
 In this exercise you will setup of a basic RStudio project following good practices for organizing data, writing clean code and decomposing your workflow introduced in [Rproject section](@sec-projects). We‘ll also initialize `renv` to manage package dependencies, ensuring reproducibility. Once the project is set up, we'll go through the process of how to publish the project to Zenodo as described in the [Zenodo workflow](@sec-zenodo_workflow) section.
 
+::: {.content-hidden when-format="pdf"}
 If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://blenback.github.io/R-for-Reproducible-Research/exercises/Rproj-Zenodo_exercise.pdf" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a>
+:::
 
 ### Step 1: Download the exercise resources
 
