@@ -111,8 +111,6 @@ On the website for the masterclass under the heading **Guided exercises** you wi
 
 -   We have allocated 45 minutes to work on the exercises and we will be here to help you if you have any questions.
 
-{{< include contents/exercises.qmd >}}
-
 # Discussion and Feedback
 
 ## Discussion and Feedback

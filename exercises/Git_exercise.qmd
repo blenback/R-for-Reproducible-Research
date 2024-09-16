@@ -9,7 +9,9 @@ execute:
 
 In this exercise we will show how version control with Git can be implemented for an example R project. The project is the same that is created in the first workflow [exercise](@sec-Rproj_zenodo_exercise), however to save time or in case you haven't completed this exercise we will start with the finished output from it.
 
+::: {.content-hidden when-format="pdf"}
 If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a>
+:::
 
 There is an alternative way of working with Git. Instead of linking Rstudio directly to your Github account, you can also use the Github Desktop application, which provides you with an easy to use GUI and very simple setup. If you are interested in using Github Desktop instead, skip to Step 8.
 

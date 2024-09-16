@@ -10,6 +10,19 @@ format:
       sidebar-width: 250px
       body-width: 1300px
       margin-width: 100px
-  pdf: default
+  pdf:
+    code-overflow: wrap
+    include-in-header: 
+       text: |
+         \usepackage{fvextra}
+         \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+include-before-body:
+  text: |
+    \RecustomVerbatimEnvironment{verbatim}{Verbatim}{
+      showspaces = false,
+      showtabs = false,
+      breaksymbolleft={},
+      breaklines
+    }
 format-links: false
 
