@@ -282,32 +282,22 @@ tool for projects of all kinds.
 ::: {.content-visible when-format="revealjs"}
 ## About us
 
-### Ben Black
+::::{.columns .v-center-container}
 
-::: {layout="[0.38, -0.02, 0.60]" layout-valign="center"}
-![](https://github.com/blenback.png){.picture}
-
-[{{< iconify fa6-solid house-chimney-user >}}
-blenback.github.io](https://blenback.github.io/){style="text-decoration: none;"}<br>
-[{{< iconify fa6-solid envelope >}}
-bblack\@ethz.ch](mailto:bblack@ethz.ch){style="text-decoration: none;"}<br>
-[{{< iconify fa6-brands linkedin >}} Ben
-Black](https://www.linkedin.com/in/ben-black-9889a1150/){style="text-decoration: none;"}<br>
-[{{< iconify fa6-brands github >}}
-\@blenback](https://github.com/blenback/){style="text-decoration: none;"}<br>
-[{{< iconify fa6-brands researchgate >}} \Benjamin
-Black](https://www.researchgate.net/profile/Benjamin-Black-5/){style="text-decoration: none;"}<br>
-[{{< iconify simple-icons x >}}
-\@Blen_Back](https://twitter.com/Blen_Back/){style="text-decoration: none;"}<br>
+::: {.column width="50"}
+![](assets/images/Ben_headshot.jpg){.picture width="80%"}
+<br>**Ben Black**
+<br>Doctoral researcher
 :::
 
-## About us
+::: {.column width="50"}
+![](assets/images/Manuel.jpg){.picture width="80%"}
+<br>**Manuel Kurmann**
+<br>Research assistant
+:::
+::::
 
-### Nivedita Harisena
-
-## About us
-
-### Manuel Kurmann
+# Your turn:<br>Introduce yourselves and what institution you are from.
 
 ## What is reproducible research?
 
@@ -323,8 +313,8 @@ Let's hear your thoughts: What does reproducible research mean to you?
 
 ## The FAIR standard
 
--   **Findability, Accessibility, Interoperability, and
-    Reusability** (FAIR).
+-   **F**indability, **A**ccessibility, **I**nteroperability, and
+    **R**eusability[@wilkinson2016].
 
 -   Developed by diverse stakeholders (academia, industry, funders,
     publishers).
@@ -333,7 +323,7 @@ Let's hear your thoughts: What does reproducible research mean to you?
 
 -   Emphasis on both human and machine readability.
 
-[@wilkinson2016]
+
 
 ## Why strive for reproducible research?
 
@@ -348,7 +338,7 @@ Let's hear your thoughts: What does reproducible research mean to you?
 Don't just take our word for it, research funders are increasingly
 focused on reproducible research too: EXAMPLE
 
-## Why {{< iconify fa-brands r-project >}} for reproducible research?
+## Why <img style="vertical-align:-35%; height:0.85em;" src="assets/images/Rlogo.png"> for reproducible research?
 
 -   Open source
 -   Large active user community for support
@@ -356,13 +346,17 @@ focused on reproducible research too: EXAMPLE
     modelling, spatial analysis, visualisation (Many packages developed
     by academics)
 
-**But just using {{< iconify fa-brands r-project >}} doesn't necessarily
+**But just using <img style="vertical-align:-35%; height:0.85em;" src="assets/images/Rlogo.png"> doesn't necessarily
 make your research reproducible...**
+
+# Tell us a bit about your experience with <img style="vertical-align:-30%; height:0.85em;" src="assets/images/Rlogo.png">?
 
 ## Workshop concept
 
 ![](assets/images/graphical_abstract_dark.png){width="70%" fig-align="center"}
-
+::: notes
 We have put together this workshop to share some advice for best
 practice and tips that we have picked up along the way.
+:::
+
 :::
