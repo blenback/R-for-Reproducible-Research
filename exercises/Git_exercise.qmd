@@ -11,6 +11,8 @@ In this exercise we will show how version control with Git can be implemented fo
 
 If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a>
 
+There is an alternative way of working with Git. Instead of linking Rstudio directly to your Github account, you can also use the Github Desktop application, which provides you with an easy to use GUI and very simple setup. If you are interested in using Github Desktop instead, skip to Step 8.
+
 ### Step 1: Download and configure Git
 
 - Download Git from https://git-scm.com/downloads
@@ -36,7 +38,7 @@ We will make a quick repository on Github for an individual project, without cha
 
 - Select a license for your repository in the "Choose your license" section. Check out [this website](https://choosealicense.com/) to identify which license works for you. Even though it is optional to add license information to a repository, it is good practice to include this ([See more details](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#choosing-the-right-license)).
 
-- Click the green 'create repository' button
+- Click the green `Create repository` button
 
 ![Setting up the repository](./assets/images/git_ex1.png){width="70%" fig-align="center"}
 
@@ -50,7 +52,7 @@ We will make a quick repository on Github for an individual project, without cha
 
 - Add folder location where you want the project to be saved locally in your computer in "Create project as subdirectory of" section
 
-- Click 'Create project'
+- Click `Create project`
 
 ![Linking repository to R-Studio](./assets/images/git_ex2.png){width="70%" fig-align="center"}
 
@@ -106,3 +108,56 @@ The git ignore functionality tells git which files to ignore while 'pushing' the
 ![Commit changes](./assets/images/git_ex7.png){width="70%" fig-align="center"}
 
 Great! You have finished your first project update (local changes committed and pushed) via Git on Rstudio.
+
+### Step 8: Download and install Github Desktop
+
+This is an alternative way to work with Github when coding in R. For this, we will not link Rstudio to our Github account but we will use the Github Desktop application instead.
+
+-   Download [Github Desktop](https://github.com/apps/desktop) 
+
+-   Install the application and login with your Github account
+
+### Step 9: Create a repository on Github
+
+We will make a quick repository on Github for an individual project, without changing much of the specific configurations since it will be beyond the scope of this workshop.
+
+- Login to your account on [Github](https://github.com/) 
+
+- Create a new repository by clicking the '+' sign in the top right side of the website or in the 'Start new repository' section in the homepage
+
+- Provide a clear name for the repository for e.g. "R_repro_nv" and a quick description like "Test for Reproducible research workshop"
+
+- Set the visibility of the profile to "Public"
+
+- Initialize this repository with: Add a README file.
+
+- Select a license for your repository in the "Choose your license" section. Check out [this website](https://choosealicense.com/) to identify which license works for you. Even though it is optional to add license information to a repository, it is good practice to include this ([See more details](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#choosing-the-right-license)).
+
+- Click the green `Create repository` button
+
+![Setting up the repository](./assets/images/git_ex1.png){width="70%" fig-align="center"}
+
+### Step 10: Clone your Github repository to your computer
+
+-   In the Github Desktopp application click 'File'\>'Clone Repository' and select your new repository. Define the directory on your computer, where you want to clone the repository to. Press the `Clone` button.
+
+
+### Step 11: Edit the `README.md` file
+
+-   Open the README.md in your local project directory with a text editor.
+
+-   Add a description section for the project with a heading and a describing sentence, for e.g. "This project is is a test".
+
+-   Add license information for the project, for e.g. "This project is licensed under the terms of the MIT license."
+
+-   Save the file.
+
+### Step 12: Push the updated `README.md` file
+
+Since you have edited the `README.md` file, Github Desktopp app will propose to you to push this change from your computer to your repository.
+
+-   Add a title and a description and click `Commit to main` button.
+
+-   Click `Push origin` button to upload your changes to your repository on Github.
+
+![Commiting changes github](./assets/images/git_exercise_commit.png){width="70%" fig-align="center"}
