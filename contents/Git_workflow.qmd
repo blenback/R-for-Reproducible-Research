@@ -51,6 +51,9 @@ Alternatively you can also use [Github desktop](https://github.com/apps/desktop)
 :::
 
 ::: {.content-visible when-format="revealjs"}
+
+## Version control with Github
+
 ### Why Git and GitHub?
 
 -   **Version control**: A more systematic way to organise data beyond "dataprep_1", "dataprep_final", "dataprep_finalfinal" etc.

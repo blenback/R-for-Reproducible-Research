@@ -91,15 +91,16 @@ rice_data_summary <- read.csv("Data/Processed/RiceFarms_summary.csv")
 
 ### Step 5: Add Script Headers
 -   Add headers to both new scripts. You can use this template:
-    ```{r}
-    # -----------------------------------------------
-    # Script Name: [01_data_analysis.R / 02_data_visualisation.R]
-    # Project: Rice Farm Analysis
-    # Purpose: [Data analysis / Data visualization]
-    # Author: [Your Name]
-    # Date: [YYYY-MM-DD]
-    # -----------------------------------------------
-    ```
+
+```{r}
+# -----------------------------------------------
+# Script Name: [01_data_analysis.R / 02_data_visualisation.R]
+# Project: Rice Farm Analysis
+# Purpose: [Data analysis / Data visualization]
+# Author: [Your Name]
+# Date: [YYYY-MM-DD]
+# -----------------------------------------------
+```
 
 ### Step 6: Create a master script
 
@@ -135,9 +136,9 @@ We will use [`renv`](https://rstudio.github.io/renv/articles/renv.html) to make 
 
 - install renv package
 
-    ```{r}
-    install.packages("renv")
-    ```
+```{r}
+install.packages("renv")
+```
     
 -   Run the following command in your master script to set up the project-specific environment
 
@@ -153,9 +154,9 @@ This creates a local library for your project and captures the required packages
 For convenience, we can configure RStudio to automatically open the master script when the project is loaded.
 
 -   install the rstudioapi package:
-    ```{r}
+```{r}
 install.packages("rstudioapi")
-    ```
+```
 
 -   Open the `.Rprofile` file in the root of your project directory. The file might be hidden. On Windows click "View" > "Show" > "Hidden items" in the explorer and on MacOS click Press Command+Shift+Dot within the root directory to see the file.
 
@@ -232,47 +233,47 @@ zenodo <- ZenodoManager$new(
     logger = "INFO" 
     )
         
-    ##Prepare a new record to be filled with metadata and uploaded to Zenodo
-    myrec <- ZenodoRecord$new()
-    ```
-If you want to connect to `Zenodo` and not `Zenodo Sandbox`, create the token in your `Zenodo` account and remove the line `sandbox = True` in the code above.
+##Prepare a new record to be filled with metadata and uploaded to Zenodo
+myrec <- ZenodoRecord$new()
+```
+If you want to connect to Zenodo and not Zenodo Sandbox, create the token in your Zenodo account and remove the line `sandbox = True` in the code above.
 
-The types of metadata that can be included in a `Zenodo` record are vast. A full list can be found in the documentation at https://developers.zenodo.org/#representation. 
+The types of metadata that can be included in a Zenodo record are vast. A full list can be found in the [documentation](https://developers.zenodo.org/#representation). 
 
 -   Copy and run the example below to add metadata to your record.
-    ```{r}
-    myrec$setTitle("RiceFarm") #title of the record
-    myrec$addAdditionalTitle("This is an alternative title", type = "alternative-title")
-    myrec$setDescription("Calculating statistics of RiceFarm dataset") #description
-    myrec$addAdditionalDescription("This is an abstract", type = "abstract")
-    myrec$setPublicationDate("2024-09-16") #Format YYYY-MM-DD
-    myrec$setResourceType("dataset")
-    myrec$addCreator(firstname = "Yourfirstname", lastname = "Yourlastname", role = "datamanager", orcid = "0000-0001-0002-0003")
-    myrec$setKeywords(c("R","dataset")) #For filtering
-    myrec$addReference("Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API")
-    ```
+```{r}
+myrec$setTitle("RiceFarm") #title of the record
+myrec$addAdditionalTitle("This is an alternative title", type = "alternative-title")
+myrec$setDescription("Calculating statistics of RiceFarm dataset") #description
+myrec$addAdditionalDescription("This is an abstract", type = "abstract")
+myrec$setPublicationDate("2024-09-16") #Format YYYY-MM-DD
+myrec$setResourceType("dataset")
+myrec$addCreator(firstname = "Yourfirstname", lastname = "Yourlastname", role = "datamanager", orcid = "0000-0001-0002-0003")
+myrec$setKeywords(c("R","dataset")) #For filtering
+myrec$addReference("Blondel E. et al., 2024 zen4R: R Interface to Zenodo REST API")
+```
 
-A record can be deposited on `Zenodo` before it is published. This will add the record to your account without making it public yet. A deposited record can still be edited or deleted. You can also upload data to a deposited record. If you prefer a graphical interface, you can also edit the record on the `Zenodo` website.
+A record can be deposited on Zenodo before it is published. This will add the record to your account without making it public yet. A deposited record can still be edited or deleted. You can also upload data to a deposited record. If you prefer a graphical interface, you can also edit the record on the Zenodo website.
 
--   Deposit the record on `Zenodo`:
-    ```{r}
-    #deposit record
-    myrec <- zenodo$depositRecord(myrec, publish = TRUE)
-    ```
+-   Deposit the record on Zenodo:
+```{r}
+#deposit record
+myrec <- zenodo$depositRecord(myrec, publish = TRUE)
+```
 -   View the deposited record at https://sandbox.zenodo.org/me/uploads?q=&l=list&p=1&s=10&sort=newest
 
 -   Compress your project directory to a .zip file.
 -   Upload the .zip file to your deposited record:
-    ```{r}
-    #add data to the record, adjust the path below
-    zenodo$uploadFile("path/to/your/file", record = myrec)
-    ```
+```{r}
+#add data to the record, adjust the path below
+zenodo$uploadFile("path/to/your/file", record = myrec)
+```
 
 -   Publish the record:
-    ```{r}
-    #make the record publicly available on Zenodo (Sandbox).
-    myrec <- zenodo$publishRecord(myrec$id)
-    ```
+```{r}
+#make the record publicly available on Zenodo (Sandbox).
+myrec <- zenodo$publishRecord(myrec$id)
+```
 
 ### Step 12: Edit a published Zenodo record
 
@@ -304,7 +305,7 @@ zenodo <- ZenodoManager$new(
       logger = "INFO")
 ```
 
--   Access your record:\
+-   Access your record:
 
 ```{r}
 #get your record by querying the metadata, e.g. by title, this will give you a list of all records with that title.
