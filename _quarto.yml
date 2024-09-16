@@ -59,6 +59,9 @@ format:
       body-width: 1200px
       margin-width: 200px
       gutter-width: 1.5rem
+    include-after-body:
+      text: |
+        <script type="application/javascript" src="light-dark.js"></script>
 crossref:
   fig-title: ''
   fig-labels: none
@@ -67,9 +70,7 @@ csl: diabetologia.csl
 execute:
   error: true
   warning: false
-include-after-body:
-  text: |
-    <script type="application/javascript" src="light-dark.js"></script>
+
 
 
     
