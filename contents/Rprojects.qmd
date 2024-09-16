@@ -865,7 +865,9 @@ These files are often accompanied by the corresponding file `README.Rmd` which g
 
 -   Useful to include a tree diagram of the project directory structure down to the file level:
 
-```{{r}}
+```{r}
+#| eval: false
+#| echo: true
 ├── Data
 │       Raw
 │         └── RiceFarms.csv
