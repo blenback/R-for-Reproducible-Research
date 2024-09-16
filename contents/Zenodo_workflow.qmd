@@ -192,9 +192,9 @@ ensuring long-term accessibility and reproducibility.
 ### `renv` Workflow
 
 -   Initialize `renv` inside the project directory to identify
-    dependencies
+    dependencies using `renv::init()`
 
--   Snapshot dependencies to create a lockfile
+-   Snapshot dependencies to create a lockfile using `renv::snapshot()`
 
 -   Restore environments using `renv::restore()`
 

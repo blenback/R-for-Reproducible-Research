@@ -43,7 +43,7 @@ We'll now organize the project's scripts by splitting the original script into s
 We'll now organize the project's scripts by splitting the original script into separate *analysis* and *visualization* scripts.
 
 -   Create a `scripts` folder inside your project directory.
--   Move the original `RiceFarm_project.R` script into the `scripts` folder.
+-   Move the original `RiceFarm_project.R` script into the `Scripts` folder.
 -   Create two new scripts named `01_data_analysis.R` and `02_data_visualisation.R`.
 
 #### For `01_data_analysis.R`
