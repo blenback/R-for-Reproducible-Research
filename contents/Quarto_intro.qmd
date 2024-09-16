@@ -250,15 +250,10 @@ Quarto solves this problem by allowing you to write full academic manuscripts fr
 Key benefits:
 
 -   Figures and tables are dynamically updated as your code changes
-
 -   Supports code in R, Python and Julia as well as LaTeX and Markdown content
-
 -   Easy Cross-referencing capability for figures, tables, and sections
-
 -   Documents can be rendered as Word, PDF, or HTML
-
 -   Include Citations and bibliographies using Crossref, DataCite, PubMed and direct integration with [Zotero](https://www.zotero.org/)
-
 -   Quarto's `.qmd` files can be edited with various code/text editors (VS Code, RStudio etc.)
 
 ::: fragment
@@ -331,7 +326,6 @@ Websites for research projects to share progress and results:
 
 ::: {.columns .v-center-container}
 ::: {.column width="50%"}
-
 Many options for interactive data visualisations, tables and diagrams using:
 
 -   [Plotly](https://plotly.com/python/)
