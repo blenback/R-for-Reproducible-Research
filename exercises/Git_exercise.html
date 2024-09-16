@@ -180,6 +180,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="version-control-with-git-exercise">Version control with Git exercise</h2>
 <p>In this exercise we will show how version control with Git can be implemented for an example R project. The project is the same that is created in the first workflow <a href="@sec-Rproj_zenodo_exercise">exercise</a>, however to save time or in case you haven’t completed this exercise we will start with the finished output from it.</p>
 <p>If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://www.example.com/example.zip" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a></p>
+<p>There is an alternative way of working with Git. Instead of linking Rstudio directly to your Github account, you can also use the Github Desktop application, which provides you with an easy to use GUI and very simple setup. If you are interested in using Github Desktop instead, skip to Step 8.</p>
 <section id="step-1-download-and-configure-git" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-download-and-configure-git">Step 1: Download and configure Git</h3>
 <ul>
@@ -199,7 +200,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li><p>Set the visibility of the profile to “Public”</p></li>
 <li><p>Initialize this repository with: Add a README file.</p></li>
 <li><p>Select a license for your repository in the “Choose your license” section. Check out <a href="https://choosealicense.com/">this website</a> to identify which license works for you. Even though it is optional to add license information to a repository, it is good practice to include this (<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#choosing-the-right-license">See more details</a>).</p></li>
-<li><p>Click the green ‘create repository’ button</p></li>
+<li><p>Click the green <code>Create repository</code> button</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -215,7 +216,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <li><p>In the ‘New Project Wizard’ navigate to ‘Version Control’&gt;‘Git’</p></li>
 <li><p>In the “repository URL” paste the URL of your new GitHub repository. It will be something like this https://github.com/nvharisena1/R_repro_test.</p></li>
 <li><p>Add folder location where you want the project to be saved locally in your computer in “Create project as subdirectory of” section</p></li>
-<li><p>Click ‘Create project’</p></li>
+<li><p>Click <code>Create project</code></p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -281,6 +282,62 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </figure>
 </div>
 <p>Great! You have finished your first project update (local changes committed and pushed) via Git on Rstudio.</p>
+</section>
+<section id="step-8-download-and-install-github-desktop" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-download-and-install-github-desktop">Step 8: Download and install Github Desktop</h3>
+<p>This is an alternative way to work with Github when coding in R. For this, we will not link Rstudio to our Github account but we will use the Github Desktop application instead.</p>
+<ul>
+<li><p>Download <a href="https://github.com/apps/desktop">Github Desktop</a></p></li>
+<li><p>Install the application and login with your Github account</p></li>
+</ul>
+</section>
+<section id="step-9-create-a-repository-on-github" class="level3">
+<h3 class="anchored" data-anchor-id="step-9-create-a-repository-on-github">Step 9: Create a repository on Github</h3>
+<p>We will make a quick repository on Github for an individual project, without changing much of the specific configurations since it will be beyond the scope of this workshop.</p>
+<ul>
+<li><p>Login to your account on <a href="https://github.com/">Github</a></p></li>
+<li><p>Create a new repository by clicking the ‘+’ sign in the top right side of the website or in the ‘Start new repository’ section in the homepage</p></li>
+<li><p>Provide a clear name for the repository for e.g.&nbsp;“R_repro_nv” and a quick description like “Test for Reproducible research workshop”</p></li>
+<li><p>Set the visibility of the profile to “Public”</p></li>
+<li><p>Initialize this repository with: Add a README file.</p></li>
+<li><p>Select a license for your repository in the “Choose your license” section. Check out <a href="https://choosealicense.com/">this website</a> to identify which license works for you. Even though it is optional to add license information to a repository, it is good practice to include this (<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#choosing-the-right-license">See more details</a>).</p></li>
+<li><p>Click the green <code>Create repository</code> button</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/git_ex1.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Setting up the repository</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-10-clone-your-github-repository-to-your-computer" class="level3">
+<h3 class="anchored" data-anchor-id="step-10-clone-your-github-repository-to-your-computer">Step 10: Clone your Github repository to your computer</h3>
+<ul>
+<li>In the Github Desktopp application click ‘File’&gt;‘Clone Repository’ and select your new repository. Define the directory on your computer, where you want to clone the repository to. Press the <code>Clone</code> button.</li>
+</ul>
+</section>
+<section id="step-11-edit-the-readme.md-file" class="level3">
+<h3 class="anchored" data-anchor-id="step-11-edit-the-readme.md-file">Step 11: Edit the <code>README.md</code> file</h3>
+<ul>
+<li><p>Open the README.md in your local project directory with a text editor.</p></li>
+<li><p>Add a description section for the project with a heading and a describing sentence, for e.g.&nbsp;“This project is is a test”.</p></li>
+<li><p>Add license information for the project, for e.g.&nbsp;“This project is licensed under the terms of the MIT license.”</p></li>
+<li><p>Save the file.</p></li>
+</ul>
+</section>
+<section id="step-12-push-the-updated-readme.md-file" class="level3">
+<h3 class="anchored" data-anchor-id="step-12-push-the-updated-readme.md-file">Step 12: Push the updated <code>README.md</code> file</h3>
+<p>Since you have edited the <code>README.md</code> file, Github Desktopp app will propose to you to push this change from your computer to your repository.</p>
+<ul>
+<li><p>Add a title and a description and click <code>Commit to main</code> button.</p></li>
+<li><p>Click <code>Push origin</code> button to upload your changes to your repository on Github.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./assets/images/git_exercise_commit.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Commiting changes github</figcaption>
+</figure>
+</div>
 
 
 </section>
