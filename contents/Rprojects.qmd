@@ -557,15 +557,10 @@ This is why if you want 'bullet-proof' reproducibility `renv` needs to be used a
 Code styles express opinionated preferences on a series of common topics:
 
 -   Object naming
-
 -   Use of assignment operators
-
 -   Spacing
-
 -   Indentation
-
 -   Line length
-
 -   Parentheses placement
 
 We won't discuss in detail but you should read one of the style guides when you have the time.
@@ -603,7 +598,7 @@ Two R packages for code styling, [`lintr`](https://lintr.r-lib.org/) and `styler
 
 -   There are no rules as to what this should look like but this is an example:
 
-```{r}
+```{{r}}
 #############################################################################
 ## Script_title: Brief description of script purpose
 ##
@@ -611,7 +606,7 @@ Two R packages for code styling, [`lintr`](https://lintr.r-lib.org/) and `styler
 ##
 ## Date created: 
 ## Author(s):
-#############################################################################
+##################################################################
 ```
 
 ## 3. Writing clean code
@@ -816,11 +811,11 @@ The latter of these two are more detailed so we have provided further informatio
 
 ### Function documentation with `roxygen2`
 
--   `base` R provides a standard way of documenting  functions in packages as seperate `.Rd`  (R documentation) files.
+-   `base` R provides a standard way of documenting functions in packages as seperate `.Rd` (R documentation) files.
 
-- `.Rd` files use a custom syntax to detail key aspects of the functions such as input parameters, outputs, package dependencies [@wickham2024].
+-   `.Rd` files use a custom syntax to detail key aspects of the functions such as input parameters, outputs, package dependencies [@wickham2024].
 
-- Documenting functions in this way is a good practice for your project even if you are not creating a package. 
+-   Documenting functions in this way is a good practice for your project even if you are not creating a package.
 
 ::: notes
 In the case of many research projects you will not be creating a package however it is still useful to apply this documentation style to your functions as it is a good way to make them understandable and easier to modify by others. For example, having clear information about the object (e.g. a vector or data.frame) that a function accepts, saves others time in guessing what the function is expecting if they are trying to use new data.
@@ -830,11 +825,11 @@ In the case of many research projects you will not be creating a package however
 
 ### Function documentation with `roxygen2`
 
-- Rather than manually create `.Rd` files, we can use the `roxygen2` package.
+-   Rather than manually create `.Rd` files, we can use the `roxygen2` package.
 
-- `roxygen2` provides functionality to add blocks of comments (`roxygen skeleton`) to the top of the function scripts. These are then used to automatically generate `.Rd` files.
+-   `roxygen2` provides functionality to add blocks of comments (`roxygen skeleton`) to the top of the function scripts. These are then used to automatically generate `.Rd` files.
 
-- To add a `roxygen skeleton`, place your cursor inside a function you want to document and press `Ctrl + Shift + R` (or `Cmd + Shift + R` on Mac) or you can go to *code tools \> insert roxygen skeleton* (wand icon in the top row of the source pane).
+-   To add a `roxygen skeleton`, place your cursor inside a function you want to document and press `Ctrl + Shift + R` (or `Cmd + Shift + R` on Mac) or you can go to *code tools \> insert roxygen skeleton* (wand icon in the top row of the source pane).
 
 ::: notes
 However, rather than manually writing `.Rd` files, we can use the `roxygen2` package to automatically generate these files from a block of comments that are added to the top of the function scripts. To add this comment block, place your cursor inside a function you want to document and press `Ctrl + Shift + R` (or `Cmd + Shift + R` on Mac) or you can go to *code tools \> insert roxygen skeleton* (code tools is represented by the wand icon in the top row of the source pane).
@@ -842,9 +837,9 @@ However, rather than manually writing `.Rd` files, we can use the `roxygen2` pac
 
 ## 6. Project documentation
 
-### Function documentation with `roxygen2
+### Function documentation with \`roxygen2
 
-- When you insert the roxygen block it will already contain the names of the function, its arguments and any returns. You can then fill in the rest of the information, such as the description and dependencies etc.
+-   When you insert the roxygen block it will already contain the names of the function, its arguments and any returns. You can then fill in the rest of the information, such as the description and dependencies etc.
 
 ![Inserting roxygen block](https://jozef.io/img/r102-01-add-roxy-skeleton.gif){fig-align="center"}
 
@@ -852,11 +847,11 @@ However, rather than manually writing `.Rd` files, we can use the `roxygen2` pac
 
 ### Tips for README writing
 
-- R packages or projects typical have `README.md` files. 
-- `.md` is the [Markdown](https://en.wikipedia.org/wiki/Markdown) format which is the most common format for README files in R projects because it can be read by many programs and rendered in a variety of formats.
-- `README.md` files are often accompanied by the corresponding file `README.Rmd`, an Rmarkdown file which generates them. 
-- `README.Rmd` files can be created using the `usethis` package ([`use_readme_rmd()`](https://usethis.r-lib.org/reference/use_readme_rmd.html)).
-- However, depending on anticipated project users creating the README as a raw text file (`.txt`) may be better.
+-   R packages or projects typical have `README.md` files.
+-   `.md` is the [Markdown](https://en.wikipedia.org/wiki/Markdown) format which is the most common format for README files in R projects because it can be read by many programs and rendered in a variety of formats.
+-   `README.md` files are often accompanied by the corresponding file `README.Rmd`, an Rmarkdown file which generates them.
+-   `README.Rmd` files can be created using the `usethis` package ([`use_readme_rmd()`](https://usethis.r-lib.org/reference/use_readme_rmd.html)).
+-   However, depending on anticipated project users creating the README as a raw text file (`.txt`) may be better.
 
 ::: notes
 These files are often accompanied by the corresponding file `README.Rmd` which generates the `README.md` file. Markdown format is used for README's because it can be read by many programs and rendered in a variety of formats. In this sense writing the README for your project in markdown makes sense and there tools available to help you do this such as the `usethis` package which has a function [`use_readme_rmd()`](https://usethis.r-lib.org/reference/use_readme_rmd.html) that will create a `README.Rmd` file for you. However, depending on who you anticipate using your project you may also want to create your README as a raw text file (`.txt`) which may be a more familiar format for some users and again can be opened by many different programs.
@@ -866,35 +861,22 @@ These files are often accompanied by the corresponding file `README.Rmd` which g
 
 ### Tips for README writing
 
-- No single standardised format for what should be included but here is an example of a [README.txt](assets/README_demo.txt) file from one of the authors publications.
+-   No single standardised format for what should be included but here is an example of a [README.txt](assets/README_demo.txt) file from one of the authors publications.
 
-- Useful to include a tree diagram of the project directory structure down to the file level: 
+-   Useful to include a tree diagram of the project directory structure down to the file level:
 
-```{r}{.smaller}
-#| eval: false
-#| echo: true
-├── Data
-│   ├── Processed
-│   │   └── RiceFarms_summary.csv
-│   └── Raw
-│       └── RiceFarms.csv
-├── Output
-│   └── Regional_size_summary_bar.png
-└── Scripts
-    ├── 01_data_analysis.R
-    └── 02_data_visualisation.R
-```
-
+`{r}{.smaller} #| eval: false #| echo: true ├── Data │   ├── Processed │   │   └── RiceFarms_summary.csv │   └── Raw │       └── RiceFarms.csv ├── Output │   └── Regional_size_summary_bar.png └── Scripts     ├── 01_data_analysis.R     └── 02_data_visualisation.R`
 
 ::: notes
 You will see that one of the things this README includes is a tree diagram which shows the directory structure of the project right down to the file level. This is a useful way to give an overview of what users should find included in the project and then explanatory notes can be added to explain the purpose of each file or directory. Such a diagram can be easily generated using the `fs` package:
-::: 
+:::
 
 ## 6. Project documentation
 
 ### Tips for README writing
 
-- Such a diagram can be easily generated using the `fs` package:
+-   Such a diagram can be easily generated using the `fs` package:
+
 ```{r}
 #| eval: false
 #| echo: true
@@ -915,7 +897,4 @@ Now this some of the details of the graphical overview probably make more sense 
 ![](assets/images/project_components.png){fig-align="center"}
 
 **We will implement some of these good practices in our 1st exercise.**
-
 :::
-
-
