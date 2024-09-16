@@ -46,12 +46,8 @@ po/*~
 rsconnect/
 
 /.quarto/
-*.html
-*.html
-*.html
 docs/presentation.html
 docs/index.html
-*.html
 *.html
 /docs/assets
 /docs/contents
@@ -71,3 +67,6 @@ exercises/exercise_23_data/RiceFarm_master.R
 exercises/exercise_23_data/Scripts/01_data_analysis.R
 exercises/exercise_23_data/Scripts/02_data_visualisation.R
 exercises/exercise_23_data/Scripts/RiceFarm_project.R
+docs/exercises/Git_exercise.html
+docs/exercises/Git_exercise.html
+docs/sitemap.xml
