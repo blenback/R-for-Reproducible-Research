@@ -12,7 +12,7 @@ execute:
 
 **The title of this workflow raises two questions, the first being: what is containerization? and the second: what is Docker?** \### Containerisation
 
-Simply put containerization is the process of bundling code along with all of it's dependencies, i.e. all the components we discussed as making up the [environment](@sec-environment-management), including the operating system, software libraries (packages), and other system software. The fact everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service. This also makes containerization something of a gold standard for reproducibility as the entire environment is explicitly re-produced.
+Simply put containerization is the process of bundling code along with all of it's dependencies, i.e. all the components we discussed as making up the [environment](Rprojects.qmd#sec-environment-management), including the operating system, software libraries (packages), and other system software. The fact everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service. This also makes containerization something of a gold standard for reproducibility as the entire environment is explicitly re-produced.
 
 ### Docker
 
@@ -34,7 +34,7 @@ Fortunately there is a project that specifically catalogs and manages Docker Ima
 
 In terms of actually creating the `Dockerfile` for our R project, this can be done manually (See a good R-focused tutorial[here](https://colinfay.me/docker-r-reproducibility/)), however there are also R packages that can help with this process such as [`dockerfiler`](https://thinkr-open.github.io/dockerfiler/) and the `[rrtools`\](https://github.com/benmarwick/rrtools) package.
 
-For our [exercise](@sec-docker_exercise) of this workflow we will use the `dockerfiler` package, which creates a custom class object that represents the Dockerfile and has slots corresponding to common elements of Docker images. This allows us to add elements to the dockerfile in a more R-like way. The following code snippet demonstrates adding `Maintainer` details to a `Dockerfile` object, before saving it:
+For our [exercise](Docker_exercise.qmd#sec-docker_exercise) of this workflow we will use the `dockerfiler` package, which creates a custom class object that represents the Dockerfile and has slots corresponding to common elements of Docker images. This allows us to add elements to the dockerfile in a more R-like way. The following code snippet demonstrates adding `Maintainer` details to a `Dockerfile` object, before saving it:
 
 ```{R}
 #| eval: false
@@ -52,7 +52,7 @@ my_dock$write()
 
 ### Docker with `renv`
 
-Docker can be used with the `renv` package to [manage the package environment of your project](@sec-environment-management).
+Docker can be used with the `renv` package to [manage the package environment of your project](Rprojects.qmd#sec-environment-management).
 
 There are two methods of implementing this which come with their own considerations:
 

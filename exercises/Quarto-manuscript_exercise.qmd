@@ -7,7 +7,7 @@ execute:
 
 ## Writing an academic paper with Quarto {#sec-Quarto_exercise}
 
-In this exercise we will start to write an academic manuscript using Quarto and incorporating data from the example R project we have used in the other exercises. The project is the same that is created in the first workflow [exercise](@sec-Rproj_zenodo_exercise), however to save time or in case you haven't completed this exercise we will start with the finished output from it.
+In this exercise we will start to write an academic manuscript using Quarto and incorporating data from the example R project we have used in the other exercises. The project is the same that is created in the first workflow [exercise](Rproj_zenodo_exercise.qmd#sec-Rproj_zenodo_exercise), however to save time or in case you haven't completed this exercise we will start with the finished output from it.
 
 ::: {.content-hidden when-format="pdf"}
 If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://blenback.github.io/R-for-Reproducible-Research/exercises/Quarto-manuscript_exercise.pdf" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a>
