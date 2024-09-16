@@ -39,73 +39,77 @@ execute:
   eval: false
 ---
 
-<!-- # Schedule -->
+# Schedule
 
-<!-- ::: {.incremental} -->
+::: {.incremental}
 
-<!-- - Introduction (15 mins) -->
+- Introduction (15 mins)
 
-<!-- - Research projects with R (30 mins) -->
+- Research projects with R (30 mins)
 
-<!-- - Comfort break (10 mins) -->
+- Comfort break (10 mins)
 
-<!-- - 3 workflows for Reproducibility (20 mins) -->
+- 3 workflows for Reproducibility (20 mins)
 
-<!-- - Quarto (20 mins) -->
+- Quarto (20 mins)
 
-<!-- - Comfort break (10 mins) -->
+- Comfort break (10 mins)
 
-<!-- - Exercise time (45 mins) -->
+- Exercise time (45 mins)
 
-<!-- - Q&A + feedback (30 mins) -->
+- Q&A + feedback (30 mins)
 
-<!-- ::: -->
+:::
 
 # Introduction
 
 {{< include contents/intro.qmd >}}
 
-<!-- # Research projects with R -->
+# Research projects with R
 
-<!-- {{< include contents/Rprojects.qmd >}} -->
+{{< include contents/Rprojects.qmd >}}
 
-<!-- # Let's take a 10 minute break! -->
+# Let's take a 10 minute break!
 
-<!-- # Workflows for Reproducibility -->
+# Workflows for Reproducibility
 
-<!-- ## Workflows for Reproducibility -->
+## Workflows for Reproducibility
 
-<!-- We will discuss three workflows for reproducibility: -->
+We will discuss three workflows for reproducibility:
 
-<!-- ::: {.incremental} -->
+::: {.incremental}
 
-<!-- 1.  Rstudio project to Zenodo pipeline -->
+1.  Rstudio project to Zenodo pipeline
 
-<!-- 2.  Containerization with Docker -->
+2.  Containerization with Docker
 
-<!-- 3.  Version control with Git -->
-<!-- ::: -->
+3.  Version control with Git
+:::
 
-<!-- :::{.fragment} -->
-<!-- These are suggestions for different approaches and we hope that in future you will be able to adapt these workflows to the needs of your own research projects. -->
+:::{.fragment}
+These are suggestions for different approaches and we hope that in future you will be able to adapt these workflows to the needs of your own research projects.
 
-<!-- ::: -->
+:::
 
-<!-- {{< include contents/Zenodo_workflow.qmd >}} -->
+{{< include contents/Zenodo_workflow.qmd >}}
 
-<!-- {{< include contents/Docker_workflow.qmd >}} -->
+{{< include contents/Docker_workflow.qmd >}}
 
-<!-- {{< include contents/Git_workflow.qmd >}} -->
+{{< include contents/Git_workflow.qmd >}}
 
-<!-- # Quarto -->
+# Quarto
 
-<!-- {{< include contents/Quarto_intro.qmd >}} -->
+{{< include contents/Quarto_intro.qmd >}}
 
-<!-- # Let's take another 10 minute break! -->
+# Let's take another 10 minute break!
 
-<!-- # Now it's your turn! -->
+# Now it's your turn!
 
-<!-- # Q&A + feedback -->
+## Guided exercises
 
-<!-- # Bibliography -->
+On the website for the masterclass under the heading 
+
+# Q&A + feedback
+
+# Bibliography
 
