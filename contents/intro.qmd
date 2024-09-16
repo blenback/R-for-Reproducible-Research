@@ -335,8 +335,8 @@ Let's hear your thoughts: What does reproducible research mean to you?
 -   Improves science for all: Allows others to more easily build upon
     our work
 
-Don't just take our word for it, research funders are increasingly
-focused on reproducible research too: EXAMPLE
+**Don't just take our word for it, research funders are increasingly
+focused on reproducible research too.**
 
 ## Why <img style="vertical-align:-35%; height:0.85em;" src="assets/images/Rlogo.png"> for reproducible research?
 
