@@ -11,7 +11,9 @@ In this exercise we will create and run a Docker container for an example R proj
 
 **Warning**: Docker is a complex software and getting Docker Desktop running on different machines is not always smooth. For example, I had no problem getting it running on my desktop computer but my work laptop did not have the capabilities. If you do run into issues there is good support available online but also asking for help from your IT department may be a good idea. 
 
+::: {.content-hidden when-format="pdf"}
 If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://blenback.github.io/R-for-Reproducible-Research/exercises/Docker_exercise.pdf" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a>
+:::
 
 ### Step 1: Download the resources
 
