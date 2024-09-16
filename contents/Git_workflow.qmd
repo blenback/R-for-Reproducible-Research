@@ -57,6 +57,11 @@ Alternatively you can also use [Github desktop](https://github.com/apps/desktop)
 
 -   **Systematic documentation** and **storage of code** changes allowing us to track changes and revert back to previous versions when needed.
 
+::: notes
+One of the key benefits of using Git and GitHub is version control, which simplifies managing different versions of your code. Instead of manually creating copies of your files, Git handles this for you, allowing you to work with a single file on your computer without the worry of messing up a previously working version.
+
+Additionally, Git  tracks changes over time, documenting who made the changes and why. This is helpful if multiple people work on a project. If mistakes occur or you need to revisit earlier versions, Git lets you revert to previous states.
+:::
 ### Terminologies
 
 -   **Push** and **Pull**?
@@ -64,6 +69,10 @@ Alternatively you can also use [Github desktop](https://github.com/apps/desktop)
 ![Git terminologies](assets/images/Git_terminology.png){width="70%" fig-align="center"}
 
 -   Git cheatsheet: https://education.github.com/git-cheat-sheet-education.pdf
+
+::: notes
+Think of branches as separate working spaces, but still about the same work. There is a main branch storing your results. Each additional branch can be used to test changes without affecting the main output. Once you’re satisfied you can then merge your changes into the main branch. This let’s you test new things and fix bugs without worrying to mess up the main branch. Also, it helps to avoid conflicts if several people work on the same project.
+:::
 
 ### Steps for using Git and GitHub (To be done in the exercises - basic)
 
@@ -79,9 +88,17 @@ Alternatively you can also use [Github desktop](https://github.com/apps/desktop)
 
 -   Basic functionalities of Git in Rstudio
 
+::: notes
+The process involves setting up a GitHub repository, installing Git, linking it with your account, and then connecting your R project to the repository. From there, you can manage the repository through RStudio, using basic Git functionalities to track and control changes.
+:::
+
 ### Additional fucntionalities
 
 -   GitHub repositories can be archived on Zenodo and thus get a DOI.
 -   GitHub actions
 -   GitHub releases can be continuously integrated into DockerHub or GitHub Packages
+
+::: notes
+
+:::
 :::
