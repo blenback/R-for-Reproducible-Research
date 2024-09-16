@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -149,6 +183,17 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
         <div id="quarto-search" class="" title="Search"></div>
         </div>
         </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../presentation.html" class="sidebar-item-text sidebar-link"><i class="bi bi-file-earmark-easel" role="img">
+</i> 
+ <span class="menu-text">View in presentation format</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -160,11 +205,286 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 
 
 <section id="sec-Quarto_exercise" class="level2">
-<h2 class="anchored" data-anchor-id="sec-Quarto_exercise">Write a paper with Quarto</h2>
-<p><strong>Exercise content coming soon!</strong></p>
-<!-- Because Quarto is bundled with Rstudio if you have a recent version of Rstudio you may already have Quarto installed. If not, you can install Quarto from CRAN with the following command: -->
+<h2 class="anchored" data-anchor-id="sec-Quarto_exercise">Writing an academic paper with Quarto</h2>
+<p>In this exercise we will start to write an academic manuscript using Quarto and incorporating data from the example R project we have used in the other exercises. The project is the same that is created in the first workflow <a href="@sec-Rproj_zenodo_exercise">exercise</a>, however to save time or in case you haven’t completed this exercise we will start with the finished output from it.</p>
+<p>If you would prefer to view the exercise script offline, here is a PDF version: <a href="https://blenback.github.io/R-for-Reproducible-Research/exercises/Quarto-manuscript_exercise.pdf" class="download"><i class="fa fa-download"></i> <b>Download exercise instructions</b></a></p>
+<section id="step-1-download-the-resources" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-download-the-resources">Step 1: Download the resources</h3>
+<ul>
+<li><p>Click here to download the resources for the exercise: <a href="https://drive.google.com/uc?export=download&amp;id=1TN3DZqetynnNWlTeV2eKqJDcU53fq9Zg" class="download"><i class="fa fa-download"></i> <b>Download resources for exercise</b></a></p></li>
+<li><p>Unzip the downloaded file and move the folder to a location on your computer where you can easily find it.</p></li>
+</ul>
+</section>
+<section id="step-2-open-the-project-in-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-open-the-project-in-rstudio">Step 2: Open the project in RStudio</h3>
+<ul>
+<li>Open RStudio and navigate to the folder where you saved the resources for the exercise.</li>
+<li>Open the Rstudio project file in the directory (<code>Rice_farm_analysis.Rproj</code>)</li>
+</ul>
+</section>
+<section id="step-3-download-quarto" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-download-quarto">Step 3: Download Quarto</h3>
+<ul>
+<li><p><strong>Note</strong>: Because Quarto is bundled with Rstudio if you have a recent version of Rstudio you may already have Quarto installed. To check go to <em>File &gt; New File</em> and you should see <em>Quarto</em> Document as an option.</p></li>
+<li><p>If you do not have Quarto installed you can install it from the Quarto website <a href="https://quarto.org/docs/download/">here</a></p></li>
+</ul>
+</section>
+<section id="step-4-create-a-quarto-document-for-the-article-content" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-create-a-quarto-document-for-the-article-content">Step 4: Create a Quarto document for the article content</h3>
+<p>The Quarto website provides a <a href="https://github.com/quarto-ext/manuscript-template-rstudio">template</a> for creating a Manuscript project but we will create one from scratch so that you understand the various files.</p>
+<ul>
+<li>The 1st step is to create a Quarto document that will act as the primary content file, go to <em>File &gt; New File &gt; Quarto Document</em>. You don’t need to add title or author information in the wizard as we will do this in the document itself.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/quarto-new-file.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Quarto document wizard</figcaption>
+</figure>
+</div>
+<ul>
+<li>Save the file as <code>index.qmd</code> in the root directory of the project. Using <code>index</code> as the file name is the convention for the main content file in a Quarto project and the software will look for this when attempting to create an output of the content. However it is possible to use a different file name if you prefer but it requires setting an option in the configuration file.</li>
+</ul>
+</section>
+<section id="step-5-create-a-_quarto.yml-configuration-file" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-create-a-_quarto.yml-configuration-file">Step 5: Create a <code>_quarto.yml</code> configuration file</h3>
+<p><a href="https://en.wikipedia.org/wiki/YAML">YAML</a> files (<code>.yml</code>) are configuration files, and in the case of Quarto the convention is to use a file named <code>_quarto.yml</code> in the root directory of the project. This file will be used to set a range of options including the project type, code execution options and options for the output format/s.</p>
+<ul>
+<li>Create a new file with <em>File &gt; New File &gt; Text File</em> and save it to the root directory of the project and name it <code>_quarto.yml</code>. Adding the extension <code>.yml</code> will automatically set the file type to YAML.</li>
+</ul>
+</section>
+<section id="step-6-specify-the-manuscript-project-type-in-the-configuration-file" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-specify-the-manuscript-project-type-in-the-configuration-file">Step 6: Specify the <code>Manuscript</code> project type in the configuration file</h3>
+<ul>
+<li><p><strong>Note</strong>: All YAML options are set using <a href="https://www.commonwl.org/user_guide/topics/yaml-guide.html#key-value-pairs">key-value pairs</a> and the Quarto documentation provides a <a href="https://quarto.org/docs/projects/quarto-projects.html">list of options</a> that can be set in the configuration file.</p></li>
+<li><p>The first step is to identify your project as a manuscript by entering the following code in the <code>_quarto.yml</code> file:</p></li>
+</ul>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb1" data-filename="_quarto.yml"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> manuscript</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>If you do want your main content file to be named something other than <code>index.*</code> you can add the file name with the <code>article</code> key (but make sure that your <code>.qmd</code> file name matches the entry):</li>
+</ul>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb2" data-filename="_quarto.yml"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">manuscript</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">article</span><span class="kw">:</span><span class="at"> Rice_farm.qmd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-7-set-output-formats-in-the-configuration-file" class="level3">
+<h3 class="anchored" data-anchor-id="step-7-set-output-formats-in-the-configuration-file">Step 7: Set output formats in the configuration file</h3>
+<p>The next step is to set the output formats for the document. Quarto supports outputting your manuscript to a range of formats simultaneously including HTML, PDF, Docx and LaTeX. The output formats and their individual options are also set in the <code>_quarto.yml</code> file.</p>
+<ul>
+<li>For this exercise we will set the output formats to HTML, docx and PDF. Add the following code to the <code>_quarto.yml</code> file:</li>
+</ul>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb3" data-filename="_quarto.yml"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">comments</span><span class="kw">:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">hypothesis</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p>For PDF outputs specifically, there a number of templates that have been produced to align with the formatting of major academic publishers. These are available as <a href="https://quarto.org/docs/extensions/listing-journals.html">Quarto extensions</a>.</p></li>
+<li><p>For this exercise we will use the <a href="https://github.com/quarto-journals/elsevier">Elsevier template</a>. Quarto extensions can be installed directly using the terminal in Rstudio. To install the Elsevier template run the following code in the terminal: <code>quarto add quarto-journals/elsevier</code></p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/quarto-elsevier-install.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<ul>
+<li>Once the template is installed you can set the PDF output to use the template by adding the following code to the <code>_quarto.yml</code> file indented below the existing <code>format</code> entry:</li>
+</ul>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb4" data-filename="_quarto.yml"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">elsevier-pdf</span><span class="kw">:</span><span class="at"> default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-8-complete-the-front-matter-content" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-complete-the-front-matter-content">Step 8: Complete the front matter content</h3>
+<p>The front matter of the document is where you can enter the title, author/s and other metadata for the document. In the case of academic manuscripts this also includes the abstract, keywords, author institutions and roles (according to the <a href="https://authorservices.wiley.com/author-resources/Journal-Authors/open-access/credit.html">CRediT Taxonomy</a>). The full list of front matter options for Quarto manuscripts can be found <a href="https://quarto.org/docs/authoring/front-matter.html">here</a>.</p>
+<p>Front matter is entered as YAML content at the start of the main content file <code>index.qmd</code>. To be recognised as YAML content it must be enclosed by three dashes <code>---</code> at the start and end of the content block.</p>
+<ul>
+<li>Enter example front matter for this exercise as follows:</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> An Analysis of Rice Production in Indonesia</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Jane Doe</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> 0000-0002-0760-5497</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">corresponding</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">email</span><span class="kw">:</span><span class="at"> Janedoe@gmail.com</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">roles</span><span class="kw">:</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> Investigation</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> Project administration</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> Software</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> Visualization</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">affiliations</span><span class="kw">:</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> ETH_PLUS</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">name</span><span class="kw">:</span><span class="at"> ETH Zürich</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">department</span><span class="kw">:</span><span class="at"> Planning of Landscape and Urban Systems (PLUS) Institut für Raum- und Landschaftsentwicklung (IRL)</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">address</span><span class="kw">:</span><span class="at"> HIL H 52.1, Stefano-Franscini-Platz 5</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">city</span><span class="kw">:</span><span class="at"> Zürich</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">postal-code</span><span class="kw">:</span><span class="at"> </span><span class="dv">8093</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> John Doe</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> 0000-0002-7859-8394</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">corresponding</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">roles</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">affiliations</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> ETH_PLUS</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="fu">keywords</span><span class="kw">:</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Rice farms</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Indonesia</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Regional production</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="fu">abstract</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  This is the abstract</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="fu">plain-language-summary</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  Rice production data for the country of Indonesia is analysed ...</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> last-modified</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now take some time to practice editing this content by, for example, changing the title, adding yourself as an author or changing the abstract. You will see that indentation is very important for YAML content to work correctly.</p>
+<p>One nice feature is the fact that you can use the <code>affiliation: id</code> option to avoid needing to repeat details for authors from the same institution.</p>
+</section>
+<section id="step-7-add-manuscript-content" class="level3">
+<h3 class="anchored" data-anchor-id="step-7-add-manuscript-content">Step 7: Add manuscript content</h3>
+<p>Now we have our manuscript project and content file set up let’s add some content. Content in Quarto files is written in <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> format, which takes some getting used to but will quickly become intuitive.</p>
+<ul>
+<li>Add some content to the <code>index.qmd</code> file. For example, use <code>#</code> to create a heading and <code>##</code> for subheadings:</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>Rice is a staple food in Indonesia and is grown in many regions across the country. The production of rice is a key economic activity in Indonesia and is a major source of employment for many people. In this study we analyse the production of different types of rice in different regions in Indonesia.  </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Methods</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>For this study we used data from the Indonesian Ministry of Agriculture on rice production in the country. The data was collected from different regions across Indonesia and includes information on the types of rice grown, the amount of rice produced and the area of land used for rice cultivation.</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu"># Results</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>Figure 1 shows the distribution of rice production across different regions in Indonesia. Table 1 shows the types of rice grown in each region and the amount of rice produced.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now lets render our manuscript for the first time to see how the output looks. To render the document click the <code>Render</code> button in the top of the Rstudio source pane:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/rstudio-render-button.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<p>This will render the document to HTML and open it in the viewer pane on the right:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/quarto-html-output.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</section>
+<section id="step-8-add-figures-and-tables" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-add-figures-and-tables">Step 8: Add Figures and Tables</h3>
+<p>Figures and tables can be added to quarto documents using code blocks in various programming languages. To add a code block into a Quarto document you use three backticks followed by the language name in braces, for example an R chunk would be: <code>```{r}</code> and then close the block with another three backticks. Code blocks are executed when the document is rendered and the output is included in the final document (although this behaviour can be controlled with <a href="https://quarto.org/docs/computations/execution-options.html">execution options</a>).</p>
+<p>Lets add a figure to the document using the R code from the exercise script <code>Scripts/02_data_visualisation.R</code> to create a bar chart of the area of farms growing different types in different regions in Indonesia.</p>
+<ul>
+<li>Add the following code block to the <code>index.qmd</code> file below the <code>Results</code> heading:</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="in"># Load required packages</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="in">library(ggplot2)</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="in"># load the summarized data</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="in">rice_data_summary &lt;- read.csv("Data/Processed/RiceFarms_summary.csv")</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="in"># plot summary data as grouped bar chart</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(rice_data_summary, aes(x=region, y=size, fill=varieties)) +</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_bar(stat="identity", position="dodge") +</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(title="Total size of farms by region and rice varieties",</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="in">       x="Region",</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="in">       y="Total size of farms",</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="in">       fill="Rice varieties") +</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="in">  theme(axis.text.x = element_text(angle = 45, hjust = 1))</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now if you re-render the document you should see the figure included in the output.</p>
+</section>
+<section id="step-9-add-cross-references" class="level3">
+<h3 class="anchored" data-anchor-id="step-9-add-cross-references">Step 9: Add Cross-references</h3>
+<p>Quarto allows you to <a href="https://quarto.org/docs/authoring/cross-references.html">cross-reference</a> figures, tables and sections in your document.</p>
+<ul>
+<li>Add a label to the figure code block by adding the following line at the top of the code block:</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-barchart</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Now add a cross-reference to this figure in the text by changing the word <code>Figure 1</code> to <code>@fig-barchart</code> in the 1st sentence of the <code>Results</code> section:</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Results</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>@fig-barchart shows the distribution of rice production across different regions in Indonesia. Table 1 shows the types of rice grown in each region and the amount of rice produced.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Now if you re-render the document you will see that the figure has been automatically numbered and the text now contains a hyperlinked cross reference to the figure:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/quarto-figure-cross-reference.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</section>
+<section id="step-10-add-citations" class="level3">
+<h3 class="anchored" data-anchor-id="step-10-add-citations">Step 10: Add citations</h3>
+<p>Quarto provides the functionality to not only add citations to your documents but to automatically generate a bibliography, both of which can be formatted according to a wide range of citation styles to meet journal requirements. For a detailed explanation of citations with Quarto see the guide <a href="https://quarto.org/docs/authoring/citations.html">here</a>.</p>
+<p>Quarto uses the standard Pandoc markdown representation for citations, whereby citations go inside square brackets and are separated by semicolons, e.g.&nbsp;<code>[@citation]</code>. Citations can be entered manually however they need to have a corresponding entry in the articles bibliography file (a <code>.bib</code> or <code>.csl</code> file in the root directory of the project). Instead, we will add a citation using the wizard in the <a href="https://quarto.org/docs/visual-editor/">Quarto visual editor</a> which will automatically create the citation entry in the bibliography file.</p>
+<ul>
+<li>At the top of the source pane click the <code>Visual</code> button to switch to the visual editor:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/visual-editing-switch-modes.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<ul>
+<li>Navigate the methods section and position the cursor at the end of the sentence:</li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>For this study we used data from the Indonesian Ministry of Agriculture on rice production in the country.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>In the Visual editor tool bar at the top the top of the source pane click <em>Insert</em> and in the drop down menu select <em>Citation</em> (or alternatively use the keyboard shortcut <em>Ctrl + Shift + F8</em> on windows). This will open the <strong>Insert Citation</strong> wizard:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/insert_citation.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<ul>
+<li>The Rice Farms data used for the exercises comes from the <a href="https://rdrr.io/rforge/plm/man/RiceFarms.html"><code>plm</code></a> package so we will cite this as an example (even though it is totally accurate in terms of the sentence content). Click on the tab for R packages on the left side of the wizard, enter <strong>plm</strong> in the search bar and click on the entry in the window below to select it:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/images/cite-plm.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<ul>
+<li><p>Make sure the <strong>Create</strong> box in the bottom left corner of the wizard has a value in it, the default should be <code>references.bib</code>.</p></li>
+<li><p>Now click <strong>Insert</strong> and the wizard will close, you will see that the citation has been added at the cursor location and a <code>references.bib</code> has been created in the root directory of the project. If you openthis file you can see the bibliographic details of the citation (Note if you have previously added citations or already created a <code>references.bib</code> file citations will all be added to the same file.</p></li>
+</ul>
+<p>Now when you render the document this citation will automatically be hyperlinked to the corresponding entry in the bibliography that is appended to the end of the document.</p>
+<p><strong>Tip:</strong> In our experience the easiest method of adding academic citations is to use the <a href="https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero">Quarto-Zotero</a> integration. In this case you select the Zotero tab in the <strong>Insert Citation</strong> wizard and if Zotero is running on your computer you will be able to search your whole library to add citations.</p>
+</section>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p>In this exercise we have only touched upon a few of the many of the useful features of Quarto for writing reproducible research documents. As such we would urge you to look through the <a href="https://quarto.org/docs/guide/">Quarto documentation</a> to learn about some of the other features as well as useful packages and extensions such as the <a href="https://claudiozandonella.github.io/trackdown/">trackdown</a> package which allows you to convert Quarto documents in Google docs (and back to Quarto again) to facilitate collaboration with users not familiar with the format.</p>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
