@@ -232,7 +232,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </figure>
 </div>
 <p><strong>The title of this workflow raises two questions, the first being: what is containerization? and the second: what is Docker?</strong> ### Containerisation</p>
-<p>Simply put containerization is the process of bundling code along with all of it’s dependencies, i.e.&nbsp;all the components we discussed as making up the <a href="@sec-environment-management">environment</a>, including the operating system, software libraries (packages), and other system software. The fact everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service. This also makes containerization something of a gold standard for reproducibility as the entire environment is explicitly re-produced.</p>
+<p>Simply put containerization is the process of bundling code along with all of it’s dependencies, i.e.&nbsp;all the components we discussed as making up the <a href="../contents/Rprojects.html#sec-environment-management">environment</a>, including the operating system, software libraries (packages), and other system software. The fact everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service. This also makes containerization something of a gold standard for reproducibility as the entire environment is explicitly re-produced.</p>
 <section id="docker" class="level3">
 <h3 class="anchored" data-anchor-id="docker">Docker</h3>
 <p><a href="https://www.docker.com/">Docker</a> is an open-source, and the most popular, platform for containerization. Before we dive into a practical example using Docker for research projects with R it is important to introduce some three key terms that we will come across:</p>
@@ -248,7 +248,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 <p>So to create a <code>Docker Image</code> to containerize our R research projects we need to start by creating a <code>Dockerfile</code> and, as mentioned above, this should start with a base image. In our case this base image must logically include R and RStudio (if we want to utilise the RStudio Projects features).</p>
 <p>Fortunately there is a project that specifically catalogs and manages Docker Images for R projects: <a href="https://rocker-project.org/"><code>Rocker</code></a>. The images available through the Rocker project not only include different versions of R and RStudio but also images containing collections of R packages for specific purposes (e.g.&nbsp;tidyverse for data wrangling and visualisation, geospatial packages etc.).</p>
 <p>In terms of actually creating the <code>Dockerfile</code> for our R project, this can be done manually (See a good R-focused tutorial<a href="https://colinfay.me/docker-r-reproducibility/">here</a>), however there are also R packages that can help with this process such as <a href="https://thinkr-open.github.io/dockerfiler/"><code>dockerfiler</code></a> and the <code>[rrtools</code>](https://github.com/benmarwick/rrtools) package.</p>
-<p>For our <a href="@sec-docker_exercise">exercise</a> of this workflow we will use the <code>dockerfiler</code> package, which creates a custom class object that represents the Dockerfile and has slots corresponding to common elements of Docker images. This allows us to add elements to the dockerfile in a more R-like way. The following code snippet demonstrates adding <code>Maintainer</code> details to a <code>Dockerfile</code> object, before saving it:</p>
+<p>For our <a href="Docker_exercise.qmd#sec-docker_exercise">exercise</a> of this workflow we will use the <code>dockerfiler</code> package, which creates a custom class object that represents the Dockerfile and has slots corresponding to common elements of Docker images. This allows us to add elements to the dockerfile in a more R-like way. The following code snippet demonstrates adding <code>Maintainer</code> details to a <code>Dockerfile</code> object, before saving it:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dockerfiler)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dockerfile template</span></span>
@@ -263,7 +263,7 @@ gtag('config', 'G-9CCC34ZV10', { 'anonymize_ip': true});
 </section>
 <section id="docker-with-renv" class="level3">
 <h3 class="anchored" data-anchor-id="docker-with-renv">Docker with <code>renv</code></h3>
-<p>Docker can be used with the <code>renv</code> package to <a href="@sec-environment-management">manage the package environment of your project</a>.</p>
+<p>Docker can be used with the <code>renv</code> package to <a href="../contents/Rprojects.html#sec-environment-management">manage the package environment of your project</a>.</p>
 <p>There are two methods of implementing this which come with their own considerations:</p>
 <ol type="1">
 <li><p><strong>Use <code>renv</code> to install packages when the Docker image is built</strong>: This approach is useful if you plan to have multiple projects with <strong>identical package requirements</strong>. This because by creating an image containing this package library you can simply re-use the image as a base for new images for different projects <span class="citation" data-cites="ushey2024">[<a href="#ref-ushey2024" role="doc-biblioref">1</a>]</span>.<strong>Warning:</strong> Restoring the package library (<code>renv::restore()</code>) when building the image will be slow if there are large numbers of packages so try to avoid the need to re-build the base image many times.</p></li>
@@ -859,7 +859,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script type="application/javascript" src="light-dark.js"></script>
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
