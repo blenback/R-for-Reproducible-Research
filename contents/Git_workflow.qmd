@@ -51,7 +51,9 @@ Alternatively you can also use [Github desktop](https://github.com/apps/desktop)
 :::
 
 ::: {.content-visible when-format="revealjs"}
+
 ## Version control with Github
+
 ### Why Git and GitHub?
 
 -   **Version control**: A more systematic way to organise data beyond "dataprep_1", "dataprep_final", "dataprep_finalfinal" etc.
@@ -65,7 +67,9 @@ Version control is also the main reason for most people to use Git and Github. T
 
 Additionally, Git  tracks changes over time, documenting who made the changes and why. This is helpful if multiple people work on a project. If mistakes occur or you need to revisit earlier versions, Git lets you revert to previous states.
 :::
+
 ## Version control with Github
+
 ### Terminologies
 
 -   **Push** and **Pull**?
@@ -77,7 +81,9 @@ Additionally, Git  tracks changes over time, documenting who made the changes an
 ::: notes
 Think of branches as separate working spaces, but still about the same work. There is a main branch storing your results. Each additional branch can be used to test changes without affecting the main output. Once you’re satisfied you can then merge your changes into the main branch. This let’s you test new things and fix bugs without worrying to mess up the main branch. Also, it helps to avoid conflicts if several people work on the same project.
 :::
+
 ## Version control with Github
+
 ### Steps for using Git and GitHub (To be done in the exercises - basic)
 
 -   Create a GitHub repository in your account
@@ -95,7 +101,9 @@ Think of branches as separate working spaces, but still about the same work. The
 ::: notes
 The process involves setting up a GitHub repository, installing Git, linking it with your account, and then connecting your R project to the repository. From there, you can manage the repository through RStudio, using basic Git functionalities to track and control changes.
 :::
+
 ## Version control with Github
+
 ### Additional fucntionalities
 
 -   GitHub repositories can be archived on Zenodo and thus get a DOI.
@@ -104,5 +112,8 @@ The process involves setting up a GitHub repository, installing Git, linking it 
 
 ::: notes
 
+- GitHub Actions is a powerful automation tool integrated into GitHub. It allows you to automate actions based on triggers. For example every time code is pushed or pulled or at a certain time of day. For example if you have a website with quarto you can automatically rerender the website if a push is performed.
+
+- GitHub releases can be integrated into platforms like **DockerHub** or **GitHub Packages**. This means you can automatically build and publish Docker containers or software packages directly from your GitHub releases
 :::
 :::

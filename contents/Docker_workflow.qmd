@@ -10,8 +10,7 @@ execute:
 ::: {.content-hidden when-format="revealjs"}
 ![](assets/images/Docker_workflow.png){.lightbox width="90%" fig-align="center"}
 
-**The title of this workflow raises two questions, the first being: what is containerization? and the second: what is Docker?**
-### Containerisation
+**The title of this workflow raises two questions, the first being: what is containerization? and the second: what is Docker?** \### Containerisation
 
 Simply put containerization is the process of bundling code along with all of it's dependencies, i.e. all the components we discussed as making up the [environment](@sec-environment-management), including the operating system, software libraries (packages), and other system software. The fact everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service. This also makes containerization something of a gold standard for reproducibility as the entire environment is explicitly re-produced.
 
@@ -38,6 +37,8 @@ In terms of actually creating the `Dockerfile` for our R project, this can be do
 For our [exercise](@sec-docker_exercise) of this workflow we will use the `dockerfiler` package, which creates a custom class object that represents the Dockerfile and has slots corresponding to common elements of Docker images. This allows us to add elements to the dockerfile in a more R-like way. The following code snippet demonstrates adding `Maintainer` details to a `Dockerfile` object, before saving it:
 
 ```{R}
+#| eval: false
+#| echo: true
 library(dockerfiler)
 # Create a dockerfile template
 my_dock <- Dockerfile$new()
@@ -55,7 +56,7 @@ Docker can be used with the `renv` package to [manage the package environment of
 
 There are two methods of implementing this which come with their own considerations:
 
-1.  **Use `renv` to install packages when the Docker image is built**: This approach is useful if yo plan to have have multiple projects with **identical package requirements**. This because by creating an image containing this package library you can simply re-use the image as a base for new images for different projects [@ushey2024].**Warning:** Restoring the package library (`renv::restore()`) when building the image will be slow if there are large numbers of packages so try to avoid the need to re-build the base image many times.
+1.  **Use `renv` to install packages when the Docker image is built**: This approach is useful if you plan to have multiple projects with **identical package requirements**. This because by creating an image containing this package library you can simply re-use the image as a base for new images for different projects [@ushey2024].**Warning:** Restoring the package library (`renv::restore()`) when building the image will be slow if there are large numbers of packages so try to avoid the need to re-build the base image many times.
 
 2.  **Use `renv` to install/restore packages only when Docker containers are run**: This approach is better when you plan to have multiple projects that are built from the same base image but require **different package requirements**. Hence it is preferable to not included the package library in the image but instead to mount different project specific libraries to the container when it is run [@ushey2024]. If project libraries are dynamically provisioned in this way and `renv::restore()` is run with caching this means that the packages are not re-installed everytime the container is run.
 :::
@@ -63,19 +64,120 @@ There are two methods of implementing this which come with their own considerati
 <!-- Presentation content -->
 
 ::: {.content-visible when-format="revealjs"}
-## Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/>
+# Containerization with Docker
 
-![](assets/images/Docker_workflow.png){.lightbox width="70%" fig-align="center"}
-
-## Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/>
+## Containerization with Docker
 
 ### What is containerization?
 
-## Containerization with <img src="assets/images/Docker.dark.svg" style="vertical-align:0%; height:1.25em;"/>
+Containerization is the process of bundling code along with all of it's dependencies including:
+
+-   The operating system
+
+-   Software libraries (packages)
+
+-   Other system software
+
+Everything needed to run the code is included means that the code is portable and can be run on any platform or cloud service.
+
+**This makes containerization the gold standard for reproducibility**
+
+## Containerization with Docker
 
 ### What is Docker?
 
-## Using Docker with R
+::: {.columns .v-center-container}
+::: {.column width="50%"}
+[Docker](https://www.docker.com/) is an open-source, and the most popular, platform for containerization.
+:::
 
-## Docker with `renv`
+::: {.column width="50%"}
+![](assets/images/Docker_light_blue.png){fig-align="center"}
+:::
+:::
+
+## Containerization with Docker
+
+![](assets/images/Docker_workflow.png){fig-align="center" width="80%"}
+
+`Dockerfile`:
+
+-   Text file containing a collection of commands to create a new Docker Image.
+-   Includes the details of the environment required to create to run the code and the command to do it.
+-   Typically start from a base image, i.e an existing Docker Image.
+
+## Containerization with Docker
+
+![](assets/images/Docker_workflow.png){fig-align="center" width="80%"}
+
+`Docker Image`:
+
+-   A read-only file that contains the instructions for creating a Docker Container.
+-   *Blueprint* of what will be in a container when it is running.
+-   Docker Images can be shared via [Dockerhub](https://hub.docker.com/), so that they can be used by others.
+
+## Containerization with Docker
+
+![](assets/images/Docker_workflow.png){fig-align="center" width="80%"}
+
+`Docker Container`:
+
+-   A running instance of a Docker image that runs code with it's environment
+-   Runs in isolation from the host, only accesses host files (i.e. data) if it has been configured to do so.
+-   Possible to create multiple containers simultaneously from the same Docker Image.
+
+::: notes
+-   `Docker Container`: Is an actual running instance of a Docker image. It runs completely isolated from the host environment by default and only accesses host files (i.e. data) if it has been configured to do so. It is possible to create multiple containers simultaneously from the same Docker Image, and each container can be started, stopped, moved, and deleted independently of the others.
+:::
+
+## Containerization with Docker
+
+### Using Docker with R
+
+Two main resources that can help in the creation of containerized R projects:
+
+1.  [`Rocker`](https://rocker-project.org/):
+
+-   A project that catalogs and manages Docker Images for R projects.
+
+-   Basic images include different versions of R and RStudio
+
+-   Other images offering collections of R packages for specific purposes (e.g. tidyverse).
+
+## Containerization with Docker
+
+### Using Docker with R
+
+Two main resources that can help in the creation of containerized R projects:
+
+2.  `Dockerfile`:
+
+-   A package which creates a custom class object that represents the `Dockerfile`
+
+-   Has slots corresponding to common elements of Docker images allowing to add elements to the dockerfile in R.
+
+## Containerization with Docker
+
+### Docker with `renv`
+
+Two methods of integrating `renv` with Docker to manage the package environment of your project:
+
+1.  Use `renv` to install packages when the Docker image is built:
+
+-   Useful for multiple projects with **identical package requirements** because you can re-use the image as a base for new images[@ushey2024].
+-   Restoring the package library (`renv::restore()`) when building the image is slow so try to avoid the need to re-build the base image many times.
+
+## Containerization with Docker
+
+### Docker with `renv`
+
+Two methods of integrating `renv` with Docker to manage the package environment of your project:
+
+2.  Use `renv` to install/restore packages only when Docker containers are run:
+
+-   Better when you plan to have multiple projects built from the same base image but with **different package requirements**.
+
+-    Package library is not included in the image but instead different project specific libraries are mounted to the container when it is run [@ushey2024].
+
+-   If `renv::restore()` is run with caching, packages are not re-installed everytime the container is run.
 :::

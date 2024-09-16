@@ -108,7 +108,7 @@ As has been mentioned already Quarto provides a lot of options for creating inte
 
 -   [Plotly](https://plotly.com/python/)
 -   [Leaflet](https://ipyleaflet.readthedocs.io/en/latest/)
--   [Jupyter Widgets](/docs/interactive/widgets/jupyter.qmd)
+-   [Jupyter Widgets](https://ipywidgets.readthedocs.io/en/latest/)
 -   [htmlwidgets](https://www.htmlwidgets.org/)
 -   [ObservableJS](https://observablehq.com/@observablehq/observables-not-javascript)
 -   [Shiny](https://shiny.rstudio.com/)
@@ -336,7 +336,7 @@ Many options for interactive data visualisations, tables and diagrams using:
 
 -   [Plotly](https://plotly.com/python/)
 -   [Leaflet](https://ipyleaflet.readthedocs.io/en/latest/)
--   [Jupyter Widgets](/docs/interactive/widgets/jupyter.qmd)
+-   [Jupyter Widgets](https://ipywidgets.readthedocs.io/en/latest/)
 -   [htmlwidgets](https://www.htmlwidgets.org/)
 -   [ObservableJS](https://observablehq.com/@observablehq/observables-not-javascript)
 -   [Shiny](https://shiny.rstudio.com/)
