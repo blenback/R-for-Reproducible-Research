@@ -31,3 +31,16 @@ $code-block-bg-alpha: -.8;
   text-align: center;
 }
 
+/* Override primary button styles directly */
+.btn-primary {
+  background-color: $link-color !important;
+  border-color: $link-color !important;
+  color: #fff !important;
+}
+
+/* Optional: hover/focus states */
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: darken($link-color, 10%) !important;
+  border-color: darken($link-color, 12%) !important;
+}
